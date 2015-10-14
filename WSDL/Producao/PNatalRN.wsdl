@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="nfse" targetNamespace="https://wsnfsev1.natal.rn.gov.br:8444" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ws="https://wsnfsev1.natal.rn.gov.br:8444">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://wsnfsev1.natal.rn.gov.br:8444">
+		<xsd:complexType name="input">
+			<xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" name="nfseCabecMsg" type="xsd:string"/>
+				<xsd:element maxOccurs="1" minOccurs="1" name="nfseDadosMsg" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:complexType name="output">
+			<xsd:sequence>
+				<xsd:element name="outputXML" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:element name="CancelarNfseRequest" type="ws:input"/>
+		<xsd:element name="CancelarNfseResponse" type="ws:output"/>
+		<xsd:element name="ConsultarLoteRpsRequest" type="ws:input"/>
+		<xsd:element name="ConsultarLoteRpsResponse" type="ws:output"/>
+		<xsd:element name="ConsultarSituacaoLoteRpsRequest" type="ws:input"/>
+		<xsd:element name="ConsultarSituacaoLoteRpsResponse" type="ws:output"/>
+		<xsd:element name="ConsultarNfseRequest" type="ws:input"/>
+		<xsd:element name="ConsultarNfseResponse" type="ws:output"/>
+		<xsd:element name="ConsultarNfsePorRpsRequest" type="ws:input"/>
+		<xsd:element name="ConsultarNfsePorRpsResponse" type="ws:output"/>
+		<xsd:element name="RecepcionarLoteRpsRequest" type="ws:input"/>
+		<xsd:element name="RecepcionarLoteRpsResponse" type="ws:output"/>
+	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarNfsePorRpsResponse">
+    <wsdl:part name="parameters" element="ws:ConsultarNfsePorRpsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseRequest">
+    <wsdl:part name="parameters" element="ws:CancelarNfseRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseRequest">
+    <wsdl:part name="parameters" element="ws:ConsultarNfseRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsResponse">
+    <wsdl:part name="parameters" element="ws:ConsultarLoteRpsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseResponse">
+    <wsdl:part name="parameters" element="ws:ConsultarNfseResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsRequest">
+    <wsdl:part name="parameters" element="ws:ConsultarLoteRpsRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarSituacaoLoteRpsResponse">
+    <wsdl:part name="parameters" element="ws:ConsultarSituacaoLoteRpsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseResponse">
+    <wsdl:part name="parameters" element="ws:CancelarNfseResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsRequest">
+    <wsdl:part name="parameters" element="ws:ConsultarNfsePorRpsRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsResponse">
+    <wsdl:part name="parameters" element="ws:RecepcionarLoteRpsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsRequest">
+    <wsdl:part name="parameters" element="ws:RecepcionarLoteRpsRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarSituacaoLoteRpsRequest">
+    <wsdl:part name="parameters" element="ws:ConsultarSituacaoLoteRpsRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="nfse">
+    <wsdl:operation name="CancelarNfse">
+      <wsdl:input message="ws:CancelarNfseRequest">
+    </wsdl:input>
+      <wsdl:output message="ws:CancelarNfseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <wsdl:input message="ws:ConsultarLoteRpsRequest">
+    </wsdl:input>
+      <wsdl:output message="ws:ConsultarLoteRpsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSituacaoLoteRps">
+      <wsdl:input message="ws:ConsultarSituacaoLoteRpsRequest">
+    </wsdl:input>
+      <wsdl:output message="ws:ConsultarSituacaoLoteRpsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfse">
+      <wsdl:input message="ws:ConsultarNfseRequest">
+    </wsdl:input>
+      <wsdl:output message="ws:ConsultarNfseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <wsdl:input message="ws:ConsultarNfsePorRpsRequest">
+    </wsdl:input>
+      <wsdl:output message="ws:ConsultarNfsePorRpsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <wsdl:input message="ws:RecepcionarLoteRpsRequest">
+    </wsdl:input>
+      <wsdl:output message="ws:RecepcionarLoteRpsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="nfseSOAP" type="ws:nfse">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelarNfse">
+      <soap:operation soapAction="https://wsnfsev1.natal.rn.gov.br:8444/axis2/services/CancelarNfse"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <soap:operation soapAction="https://wsnfsev1.natal.rn.gov.br:8444/axis2/services/ConsultarLoteRps"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSituacaoLoteRps">
+      <soap:operation soapAction="https://wsnfsev1.natal.rn.gov.br:8444/axis2/services/ConsultarSituacaoLoteRps"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfse">
+      <soap:operation soapAction="https://wsnfsev1.natal.rn.gov.br:8444/axis2/services/ConsultarNfse"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <soap:operation soapAction="https://wsnfsev1.natal.rn.gov.br:8444/axis2/services/ConsultarNfsePorRps"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <soap:operation soapAction="https://wsnfsev1.natal.rn.gov.br:8444/axis2/services/RecepcionarLoteRps"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NfseWSServiceV1">
+    <wsdl:port name="nfseSOAP" binding="ws:nfseSOAP">
+      <soap:address location="https://wsnfsev1.natal.rn.gov.br:8444/axis2/services/NfseWSServiceV1/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

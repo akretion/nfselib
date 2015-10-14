@@ -1,0 +1,732 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<definitions name="ws_nfe" targetNamespace="NFe" xmlns:wsdlns="NFe" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="NFe">
+	<types>
+		<schema targetNamespace="NFe" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+			<complexType name="Sdt_ProcessarpsIn">
+				<all>
+					<element name="Login" type="tns:Sdt_ProcessarpsIn.Login">
+					</element>
+					<element name="SDTRPS" type="tns:Sdt_ProcessarpsIn.SDTRPS">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="Sdt_ProcessarpsIn.Login">
+				<all>
+					<element name="CodigoUsuario" type="xsd:string">
+					</element>
+					<element name="CodigoContribuinte" type="xsd:string">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="Sdt_ProcessarpsIn.SDTRPS">
+				<all>
+					<element name="Ano" type="xsd:string">
+					</element>
+					<element name="Mes" type="xsd:string">
+					</element>
+					<element name="CPFCNPJ" type="xsd:string">
+					</element>
+					<element name="DTIni" type="xsd:string">
+					</element>
+					<element name="DTFin" type="xsd:string">
+					</element>
+					<element name="TipoTrib" type="xsd:string">
+					</element>
+					<element name="DtAdeSN" type="xsd:string">
+					</element>
+					<element name="AlqIssSN_IP" type="xsd:string">
+					</element>
+					<element name="Versao" type="xsd:string">
+					</element>
+					<element name="Reg20">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="Reg20Item" type="tns:Sdt_ProcessarpsIn.SDTRPS.Reg20Item">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="Reg90" type="tns:Sdt_ProcessarpsIn.SDTRPS.Reg90">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="ArrayOfSdt_ProcessarpsIn.SDTRPS.Reg20Item">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="Sdt_ProcessarpsIn.SDTRPS.Reg20Item" type="tns:Sdt_ProcessarpsIn.SDTRPS.Reg20Item">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="Sdt_ProcessarpsIn.SDTRPS.Reg20Item">
+				<all>
+					<element name="TipoNFS" type="xsd:string">
+					</element>
+					<element name="NumRps" type="xsd:string">
+					</element>
+					<element name="SerRps" type="xsd:string">
+					</element>
+					<element name="DtEmi" type="xsd:string">
+					</element>
+					<element name="RetFonte" type="xsd:string">
+					</element>
+					<element name="CodSrv" type="xsd:string">
+					</element>
+					<element name="DiscrSrv" type="xsd:string">
+					</element>
+					<element name="VlNFS" type="xsd:string">
+					</element>
+					<element name="VlDed" type="xsd:string">
+					</element>
+					<element name="DiscrDed" type="xsd:string">
+					</element>
+					<element name="VlBasCalc" type="xsd:string">
+					</element>
+					<element name="AlqIss" type="xsd:string">
+					</element>
+					<element name="VlIss" type="xsd:string">
+					</element>
+					<element name="VlIssRet" type="xsd:string">
+					</element>
+					<element name="CpfCnpTom" type="xsd:string">
+					</element>
+					<element name="RazSocTom" type="xsd:string">
+					</element>
+					<element name="TipoLogtom" type="xsd:string">
+					</element>
+					<element name="LogTom" type="xsd:string">
+					</element>
+					<element name="NumEndTom" type="xsd:string">
+					</element>
+					<element name="ComplEndTom" type="xsd:string">
+					</element>
+					<element name="BairroTom" type="xsd:string">
+					</element>
+					<element name="MunTom" type="xsd:string">
+					</element>
+					<element name="SiglaUFTom" type="xsd:string">
+					</element>
+					<element name="CepTom" type="xsd:string">
+					</element>
+					<element name="Telefone" type="xsd:string">
+					</element>
+					<element name="InscricaoMunicipal" type="xsd:string">
+					</element>
+					<element name="TipoLogLocPre" type="xsd:string">
+					</element>
+					<element name="LogLocPre" type="xsd:string">
+					</element>
+					<element name="NumEndLocPre" type="xsd:string">
+					</element>
+					<element name="ComplEndLocPre" type="xsd:string">
+					</element>
+					<element name="BairroLocPre" type="xsd:string">
+					</element>
+					<element name="MunLocPre" type="xsd:string">
+					</element>
+					<element name="SiglaUFLocpre" type="xsd:string">
+					</element>
+					<element name="CepLocPre" type="xsd:string">
+					</element>
+					<element name="Email1" type="xsd:string">
+					</element>
+					<element name="Email2" type="xsd:string">
+					</element>
+					<element name="Email3" type="xsd:string">
+					</element>
+					<element name="Reg30">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="Reg30Item" type="tns:Sdt_ProcessarpsIn.SDTRPS.Reg20Item.Reg30Item">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</all>
+			</complexType>
+			<complexType name="Sdt_ProcessarpsIn.SDTRPS.Reg90">
+				<all>
+					<element name="QtdRegNormal" type="xsd:string">
+					</element>
+					<element name="ValorNFS" type="xsd:string">
+					</element>
+					<element name="ValorISS" type="xsd:string">
+					</element>
+					<element name="ValorDed" type="xsd:string">
+					</element>
+					<element name="ValorIssRetTom" type="xsd:string">
+					</element>
+					<element name="QtdReg30" type="xsd:string">
+					</element>
+					<element name="ValorTributos" type="xsd:string">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="ArrayOfSdt_ProcessarpsIn.SDTRPS.Reg20Item.Reg30Item">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="Sdt_ProcessarpsIn.SDTRPS.Reg20Item.Reg30Item" type="tns:Sdt_ProcessarpsIn.SDTRPS.Reg20Item.Reg30Item">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="Sdt_ProcessarpsIn.SDTRPS.Reg20Item.Reg30Item">
+				<all>
+					<element name="TributoSigla" type="xsd:string">
+					</element>
+					<element name="TributoAliquota" type="xsd:string">
+					</element>
+					<element name="TributoValor" type="xsd:string">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="Sdt_ProcessarpsOut">
+				<all>
+					<element name="Retorno" type="xsd:boolean">
+					</element>
+					<element name="Protocolo" type="xsd:string">
+					</element>
+					<element name="Messages">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="Message" type="tns:Sdt_ProcessarpsOut.Message">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</all>
+			</complexType>
+			<complexType name="ArrayOfSdt_ProcessarpsOut.Message">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="Sdt_ProcessarpsOut.Message" type="tns:Sdt_ProcessarpsOut.Message">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="Sdt_ProcessarpsOut.Message">
+				<all>
+					<element name="Id" type="xsd:string">
+					</element>
+					<element name="Type" type="xsd:byte">
+					</element>
+					<element name="Description" type="xsd:string">
+					</element>
+					<element name="LinErr" type="xsd:int">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="SDT_ConsultaProtocoloIn">
+				<all>
+					<element name="Protocolo" type="xsd:string">
+					</element>
+					<element name="Login" type="tns:SDT_ConsultaProtocoloIn.Login">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="SDT_ConsultaProtocoloIn.Login">
+				<all>
+					<element name="CodigoUsuario" type="xsd:string">
+					</element>
+					<element name="CodigoContribuinte" type="xsd:string">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="SDT_ConsultaNotasProtocoloOut">
+				<all>
+					<element name="Retorno" type="xsd:boolean">
+					</element>
+					<element name="Messages">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="Message" type="tns:SDT_ConsultaNotasProtocoloOut.Message">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="XML_Notas" type="tns:SDT_ConsultaNotasProtocoloOut.XML_Notas">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="ArrayOfSDT_ConsultaNotasProtocoloOut.Message">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="SDT_ConsultaNotasProtocoloOut.Message" type="tns:SDT_ConsultaNotasProtocoloOut.Message">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="SDT_ConsultaNotasProtocoloOut.Message">
+				<all>
+					<element name="Id" type="xsd:string">
+					</element>
+					<element name="Type" type="xsd:byte">
+					</element>
+					<element name="Description" type="xsd:string">
+					</element>
+					<element name="LinErr" type="xsd:int">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="SDT_ConsultaNotasProtocoloOut.XML_Notas">
+				<all>
+					<element name="CpfCnpj" type="xsd:string">
+					</element>
+					<element name="DtIni" type="xsd:date" nillable="true">
+					</element>
+					<element name="DtFin" type="xsd:date" nillable="true">
+					</element>
+					<element name="TipoArq" type="xsd:short">
+					</element>
+					<element name="Versao" type="xsd:string">
+					</element>
+					<element name="Reg20">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="Reg20Item" type="tns:SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+					<element name="Reg90" type="tns:SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg90">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="ArrayOfSDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item" type="tns:SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item">
+				<all>
+					<element name="TipoNf" type="xsd:string">
+					</element>
+					<element name="NumNf" type="xsd:int">
+					</element>
+					<element name="SerNf" type="xsd:string">
+					</element>
+					<element name="DtEmiNf" type="xsd:string">
+					</element>
+					<element name="DtHrGerNf" type="xsd:string">
+					</element>
+					<element name="CodVernf" type="xsd:string">
+					</element>
+					<element name="NumRps" type="xsd:int">
+					</element>
+					<element name="SerRps" type="xsd:string">
+					</element>
+					<element name="DtEmiRps" type="xsd:string">
+					</element>
+					<element name="TipoCpfCnpjPre" type="xsd:string">
+					</element>
+					<element name="CpfCnpjPre" type="xsd:string">
+					</element>
+					<element name="RazSocPre" type="xsd:string">
+					</element>
+					<element name="LogPre" type="xsd:string">
+					</element>
+					<element name="NumEndPre" type="xsd:string">
+					</element>
+					<element name="ComplEndPre" type="xsd:string">
+					</element>
+					<element name="BairroPre" type="xsd:string">
+					</element>
+					<element name="MunPre" type="xsd:string">
+					</element>
+					<element name="SiglaUFPre" type="xsd:string">
+					</element>
+					<element name="CepPre" type="xsd:int">
+					</element>
+					<element name="EmailPre" type="xsd:string">
+					</element>
+					<element name="TipoTribPre" type="xsd:string">
+					</element>
+					<element name="DtAdeSN" type="xsd:string">
+					</element>
+					<element name="AlqIssSN" type="xsd:double">
+					</element>
+					<element name="SitNf" type="xsd:byte">
+					</element>
+					<element name="DataCncNf" type="xsd:string">
+					</element>
+					<element name="MotivoCncNf" type="xsd:string">
+					</element>
+					<element name="TipoCpfCnpjTom" type="xsd:string">
+					</element>
+					<element name="CpfCnpjTom" type="xsd:string">
+					</element>
+					<element name="RazSocTom" type="xsd:string">
+					</element>
+					<element name="LogTom" type="xsd:string">
+					</element>
+					<element name="NumEndTom" type="xsd:string">
+					</element>
+					<element name="ComplEndTom" type="xsd:string">
+					</element>
+					<element name="BairroTom" type="xsd:string">
+					</element>
+					<element name="MunTom" type="xsd:string">
+					</element>
+					<element name="SiglaUFTom" type="xsd:string">
+					</element>
+					<element name="CepTom" type="xsd:int">
+					</element>
+					<element name="EMailTom" type="xsd:string">
+					</element>
+					<element name="LogLocPre" type="xsd:string">
+					</element>
+					<element name="NumEndLocPre" type="xsd:string">
+					</element>
+					<element name="ComplEndLocPre" type="xsd:string">
+					</element>
+					<element name="BairroLocPre" type="xsd:string">
+					</element>
+					<element name="MunLocPre" type="xsd:string">
+					</element>
+					<element name="SiglaUFLocpre" type="xsd:string">
+					</element>
+					<element name="CepLocPre" type="xsd:int">
+					</element>
+					<element name="CodSrv" type="xsd:string">
+					</element>
+					<element name="DiscrSrv" type="xsd:string">
+					</element>
+					<element name="VlNFS" type="xsd:double">
+					</element>
+					<element name="VlDed" type="xsd:double">
+					</element>
+					<element name="DiscrDed" type="xsd:string">
+					</element>
+					<element name="VlBasCalc" type="xsd:double">
+					</element>
+					<element name="AlqIss" type="xsd:double">
+					</element>
+					<element name="VlIss" type="xsd:double">
+					</element>
+					<element name="VlIssRet" type="xsd:double">
+					</element>
+					<element name="Reg30">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="Reg30Item" type="tns:SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item.Reg30Item">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</all>
+			</complexType>
+			<complexType name="SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg90">
+				<all>
+					<element name="QtdRegNormal" type="xsd:int">
+					</element>
+					<element name="ValorNFS" type="xsd:double">
+					</element>
+					<element name="ValorISS" type="xsd:double">
+					</element>
+					<element name="ValorDed" type="xsd:double">
+					</element>
+					<element name="ValorIssRet" type="xsd:double">
+					</element>
+					<element name="QtdReg30" type="xsd:int">
+					</element>
+					<element name="ValorTributos" type="xsd:double">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="ArrayOfSDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item.Reg30Item">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item.Reg30Item" type="tns:SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item.Reg30Item">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="SDT_ConsultaNotasProtocoloOut.XML_Notas.Reg20Item.Reg30Item">
+				<all>
+					<element name="TributoSigla" type="xsd:string">
+					</element>
+					<element name="TributoAliquota" type="xsd:double">
+					</element>
+					<element name="TributoValor" type="xsd:double">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="SDT_ConsultaProtocoloOut">
+				<all>
+					<element name="Retorno" type="xsd:boolean">
+					</element>
+					<element name="PrtXSts" type="xsd:byte">
+					</element>
+					<element name="PrtCSerRps" type="xsd:string">
+					</element>
+					<element name="PrtCRps_1" type="xsd:long">
+					</element>
+					<element name="PrtCRps_2" type="xsd:long">
+					</element>
+					<element name="PrtLPrcIni" type="xsd:dateTime" nillable="true">
+					</element>
+					<element name="PrtLFinGrv" type="xsd:dateTime" nillable="true">
+					</element>
+					<element name="PnfCNfe_1" type="xsd:int">
+					</element>
+					<element name="PnfCnfe_2" type="xsd:int">
+					</element>
+					<element name="Messages">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="Message" type="tns:SDT_ConsultaProtocoloOut.Message">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</all>
+			</complexType>
+			<complexType name="ArrayOfSDT_ConsultaProtocoloOut.Message">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="SDT_ConsultaProtocoloOut.Message" type="tns:SDT_ConsultaProtocoloOut.Message">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="SDT_ConsultaProtocoloOut.Message">
+				<all>
+					<element name="Id" type="xsd:string">
+					</element>
+					<element name="Type" type="xsd:byte">
+					</element>
+					<element name="Description" type="xsd:string">
+					</element>
+					<element name="LinErr" type="xsd:int">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="Sdt_CancelaNFE">
+				<all>
+					<element name="Login" type="tns:Sdt_CancelaNFE.Login">
+					</element>
+					<element name="Nota" type="tns:Sdt_CancelaNFE.Nota">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="Sdt_CancelaNFE.Login">
+				<all>
+					<element name="CodigoUsuario" type="xsd:string">
+					</element>
+					<element name="CodigoContribuinte" type="xsd:string">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="Sdt_CancelaNFE.Nota">
+				<all>
+					<element name="SerieNota" type="xsd:string">
+					</element>
+					<element name="NumeroNota" type="xsd:int">
+					</element>
+					<element name="SerieRPS" type="xsd:string">
+					</element>
+					<element name="NumeroRps" type="xsd:int">
+					</element>
+					<element name="ValorNota" type="xsd:double">
+					</element>
+					<element name="MotivoCancelamento" type="xsd:string">
+					</element>
+					<element name="PodeCancelarGuia" type="xsd:string">
+					</element>
+				</all>
+			</complexType>
+			<complexType name="Sdt_RetornoCancelaNFE">
+				<all>
+					<element name="Retorno" type="xsd:boolean">
+					</element>
+					<element name="Messages">
+						<complexType>
+							<sequence>
+								<element minOccurs="0" maxOccurs="unbounded" name="Message" type="tns:Sdt_RetornoCancelaNFE.Message">
+								</element>
+							</sequence>
+						</complexType>
+					</element>
+				</all>
+			</complexType>
+			<complexType name="ArrayOfSdt_RetornoCancelaNFE.Message">
+				<sequence>
+					<element minOccurs="0" maxOccurs="unbounded" name="Sdt_RetornoCancelaNFE.Message" type="tns:Sdt_RetornoCancelaNFE.Message">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="Sdt_RetornoCancelaNFE.Message">
+				<all>
+					<element name="Id" type="xsd:string">
+					</element>
+					<element name="Description" type="xsd:string">
+					</element>
+				</all>
+			</complexType>
+			<element name="ws_nfe.PROCESSARPS">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_processarpsin" type="tns:Sdt_ProcessarpsIn" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_nfe.PROCESSARPSResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_processarpsout" type="tns:Sdt_ProcessarpsOut" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_nfe.CONSULTANOTASPROTOCOLO">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_consultanotasprotocoloin" type="tns:SDT_ConsultaProtocoloIn" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_nfe.CONSULTANOTASPROTOCOLOResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_consultanotasprotocoloout" type="tns:SDT_ConsultaNotasProtocoloOut" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_nfe.CONSULTAPROTOCOLO">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_consultaprotocoloin" type="tns:SDT_ConsultaProtocoloIn" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_nfe.CONSULTAPROTOCOLOResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_consultaprotocoloout" type="tns:SDT_ConsultaProtocoloOut" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_nfe.VERFICARPS">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_processarpsin" type="tns:Sdt_ProcessarpsIn" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_nfe.VERFICARPSResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_processarpsout" type="tns:Sdt_ProcessarpsOut" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_nfe.CANCELANOTAELETRONICA">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_cancelanfe" type="tns:Sdt_CancelaNFE" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws_nfe.CANCELANOTAELETRONICAResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Sdt_retornocancelanfe" type="tns:Sdt_RetornoCancelaNFE" />
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+	<message name="ws_nfe.PROCESSARPSSoapIn">
+		<part name="parameters" element="tns:ws_nfe.PROCESSARPS" />
+	</message>
+	<message name="ws_nfe.PROCESSARPSSoapOut">
+		<part name="parameters" element="tns:ws_nfe.PROCESSARPSResponse" />
+	</message>
+	<message name="ws_nfe.CONSULTANOTASPROTOCOLOSoapIn">
+		<part name="parameters" element="tns:ws_nfe.CONSULTANOTASPROTOCOLO" />
+	</message>
+	<message name="ws_nfe.CONSULTANOTASPROTOCOLOSoapOut">
+		<part name="parameters" element="tns:ws_nfe.CONSULTANOTASPROTOCOLOResponse" />
+	</message>
+	<message name="ws_nfe.CONSULTAPROTOCOLOSoapIn">
+		<part name="parameters" element="tns:ws_nfe.CONSULTAPROTOCOLO" />
+	</message>
+	<message name="ws_nfe.CONSULTAPROTOCOLOSoapOut">
+		<part name="parameters" element="tns:ws_nfe.CONSULTAPROTOCOLOResponse" />
+	</message>
+	<message name="ws_nfe.VERFICARPSSoapIn">
+		<part name="parameters" element="tns:ws_nfe.VERFICARPS" />
+	</message>
+	<message name="ws_nfe.VERFICARPSSoapOut">
+		<part name="parameters" element="tns:ws_nfe.VERFICARPSResponse" />
+	</message>
+	<message name="ws_nfe.CANCELANOTAELETRONICASoapIn">
+		<part name="parameters" element="tns:ws_nfe.CANCELANOTAELETRONICA" />
+	</message>
+	<message name="ws_nfe.CANCELANOTAELETRONICASoapOut">
+		<part name="parameters" element="tns:ws_nfe.CANCELANOTAELETRONICAResponse" />
+	</message>
+	<portType name="ws_nfeSoapPort">
+		<operation name="PROCESSARPS">
+			<input message="wsdlns:ws_nfe.PROCESSARPSSoapIn" />
+			<output message="wsdlns:ws_nfe.PROCESSARPSSoapOut" />
+		</operation>
+		<operation name="CONSULTANOTASPROTOCOLO">
+			<input message="wsdlns:ws_nfe.CONSULTANOTASPROTOCOLOSoapIn" />
+			<output message="wsdlns:ws_nfe.CONSULTANOTASPROTOCOLOSoapOut" />
+		</operation>
+		<operation name="CONSULTAPROTOCOLO">
+			<input message="wsdlns:ws_nfe.CONSULTAPROTOCOLOSoapIn" />
+			<output message="wsdlns:ws_nfe.CONSULTAPROTOCOLOSoapOut" />
+		</operation>
+		<operation name="VERFICARPS">
+			<input message="wsdlns:ws_nfe.VERFICARPSSoapIn" />
+			<output message="wsdlns:ws_nfe.VERFICARPSSoapOut" />
+		</operation>
+		<operation name="CANCELANOTAELETRONICA">
+			<input message="wsdlns:ws_nfe.CANCELANOTAELETRONICASoapIn" />
+			<output message="wsdlns:ws_nfe.CANCELANOTAELETRONICASoapOut" />
+		</operation>
+	</portType>
+	<binding name="ws_nfeSoapBinding" type="wsdlns:ws_nfeSoapPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="PROCESSARPS">
+			<soap:operation soapAction="NFeaction/AWS_NFE.PROCESSARPS" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="CONSULTANOTASPROTOCOLO">
+			<soap:operation soapAction="NFeaction/AWS_NFE.CONSULTANOTASPROTOCOLO" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="CONSULTAPROTOCOLO">
+			<soap:operation soapAction="NFeaction/AWS_NFE.CONSULTAPROTOCOLO" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="VERFICARPS">
+			<soap:operation soapAction="NFeaction/AWS_NFE.VERFICARPS" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="CANCELANOTAELETRONICA">
+			<soap:operation soapAction="NFeaction/AWS_NFE.CANCELANOTAELETRONICA" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	<service name="ws_nfe">
+		<port name="ws_nfeSoapPort" binding="wsdlns:ws_nfeSoapBinding">
+			<soap:address location="https://nfehomologacao.etransparencia.com.br/mg.varginha/webservice/aws_nfe.aspx" />
+		</port>
+	</service>
+</definitions>

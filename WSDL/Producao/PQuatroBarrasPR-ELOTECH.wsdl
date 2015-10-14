@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://shad.elotech.com.br/schemas/iss/nfse_v1_2.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://shad.elotech.com.br/schemas/iss/nfse_v1_2.xsd" targetNamespace="http://shad.elotech.com.br/schemas/iss/nfse_v1_2.xsd">
+  <wsdl:types xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://shad.elotech.com.br/schemas/iss/nfse_v1_2.xsd" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://shad.elotech.com.br/schemas/iss/nfse_v1_2.xsd">
+	<!-- definition of simple elements -->
+	<xsd:simpleType name="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:nonNegativeInteger" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:totalDigits value="15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsDescricao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsTipoDeducao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:pattern value="M|S" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCodigoVerificacao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="9" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsStatusRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:byte" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="1|2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsStatusNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:byte" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="1|2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsExigibilidadeISS" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:byte" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="1|2|3|4|5|6|7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsNumeroProcesso" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="30" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsSenha" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="30" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="6" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsInscricaoEstadual" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsRegimeEspecialTributacao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:byte" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="1|2|3|4|5|6|7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsSimNao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:byte" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="1|2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsResponsavelRetencao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:byte" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="1|2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsPagina" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:nonNegativeInteger" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:minInclusive value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:maxInclusive value="999999" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsNumeroRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:nonNegativeInteger" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:totalDigits value="15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsSerieRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsTipoRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:byte" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="1|2|3|4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsOutrasInformacoes" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="255" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:decimal" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:totalDigits value="14" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:fractionDigits fixed="true" value="2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minInclusive value="0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsValorUnitario" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:decimal" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:totalDigits value="14" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:fractionDigits fixed="true" value="5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minInclusive value="0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsItemListaServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="6" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCodigoCnae" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:totalDigits value="7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCodigoTributacao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsAliquota" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:decimal" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:totalDigits value="6" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:fractionDigits value="4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minInclusive value="0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsDiscriminacao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="2000" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCodigoMunicipioIbge" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:totalDigits value="7" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsInscricaoMunicipal" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsRazaoSocial" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="150" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsNomeFantasia" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCnpj" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:length fixed="true" value="14" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCidadeNome" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="125" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsEndereco" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="125" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsNumeroEndereco" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="10" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsComplementoEndereco" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsBairro" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="60" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsUf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:length fixed="true" value="2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCodigoPaisBacen" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:length value="4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCep" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:length value="8" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsEmail" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="80" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsTelefone" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="20" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCpf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:length fixed="true" value="11" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCodigoObra" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsArt" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsNumeroLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:nonNegativeInteger" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:totalDigits value="15" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsHomologa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:boolean" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsSituacaoLoteRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:byte" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="1|2|3" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsQuantidadeRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCodigoMensagemAlerta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="4" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsDescricaoMensagemAlerta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:maxLength value="200" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsCodigoCancelamentoNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:byte" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="1|2|3|4|5" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="tsChaveAcesso" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:pattern value="[0-9a-fA-F]{32}" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:date" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="tsDataHora" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="tsXml" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:restriction base="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:minLength value="1" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:whiteSpace value="collapse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- definition of complex elements -->
+	<xsd:complexType name="tcCpfCnpj" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="Cpf" type="tsCpf" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Cnpj" type="tsCnpj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcEndereco" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="0" name="Endereco" type="tsEndereco" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Numero" type="tsNumeroEndereco" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Complemento" type="tsComplementoEndereco" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Bairro" type="tsBairro" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="CodigoMunicipio" type="tsCodigoMunicipioIbge" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="CidadeNome" type="tsCidadeNome" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Uf" type="tsUf" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="CodigoPais" type="tsCodigoPaisBacen" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Cep" type="tsCep" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcContato" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="0" name="Telefone" type="tsTelefone" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Email" type="tsEmail" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcIdentificacaoOrgaoGerador" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="CodigoMunicipio" type="tsCodigoMunicipioIbge" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Uf" type="tsUf" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcIdentificacaoRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="Numero" type="tsNumeroRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Serie" type="tsSerieRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Tipo" type="tsTipoRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="CpfCnpj" type="tcCpfCnpj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="InscricaoMunicipal" type="tsInscricaoMunicipal" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Senha" type="tsSenha" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Homologa" type="tsHomologa" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="tcIdentificacaoPrestador" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="0" name="CpfCnpj" type="tcCpfCnpj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="InscricaoMunicipal" type="tsInscricaoMunicipal" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcIdentificacaoTomador" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="0" name="CpfCnpj" type="tcCpfCnpj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="InscricaoMunicipal" type="tsInscricaoMunicipal" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="tcIdentificacaoIntermediario" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="0" name="CpfCnpj" type="tcCpfCnpj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="InscricaoMunicipal" type="tsInscricaoMunicipal" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcDadosTomador" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="0" name="IdentificacaoTomador" type="tcIdentificacaoTomador" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="RazaoSocial" type="tsRazaoSocial" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Endereco" type="tcEndereco" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Contato" type="tcContato" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="InscricaoEstadual" type="tsInscricaoEstadual" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcDadosIntermediario" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoIntermediario" type="tcIdentificacaoIntermediario" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="RazaoSocial" type="tsRazaoSocial" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcValoresDeclaracaoServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="ValorServicos" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorDeducoes" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorPis" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorCofins" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorInss" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorIr" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorCsll" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="OutrasRetencoes" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorIss" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Aliquota" type="tsAliquota" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="DescontoIncondicionado" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="DescontoCondicionado" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcValoresNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="0" name="BaseCalculo" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Aliquota" type="tsAliquota" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorIss" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ValorLiquidoNfse" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcDadosDeducao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="TipoDeducao" type="tsTipoDeducao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Cpf" type="tsCpf" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Cnpj" type="tsCnpj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="NumeroNotaFiscalReferencia" type="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorTotalNotaFiscal" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="PercentualADeduzir" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorADeduzir" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcItemServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="ItemListaServico" type="tsItemListaServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="CodigoCnae" type="tsCodigoCnae" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Descricao" type="tsDescricao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Tributavel" type="tsSimNao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Quantidade" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ValorUnitario" type="tsValorUnitario" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorDesconto" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ValorLiquido" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="DadosDeducao" type="tcDadosDeducao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcDadosServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="Valores" type="tcValoresDeclaracaoServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="IssRetido" type="tsSimNao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ResponsavelRetencao" type="tsResponsavelRetencao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Discriminacao" type="tsDiscriminacao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="CodigoMunicipio" type="tsCodigoMunicipioIbge" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="CodigoPais" type="tsCodigoPaisBacen" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ExigibilidadeISS" type="tsExigibilidadeISS" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="MunicipioIncidencia" type="tsCodigoMunicipioIbge" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="NumeroProcesso" type="tsNumeroProcesso" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ListaItensServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:element maxOccurs="unbounded" minOccurs="1" name="ItemServico" type="tcItemServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcDadosConstrucaoCivil" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="0" name="CodigoObra" type="tsCodigoObra" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Art" type="tsArt" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Incorporacao" type="tsSimNao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcDadosPrestador" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoPrestador" type="tcIdentificacaoPrestador" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="RazaoSocial" type="tsRazaoSocial" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="NomeFantasia" type="tsNomeFantasia" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Endereco" type="tcEndereco" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Contato" type="tcContato" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcInfRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRps" type="tcIdentificacaoRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="DataEmissao" type="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Status" type="tsStatusRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="RpsSubstituido" type="tcIdentificacaoRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcInfDeclaracaoPrestacaoServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="0" name="Rps" type="tcInfRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Competencia" type="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Servico" type="tcDadosServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="DadosPrestador" type="tcDadosPrestador" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Tomador" type="tcDadosTomador" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Intermediario" type="tcDadosIntermediario" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ConstrucaoCivil" type="tcDadosConstrucaoCivil" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="RegimeEspecialTributacao" type="tsRegimeEspecialTributacao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="IncentivoFiscal" type="tsSimNao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcDeclaracaoPrestacaoServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="InfDeclaracaoPrestacaoServico" type="tcInfDeclaracaoPrestacaoServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcInfNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="Numero" type="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="CodigoVerificacao" type="tsCodigoVerificacao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="DataEmissao" type="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="NfseSubstituida" type="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="OutrasInformacoes" type="tsOutrasInformacoes" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ValoresNfse" type="tcValoresNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ValorCredito" type="tsValor" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="OrgaoGerador" type="tcIdentificacaoOrgaoGerador" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="DeclaracaoPrestacaoServico" type="tcDeclaracaoPrestacaoServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ChaveAcesso" type="tsChaveAcesso" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="InfNfse" type="tcInfNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcInfPedidoCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="Numero" type="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ChaveAcesso" type="tsChaveAcesso" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="CodigoCancelamento" type="tsCodigoCancelamentoNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcPedidoCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="InfPedidoCancelamento" type="tcInfPedidoCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcConfirmacaoCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="Pedido" type="tcPedidoCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="DataHora" type="tsDataHora" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="tcRetCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="NfseCancelamento" type="tcCancelamentoNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:complexType name="tcCancelamentoNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="ConfirmacaoCancelamento" type="tcConfirmacaoCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcInfSubstituicaoNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="NfseSubstituidora" type="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcSubstituicaoNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="SubstituicaoNfse" type="tcInfSubstituicaoNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcCompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" ref="Nfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" ref="NfseCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" ref="NfseSubstituicao" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Xml" type="tsXml" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="Codigo" type="tsCodigoMensagemAlerta" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Mensagem" type="tsDescricaoMensagemAlerta" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element minOccurs="0" name="Correcao" type="tsDescricaoMensagemAlerta" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcMensagemRetornoLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRps" type="tcIdentificacaoRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Codigo" type="tsCodigoMensagemAlerta" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="Mensagem" type="tsDescricaoMensagemAlerta" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tcLoteRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:element maxOccurs="1" minOccurs="1" name="NumeroLote" type="tsNumeroLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="QuantidadeRps" type="tsQuantidadeRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			<xsd:element maxOccurs="1" minOccurs="1" name="ListaRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:element maxOccurs="unbounded" minOccurs="1" name="DeclaracaoPrestacaoServico" type="tcDeclaracaoPrestacaoServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="ListaMensagemRetornoLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="unbounded" minOccurs="1" name="MensagemRetornoLote" type="tcMensagemRetornoLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="unbounded" minOccurs="1" name="MensagemRetorno" type="tcMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ListaMensagemAlertaRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="unbounded" minOccurs="1" name="MensagemRetorno" type="tcMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="CompNfse" type="tcCompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+
+	<xsd:element name="Nfse" type="tcNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+
+	<xsd:element name="NfseCancelamento" type="tcCancelamentoNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+
+	<xsd:element name="NfseSubstituicao" type="tcSubstituicaoNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+
+	<xsd:element name="EnviarLoteRpsEnvio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRequerente" type="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element name="LoteRps" type="tcLoteRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="EnviarLoteRpsResposta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:element maxOccurs="1" minOccurs="1" name="NumeroLote" type="tsNumeroLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="DataRecebimento" type="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				</xsd:sequence>
+				<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="EnviarLoteRpsSincronoEnvio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRequerente" type="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element name="LoteRps" type="tcLoteRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+
+	</xsd:element>
+
+	<xsd:element name="EnviarLoteRpsSincronoResposta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="NumeroLote" type="tsNumeroLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="1" name="DataRecebimento" type="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:element maxOccurs="1" minOccurs="1" name="ListaNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+								<xsd:element maxOccurs="unbounded" minOccurs="1" ref="CompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+								<xsd:element maxOccurs="1" minOccurs="0" ref="ListaMensagemAlertaRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+					<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetornoLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="CancelarNfseEnvio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRequerente" type="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="1" name="Pedido" type="tcPedidoCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="CancelarNfseResposta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" ref="tcRetCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="SubstituirNfseEnvio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRequerente" type="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element name="Pedido" type="tcPedidoCancelamento" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element name="DeclaracaoPrestacaoServico" type="tcDeclaracaoPrestacaoServico" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="SubstituirNfseResposta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element name="RetSubstituicao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<xsd:element name="NfseSubstituida" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+								<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+									<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+										<xsd:element maxOccurs="1" minOccurs="1" ref="CompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+										<xsd:element maxOccurs="1" minOccurs="0" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="NfseSubstituidora" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+								<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+									<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+										<xsd:element maxOccurs="1" minOccurs="1" ref="CompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="ConsultarLoteRpsEnvio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRequerente" type="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="1" name="NumeroLote" type="tsNumeroLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ConsultarLoteRpsResposta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="Situacao" type="tsSituacaoLoteRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:element maxOccurs="1" minOccurs="1" name="ListaNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+								<xsd:element maxOccurs="50" minOccurs="1" ref="CompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+								<xsd:element maxOccurs="1" minOccurs="0" ref="ListaMensagemAlertaRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+							</xsd:sequence>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+					<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetornoLote" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ConsultarNfseRpsEnvio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRps" type="tcIdentificacaoRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRequerente" type="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ConsultarNfseRpsResposta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" ref="CompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="ConsultarNfseServicoPrestadoEnvio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRequerente" type="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="NumeroNfse" type="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="PeriodoEmissao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<xsd:element maxOccurs="1" minOccurs="1" name="DataInicial" type="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+							<xsd:element maxOccurs="1" minOccurs="1" name="DataFinal" type="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element maxOccurs="1" minOccurs="0" name="IdentificacaoTomador" type="tcIdentificacaoTomador" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="IdentificacaoIntermediario" type="tcIdentificacaoIntermediario" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="1" name="Pagina" type="tsPagina" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ConsultarNfseServicoPrestadoResposta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="ListaConsultaNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<xsd:element maxOccurs="50" minOccurs="1" ref="CompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+							<xsd:element maxOccurs="1" minOccurs="0" name="ProximaPagina" type="tsPagina" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+
+
+	<xsd:element name="ConsultarNfseServicoTomadoEnvio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRequerente" type="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="NumeroNfse" type="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="PeriodoEmissao" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<xsd:element maxOccurs="1" minOccurs="1" name="DataInicial" type="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+							<xsd:element maxOccurs="1" minOccurs="1" name="DataFinal" type="tsData" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element maxOccurs="1" minOccurs="0" name="IdentificacaoPrestador" type="tcIdentificacaoPrestador" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="IdentificacaoIntermediario" type="tcIdentificacaoIntermediario" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="1" name="Pagina" type="tsPagina" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ConsultarNfseServicoTomadoResposta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="ListaConsultaNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<xsd:element maxOccurs="50" minOccurs="1" ref="CompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+							<xsd:element maxOccurs="1" minOccurs="0" name="ProximaPagina" type="tsPagina" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ConsultarNfseFaixaEnvio" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="IdentificacaoRequerente" type="tcIdentificacaoRequerente" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+				<xsd:element maxOccurs="1" minOccurs="1" name="Faixa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<xsd:element maxOccurs="1" minOccurs="1" name="NumeroNfseInicial" type="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+							<xsd:element maxOccurs="1" minOccurs="0" name="NumeroNfseFinal" type="tsNumeroNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element maxOccurs="1" minOccurs="1" name="Pagina" type="tsPagina" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ConsultarNfseFaixaResposta" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:choice xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+				<xsd:element maxOccurs="1" minOccurs="1" name="ListaConsultaNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+					<xsd:complexType xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+						<xsd:sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<xsd:element maxOccurs="50" minOccurs="1" ref="CompNfse" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+							<xsd:element maxOccurs="1" minOccurs="0" name="ProximaPagina" type="tsPagina" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element maxOccurs="1" minOccurs="1" ref="ListaMensagemRetorno" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarNfseFaixaResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarNfseFaixaResposta" name="ConsultarNfseFaixaResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:CancelarNfseResposta" name="CancelarNfseResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseFaixaEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarNfseFaixaEnvio" name="ConsultarNfseFaixaEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:EnviarLoteRpsEnvio" name="EnviarLoteRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarLoteRpsResposta" name="ConsultarLoteRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarNfseRpsResposta" name="ConsultarNfseRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteRpsSincronoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:EnviarLoteRpsSincronoEnvio" name="EnviarLoteRpsSincronoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarNfseRpsEnvio" name="ConsultarNfseRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarLoteRpsEnvio" name="ConsultarLoteRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoPrestadoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarNfseServicoPrestadoResposta" name="ConsultarNfseServicoPrestadoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:CancelarNfseEnvio" name="CancelarNfseEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteRpsSincronoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:EnviarLoteRpsSincronoResposta" name="EnviarLoteRpsSincronoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SubstituirNfseEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:SubstituirNfseEnvio" name="SubstituirNfseEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SubstituirNfseResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:SubstituirNfseResposta" name="SubstituirNfseResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoTomadoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarNfseServicoTomadoResposta" name="ConsultarNfseServicoTomadoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoTomadoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarNfseServicoTomadoEnvio" name="ConsultarNfseServicoTomadoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoPrestadoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:ConsultarNfseServicoPrestadoEnvio" name="ConsultarNfseServicoPrestadoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:part element="tns:EnviarLoteRpsResposta" name="EnviarLoteRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="NfsePort" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:operation name="ConsultarNfseFaixa" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <wsdl:input message="tns:ConsultarNfseFaixaEnvio" name="ConsultarNfseFaixaEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfseFaixaResposta" name="ConsultarNfseFaixaResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <wsdl:input message="tns:CancelarNfseEnvio" name="CancelarNfseEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:input>
+      <wsdl:output message="tns:CancelarNfseResposta" name="CancelarNfseResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteRps" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <wsdl:input message="tns:EnviarLoteRpsEnvio" name="EnviarLoteRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:input>
+      <wsdl:output message="tns:EnviarLoteRpsResposta" name="EnviarLoteRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <wsdl:input message="tns:ConsultarLoteRpsEnvio" name="ConsultarLoteRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarLoteRpsResposta" name="ConsultarLoteRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseRps" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <wsdl:input message="tns:ConsultarNfseRpsEnvio" name="ConsultarNfseRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfseRpsResposta" name="ConsultarNfseRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteRpsSincrono" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <wsdl:input message="tns:EnviarLoteRpsSincronoEnvio" name="EnviarLoteRpsSincronoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:input>
+      <wsdl:output message="tns:EnviarLoteRpsSincronoResposta" name="EnviarLoteRpsSincronoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoPrestado" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <wsdl:input message="tns:ConsultarNfseServicoPrestadoEnvio" name="ConsultarNfseServicoPrestadoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfseServicoPrestadoResposta" name="ConsultarNfseServicoPrestadoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <wsdl:input message="tns:SubstituirNfseEnvio" name="SubstituirNfseEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:input>
+      <wsdl:output message="tns:SubstituirNfseResposta" name="SubstituirNfseResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoTomado" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <wsdl:input message="tns:ConsultarNfseServicoTomadoEnvio" name="ConsultarNfseServicoTomadoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfseServicoTomadoResposta" name="ConsultarNfseServicoTomadoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NfsePortSoap11" type="tns:NfsePort" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="ConsultarNfseFaixa" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input name="ConsultarNfseFaixaEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfseFaixaResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input name="CancelarNfseEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output name="CancelarNfseResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteRps" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input name="EnviarLoteRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output name="EnviarLoteRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input name="ConsultarLoteRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarLoteRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseRps" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input name="ConsultarNfseRpsEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfseRpsResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteRpsSincrono" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input name="EnviarLoteRpsSincronoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output name="EnviarLoteRpsSincronoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoPrestado" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input name="ConsultarNfseServicoPrestadoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfseServicoPrestadoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input name="SubstituirNfseEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output name="SubstituirNfseResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoTomado" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input name="ConsultarNfseServicoTomadoEnvio" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfseServicoTomadoResposta" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NfsePortService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:port binding="tns:NfsePortSoap11" name="NfsePortSoap11" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:address location="http://200.150.67.99:32777/WebEloWS/nfseService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

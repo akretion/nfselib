@@ -1,0 +1,227 @@
+<definitions name='ServiceIPMImplService' targetNamespace='http://homologacao.IPM.com.br' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://homologacao.IPM.com.br' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+ <types></types>
+ <message name='ServiceIPMImpl_CancelarNfseResponse'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarNfseV3'>
+  <part name='arg0' type='xsd:string'></part>
+  <part name='arg1' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_RecepcionarLoteRpsV3Response'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarNfsePorRpsV3Response'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarLoteRps'>
+  <part name='arg0' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarSituacaoLoteRpsResponse'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarSituacaoLoteRpsV3'>
+  <part name='arg0' type='xsd:string'></part>
+  <part name='arg1' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarLoteRpsResponse'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_RecepcionarLoteRpsV3'>
+  <part name='arg0' type='xsd:string'></part>
+  <part name='arg1' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarNfsePorRps'>
+  <part name='arg0' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarSituacaoLoteRps'>
+  <part name='arg0' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarNfse'>
+  <part name='arg0' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarNfseV3Response'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarNfseResponse'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarNfsePorRpsResponse'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarLoteRpsV3'>
+  <part name='arg0' type='xsd:string'></part>
+  <part name='arg1' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarLoteRpsV3Response'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_RecepcionarLoteRps'>
+  <part name='arg0' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_RecepcionarLoteRpsResponse'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarSituacaoLoteRpsV3Response'>
+  <part name='return' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_CancelarNfse'>
+  <part name='arg0' type='xsd:string'></part>
+ </message>
+ <message name='ServiceIPMImpl_ConsultarNfsePorRpsV3'>
+  <part name='arg0' type='xsd:string'></part>
+  <part name='arg1' type='xsd:string'></part>
+ </message>
+ <portType name='ServiceIPMImpl'>
+  <operation name='CancelarNfse' parameterOrder='arg0'>
+   <input message='tns:ServiceIPMImpl_CancelarNfse'></input>
+   <output message='tns:ServiceIPMImpl_CancelarNfseResponse'></output>
+  </operation>
+  <operation name='ConsultarLoteRps' parameterOrder='arg0'>
+   <input message='tns:ServiceIPMImpl_ConsultarLoteRps'></input>
+   <output message='tns:ServiceIPMImpl_ConsultarLoteRpsResponse'></output>
+  </operation>
+  <operation name='ConsultarLoteRpsV3' parameterOrder='arg0 arg1'>
+   <input message='tns:ServiceIPMImpl_ConsultarLoteRpsV3'></input>
+   <output message='tns:ServiceIPMImpl_ConsultarLoteRpsV3Response'></output>
+  </operation>
+  <operation name='ConsultarNfse' parameterOrder='arg0'>
+   <input message='tns:ServiceIPMImpl_ConsultarNfse'></input>
+   <output message='tns:ServiceIPMImpl_ConsultarNfseResponse'></output>
+  </operation>
+  <operation name='ConsultarNfsePorRps' parameterOrder='arg0'>
+   <input message='tns:ServiceIPMImpl_ConsultarNfsePorRps'></input>
+   <output message='tns:ServiceIPMImpl_ConsultarNfsePorRpsResponse'></output>
+  </operation>
+  <operation name='ConsultarNfsePorRpsV3' parameterOrder='arg0 arg1'>
+   <input message='tns:ServiceIPMImpl_ConsultarNfsePorRpsV3'></input>
+   <output message='tns:ServiceIPMImpl_ConsultarNfsePorRpsV3Response'></output>
+  </operation>
+  <operation name='ConsultarNfseV3' parameterOrder='arg0 arg1'>
+   <input message='tns:ServiceIPMImpl_ConsultarNfseV3'></input>
+   <output message='tns:ServiceIPMImpl_ConsultarNfseV3Response'></output>
+  </operation>
+  <operation name='ConsultarSituacaoLoteRps' parameterOrder='arg0'>
+   <input message='tns:ServiceIPMImpl_ConsultarSituacaoLoteRps'></input>
+   <output message='tns:ServiceIPMImpl_ConsultarSituacaoLoteRpsResponse'></output>
+  </operation>
+  <operation name='ConsultarSituacaoLoteRpsV3' parameterOrder='arg0 arg1'>
+   <input message='tns:ServiceIPMImpl_ConsultarSituacaoLoteRpsV3'></input>
+   <output message='tns:ServiceIPMImpl_ConsultarSituacaoLoteRpsV3Response'></output>
+  </operation>
+  <operation name='RecepcionarLoteRps' parameterOrder='arg0'>
+   <input message='tns:ServiceIPMImpl_RecepcionarLoteRps'></input>
+   <output message='tns:ServiceIPMImpl_RecepcionarLoteRpsResponse'></output>
+  </operation>
+  <operation name='RecepcionarLoteRpsV3' parameterOrder='arg0 arg1'>
+   <input message='tns:ServiceIPMImpl_RecepcionarLoteRpsV3'></input>
+   <output message='tns:ServiceIPMImpl_RecepcionarLoteRpsV3Response'></output>
+  </operation>
+ </portType>
+ <binding name='ServiceIPMImplBinding' type='tns:ServiceIPMImpl'>
+  <soap:binding style='rpc' transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='CancelarNfse'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='ConsultarLoteRps'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='ConsultarLoteRpsV3'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='ConsultarNfse'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='ConsultarNfsePorRps'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='ConsultarNfsePorRpsV3'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='ConsultarNfseV3'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='ConsultarSituacaoLoteRps'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='ConsultarSituacaoLoteRpsV3'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='RecepcionarLoteRps'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+  <operation name='RecepcionarLoteRpsV3'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </input>
+   <output>
+    <soap:body namespace='http://homologacao.IPM.com.br' use='literal'/>
+   </output>
+  </operation>
+ </binding>
+ <service name='ServiceIPMImplService'>
+  <port binding='tns:ServiceIPMImplBinding' name='ServiceIPMImplPort'>
+   <soap:address location='https://homologacao.IPM.com.br//ServiceIPMImpl'/>
+  </port>
+ </service>
+</definitions>
