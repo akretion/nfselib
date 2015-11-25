@@ -453,6 +453,7 @@
       <xs:element name="Tomador" type="tipos:tcDadosTomador" minOccurs="1" maxOccurs="1" />
       <xs:element name="IntermediarioServico" type="tipos:TcIdentificacaoIntermediarioServico" minOccurs="0" maxOccurs="1" />
       <xs:element name="ConstrucaoCivil" type="tipos:tcDadosConstrucaoCivil" minOccurs="0" maxOccurs="1" />
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="CondicaoPagamento" type="tipos:tcCondicoesPagamentos"/>
     </xs:sequence>
     <xs:attribute name="Id" type="xs:string"/>
   </xs:complexType>
@@ -590,5 +591,31 @@
       <xs:element name="CodigoMunicipio" type="tipos:tsCodigoMunicipioIbge" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
+
+  <xs:simpleType name="Condicao">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="A_VISTA"/>
+         <xs:enumeration value="A_PRAZO"/>
+         <xs:enumeration value="NA_APRESENTACAO"/>
+         <xs:enumeration value="CARTAO_DEBITO"/>
+         <xs:enumeration value="CARTAO_CREDITO"/>
+      </xs:restriction>
+   </xs:simpleType>
+
+   <xs:complexType name="tcCondicoesPagamentos">
+      <xs:sequence>
+         <xs:element name="Condicao" type="tipos:Condicao"/>
+	 <xs:element minOccurs="0" name="QtdParcela" type="xs:int"/>
+	 <xs:element maxOccurs="unbounded" minOccurs="0" name="Parcelas" type="tipos:tcParcelas"/>
+      </xs:sequence>
+   </xs:complexType>
+
+   <xs:complexType name="tcParcelas">
+      <xs:sequence>
+         <xs:element name="Parcela" type="xs:int"/>
+         <xs:element minOccurs="0" name="DataVencimento" type="xs:string"/>
+	 <xs:element minOccurs="0" name="Valor" type="xs:decimal"/>
+      </xs:sequence>
+   </xs:complexType>
   
 </xs:schema>

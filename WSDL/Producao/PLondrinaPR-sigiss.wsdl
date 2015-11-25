@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://iss.londrina.pr.gov.br/ws/v1_02" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://iss.londrina.pr.gov.br/ws/v1_02">
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://iss.londrina.pr.gov.br/ws/v1_03" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://iss.londrina.pr.gov.br/ws/v1_03">
 <types>
-<xsd:schema targetNamespace="http://iss.londrina.pr.gov.br/ws/v1_02"
+<xsd:schema targetNamespace="http://iss.londrina.pr.gov.br/ws/v1_03"
 >
  <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
  <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
@@ -44,11 +44,14 @@
    <xsd:element name="tomador_fone" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="tomador_ramal" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="tomador_fax" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="rps_num" type="xsd:int" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="rps_serie" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="rps_dia" type="xsd:int" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="rps_mes" type="xsd:int" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="rps_ano" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="rps_num" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="rps_serie" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="rps_tipo" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="rps_dia" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="rps_mes" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="rps_ano" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="nfse_substituida" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="rps_substituido" type="xsd:int" minOccurs="0" maxOccurs="1"/>
   </xsd:all>
  </xsd:complexType>
  <xsd:complexType name="tcRetornoNota">
@@ -66,8 +69,7 @@
    <xsd:element name="cpf" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="senha" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="nota" type="xsd:int" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="nota_substitutiva" type="xsd:int" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="motivo" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="cod_cancelamento" type="xsd:int" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="email" type="xsd:string" minOccurs="1" maxOccurs="1"/>
   </xsd:all>
  </xsd:complexType>
@@ -110,7 +112,7 @@
    <xsd:element name="cnpj" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="cpf" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="senha" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="cnpj_cpf_cadastro" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="cnpj_cpf_cadastro" type="xsd:string" minOccurs="1" maxOccurs="1"/>
   </xsd:sequence>
  </xsd:complexType>
 </xsd:schema>
@@ -170,34 +172,34 @@
 <binding name="ModuloEmissorNFSeBinding" type="tns:ModuloEmissorNFSePortType">
   <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
   <operation name="GerarNota">
-    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_02#GerarNota" style="rpc"/>
-    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></input>
-    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></output>
+    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_03#GerarNota" style="rpc"/>
+    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></input>
+    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></output>
   </operation>
   <operation name="CancelarNota">
-    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_02#CancelarNota" style="rpc"/>
-    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></input>
-    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></output>
+    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_03#CancelarNota" style="rpc"/>
+    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></input>
+    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></output>
   </operation>
   <operation name="ConsultarNfseServicoPrestado">
-    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_02#ConsultarNfseServicoPrestado" style="rpc"/>
-    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></input>
-    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></output>
+    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_03#ConsultarNfseServicoPrestado" style="rpc"/>
+    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></input>
+    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></output>
   </operation>
   <operation name="ConsultarRpsServicoPrestado">
-    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_02#ConsultarRpsServicoPrestado" style="rpc"/>
-    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></input>
-    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></output>
+    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_03#ConsultarRpsServicoPrestado" style="rpc"/>
+    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></input>
+    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></output>
   </operation>
   <operation name="ConsultarCadastroContribuinte">
-    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_02#ConsultarCadastroContribuinte" style="rpc"/>
-    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></input>
-    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_02"/></output>
+    <soap:operation soapAction="http://iss.londrina.pr.gov.br/ws/v1_03#ConsultarCadastroContribuinte" style="rpc"/>
+    <input><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></input>
+    <output><soap:body use="literal" namespace="http://iss.londrina.pr.gov.br/ws/v1_03"/></output>
   </operation>
 </binding>
 <service name="ModuloEmissorNFSe">
   <port name="ModuloEmissorNFSePort" binding="tns:ModuloEmissorNFSeBinding">
-    <soap:address location="https://iss.londrina.pr.gov.br:443/ws/v1_02/sigiss_ws.php"/>
+    <soap:address location="https://iss.londrina.pr.gov.br:443/ws/v1_03/sigiss_ws.php"/>
   </port>
 </service>
 </definitions>

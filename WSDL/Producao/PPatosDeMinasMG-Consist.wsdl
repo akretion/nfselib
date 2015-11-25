@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://eISS" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ax21="http://eISS/xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://eISS">
+    <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://eISS/xsd">
+            <xs:complexType name="eISSWService_RPSInfo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="aliq" type="xs:double"/>
+                    <xs:element minOccurs="0" name="bairro" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cep" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cidade" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codAtiv" type="xs:int"/>
+                    <xs:element minOccurs="0" name="competencia" type="xs:int"/>
+                    <xs:element minOccurs="0" name="convenio" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="descServicos" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="dtEmissaoRPS" type="xs:int"/>
+                    <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="endereco" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identTomador" type="xs:double"/>
+                    <xs:element minOccurs="0" name="local" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="municipioServ" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="numRPS" type="xs:long"/>
+                    <xs:element minOccurs="0" name="rzSocial" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="serieRPS" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="simples" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="sitRPS" type="xs:int"/>
+                    <xs:element minOccurs="0" name="tipoIdent" type="xs:int"/>
+                    <xs:element minOccurs="0" name="tipoRPS" type="xs:int"/>
+                    <xs:element minOccurs="0" name="tipoRecol" type="xs:int"/>
+                    <xs:element minOccurs="0" name="uf" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ufServ" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="vlCOFINS" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlCSLL" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlDeducoes" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlINSS" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlIR" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlImposto" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlPIS" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlServicos" type="xs:double"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoProcessaRPS">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="primeiraNota" type="xs:int"/>
+                    <xs:element minOccurs="0" name="retorno" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="rpsItem" nillable="true" type="ax21:eISSWService_RetornoProcessaRPSItem"/>
+                    <xs:element minOccurs="0" name="totalNotas" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ultimaNota" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoProcessaRPSItem">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="hashCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="numNota" type="xs:int"/>
+                    <xs:element minOccurs="0" name="numRPS" type="xs:int"/>
+                    <xs:element minOccurs="0" name="urlNota" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoConsultaNFe">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="dataEmissao" type="xs:int"/>
+                    <xs:element minOccurs="0" name="hashCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="numNota" type="xs:int"/>
+                    <xs:element minOccurs="0" name="numRPS" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoConsultaEmpresa">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="bairro" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cep" type="xs:int"/>
+                    <xs:element minOccurs="0" name="cidade" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cnpjcpf" type="xs:long"/>
+                    <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="endereco" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="insMunicipal" type="xs:int"/>
+                    <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="razao" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="uf" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoProcessaRPSSerie">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="primeiraNota" type="xs:int"/>
+                    <xs:element minOccurs="0" name="retorno" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="rpsItem" nillable="true" type="ax21:eISSWService_RetornoProcessaRPSSerieItem"/>
+                    <xs:element minOccurs="0" name="totalNotas" type="xs:int"/>
+                    <xs:element minOccurs="0" name="ultimaNota" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoProcessaRPSSerieItem">
+                <xs:complexContent>
+                    <xs:extension base="ax21:eISSWService_RetornoProcessaRPSItem">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="serieRPS" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoValidaRPS">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="numRPS" nillable="true" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="ocorrencia" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="retorno" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="tipoOcorrencia" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoValidaRPSSerie">
+                <xs:complexContent>
+                    <xs:extension base="ax21:eISSWService_RetornoValidaRPS">
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="serieRPS" nillable="true" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_NFeInfo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="aliq" type="xs:double"/>
+                    <xs:element minOccurs="0" name="bairro" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cep" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cidade" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="codAtiv" type="xs:int"/>
+                    <xs:element minOccurs="0" name="competencia" type="xs:int"/>
+                    <xs:element minOccurs="0" name="convenio" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="descServicos" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="endereco" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="identTomador" type="xs:double"/>
+                    <xs:element minOccurs="0" name="local" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="municipioServ" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="rzSocial" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="simples" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="tipoIdent" type="xs:int"/>
+                    <xs:element minOccurs="0" name="tipoRecol" type="xs:int"/>
+                    <xs:element minOccurs="0" name="uf" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ufServ" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="vlCOFINS" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlCSLL" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlDeducoes" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlINSS" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlIR" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlImposto" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlPIS" type="xs:double"/>
+                    <xs:element minOccurs="0" name="vlServicos" type="xs:double"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoEmiteNFe">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="hashCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="numNota" type="xs:int"/>
+                    <xs:element minOccurs="0" name="retorno" type="xs:int"/>
+                    <xs:element minOccurs="0" name="urlNota" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoValidaNFe">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="ocorrencia" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="retorno" type="xs:int"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="tipoOcorrencia" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoCancelaNFe">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="retorno" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="eISSWService_RetornoConsultaNFeCancelada">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="dataCancelamento" type="xs:int"/>
+                    <xs:element minOccurs="0" name="mensagem" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="motivo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="numNota" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax22="http://eISS/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://eISS">
+            <xs:import namespace="http://eISS/xsd"/>
+            <xs:element name="ProcessaRPS">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element name="dataInicio" type="xs:int"/>
+                        <xs:element name="dataFim" type="xs:int"/>
+                        <xs:element name="versao" type="xs:int"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="aRPSInfo" nillable="true" type="ax22:eISSWService_RPSInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ProcessaRPSResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoProcessaRPS"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConsultaNFe">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element name="numNota" type="xs:int"/>
+                        <xs:element name="numRPS" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConsultaNFeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoConsultaNFe"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConsultaEmpresa">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element name="InsMunicipalEmpresa" type="xs:int"/>
+                        <xs:element name="cnpjcpfEmpresa" type="xs:long"/>
+                        <xs:element minOccurs="0" name="empresaFora" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConsultaEmpresaResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoConsultaEmpresa"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ProcessaRPSSerie">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element name="dataInicio" type="xs:int"/>
+                        <xs:element name="dataFim" type="xs:int"/>
+                        <xs:element name="versao" type="xs:int"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="aRPSInfo" nillable="true" type="ax22:eISSWService_RPSInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ProcessaRPSSerieResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoProcessaRPSSerie"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ValidaRPS">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element name="dataInicio" type="xs:int"/>
+                        <xs:element name="dataFim" type="xs:int"/>
+                        <xs:element name="versao" type="xs:int"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="aRPSInfo" nillable="true" type="ax22:eISSWService_RPSInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ValidaRPSResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoValidaRPS"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ValidaRPSSerie">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element name="dataInicio" type="xs:int"/>
+                        <xs:element name="dataFim" type="xs:int"/>
+                        <xs:element name="versao" type="xs:int"/>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="aRPSInfo" nillable="true" type="ax22:eISSWService_RPSInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ValidaRPSSerieResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoValidaRPSSerie"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="EmiteNFe">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="aNFeInfo" nillable="true" type="ax22:eISSWService_NFeInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="EmiteNFeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoEmiteNFe"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ValidaNFe">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="aNFeInfo" nillable="true" type="ax22:eISSWService_NFeInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ValidaNFeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoValidaNFe"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CancelaNFe">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element name="numNota" type="xs:int"/>
+                        <xs:element minOccurs="0" name="motivo" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="CancelaNFeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoCancelaNFe"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConsultaNFeCancelada">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="InsMunicipal" type="xs:int"/>
+                        <xs:element minOccurs="0" name="senha" nillable="true" type="xs:string"/>
+                        <xs:element name="numNota" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ConsultaNFeCanceladaResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax22:eISSWService_RetornoConsultaNFeCancelada"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="ConsultaEmpresaRequest">
+        <wsdl:part name="parameters" element="ns:ConsultaEmpresa"/>
+    </wsdl:message>
+    <wsdl:message name="ConsultaEmpresaResponse">
+        <wsdl:part name="parameters" element="ns:ConsultaEmpresaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ProcessaRPSRequest">
+        <wsdl:part name="parameters" element="ns:ProcessaRPS"/>
+    </wsdl:message>
+    <wsdl:message name="ProcessaRPSResponse">
+        <wsdl:part name="parameters" element="ns:ProcessaRPSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ValidaNFeRequest">
+        <wsdl:part name="parameters" element="ns:ValidaNFe"/>
+    </wsdl:message>
+    <wsdl:message name="ValidaNFeResponse">
+        <wsdl:part name="parameters" element="ns:ValidaNFeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ValidaRPSSerieRequest">
+        <wsdl:part name="parameters" element="ns:ValidaRPSSerie"/>
+    </wsdl:message>
+    <wsdl:message name="ValidaRPSSerieResponse">
+        <wsdl:part name="parameters" element="ns:ValidaRPSSerieResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ConsultaNFeCanceladaRequest">
+        <wsdl:part name="parameters" element="ns:ConsultaNFeCancelada"/>
+    </wsdl:message>
+    <wsdl:message name="ConsultaNFeCanceladaResponse">
+        <wsdl:part name="parameters" element="ns:ConsultaNFeCanceladaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ValidaRPSRequest">
+        <wsdl:part name="parameters" element="ns:ValidaRPS"/>
+    </wsdl:message>
+    <wsdl:message name="ValidaRPSResponse">
+        <wsdl:part name="parameters" element="ns:ValidaRPSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ProcessaRPSSerieRequest">
+        <wsdl:part name="parameters" element="ns:ProcessaRPSSerie"/>
+    </wsdl:message>
+    <wsdl:message name="ProcessaRPSSerieResponse">
+        <wsdl:part name="parameters" element="ns:ProcessaRPSSerieResponse"/>
+    </wsdl:message>
+    <wsdl:message name="EmiteNFeRequest">
+        <wsdl:part name="parameters" element="ns:EmiteNFe"/>
+    </wsdl:message>
+    <wsdl:message name="EmiteNFeResponse">
+        <wsdl:part name="parameters" element="ns:EmiteNFeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ConsultaNFeRequest">
+        <wsdl:part name="parameters" element="ns:ConsultaNFe"/>
+    </wsdl:message>
+    <wsdl:message name="ConsultaNFeResponse">
+        <wsdl:part name="parameters" element="ns:ConsultaNFeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="CancelaNFeRequest">
+        <wsdl:part name="parameters" element="ns:CancelaNFe"/>
+    </wsdl:message>
+    <wsdl:message name="CancelaNFeResponse">
+        <wsdl:part name="parameters" element="ns:CancelaNFeResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="eISSWServicePortType">
+        <wsdl:operation name="ConsultaEmpresa">
+            <wsdl:input message="ns:ConsultaEmpresaRequest" wsaw:Action="urn:ConsultaEmpresa"/>
+            <wsdl:output message="ns:ConsultaEmpresaResponse" wsaw:Action="urn:ConsultaEmpresaResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ProcessaRPS">
+            <wsdl:input message="ns:ProcessaRPSRequest" wsaw:Action="urn:ProcessaRPS"/>
+            <wsdl:output message="ns:ProcessaRPSResponse" wsaw:Action="urn:ProcessaRPSResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaNFe">
+            <wsdl:input message="ns:ValidaNFeRequest" wsaw:Action="urn:ValidaNFe"/>
+            <wsdl:output message="ns:ValidaNFeResponse" wsaw:Action="urn:ValidaNFeResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaRPSSerie">
+            <wsdl:input message="ns:ValidaRPSSerieRequest" wsaw:Action="urn:ValidaRPSSerie"/>
+            <wsdl:output message="ns:ValidaRPSSerieResponse" wsaw:Action="urn:ValidaRPSSerieResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ConsultaNFeCancelada">
+            <wsdl:input message="ns:ConsultaNFeCanceladaRequest" wsaw:Action="urn:ConsultaNFeCancelada"/>
+            <wsdl:output message="ns:ConsultaNFeCanceladaResponse" wsaw:Action="urn:ConsultaNFeCanceladaResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaRPS">
+            <wsdl:input message="ns:ValidaRPSRequest" wsaw:Action="urn:ValidaRPS"/>
+            <wsdl:output message="ns:ValidaRPSResponse" wsaw:Action="urn:ValidaRPSResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ProcessaRPSSerie">
+            <wsdl:input message="ns:ProcessaRPSSerieRequest" wsaw:Action="urn:ProcessaRPSSerie"/>
+            <wsdl:output message="ns:ProcessaRPSSerieResponse" wsaw:Action="urn:ProcessaRPSSerieResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="EmiteNFe">
+            <wsdl:input message="ns:EmiteNFeRequest" wsaw:Action="urn:EmiteNFe"/>
+            <wsdl:output message="ns:EmiteNFeResponse" wsaw:Action="urn:EmiteNFeResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ConsultaNFe">
+            <wsdl:input message="ns:ConsultaNFeRequest" wsaw:Action="urn:ConsultaNFe"/>
+            <wsdl:output message="ns:ConsultaNFeResponse" wsaw:Action="urn:ConsultaNFeResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="CancelaNFe">
+            <wsdl:input message="ns:CancelaNFeRequest" wsaw:Action="urn:CancelaNFe"/>
+            <wsdl:output message="ns:CancelaNFeResponse" wsaw:Action="urn:CancelaNFeResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="eISSWServiceSoap11Binding" type="ns:eISSWServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="ConsultaEmpresa">
+            <soap:operation soapAction="urn:ConsultaEmpresa" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ProcessaRPS">
+            <soap:operation soapAction="urn:ProcessaRPS" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaNFe">
+            <soap:operation soapAction="urn:ValidaNFe" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaRPSSerie">
+            <soap:operation soapAction="urn:ValidaRPSSerie" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ConsultaNFeCancelada">
+            <soap:operation soapAction="urn:ConsultaNFeCancelada" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaRPS">
+            <soap:operation soapAction="urn:ValidaRPS" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ProcessaRPSSerie">
+            <soap:operation soapAction="urn:ProcessaRPSSerie" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="EmiteNFe">
+            <soap:operation soapAction="urn:EmiteNFe" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ConsultaNFe">
+            <soap:operation soapAction="urn:ConsultaNFe" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CancelaNFe">
+            <soap:operation soapAction="urn:CancelaNFe" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="eISSWServiceSoap12Binding" type="ns:eISSWServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="ConsultaEmpresa">
+            <soap12:operation soapAction="urn:ConsultaEmpresa" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ProcessaRPS">
+            <soap12:operation soapAction="urn:ProcessaRPS" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaNFe">
+            <soap12:operation soapAction="urn:ValidaNFe" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaRPSSerie">
+            <soap12:operation soapAction="urn:ValidaRPSSerie" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ConsultaNFeCancelada">
+            <soap12:operation soapAction="urn:ConsultaNFeCancelada" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaRPS">
+            <soap12:operation soapAction="urn:ValidaRPS" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ProcessaRPSSerie">
+            <soap12:operation soapAction="urn:ProcessaRPSSerie" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="EmiteNFe">
+            <soap12:operation soapAction="urn:EmiteNFe" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ConsultaNFe">
+            <soap12:operation soapAction="urn:ConsultaNFe" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CancelaNFe">
+            <soap12:operation soapAction="urn:CancelaNFe" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="eISSWServiceHttpBinding" type="ns:eISSWServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="ConsultaEmpresa">
+            <http:operation location="ConsultaEmpresa"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ProcessaRPS">
+            <http:operation location="ProcessaRPS"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaNFe">
+            <http:operation location="ValidaNFe"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaRPSSerie">
+            <http:operation location="ValidaRPSSerie"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ConsultaNFeCancelada">
+            <http:operation location="ConsultaNFeCancelada"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ValidaRPS">
+            <http:operation location="ValidaRPS"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ProcessaRPSSerie">
+            <http:operation location="ProcessaRPSSerie"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="EmiteNFe">
+            <http:operation location="EmiteNFe"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ConsultaNFe">
+            <http:operation location="ConsultaNFe"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="CancelaNFe">
+            <http:operation location="CancelaNFe"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="eISSWService">
+        <wsdl:port name="eISSWServiceHttpSoap11Endpoint" binding="ns:eISSWServiceSoap11Binding">
+            <soap:address location="http://200.162.29.193:8080/axis2/services/eISSWService.eISSWServiceHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="eISSWServiceHttpSoap12Endpoint" binding="ns:eISSWServiceSoap12Binding">
+            <soap12:address location="http://200.162.29.193:8080/axis2/services/eISSWService.eISSWServiceHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="eISSWServiceHttpEndpoint" binding="ns:eISSWServiceHttpBinding">
+            <http:address location="http://200.162.29.193:8080/axis2/services/eISSWService.eISSWServiceHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

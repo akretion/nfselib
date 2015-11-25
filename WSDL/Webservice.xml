@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Webservice>
+  <Estado ID="CONAN" Nome="Geral - CONAN" UF="XX" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
   <Estado ID="GINFES" Nome="Geral - GINFES" UF="XX" Padrao="GINFES">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
@@ -91,24 +109,6 @@
     </LocalProducao>
   </Estado>
   <Estado ID="3549904" Nome="São José dos Campos - SP" UF="SP" Padrao="GINFES">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
-  <Estado ID="3525300" Nome="Jaú - SP" UF="SP" Padrao="GINFES">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
@@ -540,24 +540,6 @@
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3170701" Nome="Varginha - MG" UF="MG" Padrao="CONAM">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
   <Estado ID="3506359" Nome="Bertioga - SP" UF="SP" Padrao="GINFES">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
@@ -972,26 +954,6 @@
       <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="4100400" Nome="Almirante Tamandaré - PR" UF="PR" Padrao="BETHA">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
   <Estado ID="4202404" Nome="Blumenau - SC" UF="SC" Padrao="BLUMENAU_SC">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HBlumenauSC.wsdl</RecepcionarLoteRps>
@@ -1130,26 +1092,6 @@
       <ConsultarLoteRps>wsdl\producao\PThemaConsulta.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PThemaCancelamento.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
-  <Estado ID="1500800" Nome="Ananindeua - PA" UF="PA" Padrao="GINFES">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4118402" Nome="Paranavaí - PR" UF="PR" Padrao="BETHA">
@@ -1330,26 +1272,6 @@
       <ConsultarLoteRps>wsdl\producao\PISSOnLineAracatubaSP.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PISSOnLineAracatubaSP.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
-  <Estado ID="4101408" Nome="Apucarana - PR" UF="PR" Padrao="ISSONLINE">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HISSOnLineApucarana.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PISSOnLineApucarana.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PISSOnLineApucarana.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3106200" Nome="Belo Horizonte - MG" UF="MG" Padrao="BHISS">
@@ -1661,7 +1583,7 @@
       <ConsultarLoteRps></ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\homologacao\HSistemaISSOnLine4rJuquiaCancelarNfse.wsdl</CancelarNfse>
-    </LocalHomologacao>              
+    </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PSistemaISSOnLine4rJuquiaRecepcionarLoteRpsSincrono.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
@@ -2388,26 +2310,6 @@
       <CancelarNfse>wsdl\producao\PTremembeSP-sigiss_ws.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3528502" Nome="Mairipora - SP" UF="SP" Padrao="ISSWEB">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HMairipora-ISSWEB.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HMairipora-ISSWEB.wsdl</ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HMairipora-ISSWEB.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PMairipora-ISSWEB.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PMairipora-ISSWEB.wsdl</ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PMairipora-ISSWEB.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
   <Estado ID="3529005" Nome="Marília - SP" UF="SP" Padrao="SIGCORP_SIGISS">
     <LocalHomologacao>
       <RecepcionarLoteRps></RecepcionarLoteRps>
@@ -2882,7 +2784,7 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PPassoFundoRS-cancelamento.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado> 
+  </Estado>
   <Estado ID="4105508" Nome="Cianorte - PR" UF="PR" Padrao="SIGCORP_SIGISS">
     <LocalHomologacao>
       <RecepcionarLoteRps>WSDL\Homologacao\HCianortePR-sigiss_ws.wsdl</RecepcionarLoteRps>
@@ -3102,7 +3004,7 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PEQUIPLANO.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
   <Estado ID="4107207" Nome="Dois Vizinhos - PR" UF="PR" Padrao="EQUIPLANO">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HEQUIPLANO.wsdl</RecepcionarLoteRps>
@@ -3378,7 +3280,7 @@
       <ConsultarLoteRps>wsdl\producao\PSinopMTconsultaloterps-FISSLEX.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PSinopMTcancelarnfse-FISSLEX.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
   <Estado ID="3151800" Nome="Poços de Caldas - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HPocosdeCaldasMG-GOVDIGITAL.wsdl</RecepcionarLoteRps>
@@ -3578,7 +3480,7 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PPedroLeopoldoMG.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
   <Estado ID="3537305" Nome="Penápolis - SP" UF="SP" Padrao="MGM">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HPenapolisSP-MGM.wsdl</RecepcionarLoteRps>
@@ -3598,7 +3500,7 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PPenapolisSP-MGM.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
   <Estado ID="4319505" Nome="São Sebastião do Caí - RS" UF="RS" Padrao="TECNOSISTEMAS">
     <LocalHomologacao>
       <RecepcionarLoteRps>WSDL\Homologacao\HSSebastiaoCai-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
@@ -3731,6 +3633,452 @@
       <ConsultarLoteRps>WSDL\Producao\PIvoti-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PIvoti-CancelamentoNFSe.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3528502" Nome="Mairipora - SP" UF="SP" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3522208" Nome="Itapecerica da Serra - SP" UF="SP" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3552809" Nome="Taboão da Serra - SP" UF="SP" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3170701" Nome="Varginha - MG" UF="MG" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3509007" Nome="Caieiras - SP" UF="SP" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3526902" Nome="Limeira - SP" UF="SP" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3554102" Nome="Taubaté - SP" UF="SP" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3539806" Nome="Poá - SP" UF="SP" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="1500800" Nome="Ananindeua - PA" UF="PA" Padrao="GINFES">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4101408" Nome="Apucarana - PR" UF="PR" Padrao="ISSONLINE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HISSOnLineApucarana.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PISSOnLineApucarana.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PISSOnLineApucarana.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4100400" Nome="Almirante Tamandaré - PR" UF="PR" Padrao="BETHA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3525300" Nome="Jaú - SP" UF="SP" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2611606" Nome="Recife - PE" UF="PE" Padrao="ABRASF">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\XXXXXXXXXXXXXXXXXXXXXXXXXXX</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\XXXXXXXXXXXXXXXXXXXXXXXXXXX</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\XXXXXXXXXXXXXXXXXXXXXXXXXXX</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\XXXXXXXXXXXXXXXXXXXXXXXXXXX</ConsultarLoteRps>
+      <ConsultarURLNfse>WSDL\Homologacao\XXXXXXXXXXXXXXXXXXXXXXXXXXX</ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\XXXXXXXXXXXXXXXXXXXXXXXXXXX</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PRecifePE-ABRASF.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PRecifePE-ABRASF.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PRecifePE-ABRASF.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PRecifePE-ABRASF.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PRecifePE-ABRASF.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PRecifePE-ABRASF.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3130101" Nome="Igarapé - MG" UF="MG" Padrao="SIGCORP_SIGISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PIgarapeMG-sigiss.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PIgarapeMG-sigiss.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PIgarapeMG-sigiss.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PIgarapeMG-sigiss.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PIgarapeMG-sigiss.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PIgarapeMG-sigiss.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3148004" Nome="Patos de Minas - MG" UF="MG" Padrao="CONSIST">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HPatosDeMinasMG-Consist.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HPatosDeMinasMG-Consist.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HPatosDeMinasMG-Consist.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HPatosDeMinasMG-Consist.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HPatosDeMinasMG-Consist.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HPatosDeMinasMG-Consist.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PPatosDeMinasMG-Consist.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PPatosDeMinasMG-Consist.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PPatosDeMinasMG-Consist.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PPatosDeMinasMG-Consist.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PPatosDeMinasMG-Consist.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PPatosDeMinasMG-Consist.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3301702" Nome="Duque de Caxias - RJ" UF="RJ" Padrao="TIPLAN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PDuquedeCaxiasRJ-TIPLAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PDuquedeCaxiasRJ-TIPLAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PDuquedeCaxiasRJ-TIPLAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PDuquedeCaxiasRJ-TIPLAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PDuquedeCaxiasRJ-TIPLAN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PDuquedeCaxiasRJ-TIPLAN.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3506508" Nome="Birigui - SP" UF="SP" Padrao="SMARAPD">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PBiriguiSP-WSEntrada.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PBiriguiSP-WSEntrada.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PBiriguiSP-WSSaida.wsdl</ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse>WSDL\Producao\PBiriguiSP-WSUtil.wsdl</ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PBiriguiSP-WSEntrada.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3201506" Nome="Colatina - ES" UF="ES" Padrao="EL">
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PColatinaES-EL-EL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PColatinaES-EL-EL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PColatinaES-EL-EL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PColatinaES-EL-EL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PColatinaES-EL-EL.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PColatinaES-EL-EL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
