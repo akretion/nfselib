@@ -1832,6 +1832,26 @@
       <CancelarNfse>WSDL\Producao\PRiodeJaneiro-RJ-CARIOCA.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="5208707" Nome="Goiania - GO" UF="GO" Padrao="GOIANIA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Producao\PGoianiaGO.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PGoianiaGO.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PGoianiaGO.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PGoianiaGO.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PGoianiaGO.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PGoianiaGO.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
   <Estado ID="3524402" Nome="Jacareí - SP" UF="SP" Padrao="ISSNET">
     <LocalHomologacao>
       <RecepcionarLoteRps>WSDL\Homologacao\HJacarei-ISSNET.wsdl</RecepcionarLoteRps>
