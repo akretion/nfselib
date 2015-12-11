@@ -4101,4 +4101,64 @@
       <CancelarNfse>WSDL\Producao\PColatinaES-EL-EL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="4315602" Nome="Rio Grande - RS" UF="RS" Padrao="SIGCORP_SIGISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HRioGrandeRS-sigiss.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HRioGrandeRS-sigiss.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HRioGrandeRS-sigiss.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HRioGrandeRS-sigiss.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HRioGrandeRS-sigiss.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HRioGrandeRS-sigiss.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PRioGrandeRS-sigiss.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PRioGrandeRS-sigiss.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PRioGrandeRS-sigiss.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PRioGrandeRS-sigiss.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PRioGrandeRS-sigiss.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PRioGrandeRS-sigiss.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4314423" Nome="Picada Café - RS" UF="RS" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HPicadaCafe-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HPicadaCafe-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HPicadaCafe-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HPicadaCafe-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HPicadaCafe-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HPicadaCafe-PRONIN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PPicadaCafe-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PPicadaCafe-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPicadaCafe-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPicadaCafe-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PPicadaCafe-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PPicadaCafe-PRONIN.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2904605" Nome="Brumado - BA" UF="BA" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBrumadoBA-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBrumadoBA-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBrumadoBA-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBrumadoBA-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBrumadoBA-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HBrumadoBA-WebISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBrumadoBA-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBrumadoBA-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBrumadoBA-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBrumadoBA-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBrumadoBA-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PBrumadoBA-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>
