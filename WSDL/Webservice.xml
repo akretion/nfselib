@@ -1835,17 +1835,8 @@
     </LocalProducao>
   </Estado>
   <Estado ID="5208707" Nome="Goiania - GO" UF="GO" Padrao="GOIANIA">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>WSDL\Producao\PGoianiaGO.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PGoianiaGO.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PGoianiaGO.wsdl</CancelarNfse>
-    </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PGoianiaGO.wsdl</RecepcionarLoteRps>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarSituacaoLoteRps>
       <ConsultarNfsePorRps>WSDL\Producao\PGoianiaGO.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>WSDL\Producao\PGoianiaGO.wsdl</ConsultarNfse>
@@ -3685,6 +3676,34 @@
       <LMCAutorizacao></LMCAutorizacao>
     </LocalProducao>
   </Estado>
+    <Estado ID="3506102" Nome="Bebedouro - SP" UF="SP" Padrao="CONAM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarNFSePNG></ConsultarNFSePNG>
+      <ConsultarNFSePDF></ConsultarNFSePDF>
+      <InutilizarNFSe></InutilizarNFSe>
+      <LMCAutorizacao></LMCAutorizacao>
+    </LocalProducao>
+  </Estado>
   <Estado ID="3522208" Nome="Itapecerica da Serra - SP" UF="SP" Padrao="CONAM">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
@@ -4161,6 +4180,100 @@
       <ConsultarLoteRps>wsdl\producao\PBrumadoBA-WebISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PBrumadoBA-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4207007" Nome="Içara - SC" UF="SC" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HIracaSC-WebIss.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HIracaSC-WebIss.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HIracaSC-WebIss.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HIracaSC-WebIss.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HIracaSC-WebIss.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HIracaSC-WebIss.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PIracaSC-WebIss.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PIracaSC-WebIss.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PIracaSC-WebIss.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PIracaSC-WebIss.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PIracaSC-WebIss.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PIracaSC-WebIss.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4217600" Nome="Siderópolis - SC" UF="SC" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HSideropolis-WebIss.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HSideropolis-WebIss.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HSideropolis-WebIss.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HSideropolis-WebIss.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HSideropolis-WebIss.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HSideropolis-WebIss.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PSideropolis-WebIss.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PSideropolis-WebIss.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PSideropolis-WebIss.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PSideropolis-WebIss.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PSideropolis-WebIss.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PSideropolis-WebIss.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>  
+  <Estado ID="4219002" Nome="Urussanga - SC" UF="SC" Padrao="BETHA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4211207" Nome="Morro da Fumaça - SC" UF="SC" Padrao="BETHA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4211603" Nome="Nova Veneza - SC" UF="SC" Padrao="BETHA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
