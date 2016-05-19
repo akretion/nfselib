@@ -27,8 +27,8 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="https://www1.webiss.com.br/LucasDoRioVerdeMT_wsNFSe_homolog/NfseServices.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
-      <xsd:import schemaLocation="https://www1.webiss.com.br/LucasDoRioVerdeMT_wsNFSe_homolog/NfseServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="https://www1.webiss.com.br/LucasDoRioVerdeMT_wsNFSe/NfseServices.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="https://www1.webiss.com.br/LucasDoRioVerdeMT_wsNFSe/NfseServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="INfseServices_RecepcionarLoteRps_InputMessage">
@@ -152,7 +152,7 @@
   </wsdl:binding>
   <wsdl:service name="NfseServices">
     <wsdl:port name="BasicHttpBinding_INfseServices" binding="tns:BasicHttpBinding_INfseServices">
-      <soap:address location="https://www1.webiss.com.br/LucasDoRioVerdeMT_wsNFSe_homolog/NfseServices.svc"/>
+      <soap:address location="https://www1.webiss.com.br/LucasDoRioVerdeMT_wsNFSe/NfseServices.svc"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

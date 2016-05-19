@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="urn:notainteligente.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="api" targetNamespace="urn:notainteligente.com">
+  <types>
+    <schema targetNamespace="urn:notainteligente.com" xmlns="http://www.w3.org/2001/XMLSchema">
+    </schema>
+  </types>
+  <portType name="api_port">
+    <operation name="ConsultarLoteRps">
+      <input message="tns:ConsultarLoteRps"/>
+      <output message="tns:ConsultarLoteRpsResponse"/>
+    </operation>
+    <operation name="RecepcionarLoteRps">
+      <input message="tns:RecepcionarLoteRps"/>
+      <output message="tns:RecepcionarLoteRpsResponse"/>
+    </operation>
+    <operation name="GerarNfse">
+      <input message="tns:GerarNfse"/>
+      <output message="tns:GerarNfseResponse"/>
+    </operation>
+    <operation name="CancelarNfse">
+      <input message="tns:CancelarNfse"/>
+      <output message="tns:CancelarNfseResponse"/>
+    </operation>
+    <operation name="SubstituirNfse">
+      <input message="tns:SubstituirNfse"/>
+      <output message="tns:SubstituirNfseResponse"/>
+    </operation>
+  </portType>
+  <binding name="api_binding" type="tns:api_port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="ConsultarLoteRps">
+      <soap:operation soapAction="ConsultarLoteRps"/>
+      <input>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </output>
+    </operation>
+    <operation name="RecepcionarLoteRps">
+      <soap:operation soapAction="RecepcionarLoteRps"/>
+      <input>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </output>
+    </operation>
+    <operation name="GerarNfse">
+      <soap:operation soapAction="GerarNfse"/>
+      <input>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </output>
+    </operation>
+    <operation name="CancelarNfse">
+      <soap:operation soapAction="CancelarNfse"/>
+      <input>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </output>
+    </operation>
+    <operation name="SubstituirNfse">
+      <soap:operation soapAction="SubstituirNfse"/>
+      <input>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="urn:notainteligente.com"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="service">
+    <port name="api_port" binding="tns:api_binding">
+      <soap:address location="https://treino-claudio-mg.notainteligente.com/api/action"/>
+    </port>
+  </service>
+  <message name="ConsultarLoteRps">
+    <part name="Body" type="xsd:string"/>
+  </message>
+  <message name="ConsultarLoteRpsResponse">
+    <part name="Value" type="xsd:string"/>
+  </message>
+  <message name="RecepcionarLoteRps">
+    <part name="Body" type="xsd:string"/>
+  </message>
+  <message name="RecepcionarLoteRpsResponse">
+    <part name="Value" type="xsd:string"/>
+  </message>
+  <message name="GerarNfse">
+    <part name="Body" type="xsd:string"/>
+  </message>
+  <message name="GerarNfseResponse">
+    <part name="Value" type="xsd:string"/>
+  </message>
+  <message name="CancelarNfse">
+    <part name="Body" type="xsd:string"/>
+  </message>
+  <message name="CancelarNfseResponse">
+    <part name="Value" type="xsd:string"/>
+  </message>
+  <message name="SubstituirNfse">
+    <part name="Body" type="xsd:string"/>
+  </message>
+  <message name="SubstituirNfseResponse">
+    <part name="Value" type="xsd:string"/>
+  </message>
+</definitions>
