@@ -4415,5 +4415,41 @@
       <ConsultarLoteRps>wsdl\producao\PCamacariBA.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PCamacariBA.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
+  <Estado ID="5003207" Nome="Corumba - MS" UF="MS" Padrao="NA_INFORMATICA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5107602" Nome="Rondonópolis - MT" UF="MT" Padrao="ABACO">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HRondonopolisMT-recepcionarloterps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HRondonopolisMT-consultarsituacaoloterps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HRondonopolisMT-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HRondonopolisMT-consultarnfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HRondonopolisMT-consultarloterps.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HRondonopolisMT-cancelarnfse.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PRondonopolisMT-recepcionarloterps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PRondonopolisMT-consultarsituacaoloterps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PRondonopolisMT-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PRondonopolisMT-consultarnfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PRondonopolisMT-consultarloterps.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PRondonopolisMT-cancelarnfse.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>
