@@ -1560,26 +1560,6 @@
       <CancelarNfse>wsdl\producao\PMirassolSP.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3127701" Nome="Governador Valadares - MG" UF="MG" Padrao="ISSONLINE4R">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HGovernadorValadaresRecepcionarLoteRpsSincrono.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HGovernadorValadaresConsultarNfsePorRps.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse></ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HGovernadorValadaresCancelarNfse.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PGovernadorValadaresRecepcionarLoteRpsSincrono.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PGovernadorValadaresConsultarNfsePorRps.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse></ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PGovernadorValadaresCancelarNfse.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
   <Estado ID="3526100" Nome="Juquiá - SP" UF="SP" Padrao="ISSONLINE4R">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HSistemaISSOnLine4rJuquiaRecepcionarLoteRpsSincrono.wsdl</RecepcionarLoteRps>
@@ -4450,6 +4430,62 @@
       <ConsultarNfse>wsdl\producao\PRondonopolisMT-consultarnfse.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PRondonopolisMT-consultarloterps.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PRondonopolisMT-cancelarnfse.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3530706" Nome="Mogi Guaçu - SP" UF="SP" Padrao="SIGCORP_SIGISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HMogiGuacu-SIGCORP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HMogiGuacu-SIGCORP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HMogiGuacu-SIGCORP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HMogiGuacu-SIGCORP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HMogiGuacu-SIGCORP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HMogiGuacu-SIGCORP.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PMogiGuacu-SIGCORP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PMogiGuacu-SIGCORP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PMogiGuacu-SIGCORP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PMogiGuacu-SIGCORP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PMogiGuacu-SIGCORP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PMogiGuacu-SIGCORP.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2919207" Nome="Lauro de Freitas - SP" UF="SP" Padrao="METROPOLIS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HGovernadorLauroFreitas-METROPOLIS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HGovernadorLauroFreitas-METROPOLIS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HGovernadorLauroFreitas-METROPOLIS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HGovernadorLauroFreitas-METROPOLIS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HGovernadorLauroFreitas-METROPOLIS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HGovernadorLauroFreitas-METROPOLIS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <CancelarNfse></CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3127701" Nome="Governador Valadares - MG" UF="MG" Padrao="ACTCON">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HGovernadorValarares-ACTCON.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HGovernadorValarares-ACTCON.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HGovernadorValarares-ACTCON.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HGovernadorValarares-ACTCON.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HGovernadorValarares-ACTCON.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HGovernadorValarares-ACTCON.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
