@@ -2597,7 +2597,7 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PPresidentePrudenteSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>
+  </Estado>  
   <Estado ID="3122306" Nome="Divinópolis - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HDivinopolisMG-GOVDigital.wsdl</RecepcionarLoteRps>
@@ -4586,4 +4586,84 @@
       <CancelarNfse>wsdl\producao\PGuarapuava-PR.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="3306305" Nome="Volta Redonda - RJ" UF="RJ" Padrao="SIMPLISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4101101" Nome="Andirá - PR" UF="PR" Padrao="SIMPLISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4322608" Nome="Venancio Aires - RS" UF="RS" Padrao="THEMA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVenancioAires-NFSEremessa.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVenancioAires-NFSEconsulta.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVenancioAires-NFSEconsulta.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVenancioAires-NFSEconsulta.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVenancioAires-NFSEconsulta.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HVenancioAires-NFSEcancelamento.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVenancioAires-NFSEremessa.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVenancioAires-NFSEconsulta.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVenancioAires-NFSEconsulta.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVenancioAires-NFSEconsulta.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVenancioAires-NFSEconsulta.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PVenancioAires-NFSEremessa.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4306106" Nome="Cruz Alta - RS" UF="RS" Padrao="ISSNET">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HISSNet.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HISSNet.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HISSNet.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HISSNet.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HISSNet.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\HISSNet.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HISSNet.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCruzAltaRSISSNET.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCruzAltaRSISSNET.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCruzAltaRSISSNET.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCruzAltaRSISSNET.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCruzAltaRSISSNET.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\PCruzAltaRSISSNET.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PCruzAltaRSISSNET.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>  
 </Webservice>
