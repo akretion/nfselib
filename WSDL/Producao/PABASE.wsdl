@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://nfse.abase.com.br/NFSeWS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://nfse.abase.com.br/NFSeWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://nfse.abase.com.br/NFSeWS">
+      <s:element name="TestSignature">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestSignatureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestSignatureResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaDadosContribuinte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cpfcnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nomeCidade" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="serie" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscaDadosContribuinteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscaDadosContribuinteResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retornaProtocoloco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cpfcnpj" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataEnvio" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="prefeitura" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retornaProtocolocoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="retornaProtocolocoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionarLoteRps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionarLoteRpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecepcionarLoteRpsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLoteRps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaLoteRpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaLoteRpsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaNfseRps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaNfseRpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaNfseRpsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelaNfse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelaNfseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelaNfseResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TestSignatureSoapIn">
+    <wsdl:part name="parameters" element="tns:TestSignature" />
+  </wsdl:message>
+  <wsdl:message name="TestSignatureSoapOut">
+    <wsdl:part name="parameters" element="tns:TestSignatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscaDadosContribuinteSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscaDadosContribuinte" />
+  </wsdl:message>
+  <wsdl:message name="BuscaDadosContribuinteSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscaDadosContribuinteResponse" />
+  </wsdl:message>
+  <wsdl:message name="retornaProtocolocoSoapIn">
+    <wsdl:part name="parameters" element="tns:retornaProtocoloco" />
+  </wsdl:message>
+  <wsdl:message name="retornaProtocolocoSoapOut">
+    <wsdl:part name="parameters" element="tns:retornaProtocolocoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsSoapIn">
+    <wsdl:part name="parameters" element="tns:RecepcionarLoteRps" />
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsSoapOut">
+    <wsdl:part name="parameters" element="tns:RecepcionarLoteRpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLoteRpsSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaLoteRps" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaLoteRpsSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaLoteRpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaNfseRpsSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaNfseRps" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaNfseRpsSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaNfseRpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelaNfseSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelaNfse" />
+  </wsdl:message>
+  <wsdl:message name="CancelaNfseSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelaNfseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NFSeWSSoap">
+    <wsdl:operation name="TestSignature">
+      <wsdl:input message="tns:TestSignatureSoapIn" />
+      <wsdl:output message="tns:TestSignatureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosContribuinte">
+      <wsdl:input message="tns:BuscaDadosContribuinteSoapIn" />
+      <wsdl:output message="tns:BuscaDadosContribuinteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retornaProtocoloco">
+      <wsdl:input message="tns:retornaProtocolocoSoapIn" />
+      <wsdl:output message="tns:retornaProtocolocoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <wsdl:input message="tns:RecepcionarLoteRpsSoapIn" />
+      <wsdl:output message="tns:RecepcionarLoteRpsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLoteRps">
+      <wsdl:input message="tns:ConsultaLoteRpsSoapIn" />
+      <wsdl:output message="tns:ConsultaLoteRpsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaNfseRps">
+      <wsdl:input message="tns:ConsultaNfseRpsSoapIn" />
+      <wsdl:output message="tns:ConsultaNfseRpsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelaNfse">
+      <wsdl:input message="tns:CancelaNfseSoapIn" />
+      <wsdl:output message="tns:CancelaNfseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NFSeWSSoap" type="tns:NFSeWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestSignature">
+      <soap:operation soapAction="http://nfse.abase.com.br/NFSeWS/TestSignature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosContribuinte">
+      <soap:operation soapAction="http://nfse.abase.com.br/NFSeWS/BuscaDadosContribuinte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornaProtocoloco">
+      <soap:operation soapAction="http://nfse.abase.com.br/NFSeWS/retornaProtocoloco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <soap:operation soapAction="http://nfse.abase.com.br/NFSeWS/RecepcionarLoteRps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLoteRps">
+      <soap:operation soapAction="http://nfse.abase.com.br/NFSeWS/ConsultaLoteRps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaNfseRps">
+      <soap:operation soapAction="http://nfse.abase.com.br/NFSeWS/ConsultaNfseRps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelaNfse">
+      <soap:operation soapAction="http://nfse.abase.com.br/NFSeWS/CancelaNfse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NFSeWSSoap12" type="tns:NFSeWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestSignature">
+      <soap12:operation soapAction="http://nfse.abase.com.br/NFSeWS/TestSignature" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaDadosContribuinte">
+      <soap12:operation soapAction="http://nfse.abase.com.br/NFSeWS/BuscaDadosContribuinte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornaProtocoloco">
+      <soap12:operation soapAction="http://nfse.abase.com.br/NFSeWS/retornaProtocoloco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <soap12:operation soapAction="http://nfse.abase.com.br/NFSeWS/RecepcionarLoteRps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaLoteRps">
+      <soap12:operation soapAction="http://nfse.abase.com.br/NFSeWS/ConsultaLoteRps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaNfseRps">
+      <soap12:operation soapAction="http://nfse.abase.com.br/NFSeWS/ConsultaNfseRps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelaNfse">
+      <soap12:operation soapAction="http://nfse.abase.com.br/NFSeWS/CancelaNfse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NFSeWS">
+    <wsdl:port name="NFSeWSSoap" binding="tns:NFSeWSSoap">
+      <soap:address location="http://nfse.abase.com.br/webservice_v2/nfsews.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NFSeWSSoap12" binding="tns:NFSeWSSoap12">
+      <soap12:address location="http://nfse.abase.com.br/webservice_v2/nfsews.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -919,7 +919,7 @@
       <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
   <Estado ID="4208302" Nome="Itapema - SC" UF="SC" Padrao="BETHA">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
@@ -2597,7 +2597,7 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PPresidentePrudenteSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
   <Estado ID="3122306" Nome="Divinópolis - MG" UF="MG" Padrao="GOVDIGITAL">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HDivinopolisMG-GOVDigital.wsdl</RecepcionarLoteRps>
@@ -4638,7 +4638,7 @@
       <ConsultarURLNfse>wsdl\producao\PCruzAltaRSISSNET.wsdl</ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PCruzAltaRSISSNET.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
   <Estado ID="3522802" Nome="Itaporanga - SP" UF="SP" Padrao="FIORILLI">
     <LocalHomologacao>
       <RecepcionarLoteRps>WSDL\Homologacao\HItaporangaSP-FIORILLI.wsdl</RecepcionarLoteRps>
@@ -4809,7 +4809,7 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PSalvadorDoSulRS-CancelamentoNFSe.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>  
+  </Estado>
   <Estado ID="4202008" Nome="Balneário Camboriú - SP" UF="SP" Padrao="SIMPLISS">
     <LocalHomologacao>
       <RecepcionarLoteRps>WSDL\Homologacao\HBalneario-SIMPLISS.wsdl</RecepcionarLoteRps>
@@ -4829,7 +4829,7 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PBalneario-SIMPLISS.wsdl</CancelarNfse>
     </LocalProducao>
-  </Estado>    
+  </Estado>
   <Estado ID="3153608" Nome="Prudente Morais - MG" UF="MG" Padrao="WEBISS">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HPrudenteMorais-WebISS.wsdl</RecepcionarLoteRps>
@@ -4848,6 +4848,186 @@
       <ConsultarLoteRps>wsdl\producao\PPrudenteMorais-WebISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PPrudenteMorais-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3133808" Nome="Itaúna - MG" UF="MG" Padrao="GINFES">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4317509" Nome="Santo Ângelo - RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4321808" Nome="Três de Maio - RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4306734" Nome="Mauricio Cardoso - RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4315107" Nome="Porto Xavier - RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4303301" Nome="Caibaté - RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4318903" Nome="São Luiz Gonzaga - RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4317905" Nome="Santo Cristo - RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4317707" Nome="Santo Antônio das Missões - RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4309001" Nome="Giruá - RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
