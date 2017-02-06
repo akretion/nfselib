@@ -434,10 +434,10 @@
   </wsdl:binding>
   <wsdl:service name="NotaFiscalService">
     <wsdl:port name="NotaFiscalServiceSoap" binding="tns:NotaFiscalServiceSoap">
-      <soap:address location="https://wsnfsehomologa.vitoria.es.gov.br/NotaFiscalService.asmx" />
+      <soap:address location="https://wsnfse.vitoria.es.gov.br/Homologacao/NotaFiscalService.asmx" />
     </wsdl:port>
     <wsdl:port name="NotaFiscalServiceSoap12" binding="tns:NotaFiscalServiceSoap12">
-      <soap12:address location="https://wsnfsehomologa.vitoria.es.gov.br/NotaFiscalService.asmx" />
+      <soap12:address location="https://wsnfse.vitoria.es.gov.br/Homologacao/NotaFiscalService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

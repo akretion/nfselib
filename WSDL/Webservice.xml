@@ -488,20 +488,20 @@
   </Estado>
   <Estado ID="2304400" Nome="Fortaleza - CE" UF="CE" Padrao="GINFES">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\HFortaleza-Ginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HFortaleza-Ginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HFortaleza-Ginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HFortaleza-Ginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HFortaleza-Ginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HFortaleza-Ginfes.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PFortaleza-Ginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PFortaleza-Ginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PFortaleza-Ginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PFortaleza-Ginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PFortaleza-Ginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PFortaleza-Ginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="2507507" Nome="João Pessoa - PB" UF="PB" Padrao="GINFES">
@@ -1500,13 +1500,13 @@
   </Estado>
   <Estado ID="3550308" Nome="São Paulo - SP" UF="SP" Padrao="PAULISTANA">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HSaoPauloSP-PAULISTANA.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoPauloSP-PAULISTANA.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HSaoPauloSP-PAULISTANA.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HSaoPauloSP-PAULISTANA.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HSaoPauloSP-PAULISTANA.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HSaoPauloSP-PAULISTANA.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</RecepcionarLoteRps>
@@ -5030,4 +5030,22 @@
       <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-</Webservice>
+  <Estado ID="4108304" Nome="Foz do Iguaçu - PR" UF="PR" Padrao="LEXSOM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HFozDoIguacuLEXSOM.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HFozDoIguacuLEXSOM.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HFozDoIguacuLEXSOM.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HFozDoIguacuLEXSOM.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HFozDoIguacuLEXSOM.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HFozDoIguacuLEXSOM.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PFozDoIguacuLEXSOM.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PFozDoIguacuLEXSOM.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PFozDoIguacuLEXSOM.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PFozDoIguacuLEXSOM.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PFozDoIguacuLEXSOM.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PFozDoIguacuLEXSOM.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+</Webservice> 

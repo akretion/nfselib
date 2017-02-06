@@ -208,7 +208,7 @@
 	</xsd:simpleType>
 	<xsd:simpleType name="tsTelefone">
 		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="11"/>
+			<xsd:maxLength value="20"/>
 			<xsd:minLength value="1"/>
 			<xsd:whiteSpace value="collapse"/>
 		</xsd:restriction>
