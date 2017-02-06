@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://producao.issfortaleza.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ServiceGinfesImplServiceService" targetNamespace="http://producao.issfortaleza.com.br">
+  <wsdl:message name="ConsultarNfsePorRpsV3">
+    <wsdl:part name="Cabecalho" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="ConsultarNfseRpsEnvio" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseV3">
+    <wsdl:part name="Cabecalho" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="ConsultarNfseEnvio" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarSituacaoLoteRpsV3Response">
+    <wsdl:part name="ConsultarSituacaoLoteRpsResposta" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsV3">
+    <wsdl:part name="Cabecalho" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="EnviarLoteRpsEnvio" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsV3Response">
+    <wsdl:part name="ConsultarLoteRpsResposta" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseResponse">
+    <wsdl:part name="CancelarNfseResposta" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseV3Response">
+    <wsdl:part name="ConsultarNfseResposta" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarSituacaoLoteRpsV3">
+    <wsdl:part name="Cabecalho" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="ConsultarSituacaoLoteRpsEnvio" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsV3Response">
+    <wsdl:part name="EnviarLoteRpsResposta" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsV3">
+    <wsdl:part name="Cabecalho" type="xsd:string">
+    </wsdl:part>
+    <wsdl:part name="ConsultarLoteRpsEnvio" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsV3Response">
+    <wsdl:part name="ConsultarNfseRpsResposta" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfse">
+    <wsdl:part name="CancelarNfseEnvio" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ServiceGinfes">
+    <wsdl:operation name="ConsultarSituacaoLoteRpsV3">
+      <wsdl:input message="tns:ConsultarSituacaoLoteRpsV3" name="ConsultarSituacaoLoteRpsV3">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarSituacaoLoteRpsV3Response" name="ConsultarSituacaoLoteRpsV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse">
+      <wsdl:input message="tns:CancelarNfse" name="CancelarNfse">
+    </wsdl:input>
+      <wsdl:output message="tns:CancelarNfseResponse" name="CancelarNfseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRpsV3">
+      <wsdl:input message="tns:ConsultarLoteRpsV3" name="ConsultarLoteRpsV3">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarLoteRpsV3Response" name="ConsultarLoteRpsV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRpsV3">
+      <wsdl:input message="tns:ConsultarNfsePorRpsV3" name="ConsultarNfsePorRpsV3">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfsePorRpsV3Response" name="ConsultarNfsePorRpsV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseV3">
+      <wsdl:input message="tns:ConsultarNfseV3" name="ConsultarNfseV3">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfseV3Response" name="ConsultarNfseV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRpsV3">
+      <wsdl:input message="tns:RecepcionarLoteRpsV3" name="RecepcionarLoteRpsV3">
+    </wsdl:input>
+      <wsdl:output message="tns:RecepcionarLoteRpsV3Response" name="RecepcionarLoteRpsV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceGinfesImplServiceServiceSoapBinding" type="tns:ServiceGinfes">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CancelarNfse">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="CancelarNfse">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelarNfseResponse">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSituacaoLoteRpsV3">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="ConsultarSituacaoLoteRpsV3">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarSituacaoLoteRpsV3Response">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRpsV3">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="ConsultarLoteRpsV3">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarLoteRpsV3Response">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRpsV3">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="ConsultarNfsePorRpsV3">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfsePorRpsV3Response">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseV3">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="ConsultarNfseV3">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfseV3Response">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRpsV3">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="RecepcionarLoteRpsV3">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RecepcionarLoteRpsV3Response">
+        <soap:body namespace="http://producao.issfortaleza.com.br" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceGinfesImplServiceService">
+    <wsdl:port binding="tns:ServiceGinfesImplServiceServiceSoapBinding" name="ServiceGinfes">
+      <soap:address location="http://isshomo.sefin.fortaleza.ce.gov.br:80/grpfor-iss/ServiceGinfesImplService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
