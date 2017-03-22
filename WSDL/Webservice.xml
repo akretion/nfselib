@@ -11,7 +11,7 @@
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>te
       <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
@@ -2238,6 +2238,7 @@
       <ConsultarLoteRps>WSDL\Homologacao\HEstanciaVelhaRS-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>WSDL\Homologacao\HEstanciaVelhaRS-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\Homologacao\HEstanciaVelhaRS-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>WSDL\Producao\PEstanciaVelhaRS-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
@@ -2247,6 +2248,7 @@
       <ConsultarLoteRps>WSDL\Producao\PEstanciaVelhaRS-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PEstanciaVelhaRS-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PEstanciaVelhaRS-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
     </LocalProducao>
   </Estado>
   <Estado ID="3530607" Nome="Mogi das Cruzes - SP" UF="SP" Padrao="SMARAPD">
@@ -5046,6 +5048,86 @@
       <ConsultarNfse>wsdl\producao\PFozDoIguacuLEXSOM.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PFozDoIguacuLEXSOM.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PFozDoIguacuLEXSOM.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3162500" Nome="São João del-Rei - MG" UF="MG" Padrao="SH3">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSaoJoaoDelReiMG.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoJoaoDelReiMG.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSaoJoaoDelReiMG.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSaoJoaoDelReiMG.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSaoJoaoDelReiMG.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HSaoJoaoDelReiMG.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSaoJoaoDelReiMG.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoJoaoDelReiMG.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSaoJoaoDelReiMG.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSaoJoaoDelReiMG.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSaoJoaoDelReiMG.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PSaoJoaoDelReiMG.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5107305" Nome="São José do Rio Claro - MT" UF="MT" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HSaoJosedoRioClaroMT.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HSaoJosedoRioClaroMT.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HSaoJosedoRioClaroMT.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HSaoJosedoRioClaroMT.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HSaoJosedoRioClaroMT.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HSaoJosedoRioClaroMT.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PSaoJosedoRioClaroMT.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PSaoJosedoRioClaroMT.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PSaoJosedoRioClaroMT.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PSaoJosedoRioClaroMT.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PSaoJosedoRioClaroMT.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PSaoJosedoRioClaroMT.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="1100304" Nome="Vilhena - RO" UF="RO" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HVilhenaRO-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HVilhenaRO-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HVilhenaRO-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HVilhenaRO-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HVilhenaRO-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HVilhenaRO-WebISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PVilhenaRO-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PVilhenaRO-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PVilhenaRO-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PVilhenaRO-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PVilhenaRO-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PVilhenaRO-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4306403" Nome="Dois Irmãos - RS" UF="RS" Padrao="TECNOSISTEMAS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HDoisIrmaos-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HDoisIrmaos-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HDoisIrmaos-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HDoisIrmaos-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HDoisIrmaos-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HDoisIrmaos-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS></ConsultaSequenciaLoteNotaRPS>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PDoisIrmaos-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PDoisIrmaos-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PDoisIrmaos-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PDoisIrmaos-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PDoisIrmaos-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PDoisIrmaos-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PDoisIrmaos-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
     </LocalProducao>
   </Estado>
 </Webservice> 
