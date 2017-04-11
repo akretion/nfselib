@@ -776,22 +776,22 @@
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="4314407" Nome="Pelotas - RS" UF="RS" Padrao="GINFES">
+  <Estado ID="4314407" Nome="Pelotas - RS" UF="RS" Padrao="GOVDIGITAL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\HPelotasRS_GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HPelotasRS_GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HPelotasRS_GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HPelotasRS_GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HPelotasRS_GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HPelotasRS_GOVDIGITAL.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PPelotasRS_GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PPelotasRS_GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPelotasRS_GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPelotasRS_GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PPelotasRS_GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PPelotasRS_GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3542602" Nome="Registro - SP" UF="SP" Padrao="GINFES">
@@ -2169,6 +2169,26 @@
       <CancelarNfse>WSDL\Producao\PAvareSP-FIORILLI.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="3524501" Nome="Jaci - SP" UF="SP" Padrao="FIORILLI">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HJaciSP-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HJaciSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HJaciSP-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HJaciSP-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HJaciSP-FIORILLI.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HJaciSP-FIORILLI.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PJaciSP-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PJaciSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PJaciSP-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PJaciSP-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PJaciSP-FIORILLI.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PJaciSP-FIORILLI.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>  
   <Estado ID="4113700" Nome="Londrina - PR" UF="PR" Padrao="SIGCORP_SIGISS">
     <LocalHomologacao>
       <RecepcionarLoteRps>WSDL\Homologacao\HLondrinaPR-sigiss.wsdl</RecepcionarLoteRps>
@@ -4618,7 +4638,7 @@
       <ConsultarNfse>wsdl\producao\PVenancioAires-NFSEconsulta.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PVenancioAires-NFSEconsulta.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PVenancioAires-NFSEremessa.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PVenancioAires-NFSEcancelamento.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4306106" Nome="Cruz Alta - RS" UF="RS" Padrao="ISSNET">
@@ -5128,6 +5148,68 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PDoisIrmaos-CancelamentoNFSe.wsdl</CancelarNfse>
       <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PDoisIrmaos-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5102637" Nome="Campo Novo do Parecis - MT" UF="MT" Padrao="COPLAN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HCampoNovoParecis-COPLAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HCampoNovoParecis-COPLAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HCampoNovoParecis-COPLAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HCampoNovoParecis-COPLAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HCampoNovoParecis-COPLAN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HCampoNovoParecis-COPLAN.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS></ConsultaSequenciaLoteNotaRPS>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PCampoNovoParecis-COPLAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PCampoNovoParecis-COPLAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PCampoNovoParecis-COPLAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PCampoNovoParecis-COPLAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PCampoNovoParecis-COPLAN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PCampoNovoParecis-COPLAN.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PCampoNovoParecis-COPLAN.wsdl</ConsultaSequenciaLoteNotaRPS>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3507001" Nome="Boituva - SP" UF="SP" Padrao="ISSONLINE4R">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBoituvaSP-recepcionarloterpssincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBoituvaSP-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HBoituvaSP-cancelarnfse.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBoituvaSP-recepcionarloterpssincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBoituvaSP-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PBoituvaSP-cancelarnfse.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4309605" Nome="Horizontina - RS" UF="RS" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>>wsdl\homologacao\HHorizontinaRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HHorizontinaRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HHorizontinaRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HHorizontinaRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HHorizontinaRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HHorizontinaRS-PRONIN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PHorizontinaRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PHorizontinaRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PHorizontinaRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PHorizontinaRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PHorizontinaRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PHorizontinaRS-PRONIN.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice> 
