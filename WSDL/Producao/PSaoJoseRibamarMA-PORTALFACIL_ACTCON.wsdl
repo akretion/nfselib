@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://nfejf.portalfacil.com.br/nfseserv/webservice/nfse.wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="nfse" targetNamespace="http://nfejf.portalfacil.com.br/nfseserv/webservice/nfse.wsdl">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://nfesjr.portalfacil.com.br/nfseserv/webservice/nfse.wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="nfse" targetNamespace="http://nfesjr.portalfacil.com.br/nfseserv/webservice/nfse.wsdl">
   <wsdl:types>
-	<xsd:schema targetNamespace="http://nfejf.portalfacil.com.br/nfseserv/webservice/nfse.wsdl">
+	<xsd:schema targetNamespace="http://nfesjr.portalfacil.com.br/nfseserv/webservice/nfse.wsdl">
 		<xsd:complexType name="input">
 			<xsd:sequence>
 				<xsd:element name="nfseCabecMsg" type="xsd:string" minOccurs="1" maxOccurs="1"/>
@@ -113,52 +113,52 @@
 	
 	
 	<wsdl:operation name="RecepcionarLoteRps">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#RecepcionarLoteRps" style="document"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#RecepcionarLoteRps" style="document"/>
       <wsdl:input name="RecepcionarLoteRpsRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="RecepcionarLoteRpsResponse"><soap:body use="literal"/></wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CancelarNfse">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#CancelarNfse"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#CancelarNfse"/>
       <wsdl:input name="CancelarNfseRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="CancelarNfseResponse"><soap:body use="literal"/></wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarLoteRps">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarLoteRps"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarLoteRps"/>
       <wsdl:input name="ConsultarLoteRpsRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="ConsultarLoteRpsResponse"><soap:body use="literal"/></wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarNfseServicoPrestado">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfseServicoPrestado"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfseServicoPrestado"/>
       <wsdl:input name="ConsultarNfseServicoPrestadoRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="ConsultarNfseServicoPrestadoResponse"><soap:body use="literal"/></wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarNfseServicoTomado">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfseServicoTomado"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfseServicoTomado"/>
       <wsdl:input name="ConsultarNfseServicoTomadoRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="ConsultarNfseServicoTomadoResponse"><soap:body use="literal"/></wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarNfsePorFaixa">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfsePorFaixa"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfsePorFaixa"/>
       <wsdl:input name="ConsultarNfsePorFaixaRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="ConsultarNfsePorFaixaResponse"><soap:body use="literal"/></wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarNfsePorRps">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfsePorRps"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfsePorRps"/>
       <wsdl:input name="ConsultarNfsePorRpsRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="ConsultarNfsePorRpsResponse"><soap:body use="literal"/></wsdl:output>
     </wsdl:operation>
    <wsdl:operation name="GerarNfse">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#GerarNfse"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#GerarNfse"/>
       <wsdl:input name="GerarNfseRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="GerarNfseResponse"><soap:body use="literal"/></wsdl:output>
     </wsdl:operation>
    <wsdl:operation name="SubstituirNfse">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#SubstituirNfse"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#SubstituirNfse"/>
       <wsdl:input name="SubstituirNfseRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="SubstituirNfseResponse"><soap:body use="literal"/></wsdl:output>
     </wsdl:operation>
    <wsdl:operation name="RecepcionarLoteRpsSincrono">
-      <soap:operation soapAction="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos#RecepcionarLoteRpsSincrono"/>
+      <soap:operation soapAction="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos#RecepcionarLoteRpsSincrono"/>
       <wsdl:input name="RecepcionarLoteRpsSincronoRequest"><soap:body use="literal"/></wsdl:input>
       <wsdl:output name="RecepcionarLoteRpsSincronoResponse"><soap:body use="literal"/></wsdl:output>
    </wsdl:operation>
@@ -170,7 +170,7 @@
 
   <wsdl:service name="NfseWSService">
     <wsdl:port binding="tns:nfseSoapBinding" name="nfseSoapPort">
-      <soap:address location="http://nfejf.portalfacil.com.br/nfseserv/webservice/servicos"/>
+      <soap:address location="http://nfesjr.portalfacil.com.br/nfseserv/webservice/servicos"/>
     </wsdl:port>
   </wsdl:service>
 

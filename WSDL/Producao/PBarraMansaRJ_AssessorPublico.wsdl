@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="nfse" xmlns:tns2="ISS Online" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns1="ISS" xmlns:wsdlns="nfse" name="Nfse" targetNamespace="nfse" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified" targetNamespace="nfse">
+      <xsd:import namespace="ISS Online" />
+      <xsd:import namespace="ISS" />
+      <xsd:element name="Nfse.Execute">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Operacao" type="xsd:byte" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="Usuario" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="Senha" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="Webxml" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Nfse.ExecuteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Mensagem" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="Nfse.ExecuteSoapIn">
+    <part name="parameters" element="wsdlns:Nfse.Execute" />
+  </message>
+  <message name="Nfse.ExecuteSoapOut">
+    <part name="parameters" element="wsdlns:Nfse.ExecuteResponse" />
+  </message>
+  <portType name="NfseSoapPort">
+    <operation name="Execute">
+      <input message="wsdlns:Nfse.ExecuteSoapIn" />
+      <output message="wsdlns:Nfse.ExecuteSoapOut" />
+    </operation>
+  </portType>
+  <binding name="NfseSoapBinding" type="wsdlns:NfseSoapPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Execute">
+      <soap:operation soapAction="nfseaction/ANFSE.Execute" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Nfse">
+    <port name="NfseSoapPort" binding="wsdlns:NfseSoapBinding">
+      <soap:address location="http://spe.barramansa.rj.gov.br/issonline/servlet/anfse" />
+    </port>
+  </service>
+</definitions>

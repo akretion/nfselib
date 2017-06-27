@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="urn" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn">
+      <s:element name="GerarNota">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DescricaoRps" type="tns:tcDescricaoRps" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="tcDescricaoRps">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ccm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crc_estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aliquota_simples" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="id_sis_legado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="servico" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="situacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="base" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descricaoNF" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tomador_tipo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_cnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_ie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_im" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_razao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_fantasia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_endereco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_CEP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_cod_cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_fone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_ramal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tomador_fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rps_num" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rps_serie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rps_dia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rps_mes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rps_ano" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="outro_municipio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cod_outro_municipio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="retencao_iss" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pis" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cofins" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="inss" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="irrf" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="csll" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tipo_obra" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="dia_emissao" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="mes_emissao" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ano_emissao" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tributos" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="id_atividade" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GerarNotaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GerarNotaResult" type="tns:tcRetornoNota" />
+            <s:element minOccurs="0" maxOccurs="1" name="DescricaoErros" type="tns:ArrayOfTcEstruturaDescricaoErros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="tcRetornoNota">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nota" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinkImpressao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="autenticidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTcEstruturaDescricaoErros">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="tcEstruturaDescricaoErros" nillable="true" type="tns:tcEstruturaDescricaoErros" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="tcEstruturaDescricaoErros">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoProcesso" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescricaoErro" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelarNota">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DadosCancelaNota" type="tns:tcDadosCancelaNota" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="tcDadosCancelaNota">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ccm" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="nota" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="motivo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelarNotaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelarNotaResult" type="tns:tcRetornoNota" />
+            <s:element minOccurs="0" maxOccurs="1" name="DescricaoErros" type="tns:ArrayOfTcEstruturaDescricaoErros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNotaPrestador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DadosPrestador" type="tns:tcDadosPrestador" />
+            <s:element minOccurs="1" maxOccurs="1" name="Nota" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="tcDadosPrestador">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ccm" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crc_estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aliquota_simples" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarNotaPrestadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarNotaPrestadorResult" type="tns:tcDadosNota" />
+            <s:element minOccurs="0" maxOccurs="1" name="DescricaoErros" type="tns:ArrayOfTcEstruturaDescricaoErros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="tcDadosNota">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="nota" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="id_sis_legado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="autenticidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dt_conversao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="num_rps" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="serie_rps" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emissao_rps" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_razao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_endereco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_cep" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="base" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="servico" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aliquota_atividade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="iss" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cnpj_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="razao_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="endereco_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numero_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="complemento_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bairro_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cidade_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="estado_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cep_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email_tomador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descricao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ISSRetido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusNFe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="situacao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OpcaoSimples" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinkImpressao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarNotaValida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DadosConsultaNota" type="tns:tcDadosConsultaNota" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="tcDadosConsultaNota">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="nota" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="serie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="prestador_ccm" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestador_cnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="autenticidade" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultarNotaValidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarNotaValidaResult" type="tns:tcRetornoNota" />
+            <s:element minOccurs="0" maxOccurs="1" name="DescricaoErros" type="tns:ArrayOfTcEstruturaDescricaoErros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GerarNotaSoapIn">
+    <wsdl:part name="parameters" element="tns:GerarNota" />
+  </wsdl:message>
+  <wsdl:message name="GerarNotaSoapOut">
+    <wsdl:part name="parameters" element="tns:GerarNotaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelarNotaSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelarNota" />
+  </wsdl:message>
+  <wsdl:message name="CancelarNotaSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelarNotaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNotaPrestadorSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarNotaPrestador" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNotaPrestadorSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarNotaPrestadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNotaValidaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarNotaValida" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNotaValidaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarNotaValidaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="GerarNota">
+      <wsdl:input message="tns:GerarNotaSoapIn" />
+      <wsdl:output message="tns:GerarNotaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNota">
+      <wsdl:input message="tns:CancelarNotaSoapIn" />
+      <wsdl:output message="tns:CancelarNotaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaPrestador">
+      <wsdl:input message="tns:ConsultarNotaPrestadorSoapIn" />
+      <wsdl:output message="tns:ConsultarNotaPrestadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaValida">
+      <wsdl:input message="tns:ConsultarNotaValidaSoapIn" />
+      <wsdl:output message="tns:ConsultarNotaValidaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GerarNota">
+      <soap:operation soapAction="urn/GerarNota" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNota">
+      <soap:operation soapAction="urn/CancelarNota" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaPrestador">
+      <soap:operation soapAction="urn/ConsultarNotaPrestador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaValida">
+      <soap:operation soapAction="urn/ConsultarNotaValida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GerarNota">
+      <soap12:operation soapAction="urn/GerarNota" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNota">
+      <soap12:operation soapAction="urn/CancelarNota" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaPrestador">
+      <soap12:operation soapAction="urn/ConsultarNotaPrestador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaValida">
+      <soap12:operation soapAction="urn/ConsultarNotaValida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://webservice.bauru.sp.gov.br/nfe/Default.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://webservice.bauru.sp.gov.br/nfe/Default.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
