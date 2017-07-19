@@ -2076,22 +2076,22 @@
   </Estado>
   <Estado ID="3507506" Nome="Botucatu - SP" UF="SP" Padrao="SIGCORP_SIGISS">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HBauruSP-sigiss_ws.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBauruSP-sigiss_ws.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HBauruSP-sigiss_ws.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HBauruSP-sigiss_ws.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HBauruSP-sigiss_ws.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HBauruSP-BAURU_SP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBauruSP-BAURU_SP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBauruSP-BAURU_SP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBauruSP-BAURU_SP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBauruSP-BAURU_SP.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HBauruSP-sigiss_ws.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HBauruSP-BAURU_SP.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PBauruSP-sigiss_ws.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PBauruSP-sigiss_ws.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PBauruSP-sigiss_ws.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PBauruSP-sigiss_ws.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PBauruSP-sigiss_ws.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PBauruSP-BAURU_SP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBauruSP-BAURU_SP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBauruSP-BAURU_SP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBauruSP-BAURU_SP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBauruSP-BAURU_SP.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PBauruSP-sigiss_ws.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PBauruSP-BAURU_SP.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4305108" Nome="Caxias do Sul - RS" UF="RS" Padrao="GIF">
@@ -4458,22 +4458,24 @@
       <CancelarNfse>wsdl\producao\PCamacariBA.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="5003207" Nome="Corumba - MS" UF="MS" Padrao="NA_INFORMATICA">
+  <Estado ID="5003207" Nome="Corumba - MS" UF="MS" Padrao="FIORILLI">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\HCorumbaMS_NA_INFORMATICA.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>WSDL\Homologacao\HCorumbaMS-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HCorumbaMS-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HCorumbaMS-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HCorumbaMS-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HCorumbaMS-FIORILLI.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HCorumbaMS-FIORILLI.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\PCorumbaMS_NA_INFORMATICA.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>WSDL\Producao\PCorumbaMS-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PCorumbaMS-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PCorumbaMS-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PCorumbaMS-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PCorumbaMS-FIORILLI.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PCorumbaMS-FIORILLI.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="5107602" Nome="Rondonópolis - MT" UF="MT" Padrao="ABACO">
@@ -5481,6 +5483,9 @@
       <CancelarCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</CancelarCfse>
       <ConsultarLoteCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</ConsultarLoteCfse>
       <ConsultarCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</ConsultarCfse>
+      <ConfigurarTerminalCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</ConfigurarTerminalCfse>
+      <EnviarInformeManutencaoCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</EnviarInformeManutencaoCfse>
+      <InformeTrasmissaoSemMovimentoCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</InformeTrasmissaoSemMovimentoCfse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PIratiPR-FINTEL.wsdl</RecepcionarLoteRps>
@@ -5493,6 +5498,109 @@
       <CancelarCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</CancelarCfse>
       <ConsultarLoteCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</ConsultarLoteCfse>
       <ConsultarCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</ConsultarCfse>
+      <ConfigurarTerminalCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</ConfigurarTerminalCfse>
+      <EnviarInformeManutencaoCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</EnviarInformeManutencaoCfse>
+      <InformeTrasmissaoSemMovimentoCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</InformeTrasmissaoSemMovimentoCfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3170107" Nome="Uberaba - MG" UF="MG" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HUberabaMG-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HUberabaMG-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HUberabaMG-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HUberabaMG-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HUberabaMG-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HUberabaMG-WebISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PUberabaMG-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PUberabaMG-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PUberabaMG-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PUberabaMG-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PUberabaMG-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PUberabaMG-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3528809" Nome="Macaraí - SP" UF="SP" Padrao="SIMPLISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HMacaraiSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HMacaraiSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HMacaraiSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HMacaraiSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HMacaraiSP-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HMacaraiSP-SIMPLISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PMacaraiSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PMacaraiSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PMacaraiSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PMacaraiSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PMacaraiSP-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PMacaraiSP-SIMPLISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3300308" Nome="Barra do Piraí - RJ" UF="RJ" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBarraPiraiRJ-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBarraPiraiRJ-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBarraPiraiRJ-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBarraPiraiRJ-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBarraPiraiRJ-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HBarraPiraiRJ-WebISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBarraPiraiRJ-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBarraPiraiRJ-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBarraPiraiRJ-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBarraPiraiRJ-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBarraPiraiRJ-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PBarraPiraiRJ-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4124020" Nome="Santa Tereza do Oeste - PR" UF="PR" Padrao="BETHA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5107958" Nome="Tangará da Serra - MT" UF="MT" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HTangaraSerraMT-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HTangaraSerraMT-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HTangaraSerraMT-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HTangaraSerraMT-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HTangaraSerraMT-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HTangaraSerraMT-WebISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PTangaraSerraMT-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PTangaraSerraMT-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PTangaraSerraMT-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PTangaraSerraMT-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PTangaraSerraMT-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PTangaraSerraMT-WebISS.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
