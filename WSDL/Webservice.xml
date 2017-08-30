@@ -5486,6 +5486,7 @@
       <ConfigurarTerminalCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</ConfigurarTerminalCfse>
       <EnviarInformeManutencaoCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</EnviarInformeManutencaoCfse>
       <InformeTrasmissaoSemMovimentoCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</InformeTrasmissaoSemMovimentoCfse>
+      <ConsultarDadosCadastroCfse>wsdl\homologacao\HIratiPR-FINTEL.wsdl</ConsultarDadosCadastroCfse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PIratiPR-FINTEL.wsdl</RecepcionarLoteRps>
@@ -5501,6 +5502,7 @@
       <ConfigurarTerminalCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</ConfigurarTerminalCfse>
       <EnviarInformeManutencaoCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</EnviarInformeManutencaoCfse>
       <InformeTrasmissaoSemMovimentoCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</InformeTrasmissaoSemMovimentoCfse>
+      <ConsultarDadosCadastroCfse>wsdl\producao\PIratiPR-FINTEL.wsdl</ConsultarDadosCadastroCfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3170107" Nome="Uberaba - MG" UF="MG" Padrao="WEBISS">
@@ -5543,7 +5545,7 @@
       <CancelarNfse>WSDL\Producao\PMacaraiSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3300308" Nome="Barra do Piraí - RJ" UF="RJ" Padrao="WEBISS">
+  <Estado ID="3300308" Nome="Barra do Piraí - RJ" UF="RJ" Padrao="WEBISS_202">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HBarraPiraiRJ-WebISS.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>wsdl\homologacao\HBarraPiraiRJ-WebISS.wsdl</ConsultarSituacaoLoteRps>
@@ -5601,6 +5603,126 @@
       <ConsultarLoteRps>wsdl\producao\PTangaraSerraMT-WebISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PTangaraSerraMT-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+<Estado ID="5106224" Nome="Nova Mutum - MT" UF="MT" Padrao="COPLAN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HNovaMutumMT-COPLAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HNovaMutumMT-COPLAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HNovaMutumMT-COPLAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HNovaMutumMT-COPLAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HNovaMutumMT-COPLAN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HNovaMutumMT-COPLAN.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS></ConsultaSequenciaLoteNotaRPS>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PNovaMutumMT-COPLAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PNovaMutumMT-COPLAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PNovaMutumMT-COPLAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PNovaMutumMT-COPLAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PNovaMutumMT-COPLAN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PNovaMutumMT-COPLAN.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PNovaMutumMT-COPLAN.wsdl</ConsultaSequenciaLoteNotaRPS>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5108402" Nome="Várzea Grande - MT" UF="MT" Padrao="ABACO">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVarzeaGrandeMT-recepcionarloterps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarzeaGrandeMT-consultarsituacaoloterps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVarzeaGrandeMT-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVarzeaGrandeMT-consultarnfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVarzeaGrandeMT-consultarloterps.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVarzeaGrandeMT-cancelarnfse.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVarzeaGrandeMT-recepcionarloterps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarzeaGrandeMT-consultarsituacaoloterps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVarzeaGrandeMT-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVarzeaGrandeMT-consultarnfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVarzeaGrandeMT-consultarloterps.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVarzeaGrandeMT-cancelarnfse.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4211702" Nome="Orleans - SC" UF="SC" Padrao="BETHA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="1600303" Nome="Macapá - AP" UF="AP" Padrao="FIORILLI">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HMacapaAP-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HMacapaAP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HMacapaAP-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HMacapaAP-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HMacapaAP-FIORILLI.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HMacapaAP-FIORILLI.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PMacapaAP-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PMacapaAP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PMacapaAP-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PMacapaAP-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PMacapaAP-FIORILLI.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PMacapaAP-FIORILLI.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+<Estado ID="3131703" Nome="Itabira - MG" UF="MG" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HItabiraMG-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HItabiraMG-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HItabiraMG-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HItabiraMG-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HItabiraMG-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HItabiraMG-PRONIN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PItabiraMG-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PItabiraMG-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PItabiraMG-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PItabiraMG-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PItabiraMG-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PItabiraMG-PRONIN.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+<Estado ID="4122404" Nome="Rolandia - PR" UF="PR" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PRolandiaPR-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PRolandiaPR-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PRolandiaPR-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PRolandiaPR-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PRolandiaPR-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PRolandiaPR-PRONIN.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
