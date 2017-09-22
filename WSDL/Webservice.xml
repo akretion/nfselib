@@ -5705,7 +5705,7 @@
       <CancelarNfse>wsdl\producao\PItabiraMG-PRONIN.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-<Estado ID="4122404" Nome="Rolandia - PR" UF="PR" Padrao="PRONIN">
+  <Estado ID="4122404" Nome="Rolandia - PR" UF="PR" Padrao="PRONIN">
     <LocalHomologacao>
       <RecepcionarLoteRps></RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
@@ -5723,6 +5723,46 @@
       <ConsultarLoteRps>wsdl\producao\PRolandiaPR-PRONIN.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PRolandiaPR-PRONIN.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2607901" Nome="Jaboatão dos Guararapes - PE" UF="PE" Padrao="TINUS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HJaboataoDosGuararapesPE_TINUS_RecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HJaboataoDosGuararapesPE_TINUS_ConsultarSituacaoLoteRps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HJaboataoDosGuararapesPE_TINUS_ConsultarNfsePorRps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HJaboataoDosGuararapesPE_TINUS_ConsultarNfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HJaboataoDosGuararapesPE_TINUS_ConsultarLoteRps.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HJaboataoDosGuararapesPE_TINUS_CancelarNfse.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalProducao>
+  </Estado>
+<Estado ID="4303004" Nome="Cachoeira do Sul - RS" UF="RS" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
