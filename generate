@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+# the project file layout is a template clone of http://www.davekuhlman.org/generateDS.html#id14
+# for which we run:
+git branch -D generated
+git checkout -b generated
+
+SCHEMA_NAME='nfe'
+python quick_start.py --schema-name="$SCHEMA_NAME"
+
+generate() {
+  local version=$1
+  local schemas_url=$2
+  local lib_name="$SCHEMA_NAME"lib
+  local gen_path="$SCHEMA_NAME"lib/"$version"
+  wget -qO- --no-check-certificate "$schemas_url" -O /tmp/schemas.zip
+  unzip /tmp/schemas.zip -d schemas/
+  rm /tmp/schemas.zip
+  unzip_path=$(ls schemas | head -n1)
+  rm -rf "schemas/$version"
+  mv schemas/"$unzip_path" "schemas/$version"
+  rm -rf __init__.py
+
+  local module_contents=$(cat  <<EOF
+Module contents
+=================
+
+EOF
+)
+
+  echo "$module_contents" > docs/module_contents.txt
+  echo "sys.path.append(os.path.abspath('../$gen_path'))" >> docs/conf.py
+
+  rm -rf $gen_path
+  mkdir -p $gen_path
+  touch "$lib_name"/__init__.py
+  touch "$gen_path/__init__.py"
+
+  for f in "schemas/$version"/leiaute*.xsd;
+  do
+    echo "Processing $f file..";
+    local name=$(echo "$f" | sed 's/\.xsd//g' | sed 's/\./_/g' | sed "s/_$version//g")
+    local module_name=$(echo $name | tr "/" "\n" | tail -n1)
+    # generateDS -o "$gen_path/$module_name".py -s "$gen_path/$module_name"_subs.py "$f"
+    python3 /home/rvalyi/DEV/generateds/generateDS.py -o "$gen_path/$module_name".py "$f"
+    autopep8 --in-place --aggressive -p3 "$gen_path/$module_name".py
+
+    module_name=$(echo $name | tr "/" "\n" | tail -n1)
+    module_contents_part=$(cat  <<EOF
+.. automodule:: $module_name
+    :members:
+    :undoc-members:
+    :show-inheritance:
+EOF
+)
+    echo "$module_contents_part" >> docs/module_contents.txt
+
+  done
+}
+
+generate "v3_10" "http://www.nfe.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=fXShsIS6w2Q="
+generate "v4_00" "https://www.nfe.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=7PflO/zYa/0="
+
+
+cd docs
+make html
+cd ..
+
+rm -rf README.txt
+rm -rf nfeutils.py
+rm -rf sample_code
+
+git add .
+git commit . -m "classes and doc generated with ./generate"
