@@ -17,6 +17,7 @@ generate() {
   rm /tmp/schemas.zip
   unzip_path=$(ls schemas | head -n1)
   rm -rf "schemas/$version"
+  sed -i 's/xmlns:editix/xmlns/' schemas/v4_00/leiauteNFe_v4.00.xsd # ns FIX to avoid editix: prefix
   mv schemas/"$unzip_path" "schemas/$version"
   rm -rf __init__.py
 
