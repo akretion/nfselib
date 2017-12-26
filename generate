@@ -6,6 +6,7 @@ git checkout -b generated
 
 SCHEMA_NAME='nfe'
 python quick_start.py --schema-name="$SCHEMA_NAME"
+export GENERATEDS_HOME=${GENERATEDS_HOME:="/home/rvalyi/DEV/generateds"}
 
 generate() {
   local version=$1
@@ -42,7 +43,7 @@ EOF
     local name=$(echo "$f" | sed 's/\.xsd//g' | sed 's/\./_/g' | sed "s/_$version//g")
     local module_name=$(echo $name | tr "/" "\n" | tail -n1)
     # generateDS -o "$gen_path/$module_name".py -s "$gen_path/$module_name"_subs.py "$f"
-    python3 /home/rvalyi/DEV/generateds/generateDS.py -o "$gen_path/$module_name".py "$f"
+    python3 "$GENERATEDS_HOME"/generateDS.py -o "$gen_path/$module_name".py "$f"
     autopep8 --in-place --aggressive -p3 "$gen_path/$module_name".py
 
     module_name=$(echo $name | tr "/" "\n" | tail -n1)
