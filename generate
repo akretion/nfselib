@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # the project file layout is a template clone of http://www.davekuhlman.org/generateDS.html#id14
 # for which we run:
-git branch -D generated
-git checkout -b generated
+git branch -D generated_odoo
+git checkout -b generated_odoo
 
 SCHEMA_NAME='nfse'
 python quick_start.py --schema-name="$SCHEMA_NAME"
@@ -34,10 +34,14 @@ EOF
 
   rm -rf $gen_path
   mkdir -p $gen_path
+  local odoo_path=odoo/"$version"
+  mkdir -p $odoo_path
   touch "$lib_name"/__init__.py
   touch "$gen_path/__init__.py"
 
-  for f in "schemas/$version"/*.xsd;
+  cp "schemas/$version"/*.xsd "$GENERATEDS_HOME"/odoo
+
+  for f in "schemas/$version"/nf*.xsd;
   do
     echo "Processing $f file..";
     local name=$(echo "$f" | sed 's/\.xsd//g' | sed 's/\./_/g' | sed "s/_$version//g")
@@ -45,6 +49,19 @@ EOF
     # generateDS -o "$gen_path/$module_name".py -s "$gen_path/$module_name"_subs.py "$f"
     python3 "$GENERATEDS_HOME"/generateDS.py -o "$gen_path/$module_name".py "$f"
     autopep8 --in-place --aggressive -p3 "$gen_path/$module_name".py
+
+local current_dir=$(pwd)
+
+    cd "$GENERATEDS_HOME"/odoo
+    cp ../generateDS.py .
+    sed -i '/xmldsig-core-schema/d' nfse.xsd
+    sed -i '/xsd:import namespace=\"http:\/\/www\.w3\.org\/2000\/09\/xmldsig/d' nfse.xsd
+    ./gends_run_gen_odoo.py -f -v nfse.xsd
+#    autopep8 --in-place -p3 models.py
+    rm nfse.py
+    mv models.py "$current_dir/$odoo_path"/nfse.py
+
+cd "$current_dir"
 
     module_name=$(echo $name | tr "/" "\n" | tail -n1)
     module_contents_part=$(cat  <<EOF
@@ -57,6 +74,8 @@ EOF
     echo "$module_contents_part" >> docs/module_contents.txt
 
   done
+  rm -f "$GENERATEDS_HOME"/odoo/*.xsd
+  rm -f "$GENERATEDS_HOME"/odoo/*lib.py
 }
 
 generate "v2_03" "http://www.abrasf.org.br/arquivos/publico/NFS-e/Versao_2.03/schema_xml_nfs-e_%20v2.03.zip"
