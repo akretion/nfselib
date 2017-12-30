@@ -4,7 +4,7 @@
 git branch -D generated
 git checkout -b generated
 
-SCHEMA_NAME='nfe'
+SCHEMA_NAME='nfse'
 python quick_start.py --schema-name="$SCHEMA_NAME"
 export GENERATEDS_HOME=${GENERATEDS_HOME:="/home/rvalyi/DEV/generateds"}
 
@@ -14,13 +14,13 @@ generate() {
   local lib_name="$SCHEMA_NAME"lib
   local gen_path="$SCHEMA_NAME"lib/"$version"
   wget -qO- --no-check-certificate "$schemas_url" -O /tmp/schemas.zip
-  unzip /tmp/schemas.zip -d schemas/
-  rm /tmp/schemas.zip
-  unzip_path=$(ls schemas | head -n1)
   rm -rf "schemas/$version"
-  sed -i 's/xmlns:editix/xmlns/' schemas/v4_00/leiauteNFe_v4.00.xsd # ns FIX to avoid editix: prefix
-  mv schemas/"$unzip_path" "schemas/$version"
+  unzip /tmp/schemas.zip -d schemas/"$version"
+  rm /tmp/schemas.zip
+  mv schemas/"$version"/nfse*.txt schemas/"$version"/nfse.xsd
+  sed -i 's/ xsd:/<xsd:/' schemas/"$version"/nfse.xsd # FIXES schema typo
   rm -rf __init__.py
+
 
   local module_contents=$(cat  <<EOF
 Module contents
@@ -37,14 +37,14 @@ EOF
   touch "$lib_name"/__init__.py
   touch "$gen_path/__init__.py"
 
-  for f in "schemas/$version"/leiaute*.xsd;
+  for f in "schemas/$version"/*.xsd;
   do
     echo "Processing $f file..";
     local name=$(echo "$f" | sed 's/\.xsd//g' | sed 's/\./_/g' | sed "s/_$version//g")
     local module_name=$(echo $name | tr "/" "\n" | tail -n1)
     # generateDS -o "$gen_path/$module_name".py -s "$gen_path/$module_name"_subs.py "$f"
     python3 "$GENERATEDS_HOME"/generateDS.py -o "$gen_path/$module_name".py "$f"
-    autopep8 --in-place --aggressive -p3 "$gen_path/$module_name".py
+    autopep8 --in-place -p3 "$gen_path/$module_name".py
 
     module_name=$(echo $name | tr "/" "\n" | tail -n1)
     module_contents_part=$(cat  <<EOF
@@ -59,8 +59,7 @@ EOF
   done
 }
 
-generate "v3_10" "http://www.nfe.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=fXShsIS6w2Q="
-generate "v4_00" "https://www.nfe.fazenda.gov.br/portal/exibirArquivo.aspx?conteudo=7PflO/zYa/0="
+generate "v2_03" "http://www.abrasf.org.br/arquivos/publico/NFS-e/Versao_2.03/schema_xml_nfs-e_%20v2.03.zip"
 
 
 cd docs
@@ -68,8 +67,9 @@ make html
 cd ..
 
 rm -rf README.txt
-rm -rf nfeutils.py
+rm -rf "$SCHEMA_NAME"utils.py
 rm -rf sample_code
 
 git add .
 git commit . -m "classes and doc generated with ./generate"
+git merge packaging
