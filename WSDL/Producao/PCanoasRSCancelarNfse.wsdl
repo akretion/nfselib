@@ -45,7 +45,7 @@
 	</binding>
 	<service name="CancelarNfse">
 		<port name="CancelarNfseSoapPort" binding="wsdlns:CancelarNfseSoapBinding">
-			<soap:address location="http://www.e-nfs.com.br/e-nfs_canoas/servlet/acancelarnfse"/>
+			<soap:address location="https://www.e-nfs.com.br/e-nfs_canoas/servlet/acancelarnfse"/>
 		</port>
 	</service>
 </definitions>

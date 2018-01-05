@@ -45,7 +45,7 @@
 	</binding>
 	<service name="RecepcionarLoteRPS">
 		<port name="RecepcionarLoteRPSSoapPort" binding="wsdlns:RecepcionarLoteRPSSoapBinding">
-			<soap:address location="http://www.e-nfs.com.br/e-nfs_canoas/servlet/arecepcionarloterps"/>
+			<soap:address location="https://www.e-nfs.com.br/e-nfs_canoas/servlet/arecepcionarloterps"/>
 		</port>
 	</service>
 </definitions>

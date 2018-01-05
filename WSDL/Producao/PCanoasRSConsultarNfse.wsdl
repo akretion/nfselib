@@ -45,7 +45,7 @@
 	</binding>
 	<service name="ConsultarNfse">
 		<port name="ConsultarNfseSoapPort" binding="wsdlns:ConsultarNfseSoapBinding">
-			<soap:address location="http://www.e-nfs.com.br/e-nfs_canoas/servlet/aconsultarnfse"/>
+			<soap:address location="https://www.e-nfs.com.br/e-nfs_canoas/servlet/aconsultarnfse"/>
 		</port>
 	</service>
 </definitions>

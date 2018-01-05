@@ -45,7 +45,7 @@
 	</binding>
 	<service name="ConsultarLoteRps">
 		<port name="ConsultarLoteRpsSoapPort" binding="wsdlns:ConsultarLoteRpsSoapBinding">
-			<soap:address location="http://homologa.e-nfs.com.br/canoas/servlet/aconsultarloterps"/>
+			<soap:address location="https://homologa.e-nfs.com.br/canoas/servlet/aconsultarloterps"/>
 		</port>
 	</service>
 </definitions>
