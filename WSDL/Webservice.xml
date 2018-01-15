@@ -5972,4 +5972,110 @@
       <CancelarNfse>wsdl\producao\PMogiMirimSPcancelarnfse-FISSLEX.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="1302603" Nome="Manaus - AM" UF="AM" Padrao="MANAUS_AM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HManausAM-arecepcionarloterps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HManausAM-aconsultarsituacaoloterps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HManausAM-aconsultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HManausAM-aconsultarnfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HManausAM-aconsultarloterps.wsdl</ConsultarLoteRps>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PManausAM-arecepcionarloterps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PManausAM-aconsultarsituacaoloterps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PManausAM-aconsultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PManausAM-aconsultarnfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PManausAM-aconsultarloterps.wsdl</ConsultarLoteRps>
+      <CancelarNfse></CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5106422" Nome="Peixoto de Azevedo - MT" UF="MT" Padrao="GINFES">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4209102" Nome="Joinville - SC" UF="SC" Padrao="JOINVILLE_SC">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HJoinvilleSC.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HJoinvilleSC.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HJoinvilleSC.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HJoinvilleSC.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HJoinvilleSC.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HJoinvilleSC.wsdl</CancelarNfse>
+    </LocalHomologacao>
+  </Estado>
+  <Estado ID="4320404" Nome="Serafina Corrêa - RS" UF="RS" Padrao="FIORILLI">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSerafinaCorreaRS-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSerafinaCorreaRS-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSerafinaCorreaRS-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSerafinaCorreaRS-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSerafinaCorreaRS-FIORILLI.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HSerafinaCorreaRS-FIORILLI.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSerafinaCorreaRS-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSerafinaCorreaRS-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSerafinaCorreaRS-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSerafinaCorreaRS-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSerafinaCorreaRS-FIORILLI.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PSerafinaCorreaRS-FIORILLI.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3107406" Nome="Bom Despacho - MG" UF="MG" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBomDespachoMG-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBomDespachoMG-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBomDespachoMG-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBomDespachoMG-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBomDespachoMG-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HBomDespachoMG-WebISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBomDespachoMG-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBomDespachoMG-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBomDespachoMG-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBomDespachoMG-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBomDespachoMG-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PBomDespachoMG-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4307807" Nome="Estrela - RS" UF="RS" Padrao="IPM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>
