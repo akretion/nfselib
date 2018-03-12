@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE schema
-  PUBLIC "-//W3C//DTD XMLSchema 200102//EN" "http://www.w3.org/2001/XMLSchema.dtd"
- [
-   <!ATTLIST schema 
-     xmlns:ds CDATA #FIXED "http://www.w3.org/2000/09/xmldsig#">
-   <!ENTITY dsig 'http://www.w3.org/2000/09/xmldsig#'>
-   <!ENTITY % p ''>
-   <!ENTITY % s ''>
-  ]>
 
 <!-- Schema for XML Signatures
     http://www.w3.org/2000/09/xmldsig#
-    $Revision: 1.1 $ on $Date: 2002/02/08 20:32:26 $ by $Author: reagle $
+    $Revision: 1.7 $ on $Date: 2007/09/20 19:06:50 $ by $Author: p052373 $
 
     Copyright 2001 The Internet Society and W3C (Massachusetts Institute
     of Technology, Institut National de Recherche en Informatique et en
@@ -23,6 +14,15 @@
 
     [1] http://www.w3.org/Consortium/Legal/copyright-software-19980720
     [2] http://www.w3.org/Consortium/Legal/IPR-FAQ-20000620.html#DTD
+-->
+
+<!--
+
+Download em 23/02/2007
+Link: 
+	http://www.w3.org/TR/xmldsig-core/#sec-Schema
+	http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema_v03.xsd
+
 -->
 
 
