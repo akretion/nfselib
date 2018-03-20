@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# {{schema_name}}lib documentation build configuration file, created by
+# nfselib documentation build configuration file, created by
 # sphinx-quickstart on Mon Jul 19 11:59:11 2010.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -40,7 +40,7 @@ source_suffix = '.txt'
 master_doc = 'index'
 
 # General information about the project.
-project = u'{{schema_name}}lib'
+project = u'nfselib'
 copyright = u'2010, Dave Kuhlman'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = ''
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = '{{schema_name}}libdoc'
+htmlhelp_basename = 'nfselibdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -178,7 +178,7 @@ htmlhelp_basename = '{{schema_name}}libdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', '{{schema_name}}lib.tex', u'{{schema_name}}lib Documentation',
+  ('index', 'nfselib.tex', u'nfselib Documentation',
    u'Dave Kuhlman', 'manual'),
 ]
 
@@ -211,7 +211,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', '{{schema_name}}lib', u'{{schema_name}}lib Documentation',
+    ('index', 'nfselib', u'nfselib Documentation',
      [u'Dave Kuhlman'], 1)
 ]
 
@@ -219,7 +219,7 @@ man_pages = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'{{schema_name}}lib'
+epub_title = u'nfselib'
 epub_author = u'Dave Kuhlman'
 epub_publisher = u'Dave Kuhlman'
 epub_copyright = u'2010, Dave Kuhlman'
@@ -251,3 +251,4 @@ epub_copyright = u'2010, Dave Kuhlman'
 
 # The depth of the table of contents in toc.ncx.
 #epub_tocdepth = 3
+sys.path.append(os.path.abspath('../nfselib/v2_03'))

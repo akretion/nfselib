@@ -1,9 +1,10 @@
 Module contents
 =================
-
-.. automodule:: {{schema_name}}lib
+.. automodule:: nfse
     :members:
     :undoc-members:
     :show-inheritance:
-
-
+.. automodule:: xmldsig-core-schema20020212
+    :members:
+    :undoc-members:
+    :show-inheritance:
