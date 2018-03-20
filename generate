@@ -20,7 +20,6 @@ generate() {
   mv schemas/"$version"/nfse*.txt schemas/"$version"/nfse.xsd
   sed -i 's/ xsd:/<xsd:/' schemas/"$version"/nfse.xsd # FIXES schema typo
   rm -rf __init__.py
-  ls -la schemas
 
   local module_contents=$(cat  <<EOF
 Module contents
@@ -34,7 +33,7 @@ EOF
 
   rm -rf $gen_path
   mkdir -p $gen_path
-  local odoo_path=odoo/"$version"
+  local odoo_path=odoo/models/"$version"
   mkdir -p $odoo_path
   touch "$lib_name"/__init__.py
   touch "$gen_path/__init__.py"
@@ -46,9 +45,8 @@ EOF
     echo "Processing $f file..";
     local name=$(echo "$f" | sed 's/\.xsd//g' | sed 's/\./_/g' | sed "s/_$version//g")
     local module_name=$(echo $name | tr "/" "\n" | tail -n1)
-    # generateDS -o "$gen_path/$module_name".py -s "$gen_path/$module_name"_subs.py "$f"
     python3 "$GENERATEDS_HOME"/generateDS.py -o "$gen_path/$module_name".py "$f"
-    autopep8 --in-place --aggressive -p3 "$gen_path/$module_name".py
+    autopep8 --in-place -p3 "$gen_path/$module_name".py
 
 local current_dir=$(pwd)
 
@@ -82,7 +80,7 @@ generate "v2_03" "http://www.abrasf.org.br/arquivos/publico/NFS-e/Versao_2.03/sc
 
 
 cd docs
-#make html
+make html
 cd ..
 
 rm -rf README.txt

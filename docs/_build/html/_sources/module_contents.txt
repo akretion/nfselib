@@ -1,0 +1,6 @@
+Module contents
+=================
+.. automodule:: nfse
+    :members:
+    :undoc-members:
+    :show-inheritance:

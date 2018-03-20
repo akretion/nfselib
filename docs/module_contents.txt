@@ -1,9 +1,6 @@
 Module contents
 =================
-
-.. automodule:: {{schema_name}}lib
+.. automodule:: nfse
     :members:
     :undoc-members:
     :show-inheritance:
-
-
