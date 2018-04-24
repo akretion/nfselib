@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="IntegracaoNfsdService" targetNamespace="http://ws.integracao.nfsd.desenvolve/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.integracao.nfsd.desenvolve/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:message name="gerarNfseEnvioResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="gerarNfseEnvio">
+    <wsdl:part name="xml" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarLoteRpsEnvio">
+    <wsdl:part name="xml" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarNfseRpsEnvioResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarLoteRpsSincronoEnvio">
+    <wsdl:part name="xml" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelarNfseEnvio">
+    <wsdl:part name="xml" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarLoteRpsEnvio">
+    <wsdl:part name="xml" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarNfseRpsEnvio">
+    <wsdl:part name="xml" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarLoteRpsSincronoEnvioResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarLoteRpsEnvioResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelarNfseEnvioResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarLoteRpsEnvioResponse">
+    <wsdl:part name="return" type="xsd:string">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IIntegracaoNfsd">
+    <wsdl:operation name="consultarLoteRpsEnvio">
+      <wsdl:input message="tns:consultarLoteRpsEnvio" name="consultarLoteRpsEnvio">
+    </wsdl:input>
+      <wsdl:output message="tns:consultarLoteRpsEnvioResponse" name="consultarLoteRpsEnvioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarLoteRpsEnvio">
+      <wsdl:input message="tns:enviarLoteRpsEnvio" name="enviarLoteRpsEnvio">
+    </wsdl:input>
+      <wsdl:output message="tns:enviarLoteRpsEnvioResponse" name="enviarLoteRpsEnvioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarLoteRpsSincronoEnvio">
+      <wsdl:input message="tns:enviarLoteRpsSincronoEnvio" name="enviarLoteRpsSincronoEnvio">
+    </wsdl:input>
+      <wsdl:output message="tns:enviarLoteRpsSincronoEnvioResponse" name="enviarLoteRpsSincronoEnvioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarNfseRpsEnvio">
+      <wsdl:input message="tns:consultarNfseRpsEnvio" name="consultarNfseRpsEnvio">
+    </wsdl:input>
+      <wsdl:output message="tns:consultarNfseRpsEnvioResponse" name="consultarNfseRpsEnvioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarNfseEnvio">
+      <wsdl:input message="tns:cancelarNfseEnvio" name="cancelarNfseEnvio">
+    </wsdl:input>
+      <wsdl:output message="tns:cancelarNfseEnvioResponse" name="cancelarNfseEnvioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gerarNfseEnvio">
+      <wsdl:input message="tns:gerarNfseEnvio" name="gerarNfseEnvio">
+    </wsdl:input>
+      <wsdl:output message="tns:gerarNfseEnvioResponse" name="gerarNfseEnvioResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IntegracaoNfsdServiceSoapBinding" type="tns:IIntegracaoNfsd">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="consultarLoteRpsEnvio">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="consultarLoteRpsEnvio">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarLoteRpsEnvioResponse">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarLoteRpsEnvio">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="enviarLoteRpsEnvio">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="enviarLoteRpsEnvioResponse">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarLoteRpsSincronoEnvio">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="enviarLoteRpsSincronoEnvio">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="enviarLoteRpsSincronoEnvioResponse">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarNfseRpsEnvio">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="consultarNfseRpsEnvio">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarNfseRpsEnvioResponse">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarNfseEnvio">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="cancelarNfseEnvio">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelarNfseEnvioResponse">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gerarNfseEnvio">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="gerarNfseEnvio">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="gerarNfseEnvioResponse">
+        <soap:body namespace="http://ws.integracao.nfsd.desenvolve/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IntegracaoNfsdService">
+    <wsdl:port binding="tns:IntegracaoNfsdServiceSoapBinding" name="IntegracaoNfsdPort">
+      <soap:address location="http://187.18.59.22:10042/nfsd/IntegracaoNfsd"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

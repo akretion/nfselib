@@ -11,7 +11,7 @@
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>te
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
       <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
@@ -6132,6 +6132,192 @@
       <ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3527207" Nome="Lorena - SP" UF="SP" Padrao="EMBRAS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HLorenaSP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HLorenaSP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HLorenaSP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HLorenaSP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HLorenaSP.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HLorenaSP.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\HLorenaSP.wsdl</SubstituirNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PLorenaSP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PLorenaSP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PLorenaSP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PLorenaSP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PLorenaSP.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PLorenaSP.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\producao\PLorenaSP.wsdl</SubstituirNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4208203" Nome="Itajaí - SC" UF="SC" Padrao="PUBLICA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HItajaiSC-PUBLICA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HItajaiSC-PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HItajaiSC-PUBLICA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HItajaiSC-PUBLICA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HItajaiSC-PUBLICA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HItajaiSC-PUBLICA.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PItajaiSC-PUBLICA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PItajaiSC-PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PItajaiSC-PUBLICA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PItajaiSC-PUBLICA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PItajaiSC-PUBLICA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PItajaiSC-PUBLICA.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4318309" Nome="São Gabriel - RS" UF="RS" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSaoGabrielRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoGabrielRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSaoGabrielRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSaoGabrielRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSaoGabrielRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HSaoGabrielRS-PRONIN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSaoGabrielRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoGabrielRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSaoGabrielRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSaoGabrielRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSaoGabrielRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PSaoGabrielRS-PRONIN.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3556602" Nome="Vera Cruz - RS" UF="RS" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVeraCruzRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVeraCruzRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVeraCruzRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVeraCruzRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVeraCruzRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PVeraCruzRS-PRONIN.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="1505502" Nome="Paragominas - PA" UF="PA" Padrao="DESENVOLVECIDADE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HParagominasPA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HParagominasPA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HParagominasPA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HParagominasPA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HParagominasPA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HParagominasPA.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\HParagominasPA.wsdl</SubstituirNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PParagominasPA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PParagominasPA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PParagominasPA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PParagominasPA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PParagominasPA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PParagominasPA.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\producao\PParagominasPA.wsdl</SubstituirNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4301602" Nome="Bagé - RS" UF="RS" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBageRS-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBageRS-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBageRS-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBageRS-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBageRS-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HBageRS-WebISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBageRS-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBageRS-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBageRS-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBageRS-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBageRS-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PBageRS-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4102109" Nome="Astorga - PR" UF="PR" Padrao="SIMPLISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HAstorgaPR-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HAstorgaPR-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HAstorgaPR-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HAstorgaPR-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HAstorgaPR-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HAstorgaPR-SIMPLISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PAstorgaPR-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PAstorgaPR-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PAstorgaPR-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PAstorgaPR-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PAstorgaPR-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PAstorgaPR-SIMPLISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3503307" Nome="Araras - SP" UF="SP" Padrao="SIMPLISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PArarasSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PArarasSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PArarasSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PArarasSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PArarasSP-SIMPLISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PArarasSP-SIMPLISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4313300" Nome="Nova Prata - RS" UF="RS" Padrao="TECNOSISTEMAS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HNovaPrata-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HNovaPrata-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HNovaPrata-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HNovaPrata-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HNovaPrata-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HNovaPrata-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS></ConsultaSequenciaLoteNotaRPS>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PNovaPrata-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PNovaPrata-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PNovaPrata-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PNovaPrata-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PNovaPrata-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PNovaPrata-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PNovaPrata-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
     </LocalProducao>
   </Estado>
 </Webservice>
