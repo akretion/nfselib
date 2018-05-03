@@ -6238,7 +6238,7 @@
       <SubstituirNfse>wsdl\producao\PParagominasPA.wsdl</SubstituirNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="4301602" Nome="Bagé - RS" UF="RS" Padrao="WEBISS">
+  <Estado ID="4301602" Nome="Bagé - RS" UF="RS" Padrao="WEBISS_202">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HBageRS-WebISS.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>wsdl\homologacao\HBageRS-WebISS.wsdl</ConsultarSituacaoLoteRps>
@@ -6318,6 +6318,26 @@
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PNovaPrata-CancelamentoNFSe.wsdl</CancelarNfse>
       <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PNovaPrata-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3105608" Nome="Barbacena - MG" UF="MG" Padrao="WEBISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HBarbacenaMG-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HBarbacenaMG-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HBarbacenaMG-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HBarbacenaMG-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HBarbacenaMG-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HBarbacenaMG-WebISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PBarbacenaMG-WebISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBarbacenaMG-WebISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBarbacenaMG-WebISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBarbacenaMG-WebISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBarbacenaMG-WebISS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PBarbacenaMG-WebISS.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
