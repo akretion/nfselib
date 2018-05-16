@@ -2222,24 +2222,22 @@
       <CancelarNfse>WSDL\Producao\PLondrinaPR-sigiss.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3118601" Nome="Contagem - MG" UF="MG" Padrao="PRONIN">
+  <Estado ID="3118601" Nome="Contagem - MG" UF="MG" Padrao="GINFES">
     <LocalHomologacao>
-      <RecepcionarLoteRps>WSDL\Homologacao\HContagemMG-Services.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HContagemMG-Services.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Homologacao\HContagemMG-Services.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Homologacao\HContagemMG-Services.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Homologacao\HContagemMG-Services.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Homologacao\HContagemMG-Services.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PContagemMG-Services.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PContagemMG-Services.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Producao\PContagemMG-Services.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PContagemMG-Services.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Producao\PContagemMG-Services.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PContagemMG-Services.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4322004" Nome="Triunfo - RS" UF="RS" Padrao="DUETO">
@@ -5083,7 +5081,7 @@
       <CancelarNfse>WSDL\Producao\PSaoJosedoRioClaroMT.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="1100304" Nome="Vilhena - RO" UF="RO" Padrao="WEBISS">
+  <Estado ID="1100304" Nome="Vilhena - RO" UF="RO" Padrao="WEBISS_202">
     <LocalHomologacao>
       <RecepcionarLoteRps>WSDL\Homologacao\HVilhenaRO-WebISS.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>WSDL\Homologacao\HVilhenaRO-WebISS.wsdl</ConsultarSituacaoLoteRps>
@@ -6338,6 +6336,108 @@
       <ConsultarLoteRps>wsdl\producao\PBarbacenaMG-WebISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PBarbacenaMG-WebISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4300406" Nome="Alagrete - RS" UF="RS" Padrao="DBSELLER">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HAlegreteRS-DBSELLER.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HAlegreteRS-DBSELLER.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HAlegreteRS-DBSELLER.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HAlegreteRS-DBSELLER.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HAlegreteRS-DBSELLER.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HAlegreteRS-DBSELLER.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PAlegreteRS-DBSELLER.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PAlegreteRS-DBSELLER.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PAlegreteRS-DBSELLER.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PAlegreteRS-DBSELLER.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PAlegreteRS-DBSELLER.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PAlegreteRS-DBSELLER.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3205309" Nome="Vitória - ES" UF="ES" Padrao="VITORIA_ES">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVitoriaES-VITORIA_ES.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVitoriaES-VITORIA_ES.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVitoriaES-VITORIA_ES.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVitoriaES-VITORIA_ES.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVitoriaES-VITORIA_ES.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HVitoriaES-VITORIA_ES.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVitoriaES-VITORIA_ES.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVitoriaES-VITORIA_ES.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVitoriaES-VITORIA_ES.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVitoriaES-VITORIA_ES.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVitoriaES-VITORIA_ES.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PVitoriaES-VITORIA_ES.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4317202" Nome="Santa Rosa - RS" UF="RS" Padrao="IPM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3300100" Nome="Angra dos Reis - RJ" UF="RJ" Padrao="TIPLAN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PAngraDosReisRJ-TIPLAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PAngraDosReisRJ-TIPLAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PAngraDosReisRJ-TIPLAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PAngraDosReisRJ-TIPLAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PAngraDosReisRJ-TIPLAN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PAngraDosReisRJ-TIPLAN.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4315149" Nome="Presidente Lucena - RS" UF="RS" Padrao="TECNOSISTEMAS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HPresidenteLucena-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HPresidenteLucena-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HPresidenteLucena-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HPresidenteLucena-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HPresidenteLucena-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HPresidenteLucena-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS></ConsultaSequenciaLoteNotaRPS>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PPresidenteLucena-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PPresidenteLucena-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PPresidenteLucena-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PPresidenteLucena-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PPresidenteLucena-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PPresidenteLucena-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PPresidenteLucena-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
     </LocalProducao>
   </Estado>
 </Webservice>
