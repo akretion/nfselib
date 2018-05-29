@@ -44,7 +44,7 @@
 	</binding>
 	<service name="hCancelarNfse">
 		<port name="hCancelarNfseSoapPort" binding="wsdlns:hCancelarNfseSoapBinding">
-			<soap:address location="http://valadares.sistemas4r.com.br/abrasf/ahcancelarnfse.aspx" />
+			<soap:address location="http://taquarivai.sistemas4r.com.br/abrasf/ahcancelarnfse.aspx" />
 		</port>
 	</service>
 </definitions>

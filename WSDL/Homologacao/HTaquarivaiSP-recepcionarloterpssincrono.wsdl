@@ -44,7 +44,7 @@
 	</binding>
 	<service name="hRecepcionarLoteRpsSincrono">
 		<port name="hRecepcionarLoteRpsSincronoSoapPort" binding="wsdlns:hRecepcionarLoteRpsSincronoSoapBinding">
-			<soap:address location="http://valadares.sistemas4r.com.br/abrasf/ahrecepcionarloterpssincrono.aspx" />
+			<soap:address location="http://taquarivai.sistemas4r.com.br/abrasf/ahrecepcionarloterpssincrono.aspx" />
 		</port>
 	</service>
 </definitions>
