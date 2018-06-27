@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" xmlns:intf="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+
+   <wsdl:message name="ConsultarNfsePorFaixaRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ConsultarNfseServicoTomadoResponse">
+
+      <wsdl:part name="ConsultarNfseServicoTomadoReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ConsultarLoteRpsResponse">
+
+      <wsdl:part name="ConsultarLoteRpsReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="RecepcionarLoteRpsSincronoRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ConsultarNfseServicoPrestadoRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincReceberDamResponse">
+
+      <wsdl:part name="NfeSincReceberDamReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ConsultarNfseServicoPrestadoResponse">
+
+      <wsdl:part name="ConsultarNfseServicoPrestadoReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarDadosResponse">
+
+      <wsdl:part name="NfeSincEnviarDadosReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ConsultarNfseServicoTomadoRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarDamIssRequest">
+
+      <wsdl:part name="Arq" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ConsultarNfsePorRpsResponse">
+
+      <wsdl:part name="ConsultarNfsePorRpsReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarNotaAvulsaResponse">
+
+      <wsdl:part name="NfeSincEnviarNotaAvulsaReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincReceberDadosResponse">
+
+      <wsdl:part name="NfeSincReceberDadosReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarDadosRequest">
+
+      <wsdl:part name="Arq" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="CancelarNfseResponse">
+
+      <wsdl:part name="CancelarNfseReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincLoteReceberRequest">
+
+      <wsdl:part name="Arq" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincReceberDadosRequest">
+
+      <wsdl:part name="Arq" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarNotaResponse">
+
+      <wsdl:part name="NfeSincEnviarNotaReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarNotaRequest">
+
+      <wsdl:part name="Arq" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincReceberPessoaResponse">
+
+      <wsdl:part name="NfeSincReceberPessoaReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincReceberBaixaRequest">
+
+      <wsdl:part name="Arq" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincReceberDamRequest">
+
+      <wsdl:part name="Arq" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincLoteReceberResponse">
+
+      <wsdl:part name="NfeSincLoteReceberReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarPessoaResponse">
+
+      <wsdl:part name="NfeSincEnviarPessoaReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ConsultarLoteRpsRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarPessoaRequest">
+
+      <wsdl:part name="Arq" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="RecepcionarLoteRpsSincronoResponse">
+
+      <wsdl:part name="RecepcionarLoteRpsSincronoReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="RecepcionarLoteRpsResponse">
+
+      <wsdl:part name="RecepcionarLoteRpsReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ConsultarNfsePorFaixaResponse">
+
+      <wsdl:part name="ConsultarNfsePorFaixaReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="SubstituirNfseResponse">
+
+      <wsdl:part name="SubstituirNfseReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarLancamentoRequest">
+
+      <wsdl:part name="Arq" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="GerarNfseRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarNotaAvulsaRequest">
+
+      <wsdl:part name="Arq" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="CancelarNfseRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="SubstituirNfseRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarDamIssResponse">
+
+      <wsdl:part name="NfeSincEnviarDamIssReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincReceberBaixaResponse">
+
+      <wsdl:part name="NfeSincReceberBaixaReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ConsultarNfsePorRpsRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincReceberPessoaRequest">
+
+      <wsdl:part name="Arq" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="NfeSincEnviarLancamentoResponse">
+
+      <wsdl:part name="NfeSincEnviarLancamentoReturn" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="GerarNfseResponse">
+
+      <wsdl:part name="GerarNfseReturn" type="xsd:anyType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="RecepcionarLoteRpsRequest">
+
+      <wsdl:part name="Nfsecabecmsg" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="Nfsedadosmsg" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="NFEServices">
+
+      <wsdl:operation name="CancelarNfse" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:CancelarNfseRequest" name="CancelarNfseRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:CancelarNfseResponse" name="CancelarNfseResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarLoteRps" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:ConsultarLoteRpsRequest" name="ConsultarLoteRpsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:ConsultarLoteRpsResponse" name="ConsultarLoteRpsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarNfsePorFaixa" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:ConsultarNfsePorFaixaRequest" name="ConsultarNfsePorFaixaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:ConsultarNfsePorFaixaResponse" name="ConsultarNfsePorFaixaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarNfsePorRps" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:ConsultarNfsePorRpsRequest" name="ConsultarNfsePorRpsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:ConsultarNfsePorRpsResponse" name="ConsultarNfsePorRpsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarNfseServicoPrestado" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:ConsultarNfseServicoPrestadoRequest" name="ConsultarNfseServicoPrestadoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:ConsultarNfseServicoPrestadoResponse" name="ConsultarNfseServicoPrestadoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarNfseServicoTomado" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:ConsultarNfseServicoTomadoRequest" name="ConsultarNfseServicoTomadoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:ConsultarNfseServicoTomadoResponse" name="ConsultarNfseServicoTomadoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="GerarNfse" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:GerarNfseRequest" name="GerarNfseRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:GerarNfseResponse" name="GerarNfseResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="RecepcionarLoteRps" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:RecepcionarLoteRpsRequest" name="RecepcionarLoteRpsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:RecepcionarLoteRpsResponse" name="RecepcionarLoteRpsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="RecepcionarLoteRpsSincrono" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:RecepcionarLoteRpsSincronoRequest" name="RecepcionarLoteRpsSincronoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:RecepcionarLoteRpsSincronoResponse" name="RecepcionarLoteRpsSincronoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="SubstituirNfse" parameterOrder="Nfsecabecmsg Nfsedadosmsg">
+
+         <wsdl:input message="impl:SubstituirNfseRequest" name="SubstituirNfseRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:SubstituirNfseResponse" name="SubstituirNfseResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincReceberPessoa" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincReceberPessoaRequest" name="NfeSincReceberPessoaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincReceberPessoaResponse" name="NfeSincReceberPessoaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincLoteReceber" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincLoteReceberRequest" name="NfeSincLoteReceberRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincLoteReceberResponse" name="NfeSincLoteReceberResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincReceberBaixa" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincReceberBaixaRequest" name="NfeSincReceberBaixaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincReceberBaixaResponse" name="NfeSincReceberBaixaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarNota" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincEnviarNotaRequest" name="NfeSincEnviarNotaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincEnviarNotaResponse" name="NfeSincEnviarNotaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarLancamento" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincEnviarLancamentoRequest" name="NfeSincEnviarLancamentoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincEnviarLancamentoResponse" name="NfeSincEnviarLancamentoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarDamIss" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincEnviarDamIssRequest" name="NfeSincEnviarDamIssRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincEnviarDamIssResponse" name="NfeSincEnviarDamIssResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarPessoa" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincEnviarPessoaRequest" name="NfeSincEnviarPessoaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincEnviarPessoaResponse" name="NfeSincEnviarPessoaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarNotaAvulsa" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincEnviarNotaAvulsaRequest" name="NfeSincEnviarNotaAvulsaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincEnviarNotaAvulsaResponse" name="NfeSincEnviarNotaAvulsaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincReceberDam" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincReceberDamRequest" name="NfeSincReceberDamRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincReceberDamResponse" name="NfeSincReceberDamResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincReceberDados" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincReceberDadosRequest" name="NfeSincReceberDadosRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincReceberDadosResponse" name="NfeSincReceberDadosResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarDados" parameterOrder="Arq">
+
+         <wsdl:input message="impl:NfeSincEnviarDadosRequest" name="NfeSincEnviarDadosRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:NfeSincEnviarDadosResponse" name="NfeSincEnviarDadosResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="NFEServicesSoapBinding" type="impl:NFEServices">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="CancelarNfse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="CancelarNfseRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="CancelarNfseResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarLoteRps">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="ConsultarLoteRpsRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="ConsultarLoteRpsResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarNfsePorFaixa">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="ConsultarNfsePorFaixaRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="ConsultarNfsePorFaixaResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarNfsePorRps">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="ConsultarNfsePorRpsRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="ConsultarNfsePorRpsResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarNfseServicoPrestado">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="ConsultarNfseServicoPrestadoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="ConsultarNfseServicoPrestadoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="ConsultarNfseServicoTomado">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="ConsultarNfseServicoTomadoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="ConsultarNfseServicoTomadoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="GerarNfse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="GerarNfseRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="GerarNfseResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="RecepcionarLoteRps">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="RecepcionarLoteRpsRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="RecepcionarLoteRpsResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="RecepcionarLoteRpsSincrono">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="RecepcionarLoteRpsSincronoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="RecepcionarLoteRpsSincronoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="SubstituirNfse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="SubstituirNfseRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="SubstituirNfseResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincReceberPessoa">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincReceberPessoaRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincReceberPessoaResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincLoteReceber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincLoteReceberRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincLoteReceberResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincReceberBaixa">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincReceberBaixaRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincReceberBaixaResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarNota">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincEnviarNotaRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincEnviarNotaResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarLancamento">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincEnviarLancamentoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincEnviarLancamentoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarDamIss">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincEnviarDamIssRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincEnviarDamIssResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarPessoa">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincEnviarPessoaRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincEnviarPessoaResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarNotaAvulsa">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincEnviarNotaAvulsaRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincEnviarNotaAvulsaResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincReceberDam">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincReceberDamRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincReceberDamResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincReceberDados">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincReceberDadosRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincReceberDadosResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="NfeSincEnviarDados">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="NfeSincEnviarDadosRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="NfeSincEnviarDadosResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="NFEServicesService">
+
+      <wsdl:port binding="impl:NFEServicesSoapBinding" name="NFEServices">
+
+         <wsdlsoap:address location="http://sis-nfs-e.pmnf.rj.gov.br:8040/nfe/webservices/NFEServices.jws"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

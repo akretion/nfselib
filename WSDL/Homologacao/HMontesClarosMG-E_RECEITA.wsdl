@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://nfe2.montesclaros.mg.gov.br/soap/NfseWebService" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://nfe2.montesclaros.mg.gov.br/soap/NfseWebService">
+<types>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://nfe2.montesclaros.mg.gov.br/soap/NfseWebService"
+>
+ <xsd:complexType name="input">
+  <xsd:sequence>
+   <xsd:element name="nfseCabecMsg" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="nfseDadosMsg" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:complexType name="output">
+  <xsd:sequence>
+   <xsd:element name="outputXML" type="xsd:string"/>
+  </xsd:sequence>
+ </xsd:complexType>
+ <xsd:element name="RecepcionarLoteRpsRequest" type="tns:input"/>
+ <xsd:element name="RecepcionarLoteRpsResponse" type="tns:output"/>
+ <xsd:element name="RecepcionarLoteRpsSincronoRequest" type="tns:input"/>
+ <xsd:element name="RecepcionarLoteRpsSincronoResponse" type="tns:output"/>
+ <xsd:element name="GerarNfseRequest" type="tns:input"/>
+ <xsd:element name="GerarNfseResponse" type="tns:output"/>
+ <xsd:element name="CancelarNfseRequest" type="tns:input"/>
+ <xsd:element name="CancelarNfseResponse" type="tns:output"/>
+ <xsd:element name="SubstituirNfseRequest" type="tns:input"/>
+ <xsd:element name="SubstituirNfseResponse" type="tns:output"/>
+ <xsd:element name="ConsultarLoteRpsRequest" type="tns:input"/>
+ <xsd:element name="ConsultarLoteRpsResponse" type="tns:output"/>
+ <xsd:element name="ConsultarNfsePorRpsRequest" type="tns:input"/>
+ <xsd:element name="ConsultarNfsePorRpsResponse" type="tns:output"/>
+ <xsd:element name="ConsultarNfseFaixaRequest" type="tns:input"/>
+ <xsd:element name="ConsultarNfseFaixaResponse" type="tns:output"/>
+</xsd:schema>
+</types>
+<message name="RecepcionarLoteRpsRequest">
+  <part name="parameters" element="tns:RecepcionarLoteRpsRequest" /></message>
+<message name="RecepcionarLoteRpsResponse">
+  <part name="parameters" element="tns:RecepcionarLoteRpsResponse" /></message>
+<message name="RecepcionarLoteRpsSincronoRequest">
+  <part name="parameters" element="tns:RecepcionarLoteRpsSincronoRequest" /></message>
+<message name="RecepcionarLoteRpsSincronoResponse">
+  <part name="parameters" element="tns:RecepcionarLoteRpsSincronoResponse" /></message>
+<message name="GerarNfseRequest">
+  <part name="parameters" element="tns:GerarNfseRequest" /></message>
+<message name="GerarNfseResponse">
+  <part name="parameters" element="tns:GerarNfseResponse" /></message>
+<message name="CancelarNfseRequest">
+  <part name="parameters" element="tns:CancelarNfseRequest" /></message>
+<message name="CancelarNfseResponse">
+  <part name="parameters" element="tns:CancelarNfseResponse" /></message>
+<message name="SubstituirNfseRequest">
+  <part name="parameters" element="tns:SubstituirNfseRequest" /></message>
+<message name="SubstituirNfseResponse">
+  <part name="parameters" element="tns:SubstituirNfseResponse" /></message>
+<message name="ConsultarLoteRpsRequest">
+  <part name="parameters" element="tns:ConsultarLoteRpsRequest" /></message>
+<message name="ConsultarLoteRpsResponse">
+  <part name="parameters" element="tns:ConsultarLoteRpsResponse" /></message>
+<message name="ConsultarNfsePorRpsRequest">
+  <part name="parameters" element="tns:ConsultarNfsePorRpsRequest" /></message>
+<message name="ConsultarNfsePorRpsResponse">
+  <part name="parameters" element="tns:ConsultarNfsePorRpsResponse" /></message>
+<message name="ConsultarNfseFaixaRequest">
+  <part name="parameters" element="tns:ConsultarNfseFaixaRequest" /></message>
+<message name="ConsultarNfseFaixaResponse">
+  <part name="parameters" element="tns:ConsultarNfseFaixaResponse" /></message>
+<portType name="NfseWebServicePortType">
+  <operation name="RecepcionarLoteRps">
+    <documentation>Enviar Lote de RPS para processamento (assincrono)</documentation>
+    <input message="tns:RecepcionarLoteRpsRequest"/>
+    <output message="tns:RecepcionarLoteRpsResponse"/>
+  </operation>
+  <operation name="RecepcionarLoteRpsSincrono">
+    <documentation>Enviar lote de RPS para processamento (sincrono - máximo de 50 RPSs)</documentation>
+    <input message="tns:RecepcionarLoteRpsSincronoRequest"/>
+    <output message="tns:RecepcionarLoteRpsSincronoResponse"/>
+  </operation>
+  <operation name="GerarNfse">
+    <documentation>Gerar nota fiscal de serviço</documentation>
+    <input message="tns:GerarNfseRequest"/>
+    <output message="tns:GerarNfseResponse"/>
+  </operation>
+  <operation name="CancelarNfse">
+    <documentation>Cancelar nota fiscal</documentation>
+    <input message="tns:CancelarNfseRequest"/>
+    <output message="tns:CancelarNfseResponse"/>
+  </operation>
+  <operation name="SubstituirNfse">
+    <documentation>Substituir nota fiscal de serviço por outra</documentation>
+    <input message="tns:SubstituirNfseRequest"/>
+    <output message="tns:SubstituirNfseResponse"/>
+  </operation>
+  <operation name="ConsultarLoteRps">
+    <documentation>Consultar processamento de Lote RPS</documentation>
+    <input message="tns:ConsultarLoteRpsRequest"/>
+    <output message="tns:ConsultarLoteRpsResponse"/>
+  </operation>
+  <operation name="ConsultarNfsePorRps">
+    <documentation>Consultar notas fiscais de serviço geradas por RPS</documentation>
+    <input message="tns:ConsultarNfsePorRpsRequest"/>
+    <output message="tns:ConsultarNfsePorRpsResponse"/>
+  </operation>
+  <operation name="ConsultarNfseFaixa">
+    <documentation>Consultar notas fiscais de serviço por intervalo de numeração</documentation>
+    <input message="tns:ConsultarNfseFaixaRequest"/>
+    <output message="tns:ConsultarNfseFaixaResponse"/>
+  </operation>
+</portType>
+<binding name="NfseWebServiceBinding" type="tns:NfseWebServicePortType">
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="RecepcionarLoteRps">
+    <soap:operation soapAction="http://nfse.montesclaros.mg.gov.br/RecepcionarLoteRps" style="document"/>
+    <input><soap:body use="literal" namespace=""/></input>
+    <output><soap:body use="literal" namespace=""/></output>
+  </operation>
+  <operation name="RecepcionarLoteRpsSincrono">
+    <soap:operation soapAction="http://nfse.montesclaros.mg.gov.br/RecepcionarLoteRpsSincrono" style="document"/>
+    <input><soap:body use="literal" namespace=""/></input>
+    <output><soap:body use="literal" namespace=""/></output>
+  </operation>
+  <operation name="GerarNfse">
+    <soap:operation soapAction="http://nfse.montesclaros.mg.gov.br/GerarNfse" style="document"/>
+    <input><soap:body use="literal" namespace=""/></input>
+    <output><soap:body use="literal" namespace=""/></output>
+  </operation>
+  <operation name="CancelarNfse">
+    <soap:operation soapAction="http://nfse.montesclaros.mg.gov.br/CancelarNfse" style="document"/>
+    <input><soap:body use="literal" namespace=""/></input>
+    <output><soap:body use="literal" namespace=""/></output>
+  </operation>
+  <operation name="SubstituirNfse">
+    <soap:operation soapAction="http://nfse.montesclaros.mg.gov.br/SubstituirNfse" style="document"/>
+    <input><soap:body use="literal" namespace=""/></input>
+    <output><soap:body use="literal" namespace=""/></output>
+  </operation>
+  <operation name="ConsultarLoteRps">
+    <soap:operation soapAction="http://nfse.montesclaros.mg.gov.br/ConsultarLoteRps" style="document"/>
+    <input><soap:body use="literal" namespace=""/></input>
+    <output><soap:body use="literal" namespace=""/></output>
+  </operation>
+  <operation name="ConsultarNfsePorRps">
+    <soap:operation soapAction="http://nfse.montesclaros.mg.gov.br/ConsultarNfsePorRps" style="document"/>
+    <input><soap:body use="literal" namespace=""/></input>
+    <output><soap:body use="literal" namespace=""/></output>
+  </operation>
+  <operation name="ConsultarNfseFaixa">
+    <soap:operation soapAction="http://nfse.montesclaros.mg.gov.br/ConsultarNfseFaixa" style="document"/>
+    <input><soap:body use="literal" namespace=""/></input>
+    <output><soap:body use="literal" namespace=""/></output>
+  </operation>
+</binding>
+<service name="NfseWebService">
+  <port name="NfseWebServicePort" binding="tns:NfseWebServiceBinding">
+    <soap:address location="http://nfe2.montesclaros.mg.gov.br/ws/montesclaros/wsHomologacao.php"/>
+  </port>
+</service>
+</definitions>
