@@ -1911,7 +1911,7 @@
       <CancelarNfse>WSDL\Producao\PCascavel-ISSNet.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3303302" Nome="Niterói - RJ" UF="RJ" Padrao="TIPLAN">
+  <Estado ID="3303302" Nome="Niterói - RJ" UF="RJ" Padrao="TIPLAN_203">
     <LocalHomologacao>
       <RecepcionarLoteRps>WSDL\Homologacao\HNiteroiRJ-TIPLAN.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>WSDL\Homologacao\HNiteroiRJ-TIPLAN.wsdl</ConsultarSituacaoLoteRps>
@@ -6744,6 +6744,26 @@
       <ConsultarNfse>wsdl\producao\PBarrosoMG-SH3.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PBarrosoMG-SH3.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PBarrosoMG-SH3.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2901007" Nome="Amargosa - BA" UF="BA" Padrao="ADM_SISTEMAS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HAmargosaBA-ADM_SISTEMAS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HAmargosaBA-ADM_SISTEMAS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HAmargosaBA-ADM_SISTEMAS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HAmargosaBA-ADM_SISTEMAS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HAmargosaBA-ADM_SISTEMAS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HAmargosaBA-ADM_SISTEMAS.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\HAmargosaBA-ADM_SISTEMAS.wsdl</SubstituirNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</SubstituirNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
