@@ -54,6 +54,22 @@
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="PUBLIC_SOFT" Nome="Geral - PUBLIC_SOFT" UF="XX" Padrao="PUBLIC_SOFT">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HPublicSoft.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HPublicSoft.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HPublicSoft.wsdl</ConsultarNfse>
+      <CancelarNfse>wsdl\homologacao\HPublicSoft.wsdl</CancelarNfse>
+      <ConsultarURLNfse>wsdl\homologacao\HPublicSoft.wsdl</ConsultarURLNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PPublicSoft.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPublicSoft.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPublicSoft.wsdl</ConsultarNfse>
+      <CancelarNfse>wsdl\producao\PPublicSoft.wsdl</CancelarNfse>
+      <ConsultarURLNfse>wsdl\producao\PPublicSoft.wsdl</ConsultarURLNfse>
+    </LocalProducao>
+  </Estado>
   <Estado ID="4125506" Nome="São José dos Pinhais - PR" UF="PR" Padrao="GINFES">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HGINFES_SaoJosePinhaisPR.wsdl</RecepcionarLoteRps>
@@ -6764,6 +6780,22 @@
       <ConsultarLoteRps>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</CancelarNfse>
       <SubstituirNfse>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</SubstituirNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2610707" Nome="Paulistana - PE" UF="PE" Padrao="PUBLIC_SOFT">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HPublicSoft.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HPublicSoft.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HPublicSoft.wsdl</ConsultarNfse>
+      <CancelarNfse>wsdl\homologacao\HPublicSoft.wsdl</CancelarNfse>
+      <ConsultarURLNfse>wsdl\homologacao\HPublicSoft.wsdl</ConsultarURLNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PPublicSoft.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPublicSoft.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPublicSoft.wsdl</ConsultarNfse>
+      <CancelarNfse>wsdl\producao\PPublicSoft.wsdl</CancelarNfse>
+      <ConsultarURLNfse>wsdl\producao\PPublicSoft.wsdl</ConsultarURLNfse>
     </LocalProducao>
   </Estado>
 </Webservice>

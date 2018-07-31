@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:index.GerarNfseEnvio" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:index.GerarNfseEnvio">
+<types>
+<xsd:schema targetNamespace="urn:index.GerarNfseEnvio"
+>
+ <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+ <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+</xsd:schema>
+</types>
+<message name="GerarNfseEnvioRequest">
+  <part name="xml" type="xsd:string" />
+  <part name="id" type="xsd:string" /></message>
+<message name="GerarNfseEnvioResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="CancelarNfseEnvioRequest">
+  <part name="xml" type="xsd:string" />
+  <part name="id" type="xsd:string" /></message>
+<message name="CancelarNfseEnvioResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="ConsultarNfseFaixaEnvioRequest">
+  <part name="xml" type="xsd:string" />
+  <part name="id" type="xsd:string" /></message>
+<message name="ConsultarNfseFaixaEnvioResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="ConsultarNfseRpsEnvioRequest">
+  <part name="xml" type="xsd:string" />
+  <part name="id" type="xsd:string" /></message>
+<message name="ConsultarNfseRpsEnvioResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="ConsultarNfseServicoPrestadoEnvioRequest">
+  <part name="xml" type="xsd:string" />
+  <part name="id" type="xsd:string" /></message>
+<message name="ConsultarNfseServicoPrestadoEnvioResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="LinksNotaFiscalRequest">
+  <part name="xml" type="xsd:string" />
+  <part name="id" type="xsd:string" /></message>
+<message name="LinksNotaFiscalResponse">
+  <part name="return" type="xsd:string" /></message>
+<portType name="index.GerarNfseEnvioPortType">
+  <operation name="GerarNfseEnvio">
+    <documentation>Retorna dados da NFS-e gerada.</documentation>
+    <input message="tns:GerarNfseEnvioRequest"/>
+    <output message="tns:GerarNfseEnvioResponse"/>
+  </operation>
+  <operation name="CancelarNfseEnvio">
+    <documentation>Retorna dados da NFS-e cancelada.</documentation>
+    <input message="tns:CancelarNfseEnvioRequest"/>
+    <output message="tns:CancelarNfseEnvioResponse"/>
+  </operation>
+  <operation name="ConsultarNfseFaixaEnvio">
+    <documentation></documentation>
+    <input message="tns:ConsultarNfseFaixaEnvioRequest"/>
+    <output message="tns:ConsultarNfseFaixaEnvioResponse"/>
+  </operation>
+  <operation name="ConsultarNfseRpsEnvio">
+    <documentation>Retorna dados da NFS-e pesquisada por RPS.</documentation>
+    <input message="tns:ConsultarNfseRpsEnvioRequest"/>
+    <output message="tns:ConsultarNfseRpsEnvioResponse"/>
+  </operation>
+  <operation name="ConsultarNfseServicoPrestadoEnvio">
+    <documentation></documentation>
+    <input message="tns:ConsultarNfseServicoPrestadoEnvioRequest"/>
+    <output message="tns:ConsultarNfseServicoPrestadoEnvioResponse"/>
+  </operation>
+  <operation name="LinksNotaFiscal">
+    <documentation></documentation>
+    <input message="tns:LinksNotaFiscalRequest"/>
+    <output message="tns:LinksNotaFiscalResponse"/>
+  </operation>
+</portType>
+<binding name="index.GerarNfseEnvioBinding" type="tns:index.GerarNfseEnvioPortType">
+  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="GerarNfseEnvio">
+    <soap:operation soapAction="urn:index.GerarNfseEnvio#GerarNfseEnvio" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:index.GerarNfseEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:index.GerarNfseEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="CancelarNfseEnvio">
+    <soap:operation soapAction="urn:index.CancelarNfseEnvio#CancelarNfseEnvio" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:index.CancelarNfseEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:index.CancelarNfseEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="ConsultarNfseFaixaEnvio">
+    <soap:operation soapAction="urn:index.ConsultarNfseFaixaEnvio#ConsultarNfseFaixaEnvio" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:index.ConsultarNfseFaixaEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:index.ConsultarNfseFaixaEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="ConsultarNfseRpsEnvio">
+    <soap:operation soapAction="urn:index.ConsultarNfseRpsEnvio#ConsultarNfseRpsEnvio" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:index.ConsultarNfseRpsEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:index.ConsultarNfseRpsEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="ConsultarNfseServicoPrestadoEnvio">
+    <soap:operation soapAction="urn:index.ConsultarNfseServicoPrestadoEnvio#ConsultarNfseServicoPrestadoEnvio" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:index.ConsultarNfseServicoPrestadoEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:index.ConsultarNfseServicoPrestadoEnvio" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="LinksNotaFiscal">
+    <soap:operation soapAction="urn:index.LinksNotaFiscal#LinksNotaFiscal" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:index.LinksNotaFiscal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:index.LinksNotaFiscal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+</binding>
+<service name="index.GerarNfseEnvio">
+  <port name="index.GerarNfseEnvioPort" binding="tns:index.GerarNfseEnvioBinding">
+    <soap:address location="http://portaldocontribuinte.publicsoft.com.br/sistemas/PortalDoContribuinte/views/NotasFiscais/NotaFiscalServico/webservice/producao/index.php"/>
+  </port>
+</service>
+</definitions>
