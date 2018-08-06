@@ -6782,7 +6782,7 @@
       <SubstituirNfse>wsdl\producao\PAmargosaBA-ADM_SISTEMAS.wsdl</SubstituirNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="2610707" Nome="Paulistana - PE" UF="PE" Padrao="PUBLIC_SOFT">
+  <Estado ID="2610707" Nome="Paulista - PE" UF="PE" Padrao="PUBLIC_SOFT">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HPublicSoft.wsdl</RecepcionarLoteRps>
       <ConsultarNfsePorRps>wsdl\homologacao\HPublicSoft.wsdl</ConsultarNfsePorRps>
@@ -6796,6 +6796,16 @@
       <ConsultarNfse>wsdl\producao\PPublicSoft.wsdl</ConsultarNfse>
       <CancelarNfse>wsdl\producao\PPublicSoft.wsdl</CancelarNfse>
       <ConsultarURLNfse>wsdl\producao\PPublicSoft.wsdl</ConsultarURLNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5206503" Nome="Cromínia - GO" UF="GO" Padrao="MEGASOFT">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCrominiaGO-MEGASOFT.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCrominiaGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCrominiaGO-MEGASOFT.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCrominiaGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
     </LocalProducao>
   </Estado>
 </Webservice>

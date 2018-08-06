@@ -45,7 +45,7 @@
 	</binding>
 	<service name="ConsultarSituacaoLoteRps">
 		<port name="ConsultarSituacaoLoteRpsSoapPort" binding="wsdlns:ConsultarSituacaoLoteRpsSoapBinding">
-			<soap:address location="https://www.e-nfs.com.br/e-nfs_roo/servlet/aconsultarsituacaoloterps"/>
+			<soap:address location="https://www.nfserondonopolis.com.br/e-nfs_roo/servlet/aconsultarsituacaoloterps"/>
 		</port>
 	</service>
 </definitions>
