@@ -4770,24 +4770,24 @@
       <InutilizarNFSe></InutilizarNFSe>
     </LocalProducao>
   </Estado>
-  <Estado ID="3300407" Nome="Barra Mansa - RJ" UF="RJ" Padrao="ISSONLINE_ASSESSORPUBLICO">
+  <Estado ID="3300407" Nome="Barra Mansa - RJ" UF="RJ" Padrao="ISSNET">
     <LocalHomologacao>
-      <RecepcionarLoteRps></RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse></ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse></CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\HISSNet.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HISSNet.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HISSNet.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HISSNet.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HISSNet.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\HISSNet.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HISSNet.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PBarraMansaRJ_AssessorPublico.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PBarraMansaRJ_AssessorPublico.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Producao\PBarraMansaRJ_AssessorPublico.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PBarraMansaRJ_AssessorPublico.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Producao\PBarraMansaRJ_AssessorPublico.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PBarraMansaRJ_AssessorPublico.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PBarraMansaRJ.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PBarraMansaRJ.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PBarraMansaRJ.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PBarraMansaRJ.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PBarraMansaRJ.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\PBarraMansaRJ.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PBarraMansaRJ.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4316501" Nome="Salvador do Sul - RS" UF="RS" Padrao="TECNOSISTEMAS">
@@ -6806,6 +6806,26 @@
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PCrominiaGO-MEGASOFT.wsdl</RecepcionarLoteRps>
       <ConsultarNfsePorRps>wsdl\producao\PCrominiaGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4304507" Nome="Canguçu - RS" UF="RS" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCangucuRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCangucuRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCangucuRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCangucuRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCangucuRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HCangucuRS-PRONIN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCangucuRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCangucuRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCangucuRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCangucuRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCangucuRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PCangucuRS-PRONIN.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
