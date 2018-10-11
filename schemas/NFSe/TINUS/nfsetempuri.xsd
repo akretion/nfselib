@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-            targetNamespace="http://tempuri.org" 
-            xmlns="http://tempuri.org" 
+            targetNamespace="http://www.tinus.com.br" 
+            xmlns="http://www.tinus.com.br" 
             xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
             attributeFormDefault="unqualified"
             elementFormDefault="qualified">

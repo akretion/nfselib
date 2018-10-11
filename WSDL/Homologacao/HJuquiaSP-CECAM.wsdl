@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EnviarLoteNotaFiscal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpjcpfprestador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlNotas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarLoteNotaFiscalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarLoteNotaFiscalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarLoteNotaFiscalDeTeste">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpjcpfprestador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlNotas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarLoteNotaFiscalDeTesteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarLoteNotaFiscalDeTesteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarLoteNotaFiscalTomador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpjcpfTomador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlNotasTomador" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarLoteNotaFiscalTomadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarLoteNotaFiscalTomadorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarLoteNotaFiscalTomadorDeTeste">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpjcpfTomador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlNotasTomador" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarLoteNotaFiscalTomadorDeTesteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarLoteNotaFiscalTomadorDeTesteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNotaFiscal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpjcpfprestador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlNotas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNotaFiscalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarNotaFiscalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarNotaFiscalEletronica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpjcpfprestador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlNotas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarNotaFiscalEletronicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelarNotaFiscalEletronicaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaTiposServicos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpjCpfRequisitante" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlConsultaServicos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaTiposServicosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaTiposServicosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaItensAtividade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnpjCpfRequisitante" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlConsultaItensAtividade" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaItensAtividadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaItensAtividadeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnviarLoteNotaFiscalSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarLoteNotaFiscal" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteNotaFiscalSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarLoteNotaFiscalResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteNotaFiscalDeTesteSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarLoteNotaFiscalDeTeste" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteNotaFiscalDeTesteSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarLoteNotaFiscalDeTesteResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteNotaFiscalTomadorSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarLoteNotaFiscalTomador" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteNotaFiscalTomadorSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarLoteNotaFiscalTomadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteNotaFiscalTomadorDeTesteSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarLoteNotaFiscalTomadorDeTeste" />
+  </wsdl:message>
+  <wsdl:message name="EnviarLoteNotaFiscalTomadorDeTesteSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarLoteNotaFiscalTomadorDeTesteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNotaFiscalSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarNotaFiscal" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNotaFiscalSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarNotaFiscalResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelarNotaFiscalEletronicaSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelarNotaFiscalEletronica" />
+  </wsdl:message>
+  <wsdl:message name="CancelarNotaFiscalEletronicaSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelarNotaFiscalEletronicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaTiposServicosSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaTiposServicos" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaTiposServicosSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaTiposServicosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaItensAtividadeSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaItensAtividade" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaItensAtividadeSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaItensAtividadeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsISSEletronicoSoap">
+    <wsdl:operation name="EnviarLoteNotaFiscal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar Lote de Notas Fiscais (máximo lote de 20 Notas por vez)</wsdl:documentation>
+      <wsdl:input message="tns:EnviarLoteNotaFiscalSoapIn" />
+      <wsdl:output message="tns:EnviarLoteNotaFiscalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteNotaFiscalDeTeste">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar Lote de Notas Fiscais (máximo lote de 20 Notas por vez) para Teste de Desenvolvimento</wsdl:documentation>
+      <wsdl:input message="tns:EnviarLoteNotaFiscalDeTesteSoapIn" />
+      <wsdl:output message="tns:EnviarLoteNotaFiscalDeTesteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteNotaFiscalTomador">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar Lote de Notas Fiscais de Serviços Tomados (máximo lote de 20 Notas por vez)</wsdl:documentation>
+      <wsdl:input message="tns:EnviarLoteNotaFiscalTomadorSoapIn" />
+      <wsdl:output message="tns:EnviarLoteNotaFiscalTomadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteNotaFiscalTomadorDeTeste">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar Lote de Notas Fiscais de Serviços Tomados (máximo lote de 20 Notas por vez)</wsdl:documentation>
+      <wsdl:input message="tns:EnviarLoteNotaFiscalTomadorDeTesteSoapIn" />
+      <wsdl:output message="tns:EnviarLoteNotaFiscalTomadorDeTesteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaFiscal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consulta de Notas Fiscais por Número, Referência ou Lote</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarNotaFiscalSoapIn" />
+      <wsdl:output message="tns:ConsultarNotaFiscalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNotaFiscalEletronica">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cancelamento de Notas Fiscais Eletronicas</wsdl:documentation>
+      <wsdl:input message="tns:CancelarNotaFiscalEletronicaSoapIn" />
+      <wsdl:output message="tns:CancelarNotaFiscalEletronicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTiposServicos">
+      <wsdl:input message="tns:ConsultaTiposServicosSoapIn" />
+      <wsdl:output message="tns:ConsultaTiposServicosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaItensAtividade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Consultar Itens de Atividade para utilização na interface 'EnviarLoteNotaFiscalTomador'</wsdl:documentation>
+      <wsdl:input message="tns:ConsultaItensAtividadeSoapIn" />
+      <wsdl:output message="tns:ConsultaItensAtividadeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsISSEletronicoSoap" type="tns:wsISSEletronicoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarLoteNotaFiscal">
+      <soap:operation soapAction="http://tempuri.org/EnviarLoteNotaFiscal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteNotaFiscalDeTeste">
+      <soap:operation soapAction="http://tempuri.org/EnviarLoteNotaFiscalDeTeste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteNotaFiscalTomador">
+      <soap:operation soapAction="http://tempuri.org/EnviarLoteNotaFiscalTomador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteNotaFiscalTomadorDeTeste">
+      <soap:operation soapAction="http://tempuri.org/EnviarLoteNotaFiscalTomadorDeTeste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaFiscal">
+      <soap:operation soapAction="http://tempuri.org/ConsultarNotaFiscal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNotaFiscalEletronica">
+      <soap:operation soapAction="http://tempuri.org/CancelarNotaFiscalEletronica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTiposServicos">
+      <soap:operation soapAction="http://tempuri.org/ConsultaTiposServicos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaItensAtividade">
+      <soap:operation soapAction="http://tempuri.org/ConsultaItensAtividade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsISSEletronicoSoap12" type="tns:wsISSEletronicoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarLoteNotaFiscal">
+      <soap12:operation soapAction="http://tempuri.org/EnviarLoteNotaFiscal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteNotaFiscalDeTeste">
+      <soap12:operation soapAction="http://tempuri.org/EnviarLoteNotaFiscalDeTeste" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteNotaFiscalTomador">
+      <soap12:operation soapAction="http://tempuri.org/EnviarLoteNotaFiscalTomador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarLoteNotaFiscalTomadorDeTeste">
+      <soap12:operation soapAction="http://tempuri.org/EnviarLoteNotaFiscalTomadorDeTeste" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaFiscal">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarNotaFiscal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNotaFiscalEletronica">
+      <soap12:operation soapAction="http://tempuri.org/CancelarNotaFiscalEletronica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaTiposServicos">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaTiposServicos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaItensAtividade">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaItensAtividade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsISSEletronico">
+    <wsdl:port name="wsISSEletronicoSoap" binding="tns:wsISSEletronicoSoap">
+      <soap:address location="http://189.57.230.138/cecam.issweb/webservices/wsisseletronico.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsISSEletronicoSoap12" binding="tns:wsISSEletronicoSoap12">
+      <soap12:address location="http://189.57.230.138/cecam.issweb/webservices/wsisseletronico.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
