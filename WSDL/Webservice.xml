@@ -6961,4 +6961,24 @@
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+<Estado ID="3300704" Nome="Cabo Frio - RJ" UF="RJ" Padrao="SUPERNOVA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarLoteRps>
+	  <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarLoteRps>
+	  <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>
