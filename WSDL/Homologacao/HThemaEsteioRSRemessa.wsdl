@@ -173,13 +173,13 @@
     </wsdl:binding>
     <wsdl:service name="NFSEremessa">
         <wsdl:port name="NFSEremessaHttpSoap11Endpoint" binding="ns:NFSEremessaSoap11Binding">
-            <soap:address location="http://grp.esteio.rs.gov.br/nfsehml/services/NFSEremessa.NFSEremessaHttpSoap11Endpoint/"/>
+            <soap:address location="http://grphml.esteio.rs.gov.br/nfsehml/services/NFSEremessa.NFSEremessaHttpSoap11Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEremessaHttpSoap12Endpoint" binding="ns:NFSEremessaSoap12Binding">
-            <soap12:address location="http://grp.esteio.rs.gov.br/nfsehml/services/NFSEremessa.NFSEremessaHttpSoap12Endpoint/"/>
+            <soap12:address location="http://grphml.esteio.rs.gov.br/nfsehml/services/NFSEremessa.NFSEremessaHttpSoap12Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEremessaHttpEndpoint" binding="ns:NFSEremessaHttpBinding">
-            <http:address location="http://grp.esteio.rs.gov.br/nfsehml/services/NFSEremessa.NFSEremessaHttpEndpoint/"/>
+            <http:address location="http://grphml.esteio.rs.gov.br/nfsehml/services/NFSEremessa.NFSEremessaHttpEndpoint/"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

@@ -6738,7 +6738,6 @@
       <ConsultarNfsePorRps>wsdl\producao\PBarraDeSaoFranciscoES-EL.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PBarraDeSaoFranciscoES-EL.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PBarraDeSaoFranciscoES-EL.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PBarraDeSaoFranciscoES-EL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
@@ -6848,7 +6847,7 @@
   </Estado>
   <Estado ID="2602902" Nome="Cabo de Santo Agostinho - PE " UF="PE" Padrao="TINUS">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HCaboSantoAgostinhoPE-RecepcionarLoteRps-TINUS.wsdl.wsdl</RecepcionarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HCaboSantoAgostinhoPE-RecepcionarLoteRps-TINUS.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>wsdl\homologacao\HCaboSantoAgostinhoPE-ConsultarSituacaoLoteRps-TINUS.wsdl</ConsultarSituacaoLoteRps>
       <ConsultarNfsePorRps>wsdl\homologacao\HCaboSantoAgostinhoPE-ConsultarNfsePorRps-TINUS.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\homologacao\HCaboSantoAgostinhoPE-ConsultarNfse-TINUS.wsdl</ConsultarNfse>
@@ -6961,14 +6960,14 @@
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-<Estado ID="3300704" Nome="Cabo Frio - RJ" UF="RJ" Padrao="SUPERNOVA">
+  <Estado ID="3300704" Nome="Cabo Frio - RJ" UF="RJ" Padrao="SUPERNOVA">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarSituacaoLoteRps>
       <ConsultarNfsePorRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarLoteRps>
-	  <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
@@ -6977,8 +6976,84 @@
       <ConsultarNfsePorRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarLoteRps>
-	  <ConsultarURLNfse></ConsultarURLNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3157005" Nome="Salinas - MG" UF="MG" Padrao="MEMORY">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HMemory.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HMemory.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HMemory.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HMemory.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HMemory.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HMemory.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PMemory.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PMemory.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PMemory.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PMemory.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PMemory.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PMemory.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3305109" Nome="São João de Meriti - RJ" UF="RJ" Padrao="SIGCORP_SIGISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSaoJoaoMeritiRJ-SIGCORP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoJoaoMeritiRJ-SIGCORP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSaoJoaoMeritiRJ-SIGCORP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSaoJoaoMeritiRJ-SIGCORP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSaoJoaoMeritiRJ-SIGCORP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HSaoJoaoMeritiRJ-SIGCORP.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSaoJoaoMeritiRJ-SIGCORP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoJoaoMeritiRJ-SIGCORP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSaoJoaoMeritiRJ-SIGCORP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSaoJoaoMeritiRJ-SIGCORP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSaoJoaoMeritiRJ-SIGCORP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PSaoJoaoMeritiRJ-SIGCORP.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3162708" Nome="São João do Paraíso - MG" UF="MG" Padrao="EL">
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSaoJoaoParaisoMG-EL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoJoaoParaisoMG-EL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSaoJoaoParaisoMG-EL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSaoJoaoParaisoMG-EL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSaoJoaoParaisoMG-EL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PSaoJoaoParaisoMG-EL.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3168002" Nome="Taiobeiras - MG" UF="MG" Padrao="EL">
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PTaiobeirasMG-EL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PTaiobeirasMG-EL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PTaiobeirasMG-EL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PTaiobeirasMG-EL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PTaiobeirasMG-EL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PTaiobeirasMG-EL.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+<Estado ID="2606200" Nome="Goiana - PE" UF="PE" Padrao="TINUS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HGoianaPE_TINUS_RecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HGoianaPE_TINUS_ConsultarSituacaoLoteRps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HGoianaPE_TINUS_ConsultarNfsePorRps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HGoianaPE_TINUS_ConsultarNfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HGoianaPE_TINUS_ConsultarLoteRps.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HGoianaPE_TINUS_CancelarNfse.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PGoianaPE_TINUS_RecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PGoianaPE_TINUS_ConsultarSituacaoLoteRps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PGoianaPE_TINUS_ConsultarNfsePorRps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PGoianaPE_TINUS_ConsultarNfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PGoianaPE_TINUS_ConsultarLoteRps.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PGoianaPE_TINUS_CancelarNfse.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>

@@ -223,13 +223,13 @@
     </wsdl:binding>
     <wsdl:service name="NFSEconsulta">
         <wsdl:port name="NFSEconsultaHttpSoap11Endpoint" binding="ns:NFSEconsultaSoap11Binding">
-            <soap:address location="http://grp.esteio.rs.gov.br/nfsehml/services/NFSEconsulta.NFSEconsultaHttpSoap11Endpoint/"/>
+            <soap:address location="http://grphml.esteio.rs.gov.br/nfsehml/services/NFSEconsulta.NFSEconsultaHttpSoap11Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEconsultaHttpSoap12Endpoint" binding="ns:NFSEconsultaSoap12Binding">
-            <soap12:address location="http://grp.esteio.rs.gov.br/nfsehml/services/NFSEconsulta.NFSEconsultaHttpSoap12Endpoint/"/>
+            <soap12:address location="http://grphml.esteio.rs.gov.br/nfsehml/services/NFSEconsulta.NFSEconsultaHttpSoap12Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEconsultaHttpEndpoint" binding="ns:NFSEconsultaHttpBinding">
-            <http:address location="http://grp.esteio.rs.gov.br/nfsehml/services/NFSEconsulta.NFSEconsultaHttpEndpoint/"/>
+            <http:address location="http://grphml.esteio.rs.gov.br/nfsehml/services/NFSEconsulta.NFSEconsultaHttpEndpoint/"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
