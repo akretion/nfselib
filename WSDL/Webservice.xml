@@ -2291,13 +2291,13 @@
   </Estado>
   <Estado ID="3530607" Nome="Mogi das Cruzes - SP" UF="SP" Padrao="SMARAPD">
     <LocalHomologacao>
-      <RecepcionarLoteRps></RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <RecepcionarLoteRps>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSEntrada.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSEntrada.wsdl</ConsultarSituacaoLoteRps>
       <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse></ConsultarNfse>
+      <ConsultarNfse>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSSaida.wsdl</ConsultarNfse>
       <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse></CancelarNfse>
+      <ConsultarURLNfse>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSUtil.wsdl</ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HMogidasCruzesSP-SMARAPDWSEntrada.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>WSDL\Producao\PMogidasCruzesSP-SMARAPDWSEntrada.wsdl</RecepcionarLoteRps>
@@ -7056,4 +7056,22 @@
       <CancelarNfse>wsdl\producao\PGoianaPE_TINUS_CancelarNfse.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="4203204" Nome="Camboriú - SC" UF="SC" Padrao="SIMPLE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>	
+      <RecepcionarLoteRps>WSDL\Producao\PCamboriuSC-SIMPLE.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PCamboriuSC-SIMPLE.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PCamboriuSC-SIMPLE.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PCamboriuSC-SIMPLE.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PCamboriuSC-SIMPLE.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Producao\PCamboriuSC-SIMPLE.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado> 
 </Webservice>
