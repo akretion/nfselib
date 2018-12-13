@@ -1523,8 +1523,8 @@
       <ConsultarNfsePorRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</CancelarNfse>
+      <ConsultaNFSeRecebidas>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultaNFSeRecebidas>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</RecepcionarLoteRps>
@@ -1532,8 +1532,8 @@
       <ConsultarNfsePorRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</CancelarNfse>
+    <ConsultaNFSeRecebidas>wsdl\producao\PSaoPauloSP-PAULISTANA.wsdl</ConsultaNFSeRecebidas>
     </LocalProducao>
   </Estado>
   <Estado ID="1100205" Nome="Porto Velho - RO" UF="RO" Padrao="PORTOVELHENSE">
