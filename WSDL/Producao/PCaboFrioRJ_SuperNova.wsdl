@@ -197,7 +197,7 @@
   </binding>
   <service name="IuWebServiceIssDigitalservice">
     <port name="IuWebServiceIssDigitalPort" binding="tns:IuWebServiceIssDigitalbinding">
-      <soap:address location="http://138.204.67.170/nfe/snissdigitalsvc.dll/soap/IuWebServiceIssDigital"/>
+      <soap:address location="http://138.204.67.170:17001/nfe/snissdigitalsvc.dll/soap/IuWebServiceIssDigital"/>
     </port>
   </service>
 </definitions>

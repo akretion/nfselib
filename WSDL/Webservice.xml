@@ -70,6 +70,24 @@
       <ConsultarURLNfse>wsdl\producao\PPublicSoft.wsdl</ConsultarURLNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="EQUIPLANO" Nome="Geral - EQUIPLANO" UF="XX" Padrao="EQUIPLANO">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HEQUIPLANO.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HEQUIPLANO.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HEQUIPLANO.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HEQUIPLANO.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HEQUIPLANO.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HEQUIPLANO.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PEQUIPLANO.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PEQUIPLANO.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PEQUIPLANO.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PEQUIPLANO.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PEQUIPLANO.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PEQUIPLANO.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
   <Estado ID="4125506" Nome="São José dos Pinhais - PR" UF="PR" Padrao="GINFES">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HGINFES_SaoJosePinhaisPR.wsdl</RecepcionarLoteRps>
@@ -6852,17 +6870,15 @@
       <ConsultarNfsePorRps>wsdl\homologacao\HCaboSantoAgostinhoPE-ConsultarNfsePorRps-TINUS.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\homologacao\HCaboSantoAgostinhoPE-ConsultarNfse-TINUS.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\homologacao\HCaboSantoAgostinhoPE-ConsultarLoteRps-TINUS.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\homologacao\HCaboSantoAgostinhoPE-CancelarNfse-TINUS.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PJaboataoDosGuararapesPE_TINUS_RecepcionarLoteRps.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PJaboataoDosGuararapesPE_TINUS_ConsultarSituacaoLoteRps.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PJaboataoDosGuararapesPE_TINUS_ConsultarNfsePorRps.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PJaboataoDosGuararapesPE_TINUS_ConsultarNfse.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PJaboataoDosGuararapesPE_TINUS_ConsultarLoteRps.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PJaboataoDosGuararapesPE_TINUS_CancelarNfse.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PCaboDeSantoAgostinhoPE-RecepcionarLoteRps-TINUS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCaboDeSantoAgostinhoPE-ConsultarSituacaoLoteRps-TINUS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCaboDeSantoAgostinhoPE-ConsultarNfsePorRps-TINUS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCaboDeSantoAgostinhoPE-ConsultarNfse-TINUS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCaboDeSantoAgostinhoPE-ConsultarLoteRps-TINUS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PCaboDeSantoAgostinhoPE-CancelarNfse-TINUS..wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4301701" Nome="Barão de Cotegipe - RS" UF="RS" Padrao="SYSTEMPRO">
@@ -7148,6 +7164,71 @@
       <ConsultarNfse>wsdl\producao\PDracenaSP-ISSONLINE.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PDracenaSP-ISSONLINE.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PDracenaSP-ISSONLINE.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5105606" Nome="Matupá - MT" UF="MT" Padrao="COPLAN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HMatupaMT-COPLAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HMatupaMT-COPLAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HMatupaMT-COPLAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HMatupaMT-COPLAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HMatupaMT-COPLAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Homologacao\HMatupaMT-COPLAN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PMatupaMT-COPLAN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PMatupaMT-COPLAN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PMatupaMT-COPLAN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PMatupaMT-COPLAN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PMatupaMT-COPLAN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Producao\PMatupaMT-COPLAN.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PMatupaMT-COPLAN.wsdl</ConsultaSequenciaLoteNotaRPS>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4204202" Nome="Chapecó - SC" UF="SC" Padrao="PUBLICA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HChapecoSC-PUBLICA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HChapecoSC-PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HChapecoSC-PUBLICA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HChapecoSC-PUBLICA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HChapecoSC-PUBLICA.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HChapecoSC-PUBLICA.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PChapecoSC-PUBLICA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PChapecoSC-PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PChapecoSC-PUBLICA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PChapecoSC-PUBLICA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PChapecoSC-PUBLICA.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PChapecoSC-PUBLICA.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3544004" Nome="Rio das Pedras - SP" UF="SP" Padrao="FIORILLI">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HRioPedrasSP-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HRioPedrasSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HRioPedrasSP-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HRioPedrasSP-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HRioPedrasSP-FIORILLI.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HRioPedrasSP-FIORILLI.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>Pato
+      <ConsultarNfsePorRps>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5217708" Nome="Pontalina - GO" UF="GO" Padrao="MEGASOFT">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HPontalinaGO-MEGASOFT.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HPontalinaGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PPontalinaGO-MEGASOFT.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPontalinaGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
     </LocalProducao>
   </Estado>
 </Webservice>
