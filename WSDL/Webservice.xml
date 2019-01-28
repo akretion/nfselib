@@ -1201,7 +1201,6 @@
       <ConsultarLoteRps>wsdl\homologacao\HSalvadorBAConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse></CancelarNfse>
-	  <ConsultarStatusNFse>wsdl\homologacao\HSalvadorBAConsultaSituacaoNfse.wsdl</ConsultarStatusNFse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PSalvadorBAEnvioLoteRPS.wsdl</RecepcionarLoteRps>
@@ -1211,7 +1210,6 @@
       <ConsultarLoteRps>wsdl\producao\PSalvadorBAConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse></CancelarNfse>
-  	<ConsultarStatusNFse>wsdl\producao\PSalvadorBAConsultaSituacaoNfse.wsdl</ConsultarStatusNFse>
     </LocalProducao>
   </Estado>
   <Estado ID="4304606" Nome="Canoas - RS" UF="RS" Padrao="CANOAS_RS">
@@ -6882,7 +6880,7 @@
       <ConsultarNfsePorRps>wsdl\producao\PCaboDeSantoAgostinhoPE-ConsultarNfsePorRps-TINUS.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PCaboDeSantoAgostinhoPE-ConsultarNfse-TINUS.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PCaboDeSantoAgostinhoPE-ConsultarLoteRps-TINUS.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\PCaboDeSantoAgostinhoPE-CancelarNfse-TINUS..wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PCaboDeSantoAgostinhoPE-CancelarNfse-TINUS.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4301701" Nome="Barão de Cotegipe - RS" UF="RS" Padrao="SYSTEMPRO">
@@ -7105,7 +7103,7 @@
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PFernandopolisSP-FIORILLI.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PFernandopolisSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>Pato
+      <ConsultarSituacaoLoteRps>wsdl\producao\PFernandopolisSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
       <ConsultarNfsePorRps>wsdl\producao\PFernandopolisSP-FIORILLI.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PFernandopolisSP-FIORILLI.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PFernandopolisSP-FIORILLI.wsdl</ConsultarLoteRps>
@@ -7218,7 +7216,7 @@
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>Pato
+      <ConsultarSituacaoLoteRps>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
       <ConsultarNfsePorRps>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PRioPedrasSP-FIORILLI.wsdl</ConsultarLoteRps>
@@ -7233,6 +7231,26 @@
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PPontalinaGO-MEGASOFT.wsdl</RecepcionarLoteRps>
       <ConsultarNfsePorRps>wsdl\producao\PPontalinaGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4207502" Nome="Indaial - SC" UF="SC" Padrao="IPM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
