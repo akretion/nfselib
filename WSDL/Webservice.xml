@@ -7283,4 +7283,84 @@
       <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="3522406" Nome="Itapeva - SP" UF="SP" Padrao="PRODATA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HItapevaSP-PRODATA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HItapevaSP-PRODATA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HItapevaSP-PRODATA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HItapevaSP-PRODATA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HItapevaSP-PRODATA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HItapevaSP-PRODATA.wsdl</CancelarNfse>
+      <ConsultarNFSePDF>wsdl\homologacao\HItapevaSP-PRODATA-NotapdfWSService.wsdl</ConsultarNFSePDF>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PItapevaSP-PRODATA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PItapevaSP-PRODATA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PItapevaSP-PRODATA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PItapevaSP-PRODATA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PItapevaSP-PRODATA.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PItapevaSP-PRODATA.wsdl</CancelarNfse>
+      <ConsultarNFSePDF>wsdl\producao\PItapevaSP-PRODATA-NotapdfWSService.wsdl</ConsultarNFSePDF>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3500501" Nome="Águas de Lindóia - SP" UF="SP" Padrao="FIORILLI">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HAguasDeLindoiaSP-Fiorilli.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PAguasDeLindoiaSP-Fiorilli.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3550605" Nome="São Roque - SP" UF="SP" Padrao="GOVDIGITAL">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HSaoRoqueSP-GOVDIGITAL.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PSaoRoqueSP-GOVDIGITAL.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4317608" Nome="Santo Antônio da Patrulha - RS" UF="RS" Padrao="THEMA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSantoAntonioPatrulha-NFSEremessa.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HSantoAntonioPatrulha-NFSEcancelamento.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSantoAntonioPatrulha-NFSEremessa.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PSantoAntonioPatrulha-NFSEcancelamento.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>
