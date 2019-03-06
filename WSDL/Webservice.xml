@@ -4501,7 +4501,7 @@
       <CancelarNfse>wsdl\producao\PMogiGuacu-SIGCORP.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="2919207" Nome="Lauro de Freitas - SP" UF="SP" Padrao="METROPOLIS">
+  <Estado ID="2919207" Nome="Lauro de Freitas - BA" UF="BA" Padrao="METROPOLIS">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HGovernadorLauroFreitas-METROPOLIS.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>wsdl\homologacao\HGovernadorLauroFreitas-METROPOLIS.wsdl</ConsultarSituacaoLoteRps>
@@ -7361,6 +7361,67 @@
       <ConsultarNfse>wsdl\producao\PSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PSantoAntonioPatrulha-NFSEconsulta.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PSantoAntonioPatrulha-NFSEcancelamento.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3303609" Nome="Paracambi - RJ" UF="RJ" Padrao="FINTEL">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</CancelarNfse>
+      <RecepcionarLoteCfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</RecepcionarLoteCfse>
+      <CancelarCfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</CancelarCfse>
+      <ConsultarLoteCfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</ConsultarLoteCfse>
+      <ConsultarCfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</ConsultarCfse>
+      <ConfigurarTerminalCfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</ConfigurarTerminalCfse>
+      <EnviarInformeManutencaoCfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</EnviarInformeManutencaoCfse>
+      <InformeTrasmissaoSemMovimentoCfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</InformeTrasmissaoSemMovimentoCfse>
+      <ConsultarDadosCadastroCfse>wsdl\homologacao\HParacambiRJ-FINTEL.wsdl</ConsultarDadosCadastroCfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PParacambiRJ-FINTEL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PParacambiRJ-FINTEL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PParacambiRJ-FINTEL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PParacambiRJ-FINTEL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</CancelarNfse>
+      <RecepcionarLoteCfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</RecepcionarLoteCfse>
+      <CancelarCfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</CancelarCfse>
+      <ConsultarLoteCfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</ConsultarLoteCfse>
+      <ConsultarCfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</ConsultarCfse>
+      <ConfigurarTerminalCfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</ConfigurarTerminalCfse>
+      <EnviarInformeManutencaoCfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</EnviarInformeManutencaoCfse>
+      <InformeTrasmissaoSemMovimentoCfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</InformeTrasmissaoSemMovimentoCfse>
+      <ConsultarDadosCadastroCfse>wsdl\producao\PParacambiRJ-FINTEL.wsdl</ConsultarDadosCadastroCfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3303906" Nome="Petrópolis - RJ" UF="RJ" Padrao="SIGCORP_SIGISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HPetropolisRJ-SIGCORP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HPetropolisRJ-SIGCORP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HPetropolisRJ-SIGCORP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HPetropolisRJ-SIGCORP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HPetropolisRJ-SIGCORP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HPetropolisRJ-SIGCORP.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PPetropolisRJ-SIGCORP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PPetropolisRJ-SIGCORP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPetropolisRJ-SIGCORP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPetropolisRJ-SIGCORP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PPetropolisRJ-SIGCORP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PPetropolisRJ-SIGCORP.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3523107" Nome="Itaquaquecetuba - SP" UF="SP" Padrao="SMARAPD">
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PItaquaquecetubaSP-WSEntrada.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PItaquaquecetubaSP-WSEntrada.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfse>WSDL\Producao\PItaquaquecetubaSP-WSSaida.wsdl</ConsultarNfse>
+      <ConsultarURLNfse>WSDL\Producao\PItaquaquecetubaSP-WSUtil.wsdl</ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PItaquaquecetubaSP-WSEntrada.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
