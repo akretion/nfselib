@@ -7424,4 +7424,22 @@
       <CancelarNfse>WSDL\Producao\PItaquaquecetubaSP-WSEntrada.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="4305207" Nome="Cerro Largo-RS" UF="RS" Padrao="ABASE">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\habase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\habase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\habase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\habase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\habase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\habase.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pabase.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pabase.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pabase.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>
