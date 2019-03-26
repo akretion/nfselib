@@ -6987,6 +6987,7 @@
       <ConsultarLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</CancelarNfse>
+      <ConsultaNFSeTomados>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultaNFSeTomados>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</RecepcionarLoteRps>
@@ -6996,6 +6997,7 @@
       <ConsultarLoteRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</CancelarNfse>
+      <ConsultaNFSeTomados>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultaNFSeTomados>
     </LocalProducao>
   </Estado>
   <Estado ID="3157005" Nome="Salinas - MG" UF="MG" Padrao="MEMORY">
