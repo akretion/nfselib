@@ -2189,24 +2189,28 @@
       <CancelarNfse>WSDL\Producao\PTaquaritubaSP-Fiorilli.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3504503" Nome="Avaré - SP" UF="SP" Padrao="FIORILLI">
+  <Estado ID="3504503" Nome="Avaré - SP" UF="SP" Padrao="SIGCORP_SIGISS_203">
     <LocalHomologacao>
-      <RecepcionarLoteRps>WSDL\Homologacao\HAvareSP-FIORILLI.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HAvareSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Homologacao\HAvareSP-FIORILLI.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Homologacao\HAvareSP-FIORILLI.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Homologacao\HAvareSP-FIORILLI.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HAvareSP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HAvareSP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HAvareSP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HAvareSP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HAvareSP.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Homologacao\HAvareSP-FIORILLI.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HAvareSP.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\HAvareSP.wsdl</SubstituirNfse>
+      <ConsultaNFSeTomados>wsdl\homologacao\HAvareSP.wsdl</ConsultaNFSeTomados>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PAvareSP-FIORILLI.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PAvareSP-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Producao\PAvareSP-FIORILLI.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PAvareSP-FIORILLI.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Producao\PAvareSP-FIORILLI.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PAvareSP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PAvareSP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PAvareSP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PAvareSP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PAvareSP.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PAvareSP-FIORILLI.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PAvareSP.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\producao\PAvareSP.wsdl</SubstituirNfse>
+      <ConsultaNFSeTomados>wsdl\producao\PAvareSP.wsdl</ConsultaNFSeTomados>
     </LocalProducao>
   </Estado>
   <Estado ID="3524501" Nome="Jaci - SP" UF="SP" Padrao="FIORILLI">
@@ -6485,13 +6489,12 @@
   </Estado>
   <Estado ID="3535507" Nome="Paraguaçu Paulista - SP" UF="SP" Padrao="SIMPLISS">
     <LocalHomologacao>
-      <RecepcionarLoteRps>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Homologacao\HArarasSP-SIMPLISS.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>WSDL\Homologacao\HParaguacuPaulistaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HParaguacuPaulistaSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HParaguacuPaulistaSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HParaguacuPaulistaSP-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HParaguacuPaulistaSP-SIMPLISS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Homologacao\HParaguacuPaulistaSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>WSDL\Producao\PParaguacuPaulistaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
@@ -6499,7 +6502,6 @@
       <ConsultarNfsePorRps>WSDL\Producao\PParaguacuPaulistaSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
       <ConsultarNfse>WSDL\Producao\PParaguacuPaulistaSP-SIMPLISS.wsdl</ConsultarNfse>
       <ConsultarLoteRps>WSDL\Producao\PParaguacuPaulistaSP-SIMPLISS.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PParaguacuPaulistaSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
@@ -7442,6 +7444,60 @@
       <ConsultarNfse>wsdl\producao\pabase.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\pabase.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\pabase.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3143104" Nome="Monte Carmelo - MG" UF="MG" Padrao="SIMPLISS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HMonteCarmeloMG-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HMonteCarmeloMG-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HMonteCarmeloMG-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HMonteCarmeloMG-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HMonteCarmeloMG-SIMPLISS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Homologacao\HMonteCarmeloMG-SIMPLISS.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PMonteCarmeloMG-SIMPLISS.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PMonteCarmeloMG-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PMonteCarmeloMG-SIMPLISS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PMonteCarmeloMG-SIMPLISS.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PMonteCarmeloMG-SIMPLISS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Producao\PMonteCarmeloMG-SIMPLISS.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4117800" Nome="Palmital - PR" UF="PR" Padrao="EQUIPLANO">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HEQUIPLANO.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HEQUIPLANO.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HEQUIPLANO.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HEQUIPLANO.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HEQUIPLANO.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HEQUIPLANO.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PEQUIPLANO.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PEQUIPLANO.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PEQUIPLANO.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PEQUIPLANO.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PEQUIPLANO.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PEQUIPLANO.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3141108" Nome="Matozinhos - MG" UF="MG" Padrao="MEMORY">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HMemory.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HMemory.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HMemory.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HMemory.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HMemory.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HMemory.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PMemory.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PMemory.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PMemory.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PMemory.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PMemory.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PMemory.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
