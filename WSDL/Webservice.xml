@@ -1985,24 +1985,26 @@
       <CancelarNfse>WSDL\Producao\PCampoGrandeMS-DSF-LoteRps.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3551702" Nome="Sertãozinho - SP" UF="SP" Padrao="SMARAPD">
+  <Estado ID="3551702" Nome="Sertãozinho - SP" UF="SP" Padrao="SMARAPD_204">
     <LocalHomologacao>
-      <RecepcionarLoteRps></RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse></ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse></CancelarNfse>
+      <RecepcionarLoteRps>WSDL\Homologacao\HSertaozinhoSP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HSertaozinhoSP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HSertaozinhoSP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HSertaozinhoSP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HSertaozinhoSP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Homologacao\HSertaozinhoSP.wsdl</CancelarNfse>
+      <SubstituirNfse>WSDL\Homologacao\HSertaozinhoSP.wsdl</SubstituirNfse>
+    <ConsultaNFSeTomados>WSDL\Homologacao\HSertaozinhoSP.wsdl</ConsultaNFSeTomados>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PSertaozinhoSP-SmaraPDWSEntrada.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PSertaozinhoSP-SmaraPDWSEntrada.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PSertaozinhoSP-SmaraPDPWSSaida.wsdl</ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse>WSDL\Producao\PSertaozinhoSP-SmaraPDPWSUtil.wsdl</ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PSertaozinhoSP-SmaraPDWSEntrada.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>WSDL\Producao\PSertaozinhoSP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PSertaozinhoSP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PSertaozinhoSP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PSertaozinhoSP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PSertaozinhoSP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Producao\PSertaozinhoSP.wsdl</CancelarNfse>
+      <SubstituirNfse>WSDL\Producao\PSertaozinhoSP.wsdl</SubstituirNfse>
+    <ConsultaNFSeTomados>WSDL\Producao\PSertaozinhoSP.wsdl</ConsultaNFSeTomados>
     </LocalProducao>
   </Estado>
   <Estado ID="3506003" Nome="Bauru - SP" UF="SP" Padrao="BAURU_SP">
@@ -7500,4 +7502,23 @@
       <CancelarNfse>wsdl\producao\PMemory.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="5005707" Nome="Naviraí - MS" UF="MS" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HNaviraiMS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HNaviraiMS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HNaviraiMS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HNaviraiMS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HNaviraiMS-PRONIN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HNaviraiMS-PRONIN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PNaviraiMS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PNaviraiMS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PNaviraiMS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PNaviraiMS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PNaviraiMS-PRONIN.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PNaviraiMS-PRONIN.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+
 </Webservice>
