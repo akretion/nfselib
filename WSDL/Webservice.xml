@@ -7520,5 +7520,24 @@
       <CancelarNfse>wsdl\producao\PNaviraiMS-PRONIN.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-
+  <Estado ID="2931350" Nome="Teixeira de Freitas - BA" UF="BA" Padrao="EL">
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PTeixeiraDeFreitasBA-EL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PTeixeiraDeFreitasBA-EL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PTeixeiraDeFreitasBA-EL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PTeixeiraDeFreitasBA-EL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PTeixeiraDeFreitasBA-EL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PTeixeiraDeFreitasBA-EL.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+<Estado ID="3205101" Nome="Viana - ES" UF="ES" Padrao="EL">
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVianaES-EL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVianaES-EL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVianaES-EL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVianaES-EL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVianaES-EL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVianaES-EL.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>
