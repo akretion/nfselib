@@ -172,7 +172,7 @@
   </wsdl:binding>
   <wsdl:service name="NfseWSServiceV1">
     <wsdl:port name="nfseSOAP" binding="ws:nfseSOAP">
-      <soap:address location="https://wsnfsev1homologacao.natal.rn.gov.br:8443/axis2/services/NfseWSServiceV1/"/>
+      <soap:address location="https://wsnfsev1homologacao.natal.rn.gov.br:8443/axis2/services/NfseWSServiceV1"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

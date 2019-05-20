@@ -135,7 +135,7 @@
       <soap:address location="http://portal.picadacafe.rs.gov.br:8585/NFSEWSTESTE/Services.svc" />
     </wsdl:port>
     <wsdl:port name="basic_INFSEGeracao" binding="tns:basic_INFSEGeracao">
-      <soap:address location="http://portal.picadacafe.rs.gov.br:8585/NFSEWSTESTE/Services.svc" />
-    </wsdl:port>
+      <soap:address location="http://portal.picadacafe.rs.gov.br:8383/NFSe.Portal.Integracao.teste/Services.svc?wsdl" /> 
+  </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

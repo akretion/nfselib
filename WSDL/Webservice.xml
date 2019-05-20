@@ -1372,6 +1372,26 @@
       <CancelarNfse>wsdl\producao\PJuizdeForaMG.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="3167202" Nome="Sete Lagoas - MG" UF="MG" Padrao="PORTALFACIL_ACTCON_202">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSeteLagoasMG.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSeteLagoasMG.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSeteLagoasMG.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSeteLagoasMG.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSeteLagoasMG.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HSeteLagoasMG.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSeteLagoasMG.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSeteLagoasMG.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSeteLagoasMG.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSeteLagoasMG.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSeteLagoasMG.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PSeteLagoasMG.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
   <Estado ID="4314050" Nome="Parobé - RS" UF="RS" Padrao="GIF">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HParobeRSGIFServicos.wsdl</RecepcionarLoteRps>
@@ -1994,7 +2014,7 @@
       <ConsultarLoteRps>WSDL\Homologacao\HSertaozinhoSP.wsdl</ConsultarLoteRps>
       <CancelarNfse>WSDL\Homologacao\HSertaozinhoSP.wsdl</CancelarNfse>
       <SubstituirNfse>WSDL\Homologacao\HSertaozinhoSP.wsdl</SubstituirNfse>
-    <ConsultaNFSeTomados>WSDL\Homologacao\HSertaozinhoSP.wsdl</ConsultaNFSeTomados>
+      <ConsultaNFSeTomados>WSDL\Homologacao\HSertaozinhoSP.wsdl</ConsultaNFSeTomados>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>WSDL\Producao\PSertaozinhoSP.wsdl</RecepcionarLoteRps>
@@ -2004,7 +2024,7 @@
       <ConsultarLoteRps>WSDL\Producao\PSertaozinhoSP.wsdl</ConsultarLoteRps>
       <CancelarNfse>WSDL\Producao\PSertaozinhoSP.wsdl</CancelarNfse>
       <SubstituirNfse>WSDL\Producao\PSertaozinhoSP.wsdl</SubstituirNfse>
-    <ConsultaNFSeTomados>WSDL\Producao\PSertaozinhoSP.wsdl</ConsultaNFSeTomados>
+      <ConsultaNFSeTomados>WSDL\Producao\PSertaozinhoSP.wsdl</ConsultaNFSeTomados>
     </LocalProducao>
   </Estado>
   <Estado ID="3506003" Nome="Bauru - SP" UF="SP" Padrao="BAURU_SP">
@@ -7530,7 +7550,7 @@
       <CancelarNfse>wsdl\producao\PTeixeiraDeFreitasBA-EL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-<Estado ID="3205101" Nome="Viana - ES" UF="ES" Padrao="EL">
+  <Estado ID="3205101" Nome="Viana - ES" UF="ES" Padrao="EL">
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PVianaES-EL.wsdl</RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps>wsdl\producao\PVianaES-EL.wsdl</ConsultarSituacaoLoteRps>
@@ -7538,6 +7558,22 @@
       <ConsultarNfse>wsdl\producao\PVianaES-EL.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PVianaES-EL.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PVianaES-EL.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3202405" Nome="Guarapari - ES" UF="ES" Padrao="SMARAPD">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HGuarapariES-SMARAPDWSEntrada.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HGuarapariES-SMARAPDWSEntrada.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfse>WSDL\Homologacao\HGuarapariES-SMARAPDWSSaida.wsdl</ConsultarNfse>
+      <ConsultarURLNfse>WSDL\Homologacao\HGuarapariES-SMARAPDWSUtil.wsdl</ConsultarURLNfse>
+      <CancelarNfse>WSDL\Homologacao\HGuarapariES-SMARAPDWSEntrada.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PGuarapariES-SMARAPDWSEntrada.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PGuarapariES-SMARAPDWSEntrada.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfse>WSDL\Producao\PGuarapariES-SMARAPDWSSaida.wsdl</ConsultarNfse>
+      <ConsultarURLNfse>WSDL\Producao\PGuarapariES-SMARAPDWSUtil.wsdl</ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PGuarapariES-SMARAPDWSEntrada.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
