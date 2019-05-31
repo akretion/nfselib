@@ -1201,6 +1201,7 @@
       <ConsultarLoteRps>wsdl\homologacao\HSalvadorBAConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse></CancelarNfse>
+	  <ConsultarStatusNFse>wsdl\homologacao\HSalvadorBAConsultaSituacaoNfse.wsdl</ConsultarStatusNFse>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PSalvadorBAEnvioLoteRPS.wsdl</RecepcionarLoteRps>
@@ -1210,6 +1211,7 @@
       <ConsultarLoteRps>wsdl\producao\PSalvadorBAConsultaLoteRPS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse></CancelarNfse>
+  	  <ConsultarStatusNFse>wsdl\producao\PSalvadorBAConsultaSituacaoNfse.wsdl</ConsultarStatusNFse>
     </LocalProducao>
   </Estado>
   <Estado ID="4304606" Nome="Canoas - RS" UF="RS" Padrao="CANOAS_RS">
@@ -7574,6 +7576,26 @@
       <ConsultarNfse>WSDL\Producao\PGuarapariES-SMARAPDWSSaida.wsdl</ConsultarNfse>
       <ConsultarURLNfse>WSDL\Producao\PGuarapariES-SMARAPDWSUtil.wsdl</ConsultarURLNfse>
       <CancelarNfse>WSDL\Producao\PGuarapariES-SMARAPDWSEntrada.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3502101" Nome="Andradina - SP" UF="SP" Padrao="ISSONLINE4R">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HAndradinaSP-recepcionarloterpssincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HAndradinaSP-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HAndradinaSP-cancelarnfse.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PAndradinaSP-recepcionarloterpssincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PAndradinaSP-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PAndradinaSP-cancelarnfse.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
