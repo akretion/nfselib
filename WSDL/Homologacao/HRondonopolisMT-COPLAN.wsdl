@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions name="nfse_web_service" targetNamespace="Tributario" xmlns:wsdlns="Tributario" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="Tributario">
+	<types>
+		<schema targetNamespace="Tributario" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+			<complexType name="input">
+				<sequence>
+					<element name="nfseCabecMsg" type="xsd:string">
+					</element>
+					<element name="nfseDadosMsg" type="xsd:string">
+					</element>
+				</sequence>
+			</complexType>
+			<complexType name="output">
+				<sequence>
+					<element name="outputXML" type="xsd:string">
+					</element>
+				</sequence>
+			</complexType>
+			<element name="nfse_web_service.RECEPCIONARLOTERPS">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Recepcionarloterpsrequest" type="tns:input"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.RECEPCIONARLOTERPSResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Recepcionarloterpsresponse" type="tns:output"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.GERARNFSE">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Gerarnfserequest" type="tns:input"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.GERARNFSEResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Gerarnfseresponse" type="tns:output"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.RECEPCIONARLOTERPSSINCRONO">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Recepcionarloterpssincronorequest" type="tns:input"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.RECEPCIONARLOTERPSSINCRONOResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Recepcionarloterpssincronoresponse" type="tns:output"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CANCELARNFSE">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Cancelarnfserequest" type="tns:input"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CANCELARNFSEResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Cancelarnfseresponse" type="tns:output"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CONSULTARLOTERPS">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarloterpsrequest" type="tns:input"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CONSULTARLOTERPSResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarloterpsresponse" type="tns:output"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CONSULTARNFSEFAIXA">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseporfaixarequest" type="tns:input"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CONSULTARNFSEFAIXAResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseporfaixaresponse" type="tns:output"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CONSULTARNFSEPORRPS">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseporrpsrequest" type="tns:input"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CONSULTARNFSEPORRPSResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseporrpsresponse" type="tns:output"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CONSULTARNFSESERVICOPRESTADO">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseservicoprestadorequest" type="tns:input"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.CONSULTARNFSESERVICOPRESTADOResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseservicoprestadoresponse" type="tns:output"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.SUBSTITUIRNFSE">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Substituirnfserequest" type="tns:input"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="nfse_web_service.SUBSTITUIRNFSEResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Substituirnfseresponse" type="tns:output"/>
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+	<message name="nfse_web_service.RECEPCIONARLOTERPSSoapIn">
+		<part name="parameters" element="tns:nfse_web_service.RECEPCIONARLOTERPS"/>
+	</message>
+	<message name="nfse_web_service.RECEPCIONARLOTERPSSoapOut">
+		<part name="parameters" element="tns:nfse_web_service.RECEPCIONARLOTERPSResponse"/>
+	</message>
+	<message name="nfse_web_service.GERARNFSESoapIn">
+		<part name="parameters" element="tns:nfse_web_service.GERARNFSE"/>
+	</message>
+	<message name="nfse_web_service.GERARNFSESoapOut">
+		<part name="parameters" element="tns:nfse_web_service.GERARNFSEResponse"/>
+	</message>
+	<message name="nfse_web_service.RECEPCIONARLOTERPSSINCRONOSoapIn">
+		<part name="parameters" element="tns:nfse_web_service.RECEPCIONARLOTERPSSINCRONO"/>
+	</message>
+	<message name="nfse_web_service.RECEPCIONARLOTERPSSINCRONOSoapOut">
+		<part name="parameters" element="tns:nfse_web_service.RECEPCIONARLOTERPSSINCRONOResponse"/>
+	</message>
+	<message name="nfse_web_service.CANCELARNFSESoapIn">
+		<part name="parameters" element="tns:nfse_web_service.CANCELARNFSE"/>
+	</message>
+	<message name="nfse_web_service.CANCELARNFSESoapOut">
+		<part name="parameters" element="tns:nfse_web_service.CANCELARNFSEResponse"/>
+	</message>
+	<message name="nfse_web_service.CONSULTARLOTERPSSoapIn">
+		<part name="parameters" element="tns:nfse_web_service.CONSULTARLOTERPS"/>
+	</message>
+	<message name="nfse_web_service.CONSULTARLOTERPSSoapOut">
+		<part name="parameters" element="tns:nfse_web_service.CONSULTARLOTERPSResponse"/>
+	</message>
+	<message name="nfse_web_service.CONSULTARNFSEFAIXASoapIn">
+		<part name="parameters" element="tns:nfse_web_service.CONSULTARNFSEFAIXA"/>
+	</message>
+	<message name="nfse_web_service.CONSULTARNFSEFAIXASoapOut">
+		<part name="parameters" element="tns:nfse_web_service.CONSULTARNFSEFAIXAResponse"/>
+	</message>
+	<message name="nfse_web_service.CONSULTARNFSEPORRPSSoapIn">
+		<part name="parameters" element="tns:nfse_web_service.CONSULTARNFSEPORRPS"/>
+	</message>
+	<message name="nfse_web_service.CONSULTARNFSEPORRPSSoapOut">
+		<part name="parameters" element="tns:nfse_web_service.CONSULTARNFSEPORRPSResponse"/>
+	</message>
+	<message name="nfse_web_service.CONSULTARNFSESERVICOPRESTADOSoapIn">
+		<part name="parameters" element="tns:nfse_web_service.CONSULTARNFSESERVICOPRESTADO"/>
+	</message>
+	<message name="nfse_web_service.CONSULTARNFSESERVICOPRESTADOSoapOut">
+		<part name="parameters" element="tns:nfse_web_service.CONSULTARNFSESERVICOPRESTADOResponse"/>
+	</message>
+	<message name="nfse_web_service.SUBSTITUIRNFSESoapIn">
+		<part name="parameters" element="tns:nfse_web_service.SUBSTITUIRNFSE"/>
+	</message>
+	<message name="nfse_web_service.SUBSTITUIRNFSESoapOut">
+		<part name="parameters" element="tns:nfse_web_service.SUBSTITUIRNFSEResponse"/>
+	</message>
+	<portType name="nfse_web_serviceSoapPort">
+		<operation name="RECEPCIONARLOTERPS">
+			<input message="wsdlns:nfse_web_service.RECEPCIONARLOTERPSSoapIn"/>
+			<output message="wsdlns:nfse_web_service.RECEPCIONARLOTERPSSoapOut"/>
+		</operation>
+		<operation name="GERARNFSE">
+			<input message="wsdlns:nfse_web_service.GERARNFSESoapIn"/>
+			<output message="wsdlns:nfse_web_service.GERARNFSESoapOut"/>
+		</operation>
+		<operation name="RECEPCIONARLOTERPSSINCRONO">
+			<input message="wsdlns:nfse_web_service.RECEPCIONARLOTERPSSINCRONOSoapIn"/>
+			<output message="wsdlns:nfse_web_service.RECEPCIONARLOTERPSSINCRONOSoapOut"/>
+		</operation>
+		<operation name="CANCELARNFSE">
+			<input message="wsdlns:nfse_web_service.CANCELARNFSESoapIn"/>
+			<output message="wsdlns:nfse_web_service.CANCELARNFSESoapOut"/>
+		</operation>
+		<operation name="CONSULTARLOTERPS">
+			<input message="wsdlns:nfse_web_service.CONSULTARLOTERPSSoapIn"/>
+			<output message="wsdlns:nfse_web_service.CONSULTARLOTERPSSoapOut"/>
+		</operation>
+		<operation name="CONSULTARNFSEFAIXA">
+			<input message="wsdlns:nfse_web_service.CONSULTARNFSEFAIXASoapIn"/>
+			<output message="wsdlns:nfse_web_service.CONSULTARNFSEFAIXASoapOut"/>
+		</operation>
+		<operation name="CONSULTARNFSEPORRPS">
+			<input message="wsdlns:nfse_web_service.CONSULTARNFSEPORRPSSoapIn"/>
+			<output message="wsdlns:nfse_web_service.CONSULTARNFSEPORRPSSoapOut"/>
+		</operation>
+		<operation name="CONSULTARNFSESERVICOPRESTADO">
+			<input message="wsdlns:nfse_web_service.CONSULTARNFSESERVICOPRESTADOSoapIn"/>
+			<output message="wsdlns:nfse_web_service.CONSULTARNFSESERVICOPRESTADOSoapOut"/>
+		</operation>
+		<operation name="SUBSTITUIRNFSE">
+			<input message="wsdlns:nfse_web_service.SUBSTITUIRNFSESoapIn"/>
+			<output message="wsdlns:nfse_web_service.SUBSTITUIRNFSESoapOut"/>
+		</operation>
+	</portType>
+	<binding name="nfse_web_serviceSoapBinding" type="wsdlns:nfse_web_serviceSoapPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="RECEPCIONARLOTERPS">
+			<soap:operation soapAction="Tributarioaction/ANFSE_WEB_SERVICE.RECEPCIONARLOTERPS"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GERARNFSE">
+			<soap:operation soapAction="Tributarioaction/ANFSE_WEB_SERVICE.GERARNFSE"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="RECEPCIONARLOTERPSSINCRONO">
+			<soap:operation soapAction="Tributarioaction/ANFSE_WEB_SERVICE.RECEPCIONARLOTERPSSINCRONO"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CANCELARNFSE">
+			<soap:operation soapAction="Tributarioaction/ANFSE_WEB_SERVICE.CANCELARNFSE"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CONSULTARLOTERPS">
+			<soap:operation soapAction="Tributarioaction/ANFSE_WEB_SERVICE.CONSULTARLOTERPS"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CONSULTARNFSEFAIXA">
+			<soap:operation soapAction="Tributarioaction/ANFSE_WEB_SERVICE.CONSULTARNFSEFAIXA"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CONSULTARNFSEPORRPS">
+			<soap:operation soapAction="Tributarioaction/ANFSE_WEB_SERVICE.CONSULTARNFSEPORRPS"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CONSULTARNFSESERVICOPRESTADO">
+			<soap:operation soapAction="Tributarioaction/ANFSE_WEB_SERVICE.CONSULTARNFSESERVICOPRESTADO"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SUBSTITUIRNFSE">
+			<soap:operation soapAction="Tributarioaction/ANFSE_WEB_SERVICE.SUBSTITUIRNFSE"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="nfse_web_service">
+		<port name="nfse_web_serviceSoapPort" binding="wsdlns:nfse_web_serviceSoapBinding">
+			<soap:address location="https://www.gp.srv.br/tributario_homologacao/servlet/anfse_web_service"/>
+		</port>
+	</service>
+</definitions>
