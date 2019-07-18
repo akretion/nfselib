@@ -1,0 +1,50 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<definitions name="hCancelarNfse" targetNamespace="Abrasf2" xmlns:wsdlns="Abrasf2" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="Abrasf2">
+	<types>
+		<schema targetNamespace="Abrasf2" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+			<element name="hCancelarNfse.Execute">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Entrada" type="xsd:string" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="hCancelarNfse.ExecuteResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Resposta" type="xsd:string" />
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+	<message name="hCancelarNfse.ExecuteSoapIn">
+		<part name="parameters" element="tns:hCancelarNfse.Execute" />
+	</message>
+	<message name="hCancelarNfse.ExecuteSoapOut">
+		<part name="parameters" element="tns:hCancelarNfse.ExecuteResponse" />
+	</message>
+	<portType name="hCancelarNfseSoapPort">
+		<operation name="Execute">
+			<input message="wsdlns:hCancelarNfse.ExecuteSoapIn" />
+			<output message="wsdlns:hCancelarNfse.ExecuteSoapOut" />
+		</operation>
+	</portType>
+	<binding name="hCancelarNfseSoapBinding" type="wsdlns:hCancelarNfseSoapPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="Execute">
+			<soap:operation soapAction="Abrasf2action/AHCANCELARNFSE.Execute" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	<service name="hCancelarNfse">
+		<port name="hCancelarNfseSoapPort" binding="wsdlns:hCancelarNfseSoapBinding">
+			<soap:address location="http://itapetininga.sistemas4r.com.br/abrasf/ahcancelarnfse.aspx" />
+		</port>
+	</service>
+</definitions>

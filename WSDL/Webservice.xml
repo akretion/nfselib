@@ -5198,6 +5198,26 @@
       <CancelarNfse>wsdl\producao\PBoituvaSP-cancelarnfse.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="3522307" Nome="Itapetininga - SP" UF="SP" Padrao="ISSONLINE4R">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HItapetiningaSP-recepcionarloterpssincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HItapetiningaSP-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HItapetiningaSP-cancelarnfse.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PItapetiningaSP-recepcionarloterpssincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PItapetiningaSP-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PItapetiningaSP-cancelarnfse.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
   <Estado ID="4309605" Nome="Horizontina - RS" UF="RS" Padrao="PRONIN">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HHorizontinaRS-PRONIN.wsdl</RecepcionarLoteRps>
@@ -7698,5 +7718,44 @@
       <CancelarNfse>wsdl\producao\PRondonopolisMT-COPLAN.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-
+<Estado ID="2105302" Nome="Imperatriz - MA" UF="MA" Padrao="D2TI">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PImperatrizMA-RecepcaoNFSe.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PImperatrizMA-CancelamentoNFSe.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+<Estado ID="3162922" Nome="São Joaquim de Bicas - MG" UF="MG" Padrao="GOVDIGITAL">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSjbicas-GovDigital.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSjbicas-GovDigital.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSjbicas-GovDigital.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSjbicas-GovDigital.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSjbicas-GovDigital.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HSjbicas-GovDigital.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSjbicas-GovDigital.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\PSjbicas-GovDigital.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PSjbicas-GovDigital.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>

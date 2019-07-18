@@ -223,7 +223,7 @@
     </wsdl:binding>
     <wsdl:service name="NFSEconsulta">
         <wsdl:port name="NFSEconsultaHttpSoap11Endpoint" binding="ns:NFSEconsultaSoap11Binding">
-            <soap:address location="http://nfse.pmpf.rs.gov.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpSoap11Endpoint/"/>
+            <soap:address location="https://nfse.pmpf.rs.gov.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpSoap11Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEconsultaHttpsSoap11Endpoint" binding="ns:NFSEconsultaSoap11Binding">
             <soap:address location="https://nfse.pmpf.rs.gov.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpsSoap11Endpoint/"/>
@@ -232,13 +232,13 @@
             <soap12:address location="https://nfse.pmpf.rs.gov.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpsSoap12Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEconsultaHttpSoap12Endpoint" binding="ns:NFSEconsultaSoap12Binding">
-            <soap12:address location="http://nfse.pmpf.rs.gov.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpSoap12Endpoint/"/>
+            <soap12:address location="https://nfse.pmpf.rs.gov.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpSoap12Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEconsultaHttpsEndpoint" binding="ns:NFSEconsultaHttpBinding">
             <http:address location="https://nfse.pmpf.rs.gov.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpsEndpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEconsultaHttpEndpoint" binding="ns:NFSEconsultaHttpBinding">
-            <http:address location="http://nfse.pmpf.rs.gov.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpEndpoint/"/>
+            <http:address location="https://nfse.pmpf.rs.gov.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpEndpoint/"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

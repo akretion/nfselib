@@ -322,7 +322,7 @@
 	</binding>
 	<service name="nfse_web_service">
 		<port name="nfse_web_serviceSoapPort" binding="wsdlns:nfse_web_serviceSoapBinding">
-			<soap:address location="https://intranet.rondonopolis.mt.gov.br/tributario_rondonopolis/servlet/anfse_web_service"/>
+			<soap:address location="http://intranet.rondonopolis.mt.gov.br/tributario_rondonopolis/servlet/anfse_web_service"/>
 		</port>
 	</service>
 </definitions>

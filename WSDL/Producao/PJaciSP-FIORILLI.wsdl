@@ -1176,7 +1176,7 @@
   </wsdl:binding>
   <wsdl:service name="IssWebWS">
     <wsdl:port binding="tns:IssWebWSSoapBinding" name="IssWebWSPort">
-      <soap:address location="http://200.95.195.126:8080/IssWeb-ejb/IssWebWS/IssWebWS"/>
+      <soap:address location="http://200.95.195.126:5661/IssWeb-ejb/IssWebWS/IssWebWS"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

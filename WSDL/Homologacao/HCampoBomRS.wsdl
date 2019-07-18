@@ -387,7 +387,7 @@
 </binding>
  <service name='ServicosService'>
   <port binding='tns:ServicosBinding' name='ServicosPort'>
-   <soap:address location='http://homol.campobom.infisc.com.br/portal/Servicos'/>
-</port>
+   <soap:address location='https://campobom-homol.infisc.com.br/portal/Servicos'/>                           
+  </port>
 </service>
 </definitions>
