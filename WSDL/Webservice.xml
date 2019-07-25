@@ -5947,22 +5947,22 @@
       <CancelarNfse>wsdl\producao\PPotirendabaSP-FIORILLI.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3530805" Nome="Mogi Mirim - SP" UF="SP" Padrao="FISSLEX">
+  <Estado ID="3530805" Nome="Mogi Mirim - SP" UF="SP" Padrao="SIGCORP_SIGISS_203">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HFISSLEXrecepcionarloterps.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HFISSLEXconsultarsituacaoloterps.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HFISSLEXconsultanfseporrps.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HFISSLEXconsultanfse.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HFISSLEXconsultaloterps.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\HFISSLEXcancelarnfse.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PMogiMirimSPrecepcionarloterps-FISSLEX.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PMogiMirimSPconsultarsituacaoloterps-FISSLEX.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PMogiMirimSPconsultanfseporrps-FISSLEX.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PMogiMirimSPconsultanfse-FISSLEX.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PMogiMirimSPconsultaloterps-FISSLEX.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\PMogiMirimSPcancelarnfse-FISSLEX.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="1302603" Nome="Manaus - AM" UF="AM" Padrao="MANAUS_AM">
