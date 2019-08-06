@@ -7758,4 +7758,24 @@
       <CancelarNfse>wsdl\producao\PSjbicas-GovDigital.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+  <Estado ID="4304705" Nome="Carazinho - RS" UF="RS" Padrao="DBSELLER">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCarazinhoRS-DBSELLER.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCarazinhoRS-DBSELLER.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCarazinhoRS-DBSELLER.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCarazinhoRS-DBSELLER.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCarazinhoRS-DBSELLER.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HCarazinhoRS-DBSELLER.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCarazinhoRS-DBSELLER.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCarazinhoRS-DBSELLER.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCarazinhoRS-DBSELLER.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCarazinhoRS-DBSELLER.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCarazinhoRS-DBSELLER.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PCarazinhoRS-DBSELLER.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>
