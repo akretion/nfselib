@@ -3908,32 +3908,26 @@
       <LMCAutorizacao></LMCAutorizacao>
     </LocalProducao>
   </Estado>
-  <Estado ID="3526902" Nome="Limeira - SP" UF="SP" Padrao="CONAM">
+  <Estado ID="3526902" Nome="Limeira - SP" UF="SP" Padrao="IIBRASIL">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <ConsultarNFSePNG></ConsultarNFSePNG>
-      <ConsultarNFSePDF></ConsultarNFSePDF>
-      <InutilizarNFSe></InutilizarNFSe>
-      <LMCAutorizacao></LMCAutorizacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</SubstituirNfse>
+      <ConsultarNfseServicoTomado>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</ConsultarNfseServicoTomado>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <ConsultarNFSePNG></ConsultarNFSePNG>
-      <ConsultarNFSePDF></ConsultarNFSePDF>
-      <InutilizarNFSe></InutilizarNFSe>
-      <LMCAutorizacao></LMCAutorizacao>
+      <RecepcionarLoteRps>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PLimeiraSP-IIBrasil.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\PLimeiraSP-IIBrasil.wsdl</SubstituirNfse>
+      <ConsultarNfseServicoTomado>wsdl\homologacao\HLimeiraSP-IIBrasil.wsdl</ConsultarNfseServicoTomado>
     </LocalProducao>
   </Estado>
   <Estado ID="3554102" Nome="Taubaté - SP" UF="SP" Padrao="CONAM">
@@ -5955,6 +5949,8 @@
       <ConsultarNfse>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</SubstituirNfse>
+      <ConsultaNFSeTomados>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultaNFSeTomados>
     </LocalHomologacao>
     <LocalProducao>
       <RecepcionarLoteRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</RecepcionarLoteRps>
@@ -5963,6 +5959,8 @@
       <ConsultarNfse>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfse>
       <ConsultarLoteRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</SubstituirNfse>
+      <ConsultaNFSeTomados>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultaNFSeTomados>
     </LocalProducao>
   </Estado>
   <Estado ID="1302603" Nome="Manaus - AM" UF="AM" Padrao="MANAUS_AM">
@@ -7776,6 +7774,24 @@
       <ConsultarLoteRps>wsdl\producao\PCarazinhoRS-DBSELLER.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PCarazinhoRS-DBSELLER.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4317103" Nome="Santana do Livramento - RS" UF="RS" Padrao="DBSELLER">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSantanaLivramentoRS-DBSELLER.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSantanaLivramentoRS-DBSELLER.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSantanaLivramentoRS-DBSELLER.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSantanaLivramentoRS-DBSELLER.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSantanaLivramentoRS-DBSELLER.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HSantanaLivramentoRS-DBSELLER.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSantanaLivramentoRS-DBSELLER.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSantanaLivramentoRS-DBSELLER.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSantanaLivramentoRS-DBSELLER.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSantanaLivramentoRS-DBSELLER.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSantanaLivramentoRS-DBSELLER.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PSantanaLivramentoRS-DBSELLER.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>
