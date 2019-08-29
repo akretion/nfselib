@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://nfemwshomologacao.joinville.sc.gov.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="https://nfemwshomologacao.joinville.sc.gov.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://nfemws.joinville.sc.gov.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="https://nfemws.joinville.sc.gov.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="https://nfemwshomologacao.joinville.sc.gov.br">
+    <s:schema elementFormDefault="qualified" targetNamespace="https://nfemws.joinville.sc.gov.br">
       <s:element name="EnviarLoteRpsEnvio">
         <s:complexType>
           <s:sequence>
@@ -469,7 +469,7 @@ mensagem XML como parâmetro com a estrutura definida na tabela que segue.
   <wsdl:binding name="ServicosSoap" type="tns:ServicosSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="RecepcionarLoteRps">
-      <soap:operation soapAction="https://nfemwshomologacao.joinville.sc.gov.br/EnviarLoteRpsEnvio" style="document" />
+      <soap:operation soapAction="https://nfemws.joinville.sc.gov.br/EnviarLoteRpsEnvio" style="document" />
       <wsdl:input name="EnviarLoteRpsEnvio">
         <soap:body use="literal" />
       </wsdl:input>
@@ -478,7 +478,7 @@ mensagem XML como parâmetro com a estrutura definida na tabela que segue.
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CancelarNfse">
-      <soap:operation soapAction="https://nfemwshomologacao.joinville.sc.gov.br/CancelarNfseEnvio" style="document" />
+      <soap:operation soapAction="https://nfemws.joinville.sc.gov.br/CancelarNfseEnvio" style="document" />
       <wsdl:input name="CancelarNfseEnvio">
         <soap:body use="literal" />
       </wsdl:input>
@@ -487,7 +487,7 @@ mensagem XML como parâmetro com a estrutura definida na tabela que segue.
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarLoteRps">
-      <soap:operation soapAction="https://nfemwshomologacao.joinville.sc.gov.br/ConsultarLoteRpsEnvio" style="document" />
+      <soap:operation soapAction="https://nfemws.joinville.sc.gov.br/ConsultarLoteRpsEnvio" style="document" />
       <wsdl:input name="ConsultarLoteRpsEnvio">
         <soap:body use="literal" />
       </wsdl:input>
@@ -496,7 +496,7 @@ mensagem XML como parâmetro com a estrutura definida na tabela que segue.
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarNfsePorRps">
-      <soap:operation soapAction="https://nfemwshomologacao.joinville.sc.gov.br/ConsultarNfseRpsEnvio" style="document" />
+      <soap:operation soapAction="https://nfemws.joinville.sc.gov.br/ConsultarNfseRpsEnvio" style="document" />
       <wsdl:input name="ConsultarNfseRpsEnvio">
         <soap:body use="literal" />
       </wsdl:input>
@@ -508,7 +508,7 @@ mensagem XML como parâmetro com a estrutura definida na tabela que segue.
   <wsdl:binding name="ServicosSoap12" type="tns:ServicosSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="RecepcionarLoteRps">
-      <soap12:operation soapAction="https://nfemwshomologacao.joinville.sc.gov.br/EnviarLoteRpsEnvio" style="document" />
+      <soap12:operation soapAction="https://nfemws.joinville.sc.gov.br/EnviarLoteRpsEnvio" style="document" />
       <wsdl:input name="EnviarLoteRpsEnvio">
         <soap12:body use="literal" />
       </wsdl:input>
@@ -517,7 +517,7 @@ mensagem XML como parâmetro com a estrutura definida na tabela que segue.
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CancelarNfse">
-      <soap12:operation soapAction="https://nfemwshomologacao.joinville.sc.gov.br/CancelarNfseEnvio" style="document" />
+      <soap12:operation soapAction="https://nfemws.joinville.sc.gov.br/CancelarNfseEnvio" style="document" />
       <wsdl:input name="CancelarNfseEnvio">
         <soap12:body use="literal" />
       </wsdl:input>
@@ -526,7 +526,7 @@ mensagem XML como parâmetro com a estrutura definida na tabela que segue.
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarLoteRps">
-      <soap12:operation soapAction="https://nfemwshomologacao.joinville.sc.gov.br/ConsultarLoteRpsEnvio" style="document" />
+      <soap12:operation soapAction="https://nfemws.joinville.sc.gov.br/ConsultarLoteRpsEnvio" style="document" />
       <wsdl:input name="ConsultarLoteRpsEnvio">
         <soap12:body use="literal" />
       </wsdl:input>
@@ -535,7 +535,7 @@ mensagem XML como parâmetro com a estrutura definida na tabela que segue.
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarNfsePorRps">
-      <soap12:operation soapAction="https://nfemwshomologacao.joinville.sc.gov.br/ConsultarNfseRpsEnvio" style="document" />
+      <soap12:operation soapAction="https://nfemws.joinville.sc.gov.br/ConsultarNfseRpsEnvio" style="document" />
       <wsdl:input name="ConsultarNfseRpsEnvio">
         <soap12:body use="literal" />
       </wsdl:input>
@@ -546,10 +546,10 @@ mensagem XML como parâmetro com a estrutura definida na tabela que segue.
   </wsdl:binding>
   <wsdl:service name="Servicos">
     <wsdl:port name="ServicosSoap" binding="tns:ServicosSoap">
-      <soap:address location="https://nfemwshomologacao.joinville.sc.gov.br/NotaFiscal/Servicos.asmx" />
+      <soap:address location="https://nfemws.joinville.sc.gov.br/NotaFiscal/Servicos.asmx" />
     </wsdl:port>
     <wsdl:port name="ServicosSoap12" binding="tns:ServicosSoap12">
-      <soap12:address location="https://nfemwshomologacao.joinville.sc.gov.br/NotaFiscal/Servicos.asmx" />
+      <soap12:address location="https://nfemws.joinville.sc.gov.br/NotaFiscal/Servicos.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
