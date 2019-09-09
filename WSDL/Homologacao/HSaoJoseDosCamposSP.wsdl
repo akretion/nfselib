@@ -1,0 +1,1306 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.abrasf.org.br/nfse.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="NotaFiscalSoap" targetNamespace="http://www.abrasf.org.br/nfse.xsd">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http:/www.abrasf.org.br/nfse.xsd" xmlns:ns1="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" targetNamespace="http:/www.abrasf.org.br/nfse.xsd" version="1.0">
+
+  <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"/>
+
+  <xs:element name="CancelarNfseEnvio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Pedido" type="tns:tcPedidoCancelamento"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="CancelarNfseResposta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="tns:RetCancelamento"/>
+        <xs:element minOccurs="0" ref="tns:ListaMensagemRetorno"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="CompNfse" type="tns:tcCompNfse"/>
+
+  <xs:element name="ConsultarLoteRpsEnvio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Prestador" type="tns:tcIdentificacaoPrestador"/>
+        <xs:element name="Protocolo" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ConsultarLoteRpsResposta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListaNfse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="CompNfse" type="tns:tcCompNfse"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" ref="tns:ListaMensagemRetorno"/>
+        <xs:element minOccurs="0" ref="tns:ListaMensagemRetornoLote"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ConsultarNfseEnvio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Prestador" type="tns:tcIdentificacaoPrestador"/>
+        <xs:element minOccurs="0" name="NumeroNfse" type="xs:nonNegativeInteger"/>
+        <xs:element minOccurs="0" name="PeriodoEmissao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DataInicial" type="xs:date"/>
+              <xs:element name="DataFinal" type="xs:date"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Tomador" type="tns:tcIdentificacaoTomador"/>
+        <xs:element minOccurs="0" name="IntermediarioServico" type="tns:tcIdentificacaoIntermediarioServico"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ConsultarNfseResposta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ListaNfse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompNfse" type="tns:tcCompNfse"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" ref="tns:ListaMensagemRetorno"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ConsultarNfseRpsEnvio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="IdentificacaoRps" type="tns:tcIdentificacaoRps"/>
+        <xs:element name="Prestador" type="tns:tcIdentificacaoPrestador"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ConsultarNfseRpsResposta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompNfse" type="tns:tcCompNfse"/>
+        <xs:element minOccurs="0" ref="tns:ListaMensagemRetorno"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ConsultarSituacaoLoteRpsEnvio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Prestador" type="tns:tcIdentificacaoPrestador"/>
+        <xs:element name="Protocolo" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ConsultarSituacaoLoteRpsResposta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NumeroLote" type="xs:nonNegativeInteger"/>
+        <xs:element minOccurs="0" name="Situacao" type="xs:byte"/>
+        <xs:element minOccurs="0" ref="tns:ListaMensagemRetorno"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="EnviarLoteRpsEnvio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LoteRps" type="tns:tcLoteRps"/>
+        <xs:element minOccurs="0" name="Signature" type="ns1:SignatureType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="EnviarLoteRpsResposta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NumeroLote" type="xs:nonNegativeInteger"/>
+        <xs:element minOccurs="0" name="DataRecebimento" type="xs:dateTime"/>
+        <xs:element minOccurs="0" name="Protocolo" type="xs:string"/>
+        <xs:element minOccurs="0" ref="tns:ListaMensagemRetorno"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ListaMensagemRetorno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetorno"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ListaMensagemRetornoLote">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="MensagemRetorno" type="tns:tcMensagemRetornoLote"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="RetCancelamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="NfseCancelamento" type="tns:tcCancelamentoNfse"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="cabecalho">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="versaoDados" type="xs:token"/>
+      </xs:sequence>
+      <xs:attribute name="versao" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="tcLoteRps">
+    <xs:sequence>
+      <xs:element name="NumeroLote" type="xs:nonNegativeInteger"/>
+      <xs:element name="Cnpj" type="xs:string"/>
+      <xs:element name="InscricaoMunicipal" type="xs:string"/>
+      <xs:element name="QuantidadeRps" type="xs:int"/>
+      <xs:element name="ListaRps">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="Rps" type="tns:tcRps"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:string"/>
+    <xs:attribute name="versao" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="tcRps">
+    <xs:sequence>
+      <xs:element name="InfRps" type="tns:tcInfRps"/>
+      <xs:element minOccurs="0" ref="ns1:Signature"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcInfRps">
+    <xs:sequence>
+      <xs:element name="IdentificacaoRps" type="tns:tcIdentificacaoRps"/>
+      <xs:element name="DataEmissao" type="xs:dateTime"/>
+      <xs:element name="NaturezaOperacao" type="xs:byte"/>
+      <xs:element minOccurs="0" name="RegimeEspecialTributacao" type="xs:byte"/>
+      <xs:element name="OptanteSimplesNacional" type="xs:byte"/>
+      <xs:element name="IncentivadorCultural" type="xs:byte"/>
+      <xs:element name="Status" type="xs:byte"/>
+      <xs:element minOccurs="0" name="RpsSubstituido" type="tns:tcIdentificacaoRps"/>
+      <xs:element name="Servico" type="tns:tcDadosServico"/>
+      <xs:element name="Prestador" type="tns:tcIdentificacaoPrestador"/>
+      <xs:element minOccurs="0" name="Tomador" type="tns:tcDadosTomador"/>
+      <xs:element minOccurs="0" name="IntermediarioServico" type="tns:tcIdentificacaoIntermediarioServico"/>
+      <xs:element minOccurs="0" name="ContrucaoCivil" type="tns:tcDadosConstrucaoCivil"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="tcIdentificacaoRps">
+    <xs:sequence>
+      <xs:element name="Numero" type="xs:nonNegativeInteger"/>
+      <xs:element name="Serie" type="xs:string"/>
+      <xs:element name="Tipo" type="xs:byte"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcDadosServico">
+    <xs:sequence>
+      <xs:element name="Valores" type="tns:tcValores"/>
+      <xs:element name="ItemListaServico" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodigoCnae" type="xs:int"/>
+      <xs:element minOccurs="0" name="CodigoTributacaoMunicipio" type="xs:string"/>
+      <xs:element name="Discriminacao" type="xs:string"/>
+      <xs:element name="CodigoMunicipio" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcValores">
+    <xs:sequence>
+      <xs:element name="ValorServicos" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ValorDeducoes" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ValorPis" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ValorCofins" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ValorInss" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ValorIr" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ValorCsll" type="xs:decimal"/>
+      <xs:element name="IssRetido" type="xs:byte"/>
+      <xs:element minOccurs="0" name="ValorIss" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ValorIssRetido" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="OutrasRetencoes" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="BaseCalculo" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Aliquota" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ValorLiquidoNfse" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="DescontoIncondicionado" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="DescontoCondicionado" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcIdentificacaoPrestador">
+    <xs:sequence>
+      <xs:element name="Cnpj" type="xs:string"/>
+      <xs:element minOccurs="0" name="InscricaoMunicipal" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcDadosTomador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdentificacaoTomador" type="tns:tcIdentificacaoTomador"/>
+      <xs:element minOccurs="0" name="RazaoSocial" type="xs:string"/>
+      <xs:element minOccurs="0" name="Endereco" type="tns:tcEndereco"/>
+      <xs:element minOccurs="0" name="Contato" type="tns:tcContato"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcIdentificacaoTomador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CpfCnpj" type="tns:tcCpfCnpj"/>
+      <xs:element minOccurs="0" name="InscricaoMunicipal" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcCpfCnpj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cpf" type="xs:string"/>
+      <xs:element minOccurs="0" name="Cnpj" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcEndereco">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Endereco" type="xs:string"/>
+      <xs:element minOccurs="0" name="Numero" type="xs:string"/>
+      <xs:element minOccurs="0" name="Complemento" type="xs:string"/>
+      <xs:element minOccurs="0" name="Bairro" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodigoMunicipio" type="xs:int"/>
+      <xs:element minOccurs="0" name="Uf" type="xs:string"/>
+      <xs:element minOccurs="0" name="Cep" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcContato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Telefone" type="xs:string"/>
+      <xs:element minOccurs="0" name="Email" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcIdentificacaoIntermediarioServico">
+    <xs:sequence>
+      <xs:element name="RazaoSocial" type="xs:string"/>
+      <xs:element name="CpfCnpj" type="tns:tcCpfCnpj"/>
+      <xs:element minOccurs="0" name="InscricaoMunicipal" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcDadosConstrucaoCivil">
+    <xs:sequence>
+      <xs:element name="CodigoObra" type="xs:string"/>
+      <xs:element name="Art" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcMensagemRetorno">
+    <xs:sequence>
+      <xs:element name="Codigo" type="xs:string"/>
+      <xs:element name="Mensagem" type="xs:string"/>
+      <xs:element minOccurs="0" name="Correcao" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcCompNfse">
+    <xs:sequence>
+      <xs:element name="Nfse" type="tns:tcNfse"/>
+      <xs:element minOccurs="0" name="NfseCancelamento" type="tns:tcCancelamentoNfse"/>
+      <xs:element minOccurs="0" name="NfseSubstituicao" type="tns:tcSubstituicaoNfse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcNfse">
+    <xs:sequence>
+      <xs:element name="InfNfse" type="tns:tcInfNfse"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:Signature"/>
+    </xs:sequence>
+    <xs:attribute name="versao" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="tcInfNfse">
+    <xs:sequence>
+      <xs:element name="Numero" type="xs:nonNegativeInteger"/>
+      <xs:element name="CodigoVerificacao" type="xs:string"/>
+      <xs:element name="DataEmissao" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="IdentificacaoRps" type="tns:tcIdentificacaoRps"/>
+      <xs:element minOccurs="0" name="DataEmissaoRps" type="xs:date"/>
+      <xs:element name="NaturezaOperacao" type="xs:byte"/>
+      <xs:element minOccurs="0" name="RegimeEspecialTributacao" type="xs:byte"/>
+      <xs:element name="OptanteSimplesNacional" type="xs:byte"/>
+      <xs:element name="IncentivadorCultural" type="xs:byte"/>
+      <xs:element name="Competencia" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="NfseSubstituida" type="xs:nonNegativeInteger"/>
+      <xs:element minOccurs="0" name="OutrasInformacoes" type="xs:string"/>
+      <xs:element name="Servico" type="tns:tcDadosServico"/>
+      <xs:element minOccurs="0" name="ValorCredito" type="xs:decimal"/>
+      <xs:element name="PrestadorServico" type="tns:tcDadosPrestador"/>
+      <xs:element minOccurs="0" name="TomadorServico" type="tns:tcDadosTomador"/>
+      <xs:element minOccurs="0" name="IntermediarioServico" type="tns:tcIdentificacaoIntermediarioServico"/>
+      <xs:element name="OrgaoGerador" type="tns:tcIdentificacaoOrgaoGerador"/>
+      <xs:element minOccurs="0" name="ContrucaoCivil" type="tns:tcDadosConstrucaoCivil"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="tcDadosPrestador">
+    <xs:sequence>
+      <xs:element name="IdentificacaoPrestador" type="tns:tcIdentificacaoPrestador"/>
+      <xs:element name="RazaoSocial" type="xs:string"/>
+      <xs:element minOccurs="0" name="NomeFantasia" type="xs:string"/>
+      <xs:element name="Endereco" type="tns:tcEndereco"/>
+      <xs:element minOccurs="0" name="Contato" type="tns:tcContato"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcIdentificacaoOrgaoGerador">
+    <xs:sequence>
+      <xs:element name="CodigoMunicipio" type="xs:int"/>
+      <xs:element name="Uf" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcCancelamentoNfse">
+    <xs:sequence>
+      <xs:element name="Confirmacao" type="tns:tcConfirmacaoCancelamento"/>
+      <xs:element ref="ns1:Signature"/>
+    </xs:sequence>
+    <xs:attribute name="versao" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="tcConfirmacaoCancelamento">
+    <xs:sequence>
+      <xs:element name="Pedido" type="tns:tcPedidoCancelamento"/>
+      <xs:element name="DataHoraCancelamento" type="xs:dateTime"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="tcPedidoCancelamento">
+    <xs:sequence>
+      <xs:element name="InfPedidoCancelamento" type="tns:tcInfPedidoCancelamento"/>
+      <xs:element minOccurs="0" ref="ns1:Signature"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcInfPedidoCancelamento">
+    <xs:sequence>
+      <xs:element name="IdentificacaoNfse" type="tns:tcIdentificacaoNfse"/>
+      <xs:element name="CodigoCancelamento" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="tcIdentificacaoNfse">
+    <xs:sequence>
+      <xs:element name="Numero" type="xs:nonNegativeInteger"/>
+      <xs:element name="Cnpj" type="xs:string"/>
+      <xs:element minOccurs="0" name="InscricaoMunicipal" type="xs:string"/>
+      <xs:element name="CodigoMunicipio" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tcSubstituicaoNfse">
+    <xs:sequence>
+      <xs:element name="SubstituicaoNfse" type="tns:tcInfSubstituicaoNfse"/>
+      <xs:element maxOccurs="unbounded" ref="ns1:Signature"/>
+    </xs:sequence>
+    <xs:attribute name="versao" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="tcInfSubstituicaoNfse">
+    <xs:sequence>
+      <xs:element name="NfseSubstituidora" type="xs:nonNegativeInteger"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="tcMensagemRetornoLote">
+    <xs:sequence>
+      <xs:element name="IdentificacaoRps" type="tns:tcIdentificacaoRps"/>
+      <xs:element name="Codigo" type="xs:string"/>
+      <xs:element name="Mensagem" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" targetNamespace="http://www.w3.org/2000/09/xmldsig#" version="1.0">
+
+  <xs:element name="CanonicalizationMethod" type="tns:CanonicalizationMethodType"/>
+
+  <xs:element name="DSAKeyValue" type="tns:DSAKeyValueType"/>
+
+  <xs:element name="DigestMethod" type="tns:DigestMethodType"/>
+
+  <xs:element name="DigestValue" type="xs:base64Binary"/>
+
+  <xs:element name="KeyInfo" type="tns:KeyInfoType"/>
+
+  <xs:element name="KeyName" type="xs:string"/>
+
+  <xs:element name="KeyValue" type="tns:KeyValueType"/>
+
+  <xs:element name="Manifest" type="tns:ManifestType"/>
+
+  <xs:element name="MgmtData" type="xs:string"/>
+
+  <xs:element name="Object" type="tns:ObjectType"/>
+
+  <xs:element name="PGPData" type="tns:PGPDataType"/>
+
+  <xs:element name="RSAKeyValue" type="tns:RSAKeyValueType"/>
+
+  <xs:element name="Reference" type="tns:ReferenceType"/>
+
+  <xs:element name="RetrievalMethod" type="tns:RetrievalMethodType"/>
+
+  <xs:element name="SPKIData" type="tns:SPKIDataType"/>
+
+  <xs:element name="Signature" type="tns:SignatureType"/>
+
+  <xs:element name="SignatureMethod" type="tns:SignatureMethodType"/>
+
+  <xs:element name="SignatureProperties" type="tns:SignaturePropertiesType"/>
+
+  <xs:element name="SignatureProperty" type="tns:SignaturePropertyType"/>
+
+  <xs:element name="SignatureValue" type="tns:SignatureValueType"/>
+
+  <xs:element name="SignedInfo" type="tns:SignedInfoType"/>
+
+  <xs:element name="Transform" type="tns:TransformType"/>
+
+  <xs:element name="Transforms" type="tns:TransformsType"/>
+
+  <xs:element name="X509Data" type="tns:X509DataType"/>
+
+  <xs:complexType name="SignatureType">
+    <xs:sequence>
+      <xs:element name="SignedInfo" type="tns:SignedInfoType"/>
+      <xs:element name="SignatureValue" type="tns:SignatureValueType"/>
+      <xs:element minOccurs="0" name="KeyInfo" type="tns:KeyInfoType"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="Object" type="tns:ObjectType"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType name="SignedInfoType">
+    <xs:sequence>
+      <xs:element name="CanonicalizationMethod" type="tns:CanonicalizationMethodType"/>
+      <xs:element name="SignatureMethod" type="tns:SignatureMethodType"/>
+      <xs:element maxOccurs="unbounded" name="Reference" type="tns:ReferenceType"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType mixed="true" name="CanonicalizationMethodType">
+    <xs:sequence>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+    <xs:attribute name="Algorithm" type="xs:anyURI" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType mixed="true" name="ObjectType">
+    <xs:sequence>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID"/>
+    <xs:attribute name="MimeType" type="xs:string"/>
+    <xs:attribute name="Encoding" type="xs:anyURI"/>
+  </xs:complexType>
+
+  <xs:complexType mixed="true" name="TransformType">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="XPath" type="xs:string"/>
+        <xs:any namespace="##other" processContents="lax"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Algorithm" type="xs:anyURI" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ReferenceType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Transforms" type="tns:TransformsType"/>
+      <xs:element name="DigestMethod" type="tns:DigestMethodType"/>
+      <xs:element name="DigestValue" type="xs:base64Binary"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID"/>
+    <xs:attribute name="URI" type="xs:anyURI"/>
+    <xs:attribute name="Type" type="xs:anyURI"/>
+  </xs:complexType>
+
+  <xs:complexType name="TransformsType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Transform" type="tns:TransformType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType mixed="true" name="DigestMethodType">
+    <xs:sequence>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+    <xs:attribute name="Algorithm" type="xs:anyURI" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="DSAKeyValueType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="P" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="Q" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="G" type="xs:base64Binary"/>
+      <xs:element name="Y" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="J" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="Seed" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="PgenCounter" type="xs:base64Binary"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ManifestType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Reference" type="tns:ReferenceType"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType name="SPKIDataType">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="SPKISexp" type="xs:base64Binary"/>
+        <xs:any namespace="##other" processContents="lax"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType mixed="true" name="SignatureMethodType">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="HMACOutputLength" type="xs:integer"/>
+        <xs:any namespace="##other" processContents="lax"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Algorithm" type="xs:anyURI" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="PGPDataType">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="PGPKeyID" type="xs:base64Binary"/>
+        <xs:element name="PGPKeyPacket" type="xs:base64Binary"/>
+        <xs:any namespace="##other" processContents="lax"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="X509IssuerSerialType">
+    <xs:sequence>
+      <xs:element name="X509IssuerName" type="xs:string"/>
+      <xs:element name="X509SerialNumber" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="X509DataType">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="X509SKI" type="xs:base64Binary"/>
+        <xs:element name="X509IssuerSerial" type="tns:X509IssuerSerialType"/>
+        <xs:element name="X509SubjectName" type="xs:string"/>
+        <xs:element name="X509Certificate" type="xs:base64Binary"/>
+        <xs:element name="X509CRL" type="xs:base64Binary"/>
+        <xs:any namespace="##other" processContents="lax"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType mixed="true" name="KeyInfoType">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element ref="tns:X509Data"/>
+        <xs:element ref="tns:PGPData"/>
+        <xs:element ref="tns:KeyName"/>
+        <xs:element ref="tns:KeyValue"/>
+        <xs:element ref="tns:MgmtData"/>
+        <xs:element ref="tns:RetrievalMethod"/>
+        <xs:element ref="tns:SPKIData"/>
+        <xs:any namespace="##other" processContents="lax"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType name="SignatureValueType">
+    <xs:simpleContent>
+      <xs:extension base="xs:base64Binary">
+        <xs:attribute name="Id" type="xs:ID"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType mixed="true" name="KeyValueType">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element ref="tns:RSAKeyValue"/>
+        <xs:element ref="tns:DSAKeyValue"/>
+        <xs:any namespace="##other" processContents="lax"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType mixed="true" name="SignaturePropertyType">
+    <xs:sequence>
+      <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+    </xs:sequence>
+    <xs:attribute name="Target" type="xs:anyURI" use="required"/>
+    <xs:attribute name="Id" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType name="RSAKeyValueType">
+    <xs:sequence>
+      <xs:element name="Modulus" type="xs:base64Binary"/>
+      <xs:element name="Exponent" type="xs:base64Binary"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SignaturePropertiesType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="SignatureProperty" type="tns:SignaturePropertyType"/>
+    </xs:sequence>
+    <xs:attribute name="Id" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType name="RetrievalMethodType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Transforms" type="tns:TransformsType"/>
+    </xs:sequence>
+    <xs:attribute name="URI" type="xs:anyURI"/>
+    <xs:attribute name="Type" type="xs:anyURI"/>
+  </xs:complexType>
+
+</xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.abrasf.org.br/nfse.xsd" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns1="http:/www.abrasf.org.br/nfse.xsd" elementFormDefault="unqualified" targetNamespace="http://www.abrasf.org.br/nfse.xsd" version="1.0">
+
+  <xs:import namespace="http:/www.abrasf.org.br/nfse.xsd"/>
+
+  <xs:import namespace="http://www.w3.org/2000/09/xmldsig#"/>
+
+  <xs:element name="CancelarNfse" type="tns:CancelarNfse"/>
+
+  <xs:element name="CancelarNfseResponse" type="tns:CancelarNfseResponse"/>
+
+  <xs:element name="CancelarNfseV3" type="tns:CancelarNfseV3"/>
+
+  <xs:element name="CancelarNfseV3Response" type="tns:CancelarNfseV3Response"/>
+
+  <xs:element name="ConsultarLoteRps" type="tns:ConsultarLoteRps"/>
+
+  <xs:element name="ConsultarLoteRpsResponse" type="tns:ConsultarLoteRpsResponse"/>
+
+  <xs:element name="ConsultarLoteRpsV3" type="tns:ConsultarLoteRpsV3"/>
+
+  <xs:element name="ConsultarLoteRpsV3Response" type="tns:ConsultarLoteRpsV3Response"/>
+
+  <xs:element name="ConsultarNfse" type="tns:ConsultarNfse"/>
+
+  <xs:element name="ConsultarNfsePorRps" type="tns:ConsultarNfsePorRps"/>
+
+  <xs:element name="ConsultarNfsePorRpsResponse" type="tns:ConsultarNfsePorRpsResponse"/>
+
+  <xs:element name="ConsultarNfsePorRpsV3" type="tns:ConsultarNfsePorRpsV3"/>
+
+  <xs:element name="ConsultarNfsePorRpsV3Response" type="tns:ConsultarNfsePorRpsV3Response"/>
+
+  <xs:element name="ConsultarNfseResponse" type="tns:ConsultarNfseResponse"/>
+
+  <xs:element name="ConsultarNfseV3" type="tns:ConsultarNfseV3"/>
+
+  <xs:element name="ConsultarNfseV3Response" type="tns:ConsultarNfseV3Response"/>
+
+  <xs:element name="ConsultarSituacaoLoteRps" type="tns:ConsultarSituacaoLoteRps"/>
+
+  <xs:element name="ConsultarSituacaoLoteRpsResponse" type="tns:ConsultarSituacaoLoteRpsResponse"/>
+
+  <xs:element name="ConsultarSituacaoLoteRpsV3" type="tns:ConsultarSituacaoLoteRpsV3"/>
+
+  <xs:element name="ConsultarSituacaoLoteRpsV3Response" type="tns:ConsultarSituacaoLoteRpsV3Response"/>
+
+  <xs:element name="RecepcionarLoteRps" type="tns:RecepcionarLoteRps"/>
+
+  <xs:element name="RecepcionarLoteRpsResponse" type="tns:RecepcionarLoteRpsResponse"/>
+
+  <xs:element name="RecepcionarLoteRpsV3" type="tns:RecepcionarLoteRpsV3"/>
+
+  <xs:element name="RecepcionarLoteRpsV3Response" type="tns:RecepcionarLoteRpsV3Response"/>
+
+  <xs:complexType name="ConsultarNfsePorRpsV3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarNfsePorRpsV3Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RecepcionarLoteRps">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnviarLoteRpsEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="LoteRps" type="ns1:tcLoteRps"/>
+            <xs:element form="qualified" minOccurs="0" name="Signature" type="ns2:SignatureType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RecepcionarLoteRpsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnviarLoteRpsResposta">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" minOccurs="0" name="NumeroLote" type="xs:nonNegativeInteger"/>
+            <xs:element form="qualified" minOccurs="0" name="DataRecebimento" type="xs:dateTime"/>
+            <xs:element form="qualified" minOccurs="0" name="Protocolo" type="xs:string"/>
+            <xs:element minOccurs="0" ref="ns1:ListaMensagemRetorno"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarNfsePorRps">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarNfseRpsEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="IdentificacaoRps" type="ns1:tcIdentificacaoRps"/>
+            <xs:element form="qualified" name="Prestador" type="ns1:tcIdentificacaoPrestador"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarNfsePorRpsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarNfseRpsResposta">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" minOccurs="0" name="CompNfse" type="ns1:tcCompNfse"/>
+            <xs:element minOccurs="0" ref="ns1:ListaMensagemRetorno"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarNfse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarNfseEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="Prestador" type="ns1:tcIdentificacaoPrestador"/>
+            <xs:element form="qualified" minOccurs="0" name="NumeroNfse" type="xs:nonNegativeInteger"/>
+            <xs:element form="qualified" minOccurs="0" name="PeriodoEmissao">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element form="qualified" name="DataInicial" type="xs:date"/>
+                  <xs:element form="qualified" name="DataFinal" type="xs:date"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element form="qualified" minOccurs="0" name="Tomador" type="ns1:tcIdentificacaoTomador"/>
+            <xs:element form="qualified" minOccurs="0" name="IntermediarioServico" type="ns1:tcIdentificacaoIntermediarioServico"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarNfseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarNfseResposta">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" minOccurs="0" name="ListaNfse">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element form="qualified" name="CompNfse" type="ns1:tcCompNfse"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" ref="ns1:ListaMensagemRetorno"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarNfseV3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarNfseV3Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarSituacaoLoteRpsV3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarSituacaoLoteRpsV3Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarLoteRps">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarLoteRpsEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="Prestador" type="ns1:tcIdentificacaoPrestador"/>
+            <xs:element form="qualified" name="Protocolo" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarLoteRpsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarLoteRpsResposta">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" minOccurs="0" name="ListaNfse">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element form="qualified" maxOccurs="unbounded" name="CompNfse" type="ns1:tcCompNfse"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" ref="ns1:ListaMensagemRetorno"/>
+            <xs:element minOccurs="0" ref="ns1:ListaMensagemRetornoLote"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RecepcionarLoteRpsV3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RecepcionarLoteRpsV3Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarLoteRpsV3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarLoteRpsV3Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CancelarNfse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CancelarNfseEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="Pedido" type="ns1:tcPedidoCancelamento"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CancelarNfseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CancelarNfseResposta">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="ns1:RetCancelamento"/>
+            <xs:element minOccurs="0" ref="ns1:ListaMensagemRetorno"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CancelarNfseV3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CancelarNfseV3Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarSituacaoLoteRps">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarSituacaoLoteRpsEnvio">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" name="Prestador" type="ns1:tcIdentificacaoPrestador"/>
+            <xs:element form="qualified" name="Protocolo" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ConsultarSituacaoLoteRpsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConsultarSituacaoLoteRpsResposta">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element form="qualified" minOccurs="0" name="NumeroLote" type="xs:nonNegativeInteger"/>
+            <xs:element form="qualified" minOccurs="0" name="Situacao" type="xs:byte"/>
+            <xs:element minOccurs="0" ref="ns1:ListaMensagemRetorno"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultarNfsePorRpsV3">
+    <wsdl:part element="tns:ConsultarNfsePorRpsV3" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRps">
+    <wsdl:part element="tns:RecepcionarLoteRps" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRps">
+    <wsdl:part element="tns:ConsultarNfsePorRps" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfse">
+    <wsdl:part element="tns:ConsultarNfse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarSituacaoLoteRpsV3Response">
+    <wsdl:part element="tns:ConsultarSituacaoLoteRpsV3Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseV3">
+    <wsdl:part element="tns:ConsultarNfseV3" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarSituacaoLoteRpsV3">
+    <wsdl:part element="tns:ConsultarSituacaoLoteRpsV3" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseResponse">
+    <wsdl:part element="tns:ConsultarNfseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRps">
+    <wsdl:part element="tns:ConsultarLoteRps" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseV3Response">
+    <wsdl:part element="tns:CancelarNfseV3Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsV3">
+    <wsdl:part element="tns:RecepcionarLoteRpsV3" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseV3Response">
+    <wsdl:part element="tns:ConsultarNfseV3Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsResponse">
+    <wsdl:part element="tns:ConsultarLoteRpsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsV3">
+    <wsdl:part element="tns:ConsultarLoteRpsV3" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsResponse">
+    <wsdl:part element="tns:ConsultarNfsePorRpsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsV3Response">
+    <wsdl:part element="tns:ConsultarLoteRpsV3Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseResponse">
+    <wsdl:part element="tns:CancelarNfseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsV3Response">
+    <wsdl:part element="tns:ConsultarNfsePorRpsV3Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfse">
+    <wsdl:part element="tns:CancelarNfse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsV3Response">
+    <wsdl:part element="tns:RecepcionarLoteRpsV3Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarSituacaoLoteRpsResponse">
+    <wsdl:part element="tns:ConsultarSituacaoLoteRpsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsResponse">
+    <wsdl:part element="tns:RecepcionarLoteRpsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseV3">
+    <wsdl:part element="tns:CancelarNfseV3" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarSituacaoLoteRps">
+    <wsdl:part element="tns:ConsultarSituacaoLoteRps" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="NotaFiscalSoap">
+    <wsdl:operation name="ConsultarNfsePorRpsV3">
+      <wsdl:input message="tns:ConsultarNfsePorRpsV3" name="ConsultarNfsePorRpsV3">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfsePorRpsV3Response" name="ConsultarNfsePorRpsV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <wsdl:input message="tns:RecepcionarLoteRps" name="RecepcionarLoteRps">
+    </wsdl:input>
+      <wsdl:output message="tns:RecepcionarLoteRpsResponse" name="RecepcionarLoteRpsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <wsdl:input message="tns:ConsultarNfsePorRps" name="ConsultarNfsePorRps">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfsePorRpsResponse" name="ConsultarNfsePorRpsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfse">
+      <wsdl:input message="tns:ConsultarNfse" name="ConsultarNfse">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfseResponse" name="ConsultarNfseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseV3">
+      <wsdl:input message="tns:ConsultarNfseV3" name="ConsultarNfseV3">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarNfseV3Response" name="ConsultarNfseV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSituacaoLoteRpsV3">
+      <wsdl:input message="tns:ConsultarSituacaoLoteRpsV3" name="ConsultarSituacaoLoteRpsV3">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarSituacaoLoteRpsV3Response" name="ConsultarSituacaoLoteRpsV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <wsdl:input message="tns:ConsultarLoteRps" name="ConsultarLoteRps">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarLoteRpsResponse" name="ConsultarLoteRpsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRpsV3">
+      <wsdl:input message="tns:RecepcionarLoteRpsV3" name="RecepcionarLoteRpsV3">
+    </wsdl:input>
+      <wsdl:output message="tns:RecepcionarLoteRpsV3Response" name="RecepcionarLoteRpsV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRpsV3">
+      <wsdl:input message="tns:ConsultarLoteRpsV3" name="ConsultarLoteRpsV3">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarLoteRpsV3Response" name="ConsultarLoteRpsV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse">
+      <wsdl:input message="tns:CancelarNfse" name="CancelarNfse">
+    </wsdl:input>
+      <wsdl:output message="tns:CancelarNfseResponse" name="CancelarNfseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfseV3">
+      <wsdl:input message="tns:CancelarNfseV3" name="CancelarNfseV3">
+    </wsdl:input>
+      <wsdl:output message="tns:CancelarNfseV3Response" name="CancelarNfseV3Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSituacaoLoteRps">
+      <wsdl:input message="tns:ConsultarSituacaoLoteRps" name="ConsultarSituacaoLoteRps">
+    </wsdl:input>
+      <wsdl:output message="tns:ConsultarSituacaoLoteRpsResponse" name="ConsultarSituacaoLoteRpsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NotaFiscalSoapSoapBinding" type="tns:NotaFiscalSoap">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ConsultarNfsePorRpsV3">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ConsultarNfsePorRpsV3">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfsePorRpsV3Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="RecepcionarLoteRps">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RecepcionarLoteRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ConsultarNfsePorRps">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfsePorRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ConsultarNfse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseV3">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ConsultarNfseV3">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfseV3Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSituacaoLoteRpsV3">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ConsultarSituacaoLoteRpsV3">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarSituacaoLoteRpsV3Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ConsultarLoteRps">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarLoteRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRpsV3">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="RecepcionarLoteRpsV3">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RecepcionarLoteRpsV3Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRpsV3">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ConsultarLoteRpsV3">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarLoteRpsV3Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="CancelarNfse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelarNfseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfseV3">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="CancelarNfseV3">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelarNfseV3Response">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSituacaoLoteRps">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ConsultarSituacaoLoteRps">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarSituacaoLoteRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NotaFiscalSoap">
+    <wsdl:port binding="tns:NotaFiscalSoapSoapBinding" name="NotaFiscalSoapPort">
+      <soap:address location="https://homol-notajoseense.sjc.sp.gov.br/notafiscal-ws/NotaFiscalSoap"/>                              
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
