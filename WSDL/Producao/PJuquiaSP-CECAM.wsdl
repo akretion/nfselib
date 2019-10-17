@@ -369,10 +369,10 @@
   </wsdl:binding>
   <wsdl:service name="wsISSEletronico">
     <wsdl:port name="wsISSEletronicoSoap" binding="tns:wsISSEletronicoSoap">
-      <soap:address location="http://189.57.230.138/cecam.issweb/webservices/wsisseletronico.asmx" />
+      <soap:address location="http://189.57.230.139/cecam.issweb/webservices/wsisseletronico.asmx" />
     </wsdl:port>
     <wsdl:port name="wsISSEletronicoSoap12" binding="tns:wsISSEletronicoSoap12">
-      <soap12:address location="http://189.57.230.138/cecam.issweb/webservices/wsisseletronico.asmx" />
+      <soap12:address location="http://189.57.230.139/cecam.issweb/webservices/wsisseletronico.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

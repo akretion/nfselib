@@ -5375,24 +5375,24 @@
       <CancelarNfse>wsdl\producao\PMaringaPR-MARINGA_PR.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="2111201" Nome="São José do Ribamar - MA" UF="MA" Padrao="PORTALFACIL_ACTCON">
+  <Estado ID="2111201" Nome="São José do Ribamar - MA" UF="MA" Padrao="TINUS">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HSaoJoseRibamarMA_TINUS_RecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoJoseRibamarMA_TINUS_ConsultarSituacaoLoteRps.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSaoJoseRibamarMA_TINUS_ConsultarNfsePorRps.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>HSaoJoseRibamarMA_TINUS_ConsultarNfse.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>HSaoJoseRibamarMA_TINUS_ConsultarLoteRps.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HSaoJoseRibamarMA_TINUS_CancelarNfse.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PSaoJoseRibamarMA-PORTALFACIL_ACTCON.wsdl</CancelarNfse>
+      <CancelarNfse></CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3304003" Nome="Piraí - RJ" UF="RJ" Padrao="TIPLAN">
@@ -5972,22 +5972,22 @@
       <CancelarNfse></CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="5106422" Nome="Peixoto de Azevedo - MT" UF="MT" Padrao="GINFES">
+  <Estado ID="5106422" Nome="Peixoto de Azevedo - MT" UF="MT" Padrao="COPLAN">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\homologacao\HPeixotoAzevedoMT-COPLAN.WSDL</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HPeixotoAzevedoMT-COPLAN.WSDL</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HPeixotoAzevedoMT-COPLAN.WSDL</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HPeixotoAzevedoMT-COPLAN.WSDL</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HPeixotoAzevedoMT-COPLAN.WSDL</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HPeixotoAzevedoMT-COPLAN.WSDL</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
+      <RecepcionarLoteRps>wsdl\producao\PPeixotoAzevedoMT-COPLAN.WSDL</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PPeixotoAzevedoMT-COPLAN.WSDL</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PPeixotoAzevedoMT-COPLAN.WSDL</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PPeixotoAzevedoMT-COPLAN.WSDL</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PPeixotoAzevedoMT-COPLAN.WSDL</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PPeixotoAzevedoMT-COPLAN.WSDL</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="4209102" Nome="Joinville - SC" UF="SC" Padrao="JOINVILLE_SC">
@@ -7968,5 +7968,53 @@
       <ConsultarLoteRps>wsdl\producao\PTramandaiRS-DBSELLER.wsdl</ConsultarLoteRps>
       <CancelarNfse>wsdl\producao\PTramandaiRS-DBSELLER.wsdl</CancelarNfse>
     </LocalProducao>
+  </Estado>
+  <Estado ID="5201405" Nome="Aparecida Goiania - GO" UF="GO" Padrao="ISSNET">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HAparecidaGoianiaGO-ISSNET.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HAparecidaGoianiaGO-ISSNET.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HAparecidaGoianiaGO-ISSNET.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HAparecidaGoianiaGO-ISSNET.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HAparecidaGoianiaGO-ISSNET.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\HAparecidaGoianiaGO-ISSNET.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HAparecidaGoianiaGO-ISSNET.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PAparecidaGoianiaGO-ISSNET.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PAparecidaGoianiaGO-ISSNET.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PAparecidaGoianiaGO-ISSNET.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PAparecidaGoianiaGO-ISSNET.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PAparecidaGoianiaGO-ISSNET.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\PAparecidaGoianiaGO-ISSNET.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PAparecidaGoianiaGO-ISSNET.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3556453" Nome="Vargem Grande Paulista - SP" UF="SP" Padrao="GOVDIGITAL">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HVargemGrandePaulistaSP-GOVDIGITAL.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PVargemGrandePaulistaSP-GOVDIGITAL.wsdl</CancelarNfse>
+    </LocalProducao>
+    <Estado ID="2503209" Nome="Cabedelo - PB " UF="PB" Padrao="TINUS">
+      <LocalProducao>
+        <RecepcionarLoteRps>wsdl\producao\PCabedeloPB-RecepcionarLoteRps-TINUS.wsdl</RecepcionarLoteRps>
+        <ConsultarSituacaoLoteRps>wsdl\producao\PCabedeloPB-ConsultarSituacaoLoteRps-TINUS.wsdl</ConsultarSituacaoLoteRps>
+        <ConsultarNfsePorRps>wsdl\producao\PCabedeloPB-ConsultarNfsePorRps-TINUS.wsdl</ConsultarNfsePorRps>
+        <ConsultarNfse>wsdl\producao\PCabedeloPB-ConsultarNfse-TINUS.wsdl</ConsultarNfse>
+        <ConsultarLoteRps>wsdl\producao\PCabedeloPB-ConsultarLoteRps-TINUS.wsdl</ConsultarLoteRps>
+        <CancelarNfse>wsdl\producao\PCabedeloPB-CancelarNfse-TINUS.wsdl</CancelarNfse>
+      </LocalProducao>
+    </Estado>
   </Estado>
 </Webservice>
