@@ -7,8 +7,8 @@
                   xmlns:http="http://schemas.xmlsoap.org/soap/http"
                   xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
-                  xmlns:ii="http://nfe.sdolivramento.com.br/webservice/index/producao"
-                  targetNamespace="http://nfe.sdolivramento.com.br/webservice/index/producao">
+                  xmlns:ii="http://nfse.tramandai.rs.gov.br/webservice/index/producao"
+                  targetNamespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao">
   <wsdl:types>
   </wsdl:types>
   <wsdl:message name="RecepcionarLoteRpsRequest">
@@ -78,61 +78,61 @@
     <wsdl:operation name="RecepcionarLoteRps">
       <soap:operation soapAction=""/>
       <wsdl:input>
-        <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+        <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
       </wsdl:input>
       <wsdl:output>
-        <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+        <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarSituacaoLoteRps">
       <soap:operation soapAction=""/>
         <wsdl:input>
-          <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+          <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
         </wsdl:input>
         <wsdl:output>
-          <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+          <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
         </wsdl:output>
       </wsdl:operation>
       <wsdl:operation name="ConsultarNfsePorRps">
         <soap:operation soapAction=""/>
           <wsdl:input>
-            <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+            <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:input>
           <wsdl:output>
-            <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+            <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:output>
       </wsdl:operation>
       <wsdl:operation name="ConsultarLoteRps">
       <soap:operation soapAction=""/>
        <wsdl:input>
-        <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+        <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:input>
           <wsdl:output>
-            <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+            <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:output>
       </wsdl:operation>
       <wsdl:operation name="CancelarNfse">
         <soap:operation soapAction=""/>
           <wsdl:input>
-            <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+            <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:input>
           <wsdl:output>
-            <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+            <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:output>
       </wsdl:operation>
       <wsdl:operation name="ConsultarNfse">
         <soap:operation soapAction=""/>
           <wsdl:input>
-            <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+            <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:input>
           <wsdl:output>
-            <soap:body namespace="http://nfe.sdolivramento.com.br/webservice/index/producao" use="literal"/>
+            <soap:body namespace="http://nfse.tramandai.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:output>
       </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="DBSellerService">
     <wsdl:port name="DBSellerPort" binding="ii:DBSellerBinding">
-      <soap:address location="http://nfe.sdolivramento.com.br/webservice/index/producao"/>
+      <soap:address location="http://nfse.tramandai.rs.gov.br/webservice/index/producao"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
