@@ -1,1 +1,453 @@
-<?xml version="1.0" encoding="utf-8"?><wsdl:definitions name="NfseServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"><wsp:Policy wsu:Id="BasicHttpBinding_INfseServices_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken RequireClientCertificate="true"/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout></wsp:Policy></sp:TransportBinding></wsp:All></wsp:ExactlyOne></wsp:Policy><wsdl:types><xsd:schema targetNamespace="http://tempuri.org/Imports"><xsd:import schemaLocation="https://www5.webiss.com.br/palmasto_wsnfse/NfseServices.svc?xsd=xsd0" namespace="http://tempuri.org/"/><xsd:import schemaLocation="https://www5.webiss.com.br/palmasto_wsnfse/NfseServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/></xsd:schema></wsdl:types><wsdl:message name="INfseServices_RecepcionarLoteRps_InputMessage"><wsdl:part name="parameters" element="tns:RecepcionarLoteRps"/></wsdl:message><wsdl:message name="INfseServices_RecepcionarLoteRps_OutputMessage"><wsdl:part name="parameters" element="tns:RecepcionarLoteRpsResponse"/></wsdl:message><wsdl:message name="INfseServices_ConsultarSituacaoLoteRps_InputMessage"><wsdl:part name="parameters" element="tns:ConsultarSituacaoLoteRps"/></wsdl:message><wsdl:message name="INfseServices_ConsultarSituacaoLoteRps_OutputMessage"><wsdl:part name="parameters" element="tns:ConsultarSituacaoLoteRpsResponse"/></wsdl:message><wsdl:message name="INfseServices_ConsultarNfsePorRps_InputMessage"><wsdl:part name="parameters" element="tns:ConsultarNfsePorRps"/></wsdl:message><wsdl:message name="INfseServices_ConsultarNfsePorRps_OutputMessage"><wsdl:part name="parameters" element="tns:ConsultarNfsePorRpsResponse"/></wsdl:message><wsdl:message name="INfseServices_ConsultarNfse_InputMessage"><wsdl:part name="parameters" element="tns:ConsultarNfse"/></wsdl:message><wsdl:message name="INfseServices_ConsultarNfse_OutputMessage"><wsdl:part name="parameters" element="tns:ConsultarNfseResponse"/></wsdl:message><wsdl:message name="INfseServices_ConsultarLoteRps_InputMessage"><wsdl:part name="parameters" element="tns:ConsultarLoteRps"/></wsdl:message><wsdl:message name="INfseServices_ConsultarLoteRps_OutputMessage"><wsdl:part name="parameters" element="tns:ConsultarLoteRpsResponse"/></wsdl:message><wsdl:message name="INfseServices_CancelarNfse_InputMessage"><wsdl:part name="parameters" element="tns:CancelarNfse"/></wsdl:message><wsdl:message name="INfseServices_CancelarNfse_OutputMessage"><wsdl:part name="parameters" element="tns:CancelarNfseResponse"/></wsdl:message><wsdl:portType name="INfseServices"><wsdl:operation name="RecepcionarLoteRps"><wsdl:input wsaw:Action="http://tempuri.org/INfseServices/RecepcionarLoteRps" message="tns:INfseServices_RecepcionarLoteRps_InputMessage"/><wsdl:output wsaw:Action="http://tempuri.org/INfseServices/RecepcionarLoteRpsResponse" message="tns:INfseServices_RecepcionarLoteRps_OutputMessage"/></wsdl:operation><wsdl:operation name="ConsultarSituacaoLoteRps"><wsdl:input wsaw:Action="http://tempuri.org/INfseServices/ConsultarSituacaoLoteRps" message="tns:INfseServices_ConsultarSituacaoLoteRps_InputMessage"/><wsdl:output wsaw:Action="http://tempuri.org/INfseServices/ConsultarSituacaoLoteRpsResponse" message="tns:INfseServices_ConsultarSituacaoLoteRps_OutputMessage"/></wsdl:operation><wsdl:operation name="ConsultarNfsePorRps"><wsdl:input wsaw:Action="http://tempuri.org/INfseServices/ConsultarNfsePorRps" message="tns:INfseServices_ConsultarNfsePorRps_InputMessage"/><wsdl:output wsaw:Action="http://tempuri.org/INfseServices/ConsultarNfsePorRpsResponse" message="tns:INfseServices_ConsultarNfsePorRps_OutputMessage"/></wsdl:operation><wsdl:operation name="ConsultarNfse"><wsdl:input wsaw:Action="http://tempuri.org/INfseServices/ConsultarNfse" message="tns:INfseServices_ConsultarNfse_InputMessage"/><wsdl:output wsaw:Action="http://tempuri.org/INfseServices/ConsultarNfseResponse" message="tns:INfseServices_ConsultarNfse_OutputMessage"/></wsdl:operation><wsdl:operation name="ConsultarLoteRps"><wsdl:input wsaw:Action="http://tempuri.org/INfseServices/ConsultarLoteRps" message="tns:INfseServices_ConsultarLoteRps_InputMessage"/><wsdl:output wsaw:Action="http://tempuri.org/INfseServices/ConsultarLoteRpsResponse" message="tns:INfseServices_ConsultarLoteRps_OutputMessage"/></wsdl:operation><wsdl:operation name="CancelarNfse"><wsdl:input wsaw:Action="http://tempuri.org/INfseServices/CancelarNfse" message="tns:INfseServices_CancelarNfse_InputMessage"/><wsdl:output wsaw:Action="http://tempuri.org/INfseServices/CancelarNfseResponse" message="tns:INfseServices_CancelarNfse_OutputMessage"/></wsdl:operation></wsdl:portType><wsdl:binding name="BasicHttpBinding_INfseServices" type="tns:INfseServices"><wsp:PolicyReference URI="#BasicHttpBinding_INfseServices_policy"/><soap:binding transport="http://schemas.xmlsoap.org/soap/http"/><wsdl:operation name="RecepcionarLoteRps"><soap:operation soapAction="http://tempuri.org/INfseServices/RecepcionarLoteRps" style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="ConsultarSituacaoLoteRps"><soap:operation soapAction="http://tempuri.org/INfseServices/ConsultarSituacaoLoteRps" style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="ConsultarNfsePorRps"><soap:operation soapAction="http://tempuri.org/INfseServices/ConsultarNfsePorRps" style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="ConsultarNfse"><soap:operation soapAction="http://tempuri.org/INfseServices/ConsultarNfse" style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="ConsultarLoteRps"><soap:operation soapAction="http://tempuri.org/INfseServices/ConsultarLoteRps" style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body use="literal"/></wsdl:output></wsdl:operation><wsdl:operation name="CancelarNfse"><soap:operation soapAction="http://tempuri.org/INfseServices/CancelarNfse" style="document"/><wsdl:input><soap:body use="literal"/></wsdl:input><wsdl:output><soap:body use="literal"/></wsdl:output></wsdl:operation></wsdl:binding><wsdl:service name="NfseServices"><wsdl:port name="BasicHttpBinding_INfseServices" binding="tns:BasicHttpBinding_INfseServices"><soap:address location="https://www5.webiss.com.br/palmasto_wsnfse/NfseServices.svc"/></wsdl:port></wsdl:service></wsdl:definitions>
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://nfse.abrasf.org.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://nfse.abrasf.org.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://nfse.abrasf.org.br">
+      <s:element name="GerarNfseRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GerarNfseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarNfseRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarNfseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubstituirNfseRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubstituirNfseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionarLoteRpsSincronoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionarLoteRpsSincronoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionarLoteRpsRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecepcionarLoteRpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarLoteRpsRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarLoteRpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNfseServicoPrestadoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNfseServicoPrestadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNfseServicoTomadoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNfseServicoTomadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNfsePorFaixaRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNfsePorFaixaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNfsePorRpsRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseCabecMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="nfseDadosMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarNfsePorRpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="outputXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GerarNfseSoapIn">
+    <wsdl:part name="parameters" element="tns:GerarNfseRequest" />
+  </wsdl:message>
+  <wsdl:message name="GerarNfseSoapOut">
+    <wsdl:part name="parameters" element="tns:GerarNfseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelarNfseRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelarNfseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubstituirNfseSoapIn">
+    <wsdl:part name="parameters" element="tns:SubstituirNfseRequest" />
+  </wsdl:message>
+  <wsdl:message name="SubstituirNfseSoapOut">
+    <wsdl:part name="parameters" element="tns:SubstituirNfseResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsSincronoSoapIn">
+    <wsdl:part name="parameters" element="tns:RecepcionarLoteRpsSincronoRequest" />
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsSincronoSoapOut">
+    <wsdl:part name="parameters" element="tns:RecepcionarLoteRpsSincronoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsSoapIn">
+    <wsdl:part name="parameters" element="tns:RecepcionarLoteRpsRequest" />
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsSoapOut">
+    <wsdl:part name="parameters" element="tns:RecepcionarLoteRpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarLoteRpsRequest" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarLoteRpsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoPrestadoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarNfseServicoPrestadoRequest" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoPrestadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarNfseServicoPrestadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoTomadoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarNfseServicoTomadoRequest" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoTomadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarNfseServicoTomadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorFaixaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarNfsePorFaixaRequest" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorFaixaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarNfsePorFaixaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarNfsePorRpsRequest" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarNfsePorRpsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NfseWSServiceSoap">
+    <wsdl:operation name="GerarNfse">
+      <wsdl:input message="tns:GerarNfseSoapIn" />
+      <wsdl:output message="tns:GerarNfseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse">
+      <wsdl:input message="tns:CancelarNfseSoapIn" />
+      <wsdl:output message="tns:CancelarNfseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse">
+      <wsdl:input message="tns:SubstituirNfseSoapIn" />
+      <wsdl:output message="tns:SubstituirNfseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRpsSincrono">
+      <wsdl:input message="tns:RecepcionarLoteRpsSincronoSoapIn" />
+      <wsdl:output message="tns:RecepcionarLoteRpsSincronoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <wsdl:input message="tns:RecepcionarLoteRpsSoapIn" />
+      <wsdl:output message="tns:RecepcionarLoteRpsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <wsdl:input message="tns:ConsultarLoteRpsSoapIn" />
+      <wsdl:output message="tns:ConsultarLoteRpsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoPrestado">
+      <wsdl:input message="tns:ConsultarNfseServicoPrestadoSoapIn" />
+      <wsdl:output message="tns:ConsultarNfseServicoPrestadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoTomado">
+      <wsdl:input message="tns:ConsultarNfseServicoTomadoSoapIn" />
+      <wsdl:output message="tns:ConsultarNfseServicoTomadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorFaixa">
+      <wsdl:input message="tns:ConsultarNfsePorFaixaSoapIn" />
+      <wsdl:output message="tns:ConsultarNfsePorFaixaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <wsdl:input message="tns:ConsultarNfsePorRpsSoapIn" />
+      <wsdl:output message="tns:ConsultarNfsePorRpsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NfseWSServiceSoap" type="tns:NfseWSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GerarNfse">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/GerarNfse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/CancelarNfse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/SubstituirNfse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRpsSincrono">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/RecepcionarLoteRpsSincrono" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/RecepcionarLoteRps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarLoteRps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoPrestado">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfseServicoPrestado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoTomado">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfseServicoTomado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorFaixa">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfsePorFaixa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <soap:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfsePorRps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NfseWSServiceSoap12" type="tns:NfseWSServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GerarNfse">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/GerarNfse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/CancelarNfse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/SubstituirNfse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRpsSincrono">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/RecepcionarLoteRpsSincrono" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/RecepcionarLoteRps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/ConsultarLoteRps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoPrestado">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfseServicoPrestado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoTomado">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfseServicoTomado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorFaixa">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfsePorFaixa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <soap12:operation soapAction="http://nfse.abrasf.org.br/ConsultarNfsePorRps" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NfseWSService">
+    <wsdl:port name="NfseWSServiceSoap" binding="tns:NfseWSServiceSoap">
+      <soap:address location="https://palmasto.webiss.com.br/ws/nfse.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NfseWSServiceSoap12" binding="tns:NfseWSServiceSoap12">
+      <soap12:address location="https://palmasto.webiss.com.br/ws/nfse.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
