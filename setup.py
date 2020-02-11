@@ -4,12 +4,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='nfelib',
+    name='nfselib',
     version='0.1',
     author='Raphael Valyi',
     author_email='raphael.valyi@akretion.com',
-    url='https://github.com/akretion/nfelib',
-    description='nfelib: electronic invoicing library for Brazil',
+    url='https://github.com/akretion/nfselib',
+    description='nfselib: electronic invoicing library for Brazil',
     long_description=open('README.rst').read(),
     license='MIT',
     classifiers=[
