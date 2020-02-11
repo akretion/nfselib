@@ -1,10 +1,54 @@
 Module contents
 =================
-.. automodule:: nfse
+.. automodule:: ConsultaSeqRps
     :members:
     :undoc-members:
     :show-inheritance:
-.. automodule:: xmldsig-core-schema20020212
+.. automodule:: ReqCancelamentoNFSe
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: ReqConsultaLote
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: ReqConsultaNFSeRPS
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: ReqConsultaNotas
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: ReqEnvioLoteRPS
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: RetornoCancelamentoNFSe
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: RetornoConsultaLote
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: RetornoConsultaNFSeRPS
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: RetornoConsultaNotas
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: RetornoConsultaSeqRps
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: RetornoEnvioLoteRPS
+    :members:
+    :undoc-members:
+    :show-inheritance:
+.. automodule:: Tipos
     :members:
     :undoc-members:
     :show-inheritance:

@@ -252,3 +252,4 @@ epub_copyright = u'2010, Dave Kuhlman'
 # The depth of the table of contents in toc.ncx.
 #epub_tocdepth = 3
 sys.path.append(os.path.abspath('../nfselib/v2_03'))
+sys.path.append(os.path.abspath('../nfselib/dsf'))
