@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.ws.integration.pm.bsit.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.integration.pm.bsit.com.br/" name="nfseWS" targetNamespace="http://impl.ws.integration.pm.bsit.com.br/">
+  <wsdl:import location="http://gestaopublica.jatai.bsit-br.com.br/integracao/services/nfseWS?wsdl=nfseWS.wsdl" namespace="http://ws.integration.pm.bsit.com.br/">
+    </wsdl:import>
+  <wsdl:binding name="nfseWSSoapBinding" type="ns1:nfseWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="cancelarNfse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelarNfse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelarNfseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarNfseRps">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarNfseRps">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarNfseRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gerarNfse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="gerarNfse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="gerarNfseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarLoteRpsSincrono">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="enviarLoteRpsSincrono">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="enviarLoteRpsSincronoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarLoteRps">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarLoteRps">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarLoteRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarRps">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelarRps">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelarRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPdfNfseRps">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="consultarPdfNfseRps">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarPdfNfseRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificarStatusIntegracao">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="verificarStatusIntegracao">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="verificarStatusIntegracaoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="nfseWS">
+    <wsdl:port binding="tns:nfseWSSoapBinding" name="IntegrationNFSEWSImplPort">
+      <soap:address location="http://gestaopublica.jatai.bsit-br.com.br/integracao/services/nfseWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

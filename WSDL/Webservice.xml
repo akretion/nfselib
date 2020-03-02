@@ -1522,24 +1522,24 @@
       <CancelarNfse>wsdl\producao\PNovaSantaRitaRS-Dueto.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="2910800" Nome="Feira de Santana - BA" UF="BA" Padrao="WEBISS">
+  <Estado ID="2910800" Nome="Feira de Santana - BA" UF="BA" Padrao="WEBISS_202">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</ConsultarLoteRps>
+      <RecepcionarLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</CancelarNfse>
+      <CancelarNfse>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3550308" Nome="São Paulo - SP" UF="SP" Padrao="PAULISTANA">
@@ -2945,7 +2945,7 @@
       <ConsultarNfse>WSDL\Producao\PVitoriaES-VVISS.wsdl</ConsultarNfse>
       <ConsultarLoteRps>WSDL\Producao\PVitoriaES-VVISS.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PVitoriaES-VVISS.wsdl</CancelarNfse>
+      <CancelarNfse>WSDL\Producao\PVitoriaES-VVISS.wsdl</CancelarNfse> 
     </LocalProducao>
   </Estado>
   <Estado ID="4320008" Nome="Sapucaia do Sul - RS" UF="RS" Padrao="GIF">
@@ -8258,6 +8258,108 @@
       <ConsultarLoteRps>wsdl\producao\PLoandaPR-Elotech.wsdl</ConsultarLoteRps>
       <ConsultarURLNfse></ConsultarURLNfse>
       <CancelarNfse>wsdl\producao\PLoandaPR-Elotech.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3145208" Nome="Nova Serrana - MG" UF="MG" Padrao="SIGCORP_SIGISS_203">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\HNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</SubstituirNfse>
+      <ConsultaNFSeTomados>wsdl\homologacao\HNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultaNFSeTomados>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\producao\PNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</SubstituirNfse>
+      <ConsultaNFSeTomados>wsdl\producao\PNovaSerranaMG-SIGCORP_SIGISS_203.wsdl</ConsultaNFSeTomados>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4320909" Nome="Tapejara - RS" UF="RS" Padrao="TECNOSISTEMAS">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>WSDL\Homologacao\HTapejaraRS-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Homologacao\HTapejaraRS-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Homologacao\HTapejaraRS-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Homologacao\HTapejaraRS-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Homologacao\HTapejaraRS-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Homologacao\HTapejaraRS-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\Homologacao\HTapejaraRS-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>WSDL\Producao\PTapejaraRS-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PTapejaraRS-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>WSDL\Producao\PTapejaraRS-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>WSDL\Producao\PTapejaraRS-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>WSDL\Producao\PTapejaraRS-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+      <CancelarNfse>WSDL\Producao\PTapejaraRS-CancelamentoNFSe.wsdl</CancelarNfse>
+      <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PTapejaraRS-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="5211909" Nome="Jataí - GO" UF="GO" Padrao="BSITBR">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps></ConsultarNfsePorRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarLoteRps></ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PJataiGO-BSITBR.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PJataiGO-BSITBR.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PJataiGO-BSITBR.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PJataiGO-BSITBR.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PJataiGO-BSITBR.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PJataiGO-BSITBR.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4300109" Nome="Agudo - RS" UF="RS" Padrao="PRONIN">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HAgudoRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HAgudoRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HAgudoRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HAgudoRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HAgudoRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HAgudoRS-PRONIN.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PAgudoRS-PRONIN.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PAgudoRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PAgudoRS-PRONIN.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PAgudoRS-PRONIN.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PAgudoRS-PRONIN.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PParanapanamaSP-PRONINServices.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="2504009" Nome="Campina Grande - PB" UF="PB" Padrao="WEBISS_202">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HCampinaGrandePB-WebISS_202.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCampinaGrandePB-WebISS_202.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCampinaGrandePB-WebISS_202.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCampinaGrandePB-WebISS_202.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCampinaGrandePB-WebISS_202.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HCampinaGrandePB-WebISS_202.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PCampinaGrandePB-WebISS_202.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCampinaGrandePB-WebISS_202.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCampinaGrandePB-WebISS_202.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCampinaGrandePB-WebISS_202.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCampinaGrandePB-WebISS_202.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PCampinaGrandePB-WebISS_202.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
 </Webservice>

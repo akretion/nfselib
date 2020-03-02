@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="mConsultaNFSeServicosPrestados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="remessa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cabecalho" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mConsultaNFSeServicosPrestadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mConsultaNFSeServicosPrestadosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="mConsultaNFSeServicosPrestadosSoapIn">
+    <wsdl:part name="parameters" element="tns:mConsultaNFSeServicosPrestados" />
+  </wsdl:message>
+  <wsdl:message name="mConsultaNFSeServicosPrestadosSoapOut">
+    <wsdl:part name="parameters" element="tns:mConsultaNFSeServicosPrestadosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultaNFSeServicosPrestadosSoap">
+    <wsdl:operation name="mConsultaNFSeServicosPrestados">
+      <wsdl:input message="tns:mConsultaNFSeServicosPrestadosSoapIn" />
+      <wsdl:output message="tns:mConsultaNFSeServicosPrestadosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultaNFSeServicosPrestadosSoap" type="tns:ConsultaNFSeServicosPrestadosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mConsultaNFSeServicosPrestados">
+      <soap:operation soapAction="http://tempuri.org/mConsultaNFSeServicosPrestados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConsultaNFSeServicosPrestadosSoap12" type="tns:ConsultaNFSeServicosPrestadosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mConsultaNFSeServicosPrestados">
+      <soap12:operation soapAction="http://tempuri.org/mConsultaNFSeServicosPrestados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultaNFSeServicosPrestados">
+    <wsdl:port name="ConsultaNFSeServicosPrestadosSoap" binding="tns:ConsultaNFSeServicosPrestadosSoap">
+      <soap:address location="http://homologatapejara.nfse-tecnos.com.br:9094/ConsultaNFSeServicosPrestados.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConsultaNFSeServicosPrestadosSoap12" binding="tns:ConsultaNFSeServicosPrestadosSoap12">
+      <soap12:address location="http://homologatapejara.nfse-tecnos.com.br:9094/ConsultaNFSeServicosPrestados.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
