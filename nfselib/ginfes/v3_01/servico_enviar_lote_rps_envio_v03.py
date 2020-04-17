@@ -739,7 +739,7 @@ class EnviarLoteRpsEnvio(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='', name_='EnviarLoteRpsEnvio', namespacedef_='', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='EnviarLoteRpsEnvio', namespacedef_='xmlns="http://www.ginfes.com.br/servico_enviar_lote_rps_envio_v03.xsd" xmlns:tipos="http://www.ginfes.com.br/tipos_v03.xsd"', pretty_print=True):
         imported_ns_def_ = GenerateDSNamespaceDefs_.get('EnviarLoteRpsEnvio')
         if imported_ns_def_ is not None:
             namespacedef_ = imported_ns_def_

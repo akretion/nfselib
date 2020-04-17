@@ -752,7 +752,7 @@ class ConsultarSituacaoLoteRpsEnvio(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='', name_='ConsultarSituacaoLoteRpsEnvio', namespacedef_='', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ConsultarSituacaoLoteRpsEnvio', namespacedef_='xmlns:tipos="http://www.ginfes.com.br/tipos_v03.xsd"', pretty_print=True):
         imported_ns_def_ = GenerateDSNamespaceDefs_.get('ConsultarSituacaoLoteRpsEnvio')
         if imported_ns_def_ is not None:
             namespacedef_ = imported_ns_def_

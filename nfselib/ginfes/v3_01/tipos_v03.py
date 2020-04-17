@@ -127,7 +127,7 @@ except ImportError as exp:
                     raise_parse_error(node, 'Requires sequence of integers')
             return values
         def gds_format_float(self, input_data, input_name=''):
-            return ('%.15f' % input_data).rstrip('0')
+            return ('%.2f' % input_data)
         def gds_validate_float(self, input_data, node=None, input_name=''):
             return input_data
         def gds_format_float_list(self, input_data, input_name=''):
@@ -7578,7 +7578,7 @@ class ListaRpsType(GeneratedsSuper):
             return True
         else:
             return False
-    def export(self, outfile, level, namespace_='', name_='ListaRpsType', namespacedef_='', pretty_print=True):
+    def export(self, outfile, level, namespace_='', name_='ListaRpsType', namespacedef_='xmlns="http://www.ginfes.com.br/tipos_v03.xsd"', pretty_print=True):
         imported_ns_def_ = GenerateDSNamespaceDefs_.get('ListaRpsType')
         if imported_ns_def_ is not None:
             namespacedef_ = imported_ns_def_
