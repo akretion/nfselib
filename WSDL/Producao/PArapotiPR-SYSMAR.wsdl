@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions name="ws" targetNamespace="ws" xmlns:wsdlns="ws" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="ws">
+	<types>
+		<schema targetNamespace="ws" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+			<element name="ws.ENVIARLOTERPSSINCRONO">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Enviarloterpssincronoin" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.ENVIARLOTERPSSINCRONOResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Enviarloterpssincronoout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.ENVIARLOTERPS">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Enviarloterpsin" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.ENVIARLOTERPSResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Enviarloterpsout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.GERARNFSE">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Gerarnfsein" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.GERARNFSEResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Gerarnfseout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CANCELARNFSE">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Cancelarnfsein" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CANCELARNFSEResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Cancelarnfseout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.SUBSTITUIRNFSE">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Substituirnfsein" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.SUBSTITUIRNFSEResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Substituirnfseout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARLOTERPS">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarloterpsin" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARLOTERPSResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarloterpsout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARNFSERPS">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfserpsin" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARNFSERPSResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfserpsout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARNFSESERVICOPRESTADO">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseservicoprestadoin" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARNFSESERVICOPRESTADOResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseservicoprestadoout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARNFSESERVICOTOMADO">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseservicotomadoin" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARNFSESERVICOTOMADOResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfseservicotomadoout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARNFSEFAIXA">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfsefaixain" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.CONSULTARNFSEFAIXAResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Consultarnfsefaixaout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.ENVIARCARTACORRECAONFSE">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Enviarcartacorrecaonfsein" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.ENVIARCARTACORRECAONFSEResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Enviarcartacorrecaonfseout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.VALIDARXML">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Validarxmlin" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="ws.VALIDARXMLResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Validarxmlout" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+	<message name="ws.ENVIARLOTERPSSINCRONOSoapIn">
+		<part name="parameters" element="tns:ws.ENVIARLOTERPSSINCRONO"/>
+	</message>
+	<message name="ws.ENVIARLOTERPSSINCRONOSoapOut">
+		<part name="parameters" element="tns:ws.ENVIARLOTERPSSINCRONOResponse"/>
+	</message>
+	<message name="ws.ENVIARLOTERPSSoapIn">
+		<part name="parameters" element="tns:ws.ENVIARLOTERPS"/>
+	</message>
+	<message name="ws.ENVIARLOTERPSSoapOut">
+		<part name="parameters" element="tns:ws.ENVIARLOTERPSResponse"/>
+	</message>
+	<message name="ws.GERARNFSESoapIn">
+		<part name="parameters" element="tns:ws.GERARNFSE"/>
+	</message>
+	<message name="ws.GERARNFSESoapOut">
+		<part name="parameters" element="tns:ws.GERARNFSEResponse"/>
+	</message>
+	<message name="ws.CANCELARNFSESoapIn">
+		<part name="parameters" element="tns:ws.CANCELARNFSE"/>
+	</message>
+	<message name="ws.CANCELARNFSESoapOut">
+		<part name="parameters" element="tns:ws.CANCELARNFSEResponse"/>
+	</message>
+	<message name="ws.SUBSTITUIRNFSESoapIn">
+		<part name="parameters" element="tns:ws.SUBSTITUIRNFSE"/>
+	</message>
+	<message name="ws.SUBSTITUIRNFSESoapOut">
+		<part name="parameters" element="tns:ws.SUBSTITUIRNFSEResponse"/>
+	</message>
+	<message name="ws.CONSULTARLOTERPSSoapIn">
+		<part name="parameters" element="tns:ws.CONSULTARLOTERPS"/>
+	</message>
+	<message name="ws.CONSULTARLOTERPSSoapOut">
+		<part name="parameters" element="tns:ws.CONSULTARLOTERPSResponse"/>
+	</message>
+	<message name="ws.CONSULTARNFSERPSSoapIn">
+		<part name="parameters" element="tns:ws.CONSULTARNFSERPS"/>
+	</message>
+	<message name="ws.CONSULTARNFSERPSSoapOut">
+		<part name="parameters" element="tns:ws.CONSULTARNFSERPSResponse"/>
+	</message>
+	<message name="ws.CONSULTARNFSESERVICOPRESTADOSoapIn">
+		<part name="parameters" element="tns:ws.CONSULTARNFSESERVICOPRESTADO"/>
+	</message>
+	<message name="ws.CONSULTARNFSESERVICOPRESTADOSoapOut">
+		<part name="parameters" element="tns:ws.CONSULTARNFSESERVICOPRESTADOResponse"/>
+	</message>
+	<message name="ws.CONSULTARNFSESERVICOTOMADOSoapIn">
+		<part name="parameters" element="tns:ws.CONSULTARNFSESERVICOTOMADO"/>
+	</message>
+	<message name="ws.CONSULTARNFSESERVICOTOMADOSoapOut">
+		<part name="parameters" element="tns:ws.CONSULTARNFSESERVICOTOMADOResponse"/>
+	</message>
+	<message name="ws.CONSULTARNFSEFAIXASoapIn">
+		<part name="parameters" element="tns:ws.CONSULTARNFSEFAIXA"/>
+	</message>
+	<message name="ws.CONSULTARNFSEFAIXASoapOut">
+		<part name="parameters" element="tns:ws.CONSULTARNFSEFAIXAResponse"/>
+	</message>
+	<message name="ws.ENVIARCARTACORRECAONFSESoapIn">
+		<part name="parameters" element="tns:ws.ENVIARCARTACORRECAONFSE"/>
+	</message>
+	<message name="ws.ENVIARCARTACORRECAONFSESoapOut">
+		<part name="parameters" element="tns:ws.ENVIARCARTACORRECAONFSEResponse"/>
+	</message>
+	<message name="ws.VALIDARXMLSoapIn">
+		<part name="parameters" element="tns:ws.VALIDARXML"/>
+	</message>
+	<message name="ws.VALIDARXMLSoapOut">
+		<part name="parameters" element="tns:ws.VALIDARXMLResponse"/>
+	</message>
+	<portType name="wsSoapPort">
+		<operation name="ENVIARLOTERPSSINCRONO">
+			<input message="wsdlns:ws.ENVIARLOTERPSSINCRONOSoapIn"/>
+			<output message="wsdlns:ws.ENVIARLOTERPSSINCRONOSoapOut"/>
+		</operation>
+		<operation name="ENVIARLOTERPS">
+			<input message="wsdlns:ws.ENVIARLOTERPSSoapIn"/>
+			<output message="wsdlns:ws.ENVIARLOTERPSSoapOut"/>
+		</operation>
+		<operation name="GERARNFSE">
+			<input message="wsdlns:ws.GERARNFSESoapIn"/>
+			<output message="wsdlns:ws.GERARNFSESoapOut"/>
+		</operation>
+		<operation name="CANCELARNFSE">
+			<input message="wsdlns:ws.CANCELARNFSESoapIn"/>
+			<output message="wsdlns:ws.CANCELARNFSESoapOut"/>
+		</operation>
+		<operation name="SUBSTITUIRNFSE">
+			<input message="wsdlns:ws.SUBSTITUIRNFSESoapIn"/>
+			<output message="wsdlns:ws.SUBSTITUIRNFSESoapOut"/>
+		</operation>
+		<operation name="CONSULTARLOTERPS">
+			<input message="wsdlns:ws.CONSULTARLOTERPSSoapIn"/>
+			<output message="wsdlns:ws.CONSULTARLOTERPSSoapOut"/>
+		</operation>
+		<operation name="CONSULTARNFSERPS">
+			<input message="wsdlns:ws.CONSULTARNFSERPSSoapIn"/>
+			<output message="wsdlns:ws.CONSULTARNFSERPSSoapOut"/>
+		</operation>
+		<operation name="CONSULTARNFSESERVICOPRESTADO">
+			<input message="wsdlns:ws.CONSULTARNFSESERVICOPRESTADOSoapIn"/>
+			<output message="wsdlns:ws.CONSULTARNFSESERVICOPRESTADOSoapOut"/>
+		</operation>
+		<operation name="CONSULTARNFSESERVICOTOMADO">
+			<input message="wsdlns:ws.CONSULTARNFSESERVICOTOMADOSoapIn"/>
+			<output message="wsdlns:ws.CONSULTARNFSESERVICOTOMADOSoapOut"/>
+		</operation>
+		<operation name="CONSULTARNFSEFAIXA">
+			<input message="wsdlns:ws.CONSULTARNFSEFAIXASoapIn"/>
+			<output message="wsdlns:ws.CONSULTARNFSEFAIXASoapOut"/>
+		</operation>
+		<operation name="ENVIARCARTACORRECAONFSE">
+			<input message="wsdlns:ws.ENVIARCARTACORRECAONFSESoapIn"/>
+			<output message="wsdlns:ws.ENVIARCARTACORRECAONFSESoapOut"/>
+		</operation>
+		<operation name="VALIDARXML">
+			<input message="wsdlns:ws.VALIDARXMLSoapIn"/>
+			<output message="wsdlns:ws.VALIDARXMLSoapOut"/>
+		</operation>
+	</portType>
+	<binding name="wsSoapBinding" type="wsdlns:wsSoapPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ENVIARLOTERPSSINCRONO">
+			<soap:operation soapAction="wsaction/AWS.ENVIARLOTERPSSINCRONO"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ENVIARLOTERPS">
+			<soap:operation soapAction="wsaction/AWS.ENVIARLOTERPS"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GERARNFSE">
+			<soap:operation soapAction="wsaction/AWS.GERARNFSE"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CANCELARNFSE">
+			<soap:operation soapAction="wsaction/AWS.CANCELARNFSE"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="SUBSTITUIRNFSE">
+			<soap:operation soapAction="wsaction/AWS.SUBSTITUIRNFSE"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CONSULTARLOTERPS">
+			<soap:operation soapAction="wsaction/AWS.CONSULTARLOTERPS"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CONSULTARNFSERPS">
+			<soap:operation soapAction="wsaction/AWS.CONSULTARNFSERPS"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CONSULTARNFSESERVICOPRESTADO">
+			<soap:operation soapAction="wsaction/AWS.CONSULTARNFSESERVICOPRESTADO"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CONSULTARNFSESERVICOTOMADO">
+			<soap:operation soapAction="wsaction/AWS.CONSULTARNFSESERVICOTOMADO"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="CONSULTARNFSEFAIXA">
+			<soap:operation soapAction="wsaction/AWS.CONSULTARNFSEFAIXA"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="ENVIARCARTACORRECAONFSE">
+			<soap:operation soapAction="wsaction/AWS.ENVIARCARTACORRECAONFSE"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="VALIDARXML">
+			<soap:operation soapAction="wsaction/AWS.VALIDARXML"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ws">
+		<port name="wsSoapPort" binding="wsdlns:wsSoapBinding">
+			<soap:address location="http://sysiss.arapoti.pr.gov.br:7476/wsysarr/servlet/aws"/>
+		</port>
+	</service>
+</definitions>

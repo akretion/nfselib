@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.tinus.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.tinus.com.br">
+    <types>
+        <s:schema elementFormDefault="qualified" targetNamespace="http://www.tinus.com.br">
+            <s:element name="ConsultarSituacaoLoteRps">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="ConsultarSituacaoLoteRpsEnvio" type="s0:ConsultarSituacaoLoteRpsEnvio"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ConsultarSituacaoLoteRpsEnvio">
+                <s:sequence>
+                    <s:element name="Prestador" type="s0:tcIdentificacaoPrestador"/>
+                    <s:element name="Protocolo" type="s0:tsNumeroProtocolo"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcIdentificacaoPrestador">
+                <s:sequence>
+                    <s:element name="Cnpj" type="s0:tsCnpj"/>
+                    <s:element minOccurs="0" name="InscricaoMunicipal" type="s0:tsInscricaoMunicipal"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsCnpj">
+                <s:restriction base="s:string">
+                    <s:maxLength value="14"/>
+                    <s:minLength value="14"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsInscricaoMunicipal">
+                <s:restriction base="s:string">
+                    <s:maxLength value="15"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsNumeroProtocolo">
+                <s:restriction base="s:string">
+                    <s:maxLength value="50"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:element name="ConsultarSituacaoLoteRpsResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="ConsultarSituacaoLoteRpsResult" type="s0:ConsultarSituacaoLoteRpsResposta"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ConsultarSituacaoLoteRpsResposta">
+                <s:sequence>
+                    <s:element minOccurs="0" name="NumeroLote" type="s0:tsNumeroLote"/>
+                    <s:element minOccurs="0" name="Situacao" type="s0:tsSituacaoLoteRps"/>
+                    <s:element minOccurs="0" ref="s0:ListaMensagemRetorno"/>
+                </s:sequence>
+            </s:complexType>
+            <s:element name="ListaMensagemRetorno" type="s0:ArrayOfMensagemRetornotcMensagemRetorno"/>
+            <s:simpleType name="tsNumeroLote">
+                <s:restriction base="s:nonNegativeInteger">
+                    <s:minInclusive value="0"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsSituacaoLoteRps">
+                <s:restriction base="s:byte">
+                    <s:pattern value="1|2|3|4"/>
+                    <s:maxInclusive value="127"/>
+                    <s:minInclusive value="-128"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="ArrayOfMensagemRetornotcMensagemRetorno">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="MensagemRetorno" nillable="true" type="s0:tcMensagemRetorno"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcMensagemRetorno">
+                <s:sequence>
+                    <s:element name="Codigo" type="s0:tsCodigoMensagemAlerta"/>
+                    <s:element name="Mensagem" type="s0:tsDescricaoMensagemAlerta"/>
+                    <s:element minOccurs="0" name="Correcao" type="s0:tsDescricaoMensagemAlerta"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsCodigoMensagemAlerta">
+                <s:restriction base="s:string">
+                    <s:maxLength value="4"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsDescricaoMensagemAlerta">
+                <s:restriction base="s:string">
+                    <s:maxLength value="200"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:element name="Test">
+                <s:complexType>
+                    <s:sequence/>
+                </s:complexType>
+            </s:element>
+            <s:element name="TestResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="TestResult" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+        </s:schema>
+    </types>
+    <message name="ConsultarSituacaoLoteRpsSoapIn">
+        <part name="parameters" element="s0:ConsultarSituacaoLoteRps"/>
+    </message>
+    <message name="ConsultarSituacaoLoteRpsSoapOut">
+        <part name="parameters" element="s0:ConsultarSituacaoLoteRpsResponse"/>
+    </message>
+    <message name="TestSoapIn">
+        <part name="parameters" element="s0:Test"/>
+    </message>
+    <message name="TestSoapOut">
+        <part name="parameters" element="s0:TestResponse"/>
+    </message>
+    <portType name="ConsultarSituacaoLoteRpsSoap">
+        <operation name="ConsultarSituacaoLoteRps">
+            <input message="s0:ConsultarSituacaoLoteRpsSoapIn"/>
+            <output message="s0:ConsultarSituacaoLoteRpsSoapOut"/>
+        </operation>
+        <operation name="Test">
+            <input message="s0:TestSoapIn"/>
+            <output message="s0:TestSoapOut"/>
+        </operation>
+    </portType>
+    <binding name="ConsultarSituacaoLoteRpsSoap" type="s0:ConsultarSituacaoLoteRpsSoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <operation name="ConsultarSituacaoLoteRps">
+            <soap:operation soapAction="http://www.tinus.com.br/WSNFSE.ConsultarSituacaoLoteRps.ConsultarSituacaoLoteRps" style="document"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="Test">
+            <soap:operation soapAction="http://www.tinus.com.br/WSNFSE.ConsultarSituacaoLoteRps.Test" style="document"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="ConsultarSituacaoLoteRps">
+        <port name="ConsultarSituacaoLoteRpsSoap" binding="s0:ConsultarSituacaoLoteRpsSoap">
+            <soap:address location="http://www.tinus.com.br/csp/saojosederibamar/WSNFSE.ConsultarSituacaoLoteRps.cls"/>
+        </port>
+    </service>
+</definitions>
