@@ -73,7 +73,7 @@ def parsexml_(infile, parser=None, **kwargs):
 #
 
 try:
-    from generatedsnamespaces import GenerateDSNamespaceDefs as GenerateDSNamespaceDefs_
+    from nfselib.ginfes.v3_01.generatedsnamespaces import GenerateDSNamespaceDefs as GenerateDSNamespaceDefs_
 except ImportError:
     GenerateDSNamespaceDefs_ = {}
 
@@ -1552,10 +1552,10 @@ class tcIdentificacaoPrestador(GeneratedsSuper):
             eol_ = ''
         if self.Cnpj is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<Cnpj>%s</Cnpj>%s' % (self.gds_encode(self.gds_format_string(quote_xml(self.Cnpj), input_name='Cnpj')), eol_))
+            outfile.write('<tipos:Cnpj>%s</tipos:Cnpj>%s' % (self.gds_encode(self.gds_format_string(quote_xml(self.Cnpj), input_name='Cnpj')), eol_))
         if self.InscricaoMunicipal is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<InscricaoMunicipal>%s</InscricaoMunicipal>%s' % (self.gds_encode(self.gds_format_string(quote_xml(self.InscricaoMunicipal), input_name='InscricaoMunicipal')), eol_))
+            outfile.write('<tipos:InscricaoMunicipal>%s</tipos:InscricaoMunicipal>%s' % (self.gds_encode(self.gds_format_string(quote_xml(self.InscricaoMunicipal), input_name='InscricaoMunicipal')), eol_))
     def build(self, node):
         already_processed = set()
         self.buildAttributes(node, node.attrib, already_processed)
