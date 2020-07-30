@@ -3044,10 +3044,10 @@ class tcIdentificacaoNfse(GeneratedsSuper):
         showIndent(outfile, level, pretty_print)
         outfile.write('<%s%s%s' % (namespace_, name_, namespacedef_ and ' ' + namespacedef_ or '', ))
         already_processed = set()
-        self.exportAttributes(outfile, level, already_processed, namespace_, name_='tcIdentificacaoNfse')
+        self.exportAttributes(outfile, level, already_processed, namespace_='p1:', name_='tcIdentificacaoNfse')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='', name_='tcIdentificacaoNfse', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='p1:', name_='tcIdentificacaoNfse', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
@@ -3061,16 +3061,16 @@ class tcIdentificacaoNfse(GeneratedsSuper):
             eol_ = ''
         if self.Numero is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<Numero>%s</Numero>%s' % (self.gds_format_integer(self.Numero, input_name='Numero'), eol_))
+            outfile.write('<%sNumero>%s</%sNumero>%s' % (namespace_, self.gds_format_integer(self.Numero, input_name='Numero'), namespace_, eol_))
         if self.Cnpj is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<Cnpj>%s</Cnpj>%s' % (self.gds_encode(self.gds_format_string(quote_xml(self.Cnpj), input_name='Cnpj')), eol_))
+            outfile.write('<%sCnpj>%s</%sCnpj>%s' % (namespace_, self.gds_encode(self.gds_format_string(quote_xml(self.Cnpj), input_name='Cnpj')), namespace_, eol_))
         if self.InscricaoMunicipal is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<InscricaoMunicipal>%s</InscricaoMunicipal>%s' % (self.gds_encode(self.gds_format_string(quote_xml(self.InscricaoMunicipal), input_name='InscricaoMunicipal')), eol_))
+            outfile.write('<%sInscricaoMunicipal>%s</%sInscricaoMunicipal>%s' % (namespace_, self.gds_encode(self.gds_format_string(quote_xml(self.InscricaoMunicipal), input_name='InscricaoMunicipal')), namespace_,  eol_))
         if self.CodigoMunicipio is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<CodigoMunicipio>%s</CodigoMunicipio>%s' % (self.gds_format_integer(self.CodigoMunicipio, input_name='CodigoMunicipio'), eol_))
+            outfile.write('<%sCodigoMunicipio>%s</%sCodigoMunicipio>%s' % (namespace_, self.gds_format_integer(self.CodigoMunicipio, input_name='CodigoMunicipio'), namespace_, eol_))
     def build(self, node):
         already_processed = set()
         self.buildAttributes(node, node.attrib, already_processed)
@@ -3662,10 +3662,10 @@ class tcInfPedidoCancelamento(GeneratedsSuper):
         showIndent(outfile, level, pretty_print)
         outfile.write('<%s%s%s' % (namespace_, name_, namespacedef_ and ' ' + namespacedef_ or '', ))
         already_processed = set()
-        self.exportAttributes(outfile, level, already_processed, namespace_, name_='tcInfPedidoCancelamento')
+        self.exportAttributes(outfile, level, already_processed, namespace_='p1:', name_='tcInfPedidoCancelamento')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='', name_='tcInfPedidoCancelamento', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='p1:', name_='tcInfPedidoCancelamento', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
@@ -3683,7 +3683,7 @@ class tcInfPedidoCancelamento(GeneratedsSuper):
             self.IdentificacaoNfse.export(outfile, level, namespace_, name_='IdentificacaoNfse', pretty_print=pretty_print)
         if self.CodigoCancelamento is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<CodigoCancelamento>%s</CodigoCancelamento>%s' % (self.gds_encode(self.gds_format_string(quote_xml(self.CodigoCancelamento), input_name='CodigoCancelamento')), eol_))
+            outfile.write('<%sCodigoCancelamento>%s</%sCodigoCancelamento>%s' % (namespace_, self.gds_encode(self.gds_format_string(quote_xml(self.CodigoCancelamento), input_name='CodigoCancelamento')), namespace_, eol_))
     def build(self, node):
         already_processed = set()
         self.buildAttributes(node, node.attrib, already_processed)
@@ -3755,10 +3755,10 @@ class tcPedidoCancelamento(GeneratedsSuper):
         showIndent(outfile, level, pretty_print)
         outfile.write('<%s%s%s' % (namespace_, name_, namespacedef_ and ' ' + namespacedef_ or '', ))
         already_processed = set()
-        self.exportAttributes(outfile, level, already_processed, namespace_, name_='tcPedidoCancelamento')
+        self.exportAttributes(outfile, level, already_processed, namespace_='p1:', name_='tcPedidoCancelamento')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='', name_='tcPedidoCancelamento', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='p1:', name_='tcPedidoCancelamento', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
