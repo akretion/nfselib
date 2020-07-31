@@ -191,6 +191,7 @@
 			<xsd:enumeration value="01.05"/>
 			<xsd:enumeration value="01.06"/>
 			<xsd:enumeration value="01.07"/>
+			<xsd:enumeration value="1.07"/>
 			<xsd:enumeration value="01.08"/>
 			<xsd:enumeration value="02.01"/>
 			<xsd:enumeration value="03.02"/>

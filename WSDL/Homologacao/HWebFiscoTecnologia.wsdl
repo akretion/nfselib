@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://201.16.156.170/issqn/wservice/wsnfe_teste_homologacao.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://201.16.156.170/issqn/wservice/wsnfe_teste_homologacao.php">
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://187.32.116.170/issqn/wservice/wsnfe_teste_homologacao.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://187.32.116.170/issqn/wservice/wsnfe_teste_homologacao.php">
 <types>
-<xsd:schema targetNamespace="http://201.16.156.170/issqn/wservice/wsnfe_teste_homologacao.php"
+<xsd:schema targetNamespace="http://187.32.116.170/issqn/wservice/wsnfe_teste_homologacao.php"
 >
  <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
  <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
@@ -138,14 +138,14 @@
 <binding name="webserviceBinding" type="tns:webservicePortType">
   <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
   <operation name="EnvNfe">
-    <soap:operation soapAction="https://www.webfiscotecnologia.com.br/issqn/wservice/wsnfe_teste_homologacao.php/EnvNfe" style="rpc"/>
+    <soap:operation soapAction="http://www.webfiscotecnologia.com.br/issqn/wservice/wsnfe_teste_homologacao.php/EnvNfe" style="rpc"/>
     <input><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
     <output><soap:body use="encoded" namespace="" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
   </operation>
 </binding>
 <service name="webservice">
   <port name="webservicePort" binding="tns:webserviceBinding">
-    <soap:address location="https://www.webfiscotecnologia.com.br:443/issqn/wservice/wsnfe_teste_homologacao.php"/>
+    <soap:address location="http://www.webfiscotecnologia.com.br/issqn/wservice/wsnfe_teste_homologacao.php"/>
   </port>
 </service>
 </definitions>

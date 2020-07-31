@@ -294,7 +294,7 @@
   </wsdl:binding>
   <wsdl:service name="NfseServiceImplVgpService">
     <wsdl:port binding="tns:NfseServiceImplVgpServiceSoapBinding" name="nfseVgpPort">
-      <soap:address location="https://ws.homolog.govdigital.com.br/ws/vgp"/>
+      <soap:address location="https://ws.homolog.nfe-cidades.com.br/ws/vgp"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

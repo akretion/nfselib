@@ -1054,25 +1054,25 @@
 			<CancelarNfse>wsdl\producao\PMonteNegroRSCancelarNFSE.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="4303103" Nome="Cachoeirinha - RS" UF="RS" Padrao="THEMA">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HThemaCachoerinhaRSRemessa.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HThemaCachoerinhaRSConsulta.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HThemaCachoerinhaRSConsulta.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HThemaCachoerinhaRSConsulta.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HThemaCachoerinhaRSConsulta.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\homologacao\HThemaCachoerinhaRSCancelamento.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PThemaCachoerinhaRSRemessa.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PThemaCachoerinhaRSConsulta.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PThemaCachoerinhaRSConsulta.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PThemaCachoerinhaRSConsulta.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PThemaCachoerinhaRSConsulta.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\producao\PThemaCachoerinhaRSCancelamento.wsdl</CancelarNfse>
-		</LocalProducao>
+	<Estado ID="4303103" Nome="Cachoeirinha - RS" UF="RS" Padrao="IPM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
+    </LocalProducao>
 	</Estado>
 	<Estado ID="4311403" Nome="Lajeado - RS" UF="RS" Padrao="THEMA">
 		<LocalHomologacao>
@@ -1531,24 +1531,24 @@
 			<CancelarNfse>wsdl\producao\PNovaSantaRitaRS-Dueto.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="2910800" Nome="Feira de Santana - BA" UF="BA" Padrao="WEBISS_202">
+	<Estado ID="2910800" Nome="Feira de Santana - BA" UF="BA" Padrao="WEBISS">
 		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</ConsultarLoteRps>
+			<RecepcionarLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</ConsultarLoteRps>
 			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\homologacao\HFeiradeSantanaBA_WebISS_202.wsdl</CancelarNfse>
+			<CancelarNfse>wsdl\homologacao\HFeiradeSantanaBA_WebISS.wsdl</CancelarNfse>
 		</LocalHomologacao>
 		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</ConsultarLoteRps>
+			<RecepcionarLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</ConsultarLoteRps>
 			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\producao\PFeiradeSantanaBA_WebISS_202.wsdl</CancelarNfse>
+			<CancelarNfse>wsdl\producao\PFeiradeSantanaBA_WebISS.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
 	<Estado ID="3550308" Nome="São Paulo - SP" UF="SP" Padrao="PAULISTANA">
@@ -1938,26 +1938,6 @@
 			<ConsultarLoteRps>WSDL\Producao\PJacarei-ISSNET.wsdl</ConsultarLoteRps>
 			<ConsultarURLNfse>WSDL\Producao\PJacarei-ISSNET.wsdl</ConsultarURLNfse>
 			<CancelarNfse>WSDL\Producao\PJacarei-ISSNET.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
-	<Estado ID="4104808" Nome="Cascavel - PR" UF="PR" Padrao="ISSNET">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>WSDL\Homologacao\HCascavel-ISSNet.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HCascavel-ISSNet.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Homologacao\HCascavel-ISSNet.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Homologacao\HCascavel-ISSNet.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Homologacao\HCascavel-ISSNet.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse>WSDL\Homologacao\HCascavel-ISSNet.wsdl</ConsultarURLNfse>
-			<CancelarNfse>WSDL\Homologacao\HCascavel-ISSNet.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>WSDL\Producao\PCascavel-ISSNet.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Producao\PCascavel-ISSNet.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Producao\PCascavel-ISSNet.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Producao\PCascavel-ISSNet.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Producao\PCascavel-ISSNet.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse>WSDL\Producao\PCascavel-ISSNet.wsdl</ConsultarURLNfse>
-			<CancelarNfse>WSDL\Producao\PCascavel-ISSNet.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
 	<Estado ID="3303302" Nome="Niterói - RJ" UF="RJ" Padrao="TIPLAN_203">
@@ -4007,32 +3987,22 @@
 			<LMCAutorizacao></LMCAutorizacao>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="4101408" Nome="Apucarana - PR" UF="PR" Padrao="ISSONLINE_ASSESSORPUBLICO">
+	<Estado ID="4101408" Nome="Apucarana - PR" UF="PR" Padrao="PRONIN">
 		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HISSOnLineApucarana.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\homologacao\HISSOnLineApucarana.wsdl</CancelarNfse>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<ConsultarNFSePNG></ConsultarNFSePNG>
-			<ConsultarNFSePDF></ConsultarNFSePDF>
-			<InutilizarNFSe></InutilizarNFSe>
-			<LMCAutorizacao></LMCAutorizacao>
+			<RecepcionarLoteRps></RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps></ConsultarNfsePorRps>
+			<ConsultarNfse></ConsultarNfse>
+			<ConsultarLoteRps></ConsultarLoteRps>
+			<CancelarNfse></CancelarNfse>
 		</LocalHomologacao>
 		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PISSOnLineApucarana.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PISSOnLineApucarana.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\producao\PISSOnLineApucarana.wsdl</CancelarNfse>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<ConsultarNFSePNG></ConsultarNFSePNG>
-			<ConsultarNFSePDF></ConsultarNFSePDF>
-			<InutilizarNFSe></InutilizarNFSe>
-			<LMCAutorizacao></LMCAutorizacao>
+			<RecepcionarLoteRps>wsdl\producao\PApucaranaPR-PRONIN.WSDL</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PApucaranaPR-PRONIN.WSDL</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PApucaranaPR-PRONIN.WSDL</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PApucaranaPR-PRONIN.WSDL</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PApucaranaPR-PRONIN.WSDL</ConsultarLoteRps>
+			<CancelarNfse>wsdl\producao\PApucaranaPR-PRONIN.WSDL</CancelarNfse>
 		</LocalProducao>
 	</Estado>
 	<Estado ID="4100400" Nome="Almirante Tamandaré - PR" UF="PR" Padrao="BETHA">
@@ -4163,13 +4133,13 @@
 	</Estado>
 	<Estado ID="3506508" Nome="Birigui - SP" UF="SP" Padrao="SMARAPD">
 		<LocalHomologacao>
-			<RecepcionarLoteRps></RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+			<RecepcionarLoteRps>WSDL\homologacao\HBiriguiSP-WSEntrada.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\homologacao\HBiriguiSP-WSEntrada.wsdl</ConsultarSituacaoLoteRps>
 			<ConsultarNfsePorRps></ConsultarNfsePorRps>
-			<ConsultarNfse></ConsultarNfse>
+			<ConsultarNfse>WSDL\homologacao\HBiriguiSP-WSSaida.wsdl</ConsultarNfse>
 			<ConsultarLoteRps></ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse></CancelarNfse>
+			<ConsultarURLNfse>WSDL\homologacao\HBiriguiSP-WSUtil.wsdl</ConsultarURLNfse>
+			<CancelarNfse>WSDL\homologacao\HBiriguiSP-WSEntrada.wsdl</CancelarNfse>
 		</LocalHomologacao>
 		<LocalProducao>
 			<RecepcionarLoteRps>WSDL\Producao\PBiriguiSP-WSEntrada.wsdl</RecepcionarLoteRps>
@@ -4574,24 +4544,24 @@
 			<CancelarNfse>wsdl\producao\PGuarapuava-PR.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="3306305" Nome="Volta Redonda - RJ" UF="RJ" Padrao="SIMPLISS">
+	<Estado ID="3306305" Nome="Volta Redonda - RJ" UF="RJ" Padrao="ISSNET">
 		<LocalHomologacao>
-			<RecepcionarLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>WSDL\Homologacao\HVoltaRedondaRJ-SIMPLISS.wsdl</CancelarNfse>
+			<RecepcionarLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-ISSNET.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-ISSNET.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\Homologacao\HVoltaRedondaRJ-ISSNET.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\Homologacao\HVoltaRedondaRJ-ISSNET.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\Homologacao\HVoltaRedondaRJ-ISSNET.wsdl</ConsultarLoteRps>
+			<CancelarNfse>WSDL\Homologacao\HVoltaRedondaRJ-ISSNET.wsdl</CancelarNfse>
+			<ConsultarURLNfse>WSDL\Homologacao\HVoltaRedondaRJ-ISSNET.wsdl</ConsultarURLNfse>
 		</LocalHomologacao>
 		<LocalProducao>
-			<RecepcionarLoteRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>WSDL\Producao\PVoltaRedondaRJ-SIMPLISS.wsdl</CancelarNfse>
+			<RecepcionarLoteRps>WSDL\Producao\PVoltaRedondaRJ-ISSNET.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\Producao\PVoltaRedondaRJ-ISSNET.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\Producao\PVoltaRedondaRJ-ISSNET.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\Producao\PVoltaRedondaRJ-ISSNET.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\Producao\PVoltaRedondaRJ-ISSNET.wsdl</ConsultarLoteRps>
+			<CancelarNfse>WSDL\Producao\PVoltaRedondaRJ-ISSNET.wsdl</CancelarNfse>
+			<ConsultarURLNfse>WSDL\Producao\PVoltaRedondaRJ-ISSNET.wsdl</ConsultarURLNfse>
 		</LocalProducao>
 	</Estado>
 	<Estado ID="4101101" Nome="Andirá - PR" UF="PR" Padrao="SIMPLISS">
@@ -8424,4 +8394,87 @@
 			<CancelarNfse>wsdl\producao\PCanoinhasSC-PUBLICA.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
+  <Estado ID="4104808" Nome="Cascavel - PR" UF="PR" Padrao="IPM">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+	<Estado ID="3519709" Nome="Ibiúna - SP" UF="SP" Padrao="CECAM">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\HIbiuna-CECAM.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\HIbiuna-CECAM.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\HIbiuna-CECAM.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\HIbiuna-CECAM.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\HIbiuna-CECAM.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>wsdl\homologacao\HIbiuna-CECAM.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PIbiuna-CECAM.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PIbiuna-CECAM.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PIbiuna-CECAM.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PIbiuna-CECAM.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PIbiuna-CECAM.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>wsdl\producao\PIbiuna-CECAM.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
+	<Estado ID="4314159" Nome="Paverama - RS" UF="RS" Padrao="TECNOSISTEMAS">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>WSDL\homologacao\HPaveramaRS-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\homologacao\HPaveramaRS-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\homologacao\HPaveramaRS-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\homologacao\HPaveramaRS-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\homologacao\HPaveramaRS-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+			<CancelarNfse>WSDL\homologacao\HPaveramaRS-CancelamentoNFSe.wsdl</CancelarNfse>
+			<ConsultaSequenciaLoteNotaRPS>WSDL\homologacao\HPaveramaRS-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>WSDL\producao\PPaveramaRS-EnvioLoteRPSSincrono.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\producao\PPaveramaRS-ConsultaNFSePorFaixa.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\producao\PPaveramaRS-ConsultaNFSePorRPS.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\producao\PPaveramaRS-ConsultaNFSeServicosPrestados.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\producao\PPaveramaRS-ConsultaLoteRPS.wsdl</ConsultarLoteRps>
+			<CancelarNfse>WSDL\producao\PPaveramaRS-CancelamentoNFSe.wsdl</CancelarNfse>
+			<ConsultaSequenciaLoteNotaRPS>WSDL\producao\PPaveramaRS-ConsultaSequenciaLoteNotaRPS.wsdl</ConsultaSequenciaLoteNotaRPS>
+		</LocalProducao>
+	</Estado>
+<Estado ID="3305208" Nome="São pedro da aldeia - RJ" UF="RJ" Padrao="MODERNIZACAO_PUBLICA">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>WSDL\Homologacao\HSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\Homologacao\HSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\Homologacao\HSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\Homologacao\HSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>WSDL\Homologacao\HSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</CancelarNfse>
+			<ConsultaSequenciaLoteNotaRPS></ConsultaSequenciaLoteNotaRPS>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>WSDL\Producao\PSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\Producao\PSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\Producao\PSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\Producao\PSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\Producao\PSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>WSDL\Producao\PSaoPedroDaAldeira-MODERNIZACAO_PUBLICA.wsdl</CancelarNfse>
+			<ConsultaSequenciaLoteNotaRPS></ConsultaSequenciaLoteNotaRPS>
+		</LocalProducao>
+	</Estado>
+	
 </Webservice>
