@@ -1304,7 +1304,7 @@ class tcIdentificacaoRps(GeneratedsSuper):
         self.exportAttributes(outfile, level, already_processed, namespace_, name_='tcIdentificacaoRps')
         if self.hasContent_():
             outfile.write('>%s' % (eol_, ))
-            self.exportChildren(outfile, level + 1, namespace_='', name_='tcIdentificacaoRps', pretty_print=pretty_print)
+            self.exportChildren(outfile, level + 1, namespace_='tipos:', name_='tcIdentificacaoRps', pretty_print=pretty_print)
             showIndent(outfile, level, pretty_print)
             outfile.write('</%s%s>%s' % (namespace_, name_, eol_))
         else:
@@ -1318,13 +1318,13 @@ class tcIdentificacaoRps(GeneratedsSuper):
             eol_ = ''
         if self.Numero is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<Numero>%s</Numero>%s' % (self.gds_format_integer(self.Numero, input_name='Numero'), eol_))
+            outfile.write('<%sNumero>%s</%sNumero>%s' % (namespace_, self.gds_format_integer(self.Numero, input_name='Numero'), namespace_, eol_))
         if self.Serie is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<Serie>%s</Serie>%s' % (self.gds_encode(self.gds_format_string(quote_xml(self.Serie), input_name='Serie')), eol_))
+            outfile.write('<%sSerie>%s</%sSerie>%s' % (namespace_, self.gds_encode(self.gds_format_string(quote_xml(self.Serie), input_name='Serie')), namespace_, eol_))
         if self.Tipo is not None:
             showIndent(outfile, level, pretty_print)
-            outfile.write('<Tipo>%s</Tipo>%s' % (self.gds_format_integer(self.Tipo, input_name='Tipo'), eol_))
+            outfile.write('<%sTipo>%s</%sTipo>%s' % (namespace_, self.gds_format_integer(self.Tipo, input_name='Tipo'), namespace_, eol_))
     def build(self, node):
         already_processed = set()
         self.buildAttributes(node, node.attrib, already_processed)
