@@ -22,7 +22,7 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="token" type="nfse:TToken"/>
-  <xs:element name="numeroNota" type="nfse:TNota">
+  <xs:element name="numeroNota" type="xs:string">
   </xs:element>
   <xs:element name="chaveSeguranca" type="xs:string">
   </xs:element>

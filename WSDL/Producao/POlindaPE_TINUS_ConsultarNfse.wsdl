@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.tinus.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.tinus.com.br">
+    <types>
+        <s:schema elementFormDefault="qualified" targetNamespace="http://www.tinus.com.br">
+            <s:import namespace="http://www.w3.org/2000/09/xmldsig#"/>
+            <s:element name="ConsultarNfse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="Arg" type="s0:ConsultarNfseEnvio"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ConsultarNfseEnvio">
+                <s:sequence>
+                    <s:element name="Prestador" type="s0:tcIdentificacaoPrestador"/>
+                    <s:element minOccurs="0" name="NumeroNfse" type="s0:tsNumeroNfse"/>
+                    <s:element minOccurs="0" name="PeriodoEmissao" type="s0:PeriodoEmissao"/>
+                    <s:element minOccurs="0" name="Tomador" type="s0:tcIdentificacaoTomador"/>
+                    <s:element minOccurs="0" name="IntermediarioServico" type="s0:tcIdentificacaoIntermediarioServico"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcIdentificacaoPrestador">
+                <s:sequence>
+                    <s:element name="Cnpj" type="s0:tsCnpj"/>
+                    <s:element name="InscricaoMunicipal" type="s0:tsInscricaoMunicipal"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsCnpj">
+                <s:restriction base="s:string"/>
+            </s:simpleType>
+            <s:simpleType name="tsInscricaoMunicipal">
+                <s:restriction base="s:string">
+                    <s:maxLength value="15"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsNumeroNfse">
+                <s:restriction base="s:nonNegativeInteger">
+                    <s:minInclusive value="0"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="PeriodoEmissao">
+                <s:sequence>
+                    <s:element name="DataInicial" type="s:date"/>
+                    <s:element name="DataFinal" type="s:date"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcIdentificacaoTomador">
+                <s:sequence>
+                    <s:element minOccurs="0" name="CpfCnpj" type="s0:tcCpfCnpj"/>
+                    <s:element minOccurs="0" name="InscricaoMunicipal" type="s0:tsInscricaoMunicipal"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcCpfCnpj">
+                <s:sequence>
+                    <s:element minOccurs="0" name="Cpf" type="s0:tsCpf"/>
+                    <s:element minOccurs="0" name="Cnpj" type="s0:tsCnpj"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsCpf">
+                <s:restriction base="s:string"/>
+            </s:simpleType>
+            <s:complexType name="tcIdentificacaoIntermediarioServico">
+                <s:sequence>
+                    <s:element name="RazaoSocial" type="s0:tsRazaoSocial"/>
+                    <s:element name="CpfCnpj" type="s0:tcCpfCnpj"/>
+                    <s:element minOccurs="0" name="InscricaoMunicipal" type="s0:tsInscricaoMunicipal"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsRazaoSocial">
+                <s:restriction base="s:string">
+                    <s:maxLength value="115"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:element name="ConsultarNfseResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="ConsultarNfseResult" type="s0:ConsultarNfseResposta"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:complexType name="ConsultarNfseResposta">
+                <s:sequence>
+                    <s:element minOccurs="0" name="ListaNfse" type="s0:ArrayOfCompNfsetcCompNfse"/>
+                    <s:element minOccurs="0" ref="s0:ListaMensagemRetorno"/>
+                </s:sequence>
+            </s:complexType>
+            <s:element name="ListaMensagemRetorno" type="s0:ArrayOfMensagemRetornotcMensagemRetorno"/>
+            <s:complexType name="ArrayOfCompNfsetcCompNfse">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="CompNfse" nillable="true" type="s0:tcCompNfse"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcCompNfse">
+                <s:sequence>
+                    <s:element name="Nfse" type="s0:tcNfse"/>
+                    <s:element minOccurs="0" name="NfseCancelamento" type="s0:tcCancelamentoNfse"/>
+                    <s:element minOccurs="0" name="NfseSubstituicao" type="s0:tcSubstituicaoNfse"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcNfse">
+                <s:sequence>
+                    <s:element name="InfNfse" type="s0:tcInfNfse"/>
+                    <s:element maxOccurs="unbounded" ref="ns2:Signature"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcInfNfse">
+                <s:sequence>
+                    <s:element name="Numero" type="s0:tsNumeroNfse"/>
+                    <s:element name="CodigoVerificacao" type="s0:tsCodigoVerificacao"/>
+                    <s:element name="DataEmissao" type="s:dateTime"/>
+                    <s:element minOccurs="0" name="IdentificacaoRps" type="s0:tcIdentificacaoRps"/>
+                    <s:element minOccurs="0" name="DataEmissaoRps" type="s:date"/>
+                    <s:element name="NaturezaOperacao" type="s0:tsNaturezaOperacao"/>
+                    <s:element minOccurs="0" name="RegimeEspecialTributacao" type="s0:tsRegimeEspecialTributacao"/>
+                    <s:element name="OptanteSimplesNacional" type="s0:tsSimNao"/>
+                    <s:element name="IncentivadorCultural" type="s0:tsSimNao"/>
+                    <s:element name="Competencia" type="s:dateTime"/>
+                    <s:element minOccurs="0" name="NfseSubstituida" type="s0:tsNumeroNfse"/>
+                    <s:element minOccurs="0" name="OutrasInformacoes" type="s0:tsOutrasInformacoes"/>
+                    <s:element name="Servico" type="s0:tcDadosServico"/>
+                    <s:element minOccurs="0" name="ValorCredito" type="s0:tsValor"/>
+                    <s:element name="PrestadorServico" type="s0:tcDadosPrestador"/>
+                    <s:element minOccurs="0" name="TomadorServico" type="s0:tcDadosTomador"/>
+                    <s:element minOccurs="0" name="IntermediarioServico" type="s0:tcIdentificacaoIntermediarioServico"/>
+                    <s:element name="OrgaoGerador" type="s0:tcIdentificacaoOrgaoGerador"/>
+                    <s:element minOccurs="0" name="ConstrucaoCivil" type="s0:tcDadosConstrucaoCivil"/>
+                </s:sequence>
+                <s:attribute name="id" type="s0:tsIdTag"/>
+            </s:complexType>
+            <s:simpleType name="tsCodigoVerificacao">
+                <s:restriction base="s:string">
+                    <s:maxLength value="9"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="tcIdentificacaoRps">
+                <s:sequence>
+                    <s:element name="Numero" type="s0:tsNumeroRps"/>
+                    <s:element name="Serie" type="s0:tsSerieRps"/>
+                    <s:element name="Tipo" type="s0:tsTipoRps"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsNumeroRps">
+                <s:restriction base="s:nonNegativeInteger">
+                    <s:minInclusive value="0"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsSerieRps">
+                <s:restriction base="s:string">
+                    <s:maxLength value="5"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsTipoRps">
+                <s:restriction base="s:byte">
+                    <s:pattern value="1|2|3"/>
+                    <s:maxInclusive value="127"/>
+                    <s:minInclusive value="-128"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsNaturezaOperacao">
+                <s:restriction base="s:byte">
+                    <s:pattern value="1|2|3|4|5|6"/>
+                    <s:maxInclusive value="127"/>
+                    <s:minInclusive value="-128"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsRegimeEspecialTributacao">
+                <s:restriction base="s:byte">
+                    <s:pattern value="1|2|3|4"/>
+                    <s:maxInclusive value="127"/>
+                    <s:minInclusive value="-128"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsSimNao">
+                <s:restriction base="s:byte">
+                    <s:pattern value="1|2"/>
+                    <s:maxInclusive value="127"/>
+                    <s:minInclusive value="-128"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsOutrasInformacoes">
+                <s:restriction base="s:string">
+                    <s:maxLength value="255"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="tcDadosServico">
+                <s:sequence>
+                    <s:element name="Valores" type="s0:tcValores"/>
+                    <s:element name="ItemListaServico" type="s0:tsItemListaServico"/>
+                    <s:element minOccurs="0" name="CodigoCnae" type="s0:tsCodigoCnae"/>
+                    <s:element minOccurs="0" name="CodigoTributacaoMunicipio" type="s0:tsCodigoTributacao"/>
+                    <s:element name="Discriminacao" type="s0:tsDiscriminacao"/>
+                    <s:element name="CodigoMunicipio" type="s0:tsCodigoMunicipioIbge"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcValores">
+                <s:sequence>
+                    <s:element name="ValorServicos" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="ValorDeducoes" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="ValorPis" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="ValorCofins" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="ValorInss" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="ValorIr" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="ValorCsll" type="s0:tsValor"/>
+                    <s:element name="IssRetido" type="s0:tsSimNao"/>
+                    <s:element minOccurs="0" name="ValorIss" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="ValorIssRetido" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="OutrasRetencoes" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="BaseCalculo" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="Aliquota" type="s0:tsAliquota"/>
+                    <s:element minOccurs="0" name="ValorLiquidoNfse" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="DescontoIncondicionado" type="s0:tsValor"/>
+                    <s:element minOccurs="0" name="DescontoCondicionado" type="s0:tsValor"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsValor">
+                <s:restriction base="s:decimal"/>
+            </s:simpleType>
+            <s:simpleType name="tsAliquota">
+                <s:restriction base="s:decimal"/>
+            </s:simpleType>
+            <s:simpleType name="tsItemListaServico">
+                <s:restriction base="s:string">
+                    <s:maxLength value="5"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsCodigoCnae">
+                <s:restriction base="s:int">
+                    <s:maxInclusive value="2147483647"/>
+                    <s:minInclusive value="-2147483648"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsCodigoTributacao">
+                <s:restriction base="s:string">
+                    <s:maxLength value="20"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsDiscriminacao">
+                <s:restriction base="s:string">
+                    <s:maxLength value="2000"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsCodigoMunicipioIbge">
+                <s:restriction base="s:int">
+                    <s:maxInclusive value="2147483647"/>
+                    <s:minInclusive value="-2147483648"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="tcDadosPrestador">
+                <s:sequence>
+                    <s:element name="IdentificacaoPrestador" type="s0:tcIdentificacaoPrestador"/>
+                    <s:element name="RazaoSocial" type="s0:tsRazaoSocial"/>
+                    <s:element minOccurs="0" name="NomeFantasia" type="s0:tsNomeFantasia"/>
+                    <s:element name="Endereco" type="s0:tcEndereco"/>
+                    <s:element minOccurs="0" name="Contato" type="s0:tcContato"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsNomeFantasia">
+                <s:restriction base="s:string">
+                    <s:maxLength value="60"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="tcEndereco">
+                <s:sequence>
+                    <s:element minOccurs="0" name="Endereco" type="s0:tsEndereco"/>
+                    <s:element minOccurs="0" name="Numero" type="s0:tsNumeroEndereco"/>
+                    <s:element minOccurs="0" name="Complemento" type="s0:tsComplementoEndereco"/>
+                    <s:element minOccurs="0" name="Bairro" type="s0:tsBairro"/>
+                    <s:element minOccurs="0" name="CodigoMunicipio" type="s0:tsCodigoMunicipioIbge"/>
+                    <s:element minOccurs="0" name="Uf" type="s0:tsUf"/>
+                    <s:element minOccurs="0" name="Cep" type="s0:tsCep"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsEndereco">
+                <s:restriction base="s:string">
+                    <s:maxLength value="125"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsNumeroEndereco">
+                <s:restriction base="s:string">
+                    <s:maxLength value="10"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsComplementoEndereco">
+                <s:restriction base="s:string">
+                    <s:maxLength value="60"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsBairro">
+                <s:restriction base="s:string">
+                    <s:maxLength value="60"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsUf">
+                <s:restriction base="s:string"/>
+            </s:simpleType>
+            <s:simpleType name="tsCep">
+                <s:restriction base="s:int">
+                    <s:maxInclusive value="2147483647"/>
+                    <s:minInclusive value="-2147483648"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="tcContato">
+                <s:sequence>
+                    <s:element minOccurs="0" name="Telefone" type="s0:tsTelefone"/>
+                    <s:element minOccurs="0" name="Email" type="s0:tsEmail"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsTelefone">
+                <s:restriction base="s:string">
+                    <s:maxLength value="11"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsEmail">
+                <s:restriction base="s:string">
+                    <s:maxLength value="80"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="tcDadosTomador">
+                <s:sequence>
+                    <s:element minOccurs="0" name="IdentificacaoTomador" type="s0:tcIdentificacaoTomador"/>
+                    <s:element minOccurs="0" name="RazaoSocial" type="s0:tsRazaoSocial"/>
+                    <s:element minOccurs="0" name="Endereco" type="s0:tcEndereco"/>
+                    <s:element minOccurs="0" name="Contato" type="s0:tcContato"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcIdentificacaoOrgaoGerador">
+                <s:sequence>
+                    <s:element name="CodigoMunicipio" type="s0:tsCodigoMunicipioIbge"/>
+                    <s:element name="Uf" type="s0:tsUf"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcDadosConstrucaoCivil">
+                <s:sequence>
+                    <s:element name="CodigoObra" type="s0:tsCodigoObra"/>
+                    <s:element name="Art" type="s0:tsArt"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsCodigoObra">
+                <s:restriction base="s:string">
+                    <s:maxLength value="15"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsArt">
+                <s:restriction base="s:string">
+                    <s:maxLength value="15"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsIdTag">
+                <s:restriction base="s:string">
+                    <s:maxLength value="255"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="tcCancelamentoNfse">
+                <s:sequence>
+                    <s:element name="Confirmacao" type="s0:tcConfirmacaoCancelamento"/>
+                    <s:element ref="ns2:Signature"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcConfirmacaoCancelamento">
+                <s:sequence>
+                    <s:element name="Pedido" type="s0:tcPedidoCancelamento"/>
+                    <s:element name="DataHoraCancelamento" type="s:dateTime"/>
+                </s:sequence>
+                <s:attribute name="id" type="s0:tsIdTag"/>
+            </s:complexType>
+            <s:complexType name="tcPedidoCancelamento">
+                <s:sequence>
+                    <s:element name="InfPedidoCancelamento" type="s0:tcInfPedidoCancelamento"/>
+                    <s:element minOccurs="0" ref="ns2:Signature"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcInfPedidoCancelamento">
+                <s:sequence>
+                    <s:element name="IdentificacaoNfse" type="s0:tcIdentificacaoNfse"/>
+                    <s:element name="CodigoCancelamento" type="s0:tsCodigoCancelamentoNfse"/>
+                </s:sequence>
+                <s:attribute name="id" type="s0:tsIdTag"/>
+            </s:complexType>
+            <s:complexType name="tcIdentificacaoNfse">
+                <s:sequence>
+                    <s:element name="Numero" type="s0:tsNumeroNfse"/>
+                    <s:element name="Cnpj" type="s0:tsCnpj"/>
+                    <s:element minOccurs="0" name="InscricaoMunicipal" type="s0:tsInscricaoMunicipal"/>
+                    <s:element name="CodigoMunicipio" type="s0:tsCodigoMunicipioIbge"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsCodigoCancelamentoNfse">
+                <s:restriction base="s:string">
+                    <s:maxLength value="4"/>
+                    <s:minLength value="1"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:complexType name="tcSubstituicaoNfse">
+                <s:sequence>
+                    <s:element name="SubstituicaoNfse" type="s0:tcInfSubstituicaoNfse"/>
+                    <s:element maxOccurs="unbounded" ref="ns2:Signature"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcInfSubstituicaoNfse">
+                <s:sequence>
+                    <s:element name="NfseSubstituidora" type="s0:tsNumeroNfse"/>
+                </s:sequence>
+                <s:attribute name="id" type="s0:tsIdTag"/>
+            </s:complexType>
+            <s:complexType name="ArrayOfMensagemRetornotcMensagemRetorno">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="MensagemRetorno" nillable="true" type="s0:tcMensagemRetorno"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="tcMensagemRetorno">
+                <s:sequence>
+                    <s:element name="Codigo" type="s0:tsCodigoMensagemAlerta"/>
+                    <s:element name="Mensagem" type="s0:tsDescricaoMensagemAlerta"/>
+                    <s:element minOccurs="0" name="Correcao" type="s0:tsDescricaoMensagemAlerta"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="tsCodigoMensagemAlerta">
+                <s:restriction base="s:string">
+                    <s:maxLength value="4"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:simpleType name="tsDescricaoMensagemAlerta">
+                <s:restriction base="s:string">
+                    <s:maxLength value="200"/>
+                </s:restriction>
+            </s:simpleType>
+            <s:element name="Test">
+                <s:complexType>
+                    <s:sequence/>
+                </s:complexType>
+            </s:element>
+            <s:element name="TestResponse">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="TestResult" type="s:string"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+        </s:schema>
+        <s:schema elementFormDefault="qualified" targetNamespace="http://www.w3.org/2000/09/xmldsig#">
+            <s:element name="Signature" type="ns2:SignatureType"/>
+            <s:complexType name="ArrayOfSignatureTypeSignatureType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="SignatureType" nillable="true" type="ns2:SignatureType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="SignatureType">
+                <s:sequence>
+                    <s:element ref="ns2:SignedInfo"/>
+                    <s:element ref="ns2:SignatureValue"/>
+                    <s:element minOccurs="0" ref="ns2:KeyInfo"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" ref="ns2:Object"/>
+                </s:sequence>
+                <s:attribute name="Id" type="s:string"/>
+            </s:complexType>
+            <s:element name="SignedInfo" type="ns2:SignedInfoType"/>
+            <s:element name="SignatureValue" type="ns2:SignatureValueType"/>
+            <s:element name="KeyInfo" type="ns2:KeyInfoType"/>
+            <s:element name="Object" nillable="true" type="ns2:ObjectType"/>
+            <s:complexType name="SignedInfoType">
+                <s:sequence>
+                    <s:element ref="ns2:CanonicalizationMethod"/>
+                    <s:element ref="ns2:SignatureMethod"/>
+                    <s:element maxOccurs="unbounded" ref="ns2:Reference"/>
+                </s:sequence>
+                <s:attribute name="Id" type="s:string"/>
+            </s:complexType>
+            <s:element name="CanonicalizationMethod" type="ns2:CanonicalizationMethodType"/>
+            <s:element name="SignatureMethod" type="ns2:SignatureMethodType"/>
+            <s:element name="Reference" type="ns2:ReferenceType"/>
+            <s:complexType name="CanonicalizationMethodType">
+                <s:simpleContent>
+                    <s:extension base="s:string">
+                        <s:attribute name="Algorithm" type="s:anyURI" use="required"/>
+                    </s:extension>
+                </s:simpleContent>
+            </s:complexType>
+            <s:complexType mixed="true" name="SignatureMethodType">
+                <s:sequence>
+                    <s:element minOccurs="0" name="HMACOutputLength" type="ns2:HMACOutputLengthType"/>
+                </s:sequence>
+                <s:attribute name="Algorithm" type="s:anyURI" use="required"/>
+            </s:complexType>
+            <s:simpleType name="HMACOutputLengthType">
+                <s:restriction base="s:long"/>
+            </s:simpleType>
+            <s:complexType name="ArrayOfReferenceTypeReferenceType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="ReferenceType" nillable="true" type="ns2:ReferenceType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ReferenceType">
+                <s:sequence>
+                    <s:element minOccurs="0" ref="ns2:Transforms"/>
+                    <s:element ref="ns2:DigestMethod"/>
+                    <s:element ref="ns2:DigestValue"/>
+                </s:sequence>
+                <s:attribute name="Id" type="s:string"/>
+                <s:attribute name="URI" type="s:anyURI"/>
+                <s:attribute name="Type" type="s:anyURI"/>
+            </s:complexType>
+            <s:element name="Transforms" type="ns2:TransformsType"/>
+            <s:element name="DigestMethod" type="ns2:DigestMethodType"/>
+            <s:element name="DigestValue" type="ns2:DigestValueType"/>
+            <s:complexType name="TransformsType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" ref="ns2:Transform"/>
+                </s:sequence>
+            </s:complexType>
+            <s:element name="Transform" type="ns2:TransformType"/>
+            <s:complexType name="ArrayOfTransformTypeTransformType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="TransformType" nillable="true" type="ns2:TransformType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType mixed="true" name="TransformType">
+                <s:sequence>
+                    <s:any maxOccurs="unbounded" minOccurs="0"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="XPath" nillable="true" type="s:string"/>
+                </s:sequence>
+                <s:attribute name="Algorithm" type="s:anyURI" use="required"/>
+            </s:complexType>
+            <s:complexType name="ArrayOfXPathItemString">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="XPathItem" nillable="true" type="s:string"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="DigestMethodType">
+                <s:simpleContent>
+                    <s:extension base="s:string">
+                        <s:attribute name="Algorithm" type="s:anyURI" use="required"/>
+                    </s:extension>
+                </s:simpleContent>
+            </s:complexType>
+            <s:simpleType name="DigestValueType">
+                <s:restriction base="s:base64Binary"/>
+            </s:simpleType>
+            <s:complexType name="SignatureValueType">
+                <s:simpleContent>
+                    <s:extension base="s:base64Binary">
+                        <s:attribute name="Id" type="s:string"/>
+                    </s:extension>
+                </s:simpleContent>
+            </s:complexType>
+            <s:complexType mixed="true" name="KeyInfoType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" ref="ns2:KeyName"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" ref="ns2:KeyValue"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" ref="ns2:RetrievalMethod"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" ref="ns2:X509Data"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" ref="ns2:PGPData"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" ref="ns2:SPKIData"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" ref="ns2:MgmtData"/>
+                    <s:any maxOccurs="unbounded" minOccurs="0"/>
+                </s:sequence>
+                <s:attribute name="Id" type="s:string"/>
+            </s:complexType>
+            <s:element name="KeyName" nillable="true" type="s:string"/>
+            <s:element name="KeyValue" nillable="true" type="ns2:KeyValueType"/>
+            <s:element name="RetrievalMethod" nillable="true" type="ns2:RetrievalMethodType"/>
+            <s:element name="X509Data" nillable="true" type="ns2:X509DataType"/>
+            <s:element name="PGPData" nillable="true" type="ns2:PGPDataType"/>
+            <s:element name="SPKIData" nillable="true" type="ns2:SPKIDataType"/>
+            <s:element name="MgmtData" nillable="true" type="s:string"/>
+            <s:complexType name="ArrayOfKeyNameItemString">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="KeyNameItem" nillable="true" type="s:string"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfKeyValueTypeKeyValueType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="KeyValueType" nillable="true" type="ns2:KeyValueType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType mixed="true" name="KeyValueType">
+                <s:sequence>
+                    <s:element minOccurs="0" ref="ns2:DSAKeyValue"/>
+                    <s:element minOccurs="0" ref="ns2:RSAKeyValue"/>
+                    <s:any minOccurs="0"/>
+                </s:sequence>
+            </s:complexType>
+            <s:element name="DSAKeyValue" type="ns2:DSAKeyValueType"/>
+            <s:element name="RSAKeyValue" type="ns2:RSAKeyValueType"/>
+            <s:complexType name="DSAKeyValueType">
+                <s:sequence>
+                    <s:element name="P" type="ns2:CryptoBinary"/>
+                    <s:element name="Q" type="ns2:CryptoBinary"/>
+                    <s:element minOccurs="0" name="G" type="ns2:CryptoBinary"/>
+                    <s:element name="Y" type="ns2:CryptoBinary"/>
+                    <s:element minOccurs="0" name="J" type="ns2:CryptoBinary"/>
+                    <s:element name="Seed" type="ns2:CryptoBinary"/>
+                    <s:element name="PgenCounter" type="ns2:CryptoBinary"/>
+                </s:sequence>
+            </s:complexType>
+            <s:simpleType name="CryptoBinary">
+                <s:restriction base="s:base64Binary"/>
+            </s:simpleType>
+            <s:complexType name="RSAKeyValueType">
+                <s:sequence>
+                    <s:element name="Modulus" type="ns2:CryptoBinary"/>
+                    <s:element name="Exponent" type="ns2:CryptoBinary"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfRetrievalMethodTypeRetrievalMethodType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="RetrievalMethodType" nillable="true" type="ns2:RetrievalMethodType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="RetrievalMethodType">
+                <s:sequence>
+                    <s:element minOccurs="0" ref="ns2:Transforms"/>
+                </s:sequence>
+                <s:attribute name="URI" type="s:anyURI"/>
+                <s:attribute name="Type" type="s:anyURI"/>
+            </s:complexType>
+            <s:complexType name="ArrayOfX509DataTypeX509DataType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509DataType" nillable="true" type="ns2:X509DataType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="X509DataType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509IssuerSerial" nillable="true" type="ns2:X509IssuerSerialType"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509SKI" nillable="true" type="s:base64Binary"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509SubjectName" nillable="true" type="s:string"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509Certificate" nillable="true" type="s:base64Binary"/>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509CRL" nillable="true" type="s:base64Binary"/>
+                    <s:any maxOccurs="unbounded" minOccurs="0"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfX509IssuerSerialTypeX509IssuerSerialType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509IssuerSerialType" nillable="true" type="ns2:X509IssuerSerialType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="X509IssuerSerialType">
+                <s:sequence>
+                    <s:element name="X509IssuerName" type="s:string"/>
+                    <s:element name="X509SerialNumber" type="s:long"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfX509SKIItemBase64Binary">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509SKIItem" nillable="true" type="s:base64Binary"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfX509SubjectNameItemString">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509SubjectNameItem" nillable="true" type="s:string"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfX509CertificateItemBase64Binary">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509CertificateItem" nillable="true" type="s:base64Binary"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfX509CRLItemBase64Binary">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="X509CRLItem" nillable="true" type="s:base64Binary"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfPGPDataTypePGPDataType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="PGPDataType" nillable="true" type="ns2:PGPDataType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="PGPDataType">
+                <s:sequence>
+                    <s:element minOccurs="0" name="PGPKeyID" type="s:base64Binary"/>
+                    <s:element minOccurs="0" name="PGPKeyPacket" type="s:base64Binary"/>
+                    <s:any maxOccurs="unbounded" minOccurs="0"/>
+                    <s:element minOccurs="0" name="PGPKeyPacket" type="s:base64Binary"/>
+                    <s:any maxOccurs="unbounded" minOccurs="0"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfSPKIDataTypeSPKIDataType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="SPKIDataType" nillable="true" type="ns2:SPKIDataType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="SPKIDataType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" name="SPKISexp" type="s:base64Binary"/>
+                    <s:any maxOccurs="unbounded" minOccurs="0"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfSPKISexpItemBase64Binary">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="SPKISexpItem" nillable="true" type="s:base64Binary"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfMgmtDataItemString">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="MgmtDataItem" nillable="true" type="s:string"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ArrayOfObjectTypeObjectType">
+                <s:sequence>
+                    <s:element maxOccurs="unbounded" minOccurs="0" name="ObjectType" nillable="true" type="ns2:ObjectType"/>
+                </s:sequence>
+            </s:complexType>
+            <s:complexType name="ObjectType">
+                <s:simpleContent>
+                    <s:extension base="s:string">
+                        <s:attribute name="Id" type="s:string"/>
+                        <s:attribute name="MimeType" type="s:string"/>
+                        <s:attribute name="Encoding" type="s:anyURI"/>
+                    </s:extension>
+                </s:simpleContent>
+            </s:complexType>
+        </s:schema>
+    </types>
+    <message name="ConsultarNfseSoapIn">
+        <part name="parameters" element="s0:ConsultarNfse"/>
+    </message>
+    <message name="ConsultarNfseSoapOut">
+        <part name="parameters" element="s0:ConsultarNfseResponse"/>
+    </message>
+    <message name="TestSoapIn">
+        <part name="parameters" element="s0:Test"/>
+    </message>
+    <message name="TestSoapOut">
+        <part name="parameters" element="s0:TestResponse"/>
+    </message>
+    <portType name="ConsultarNfseSoap">
+        <operation name="ConsultarNfse">
+            <input message="s0:ConsultarNfseSoapIn"/>
+            <output message="s0:ConsultarNfseSoapOut"/>
+        </operation>
+        <operation name="Test">
+            <input message="s0:TestSoapIn"/>
+            <output message="s0:TestSoapOut"/>
+        </operation>
+    </portType>
+    <binding name="ConsultarNfseSoap" type="s0:ConsultarNfseSoap">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <operation name="ConsultarNfse">
+            <soap:operation soapAction="http://www.tinus.com.br/WSNFSE.ConsultarNfse.ConsultarNfse" style="document"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="Test">
+            <soap:operation soapAction="http://www.tinus.com.br/WSNFSE.ConsultarNfse.Test" style="document"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="ConsultarNfse">
+        <port name="ConsultarNfseSoap" binding="s0:ConsultarNfseSoap">
+            <soap:address location="http://www.tinus.com.br/csp/olinda/WSNFSE.ConsultarNfse.cls"/>
+        </port>
+    </service>
+</definitions>

@@ -42,7 +42,7 @@
   </xs:element>
   <xs:element name="codigo" type="nfse:TNumero4"/>
   <xs:element name="descricao" type="xs:string"/>
-  <xs:element name="numeroNota" type="nfse:TNumero9">
+  <xs:element name="numeroNota" type="xs:string">
   </xs:element>
   <xs:element name="chaveSeguranca" type="xs:string">
   </xs:element>

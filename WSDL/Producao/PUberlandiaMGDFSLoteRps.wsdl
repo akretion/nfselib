@@ -385,7 +385,7 @@ Built on Oct 05, 2005 (05:23:37 EDT)-->
 
       <wsdl:port binding="impl:LoteRpsSoapBinding" name="LoteRps">
 
-         <wsdlsoap:address location="http://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws"/>
+         <wsdlsoap:address location="https://udigital.uberlandia.mg.gov.br/WsNFe2/LoteRps.jws"/>
 
       </wsdl:port>
 
