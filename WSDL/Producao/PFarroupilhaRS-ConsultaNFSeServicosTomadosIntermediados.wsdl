@@ -57,10 +57,10 @@
   </wsdl:binding>
   <wsdl:service name="ConsultaNFSeServicosTomadosIntermediados">
     <wsdl:port name="ConsultaNFSeServicosTomadosIntermediadosSoap" binding="tns:ConsultaNFSeServicosTomadosIntermediadosSoap">
-      <soap:address location="http://farroupilha.nfse-tecnos.com.br:9093/ConsultaNFSeServicosTomadosIntermediados.asmx" />
+      <soap:address location="http://nfse-farroupilha.multi24h.com.br:9093/ConsultaNFSeServicosTomadosIntermediados.asmx" />
     </wsdl:port>
     <wsdl:port name="ConsultaNFSeServicosTomadosIntermediadosSoap12" binding="tns:ConsultaNFSeServicosTomadosIntermediadosSoap12">
-      <soap12:address location="http://farroupilha.nfse-tecnos.com.br:9093/ConsultaNFSeServicosTomadosIntermediados.asmx" />
+      <soap12:address location="http://nfse-farroupilha.multi24h.com.br:9093/ConsultaNFSeServicosTomadosIntermediados.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -129,7 +129,7 @@
 </binding>
 <service name="webservice">
   <port name="webservicePort" binding="tns:webserviceBinding">
-    <soap:address location="http://www.webfiscotecnologia.com.br/issqn/wservice/wsnfeconsultaxml.php"/>
+    <soap:address location="https://www.webfiscotecnologia.com.br/issqn/wservice/wsnfeconsultaxml.php"/>
   </port>
 </service>
 </definitions>

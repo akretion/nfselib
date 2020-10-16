@@ -8560,4 +8560,46 @@
       <CancelarNfse>WSDL\Producao\PSaoJoaoDaBoaVistaSP-SIMPLISS.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
+	<Estado ID="3164704" Nome="São Sebastião do Paraíso - MG" UF="MG" Padrao="E_RECEITA">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\HSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\HSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\HSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\HSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse>wsdl\homologacao\HSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarURLNfse>
+			<CancelarNfse>wsdl\homologacao\HSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</CancelarNfse>
+			<SubstituirNfse>wsdl\homologacao\HSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</SubstituirNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse>wsdl\producao\PSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</ConsultarURLNfse>
+			<CancelarNfse>wsdl\producao\PSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</CancelarNfse>
+			<SubstituirNfse>wsdl\producao\PSaoSebastiaoDoParaisoMG-E_RECEITA.wsdl</SubstituirNfse>
+		</LocalProducao>
+	</Estado>
+  <Estado ID="3161809" Nome="São Gonçalo do Pará - MG" UF="MG" Padrao="WEBISS_202">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HSaoGoncaloParaMG-WebISS_202.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HSaoGoncaloParaMG-WebISS_202.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HSaoGoncaloParaMG-WebISS_202.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HSaoGoncaloParaMG-WebISS_202.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HSaoGoncaloParaMG-WebISS_202.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\homologacao\HSaoGoncaloParaMG-WebISS_202.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PSaoGoncaloParaMG-WebISS_202.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PSaoGoncaloParaMG-WebISS_202.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PSaoGoncaloParaMG-WebISS_202.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PSaoGoncaloParaMG-WebISS_202.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PSaoGoncaloParaMG-WebISS_202.wsdl</ConsultarLoteRps>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse>wsdl\producao\PSaoGoncaloParaMG-WebISS_202.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
 </Webservice>

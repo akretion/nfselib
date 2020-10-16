@@ -57,10 +57,10 @@
   </wsdl:binding>
   <wsdl:service name="ConsultaLoteRPS">
     <wsdl:port name="ConsultaLoteRPSSoap" binding="tns:ConsultaLoteRPSSoap">
-      <soap:address location="http://farroupilha.nfse-tecnos.com.br:9097/ConsultaLoteRPS.asmx" />
+      <soap:address location="http://nfse-farroupilha.multi24h.com.br:9097/ConsultaLoteRPS.asmx" />
     </wsdl:port>
     <wsdl:port name="ConsultaLoteRPSSoap12" binding="tns:ConsultaLoteRPSSoap12">
-      <soap12:address location="http://farroupilha.nfse-tecnos.com.br:9097/ConsultaLoteRPS.asmx" />
+      <soap12:address location="http://nfse-farroupilha.multi24h.com.br:9097/ConsultaLoteRPS.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

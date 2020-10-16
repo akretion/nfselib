@@ -172,7 +172,7 @@
 </binding>
 <service name="webservice">
   <port name="webservicePort" binding="tns:webserviceBinding">
-    <soap:address location="http://www.webfiscotecnologia.com.br/issqn/wservice/wsnfeenvia.php"/>
+    <soap:address location="https://www.webfiscotecnologia.com.br/issqn/wservice/wsnfeenvia.php"/>
   </port>
 </service>
 </definitions>

@@ -44,7 +44,7 @@
 	</binding>
 	<service name="ConsultarNfsePorRps">
 		<port name="ConsultarNfsePorRpsSoapPort" binding="wsdlns:ConsultarNfsePorRpsSoapBinding">
-			<soap:address location="https://andradina.sistemas4r.com.br/abrasf/aconsultarnfseporrps.aspx" />
+			<soap:address location="https://andradina.4rtec.com.br/Abrasf/aconsultarnfseporrps.aspx" />
 		</port>
 	</service>
 </definitions>

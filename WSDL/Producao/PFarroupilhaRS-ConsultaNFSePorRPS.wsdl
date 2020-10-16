@@ -57,10 +57,10 @@
   </wsdl:binding>
   <wsdl:service name="ConsultaNFSePorRPS">
     <wsdl:port name="ConsultaNFSePorRPSSoap" binding="tns:ConsultaNFSePorRPSSoap">
-      <soap:address location=" http://farroupilha.nfse-tecnos.com.br:9095/ConsultaNFSePorRPS.asmx" />
+      <soap:address location="http://nfse-farroupilha.multi24h.com.br:9095/ConsultaNFSePorRPS.asmx" />
     </wsdl:port>
     <wsdl:port name="ConsultaNFSePorRPSSoap12" binding="tns:ConsultaNFSePorRPSSoap12">
-      <soap12:address location=" http://farroupilha.nfse-tecnos.com.br:9095/ConsultaNFSePorRPS.asmx" />
+      <soap12:address location="http://nfse-farroupilha.multi24h.com.br:9095/ConsultaNFSePorRPS.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

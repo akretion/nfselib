@@ -1,84 +1,129 @@
-<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="nfseWS" targetNamespace="http://impl.ws.integration.iss.bsit.com.br/" xmlns:ns1="http://ws.integration.iss.bsit.com.br/" xmlns:ns2="http://cxf.apache.org/bindings/xformat" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.ws.integration.iss.bsit.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <wsdl:import location="http://canedo.bsit-br.com.br/integracao/services/nfseWS?wsdl=nfseWS.wsdl" namespace="http://ws.integration.iss.bsit.com.br/">
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.ws.integration.pm.bsit.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://ws.integration.pm.bsit.com.br/" name="nfseWS" targetNamespace="http://impl.ws.integration.pm.bsit.com.br/">
+  <wsdl:import location="http://gestaopublica.canedo.bsit-br.com.br/integracao/services/nfseWS?wsdl=nfseWS.wsdl" namespace="http://ws.integration.pm.bsit.com.br/">
     </wsdl:import>
   <wsdl:binding name="nfseWSSoapBinding" type="ns1:nfseWS">
-    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="gerarNfse">
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="gerarNfse">
-        <soap:body use="literal" />
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="credenciarUsuarioDEISS">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="credenciarUsuarioDEISS">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:input>
-      <wsdl:output name="gerarNfseResponse">
-        <soap:body use="literal" />
+      <wsdl:output name="credenciarUsuarioDEISSResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="cancelarNfse">
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="cancelarNfse">
-        <soap:body use="literal" />
+    <wsdl:operation name="credenciarUsuarioNfse">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="credenciarUsuarioNfse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:input>
-      <wsdl:output name="cancelarNfseResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="consultarNfseRps">
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="consultarNfseRps">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="consultarNfseRpsResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="consultarLoteRps">
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="consultarLoteRps">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="consultarLoteRpsResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="consultarPdfNfseRps">
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="consultarPdfNfseRps">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="consultarPdfNfseRpsResponse">
-        <soap:body use="literal" />
+      <wsdl:output name="credenciarUsuarioNfseResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="cancelarRps">
-      <soap:operation soapAction="" style="document" />
+      <soap:operation soapAction="" style="rpc"/>
       <wsdl:input name="cancelarRps">
-        <soap:body use="literal" />
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:input>
       <wsdl:output name="cancelarRpsResponse">
-        <soap:body use="literal" />
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="verificarStatusIntegracao">
-      <soap:operation soapAction="" style="document" />
+      <soap:operation soapAction="" style="rpc"/>
       <wsdl:input name="verificarStatusIntegracao">
-        <soap:body use="literal" />
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:input>
       <wsdl:output name="verificarStatusIntegracaoResponse">
-        <soap:body use="literal" />
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarNfse">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="cancelarNfse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelarNfseResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarNfseRps">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="consultarNfseRps">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarNfseRpsResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="opcoesDeEmissaoNFSEEmpresa">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="opcoesDeEmissaoNFSEEmpresa">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="opcoesDeEmissaoNFSEEmpresaResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPdfRest">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="consultarPdfRest">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarPdfRestResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gerarNfse">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="gerarNfse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="gerarNfseResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="enviarLoteRpsSincrono">
-      <soap:operation soapAction="" style="document" />
+      <soap:operation soapAction="" style="rpc"/>
       <wsdl:input name="enviarLoteRpsSincrono">
-        <soap:body use="literal" />
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:input>
       <wsdl:output name="enviarLoteRpsSincronoResponse">
-        <soap:body use="literal" />
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarLoteRps">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="consultarLoteRps">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarLoteRpsResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="opcoesDeEmissaoNFSEContribuinte">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="opcoesDeEmissaoNFSEContribuinte">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="opcoesDeEmissaoNFSEContribuinteResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPdfNfseRps">
+      <soap:operation soapAction="" style="rpc"/>
+      <wsdl:input name="consultarPdfNfseRps">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarPdfNfseRpsResponse">
+        <soap:body namespace="http://ws.integration.pm.bsit.com.br/" use="literal"/>
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="nfseWS">
-    <wsdl:port binding="tns:nfseWSSoapBinding" name="IntegrationNFSEWSPort">
-      <soap:address location="http://canedo.bsit-br.com.br/integracao/services/nfseWS" />
+    <wsdl:port binding="tns:nfseWSSoapBinding" name="IntegrationNFSEWSImplPort">
+      <soap:address location="http://gestaopublica.canedo.bsit-br.com.br/integracao/services/nfseWS"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
