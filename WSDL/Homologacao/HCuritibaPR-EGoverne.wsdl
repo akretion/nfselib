@@ -637,7 +637,7 @@
       <s:complexType name="SPKIDataType">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="unbounded" name="SPKISexp" type="s:base64Binary" />
-          <s:any minOccurs="0" maxOccurs="1" />
+            <s:any minOccurs="0" maxOccurs="1" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="KeyValueType" mixed="true">
@@ -999,10 +999,10 @@
   </wsdl:binding>
   <wsdl:service name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1">
     <wsdl:port name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap" binding="tns:WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap">
-      <soap:address location="https://piloto-iss.curitiba.pr.gov.br/nfse_ws/nfsews.asmx" />
+      <soap:address location="https://piloto-iss.curitiba.pr.gov.br/nfse_ws/NfseWs.asmx" />
     </wsdl:port>
     <wsdl:port name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap12" binding="tns:WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap12">
-      <soap12:address location="https://piloto-iss.curitiba.pr.gov.br/nfse_ws/nfsews.asmx" />
+      <soap12:address location="https://piloto-iss.curitiba.pr.gov.br/nfse_ws/NfseWs.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

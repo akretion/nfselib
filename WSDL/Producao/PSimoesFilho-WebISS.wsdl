@@ -444,10 +444,10 @@
   </wsdl:binding>
   <wsdl:service name="NfseWSService">
     <wsdl:port name="NfseWSServiceSoap" binding="tns:NfseWSServiceSoap">
-      <soap:address location="https://homologacao.webiss.com.br/ws/nfse.asmx" />
+      <soap:address location="https://simoesfilhoba.webiss.com.br/ws/nfse.asmx" />
     </wsdl:port>
     <wsdl:port name="NfseWSServiceSoap12" binding="tns:NfseWSServiceSoap12">
-      <soap12:address location="https://homologacao.webiss.com.br/ws/nfse.asmx" />
+      <soap12:address location="https://simoesfilhoba.webiss.com.br/ws/nfse.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

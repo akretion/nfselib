@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php">
+  <types>
+    <xsd:schema targetNamespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </types>
+  <message name="ConsultaLoteRpsRequest">
+    <part name="ConsultaLoteRps" type="xsd:string" />
+  </message>
+  <message name="ConsultaLoteRpsResponse">
+    <part name="ConsultaLoteRpsResposta" type="xsd:string" />
+  </message>
+  <message name="ConsultaNfseRequest">
+    <part name="ConsultaNfse" type="xsd:string" />
+  </message>
+  <message name="ConsultaNfseResponse">
+    <part name="ConsultaNfseResposta" type="xsd:string" />
+  </message>
+  <message name="EnviaLoteRpsRequest">
+    <part name="EnviaLoteRps" type="xsd:string" />
+  </message>
+  <message name="EnviaLoteRpsResponse">
+    <part name="EnviaLoteRpsResposta" type="xsd:string" />
+  </message>
+  <message name="CancelaNfseRequest">
+    <part name="CancelaNfse" type="xsd:string" />
+  </message>
+  <message name="CancelaNfseResponse">
+    <part name="CancelaNfseResposta" type="xsd:string" />
+  </message>
+  <portType name="GeisWebServicePortType">
+    <operation name="ConsultaLoteRps">
+      <documentation></documentation>
+      <input message="tns:ConsultaLoteRpsRequest" />
+      <output message="tns:ConsultaLoteRpsResponse" />
+    </operation>
+    <operation name="ConsultaNfse">
+      <documentation></documentation>
+      <input message="tns:ConsultaNfseRequest" />
+      <output message="tns:ConsultaNfseResponse" />
+    </operation>
+    <operation name="EnviaLoteRps">
+      <documentation>Envia Lote de RPS para ser convertido em NFSe</documentation>
+      <input message="tns:EnviaLoteRpsRequest" />
+      <output message="tns:EnviaLoteRpsResponse" />
+    </operation>
+    <operation name="CancelaNfse">
+      <documentation></documentation>
+      <input message="tns:CancelaNfseRequest" />
+      <output message="tns:CancelaNfseResponse" />
+    </operation>
+  </portType>
+  <binding name="GeisWebServiceBinding" type="tns:GeisWebServicePortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ConsultaLoteRps">
+      <soap:operation soapAction="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php#ConsultaLoteRps" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="ConsultaNfse">
+      <soap:operation soapAction="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php#ConsultaNfse" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="EnviaLoteRps">
+      <soap:operation soapAction="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php#EnviaLoteRps" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+    <operation name="CancelaNfse">
+      <soap:operation soapAction="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php#CancelaNfse" style="rpc" />
+      <input>
+        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/producao/itatinga/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="GeisWebService">
+    <port name="GeisWebServicePort" binding="tns:GeisWebServiceBinding">
+      <soap:address location="https://www.geisweb.net.br:443/producao/itatinga/webservice/GeisWebServiceImpl.php" />
+    </port>
+  </service>
+</definitions>

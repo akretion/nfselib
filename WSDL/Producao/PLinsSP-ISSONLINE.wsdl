@@ -49,7 +49,7 @@
 	</binding>
 	<service name="Nfse">
 		<port name="NfseSoapPort" binding="wsdlns:NfseSoapBinding">
-			<soap:address location="http://177.154.32.254/receitas/servlet/anfse"/>
+			<soap:address location="http://187.17.172.218/receitas/servlet/anfse"/>
 		</port>
 	</service>
 </definitions>

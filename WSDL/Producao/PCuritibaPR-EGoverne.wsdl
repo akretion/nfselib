@@ -1,8 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.e-governeapps2.com.br/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://www.w3.org/2000/09/xmldsig#" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.e-governeapps2.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.e-governeapps2.com.br/" xmlns:s1="http://www.w3.org/2000/09/xmldsig#" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://www.e-governeapps2.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.e-governeapps2.com.br/">
       <s:import namespace="http://www.w3.org/2000/09/xmldsig#" />
+      <s:element name="CancelarLoteNfse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelarLoteNfseEnvio" type="tns:CancelarLoteNfseEnvio" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CancelarLoteNfseEnvio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LoteCancelamento" type="tns:LoteCancelamento" />
+          <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s1:SignatureType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LoteCancelamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Cnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PedidosCancelamento" type="tns:ArrayOfPedidoCancelamento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPedidoCancelamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PedidoCancelamento" nillable="true" type="tns:PedidoCancelamento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PedidoCancelamento">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:tcPedidoCancelamento" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="tcPedidoCancelamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="InfPedidoCancelamento" type="tns:tcInfPedidoCancelamento" />
+          <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s1:SignatureType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="tcInfPedidoCancelamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdentificacaoNfse" type="tns:tcIdentificacaoNfse" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoCancelamento" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="tcIdentificacaoNfse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Numero" type="s:unsignedLong" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoMunicipio" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelarLoteNfseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelarLoteNfseResult" type="tns:CancelarLoteNfseResposta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CancelarLoteNfseResposta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DataRecebimento" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Protocolo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno" type="tns:ArrayOfMensagemRetorno" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMensagemRetorno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" nillable="true" type="tns:MensagemRetorno" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MensagemRetorno">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:tcMensagemRetorno" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="tcMensagemRetorno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Correcao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelarLoteRps">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelarLoteRpsEnvio" type="tns:CancelarLoteRpsEnvio" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CancelarLoteRpsEnvio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LoteRps" type="tns:tcLoteCancelamentoRps" />
+          <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s1:SignatureType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="tcLoteCancelamentoRps">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Protocolo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cnpj" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelarLoteRpsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelarLoteRpsResult" type="tns:CancelarLoteRpsResposta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CancelarLoteRpsResposta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DataRecebimento" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Protocolo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno" type="tns:ArrayOfMensagemRetorno" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="RecepcionarLoteRps">
         <s:complexType>
           <s:sequence>
@@ -78,6 +193,7 @@
       <s:complexType name="tcValores">
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="ValorServicos" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroDeducao" type="s:long" />
           <s:element minOccurs="1" maxOccurs="1" name="ValorDeducoes" type="s:decimal" />
           <s:element minOccurs="1" maxOccurs="1" name="ValorPis" type="s:decimal" />
           <s:element minOccurs="1" maxOccurs="1" name="ValorCofins" type="s:decimal" />
@@ -166,136 +282,6 @@
           <s:element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno" type="tns:ArrayOfMensagemRetorno" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="ArrayOfMensagemRetorno">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="MensagemRetorno" nillable="true" type="tns:MensagemRetorno" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="MensagemRetorno">
-        <s:complexContent mixed="false">
-          <s:extension base="tns:tcMensagemRetorno" />
-        </s:complexContent>
-      </s:complexType>
-      <s:complexType name="tcMensagemRetorno">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Correcao" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="CancelarLoteNfse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="CancelarLoteNfseEnvio" type="tns:CancelarLoteNfseEnvio" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="CancelarLoteNfseEnvio">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="LoteCancelamento" type="tns:LoteCancelamento" />
-          <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s1:SignatureType" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="LoteCancelamento">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="Cnpj" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="PedidosCancelamento" type="tns:ArrayOfPedidoCancelamento" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="ArrayOfPedidoCancelamento">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="PedidoCancelamento" nillable="true" type="tns:PedidoCancelamento" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="PedidoCancelamento">
-        <s:complexContent mixed="false">
-          <s:extension base="tns:tcPedidoCancelamento" />
-        </s:complexContent>
-      </s:complexType>
-      <s:complexType name="tcPedidoCancelamento">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="InfPedidoCancelamento" type="tns:tcInfPedidoCancelamento" />
-          <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s1:SignatureType" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="tcInfPedidoCancelamento">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="IdentificacaoNfse" type="tns:tcIdentificacaoNfse" />
-          <s:element minOccurs="0" maxOccurs="1" name="CodigoCancelamento" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="tcIdentificacaoNfse">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="Numero" type="s:unsignedLong" />
-          <s:element minOccurs="0" maxOccurs="1" name="Cnpj" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="CodigoMunicipio" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="CancelarLoteNfseResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="CancelarLoteNfseResult" type="tns:CancelarLoteNfseResposta" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="CancelarLoteNfseResposta">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="DataRecebimento" nillable="true" type="s:dateTime" />
-          <s:element minOccurs="0" maxOccurs="1" name="Protocolo" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno" type="tns:ArrayOfMensagemRetorno" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="CancelarLoteRps">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="CancelarLoteRpsEnvio" type="tns:CancelarLoteRpsEnvio" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="CancelarLoteRpsEnvio">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="LoteRps" type="tns:tcLoteCancelamentoRps" />
-          <s:element minOccurs="0" maxOccurs="1" name="Signature" type="s1:SignatureType" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="tcLoteCancelamentoRps">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="Protocolo" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Cnpj" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="InscricaoMunicipal" type="s:string" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="CancelarLoteRpsResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="CancelarLoteRpsResult" type="tns:CancelarLoteRpsResposta" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="CancelarLoteRpsResposta">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="DataRecebimento" nillable="true" type="s:dateTime" />
-          <s:element minOccurs="0" maxOccurs="1" name="Protocolo" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="ListaMensagemRetorno" type="tns:ArrayOfMensagemRetorno" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="BuscarUsuario">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="imu" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="cnpj" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="BuscarUsuarioResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="BuscarUsuarioResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="ConsultarSituacaoLoteRps">
         <s:complexType>
           <s:sequence>
@@ -630,49 +616,40 @@
       <s:complexType name="KeyInfoType" mixed="true">
         <s:sequence>
           <s:choice minOccurs="0" maxOccurs="unbounded">
-            <s:element minOccurs="0" maxOccurs="1" name="KeyName" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="MgmtData" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="X509Data" type="s1:X509DataType" />
-            <s:element minOccurs="0" maxOccurs="1" name="KeyValue" type="s1:KeyValueType" />
-            <s:element minOccurs="0" maxOccurs="1" name="PGPData" type="s1:PGPDataType" />
-            <s:element minOccurs="0" maxOccurs="1" name="RetrievalMethod" type="s1:RetrievalMethodType" />
             <s:element minOccurs="0" maxOccurs="1" name="SPKIData" type="s1:SPKIDataType" />
+            <s:element minOccurs="0" maxOccurs="1" name="PGPData" type="s1:PGPDataType" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyValue" type="s1:KeyValueType" />
+            <s:element minOccurs="0" maxOccurs="1" name="MgmtData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RetrievalMethod" type="s1:RetrievalMethodType" />
+            <s:element minOccurs="0" maxOccurs="1" name="X509Data" type="s1:X509DataType" />
             <s:any minOccurs="0" maxOccurs="1" />
           </s:choice>
         </s:sequence>
         <s:attribute name="Id" type="s:ID" />
       </s:complexType>
-      <s:complexType name="X509DataType">
+      <s:complexType name="SPKIDataType">
         <s:sequence>
-          <s:choice minOccurs="0" maxOccurs="unbounded">
-            <s:element minOccurs="0" maxOccurs="1" name="X509CRL" type="s:base64Binary" />
-            <s:element minOccurs="0" maxOccurs="1" name="X509SubjectName" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="X509SKI" type="s:base64Binary" />
-            <s:element minOccurs="0" maxOccurs="1" name="X509Certificate" type="s:base64Binary" />
-            <s:element minOccurs="0" maxOccurs="1" name="X509IssuerSerial" type="s1:X509IssuerSerialType" />
-            <s:any minOccurs="0" maxOccurs="1" />
-          </s:choice>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SPKISexp" type="s:base64Binary" />
+          <s:any minOccurs="0" maxOccurs="1" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="X509IssuerSerialType">
+      <s:complexType name="PGPDataType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="X509IssuerName" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="X509SerialNumber" type="s:integer" />
+          <s:choice minOccurs="0" maxOccurs="unbounded">
+            <s:element minOccurs="0" maxOccurs="1" name="PGPKeyPacket" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="PGPKeyID" type="s:base64Binary" />
+            <s:any minOccurs="0" maxOccurs="1" />
+          </s:choice>
         </s:sequence>
       </s:complexType>
       <s:complexType name="KeyValueType" mixed="true">
         <s:sequence>
           <s:choice minOccurs="1" maxOccurs="1">
-            <s:element minOccurs="0" maxOccurs="1" name="RSAKeyValue" type="s1:RSAKeyValueType" />
             <s:element minOccurs="0" maxOccurs="1" name="DSAKeyValue" type="s1:DSAKeyValueType" />
+            <s:element minOccurs="0" maxOccurs="1" name="RSAKeyValue" type="s1:RSAKeyValueType" />
             <s:any minOccurs="0" maxOccurs="1" />
           </s:choice>
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="RSAKeyValueType">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="Modulus" type="s:base64Binary" />
-          <s:element minOccurs="0" maxOccurs="1" name="Exponent" type="s:base64Binary" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="DSAKeyValueType">
@@ -686,13 +663,10 @@
           <s:element minOccurs="0" maxOccurs="1" name="PgenCounter" type="s:base64Binary" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="PGPDataType">
+      <s:complexType name="RSAKeyValueType">
         <s:sequence>
-          <s:choice minOccurs="0" maxOccurs="unbounded">
-            <s:element minOccurs="0" maxOccurs="1" name="PGPKeyID" type="s:base64Binary" />
-            <s:element minOccurs="0" maxOccurs="1" name="PGPKeyPacket" type="s:base64Binary" />
-            <s:any minOccurs="0" maxOccurs="1" />
-          </s:choice>
+          <s:element minOccurs="0" maxOccurs="1" name="Modulus" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Exponent" type="s:base64Binary" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RetrievalMethodType">
@@ -702,10 +676,22 @@
         <s:attribute name="URI" type="s:anyURI" />
         <s:attribute name="Type" type="s:anyURI" />
       </s:complexType>
-      <s:complexType name="SPKIDataType">
+      <s:complexType name="X509DataType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="SPKISexp" type="s:base64Binary" />
-          <s:any minOccurs="0" maxOccurs="1" />
+          <s:choice minOccurs="0" maxOccurs="unbounded">
+            <s:element minOccurs="0" maxOccurs="1" name="X509CRL" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="X509Certificate" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="X509IssuerSerial" type="s1:X509IssuerSerialType" />
+            <s:element minOccurs="0" maxOccurs="1" name="X509SKI" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="X509SubjectName" type="s:string" />
+            <s:any minOccurs="0" maxOccurs="1" />
+          </s:choice>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="X509IssuerSerialType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="X509IssuerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="X509SerialNumber" type="s:integer" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ObjectType" mixed="true">
@@ -718,12 +704,6 @@
       </s:complexType>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="RecepcionarLoteRpsSoapIn">
-    <wsdl:part name="parameters" element="tns:RecepcionarLoteRps" />
-  </wsdl:message>
-  <wsdl:message name="RecepcionarLoteRpsSoapOut">
-    <wsdl:part name="parameters" element="tns:RecepcionarLoteRpsResponse" />
-  </wsdl:message>
   <wsdl:message name="CancelarLoteNfseSoapIn">
     <wsdl:part name="parameters" element="tns:CancelarLoteNfse" />
   </wsdl:message>
@@ -736,11 +716,11 @@
   <wsdl:message name="CancelarLoteRpsSoapOut">
     <wsdl:part name="parameters" element="tns:CancelarLoteRpsResponse" />
   </wsdl:message>
-  <wsdl:message name="BuscarUsuarioSoapIn">
-    <wsdl:part name="parameters" element="tns:BuscarUsuario" />
+  <wsdl:message name="RecepcionarLoteRpsSoapIn">
+    <wsdl:part name="parameters" element="tns:RecepcionarLoteRps" />
   </wsdl:message>
-  <wsdl:message name="BuscarUsuarioSoapOut">
-    <wsdl:part name="parameters" element="tns:BuscarUsuarioResponse" />
+  <wsdl:message name="RecepcionarLoteRpsSoapOut">
+    <wsdl:part name="parameters" element="tns:RecepcionarLoteRpsResponse" />
   </wsdl:message>
   <wsdl:message name="ConsultarSituacaoLoteRpsSoapIn">
     <wsdl:part name="parameters" element="tns:ConsultarSituacaoLoteRps" />
@@ -785,10 +765,6 @@
     <wsdl:part name="parameters" element="tns:RecepcionarXmlResponse" />
   </wsdl:message>
   <wsdl:portType name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap">
-    <wsdl:operation name="RecepcionarLoteRps">
-      <wsdl:input message="tns:RecepcionarLoteRpsSoapIn" />
-      <wsdl:output message="tns:RecepcionarLoteRpsSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="CancelarLoteNfse">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realiza o cancelamento de uma ou mais NFS-e ao mesmo tempo</wsdl:documentation>
       <wsdl:input message="tns:CancelarLoteNfseSoapIn" />
@@ -799,9 +775,9 @@
       <wsdl:input message="tns:CancelarLoteRpsSoapIn" />
       <wsdl:output message="tns:CancelarLoteRpsSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="BuscarUsuario">
-      <wsdl:input message="tns:BuscarUsuarioSoapIn" />
-      <wsdl:output message="tns:BuscarUsuarioSoapOut" />
+    <wsdl:operation name="RecepcionarLoteRps">
+      <wsdl:input message="tns:RecepcionarLoteRpsSoapIn" />
+      <wsdl:output message="tns:RecepcionarLoteRpsSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="ConsultarSituacaoLoteRps">
       <wsdl:input message="tns:ConsultarSituacaoLoteRpsSoapIn" />
@@ -838,15 +814,6 @@
   </wsdl:portType>
   <wsdl:binding name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap" type="tns:WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="RecepcionarLoteRps">
-      <soap:operation soapAction="http://www.e-governeapps2.com.br/RecepcionarLoteRps" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="CancelarLoteNfse">
       <soap:operation soapAction="http://www.e-governeapps2.com.br/CancelarLoteNfse" style="document" />
       <wsdl:input>
@@ -865,8 +832,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="BuscarUsuario">
-      <soap:operation soapAction="http://www.e-governeapps2.com.br/BuscarUsuario" style="document" />
+    <wsdl:operation name="RecepcionarLoteRps">
+      <soap:operation soapAction="http://www.e-governeapps2.com.br/RecepcionarLoteRps" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -940,15 +907,6 @@
   </wsdl:binding>
   <wsdl:binding name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap12" type="tns:WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="RecepcionarLoteRps">
-      <soap12:operation soapAction="http://www.e-governeapps2.com.br/RecepcionarLoteRps" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="CancelarLoteNfse">
       <soap12:operation soapAction="http://www.e-governeapps2.com.br/CancelarLoteNfse" style="document" />
       <wsdl:input>
@@ -967,8 +925,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="BuscarUsuario">
-      <soap12:operation soapAction="http://www.e-governeapps2.com.br/BuscarUsuario" style="document" />
+    <wsdl:operation name="RecepcionarLoteRps">
+      <soap12:operation soapAction="http://www.e-governeapps2.com.br/RecepcionarLoteRps" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1042,10 +1000,10 @@
   </wsdl:binding>
   <wsdl:service name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1">
     <wsdl:port name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap" binding="tns:WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap">
-      <soap:address location="https://srv2-isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx" />
+      <soap:address location="https://isscuritiba.curitiba.pr.gov.br:8085/Iss.NfseWebService/nfsews.asmx" />
     </wsdl:port>
     <wsdl:port name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap12" binding="tns:WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap12">
-      <soap12:address location="https://srv2-isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx" />
+      <soap12:address location="https://isscuritiba.curitiba.pr.gov.br:8085/Iss.NfseWebService/nfsews.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

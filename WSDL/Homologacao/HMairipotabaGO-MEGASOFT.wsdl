@@ -1,53 +1,37 @@
-<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ws="http://ws.megasoftarrecadanet.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="nfse" targetNamespace="http://ws.megasoftarrecadanet.com.br">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ws="http://ws.megasoftarrecadanet.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="nfse" targetNamespace="http://ws.megasoftarrecadanet.com.br">
   <wsdl:types>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ws="http://ws.megasoftarrecadanet.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://ws.megasoftarrecadanet.com.br">
-			
-  <xsd:complexType name="input">
-				
-    <xsd:sequence>
-					
-      <xsd:element maxOccurs="1" minOccurs="1" name="nfseCabecMsg" type="xsd:string"/>
-					
-      <xsd:element maxOccurs="1" minOccurs="1" name="nfseDadosMsg" type="xsd:string"/>
-				
-    </xsd:sequence>
-			
-  </xsd:complexType>
-			
-  <xsd:complexType name="output">
-				
-    <xsd:sequence>
-					
-      <xsd:element name="outputXML" type="xsd:string"/>
-				
-    </xsd:sequence>
-			
-  </xsd:complexType>
-		
-  <xsd:element name="ConsultarNfsePorRpsRequest" type="ws:input"/>
-		
-  <xsd:element name="ConsultarNfsePorRpsResponse" type="ws:output"/>
-		
-  <xsd:element name="GerarNfseRequest" type="ws:input"/>
-		
-  <xsd:element name="GerarNfseResponse" type="ws:output"/>
-	
-</xsd:schema>
+    <xsd:schema targetNamespace="http://ws.megasoftarrecadanet.com.br">
+			<xsd:complexType name="input">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="nfseCabecMsg" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="nfseDadosMsg" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="output">
+				<xsd:sequence>
+					<xsd:element name="outputXML" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		<xsd:element name="ConsultarNfsePorRpsRequest" type="ws:input"/>
+		<xsd:element name="ConsultarNfsePorRpsResponse" type="ws:output"/>
+		<xsd:element name="GerarNfseRequest" type="ws:input"/>
+		<xsd:element name="GerarNfseResponse" type="ws:output"/>
+	</xsd:schema>
   </wsdl:types>
   <wsdl:message name="GerarNfseRequest">
     <wsdl:part element="ws:GerarNfseRequest" name="parameters">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="ConsultarNfsePorRpsResponse">
-    <wsdl:part element="ws:ConsultarNfsePorRpsResponse" name="parameters">
+  <wsdl:message name="GerarNfseResponse">
+    <wsdl:part element="ws:GerarNfseResponse" name="parameters">
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="ConsultarNfsePorRpsRequest">
     <wsdl:part element="ws:ConsultarNfsePorRpsRequest" name="parameters">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="GerarNfseResponse">
-    <wsdl:part element="ws:GerarNfseResponse" name="parameters">
+  <wsdl:message name="ConsultarNfsePorRpsResponse">
+    <wsdl:part element="ws:ConsultarNfsePorRpsResponse" name="parameters">
     </wsdl:part>
   </wsdl:message>
   <wsdl:portType name="nfse">
@@ -87,7 +71,7 @@
   </wsdl:binding>
   <wsdl:service name="NfseWSService">
     <wsdl:port binding="ws:nfseSOAP" name="nfseSOAP">
-      <soap:address location="https://silvania.megasoftarrecadanet.com.br/silvania/ws/nfseSOAP"/>
+      <soap:address location="https://mairipotaba.megasoftarrecadanet.com.br/ws/nfseSOAP"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
