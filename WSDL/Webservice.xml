@@ -8783,4 +8783,22 @@
       <CancelarNfse></CancelarNfse>
     </LocalProducao>
   </Estado>
+	<Estado ID="1100122" Nome="Ji-Paraná - RO" UF="RO" Padrao="FIORILLI">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>WSDL\Homologacao\HJiParanaRO-FIORILLI.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HJiParanaRO-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\Homologacao\HJiParanaRO-FIORILLI.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\Homologacao\HJiParanaRO-FIORILLI.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\Homologacao\HJiParanaRO-FIORILLI.wsdl</ConsultarLoteRps>
+			<CancelarNfse>WSDL\Homologacao\HJiParanaRO-FIORILLI.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>WSDL\Producao\PJiParanaRO-FIORILLI.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\Producao\PJiParanaRO-FIORILLI.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\Producao\PJiParanaRO-FIORILLI.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\Producao\PJiParanaRO-FIORILLI.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\Producao\PJiParanaRO-FIORILLI.wsdl</ConsultarLoteRps>
+			<CancelarNfse>WSDL\Producao\PJiParanaRO-FIORILLI.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
 </Webservice>

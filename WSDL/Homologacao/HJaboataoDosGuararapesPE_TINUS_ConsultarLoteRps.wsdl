@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.tinus.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.tinus.com.br">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www2.tinus.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www2.tinus.com.br">
     <types>
-        <s:schema elementFormDefault="qualified" targetNamespace="http://www.tinus.com.br">
+        <s:schema elementFormDefault="qualified" targetNamespace="http://www2.tinus.com.br">
             <s:import namespace="http://www.w3.org/2000/09/xmldsig#"/>
             <s:element name="ConsultarLoteRps">
                 <s:complexType>
@@ -448,6 +448,20 @@
                     <s:minLength value="1"/>
                 </s:restriction>
             </s:simpleType>
+            <s:element name="ConsultarLoteRps2">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element minOccurs="0" name="Arg2" type="s0:ConsultarLoteRpsEnvio"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
+            <s:element name="ConsultarLoteRps2Response">
+                <s:complexType>
+                    <s:sequence>
+                        <s:element name="ConsultarLoteRps2Result" type="s0:ConsultarLoteRpsResposta"/>
+                    </s:sequence>
+                </s:complexType>
+            </s:element>
             <s:element name="Test">
                 <s:complexType>
                     <s:sequence/>
@@ -752,6 +766,12 @@
     <message name="ConsultarLoteRpsSoapOut">
         <part name="parameters" element="s0:ConsultarLoteRpsResponse"/>
     </message>
+    <message name="ConsultarLoteRps2SoapIn">
+        <part name="parameters" element="s0:ConsultarLoteRps2"/>
+    </message>
+    <message name="ConsultarLoteRps2SoapOut">
+        <part name="parameters" element="s0:ConsultarLoteRps2Response"/>
+    </message>
     <message name="TestSoapIn">
         <part name="parameters" element="s0:Test"/>
     </message>
@@ -769,6 +789,10 @@
             <input message="s0:ConsultarLoteRpsSoapIn"/>
             <output message="s0:ConsultarLoteRpsSoapOut"/>
         </operation>
+        <operation name="ConsultarLoteRps2">
+            <input message="s0:ConsultarLoteRps2SoapIn"/>
+            <output message="s0:ConsultarLoteRps2SoapOut"/>
+        </operation>
         <operation name="Test">
             <input message="s0:TestSoapIn"/>
             <output message="s0:TestSoapOut"/>
@@ -781,7 +805,16 @@
     <binding name="ConsultarLoteRpsSoap" type="s0:ConsultarLoteRpsSoap">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
         <operation name="ConsultarLoteRps">
-            <soap:operation soapAction="http://www.tinus.com.br/WSNFSE.ConsultarLoteRps.ConsultarLoteRps" style="document"/>
+            <soap:operation soapAction="http://www2.tinus.com.br/WSNFSE.ConsultarLoteRps.ConsultarLoteRps" style="document"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="ConsultarLoteRps2">
+            <soap:operation soapAction="http://www2.tinus.com.br/WSNFSE.ConsultarLoteRps.ConsultarLoteRps2" style="document"/>
             <input>
                 <soap:body use="literal"/>
             </input>
@@ -790,7 +823,7 @@
             </output>
         </operation>
         <operation name="Test">
-            <soap:operation soapAction="http://www.tinus.com.br/WSNFSE.ConsultarLoteRps.Test" style="document"/>
+            <soap:operation soapAction="http://www2.tinus.com.br/WSNFSE.ConsultarLoteRps.Test" style="document"/>
             <input>
                 <soap:body use="literal"/>
             </input>
@@ -799,7 +832,7 @@
             </output>
         </operation>
         <operation name="TesteRetorno">
-            <soap:operation soapAction="http://www.tinus.com.br/WSNFSE.ConsultarLoteRps.TesteRetorno" style="document"/>
+            <soap:operation soapAction="http://www2.tinus.com.br/WSNFSE.ConsultarLoteRps.TesteRetorno" style="document"/>
             <input>
                 <soap:body use="literal"/>
             </input>
@@ -810,7 +843,7 @@
     </binding>
     <service name="ConsultarLoteRps">
         <port name="ConsultarLoteRpsSoap" binding="s0:ConsultarLoteRpsSoap">
-            <soap:address location="http://www.tinus.com.br/csp/jaboatao/WSNFSE.ConsultarLoteRps.cls"/>
+            <soap:address location="http://www2.tinus.com.br/csp/testejab/WSNFSE.ConsultarLoteRps.cls"/>
         </port>
     </service>
 </definitions>

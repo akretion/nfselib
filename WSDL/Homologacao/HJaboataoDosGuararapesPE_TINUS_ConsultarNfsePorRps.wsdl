@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.tinus.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.tinus.com.br">
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www2.tinus.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www2.tinus.com.br">
     <types>
-        <s:schema elementFormDefault="qualified" targetNamespace="http://www.tinus.com.br">
+        <s:schema elementFormDefault="qualified" targetNamespace="http://www2.tinus.com.br">
             <s:import namespace="http://www.w3.org/2000/09/xmldsig#"/>
             <s:element name="ConsultarNfsePorRps">
                 <s:complexType>
@@ -749,7 +749,7 @@
     <binding name="ConsultarNfsePorRpsSoap" type="s0:ConsultarNfsePorRpsSoap">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
         <operation name="ConsultarNfsePorRps">
-            <soap:operation soapAction="http://www.tinus.com.br/WSNFSE.ConsultarNfsePorRps.ConsultarNfsePorRps" style="document"/>
+            <soap:operation soapAction="http://www2.tinus.com.br/WSNFSE.ConsultarNfsePorRps.ConsultarNfsePorRps" style="document"/>
             <input>
                 <soap:body use="literal"/>
             </input>
@@ -758,7 +758,7 @@
             </output>
         </operation>
         <operation name="Test">
-            <soap:operation soapAction="http://www.tinus.com.br/WSNFSE.ConsultarNfsePorRps.Test" style="document"/>
+            <soap:operation soapAction="http://www2.tinus.com.br/WSNFSE.ConsultarNfsePorRps.Test" style="document"/>
             <input>
                 <soap:body use="literal"/>
             </input>
@@ -769,7 +769,7 @@
     </binding>
     <service name="ConsultarNfsePorRps">
         <port name="ConsultarNfsePorRpsSoap" binding="s0:ConsultarNfsePorRpsSoap">
-            <soap:address location="http://www.tinus.com.br/csp/jaboatao/WSNFSE.ConsultarNfsePorRps.cls"/>
+            <soap:address location="http://www2.tinus.com.br/csp/testejab/WSNFSE.ConsultarNfsePorRps.cls"/>
         </port>
     </service>
 </definitions>

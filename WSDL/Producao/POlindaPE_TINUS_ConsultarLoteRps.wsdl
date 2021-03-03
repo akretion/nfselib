@@ -811,7 +811,7 @@
     </binding>
     <service name="ConsultarLoteRps">
         <port name="ConsultarLoteRpsSoap" binding="s0:ConsultarLoteRpsSoap">
-            <soap:address location="http://www.tinus.com.br/csp/olinda/WSNFSE.ConsultarLoteRps.cls"/>
+            <soap:address location="https://www.tinus.com.br/csp/olinda/WSNFSE.ConsultarLoteRps.cls"/>
         </port>
     </service>
 </definitions>
