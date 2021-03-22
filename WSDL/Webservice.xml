@@ -8801,4 +8801,78 @@
 			<CancelarNfse>WSDL\Producao\PJiParanaRO-FIORILLI.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
+	<Estado ID="5105200" Nome="Juscimeira - MT" UF="MT" Padrao="COPLAN">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\HJuscimeiraMT-COPLAN.WSDL</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\HJuscimeiraMT-COPLAN.WSDL</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\HJuscimeiraMT-COPLAN.WSDL</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\HJuscimeiraMT-COPLAN.WSDL</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\HJuscimeiraMT-COPLAN.WSDL</ConsultarLoteRps>
+			<CancelarNfse>wsdl\homologacao\HJuscimeiraMT-COPLAN.WSDL</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PJuscimeiraMT-COPLAN.WSDL</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PJuscimeiraMT-COPLAN.WSDL</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PJuscimeiraMT-COPLAN.WSDL</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PJuscimeiraMT-COPLAN.WSDL</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PJuscimeiraMT-COPLAN.WSDL</ConsultarLoteRps>
+			<CancelarNfse>wsdl\producao\PJuscimeiraMT-COPLAN.WSDL</CancelarNfse>
+		</LocalProducao>
+	</Estado>
+	<Estado ID="3101607" Nome="Alfenas - MG" UF="MG" Padrao="BETHA">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+			<CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+			<CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
+	<Estado ID="3300209" Nome="Araruama - RJ" UF="RJ" Padrao="BETHA">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\HBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\HBethaConsultarNFSe.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\HBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+			<CancelarNfse>wsdl\homologacao\HBethaCancelarNFSe.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PBethaConsultarNFSePorRPS.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PBethaConsultarNFSe.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PBethaConsultarLoteRPS.wsdl</ConsultarLoteRps>
+			<CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
+	<Estado ID="4213203" Nome="Pomerode - SC" UF="SC" Padrao="IPM">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+			<CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+			<CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
 </Webservice>
