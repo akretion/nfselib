@@ -138,6 +138,13 @@
 			<xsd:whiteSpace value="collapse" />
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:simpleType name="tsToken">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50" />
+			<xsd:minLength value="1" />
+			<xsd:whiteSpace value="collapse" />
+		</xsd:restriction>
+	</xsd:simpleType>
 	<xsd:simpleType name="tsRazaoSocial">
 		<xsd:restriction base="xsd:string">
 			<xsd:maxLength value="150" />
@@ -351,6 +358,8 @@
 				maxOccurs="1" />
 			<xsd:element name="InscricaoMunicipal" type="tsInscricaoMunicipal"
 				minOccurs="0" maxOccurs="1" />
+			<xsd:element name="Token" type="tsToken"
+				minOccurs="0" maxOccurs="1" />	
 		</xsd:sequence>
 	</xsd:complexType>
 
