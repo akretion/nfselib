@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ws="http://ws.megasoftarrecadanet.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="nfse" targetNamespace="http://ws.megasoftarrecadanet.com.br">
+  <wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ws="http://ws.megasoftarrecadanet.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://ws.megasoftarrecadanet.com.br">
+			
+			<xsd:complexType name="input">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="nfseCabecMsg" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="nfseDadosMsg" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="output">
+				<xsd:sequence>
+					<xsd:element name="outputXML" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		<xsd:element name="ConsultarNfsePorRpsRequest" type="ws:input"/>
+		<xsd:element name="ConsultarNfsePorRpsResponse" type="ws:output"/>
+		<xsd:element name="GerarNfseRequest" type="ws:input"/>
+		<xsd:element name="GerarNfseResponse" type="ws:output"/>
+	</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GerarNfseRequest">
+    <wsdl:part element="ws:GerarNfseRequest" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsResponse">
+    <wsdl:part element="ws:ConsultarNfsePorRpsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsRequest">
+    <wsdl:part element="ws:ConsultarNfsePorRpsRequest" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GerarNfseResponse">
+    <wsdl:part element="ws:GerarNfseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="nfse">
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <wsdl:input message="ws:ConsultarNfsePorRpsRequest">
+    </wsdl:input>
+      <wsdl:output message="ws:ConsultarNfsePorRpsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GerarNfse">
+      <wsdl:input message="ws:GerarNfseRequest">
+    </wsdl:input>
+      <wsdl:output message="ws:GerarNfseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="nfseSOAP" type="ws:nfse">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <soap:operation soapAction="http://ws.megasoftarrecadanet.com.br/ConsultarNfsePorRps"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GerarNfse">
+      <soap:operation soapAction="http://ws.megasoftarrecadanet.com.br/GerarNfse"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NfseWSService">
+    <wsdl:port binding="ws:nfseSOAP" name="nfseSOAP">
+      <soap:address location="https://professorjamil.megasoftarrecadanet.com.br/professorjamil/ws/nfseSOAP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -3370,7 +3370,7 @@
       <CancelarNfse>wsdl\producao\PPocosdeCaldasMG-GOVDIGITAL.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3201308" Nome="Cariacica - ES" UF="ES" Padrao="SMARAPD">
+  <Estado ID="3201308" Nome="Cariacica - ES" UF="ES" Padrao="SMARAPD_203">
     <LocalHomologacao>
       <RecepcionarLoteRps></RecepcionarLoteRps>
       <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
@@ -3381,13 +3381,12 @@
       <CancelarNfse></CancelarNfse>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PCariacicaES-WSEntrada.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PCariacicaES-WSEntrada.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps></ConsultarNfsePorRps>
-      <ConsultarNfse>WSDL\Producao\PCariacicaES-WSSaida.wsdl</ConsultarNfse>
-      <ConsultarLoteRps></ConsultarLoteRps>
-      <ConsultarURLNfse>WSDL\Producao\PCariacicaES-WSUtil.wsdl</ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PCariacicaES-WSEntrada.wsdl</CancelarNfse>
+     <ConsultarNfsePorRps>WSDL\Producao\PCariacicaES_SMARAPD_203.wsdl</ConsultarNfsePorRps>
+      <RecepcionarLoteRps>WSDL\Producao\PCariacicaES_SMARAPD_203.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>WSDL\Producao\PCariacicaES_SMARAPD_203.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfse>WSDL\Producao\PCariacicaES_SMARAPD_203.wsdl</ConsultarNfse>
+      <ConsultarURLNfse>WSDL\Producao\PCariacicaES_SMARAPD_203.wsdl</ConsultarURLNfse>
+      <CancelarNfse>WSDL\Producao\PCariacicaES_SMARAPD_203.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
   <Estado ID="3147006" Nome="Paracatu - MG" UF="MG" Padrao="GOVDIGITAL">
@@ -5204,24 +5203,6 @@
       <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3144805" Nome="Nova Lima - MG" UF="MG" Padrao="SUPERNOVA">
-    <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HNovaLimaMG_SuperNova.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HNovaLimaMG_SuperNova.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HNovaLimaMG_SuperNova.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HNovaLimaMG_SuperNova.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HNovaLimaMG_SuperNova.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\homologacao\HNovaLimaMG_SuperNova.wsdl</CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PNovaLimaMG_SuperNova.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PNovaLimaMG_SuperNova.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PNovaLimaMG_SuperNova.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PNovaLimaMG_SuperNova.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PNovaLimaMG_SuperNova.wsdl</ConsultarLoteRps>
-      <CancelarNfse>wsdl\producao\PNovaLimaMG_SuperNova.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
   <Estado ID="3511102" Nome="Catanduva - SP" UF="SP" Padrao="PRONIN">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HCatanduvaSP-PRONIN.wsdl</RecepcionarLoteRps>
@@ -6898,26 +6879,26 @@
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3300704" Nome="Cabo Frio - RJ" UF="RJ" Padrao="SUPERNOVA">
+  <Estado ID="3300704" Nome="Cabo Frio - RJ" UF="RJ" Padrao="SIGCORP_SIGISS_203">
     <LocalHomologacao>
-      <RecepcionarLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</CancelarNfse>
-      <ConsultaNFSeTomados>wsdl\homologacao\HCaboFrioRJ_SuperNova.wsdl</ConsultaNFSeTomados>
+      <RecepcionarLoteRps>wsdl\homologacao\HCaboFrioRJ_SIGCORP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCaboFrioRJ_SIGCORP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HCaboFrioRJ_SIGCORP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HCaboFrioRJ_SIGCORP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HCaboFrioRJ_SIGCORP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HCaboFrioRJ_SIGCORP.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\homologacao\HCaboFrioRJ_SIGCORP.wsdl</SubstituirNfse>
+      <ConsultaNFSeTomados>wsdl\homologacao\HCaboFrioRJ_SIGCORP.wsdl</ConsultaNFSeTomados>
     </LocalHomologacao>
     <LocalProducao>
-      <RecepcionarLoteRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfsePorRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarNfsePorRps>
-      <ConsultarNfse>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarNfse>
-      <ConsultarLoteRps>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultarLoteRps>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</CancelarNfse>
-      <ConsultaNFSeTomados>wsdl\producao\PCaboFrioRJ_SuperNova.wsdl</ConsultaNFSeTomados>
+      <RecepcionarLoteRps>wsdl\producao\PCaboFrioRJ_SIGCORP.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PCaboFrioRJ_SIGCORP.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PCaboFrioRJ_SIGCORP.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PCaboFrioRJ_SIGCORP.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PCaboFrioRJ_SIGCORP.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PCaboFrioRJ_SIGCORP.wsdl</CancelarNfse>
+      <SubstituirNfse>wsdl\producao\PCaboFrioRJ_SIGCORP.wsdl</SubstituirNfse>
+      <ConsultaNFSeTomados>wsdl\producao\PCaboFrioRJ_SIGCORP.wsdl</ConsultaNFSeTomados>
     </LocalProducao>
   </Estado>
   <Estado ID="3157005" Nome="Salinas - MG" UF="MG" Padrao="MEMORY">
@@ -8951,22 +8932,6 @@
       <CancelarNfse>wsdl\producao\PBethaCancelarNFSe.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <Estado ID="3205200" Nome="Vila Velha - ES" UF="ES" Padrao="SMARAPD">
-    <LocalHomologacao>
-      <RecepcionarLoteRps></RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-      <ConsultarNfse></ConsultarNfse>
-      <ConsultarURLNfse></ConsultarURLNfse>
-      <CancelarNfse></CancelarNfse>
-    </LocalHomologacao>
-    <LocalProducao>
-      <RecepcionarLoteRps>WSDL\Producao\PVilaVelhaES-SMARAPDWSEntrada.wsdl</RecepcionarLoteRps>
-      <ConsultarSituacaoLoteRps>WSDL\Producao\PVilaVelhaES-SMARAPDWSEntrada.wsdl</ConsultarSituacaoLoteRps>
-      <ConsultarNfse>WSDL\Producao\PVilaVelhaES-SMARAPDWSSaida.wsdl</ConsultarNfse>
-      <ConsultarURLNfse>WSDL\Producao\PVilaVelhaES-SMARAPDWSUtil.wsdl</ConsultarURLNfse>
-      <CancelarNfse>WSDL\Producao\PVilaVelhaES-SMARAPDWSEntrada.wsdl</CancelarNfse>
-    </LocalProducao>
-  </Estado>
   <Estado ID="4114807" Nome="Marialva - PR" UF="PR" Padrao="ELOTECH">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HMarialvaPR-Elotech.wsdl</RecepcionarLoteRps>
@@ -9022,6 +8987,83 @@
       <ConsultarLoteRps>WSDL\Producao\PAguaBoaMT-COPLAN.wsdl</ConsultarLoteRps>
       <CancelarNfse>WSDL\Producao\PAguaBoaMT-COPLAN.wsdl</CancelarNfse>
       <ConsultaSequenciaLoteNotaRPS>WSDL\producao\PAguaBoaMT-COPLAN.wsdl</ConsultaSequenciaLoteNotaRPS>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="3101508" Nome="Além Paraíba - MG" UF="MG" Padrao="PORTALFACIL_ACTCON_202">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+ <Estado ID="3205200" Nome="Vila Velha - ES" UF="ES" Padrao="SMARAPD_203">
+    <LocalHomologacao>
+      <RecepcionarLoteRps></RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+      <ConsultarNfse></ConsultarNfse>
+      <ConsultarURLNfse></ConsultarURLNfse>
+      <CancelarNfse></CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+        <ConsultarNfsePorRps>WSDL\Producao\PVilavelhaES_SMARAPD_203.wsdl</ConsultarNfsePorRps>
+        <RecepcionarLoteRps>WSDL\Producao\PVilavelhaES_SMARAPD_203.wsdl</RecepcionarLoteRps>
+        <ConsultarSituacaoLoteRps>WSDL\Producao\PVilavelhaES_SMARAPD_203.wsdl</ConsultarSituacaoLoteRps>
+        <ConsultarNfse>WSDL\Producao\PVilavelhaES_SMARAPD_203.wsdl</ConsultarNfse>
+        <ConsultarURLNfse>WSDL\Producao\PVilavelhaES_SMARAPD_203.wsdl</ConsultarURLNfse>
+        <CancelarNfse>WSDL\Producao\PVilavelhaES_SMARAPD_203.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+  <Estado ID="4210100" Nome="Mafra - SC" UF="SC" Padrao="PUBLICA">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HMafraSC-PUBLICA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\homologacao\HCMafraSC-PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HMafraSC-PUBLICA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\homologacao\HMafraSC-PUBLICA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\homologacao\HMafraSC-PUBLICA.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HMafraSC-PUBLICA.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PMafraSC-PUBLICA.wsdl</RecepcionarLoteRps>
+      <ConsultarSituacaoLoteRps>wsdl\producao\PMafraSC-PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PMafraSC-PUBLICA.wsdl</ConsultarNfsePorRps>
+      <ConsultarNfse>wsdl\producao\PMafraSC-PUBLICA.wsdl</ConsultarNfse>
+      <ConsultarLoteRps>wsdl\producao\PMafraSC-PUBLICA.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PMafraSC-PUBLICA.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>	
+  <Estado ID="3144805" Nome="Nova Lima - MG" UF="MG" Padrao="ABACO_204">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HNovaLimaMG-recepcionarloterps.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HNovaLimaMG-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarLoteRps>wsdl\homologacao\HNovaLimaMG-consultarloterps.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\homologacao\HNovaLimaMG-cancelarnfse.wsdl</CancelarNfse>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PNovaLimaMG-recepcionarloterps.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PNovaLimaMG-consultarnfseporrps.wsdl</ConsultarNfsePorRps>
+      <ConsultarLoteRps>wsdl\producao\PNovaLimaMG-consultarloterps.wsdl</ConsultarLoteRps>
+      <CancelarNfse>wsdl\producao\PNovaLimaMG-cancelarnfse.wsdl</CancelarNfse>
+    </LocalProducao>
+  </Estado>
+	  <Estado ID="5218391" Nome="Professor Jamil - GO" UF="GO" Padrao="MEGASOFT">
+    <LocalHomologacao>
+      <RecepcionarLoteRps>wsdl\homologacao\HProfessorJamilGO-MEGASOFT.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\homologacao\HProfessorJamilGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
+    </LocalHomologacao>
+    <LocalProducao>
+      <RecepcionarLoteRps>wsdl\producao\PProfessorJamilGO-MEGASOFT.wsdl</RecepcionarLoteRps>
+      <ConsultarNfsePorRps>wsdl\producao\PProfessorJamilGO-MEGASOFT.wsdl</ConsultarNfsePorRps>
     </LocalProducao>
   </Estado>
 </Webservice>

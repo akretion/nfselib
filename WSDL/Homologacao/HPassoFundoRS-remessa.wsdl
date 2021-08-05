@@ -4,6 +4,21 @@
 	</wsdl:documentation>
     <wsdl:types>
         <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://server.nfse.thema.inf.br">
+            <xs:element name="recepcionarLoteRpsDocumento">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="numeroDocumento" type="xs:long"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="recepcionarLoteRpsDocumentoResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="recepcionarLoteRpsLimitado">
                 <xs:complexType>
                     <xs:sequence>
@@ -26,21 +41,6 @@
                 </xs:complexType>
             </xs:element>
             <xs:element name="recepcionarLoteRpsResponse">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="recepcionarLoteRpsDocumento">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string"/>
-                        <xs:element minOccurs="0" name="numeroDocumento" type="xs:long"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="recepcionarLoteRpsDocumentoResponse">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
@@ -173,13 +173,22 @@
     </wsdl:binding>
     <wsdl:service name="NFSEremessa">
         <wsdl:port name="NFSEremessaHttpSoap11Endpoint" binding="ns:NFSEremessaSoap11Binding">
-            <soap:address location="http://nfsehomologacao.pmpf.rs.gov.br/thema-nfse/services/NFSEremessa.NFSEremessaHttpSoap11Endpoint/"/>
+            <soap:address location="http://hmlnfse.pmpf.rs.gov.br/thema-nfse/services/NFSEremessa.NFSEremessaHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="NFSEremessaHttpsSoap11Endpoint" binding="ns:NFSEremessaSoap11Binding">
+            <soap:address location="https://hmlnfse.pmpf.rs.gov.br/thema-nfse/services/NFSEremessa.NFSEremessaHttpsSoap11Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEremessaHttpSoap12Endpoint" binding="ns:NFSEremessaSoap12Binding">
-            <soap12:address location="http://nfsehomologacao.pmpf.rs.gov.br/thema-nfse/services/NFSEremessa.NFSEremessaHttpSoap12Endpoint/"/>
+            <soap12:address location="http://hmlnfse.pmpf.rs.gov.br/thema-nfse/services/NFSEremessa.NFSEremessaHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="NFSEremessaHttpsSoap12Endpoint" binding="ns:NFSEremessaSoap12Binding">
+            <soap12:address location="https://hmlnfse.pmpf.rs.gov.br/thema-nfse/services/NFSEremessa.NFSEremessaHttpsSoap12Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEremessaHttpEndpoint" binding="ns:NFSEremessaHttpBinding">
-            <http:address location="http://nfsehomologacao.pmpf.rs.gov.br/thema-nfse/services/NFSEremessa.NFSEremessaHttpEndpoint/"/>
+            <http:address location="http://hmlnfse.pmpf.rs.gov.br/thema-nfse/services/NFSEremessa.NFSEremessaHttpEndpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="NFSEremessaHttpsEndpoint" binding="ns:NFSEremessaHttpBinding">
+            <http:address location="https://hmlnfse.pmpf.rs.gov.br/thema-nfse/services/NFSEremessa.NFSEremessaHttpsEndpoint/"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

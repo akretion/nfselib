@@ -69,14 +69,23 @@
         </wsdl:operation>
     </wsdl:binding>
     <wsdl:service name="NFSEcancelamento">
+        <wsdl:port name="NFSEcancelamentoHttpsSoap11Endpoint" binding="ns:NFSEcancelamentoSoap11Binding">
+            <soap:address location="https://nfse.pmsap.com.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpsSoap11Endpoint/"/>
+        </wsdl:port>
         <wsdl:port name="NFSEcancelamentoHttpSoap11Endpoint" binding="ns:NFSEcancelamentoSoap11Binding">
             <soap:address location="http://nfse.pmsap.com.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpSoap11Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEcancelamentoHttpSoap12Endpoint" binding="ns:NFSEcancelamentoSoap12Binding">
             <soap12:address location="http://nfse.pmsap.com.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpSoap12Endpoint/"/>
         </wsdl:port>
+        <wsdl:port name="NFSEcancelamentoHttpsSoap12Endpoint" binding="ns:NFSEcancelamentoSoap12Binding">
+            <soap12:address location="https://nfse.pmsap.com.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpsSoap12Endpoint/"/>
+        </wsdl:port>
         <wsdl:port name="NFSEcancelamentoHttpEndpoint" binding="ns:NFSEcancelamentoHttpBinding">
             <http:address location="http://nfse.pmsap.com.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpEndpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="NFSEcancelamentoHttpsEndpoint" binding="ns:NFSEcancelamentoHttpBinding">
+            <http:address location="https://nfse.pmsap.com.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpsEndpoint/"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/nfse.wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="nfse" targetNamespace="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/nfse.wsdl">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/nfse.wsdl">
+      <xsd:complexType name="input">
+        <xsd:sequence>
+          <xsd:element name="nfseCabecMsg" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+          <xsd:element name="nfseDadosMsg" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="output">
+        <xsd:sequence>
+          <xsd:element name="outputXML" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RecepcionarLoteRpsRequest" type="tns:input" />
+      <xsd:element name="RecepcionarLoteRpsResponse" type="tns:output" />
+      <xsd:element name="CancelarNfseRequest" type="tns:input" />
+      <xsd:element name="CancelarNfseResponse" type="tns:output"/>
+      <xsd:element name="ConsultarLoteRpsRequest" type="tns:input" />
+      <xsd:element name="ConsultarLoteRpsResponse" type="tns:output"/>
+      <xsd:element name="ConsultarNfseServicoPrestadoRequest" type="tns:input" />
+      <xsd:element name="ConsultarNfseServicoPrestadoResponse" type="tns:output"/>
+      <xsd:element name="ConsultarNfseServicoTomadoRequest" type="tns:input" />
+      <xsd:element name="ConsultarNfseServicoTomadoResponse" type="tns:output"/>
+      <xsd:element name="ConsultarNfsePorFaixaRequest" type="tns:input" />
+      <xsd:element name="ConsultarNfsePorFaixaResponse" type="tns:output"/>
+      <xsd:element name="ConsultarNfsePorRpsRequest" type="tns:input" />
+      <xsd:element name="ConsultarNfsePorRpsResponse" type="tns:output"/>
+      <xsd:element name="GerarNfseRequest" type="tns:input" />
+      <xsd:element name="GerarNfseResponse" type="tns:output"/>
+      <xsd:element name="SubstituirNfseRequest" type="tns:input" />
+      <xsd:element name="SubstituirNfseResponse" type="tns:output"/>
+      <xsd:element name="RecepcionarLoteRpsSincronoRequest" type="tns:input" />
+      <xsd:element name="RecepcionarLoteRpsSincronoResponse" type="tns:output"/>
+    </xsd:schema>
+  </wsdl:types>
+
+
+  <wsdl:message name="RecepcionarLoteRpsRequest">
+    <wsdl:part element="tns:RecepcionarLoteRpsRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsResponse">
+    <wsdl:part element="tns:RecepcionarLoteRpsResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseRequest">
+    <wsdl:part element="tns:CancelarNfseRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CancelarNfseResponse">
+    <wsdl:part element="tns:CancelarNfseResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsRequest">
+    <wsdl:part element="tns:ConsultarLoteRpsRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarLoteRpsResponse">
+    <wsdl:part element="tns:ConsultarLoteRpsResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoPrestadoRequest">
+    <wsdl:part element="tns:ConsultarNfseServicoPrestadoRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoPrestadoResponse">
+    <wsdl:part element="tns:ConsultarNfseServicoPrestadoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoTomadoRequest">
+    <wsdl:part element="tns:ConsultarNfseServicoTomadoRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfseServicoTomadoResponse">
+    <wsdl:part element="tns:ConsultarNfseServicoTomadoResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorFaixaRequest">
+    <wsdl:part element="tns:ConsultarNfsePorFaixaRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorFaixaResponse">
+    <wsdl:part element="tns:ConsultarNfsePorFaixaResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsRequest">
+    <wsdl:part element="tns:ConsultarNfsePorRpsRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ConsultarNfsePorRpsResponse">
+    <wsdl:part element="tns:ConsultarNfsePorRpsResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GerarNfseRequest">
+    <wsdl:part element="tns:GerarNfseRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GerarNfseResponse">
+    <wsdl:part element="tns:GerarNfseResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SubstituirNfseRequest">
+    <wsdl:part element="tns:SubstituirNfseRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SubstituirNfseResponse">
+    <wsdl:part element="tns:SubstituirNfseResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsSincronoRequest">
+    <wsdl:part element="tns:RecepcionarLoteRpsSincronoRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="RecepcionarLoteRpsSincronoResponse">
+    <wsdl:part element="tns:RecepcionarLoteRpsSincronoResponse" name="parameters"/>
+  </wsdl:message>
+
+
+
+  <wsdl:portType name="nfseSoapPortType">
+
+    <wsdl:operation name="RecepcionarLoteRps">
+      <wsdl:input name="RecepcionarLoteRpsRequest" message="tns:RecepcionarLoteRpsRequest"/>
+      <wsdl:output name="RecepcionarLoteRpsResponse" message="tns:RecepcionarLoteRpsResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="CancelarNfse">
+      <wsdl:input name="CancelarNfseRequest" message="tns:CancelarNfseRequest"/>
+      <wsdl:output name="CancelarNfseResponse" message="tns:CancelarNfseResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <wsdl:input name="ConsultarLoteRpsRequest" message="tns:ConsultarLoteRpsRequest"/>
+      <wsdl:output name="ConsultarLoteRpsResponse" message="tns:ConsultarLoteRpsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoPrestado">
+      <wsdl:input name="ConsultarNfseServicoPrestadoRequest" message="tns:ConsultarNfseServicoPrestadoRequest"/>
+      <wsdl:output name="ConsultarNfseServicoPrestadoResponse" message="tns:ConsultarNfseServicoPrestadoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoTomado">
+      <wsdl:input name="ConsultarNfseServicoTomadoRequest" message="tns:ConsultarNfseServicoTomadoRequest"/>
+      <wsdl:output name="ConsultarNfseServicoTomadoResponse" message="tns:ConsultarNfseServicoTomadoResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorFaixa">
+      <wsdl:input name="ConsultarNfsePorFaixaRequest" message="tns:ConsultarNfsePorFaixaRequest"/>
+      <wsdl:output name="ConsultarNfsePorFaixaResponse" message="tns:ConsultarNfsePorFaixaResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <wsdl:input name="ConsultarNfsePorRpsRequest" message="tns:ConsultarNfsePorRpsRequest"/>
+      <wsdl:output name="ConsultarNfsePorRpsResponse" message="tns:ConsultarNfsePorRpsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GerarNfse">
+      <wsdl:input name="GerarNfseRequest" message="tns:GerarNfseRequest"/>
+      <wsdl:output name="GerarNfseResponse" message="tns:GerarNfseResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse">
+      <wsdl:input name="SubstituirNfseRequest" message="tns:SubstituirNfseRequest"/>
+      <wsdl:output name="SubstituirNfseResponse" message="tns:SubstituirNfseResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRpsSincrono">
+      <wsdl:input name="RecepcionarLoteRpsSincronoRequest" message="tns:RecepcionarLoteRpsSincronoRequest"/>
+      <wsdl:output name="RecepcionarLoteRpsSincronoResponse" message="tns:RecepcionarLoteRpsSincronoResponse"/>
+    </wsdl:operation>
+
+
+
+  </wsdl:portType>
+
+  <wsdl:binding name="nfseSoapBinding" type="tns:nfseSoapPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RecepcionarLoteRps">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#RecepcionarLoteRps" style="document"/>
+      <wsdl:input name="RecepcionarLoteRpsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RecepcionarLoteRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarNfse">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#CancelarNfse"/>
+      <wsdl:input name="CancelarNfseRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CancelarNfseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLoteRps">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarLoteRps"/>
+      <wsdl:input name="ConsultarLoteRpsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarLoteRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoPrestado">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfseServicoPrestado"/>
+      <wsdl:input name="ConsultarNfseServicoPrestadoRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfseServicoPrestadoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfseServicoTomado">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfseServicoTomado"/>
+      <wsdl:input name="ConsultarNfseServicoTomadoRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfseServicoTomadoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorFaixa">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfsePorFaixa"/>
+      <wsdl:input name="ConsultarNfsePorFaixaRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfsePorFaixaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNfsePorRps">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#ConsultarNfsePorRps"/>
+      <wsdl:input name="ConsultarNfsePorRpsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ConsultarNfsePorRpsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GerarNfse">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#GerarNfse"/>
+      <wsdl:input name="GerarNfseRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GerarNfseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#SubstituirNfse"/>
+      <wsdl:input name="SubstituirNfseRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SubstituirNfseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecepcionarLoteRpsSincrono">
+      <soap:operation soapAction="http://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos#RecepcionarLoteRpsSincrono"/>
+      <wsdl:input name="RecepcionarLoteRpsSincronoRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RecepcionarLoteRpsSincronoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="NfseWSService">
+    <wsdl:port binding="tns:nfseSoapBinding" name="nfseSoapPort">
+      <soap:address location="https://nfse-mg-alemparaiba.portalfacil.com.br/nfseserv/webservice/servicos"/>
+    </wsdl:port>
+  </wsdl:service>
+
+
+</wsdl:definitions>

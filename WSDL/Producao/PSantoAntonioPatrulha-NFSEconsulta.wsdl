@@ -4,14 +4,14 @@
 	</wsdl:documentation>
     <wsdl:types>
         <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://server.nfse.thema.inf.br">
-            <xs:element name="consultarNfse">
+            <xs:element name="consultarSituacaoLoteRps">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="consultarNfseResponse">
+            <xs:element name="consultarSituacaoLoteRpsResponse">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
@@ -32,14 +32,14 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="consultarSituacaoLoteRps">
+            <xs:element name="consultarNfse">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="consultarSituacaoLoteRpsResponse">
+            <xs:element name="consultarNfseResponse">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
@@ -225,8 +225,17 @@
         <wsdl:port name="NFSEconsultaHttpSoap11Endpoint" binding="ns:NFSEconsultaSoap11Binding">
             <soap:address location="http://nfse.pmsap.com.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpSoap11Endpoint/"/>
         </wsdl:port>
+        <wsdl:port name="NFSEconsultaHttpsSoap11Endpoint" binding="ns:NFSEconsultaSoap11Binding">
+            <soap:address location="https://nfse.pmsap.com.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpsSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="NFSEconsultaHttpsSoap12Endpoint" binding="ns:NFSEconsultaSoap12Binding">
+            <soap12:address location="https://nfse.pmsap.com.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpsSoap12Endpoint/"/>
+        </wsdl:port>
         <wsdl:port name="NFSEconsultaHttpSoap12Endpoint" binding="ns:NFSEconsultaSoap12Binding">
             <soap12:address location="http://nfse.pmsap.com.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="NFSEconsultaHttpsEndpoint" binding="ns:NFSEconsultaHttpBinding">
+            <http:address location="https://nfse.pmsap.com.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpsEndpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEconsultaHttpEndpoint" binding="ns:NFSEconsultaHttpBinding">
             <http:address location="http://nfse.pmsap.com.br/thema-nfse/services/NFSEconsulta.NFSEconsultaHttpEndpoint/"/>

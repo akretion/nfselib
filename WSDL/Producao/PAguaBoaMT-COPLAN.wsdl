@@ -322,7 +322,7 @@
 	</binding>
 	<service name="nfse_web_service">
 		<port name="nfse_web_serviceSoapPort" binding="wsdlns:nfse_web_serviceSoapBinding">
-			<soap:address location="http://www.gp.srv.br/tributario_aguaboa/servlet/anfse_web_service"/>
+			<soap:address location="https://www.gp.srv.br/tributario_aguaboa/servlet/anfse_web_service"/>
 		</port>
 	</service>
 </definitions>

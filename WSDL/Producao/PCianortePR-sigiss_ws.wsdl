@@ -18,6 +18,7 @@
    <xsd:element name="situacao" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="valor" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="base" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="desconto_incondicionado" type="xsd:string" minOccurs="0" maxOccurs="1"/>
    <xsd:element name="descricaoNF" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="tomador_tipo" type="xsd:int" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="tomador_cnpj" type="xsd:string" minOccurs="1" maxOccurs="1"/>
@@ -48,6 +49,13 @@
    <xsd:element name="inss" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="irrf" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="csll" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="municipal" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="federal" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="dia_prest_servico" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="mes_prest_servico" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="ano_prest_servico" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="substituir_nota" type="xsd:int" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="substituir_motivo" type="xsd:string" minOccurs="0" maxOccurs="1"/>
   </xsd:all>
  </xsd:complexType>
  <xsd:complexType name="tcLoteRps">
@@ -143,7 +151,7 @@
    <xsd:element name="ISSRetido" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="StatusNFe" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="situacao" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-   <xsd:element name="OpcaoSimples" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+   <xsd:element name="OpcaoSimples" type="xsd:string" minOccurs="1" maxOccurs="1"/>
    <xsd:element name="LinkImpressao" type="xsd:string" minOccurs="1" maxOccurs="1"/>
   </xsd:all>
  </xsd:complexType>
@@ -191,7 +199,8 @@
   <part name="DescricaoErros" type="tns:tcDescricaoErros" /></message>
 <message name="ConsultarNotaPrestadorRequest">
   <part name="DadosPrestador" type="tns:tcDadosPrestador" />
-  <part name="Nota" type="xsd:int" /></message>
+  <part name="Nota" type="xsd:int" />
+  <part name="id_sis_legado" type="xsd:string" /></message>
 <message name="ConsultarNotaPrestadorResponse">
   <part name="DadosNota" type="tns:tcDadosNota" />
   <part name="DescricaoErros" type="tns:tcDescricaoErros" /></message>
@@ -201,22 +210,18 @@
   <part name="retorno" type="xsd:string" /></message>
 <portType name="WebService SigISSPortType">
   <operation name="GerarNota">
-    <documentation>Gera a nota fiscal eletrônica</documentation>
     <input message="tns:GerarNotaRequest"/>
     <output message="tns:GerarNotaResponse"/>
   </operation>
   <operation name="CancelarNota">
-    <documentation>Faz o cancelamento da nota fiscal eletrônica</documentation>
     <input message="tns:CancelarNotaRequest"/>
     <output message="tns:CancelarNotaResponse"/>
   </operation>
   <operation name="ConsultarNotaValida">
-    <documentation>Faz a consulta de uma nota fiscal eletrônica para saber se esta válida</documentation>
     <input message="tns:ConsultarNotaValidaRequest"/>
     <output message="tns:ConsultarNotaValidaResponse"/>
   </operation>
   <operation name="ConsultarNotaPrestador">
-    <documentation>Faz a consulta de uma nota fiscal eletrônica</documentation>
     <input message="tns:ConsultarNotaPrestadorRequest"/>
     <output message="tns:ConsultarNotaPrestadorResponse"/>
   </operation>
