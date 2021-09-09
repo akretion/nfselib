@@ -2,8 +2,8 @@
 <wsdl:definitions name="NFSeIntegracao" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao.Teste/Services.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao.Teste/Services.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao/Services.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao/Services.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ConsultarSituacaoLoteRps">
@@ -585,13 +585,13 @@
   </wsdl:binding>
   <wsdl:service name="NFSeIntegracao">
     <wsdl:port name="BasicHttpBinding_INFSEConsultas" binding="tns:BasicHttpBinding_INFSEConsultas">
-      <soap:address location="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao.Teste/Services.svc" />
+      <soap:address location="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao/Services.svc" />
     </wsdl:port>
     <wsdl:port name="BasicHttpBinding_INFSEGeracao" binding="tns:BasicHttpBinding_INFSEGeracao">
-      <soap:address location="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao.Teste/Services.svc" />
+      <soap:address location="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao/Services.svc" />
     </wsdl:port>
     <wsdl:port name="BasicHttpBinding_INFSeIntegracaoDEISS" binding="tns:BasicHttpBinding_INFSeIntegracaoDEISS">
-      <soap:address location="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao.Teste/Services.svc" />
+      <soap:address location="http://ijui-portais.govcloud.com.br/NFSe.Portal.Integracao/Services.svc" />    
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

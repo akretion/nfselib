@@ -401,7 +401,7 @@
   </wsdl:binding>
   <wsdl:service name="IssDigitalControllerService">
     <wsdl:port binding="tns:IssDigitalControllerServiceSoapBinding" name="snissdigitalsvcPort">
-      <soap:address location="http://209.126.222.200:8091/nfe/snissdigitalsvc"/>
+      <soap:address location="http://sabara.supernova.com.br:8091/nfe/snissdigitalsvc"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
