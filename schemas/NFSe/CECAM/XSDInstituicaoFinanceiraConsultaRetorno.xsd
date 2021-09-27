@@ -34,12 +34,12 @@
             <xsd:sequence>
               <xsd:element name="NumeroDocumentoInicial" type="xsd:decimal">
                 <xsd:annotation>
-                  <xsd:documentation>Número do documento</xsd:documentation>
+                  <xsd:documentation>NÃºmero do documento</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
               <xsd:element name="Data_Emissao" type="xsd:date">
                 <xsd:annotation>
-                  <xsd:documentation>Data do Lançamento</xsd:documentation>
+                  <xsd:documentation>Data do LanÃ§amento</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
               <xsd:element name="Lote" type="xsd:decimal">

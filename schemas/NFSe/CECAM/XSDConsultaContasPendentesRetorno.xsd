@@ -34,12 +34,12 @@
             <xsd:sequence>
               <xsd:element name="ContaContabil" type="xsd:decimal">
                 <xsd:annotation>
-                  <xsd:documentation>Número da conta contábil</xsd:documentation>
+                  <xsd:documentation>NÃºmero da conta contÃ¡bil</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
               <xsd:element name="DescricaoContaContabil">
                 <xsd:annotation>
-                  <xsd:documentation>Descrição da conta contábil</xsd:documentation>
+                  <xsd:documentation>DescriÃ§Ã£o da conta contÃ¡bil</xsd:documentation>
                 </xsd:annotation>
 				<xsd:simpleType>
                   <xsd:restriction base="xsd:string">
