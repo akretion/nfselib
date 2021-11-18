@@ -45,7 +45,7 @@
 	</binding>
 	<service name="A24_GerarNfse">
 		<port name="A24_GerarNfseSoapPort" binding="wsdlns:A24_GerarNfseSoapBinding">
-			<soap:address location="https://enfs-hom.abaco.com.br/novalima/servlet/aa24_gerarnfse"/>
+			<soap:address location="https://www.e-nfs.com.br/e-nfs_novalima/servlet/aa24_gerarnfse"/>
 		</port>
 	</service>
 </definitions>
