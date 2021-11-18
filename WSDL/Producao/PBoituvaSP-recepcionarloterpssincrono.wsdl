@@ -44,7 +44,7 @@
 	</binding>
 	<service name="RecepcionarLoteRpsSincrono">
 		<port name="RecepcionarLoteRpsSincronoSoapPort" binding="wsdlns:RecepcionarLoteRpsSincronoSoapBinding">
-			<soap:address location="http://boituva.sistemas4r.com.br/abrasf/arecepcionarloterpssincrono.aspx" />
+			<soap:address location="https://boituva.4rtec.com.br/abrasf/arecepcionarloterpssincrono.aspx" />
 		</port>
 	</service>
 </definitions>

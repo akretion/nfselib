@@ -45,7 +45,7 @@
 	</binding>
 	<service name="A24_CancelarNfse">
 		<port name="A24_CancelarNfseSoapPort" binding="wsdlns:A24_CancelarNfseSoapBinding">
-			<soap:address location="https://enfs-hom.abaco.com.br/novalima/servlet/aa24_cancelarnfse"/>
+			<soap:address location="https://www.e-nfs.com.br/e-nfs_novalima/servlet/acancelarnfse"/>
 		</port>
 	</service>
 </definitions>
