@@ -21,7 +21,7 @@
 		<xsd:element name="ConsultarNfseServicoPrestadoRequest" type="tns:input" />
 		<xsd:element name="ConsultarNfseServicoPrestadoResponse" type="tns:output"/>
 		<xsd:element name="ConsultarNfseServicoTomadoRequest" type="tns:input" />
-		<xsd:element name="ConsultarNfseServicoTomadoResponse" />
+		<xsd:element name="ConsultarNfseServicoTomadoResponse" type="tns:output"/>
 		<xsd:element name="ConsultarNfsePorFaixaRequest" type="tns:input" />
 		<xsd:element name="ConsultarNfsePorFaixaResponse" type="tns:output"/>
 		<xsd:element name="ConsultarNfsePorRpsRequest" type="tns:input" />
@@ -166,7 +166,7 @@
 
   <wsdl:service name="NfseWSService">
     <wsdl:port binding="tns:nfseSoapBinding" name="nfseSoapPort">
-      <soap:address location="http://nfeipatinga.portalfacil.com.br/nfseserv/webservice/servicos"/>
+      <soap:address location="https://nfeipatinga.portalfacil.com.br/nfseserv/webservice/servicos"/>
     </wsdl:port>
   </wsdl:service>
 

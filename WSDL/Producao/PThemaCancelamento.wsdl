@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://server.nfse.thema.inf.br" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://server.nfse.thema.inf.br">
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://server.nfse.thema.inf.br" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://server.nfse.thema.inf.br">
     <wsdl:documentation>
 		Serviço destinado ao cancelamento de notas fiscais.
 	</wsdl:documentation>
@@ -70,23 +69,14 @@
         </wsdl:operation>
     </wsdl:binding>
     <wsdl:service name="NFSEcancelamento">
-        <wsdl:port name="NFSEcancelamentoHttpsSoap11Endpoint" binding="ns:NFSEcancelamentoSoap11Binding">
-            <soap:address location="https://nfe.saoleopoldo.rs.gov.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpsSoap11Endpoint/"/>
-        </wsdl:port>
         <wsdl:port name="NFSEcancelamentoHttpSoap11Endpoint" binding="ns:NFSEcancelamentoSoap11Binding">
             <soap:address location="http://nfe.saoleopoldo.rs.gov.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpSoap11Endpoint/"/>
         </wsdl:port>
         <wsdl:port name="NFSEcancelamentoHttpSoap12Endpoint" binding="ns:NFSEcancelamentoSoap12Binding">
             <soap12:address location="http://nfe.saoleopoldo.rs.gov.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpSoap12Endpoint/"/>
         </wsdl:port>
-        <wsdl:port name="NFSEcancelamentoHttpsSoap12Endpoint" binding="ns:NFSEcancelamentoSoap12Binding">
-            <soap12:address location="https://nfe.saoleopoldo.rs.gov.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpsSoap12Endpoint/"/>
-        </wsdl:port>
         <wsdl:port name="NFSEcancelamentoHttpEndpoint" binding="ns:NFSEcancelamentoHttpBinding">
             <http:address location="http://nfe.saoleopoldo.rs.gov.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpEndpoint/"/>
-        </wsdl:port>
-        <wsdl:port name="NFSEcancelamentoHttpsEndpoint" binding="ns:NFSEcancelamentoHttpBinding">
-            <http:address location="https://nfe.saoleopoldo.rs.gov.br/thema-nfse/services/NFSEcancelamento.NFSEcancelamentoHttpsEndpoint/"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
