@@ -8002,26 +8002,6 @@
 	<Estado ID="3132701" Nome="Itambacuri - MG" UF="MG" Padrao="NOTAINTELIGENTE"></Estado>
 	<Estado ID="4217402" Nome="Schroeder - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4309100" Nome="Gramado - RS" UF="RS" Padrao="BETHA"></Estado>
-	<Estado ID="3506003" Nome="Bauru - SP" UF="SP" Padrao="SMARAPD_203">
-		<LocalHomologacao>
-			<ConsultarNfsePorRps>WSDL\Homologacao\HBauruSP_SMARAPD_203.wsdl</ConsultarNfsePorRps>
-			<RecepcionarLoteRps>WSDL\Homologacao\HBauruSP_SMARAPD_203.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HBauruSP_SMARAPD_203.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfse>WSDL\Homologacao\HBauruSP_SMARAPD_203.wsdl</ConsultarNfse>
-			<ConsultarURLNfse>WSDL\Homologacao\HBauruSP_SMARAPD_203.wsdl</ConsultarURLNfse>
-			<ConsultarLoteRps>WSDL\Homologacao\HBauruSP_SMARAPD_203.wsdl</ConsultarLoteRps>
-			<CancelarNfse>WSDL\Homologacao\HBauruSP_SMARAPD_203.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<ConsultarNfsePorRps>WSDL\Producao\PBauruSP_SMARAPD_203.wsdl</ConsultarNfsePorRps>
-			<RecepcionarLoteRps>WSDL\Producao\PBauruSP_SMARAPD_203.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Producao\PBauruSP_SMARAPD_203.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfse>WSDL\Producao\PBauruSP_SMARAPD_203.wsdl</ConsultarNfse>
-			<ConsultarURLNfse>WSDL\Producao\PBauruSP_SMARAPD_203.wsdl</ConsultarURLNfse>
-			<ConsultarLoteRps>WSDL\Producao\PBauruSP_SMARAPD_203.wsdl</ConsultarLoteRps>
-			<CancelarNfse>WSDL\Producao\PBauruSP_SMARAPD_203.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="4218707" Nome="Tubarão - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4202800" Nome="Braço do Norte - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="3530607" Nome="Mogi das Cruzes - SP" UF="SP" Padrao="SMARAPD_203">
@@ -8231,6 +8211,24 @@
 			<ConsultarNfse>wsdl\homologacao\PCanelaRS-SystemPro.wsdl</ConsultarNfse>
 		</LocalProducao>
 	</Estado>
+	<Estado ID="4115804" Nome="Medianeira - PR" UF="PR" Padrao="PRONIN">
+		<LocalHomologacao>
+			<RecepcionarLoteRps></RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps></ConsultarNfsePorRps>
+			<ConsultarNfse></ConsultarNfse>
+			<ConsultarLoteRps></ConsultarLoteRps>
+			<CancelarNfse></CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PMedianeiraPR-PRONIN.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PMedianeiraPR-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PMedianeiraPR-PRONIN.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PMedianeiraPR-PRONIN.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PMedianeiraPR-PRONIN.wsdl</ConsultarLoteRps>
+			<CancelarNfse>wsdl\producao\PMedianeiraPR-PRONIN.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
 	<Estado ID="4211702" Nome="Orleans - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4212403" Nome="Pedras Grandes - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4205456" Nome="Forquilhinha - SC" UF="SC" Padrao="BETHA"></Estado>
@@ -8253,4 +8251,6 @@
 	<Estado ID="3132404" Nome="Itajubá - MG" UF="MG" Padrao="SONNER"></Estado>
 	<Estado ID="2933307" Nome="Vitória da Conquista - BA" UF="BA" Padrao="EL"></Estado>
 	<Estado ID="3201209" Nome="Cachoeiro de Itapemirim - ES" UF="ES" Padrao="EL"></Estado>
+	<Estado ID="4218905" Nome="Urubici - SC" UF="SC" Padrao="BETHA"></Estado>
+	<Estado ID="3506003" Nome="Bauru - SP" UF="SP" Padrao="SMARAPD"></Estado>
 </Webservice>
