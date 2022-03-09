@@ -452,24 +452,6 @@
 			<CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="3131307" Nome="Ipatinga - MG" UF="MG" Padrao="PORTALFACIL_ACTCON_202">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HIpatingaMG-PORTALFACIL_ACTCON.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HIpatingaMG-PORTALFACIL_ACTCON.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HIpatingaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HIpatingaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HIpatingaMG-PORTALFACIL_ACTCON.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\homologacao\HIpatingaMG-PORTALFACIL_ACTCON.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\producao\PIpatingaMG-PORTALFACIL_ACTCON.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="3137601" Nome="Lagoa Santa - MG" UF="MG" Padrao="GINFES">
 		<LocalHomologacao>
 			<RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
@@ -4134,26 +4116,6 @@
 			<CancelarNfse>wsdl\producao\PSalvadorDoSulRS-CancelamentoNFSe.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="4202008" Nome="Balneário Camboriú - SC" UF="SC" Padrao="SIMPLISS">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>WSDL\Homologacao\HBalneario-SIMPLISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HBalneario-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Homologacao\HBalneario-SIMPLISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Homologacao\HBalneario-SIMPLISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Homologacao\HBalneario-SIMPLISS.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>WSDL\Homologacao\HBalneario-SIMPLISS.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>WSDL\Producao\PBalneario-SIMPLISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Producao\PBalneario-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Producao\PBalneario-SIMPLISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Producao\PBalneario-SIMPLISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Producao\PBalneario-SIMPLISS.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>WSDL\Producao\PBalneario-SIMPLISS.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="3153608" Nome="Prudente Morais - MG" UF="MG" Padrao="WEBISS">
 		<LocalHomologacao>
 			<RecepcionarLoteRps>wsdl\homologacao\HPrudenteMorais-WebISS.wsdl</RecepcionarLoteRps>
@@ -5079,28 +5041,6 @@
 			<ConsultarLoteRps>wsdl\producao\PPotirendabaSP-FIORILLI.wsdl</ConsultarLoteRps>
 			<ConsultarURLNfse></ConsultarURLNfse>
 			<CancelarNfse>wsdl\producao\PPotirendabaSP-FIORILLI.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
-	<Estado ID="3530805" Nome="Mogi Mirim - SP" UF="SP" Padrao="SIGCORP_SIGISS_203">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</CancelarNfse>
-			<SubstituirNfse>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</SubstituirNfse>
-			<ConsultaNFSeTomados>wsdl\homologacao\HMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultaNFSeTomados>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</CancelarNfse>
-			<SubstituirNfse>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</SubstituirNfse>
-			<ConsultaNFSeTomados>wsdl\producao\PMogiMirim-SIGCORP_SIGISS_203.wsdl</ConsultaNFSeTomados>
 		</LocalProducao>
 	</Estado>
 	<Estado ID="1302603" Nome="Manaus - AM" UF="AM" Padrao="MANAUS_AM">
@@ -7836,24 +7776,6 @@
 			<CancelarNfse>wsdl\producao\PMarialvaPR-Elotech.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="3101508" Nome="Além Paraíba - MG" UF="MG" Padrao="PORTALFACIL_ACTCON_202">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\homologacao\HAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\producao\PAlemParaibaMG-PORTALFACIL_ACTCON.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="5100201" Nome="Água Boa - MT" UF="MT" Padrao="COPLAN">
 		<LocalProducao>
 			<RecepcionarLoteRps>WSDL\Producao\PAguaBoaMT-COPLAN.wsdl</RecepcionarLoteRps>
@@ -8229,6 +8151,26 @@
 			<CancelarNfse>wsdl\producao\PMedianeiraPR-PRONIN.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
+	<Estado ID="4202008" Nome="Balneário Camboriú - SC" UF="SC" Padrao="PUBLICA">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\HBalnearioCamboriuSC-PUBLICA.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\HBalnearioCamboriuSC-PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\HBalnearioCamboriuSC-PUBLICA.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\HBalnearioCamboriuSC-PUBLICA.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\HBalnearioCamboriuSC-PUBLICA.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>wsdl\homologacao\HBalnearioCamboriuSC-PUBLICA.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PBalnearioCamboriuSC-PUBLICA.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PBalnearioCamboriuSC-PUBLICA.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PBalnearioCamboriuSC-PUBLICA.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PBalnearioCamboriuSC-PUBLICA.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PBalnearioCamboriuSC-PUBLICA.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>wsdl\producao\PBalnearioCamboriuSC-PUBLICA.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
 	<Estado ID="4211702" Nome="Orleans - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4212403" Nome="Pedras Grandes - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4205456" Nome="Forquilhinha - SC" UF="SC" Padrao="BETHA"></Estado>
@@ -8253,4 +8195,9 @@
 	<Estado ID="3201209" Nome="Cachoeiro de Itapemirim - ES" UF="ES" Padrao="EL"></Estado>
 	<Estado ID="4218905" Nome="Urubici - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="3506003" Nome="Bauru - SP" UF="SP" Padrao="SMARAPD"></Estado>
+    <Estado ID="2925303" Nome="Porto Seguro - BA" UF="BA" Padrao="NOBESISTEMAS"></Estado>
+	<Estado ID="4202305" Nome="Biguaçu  - SC" UF="SC" Padrao="BETHA"></Estado>
+	<Estado ID="3303955" Nome="Pinheiral - RJ" UF="RJ" Padrao="BETHA"></Estado>
+	<Estado ID="3530805" Nome="Mogi Mirim - SP" UF="SP" Padrao="SIGCORP_SIGISS"></Estado>
+	<Estado ID="3131307" Nome="Ipatinga - MG" UF="MG" Padrao="SIGCORP_SIGISS"></Estado>
 </Webservice>
