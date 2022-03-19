@@ -45,7 +45,7 @@
 	</binding>
 	<service name="A24_SubstituirNfse">
 		<port name="A24_SubstituirNfseSoapPort" binding="wsdlns:A24_SubstituirNfseSoapBinding">
-			<soap:address location="https://enfs-hom.abaco.com.br/novalima/servlet/aa24_substituirnfse"/>
+			<soap:address location="https://www.e-nfs.com.br/e-nfs_novalima/servlet/aa24_substituirnfse"/>
 		</port>
 	</service>
 </definitions>

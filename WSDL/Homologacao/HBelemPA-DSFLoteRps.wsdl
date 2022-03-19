@@ -1,394 +1,108 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions targetNamespace="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" xmlns:intf="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<!--WSDL created by Apache Axis version: 1.3
-Built on Oct 05, 2005 (05:23:37 EDT)-->
-
-   <wsdl:message name="enviarResponse">
-
-      <wsdl:part name="enviarReturn" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="testeEnviarRequest">
-
-      <wsdl:part name="mensagemXml" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="testeEnviarResponse">
-
-      <wsdl:part name="testeEnviarReturn" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="cancelarResponse">
-
-      <wsdl:part name="cancelarReturn" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="consultarLoteResponse">
-
-      <wsdl:part name="consultarLoteReturn" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="consultarLoteRequest">
-
-      <wsdl:part name="mensagemXml" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="consultarNFSeRpsResponse">
-
-      <wsdl:part name="consultarNFSeRpsReturn" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="consultarNFSeRpsRequest">
-
-      <wsdl:part name="mensagemXml" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="consultarNotaRequest">
-
-      <wsdl:part name="mensagemXml" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="cancelarRequest">
-
-      <wsdl:part name="mensagemXml" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="enviarSincronoRequest">
-
-      <wsdl:part name="mensagemXml" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="consultarSequencialRpsResponse">
-
-      <wsdl:part name="consultarSequencialRpsReturn" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="enviarSincronoResponse">
-
-      <wsdl:part name="enviarSincronoReturn" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="consultarSequencialRpsRequest">
-
-      <wsdl:part name="mensagemXml" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="consultarNotaResponse">
-
-      <wsdl:part name="consultarNotaReturn" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="enviarRequest">
-
-      <wsdl:part name="mensagemXml" type="xsd:string">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:portType name="LoteRps">
-
-      <wsdl:operation name="consultarSequencialRps" parameterOrder="mensagemXml">
-
-         <wsdl:input message="impl:consultarSequencialRpsRequest" name="consultarSequencialRpsRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:consultarSequencialRpsResponse" name="consultarSequencialRpsResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="enviarSincrono" parameterOrder="mensagemXml">
-
-         <wsdl:input message="impl:enviarSincronoRequest" name="enviarSincronoRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:enviarSincronoResponse" name="enviarSincronoResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="testeEnviar" parameterOrder="mensagemXml">
-
-         <wsdl:input message="impl:testeEnviarRequest" name="testeEnviarRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:testeEnviarResponse" name="testeEnviarResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="enviar" parameterOrder="mensagemXml">
-
-         <wsdl:input message="impl:enviarRequest" name="enviarRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:enviarResponse" name="enviarResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="consultarLote" parameterOrder="mensagemXml">
-
-         <wsdl:input message="impl:consultarLoteRequest" name="consultarLoteRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:consultarLoteResponse" name="consultarLoteResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="consultarNota" parameterOrder="mensagemXml">
-
-         <wsdl:input message="impl:consultarNotaRequest" name="consultarNotaRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:consultarNotaResponse" name="consultarNotaResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="cancelar" parameterOrder="mensagemXml">
-
-         <wsdl:input message="impl:cancelarRequest" name="cancelarRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:cancelarResponse" name="cancelarResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="consultarNFSeRps" parameterOrder="mensagemXml">
-
-         <wsdl:input message="impl:consultarNFSeRpsRequest" name="consultarNFSeRpsRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:consultarNFSeRpsResponse" name="consultarNFSeRpsResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-   </wsdl:portType>
-
-   <wsdl:binding name="LoteRpsSoapBinding" type="impl:LoteRps">
-
-      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
-
-      <wsdl:operation name="consultarSequencialRps">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="consultarSequencialRpsRequest">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://proces.wsnfe2.dsfnet.com.br" use="encoded"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="consultarSequencialRpsResponse">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" use="encoded"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="enviarSincrono">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="enviarSincronoRequest">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://proces.wsnfe2.dsfnet.com.br" use="encoded"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="enviarSincronoResponse">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" use="encoded"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="testeEnviar">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="testeEnviarRequest">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://proces.wsnfe2.dsfnet.com.br" use="encoded"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="testeEnviarResponse">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" use="encoded"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="enviar">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="enviarRequest">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://proces.wsnfe2.dsfnet.com.br" use="encoded"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="enviarResponse">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" use="encoded"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="consultarLote">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="consultarLoteRequest">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://proces.wsnfe2.dsfnet.com.br" use="encoded"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="consultarLoteResponse">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" use="encoded"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="consultarNota">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="consultarNotaRequest">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://proces.wsnfe2.dsfnet.com.br" use="encoded"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="consultarNotaResponse">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" use="encoded"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="cancelar">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="cancelarRequest">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://proces.wsnfe2.dsfnet.com.br" use="encoded"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="cancelarResponse">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" use="encoded"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="consultarNFSeRps">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="consultarNFSeRpsRequest">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://proces.wsnfe2.dsfnet.com.br" use="encoded"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="consultarNFSeRpsResponse">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws" use="encoded"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-   </wsdl:binding>
-
-   <wsdl:service name="LoteRpsService">
-
-      <wsdl:port binding="impl:LoteRpsSoapBinding" name="LoteRps">
-
-         <wsdlsoap:address location="http://www.issdigitalbel.com.br/WsNFe2/LoteRps.jws"/>
-
-      </wsdl:port>
-
-   </wsdl:service>
-
-</wsdl:definitions>
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.3-hudson-390-. --><!-- Generated by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.3-hudson-390-. --><definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps" name="LoteRpsService">
+<types></types>
+<message name="enviar">
+<part name="mensagemXml" type="xsd:string"></part>
+</message>
+<message name="enviarResponse">
+<part name="enviarReturn" type="xsd:string"></part>
+</message>
+<message name="consultarLote">
+<part name="mensagemXml" type="xsd:string"></part>
+</message>
+<message name="consultarLoteResponse">
+<part name="consultarLoteReturn" type="xsd:string"></part>
+</message>
+<message name="cancelar">
+<part name="mensagemXml" type="xsd:string"></part>
+</message>
+<message name="cancelarResponse">
+<part name="cancelarReturn" type="xsd:string"></part>
+</message>
+<message name="consultarNota">
+<part name="mensagemXml" type="xsd:string"></part>
+</message>
+<message name="consultarNotaResponse">
+<part name="consultarNotaReturn" type="xsd:string"></part>
+</message>
+<message name="consultarSequencialRps">
+<part name="mensagemXml" type="xsd:string"></part>
+</message>
+<message name="consultarSequencialRpsResponse">
+<part name="consultarSequencialRpsReturn" type="xsd:string"></part>
+</message>
+<portType name="LoteRps">
+<operation name="enviar">
+<input message="tns:enviar"></input>
+<output message="tns:enviarResponse"></output>
+</operation>
+<operation name="consultarLote">
+<input message="tns:consultarLote"></input>
+<output message="tns:consultarLoteResponse"></output>
+</operation>
+<operation name="cancelar">
+<input message="tns:cancelar"></input>
+<output message="tns:cancelarResponse"></output>
+</operation>
+<operation name="consultarNota">
+<input message="tns:consultarNota"></input>
+<output message="tns:consultarNotaResponse"></output>
+</operation>
+<operation name="consultarSequencialRps">
+<input message="tns:consultarSequencialRps"></input>
+<output message="tns:consultarSequencialRpsResponse"></output>
+</operation>
+</portType>
+<binding name="LoteRpsBinding" type="tns:LoteRps">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"></soap:binding>
+<operation name="enviar">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</output>
+</operation>
+<operation name="consultarLote">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</output>
+</operation>
+<operation name="cancelar">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</output>
+</operation>
+<operation name="consultarNota">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</output>
+</operation>
+<operation name="consultarSequencialRps">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://siat.nota.belem.pa.gov.br/WsNFe/LoteRps"></soap:body>
+</output>
+</operation>
+</binding>
+<service name="LoteRpsService">
+<port name="LoteRps" binding="tns:LoteRpsBinding">
+<soap:address location="http://siat.notahomologa.belem.pa.gov.br:8180/WsNFe/LoteRps"></soap:address>
+</port>
+</service>
+</definitions>

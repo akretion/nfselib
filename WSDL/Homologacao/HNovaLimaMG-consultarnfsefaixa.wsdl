@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions name="A24_ConsultarNfseFaixa" targetNamespace="http://www.e-nfs.com.br" xmlns:wsdlns="http://www.e-nfs.com.br" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.e-nfs.com.br">
+	<types>
+		<schema targetNamespace="http://www.e-nfs.com.br" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+			<element name="A24_ConsultarNfseFaixa.Execute">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Nfsecabecmsg" type="xsd:string"/>
+						<element minOccurs="1" maxOccurs="1" name="Nfsedadosmsg" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element name="A24_ConsultarNfseFaixa.ExecuteResponse">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" maxOccurs="1" name="Outputxml" type="xsd:string"/>
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+	<message name="A24_ConsultarNfseFaixa.ExecuteSoapIn">
+		<part name="parameters" element="tns:A24_ConsultarNfseFaixa.Execute"/>
+	</message>
+	<message name="A24_ConsultarNfseFaixa.ExecuteSoapOut">
+		<part name="parameters" element="tns:A24_ConsultarNfseFaixa.ExecuteResponse"/>
+	</message>
+	<portType name="A24_ConsultarNfseFaixaSoapPort">
+		<operation name="Execute">
+			<input message="wsdlns:A24_ConsultarNfseFaixa.ExecuteSoapIn"/>
+			<output message="wsdlns:A24_ConsultarNfseFaixa.ExecuteSoapOut"/>
+		</operation>
+	</portType>
+	<binding name="A24_ConsultarNfseFaixaSoapBinding" type="wsdlns:A24_ConsultarNfseFaixaSoapPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="Execute">
+			<soap:operation soapAction="http://www.e-nfs.com.braction/AA24_CONSULTARNFSEFAIXA.Execute"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="A24_ConsultarNfseFaixa">
+		<port name="A24_ConsultarNfseFaixaSoapPort" binding="wsdlns:A24_ConsultarNfseFaixaSoapBinding">
+			<soap:address location="https://enfs-hom.abaco.com.br/novalima/servlet/aa24_consultarnfsefaixa"/>
+		</port>
+	</service>
+</definitions>
