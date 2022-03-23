@@ -1159,26 +1159,6 @@
 			<CancelarNfse>wsdl\producao\PISSOnLineAracatubaSP.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="3106200" Nome="Belo Horizonte - MG" UF="MG" Padrao="BHISS">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HBeloHorizonteMG-BHISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HBeloHorizonteMG-BHISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HBeloHorizonteMG-BHISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HBeloHorizonteMG-BHISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HBeloHorizonteMG-BHISS.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\homologacao\HBeloHorizonteMG-BHISS.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PBeloHorizonteMG-BHISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PBeloHorizonteMG-BHISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PBeloHorizonteMG-BHISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PBeloHorizonteMG-BHISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PBeloHorizonteMG-BHISS.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\producao\PBeloHorizonteMG-BHISS.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="3136702" Nome="Juiz de Fora - MG" UF="MG" Padrao="FINTEL">
 		<LocalHomologacao>
 			<RecepcionarLoteRps>wsdl\homologacao\HJuizdeForaMG-Fintel.wsdl</RecepcionarLoteRps>
@@ -3513,24 +3493,6 @@
 			<ConsultarNFSePNG></ConsultarNFSePNG>
 			<ConsultarNFSePDF></ConsultarNFSePDF>
 			<InutilizarNFSe></InutilizarNFSe>
-		</LocalProducao>
-	</Estado>
-	<Estado ID="4101408" Nome="Apucarana - PR" UF="PR" Padrao="PRONIN">
-		<LocalHomologacao>
-			<RecepcionarLoteRps></RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps></ConsultarNfsePorRps>
-			<ConsultarNfse></ConsultarNfse>
-			<ConsultarLoteRps></ConsultarLoteRps>
-			<CancelarNfse></CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PApucaranaPR-PRONIN.WSDL</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PApucaranaPR-PRONIN.WSDL</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PApucaranaPR-PRONIN.WSDL</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PApucaranaPR-PRONIN.WSDL</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PApucaranaPR-PRONIN.WSDL</ConsultarLoteRps>
-			<CancelarNfse>wsdl\producao\PApucaranaPR-PRONIN.WSDL</CancelarNfse>
 		</LocalProducao>
 	</Estado>
 	<Estado ID="4100400" Nome="Almirante Tamandaré - PR" UF="PR" Padrao="BETHA"></Estado>
@@ -8171,6 +8133,26 @@
 			<CancelarNfse>wsdl\producao\PBalnearioCamboriuSC-PUBLICA.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
+	<Estado ID="4101408" Nome="Apucarana - PR" UF="PR" Padrao="IPM">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+			<CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+			<CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
 	<Estado ID="4211702" Nome="Orleans - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4212403" Nome="Pedras Grandes - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4205456" Nome="Forquilhinha - SC" UF="SC" Padrao="BETHA"></Estado>
@@ -8200,4 +8182,8 @@
 	<Estado ID="3303955" Nome="Pinheiral - RJ" UF="RJ" Padrao="BETHA"></Estado>
 	<Estado ID="3530805" Nome="Mogi Mirim - SP" UF="SP" Padrao="SIGCORP_SIGISS"></Estado>
 	<Estado ID="3131307" Nome="Ipatinga - MG" UF="MG" Padrao="SIGCORP_SIGISS"></Estado>
+	<Estado ID="4201505" Nome="Armazém - SC" UF="SC" Padrao="BETHA"></Estado>
+	<Estado ID="4211306" Nome="Navegantes - SC" UF="SC" Padrao="BETHA"></Estado>
+	<Estado ID="3106200" Nome="Belo Horizonte - MG" UF="MG" Padrao="BHISS"></Estado>
+	<Estado ID="2610004" Nome="Palmares - PE" UF="PE" Padrao="TRIBUTUS"></Estado>
 </Webservice>
