@@ -232,7 +232,7 @@
   </wsdl:binding>
   <wsdl:service name="NfseWSService">
     <wsdl:port binding="ws:nfseSOAP" name="nfseSOAP">
-      <soap:address location="http://200.187.14.130/nfse/ws" />
+      <soap:address location="https://200.187.14.130/nfse/ws" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://notacarioca.rio.gov.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://notacarioca.rio.gov.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.nfe.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.nfe.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://notacarioca.rio.gov.br/">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.nfe.com.br/">
       <s:element name="ConsultarNfseRequest">
         <s:complexType>
           <s:sequence>
@@ -144,7 +144,7 @@
   <wsdl:message name="GerarNfseSoapOut">
     <wsdl:part name="parameters" element="tns:GerarNfseResponse" />
   </wsdl:message>
-  <wsdl:portType name="NfseSoap">
+  <wsdl:portType name="NFSESoap">
     <wsdl:operation name="ConsultarNfse">
       <wsdl:input message="tns:ConsultarNfseSoapIn" />
       <wsdl:output message="tns:ConsultarNfseSoapOut" />
@@ -174,10 +174,10 @@
       <wsdl:output message="tns:GerarNfseSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="NfseSoap" type="tns:NfseSoap">
+  <wsdl:binding name="NFSESoap" type="tns:NFSESoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="ConsultarNfse">
-      <soap:operation soapAction="http://notacarioca.rio.gov.br/ConsultarNfse" style="document" />
+      <soap:operation soapAction="http://www.nfe.com.br/ConsultarNfse" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -186,7 +186,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarNfsePorRps">
-      <soap:operation soapAction="http://notacarioca.rio.gov.br/ConsultarNfsePorRps" style="document" />
+      <soap:operation soapAction="http://www.nfe.com.br/ConsultarNfsePorRps" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -195,7 +195,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarLoteRps">
-      <soap:operation soapAction="http://notacarioca.rio.gov.br/ConsultarLoteRps" style="document" />
+      <soap:operation soapAction="http://www.nfe.com.br/ConsultarLoteRps" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -204,7 +204,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarSituacaoLoteRps">
-      <soap:operation soapAction="http://notacarioca.rio.gov.br/ConsultarSituacaoLoteRps" style="document" />
+      <soap:operation soapAction="http://www.nfe.com.br/ConsultarSituacaoLoteRps" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -213,7 +213,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RecepcionarLoteRps">
-      <soap:operation soapAction="http://notacarioca.rio.gov.br/RecepcionarLoteRps" style="document" />
+      <soap:operation soapAction="http://www.nfe.com.br/RecepcionarLoteRps" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -222,7 +222,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CancelarNfse">
-      <soap:operation soapAction="http://notacarioca.rio.gov.br/CancelarNfse" style="document" />
+      <soap:operation soapAction="http://www.nfe.com.br/CancelarNfse" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -231,7 +231,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GerarNfse">
-      <soap:operation soapAction="http://notacarioca.rio.gov.br/GerarNfse" style="document" />
+      <soap:operation soapAction="http://www.nfe.com.br/GerarNfse" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -240,9 +240,9 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="Nfse">
-    <wsdl:port name="NfseSoap" binding="tns:NfseSoap">
-      <soap:address location="https://notacariocahom.rio.gov.br/WSNacional/nfse.asmx" />
+  <wsdl:service name="NFSE">
+    <wsdl:port name="NFSESoap" binding="tns:NFSESoap">
+      <soap:address location="https://nfse.americana.sp.gov.br/nfse/WSNacional/nfse.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
