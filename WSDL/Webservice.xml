@@ -416,24 +416,6 @@
 			<CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="3147105" Nome="Pará de Minas - MG" UF="MG" Padrao="GINFES">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\hginfes.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\hginfes.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\hginfes.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\hginfes.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\homologacao\hginfes.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\pginfes.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\pginfes.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\pginfes.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\pginfes.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\pginfes.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="2304400" Nome="Fortaleza - CE" UF="CE" Padrao="GINFES">
 		<LocalHomologacao>
 			<RecepcionarLoteRps>wsdl\homologacao\HFortaleza-Ginfes.wsdl</RecepcionarLoteRps>
@@ -2040,24 +2022,6 @@
 			<ConsultarNfse>wsdl\producao\PTremembeSP-sigiss_ws.wsdl</ConsultarNfse>
 			<ConsultarLoteRps>wsdl\producao\PTremembeSP-sigiss_ws.wsdl</ConsultarLoteRps>
 			<CancelarNfse>wsdl\producao\PTremembeSP-sigiss_ws.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
-	<Estado ID="3529005" Nome="Marília - SP" UF="SP" Padrao="SIGCORP_SIGISS">
-		<LocalHomologacao>
-			<RecepcionarLoteRps></RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps></ConsultarNfsePorRps>
-			<ConsultarNfse></ConsultarNfse>
-			<ConsultarLoteRps></ConsultarLoteRps>
-			<CancelarNfse></CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PMariliaSP-sigiss_ws.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PMariliaSP-sigiss_ws.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PMariliaSP-sigiss_ws.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PMariliaSP-sigiss_ws.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PMariliaSP-sigiss_ws.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\producao\PMariliaSP-sigiss_ws.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
 	<Estado ID="3504008" Nome="Assis - SP" UF="SP" Padrao="FIORILLI">
@@ -6430,25 +6394,7 @@
 			<ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
 			<CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
 		</LocalProducao>
-	</Estado>
-	<Estado ID="5107602" Nome="Rondonópolis - MT" UF="MT" Padrao="COPLAN">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HRondonopolisMT-COPLAN.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HRondonopolisMT-COPLAN.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HRondonopolisMT-COPLAN.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HRondonopolisMT-COPLAN.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HRondonopolisMT-COPLAN.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\homologacao\HRondonopolisMT-COPLAN.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PRondonopolisMT-COPLAN.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PRondonopolisMT-COPLAN.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PRondonopolisMT-COPLAN.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PRondonopolisMT-COPLAN.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PRondonopolisMT-COPLAN.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\producao\PRondonopolisMT-COPLAN.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
+	</Estado>	
 	<Estado ID="2105302" Nome="Imperatriz - MA" UF="MA" Padrao="PORTALFACIL_ACTCON_202">
 		<LocalHomologacao>
 			<RecepcionarLoteRps>wsdl\homologacao\HImperatrizMA-PORTALFACIL_ACTCON.wsdl</RecepcionarLoteRps>
@@ -7755,16 +7701,6 @@
 	</Estado>
 	<Estado ID="3168705" Nome="Timóteo - MG" UF="MG" Padrao="BETHA"></Estado>
 	<Estado ID="3513504" Nome="Cubatão - SP" UF="SP" Padrao="PRODATA"></Estado>
-	<Estado ID="3303401" Nome="Nova Friburgo - RJ" UF="RJ" Padrao="EL">
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PNovaFriburgoRJ-EL.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PNovaFriburgoRJ-EL.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PNovaFriburgoRJ-EL.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PNovaFriburgoRJ-EL.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PNovaFriburgoRJ-EL.wsdl</ConsultarLoteRps>
-			<CancelarNfse>wsdl\producao\PNovaFriburgoRJ-EL.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="4207304" Nome="Imbituba - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4314134" Nome="Paulo Bento - RS" UF="RS" Padrao="SYSTEMPRO">
 		<LocalHomologacao>
@@ -8268,6 +8204,146 @@
 			<CancelarNfse>WSDL\Producao\PRibasDoRioPardoMS-Fiorilli.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
+	<Estado ID="4313953" Nome="Pântano Grande - RS" UF="RS" Padrao="PRONIN">
+		<LocalHomologacao>
+			<RecepcionarLoteRps></RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps></ConsultarNfsePorRps>
+			<ConsultarNfse></ConsultarNfse>
+			<ConsultarLoteRps></ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse></CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PPantanoGrandeRS-PRONIN.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PPantanoGrandeRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PPantanoGrandeRS-PRONIN.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PPantanoGrandeRS-PRONIN.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PPantanoGrandeRS-PRONIN.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>wsdl\producao\PPantanoGrandeRS-PRONIN.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
+	<Estado ID="3526704" Nome="Leme - SP" UF="SP" Padrao="SIGISSWEB">
+		<LocalHomologacao>
+			<RecepcionarLoteRps></RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps></ConsultarNfsePorRps>
+			<ConsultarNfse></ConsultarNfse>
+			<ConsultarLoteRps></ConsultarLoteRps>
+			<CancelarNfse></CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps></RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps></ConsultarNfsePorRps>
+			<ConsultarNfse></ConsultarNfse>
+			<ConsultarLoteRps></ConsultarLoteRps>
+			<CancelarNfse></CancelarNfse>
+		</LocalProducao>
+	</Estado>
+	<Estado ID="4119509" Nome="Piraquara - PR" UF="PR" Padrao="ELOTECH">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\HPiraquaraPR-Elotech.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\HPiraquaraPR-Elotech.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\HPiraquaraPR-Elotech.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\HPiraquaraPR-Elotech.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\HPiraquaraPR-Elotech.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>wsdl\homologacao\HPiraquaraPR-Elotech.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PPiraquaraPR-Elotech.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PPiraquaraPR-Elotech.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PPiraquaraPR-Elotech.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PPiraquaraPR-Elotech.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PPiraquaraPR-Elotech.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>wsdl\producao\PPiraquaraPR-Elotech.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
+		<Estado ID="3553708" Nome="Taquaritinga - SP" UF="SP" Padrao="CONAM">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+			<CancelarNfse>wsdl\homologacao\HVarginhaMG-CONAN.wsdl</CancelarNfse>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<ConsultarNFSePNG></ConsultarNFSePNG>
+			<ConsultarNFSePDF></ConsultarNFSePDF>
+			<InutilizarNFSe></InutilizarNFSe>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PVarginhaMG-CONAN.wsdl</ConsultarLoteRps>
+			<CancelarNfse>wsdl\producao\PVarginhaMG-CONAN.wsdl</CancelarNfse>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<ConsultarNFSePNG></ConsultarNFSePNG>
+			<ConsultarNFSePDF></ConsultarNFSePDF>
+			<InutilizarNFSe></InutilizarNFSe>
+		</LocalProducao>
+	</Estado>
+    <Estado ID="5220454" Nome="Tres Lagoas - MS" UF="MS" Padrao="FIORILLI">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>WSDL\Homologacao\HTresLagoasMS-Fiorilli.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HTresLagoasMS-Fiorilli.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\Homologacao\HTresLagoasMS-Fiorilli.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\Homologacao\HTresLagoasMS-Fiorilli.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\Homologacao\HTresLagoasMS-Fiorilli.wsdl</ConsultarLoteRps>
+			<CancelarNfse>WSDL\Homologacao\HTresLagoasMS-Fiorilli.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>WSDL\Producao\PTresLagoasMS-Fiorilli.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\Producao\PTresLagoasMS-Fiorilli.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\Producao\PTresLagoasMS-Fiorilli.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\Producao\PTresLagoasMS-Fiorilli.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\Producao\PTresLagoasMS-Fiorilli.wsdl</ConsultarLoteRps>
+			<CancelarNfse>WSDL\Producao\PTresLagoasMS-Fiorilli.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
+	<Estado ID="5220603" Nome="Silvânia - GO" UF="GO" Padrao="CENTI">
+		<LocalHomologacao>
+			<RecepcionarLoteRps></RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps></ConsultarNfsePorRps>
+			<ConsultarNfse></ConsultarNfse>
+			<ConsultarLoteRps></ConsultarLoteRps>
+			<CancelarNfse></CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps></RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps></ConsultarNfsePorRps>
+			<ConsultarNfse></ConsultarNfse>
+			<ConsultarLoteRps></ConsultarLoteRps>
+			<CancelarNfse></CancelarNfse>
+		</LocalProducao>
+	</Estado>
+	<Estado ID="4212809" Nome="Corupá - SC" UF="SC" Padrao="IPM">
+		<LocalHomologacao>
+			<RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\homologacao\hipm.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\homologacao\hipm.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\homologacao\hipm.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse>wsdl\homologacao\hipm.wsdl</ConsultarURLNfse>
+			<CancelarNfse>wsdl\homologacao\hipm.wsdl</CancelarNfse>
+		</LocalHomologacao>
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\pipm.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\pipm.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\pipm.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\pipm.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\pipm.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse>wsdl\producao\pipm.wsdl</ConsultarURLNfse>
+			<CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
     <Estado ID="4211702" Nome="Orleans - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4212403" Nome="Pedras Grandes - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4205456" Nome="Forquilhinha - SC" UF="SC" Padrao="BETHA"></Estado>
@@ -8308,7 +8384,12 @@
 	<Estado ID="4310009" Nome="Ibirubá - RS" UF="RS" Padrao="DIGIFRED"></Estado>
 	<Estado ID="4321667" Nome="Três Cachoeiras - RS" UF="RS" Padrao="BETHA"></Estado>
 	<Estado ID="3168606" Nome="Teófilo Otoni - MG" UF="MG" Padrao="SONNER"></Estado>
-	<Estado ID="3523107" Nome="Itaquaquecetuba - SP" UF="SP" Padrao="SMARAPD"></Estado>
+	<Estado ID="3523107" Nome="Itaquaquecetuba - SP" UF="SP" Padrao="GINFES"></Estado>
 	<Estado ID="3115300" Nome="Cataguases - MG" UF="SP" Padrao="VERSATEC"></Estado>
 	<Estado ID="5108600" Nome="Vila Rica - MT" UF="MT" Padrao="BETHA"></Estado>
+	<Estado ID="3147907" Nome="Passos - MG" UF="MG" Padrao="WEBISS"></Estado>
+	<Estado ID="5107602" Nome="Rondonópolis - MT" UF="MT" Padrao="COPLAN"></Estado>
+	<Estado ID="3147105" Nome="Pará de Minas - MG" UF="MG" Padrao="QUASAR"></Estado>
+	<Estado ID="3303401" Nome="Nova Friburgo - RJ" UF="RJ" Padrao="EL"></Estado>
+	<Estado ID="3529005" Nome="Marília - SP" UF="SP" Padrao="SIGCORP_SIGISS"></Estado>
 </Webservice>
