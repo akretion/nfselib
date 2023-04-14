@@ -19,18 +19,16 @@ class EsCancelarNfseResposta:
             "namespace": "",
         }
     )
-    dt_cancelamento: Optional[XmlDateTime] = field(
+    dtCancelamento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtCancelamento",
             "type": "Element",
             "namespace": "",
         }
     )
-    mensagem_retorno: Optional[TcMensagemRetorno] = field(
+    mensagemRetorno: Optional[TcMensagemRetorno] = field(
         default=None,
         metadata={
-            "name": "mensagemRetorno",
             "type": "Element",
             "namespace": "",
         }

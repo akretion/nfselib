@@ -4,18 +4,16 @@ from typing import Optional
 
 @dataclass
 class ConsultaItensAtividade:
-    header: Optional["ConsultaItensAtividade.Header"] = field(
+    Header: Optional["ConsultaItensAtividade.Header"] = field(
         default=None,
         metadata={
-            "name": "Header",
             "type": "Element",
             "required": True,
         }
     )
-    parametros_pesquisa: Optional["ConsultaItensAtividade.ParametrosPesquisa"] = field(
+    ParametrosPesquisa: Optional["ConsultaItensAtividade.ParametrosPesquisa"] = field(
         default=None,
         metadata={
-            "name": "ParametrosPesquisa",
             "type": "Element",
             "required": True,
         }
@@ -23,20 +21,18 @@ class ConsultaItensAtividade:
 
     @dataclass
     class Header:
-        cpfcnpjrequisitante: Optional[str] = field(
+        CPFCNPJRequisitante: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRequisitante",
                 "type": "Element",
                 "required": True,
                 "min_length": 11,
                 "max_length": 14,
             }
         )
-        chave: Optional[str] = field(
+        Chave: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Chave",
                 "type": "Element",
                 "required": True,
                 "length": 48,
@@ -45,10 +41,9 @@ class ConsultaItensAtividade:
 
     @dataclass
     class ParametrosPesquisa:
-        codigo_servico: Optional[str] = field(
+        CodigoServico: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CodigoServico",
                 "type": "Element",
                 "required": True,
             }

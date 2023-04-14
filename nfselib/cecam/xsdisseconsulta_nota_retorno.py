@@ -8,27 +8,24 @@ class IsseconsultaNotaRetorno:
     class Meta:
         name = "ISSEConsultaNotaRetorno"
 
-    header: Optional["IsseconsultaNotaRetorno.Header"] = field(
+    Header: Optional["IsseconsultaNotaRetorno.Header"] = field(
         default=None,
         metadata={
-            "name": "Header",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    dados_nota_fiscal: List["IsseconsultaNotaRetorno.DadosNotaFiscal"] = field(
+    DadosNotaFiscal: List["IsseconsultaNotaRetorno.DadosNotaFiscal"] = field(
         default_factory=list,
         metadata={
-            "name": "DadosNotaFiscal",
             "type": "Element",
             "namespace": "",
         }
     )
-    erro: List["IsseconsultaNotaRetorno.Erro"] = field(
+    Erro: List["IsseconsultaNotaRetorno.Erro"] = field(
         default_factory=list,
         metadata={
-            "name": "Erro",
             "type": "Element",
             "namespace": "",
         }
@@ -37,23 +34,21 @@ class IsseconsultaNotaRetorno:
     @dataclass
     class Header:
         """
-        :ivar versao: Identifica a versão do layout - Fixo 003
-        :ivar cnpjcpfprestador: CNPJ / CPF do emissor da Nota Fiscal
+        :ivar Versao: Identifica a versão do layout - Fixo 003
+        :ivar CNPJCPFPrestador: CNPJ / CPF do emissor da Nota Fiscal
         """
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="003",
             metadata={
-                "name": "Versao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        cnpjcpfprestador: Optional[object] = field(
+        CNPJCPFPrestador: Optional[object] = field(
             default=None,
             metadata={
-                "name": "CNPJCPFPrestador",
                 "type": "Element",
                 "namespace": "",
             }
@@ -62,403 +57,361 @@ class IsseconsultaNotaRetorno:
     @dataclass
     class DadosNotaFiscal:
         """
-        :ivar numero_nf: Número da Nota Fiscal
-        :ivar chave_validacao: Chave de Validação da Nota Fiscal
-        :ivar lote: Número do Lote de Envio da Nota Fiscal
-        :ivar situacao_nf: Situação da Nota Fiscal N - para Nota Normal
-            C - para Nota Cancelada
-        :ivar tipo_nf: Tipo da Nota Fiscal P - para Serviço Prestado T -
+        :ivar NumeroNF: Número da Nota Fiscal
+        :ivar ChaveValidacao: Chave de Validação da Nota Fiscal
+        :ivar Lote: Número do Lote de Envio da Nota Fiscal
+        :ivar SituacaoNF: Situação da Nota Fiscal N - para Nota Normal C
+            - para Nota Cancelada
+        :ivar TipoNF: Tipo da Nota Fiscal P - para Serviço Prestado T -
             para Serviço Tomado
-        :ivar emissao: Data de Emissão da Nota Fiscal
-        :ivar cnpjcpftomador: CNPJ / CPF do Tomador de Serviço
-        :ivar nome_tomador: Nome ou Razão Social do Tomador de Serviço
-        :ivar inscricao_municipal_tomador: Inscricao municipal do
-            Tomador de Serviço
-        :ivar inscricao_estadual_tomador: Inscricao Estadual do Tomador
+        :ivar Emissao: Data de Emissão da Nota Fiscal
+        :ivar CNPJCPFTomador: CNPJ / CPF do Tomador de Serviço
+        :ivar NomeTomador: Nome ou Razão Social do Tomador de Serviço
+        :ivar InscricaoMunicipalTomador: Inscricao municipal do Tomador
             de Serviço
-        :ivar uftomador: Sigla do Estado do Tomador de Serviço
-        :ivar cidade_tomador: Código do Município na Tabela IBGE do
+        :ivar InscricaoEstadualTomador: Inscricao Estadual do Tomador de
+            Serviço
+        :ivar UFTomador: Sigla do Estado do Tomador de Serviço
+        :ivar CidadeTomador: Código do Município na Tabela IBGE do
             Tomador de Serviço
-        :ivar endereco_tomador: Endereço do Tomador de Serviço
-        :ivar numero_tomador: Número do Tomador de Serviço
-        :ivar complemento_tomador: Complemento do Tomador de Serviço
-        :ivar bairro_tomador: Bairro do Tomador de Serviço
-        :ivar ceptomador: CEP do Tomador de Serviço
-        :ivar email_tomador: E-mail do Tomador de Serviço
-        :ivar observacao: Observações da Nota Fiscal
-        :ivar nfsubstituta: Informar o número da Nota Fiscal Substituta
+        :ivar EnderecoTomador: Endereço do Tomador de Serviço
+        :ivar NumeroTomador: Número do Tomador de Serviço
+        :ivar ComplementoTomador: Complemento do Tomador de Serviço
+        :ivar BairroTomador: Bairro do Tomador de Serviço
+        :ivar CEPTomador: CEP do Tomador de Serviço
+        :ivar EmailTomador: E-mail do Tomador de Serviço
+        :ivar Observacao: Observações da Nota Fiscal
+        :ivar NFSubstituta: Informar o número da Nota Fiscal Substituta
             de uma Nota Fiscal Cancelada.
-        :ivar local_prestacao: Local da Prestação do Serviço 1 - para
+        :ivar LocalPrestacao: Local da Prestação do Serviço 1 - para
             serviço na sede do prestador 2 - para serviço para imóvel
             (Construção Civil) 3 - para serviço em via pública 4 - para
             serviço fora do município
-        :ivar descricao_local_prestacao: Dados do Local de Prestação do
+        :ivar DescricaoLocalPrestacao: Dados do Local de Prestação do
             Serviço
-        :ivar descricao_local_prestacao_complementar: Dados
-            complementares do Local de Prestação do Serviço
-        :ivar inscricao_imovel: Inscrição Cadastral do Imóvel
-        :ivar inscri_o_municipal_prestador: Inscrição Municipal do
+        :ivar DescricaoLocalPrestacaoComplementar: Dados complementares
+            do Local de Prestação do Serviço
+        :ivar InscricaoImovel: Inscrição Cadastral do Imóvel
+        :ivar InscriçãoMunicipalPrestador: Inscrição Municipal do
             Prestador do Serviço
-        :ivar inscri_o_estadual_prestador: Inscrição Estadual do
+        :ivar InscriçãoEstadualPrestador: Inscrição Estadual do
             Prestador do Serviço
-        :ivar email_prestador: Email do Prestador do Serviço
-        :ivar cep_prestador: Cep do Prestador do Serviço
-        :ivar uflocal_prestacao: Sigla do Estado da Prestação do Serviço
-        :ivar cidade_local_prestacao: Cidade da Prestação do Serviço
-        :ivar endereco_local_prestacao: Endereço da Prestação do Serviço
-        :ivar numero_local_prestacao: Número da localização do imóvel da
+        :ivar EmailPrestador: Email do Prestador do Serviço
+        :ivar cepPrestador: Cep do Prestador do Serviço
+        :ivar UFLocalPrestacao: Sigla do Estado da Prestação do Serviço
+        :ivar CidadeLocalPrestacao: Cidade da Prestação do Serviço
+        :ivar EnderecoLocalPrestacao: Endereço da Prestação do Serviço
+        :ivar NumeroLocalPrestacao: Número da localização do imóvel da
             Prestação do Serviço
-        :ivar complemento_local_prestacao: Complemento do imóvel da
+        :ivar ComplementoLocalPrestacao: Complemento do imóvel da
             Prestação do Serviço
-        :ivar bairro_local_prestacao: Bairro da Prestação do Serviço
-        :ivar ceplocal_prestacao: CEP da Prestação do Serviço
-        :ivar motivo_cancelamento: Descrição do Motivo de Cancelamento
-            da Nota Fiscal
-        :ivar tipo_documento: Código do Tipo de Nota Fiscal
-        :ivar valor_total_nota: Valor Total da Nota Fiscal
-        :ivar valor_liquido_nota: Valor Liquido da Nota Fiscal
-        :ivar dados_itens_nota_fiscal:
-        :ivar dados_impostos_nota_fiscal:
-        :ivar outras_informacoes:
+        :ivar BairroLocalPrestacao: Bairro da Prestação do Serviço
+        :ivar CEPLocalPrestacao: CEP da Prestação do Serviço
+        :ivar MotivoCancelamento: Descrição do Motivo de Cancelamento da
+            Nota Fiscal
+        :ivar TipoDocumento: Código do Tipo de Nota Fiscal
+        :ivar ValorTotalNota: Valor Total da Nota Fiscal
+        :ivar ValorLiquidoNota: Valor Liquido da Nota Fiscal
+        :ivar DadosItensNotaFiscal:
+        :ivar DadosImpostosNotaFiscal:
+        :ivar OutrasInformacoes:
         """
-        numero_nf: Optional[Decimal] = field(
+        NumeroNF: Optional[Decimal] = field(
             default=None,
             metadata={
-                "name": "NumeroNF",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        chave_validacao: Optional[str] = field(
+        ChaveValidacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "ChaveValidacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        lote: Optional[object] = field(
+        Lote: Optional[object] = field(
             default=None,
             metadata={
-                "name": "Lote",
                 "type": "Element",
                 "namespace": "",
             }
         )
-        situacao_nf: Optional[str] = field(
+        SituacaoNF: Optional[str] = field(
             default=None,
             metadata={
-                "name": "SituacaoNF",
-                "type": "Element",
-                "namespace": "",
-                "required": True,
-            }
-        )
-        tipo_nf: Optional[str] = field(
-            default=None,
-            metadata={
-                "name": "TipoNF",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        emissao: Optional[object] = field(
+        TipoNF: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Emissao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        cnpjcpftomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "CNPJCPFTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        nome_tomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "NomeTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        inscricao_municipal_tomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "InscricaoMunicipalTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        inscricao_estadual_tomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "InscricaoEstadualTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        uftomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "UFTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        cidade_tomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "CidadeTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        endereco_tomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "EnderecoTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        numero_tomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "NumeroTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        complemento_tomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "ComplementoTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        bairro_tomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "BairroTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        ceptomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "CEPTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        email_tomador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "EmailTomador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        observacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "Observacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        nfsubstituta: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "NFSubstituta",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        local_prestacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "LocalPrestacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        descricao_local_prestacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "DescricaoLocalPrestacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        descricao_local_prestacao_complementar: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "DescricaoLocalPrestacaoComplementar",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        inscricao_imovel: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "InscricaoImovel",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        inscri_o_municipal_prestador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "InscriçãoMunicipalPrestador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        inscri_o_estadual_prestador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "InscriçãoEstadualPrestador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        email_prestador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "EmailPrestador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        cep_prestador: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "cepPrestador",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        uflocal_prestacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "UFLocalPrestacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        cidade_local_prestacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "CidadeLocalPrestacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        endereco_local_prestacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "EnderecoLocalPrestacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        numero_local_prestacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "NumeroLocalPrestacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        complemento_local_prestacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "ComplementoLocalPrestacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        bairro_local_prestacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "BairroLocalPrestacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        ceplocal_prestacao: Optional[object] = field(
-            default=None,
-            metadata={
-                "name": "CEPLocalPrestacao",
-                "type": "Element",
-                "namespace": "",
-            }
-        )
-        motivo_cancelamento: Optional[str] = field(
-            default=None,
-            metadata={
-                "name": "MotivoCancelamento",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        tipo_documento: Optional[object] = field(
+        Emissao: Optional[object] = field(
             default=None,
             metadata={
-                "name": "TipoDocumento",
                 "type": "Element",
                 "namespace": "",
             }
         )
-        valor_total_nota: Optional[object] = field(
+        CNPJCPFTomador: Optional[object] = field(
             default=None,
             metadata={
-                "name": "ValorTotalNota",
                 "type": "Element",
                 "namespace": "",
             }
         )
-        valor_liquido_nota: Optional[object] = field(
+        NomeTomador: Optional[object] = field(
             default=None,
             metadata={
-                "name": "ValorLiquidoNota",
                 "type": "Element",
                 "namespace": "",
             }
         )
-        dados_itens_nota_fiscal: Optional["IsseconsultaNotaRetorno.DadosNotaFiscal.DadosItensNotaFiscal"] = field(
+        InscricaoMunicipalTomador: Optional[object] = field(
             default=None,
             metadata={
-                "name": "DadosItensNotaFiscal",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        InscricaoEstadualTomador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        UFTomador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        CidadeTomador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        EnderecoTomador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        NumeroTomador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        ComplementoTomador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        BairroTomador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        CEPTomador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        EmailTomador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        Observacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        NFSubstituta: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        LocalPrestacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        DescricaoLocalPrestacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        DescricaoLocalPrestacaoComplementar: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        InscricaoImovel: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        InscriçãoMunicipalPrestador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        InscriçãoEstadualPrestador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        EmailPrestador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        cepPrestador: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        UFLocalPrestacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        CidadeLocalPrestacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        EnderecoLocalPrestacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        NumeroLocalPrestacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        ComplementoLocalPrestacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        BairroLocalPrestacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        CEPLocalPrestacao: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        MotivoCancelamento: Optional[str] = field(
+            default=None,
+            metadata={
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        dados_impostos_nota_fiscal: List["IsseconsultaNotaRetorno.DadosNotaFiscal.DadosImpostosNotaFiscal"] = field(
+        TipoDocumento: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        ValorTotalNota: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        ValorLiquidoNota: Optional[object] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        DadosItensNotaFiscal: Optional["IsseconsultaNotaRetorno.DadosNotaFiscal.DadosItensNotaFiscal"] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "",
+                "required": True,
+            }
+        )
+        DadosImpostosNotaFiscal: List["IsseconsultaNotaRetorno.DadosNotaFiscal.DadosImpostosNotaFiscal"] = field(
             default_factory=list,
             metadata={
-                "name": "DadosImpostosNotaFiscal",
                 "type": "Element",
                 "namespace": "",
             }
         )
-        outras_informacoes: List["IsseconsultaNotaRetorno.DadosNotaFiscal.OutrasInformacoes"] = field(
+        OutrasInformacoes: List["IsseconsultaNotaRetorno.DadosNotaFiscal.OutrasInformacoes"] = field(
             default_factory=list,
             metadata={
-                "name": "OutrasInformacoes",
                 "type": "Element",
                 "namespace": "",
             }
@@ -467,95 +420,85 @@ class IsseconsultaNotaRetorno:
         @dataclass
         class DadosItensNotaFiscal:
             """
-            :ivar item_atividade: Código do Item da Atividade prestado
-            :ivar texto_item: Texto do Item da Nota Fiscal
-            :ivar valor_item: Valor do Item da Nota Fiscal
-            :ivar valor_deducao: Valor das Deduções da Nota Fiscal
-            :ivar retido: Identifica se o imposto do serviço foi retido
+            :ivar ItemAtividade: Código do Item da Atividade prestado
+            :ivar TextoItem: Texto do Item da Nota Fiscal
+            :ivar ValorItem: Valor do Item da Nota Fiscal
+            :ivar ValorDeducao: Valor das Deduções da Nota Fiscal
+            :ivar Retido: Identifica se o imposto do serviço foi retido
                 na fonte pelo Tomador S - para Imposto Retido pelo
                 Tomador N - para Imposto Não Retido pelo Tomador
-            :ivar pais:
-            :ivar codigo_servico: Código do Serviço
-            :ivar valor_base_calculo: Valor da Base de Calculo
-            :ivar valor_iss: Valor do ISS
-            :ivar aliquota: Valor da Aliquota
+            :ivar Pais:
+            :ivar CodigoServico: Código do Serviço
+            :ivar ValorBaseCalculo: Valor da Base de Calculo
+            :ivar ValorISS: Valor do ISS
+            :ivar Aliquota: Valor da Aliquota
             """
-            item_atividade: Optional[object] = field(
+            ItemAtividade: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "ItemAtividade",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            texto_item: Optional[object] = field(
+            TextoItem: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "TextoItem",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            valor_item: Optional[object] = field(
+            ValorItem: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "ValorItem",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            valor_deducao: Optional[object] = field(
+            ValorDeducao: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "ValorDeducao",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            retido: Optional[object] = field(
+            Retido: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "Retido",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            pais: Optional[object] = field(
+            Pais: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "Pais",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            codigo_servico: Optional[object] = field(
+            CodigoServico: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "CodigoServico",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            valor_base_calculo: Optional[object] = field(
+            ValorBaseCalculo: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "ValorBaseCalculo",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            valor_iss: Optional[object] = field(
+            ValorISS: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "ValorISS",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            aliquota: Optional[object] = field(
+            Aliquota: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "Aliquota",
                     "type": "Element",
                     "namespace": "",
                 }
@@ -564,21 +507,19 @@ class IsseconsultaNotaRetorno:
         @dataclass
         class DadosImpostosNotaFiscal:
             """
-            :ivar imposto: Sigla do Imposto utilizado na Dedução
-            :ivar valor_imposto: Valor do Imposto utilizado na Dedução
+            :ivar Imposto: Sigla do Imposto utilizado na Dedução
+            :ivar ValorImposto: Valor do Imposto utilizado na Dedução
             """
-            imposto: Optional[object] = field(
+            Imposto: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "Imposto",
                     "type": "Element",
                     "namespace": "",
                 }
             )
-            valor_imposto: Optional[object] = field(
+            ValorImposto: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "ValorImposto",
                     "type": "Element",
                     "namespace": "",
                 }
@@ -587,13 +528,12 @@ class IsseconsultaNotaRetorno:
         @dataclass
         class OutrasInformacoes:
             """
-            :ivar informacao: Informações Adicionais, por exemplo:
+            :ivar Informacao: Informações Adicionais, por exemplo:
                 “Empresa optante do Simples Nacional.”.
             """
-            informacao: Optional[object] = field(
+            Informacao: Optional[object] = field(
                 default=None,
                 metadata={
-                    "name": "Informacao",
                     "type": "Element",
                     "namespace": "",
                 }
@@ -602,22 +542,20 @@ class IsseconsultaNotaRetorno:
     @dataclass
     class Erro:
         """
-        :ivar id: Identificador do Registro
-        :ivar erro: Mensagem de Erro do Arquivo
+        :ivar ID: Identificador do Registro
+        :ivar Erro: Mensagem de Erro do Arquivo
         """
-        id: Optional[int] = field(
+        ID: Optional[int] = field(
             default=None,
             metadata={
-                "name": "ID",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        erro: Optional[str] = field(
+        Erro: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Erro",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

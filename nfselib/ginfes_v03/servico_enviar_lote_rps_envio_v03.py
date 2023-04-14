@@ -11,10 +11,9 @@ class EnviarLoteRpsEnvio:
     class Meta:
         namespace = "http://www.ginfes.com.br/servico_enviar_lote_rps_envio_v03.xsd"
 
-    lote_rps: Optional[TcLoteRps] = field(
+    LoteRps: Optional[TcLoteRps] = field(
         default=None,
         metadata={
-            "name": "LoteRps",
             "type": "Element",
             "required": True,
         }

@@ -10,18 +10,16 @@ class ConsultarLoteRpsEnvio:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "required": True,
             "max_length": 50,

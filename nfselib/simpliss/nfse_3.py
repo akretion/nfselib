@@ -11,10 +11,9 @@ class TcContato:
     class Meta:
         name = "tcContato"
 
-    telefone: Optional[str] = field(
+    Telefone: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Telefone",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -22,10 +21,9 @@ class TcContato:
             "white_space": "collapse",
         }
     )
-    email: Optional[str] = field(
+    Email: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Email",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -40,19 +38,17 @@ class TcCpfCnpj:
     class Meta:
         name = "tcCpfCnpj"
 
-    cpf: Optional[str] = field(
+    Cpf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cpf",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "length": 11,
         }
     )
-    cnpj: Optional[str] = field(
+    Cnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cnpj",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "length": 14,
@@ -66,10 +62,9 @@ class TcDadosConstrucaoCivil:
     class Meta:
         name = "tcDadosConstrucaoCivil"
 
-    codigo_obra: Optional[str] = field(
+    CodigoObra: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoObra",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -78,10 +73,9 @@ class TcDadosConstrucaoCivil:
             "white_space": "collapse",
         }
     )
-    art: Optional[str] = field(
+    Art: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Art",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -97,10 +91,9 @@ class TcEndereco:
     class Meta:
         name = "tcEndereco"
 
-    endereco: Optional[str] = field(
+    Endereco: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -108,10 +101,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    numero: Optional[str] = field(
+    Numero: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -119,10 +111,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    complemento: Optional[str] = field(
+    Complemento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Complemento",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -130,10 +121,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    bairro: Optional[str] = field(
+    Bairro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Bairro",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -141,28 +131,25 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    codigo_municipio: Optional[int] = field(
+    CodigoMunicipio: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoMunicipio",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "total_digits": 7,
         }
     )
-    uf: Optional[str] = field(
+    Uf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Uf",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "length": 2,
         }
     )
-    cep: Optional[int] = field(
+    Cep: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Cep",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "total_digits": 8,
@@ -175,20 +162,18 @@ class TcIdentificacaoNfse:
     class Meta:
         name = "tcIdentificacaoNfse"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    cnpj: Optional[str] = field(
+    Cnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cnpj",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -196,10 +181,9 @@ class TcIdentificacaoNfse:
             "white_space": "collapse",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -207,10 +191,9 @@ class TcIdentificacaoNfse:
             "white_space": "collapse",
         }
     )
-    codigo_municipio: Optional[int] = field(
+    CodigoMunicipio: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoMunicipio",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -224,20 +207,18 @@ class TcIdentificacaoOrgaoGerador:
     class Meta:
         name = "tcIdentificacaoOrgaoGerador"
 
-    codigo_municipio: Optional[int] = field(
+    CodigoMunicipio: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoMunicipio",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "total_digits": 7,
         }
     )
-    uf: Optional[str] = field(
+    Uf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Uf",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -251,10 +232,9 @@ class TcIdentificacaoPrestador:
     class Meta:
         name = "tcIdentificacaoPrestador"
 
-    cnpj: Optional[str] = field(
+    Cnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cnpj",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -262,10 +242,9 @@ class TcIdentificacaoPrestador:
             "white_space": "collapse",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -280,20 +259,18 @@ class TcIdentificacaoRps:
     class Meta:
         name = "tcIdentificacaoRps"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    serie: Optional[str] = field(
+    Serie: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Serie",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -302,10 +279,9 @@ class TcIdentificacaoRps:
             "white_space": "collapse",
         }
     )
-    tipo: Optional[str] = field(
+    Tipo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Tipo",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -319,10 +295,9 @@ class TcInfSubstituicaoNfse:
     class Meta:
         name = "tcInfSubstituicaoNfse"
 
-    nfse_substituidora: Optional[int] = field(
+    NfseSubstituidora: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NfseSubstituidora",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -343,10 +318,9 @@ class TcItemServico:
     class Meta:
         name = "tcItemServico"
 
-    descricao: Optional[str] = field(
+    Descricao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Descricao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -355,10 +329,9 @@ class TcItemServico:
             "white_space": "collapse",
         }
     )
-    quantidade: Optional[Decimal] = field(
+    Quantidade: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "Quantidade",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -367,10 +340,9 @@ class TcItemServico:
             "fraction_digits": 2,
         }
     )
-    valor_unitario: Optional[Decimal] = field(
+    ValorUnitario: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorUnitario",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -379,10 +351,9 @@ class TcItemServico:
             "fraction_digits": 2,
         }
     )
-    iss_tributavel: Optional[str] = field(
+    IssTributavel: Optional[str] = field(
         default=None,
         metadata={
-            "name": "IssTributavel",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "pattern": r"1|2",
@@ -395,10 +366,9 @@ class TcMensagemRetorno:
     class Meta:
         name = "tcMensagemRetorno"
 
-    codigo: Optional[str] = field(
+    Codigo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Codigo",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -407,10 +377,9 @@ class TcMensagemRetorno:
             "white_space": "collapse",
         }
     )
-    mensagem: Optional[str] = field(
+    Mensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Mensagem",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -419,10 +388,9 @@ class TcMensagemRetorno:
             "white_space": "collapse",
         }
     )
-    correcao: Optional[str] = field(
+    Correcao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Correcao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -437,10 +405,9 @@ class TcValores:
     class Meta:
         name = "tcValores"
 
-    valor_servicos: Optional[Decimal] = field(
+    ValorServicos: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorServicos",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -449,10 +416,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    valor_deducoes: Optional[Decimal] = field(
+    ValorDeducoes: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorDeducoes",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -460,10 +426,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    valor_pis: Optional[Decimal] = field(
+    ValorPis: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorPis",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -471,10 +436,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    valor_cofins: Optional[Decimal] = field(
+    ValorCofins: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorCofins",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -482,10 +446,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    valor_inss: Optional[Decimal] = field(
+    ValorInss: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorInss",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -493,10 +456,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    valor_ir: Optional[Decimal] = field(
+    ValorIr: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorIr",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -504,10 +466,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    valor_csll: Optional[Decimal] = field(
+    ValorCsll: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorCsll",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -515,20 +476,18 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    iss_retido: Optional[str] = field(
+    IssRetido: Optional[str] = field(
         default=None,
         metadata={
-            "name": "IssRetido",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    valor_iss: Optional[Decimal] = field(
+    ValorIss: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorIss",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -536,10 +495,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    valor_iss_retido: Optional[Decimal] = field(
+    ValorIssRetido: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorIssRetido",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -547,10 +505,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    outras_retencoes: Optional[Decimal] = field(
+    OutrasRetencoes: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "OutrasRetencoes",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -558,10 +515,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    base_calculo: Optional[Decimal] = field(
+    BaseCalculo: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "BaseCalculo",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -569,10 +525,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    aliquota: Optional[Decimal] = field(
+    Aliquota: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "Aliquota",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -580,10 +535,9 @@ class TcValores:
             "fraction_digits": 4,
         }
     )
-    valor_liquido_nfse: Optional[Decimal] = field(
+    ValorLiquidoNfse: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorLiquidoNfse",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -591,10 +545,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    desconto_incondicionado: Optional[Decimal] = field(
+    DescontoIncondicionado: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "DescontoIncondicionado",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -602,10 +555,9 @@ class TcValores:
             "fraction_digits": 2,
         }
     )
-    desconto_condicionado: Optional[Decimal] = field(
+    DescontoCondicionado: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "DescontoCondicionado",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -620,18 +572,16 @@ class ConsultarLoteRpsEnvio:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "required": True,
             "max_length": 50,
@@ -644,18 +594,16 @@ class ConsultarNfseRpsEnvio:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
@@ -667,18 +615,16 @@ class ConsultarSituacaoLoteRpsEnvio:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "required": True,
             "max_length": 50,
@@ -691,10 +637,9 @@ class ListaMensagemRetorno:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    mensagem_retorno: List[TcMensagemRetorno] = field(
+    MensagemRetorno: List[TcMensagemRetorno] = field(
         default_factory=list,
         metadata={
-            "name": "MensagemRetorno",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -706,19 +651,17 @@ class TcDadosPrestador:
     class Meta:
         name = "tcDadosPrestador"
 
-    identificacao_prestador: Optional[TcIdentificacaoPrestador] = field(
+    IdentificacaoPrestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoPrestador",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -727,10 +670,9 @@ class TcDadosPrestador:
             "white_space": "collapse",
         }
     )
-    nome_fantasia: Optional[str] = field(
+    NomeFantasia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomeFantasia",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -738,19 +680,17 @@ class TcDadosPrestador:
             "white_space": "collapse",
         }
     )
-    endereco: Optional[TcEndereco] = field(
+    Endereco: Optional[TcEndereco] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    contato: Optional[TcContato] = field(
+    Contato: Optional[TcContato] = field(
         default=None,
         metadata={
-            "name": "Contato",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
@@ -762,19 +702,17 @@ class TcDadosServico:
     class Meta:
         name = "tcDadosServico"
 
-    valores: Optional[TcValores] = field(
+    Valores: Optional[TcValores] = field(
         default=None,
         metadata={
-            "name": "Valores",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    item_lista_servico: Optional[str] = field(
+    ItemListaServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ItemListaServico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -783,19 +721,17 @@ class TcDadosServico:
             "white_space": "collapse",
         }
     )
-    codigo_cnae: Optional[int] = field(
+    CodigoCnae: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoCnae",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "total_digits": 7,
         }
     )
-    codigo_tributacao_municipio: Optional[str] = field(
+    CodigoTributacaoMunicipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoTributacaoMunicipio",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -803,10 +739,9 @@ class TcDadosServico:
             "white_space": "collapse",
         }
     )
-    discriminacao: Optional[str] = field(
+    Discriminacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Discriminacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -815,20 +750,18 @@ class TcDadosServico:
             "white_space": "collapse",
         }
     )
-    codigo_municipio: Optional[int] = field(
+    CodigoMunicipio: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoMunicipio",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "total_digits": 7,
         }
     )
-    itens_servico: List[TcItemServico] = field(
+    ItensServico: List[TcItemServico] = field(
         default_factory=list,
         metadata={
-            "name": "ItensServico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_occurs": 1,
@@ -841,29 +774,26 @@ class TcIdentNovaNfse:
     class Meta:
         name = "tcIdentNovaNfse"
 
-    identificacao_prestador: Optional[TcIdentificacaoPrestador] = field(
+    IdentificacaoPrestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoPrestador",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    serie: Optional[str] = field(
+    Serie: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Serie",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -872,10 +802,9 @@ class TcIdentNovaNfse:
             "white_space": "collapse",
         }
     )
-    codigo_verificacao: Optional[str] = field(
+    CodigoVerificacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoVerificacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -884,19 +813,17 @@ class TcIdentNovaNfse:
             "white_space": "collapse",
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    link: Optional[str] = field(
+    Link: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Link",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -918,10 +845,9 @@ class TcIdentificacaoIntermediarioServico:
     class Meta:
         name = "tcIdentificacaoIntermediarioServico"
 
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -930,19 +856,17 @@ class TcIdentificacaoIntermediarioServico:
             "white_space": "collapse",
         }
     )
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -957,18 +881,16 @@ class TcIdentificacaoTomador:
     class Meta:
         name = "tcIdentificacaoTomador"
 
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -976,10 +898,9 @@ class TcIdentificacaoTomador:
             "white_space": "collapse",
         }
     )
-    inscricao_estadual: Optional[str] = field(
+    InscricaoEstadual: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoEstadual",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -994,19 +915,17 @@ class TcInfPedidoCancelamento:
     class Meta:
         name = "tcInfPedidoCancelamento"
 
-    identificacao_nfse: Optional[TcIdentificacaoNfse] = field(
+    IdentificacaoNfse: Optional[TcIdentificacaoNfse] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoNfse",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    codigo_cancelamento: Optional[str] = field(
+    CodigoCancelamento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoCancelamento",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1029,19 +948,17 @@ class TcMensagemRetornoLote:
     class Meta:
         name = "tcMensagemRetornoLote"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    codigo: Optional[str] = field(
+    Codigo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Codigo",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1050,10 +967,9 @@ class TcMensagemRetornoLote:
             "white_space": "collapse",
         }
     )
-    mensagem: Optional[str] = field(
+    Mensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Mensagem",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1069,10 +985,9 @@ class TcSubstituicaoNfse:
     class Meta:
         name = "tcSubstituicaoNfse"
 
-    substituicao_nfse: Optional[TcInfSubstituicaoNfse] = field(
+    SubstituicaoNfse: Optional[TcInfSubstituicaoNfse] = field(
         default=None,
         metadata={
-            "name": "SubstituicaoNfse",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1094,58 +1009,51 @@ class ConsultarNfseEnvio:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    numero_nfse: Optional[int] = field(
+    NumeroNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroNfse",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    periodo_emissao: Optional["ConsultarNfseEnvio.PeriodoEmissao"] = field(
+    PeriodoEmissao: Optional["ConsultarNfseEnvio.PeriodoEmissao"] = field(
         default=None,
         metadata={
-            "name": "PeriodoEmissao",
             "type": "Element",
         }
     )
-    tomador: Optional[TcIdentificacaoTomador] = field(
+    Tomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
         }
     )
-    intermediario_servico: Optional[TcIdentificacaoIntermediarioServico] = field(
+    IntermediarioServico: Optional[TcIdentificacaoIntermediarioServico] = field(
         default=None,
         metadata={
-            "name": "IntermediarioServico",
             "type": "Element",
         }
     )
 
     @dataclass
     class PeriodoEmissao:
-        data_inicial: Optional[XmlDate] = field(
+        DataInicial: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataInicial",
                 "type": "Element",
                 "required": True,
             }
         )
-        data_final: Optional[XmlDate] = field(
+        DataFinal: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataFinal",
                 "type": "Element",
                 "required": True,
             }
@@ -1157,23 +1065,21 @@ class ConsultarSituacaoLoteRpsResposta:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    situacao: Optional[str] = field(
+    Situacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Situacao",
             "type": "Element",
             "pattern": r"1|2|3|4",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1187,30 +1093,27 @@ class EnviarLoteRpsResposta:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    data_recebimento: Optional[XmlDateTime] = field(
+    DataRecebimento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataRecebimento",
             "type": "Element",
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "max_length": 50,
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1224,18 +1127,16 @@ class TcDadosTomador:
     class Meta:
         name = "tcDadosTomador"
 
-    identificacao_tomador: Optional[TcIdentificacaoTomador] = field(
+    IdentificacaoTomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoTomador",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -1243,18 +1144,16 @@ class TcDadosTomador:
             "white_space": "collapse",
         }
     )
-    endereco: Optional[TcEndereco] = field(
+    Endereco: Optional[TcEndereco] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    contato: Optional[TcContato] = field(
+    Contato: Optional[TcContato] = field(
         default=None,
         metadata={
-            "name": "Contato",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
@@ -1266,10 +1165,9 @@ class TcPedidoCancelamento:
     class Meta:
         name = "tcPedidoCancelamento"
 
-    inf_pedido_cancelamento: Optional[TcInfPedidoCancelamento] = field(
+    InfPedidoCancelamento: Optional[TcInfPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "InfPedidoCancelamento",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1290,10 +1188,9 @@ class TcRespostaIdentNovaNfse:
     class Meta:
         name = "tcRespostaIdentNovaNfse"
 
-    identificacao_nfse: Optional[TcIdentNovaNfse] = field(
+    IdentificacaoNfse: Optional[TcIdentNovaNfse] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoNfse",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1314,10 +1211,9 @@ class CancelarNfseEnvio:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    pedido: Optional[TcPedidoCancelamento] = field(
+    Pedido: Optional[TcPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "required": True,
         }
@@ -1329,14 +1225,13 @@ class GerarNovaNfseResposta:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    nova_nfse: Optional[TcRespostaIdentNovaNfse] = field(
+    NovaNfse: Optional[TcRespostaIdentNovaNfse] = field(
         default=None,
         metadata={
-            "name": "NovaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1350,19 +1245,17 @@ class TcConfirmacaoCancelamento:
     class Meta:
         name = "tcConfirmacaoCancelamento"
 
-    pedido: Optional[TcPedidoCancelamento] = field(
+    Pedido: Optional[TcPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    data_hora_cancelamento: Optional[XmlDateTime] = field(
+    DataHoraCancelamento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataHoraCancelamento",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1382,20 +1275,18 @@ class TcInfNfse:
     class Meta:
         name = "tcInfNfse"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    codigo_verificacao: Optional[str] = field(
+    CodigoVerificacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoVerificacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1404,92 +1295,82 @@ class TcInfNfse:
             "white_space": "collapse",
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    data_emissao_rps: Optional[XmlDate] = field(
+    DataEmissaoRps: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "DataEmissaoRps",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    natureza_operacao: Optional[str] = field(
+    NaturezaOperacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NaturezaOperacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2|3|4|5|6",
         }
     )
-    regime_especial_tributacao: Optional[str] = field(
+    RegimeEspecialTributacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RegimeEspecialTributacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "pattern": r"1|2|3|4|5|6",
         }
     )
-    optante_simples_nacional: Optional[str] = field(
+    OptanteSimplesNacional: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OptanteSimplesNacional",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    incentivador_cultural: Optional[str] = field(
+    IncentivadorCultural: Optional[str] = field(
         default=None,
         metadata={
-            "name": "IncentivadorCultural",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    competencia: Optional[XmlDateTime] = field(
+    Competencia: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "Competencia",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    nfse_substituida: Optional[int] = field(
+    NfseSubstituida: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NfseSubstituida",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "total_digits": 15,
         }
     )
-    outras_informacoes: Optional[str] = field(
+    OutrasInformacoes: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OutrasInformacoes",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -1497,19 +1378,17 @@ class TcInfNfse:
             "white_space": "collapse",
         }
     )
-    servico: Optional[TcDadosServico] = field(
+    Servico: Optional[TcDadosServico] = field(
         default=None,
         metadata={
-            "name": "Servico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    valor_credito: Optional[Decimal] = field(
+    ValorCredito: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorCredito",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_inclusive": Decimal("0"),
@@ -1517,44 +1396,39 @@ class TcInfNfse:
             "fraction_digits": 2,
         }
     )
-    prestador_servico: Optional[TcDadosPrestador] = field(
+    PrestadorServico: Optional[TcDadosPrestador] = field(
         default=None,
         metadata={
-            "name": "PrestadorServico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    tomador_servico: Optional[TcDadosTomador] = field(
+    TomadorServico: Optional[TcDadosTomador] = field(
         default=None,
         metadata={
-            "name": "TomadorServico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    intermediario_servico: Optional[TcIdentificacaoIntermediarioServico] = field(
+    IntermediarioServico: Optional[TcIdentificacaoIntermediarioServico] = field(
         default=None,
         metadata={
-            "name": "IntermediarioServico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    orgao_gerador: Optional[TcIdentificacaoOrgaoGerador] = field(
+    OrgaoGerador: Optional[TcIdentificacaoOrgaoGerador] = field(
         default=None,
         metadata={
-            "name": "OrgaoGerador",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    contrucao_civil: Optional[TcDadosConstrucaoCivil] = field(
+    ContrucaoCivil: Optional[TcDadosConstrucaoCivil] = field(
         default=None,
         metadata={
-            "name": "ContrucaoCivil",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
@@ -1573,77 +1447,69 @@ class TcInfNovaNfse:
     class Meta:
         name = "tcInfNovaNfse"
 
-    natureza_operacao: Optional[str] = field(
+    NaturezaOperacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NaturezaOperacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2|3|4|5|6",
         }
     )
-    regime_especial_tributacao: Optional[str] = field(
+    RegimeEspecialTributacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RegimeEspecialTributacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "pattern": r"1|2|3|4|5|6",
         }
     )
-    optante_simples_nacional: Optional[str] = field(
+    OptanteSimplesNacional: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OptanteSimplesNacional",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    incentivador_cultural: Optional[str] = field(
+    IncentivadorCultural: Optional[str] = field(
         default=None,
         metadata={
-            "name": "IncentivadorCultural",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    status: Optional[str] = field(
+    Status: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Status",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    competencia: Optional[XmlDateTime] = field(
+    Competencia: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "Competencia",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    nfse_substituida: Optional[int] = field(
+    NfseSubstituida: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NfseSubstituida",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "total_digits": 15,
         }
     )
-    outras_informacoes: Optional[str] = field(
+    OutrasInformacoes: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OutrasInformacoes",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -1651,35 +1517,31 @@ class TcInfNovaNfse:
             "white_space": "collapse",
         }
     )
-    servico: Optional[TcDadosServico] = field(
+    Servico: Optional[TcDadosServico] = field(
         default=None,
         metadata={
-            "name": "Servico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    tomador: Optional[TcDadosTomador] = field(
+    Tomador: Optional[TcDadosTomador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    intermediario_servico: Optional[TcIdentificacaoIntermediarioServico] = field(
+    IntermediarioServico: Optional[TcIdentificacaoIntermediarioServico] = field(
         default=None,
         metadata={
-            "name": "IntermediarioServico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    contrucao_civil: Optional[TcDadosConstrucaoCivil] = field(
+    ContrucaoCivil: Optional[TcDadosConstrucaoCivil] = field(
         default=None,
         metadata={
-            "name": "ContrucaoCivil",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
@@ -1698,85 +1560,76 @@ class TcInfRps:
     class Meta:
         name = "tcInfRps"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    natureza_operacao: Optional[str] = field(
+    NaturezaOperacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NaturezaOperacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2|3|4|5|6",
         }
     )
-    regime_especial_tributacao: Optional[str] = field(
+    RegimeEspecialTributacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RegimeEspecialTributacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "pattern": r"1|2|3|4|5|6",
         }
     )
-    optante_simples_nacional: Optional[str] = field(
+    OptanteSimplesNacional: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OptanteSimplesNacional",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    incentivador_cultural: Optional[str] = field(
+    IncentivadorCultural: Optional[str] = field(
         default=None,
         metadata={
-            "name": "IncentivadorCultural",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    status: Optional[str] = field(
+    Status: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Status",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    rps_substituido: Optional[TcIdentificacaoRps] = field(
+    RpsSubstituido: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "RpsSubstituido",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    outras_informacoes: Optional[str] = field(
+    OutrasInformacoes: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OutrasInformacoes",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "min_length": 1,
@@ -1784,44 +1637,39 @@ class TcInfRps:
             "white_space": "collapse",
         }
     )
-    servico: Optional[TcDadosServico] = field(
+    Servico: Optional[TcDadosServico] = field(
         default=None,
         metadata={
-            "name": "Servico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    tomador: Optional[TcDadosTomador] = field(
+    Tomador: Optional[TcDadosTomador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    intermediario_servico: Optional[TcIdentificacaoIntermediarioServico] = field(
+    IntermediarioServico: Optional[TcIdentificacaoIntermediarioServico] = field(
         default=None,
         metadata={
-            "name": "IntermediarioServico",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    contrucao_civil: Optional[TcDadosConstrucaoCivil] = field(
+    ContrucaoCivil: Optional[TcDadosConstrucaoCivil] = field(
         default=None,
         metadata={
-            "name": "ContrucaoCivil",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
@@ -1840,18 +1688,16 @@ class GerarNovaNfseEnvio:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    informacao_nfse: Optional[TcInfNovaNfse] = field(
+    InformacaoNfse: Optional[TcInfNovaNfse] = field(
         default=None,
         metadata={
-            "name": "InformacaoNfse",
             "type": "Element",
             "required": True,
         }
@@ -1871,10 +1717,9 @@ class TcCancelamentoNfse:
     class Meta:
         name = "tcCancelamentoNfse"
 
-    confirmacao: Optional[TcConfirmacaoCancelamento] = field(
+    Confirmacao: Optional[TcConfirmacaoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Confirmacao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1895,10 +1740,9 @@ class TcNfse:
     class Meta:
         name = "tcNfse"
 
-    inf_nfse: Optional[TcInfNfse] = field(
+    InfNfse: Optional[TcInfNfse] = field(
         default=None,
         metadata={
-            "name": "InfNfse",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1920,10 +1764,9 @@ class TcRps:
     class Meta:
         name = "tcRps"
 
-    inf_rps: Optional[TcInfRps] = field(
+    InfRps: Optional[TcInfRps] = field(
         default=None,
         metadata={
-            "name": "InfRps",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -1944,14 +1787,13 @@ class CancelarNfseResposta:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    cancelamento: Optional[TcCancelamentoNfse] = field(
+    Cancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
-            "name": "Cancelamento",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1965,27 +1807,24 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    nfse: Optional[TcNfse] = field(
+    Nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
-            "name": "Nfse",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    nfse_cancelamento: Optional[TcCancelamentoNfse] = field(
+    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
-            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    nfse_substituicao: Optional[TcSubstituicaoNfse] = field(
+    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
         default=None,
         metadata={
-            "name": "NfseSubstituicao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
@@ -1997,20 +1836,18 @@ class TcLoteRps:
     class Meta:
         name = "tcLoteRps"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    cnpj: Optional[str] = field(
+    Cnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cnpj",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -2018,10 +1855,9 @@ class TcLoteRps:
             "white_space": "collapse",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -2030,19 +1866,17 @@ class TcLoteRps:
             "white_space": "collapse",
         }
     )
-    quantidade_rps: Optional[int] = field(
+    QuantidadeRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "QuantidadeRps",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    lista_rps: Optional["TcLoteRps.ListaRps"] = field(
+    ListaRps: Optional["TcLoteRps.ListaRps"] = field(
         default=None,
         metadata={
-            "name": "ListaRps",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
@@ -2058,10 +1892,9 @@ class TcLoteRps:
 
     @dataclass
     class ListaRps:
-        rps: List[TcRps] = field(
+        Rps: List[TcRps] = field(
             default_factory=list,
             metadata={
-                "name": "Rps",
                 "type": "Element",
                 "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
                 "min_occurs": 1,
@@ -2080,14 +1913,13 @@ class ConsultarLoteRpsResposta:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    lista_nfse: Optional["ConsultarLoteRpsResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarLoteRpsResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2097,7 +1929,7 @@ class ConsultarLoteRpsResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: List[TcCompNfse] = field(
+        compNfse: List[TcCompNfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompNfse",
@@ -2112,14 +1944,13 @@ class ConsultarNfseResposta:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    lista_nfse: Optional["ConsultarNfseResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarNfseResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2129,7 +1960,7 @@ class ConsultarNfseResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: List[TcCompNfse] = field(
+        compNfse: List[TcCompNfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompNfse",
@@ -2143,14 +1974,14 @@ class ConsultarNfseRpsResposta:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    comp_nfse: Optional[TcCompNfse] = field(
+    compNfse: Optional[TcCompNfse] = field(
         default=None,
         metadata={
             "name": "CompNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2164,10 +1995,9 @@ class EnviarLoteRpsEnvio:
     class Meta:
         namespace = "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd"
 
-    lote_rps: Optional[TcLoteRps] = field(
+    LoteRps: Optional[TcLoteRps] = field(
         default=None,
         metadata={
-            "name": "LoteRps",
             "type": "Element",
             "required": True,
         }

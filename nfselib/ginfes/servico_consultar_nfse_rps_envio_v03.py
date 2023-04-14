@@ -4,7 +4,7 @@ from nfselib.ginfes.tipos_v03 import (
     TcIdentificacaoPrestador,
     TcIdentificacaoRps,
 )
-from nfselib.ginfes.xmldsig_core_schema20020212_v03 import Signature
+from nfselib.ginfes.xmldsig_core_schema_v02 import Signature
 
 __NAMESPACE__ = "http://www.ginfes.com.br/servico_consultar_nfse_rps_envio_v03.xsd"
 
@@ -14,18 +14,16 @@ class ConsultarNfseRpsEnvio:
     class Meta:
         namespace = "http://www.ginfes.com.br/servico_consultar_nfse_rps_envio_v03.xsd"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }

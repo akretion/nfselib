@@ -11,32 +11,29 @@ class EnviarLoteRpsResposta:
     class Meta:
         namespace = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_enviar_lote_rps_resposta.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    data_recebimento: Optional[XmlDateTime] = field(
+    DataRecebimento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataRecebimento",
             "type": "Element",
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "min_length": 1,
             "max_length": 100,
             "white_space": "collapse",
         }
     )
-    lista_mensagem_retorno: Optional["EnviarLoteRpsResposta.ListaMensagemRetorno"] = field(
+    listaMensagemRetorno: Optional["EnviarLoteRpsResposta.ListaMensagemRetorno"] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -46,10 +43,9 @@ class EnviarLoteRpsResposta:
 
     @dataclass
     class ListaMensagemRetorno:
-        mensagem_retorno: List[TcMensagemRetorno] = field(
+        MensagemRetorno: List[TcMensagemRetorno] = field(
             default_factory=list,
             metadata={
-                "name": "MensagemRetorno",
                 "type": "Element",
                 "min_occurs": 1,
             }

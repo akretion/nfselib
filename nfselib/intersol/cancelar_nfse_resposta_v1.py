@@ -13,14 +13,13 @@ class CancelarNfseResposta:
     class Meta:
         namespace = "http://ws.speedgov.com.br/cancelar_nfse_resposta_v1.xsd"
 
-    cancelamento: Optional[TcCancelamentoNfse] = field(
+    Cancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
-            "name": "Cancelamento",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",

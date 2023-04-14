@@ -13,29 +13,26 @@ class ConsultarUrlVisualizacaoNfseResposta:
     class Meta:
         namespace = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_consultar_url_visualizacao_nfse_resposta.xsd"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
         }
     )
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    url_visualizacao: Optional[str] = field(
+    UrlVisualizacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "UrlVisualizacao",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional["ConsultarUrlVisualizacaoNfseResposta.ListaMensagemRetorno"] = field(
+    listaMensagemRetorno: Optional["ConsultarUrlVisualizacaoNfseResposta.ListaMensagemRetorno"] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -45,10 +42,9 @@ class ConsultarUrlVisualizacaoNfseResposta:
 
     @dataclass
     class ListaMensagemRetorno:
-        mensagem_retorno: List[TcMensagemRetorno] = field(
+        MensagemRetorno: List[TcMensagemRetorno] = field(
             default_factory=list,
             metadata={
-                "name": "MensagemRetorno",
                 "type": "Element",
                 "min_occurs": 1,
             }

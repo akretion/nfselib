@@ -10,23 +10,21 @@ class ConsultarSituacaoLoteRpsResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    situacao: Optional[str] = field(
+    Situacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Situacao",
             "type": "Element",
             "pattern": r"1|2|3|4",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",

@@ -11,10 +11,9 @@ class EnviarLoteRpsEnvio:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse"
 
-    lote_rps: Optional[TcLoteRps] = field(
+    LoteRps: Optional[TcLoteRps] = field(
         default=None,
         metadata={
-            "name": "LoteRps",
             "type": "Element",
             "required": True,
         }

@@ -8,19 +8,17 @@ class IssecancelaNfe:
     class Meta:
         name = "ISSECancelaNFe"
 
-    header: Optional["IssecancelaNfe.Header"] = field(
+    Header: Optional["IssecancelaNfe.Header"] = field(
         default=None,
         metadata={
-            "name": "Header",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    filtro: Optional["IssecancelaNfe.Filtro"] = field(
+    Filtro: Optional["IssecancelaNfe.Filtro"] = field(
         default=None,
         metadata={
-            "name": "Filtro",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -30,26 +28,24 @@ class IssecancelaNfe:
     @dataclass
     class Header:
         """
-        :ivar versao: Identifica a versão do layout - Fixo 004
-        :ivar cnpjcpfprestador: CNPJ / CPF do emissor da Nota Fiscal
+        :ivar Versao: Identifica a versão do layout - Fixo 004
+        :ivar CNPJCPFPrestador: CNPJ / CPF do emissor da Nota Fiscal
             (sem máscara)
-        :ivar chave: Chave identificadora da empresa adquirida pelo
+        :ivar Chave: Chave identificadora da empresa adquirida pelo
             sistema de ISS ELetrônico
         """
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="004",
             metadata={
-                "name": "Versao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        cnpjcpfprestador: Optional[str] = field(
+        CNPJCPFPrestador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CNPJCPFPrestador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -57,10 +53,9 @@ class IssecancelaNfe:
                 "max_length": 14,
             }
         )
-        chave: Optional[str] = field(
+        Chave: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Chave",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -71,34 +66,31 @@ class IssecancelaNfe:
     @dataclass
     class Filtro:
         """
-        :ivar numero_nf: Número da Nota Fiscal
-        :ivar chave_validacao: Chave de Validação da Nota Fiscal
-        :ivar motivo_cancelamento: Descrição do Motivo de Cancelamento
-            da Nota Fiscal
+        :ivar NumeroNF: Número da Nota Fiscal
+        :ivar ChaveValidacao: Chave de Validação da Nota Fiscal
+        :ivar MotivoCancelamento: Descrição do Motivo de Cancelamento da
+            Nota Fiscal
         """
-        numero_nf: Optional[Decimal] = field(
+        NumeroNF: Optional[Decimal] = field(
             default=None,
             metadata={
-                "name": "NumeroNF",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        chave_validacao: Optional[str] = field(
+        ChaveValidacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "ChaveValidacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9A-Z]{4}-[0-9A-Z]{5}",
             }
         )
-        motivo_cancelamento: Optional[str] = field(
+        MotivoCancelamento: Optional[str] = field(
             default=None,
             metadata={
-                "name": "MotivoCancelamento",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

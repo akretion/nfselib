@@ -11,32 +11,29 @@ class EnviarLoteRpsResposta:
     class Meta:
         namespace = "http://nfe.sjp.pr.gov.br/servico_enviar_lote_rps_resposta_v03.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
             "white_space": "collapse",
         }
     )
-    data_recebimento: Optional[XmlDateTime] = field(
+    DataRecebimento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataRecebimento",
             "type": "Element",
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "max_length": 50,
             "white_space": "collapse",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",

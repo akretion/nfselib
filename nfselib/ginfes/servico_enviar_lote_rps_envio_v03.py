@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from nfselib.ginfes.tipos_v03 import TcLoteRps
-from nfselib.ginfes.xmldsig_core_schema20020212_v03 import Signature
+from nfselib.ginfes.xmldsig_core_schema_v02 import Signature
 
 __NAMESPACE__ = "http://www.ginfes.com.br/servico_enviar_lote_rps_envio_v03.xsd"
 
@@ -11,10 +11,9 @@ class EnviarLoteRpsEnvio:
     class Meta:
         namespace = "http://www.ginfes.com.br/servico_enviar_lote_rps_envio_v03.xsd"
 
-    lote_rps: Optional[TcLoteRps] = field(
+    LoteRps: Optional[TcLoteRps] = field(
         default=None,
         metadata={
-            "name": "LoteRps",
             "type": "Element",
             "required": True,
         }

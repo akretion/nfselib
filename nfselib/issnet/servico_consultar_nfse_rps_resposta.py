@@ -13,14 +13,14 @@ class ConsultarNfseRpsResposta:
     class Meta:
         namespace = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_consultar_nfse_rps_resposta.xsd"
 
-    comp_nfse: Optional[TcCompNfse] = field(
+    compNfse: Optional[TcCompNfse] = field(
         default=None,
         metadata={
             "name": "CompNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional["ConsultarNfseRpsResposta.ListaMensagemRetorno"] = field(
+    listaMensagemRetorno: Optional["ConsultarNfseRpsResposta.ListaMensagemRetorno"] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -30,10 +30,9 @@ class ConsultarNfseRpsResposta:
 
     @dataclass
     class ListaMensagemRetorno:
-        mensagem_retorno: List[TcMensagemRetorno] = field(
+        MensagemRetorno: List[TcMensagemRetorno] = field(
             default_factory=list,
             metadata={
-                "name": "MensagemRetorno",
                 "type": "Element",
                 "min_occurs": 1,
             }

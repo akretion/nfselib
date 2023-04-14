@@ -1,6 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.d2ti.retorno_cancelamento_nfse_v1_00 import Autenticacao
+from nfselib.d2ti.retorno_recepcao_nfse_v1_00 import (
+    Autenticacao,
+    ChaveSeguranca,
+    NumeroNota,
+)
 
 __NAMESPACE__ = "http://www.ctaconsult.com/nfse"
 
@@ -11,20 +15,18 @@ class CancelamentoNfseLote:
         name = "cancelamentoNfseLote"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    codigo_municipio: Optional[str] = field(
+    codigoMunicipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "codigoMunicipio",
             "type": "Element",
             "required": True,
             "white_space": "preserve",
             "pattern": r"[0-9]{1,5}",
         }
     )
-    dt_emissao: Optional[str] = field(
+    dtEmissao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dtEmissao",
             "type": "Element",
             "required": True,
             "white_space": "preserve",
@@ -38,18 +40,16 @@ class CancelamentoNfseLote:
             "required": True,
         }
     )
-    numero_nota: Optional[str] = field(
+    numeroNota: Optional[NumeroNota] = field(
         default=None,
         metadata={
-            "name": "numeroNota",
             "type": "Element",
             "required": True,
         }
     )
-    chave_seguranca: Optional[str] = field(
+    chaveSeguranca: Optional[ChaveSeguranca] = field(
         default=None,
         metadata={
-            "name": "chaveSeguranca",
             "type": "Element",
             "required": True,
         }

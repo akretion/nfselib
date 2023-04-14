@@ -17,8 +17,8 @@ class PedidoConsultaNfe:
     Este Schema XML é utilizado pelos prestadores de serviços
     consultarem NFS-e geradas por eles.
 
-    :ivar cabecalho: Cabeçalho do pedido.
-    :ivar detalhe: Detalhe do pedido. Cada item de detalhe deverá conter
+    :ivar Cabecalho: Cabeçalho do pedido.
+    :ivar Detalhe: Detalhe do pedido. Cada item de detalhe deverá conter
         a chave de uma NFS-e ou a chave de um RPS.
     :ivar signature: Assinatura digital do contribuinte que gerou as
         NFS-e/RPS.
@@ -27,19 +27,17 @@ class PedidoConsultaNfe:
         name = "PedidoConsultaNFe"
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["PedidoConsultaNfe.Cabecalho"] = field(
+    Cabecalho: Optional["PedidoConsultaNfe.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    detalhe: List["PedidoConsultaNfe.Detalhe"] = field(
+    Detalhe: List["PedidoConsultaNfe.Detalhe"] = field(
         default_factory=list,
         metadata={
-            "name": "Detalhe",
             "type": "Element",
             "namespace": "",
             "min_occurs": 1,
@@ -59,24 +57,22 @@ class PedidoConsultaNfe:
     @dataclass
     class Cabecalho:
         """
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
-        :ivar versao: Informe a Versão do Schema XML utilizado.
+        :ivar Versao: Informe a Versão do Schema XML utilizado.
         """
-        cpfcnpjremetente: Optional[TpCpfcnpj] = field(
+        CPFCNPJRemetente: Optional[TpCpfcnpj] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",
@@ -85,18 +81,16 @@ class PedidoConsultaNfe:
 
     @dataclass
     class Detalhe:
-        chave_rps: Optional[TpChaveRps] = field(
+        ChaveRPS: Optional[TpChaveRps] = field(
             default=None,
             metadata={
-                "name": "ChaveRPS",
                 "type": "Element",
                 "namespace": "",
             }
         )
-        chave_nfe: Optional[TpChaveNfe] = field(
+        ChaveNFe: Optional[TpChaveNfe] = field(
             default=None,
             metadata={
-                "name": "ChaveNFe",
                 "type": "Element",
                 "namespace": "",
             }

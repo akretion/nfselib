@@ -16,35 +16,32 @@ class RetornoConsultaNotas:
     Este Schema XML é utilizado pelos prestadores de serviços o retorno
     da consulta de Notas fiscais emitidas por RPS.
 
-    :ivar cabecalho: Cabeçalho da Consulta.
-    :ivar notas: Informe os RPS a serem substituidos por NF-e.
-    :ivar erros: Elemento que representa a ocorrência de eventos de erro
+    :ivar Cabecalho: Cabeçalho da Consulta.
+    :ivar Notas: Informe os RPS a serem substituidos por NF-e.
+    :ivar Erros: Elemento que representa a ocorrência de eventos de erro
         durante o processamento da mensagem XML.
     """
     class Meta:
         namespace = "http://localhost:8080/WsNFe2/lote"
 
-    cabecalho: Optional["RetornoConsultaNotas.Cabecalho"] = field(
+    Cabecalho: Optional["RetornoConsultaNotas.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    notas: Optional[TpListaNfseConsultaNota] = field(
+    Notas: Optional[TpListaNfseConsultaNota] = field(
         default=None,
         metadata={
-            "name": "Notas",
             "type": "Element",
             "namespace": "",
         }
     )
-    erros: Optional[TpListaErros] = field(
+    Erros: Optional[TpListaErros] = field(
         default=None,
         metadata={
-            "name": "Erros",
             "type": "Element",
             "namespace": "",
         }
@@ -53,70 +50,64 @@ class RetornoConsultaNotas:
     @dataclass
     class Cabecalho:
         """
-        :ivar cod_cidade: Informe o Codigo da Cidade.
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CodCidade: Informe o Codigo da Cidade.
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
-        :ivar inscricao_municipal_prestador: Informe a Inscrição
-            Municipal do Prestador
-        :ivar dt_inicio: Informe a data de início do    período
+        :ivar InscricaoMunicipalPrestador: Informe a Inscrição Municipal
+            do Prestador
+        :ivar dtInicio: Informe a data de início do     período
             transmitido     (AAAA-MM-DD).
-        :ivar dt_fim: Informe a data final do período transmitido (AAAA-
+        :ivar dtFim: Informe a data final do período transmitido (AAAA-
             MM-DD).
-        :ivar versao: Versão do Schema XML utilizado.
+        :ivar Versao: Versão do Schema XML utilizado.
         """
-        cod_cidade: Optional[int] = field(
+        CodCidade: Optional[int] = field(
             default=None,
             metadata={
-                "name": "CodCidade",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "min_inclusive": 1,
             }
         )
-        cpfcnpjremetente: Optional[str] = field(
+        CPFCNPJRemetente: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{11}|[0-9]{14}",
             }
         )
-        inscricao_municipal_prestador: Optional[str] = field(
+        InscricaoMunicipalPrestador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "InscricaoMunicipalPrestador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{6,11}",
             }
         )
-        dt_inicio: Optional[XmlDate] = field(
+        dtInicio: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "dtInicio",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        dt_fim: Optional[XmlDate] = field(
+        dtFim: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "dtFim",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

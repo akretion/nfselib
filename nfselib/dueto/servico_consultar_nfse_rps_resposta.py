@@ -13,14 +13,14 @@ class ConsultarNfseRpsResposta:
     class Meta:
         namespace = "http://tempuri.org/servico_consultar_nfse_rps_resposta.xsd"
 
-    comp_nfse: Optional[TcCompNfse] = field(
+    compNfse: Optional[TcCompNfse] = field(
         default=None,
         metadata={
             "name": "CompNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",

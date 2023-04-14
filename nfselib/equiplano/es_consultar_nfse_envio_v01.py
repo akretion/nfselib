@@ -24,18 +24,16 @@ class EsConsultarNfseEnvio:
             "required": True,
         }
     )
-    nr_nfse: Optional[int] = field(
+    nrNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrNfse",
             "type": "Element",
             "namespace": "",
         }
     )
-    periodo_emissao: Optional["EsConsultarNfseEnvio.PeriodoEmissao"] = field(
+    periodoEmissao: Optional["EsConsultarNfseEnvio.PeriodoEmissao"] = field(
         default=None,
         metadata={
-            "name": "periodoEmissao",
             "type": "Element",
             "namespace": "",
         }
@@ -52,19 +50,17 @@ class EsConsultarNfseEnvio:
 
     @dataclass
     class PeriodoEmissao:
-        dt_inicial: Optional[XmlDateTime] = field(
+        dtInicial: Optional[XmlDateTime] = field(
             default=None,
             metadata={
-                "name": "dtInicial",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        dt_final: Optional[XmlDateTime] = field(
+        dtFinal: Optional[XmlDateTime] = field(
             default=None,
             metadata={
-                "name": "dtFinal",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

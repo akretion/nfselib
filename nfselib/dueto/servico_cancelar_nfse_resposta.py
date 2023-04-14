@@ -13,14 +13,13 @@ class CancelarNfseResposta:
     class Meta:
         namespace = "http://tempuri.org/servico_cancelar_nfse_resposta.xsd"
 
-    cancelamento: Optional[TcCancelamentoNfse] = field(
+    Cancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
-            "name": "Cancelamento",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",

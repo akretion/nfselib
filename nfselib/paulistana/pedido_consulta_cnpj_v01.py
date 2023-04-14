@@ -14,8 +14,8 @@ class PedidoConsultaCnpj:
     serviços consultarem quais Inscrições Municipais (CCM) estão
     vinculadas a um determinado CNPJ e se estes CCM emitem NFS-e ou não.
 
-    :ivar cabecalho: Cabeçalho do pedido.
-    :ivar cnpjcontribuinte: Informe o CNPJ do Contribuinte que se deseja
+    :ivar Cabecalho: Cabeçalho do pedido.
+    :ivar CNPJContribuinte: Informe o CNPJ do Contribuinte que se deseja
         consultar.
     :ivar signature: Assinatura digital do CNPJ tomador/prestador que
         gerou a mensagem XML.
@@ -24,19 +24,17 @@ class PedidoConsultaCnpj:
         name = "PedidoConsultaCNPJ"
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["PedidoConsultaCnpj.Cabecalho"] = field(
+    Cabecalho: Optional["PedidoConsultaCnpj.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    cnpjcontribuinte: Optional[TpCpfcnpj] = field(
+    CNPJContribuinte: Optional[TpCpfcnpj] = field(
         default=None,
         metadata={
-            "name": "CNPJContribuinte",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -55,24 +53,22 @@ class PedidoConsultaCnpj:
     @dataclass
     class Cabecalho:
         """
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
-        :ivar versao: Informe a Versão do Schema XML utilizado.
+        :ivar Versao: Informe a Versão do Schema XML utilizado.
         """
-        cpfcnpjremetente: Optional[TpCpfcnpj] = field(
+        CPFCNPJRemetente: Optional[TpCpfcnpj] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",

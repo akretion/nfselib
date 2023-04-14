@@ -15,17 +15,16 @@ class PedidoConsultaNfePeriodo:
     Este Schema XML é utilizado pelos Prestadores/Tomadores de serviços
     consultarem NFS-e Emitidas ou Recebidas por eles.
 
-    :ivar cabecalho: Cabeçalho do pedido.
+    :ivar Cabecalho: Cabeçalho do pedido.
     :ivar signature: Assinatura digital do tomador das NFS-e.
     """
     class Meta:
         name = "PedidoConsultaNFePeriodo"
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["PedidoConsultaNfePeriodo.Cabecalho"] = field(
+    Cabecalho: Optional["PedidoConsultaNfePeriodo.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -44,83 +43,76 @@ class PedidoConsultaNfePeriodo:
     @dataclass
     class Cabecalho:
         """
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
-        :ivar cpfcnpj: Para consulta de NFS-e Recebidas Informe o CNPJ
+        :ivar CPFCNPJ: Para consulta de NFS-e Recebidas Informe o CNPJ
             do Tomador. Para consulta de NFS-e Emitidas Informe o CNPJ
             do Prestador.
-        :ivar inscricao: Para consulta de NFS-e Recebidas Informe a
+        :ivar Inscricao: Para consulta de NFS-e Recebidas Informe a
             Inscrição Municipal do Tomador. Para consulta de NFS-e
             Emitidas Informe a Inscrição Municipal do Prestador. Neste
             caso o preenchimento deste campo se torna obrigatório.
-        :ivar dt_inicio: Informe a data de início do período a ser
+        :ivar dtInicio: Informe a data de início do período a ser
             consultado (AAAA-MM-DD).
-        :ivar dt_fim: Informe a data final do período trasmitido (AAAA-
+        :ivar dtFim: Informe a data final do período trasmitido (AAAA-
             MM-DD).
-        :ivar numero_pagina: Informe o número da página que deseja
+        :ivar NumeroPagina: Informe o número da página que deseja
             consultar.
-        :ivar versao: Informe a Versão do Schema XML utilizado.
+        :ivar Versao: Informe a Versão do Schema XML utilizado.
         """
-        cpfcnpjremetente: Optional[TpCpfcnpj] = field(
+        CPFCNPJRemetente: Optional[TpCpfcnpj] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        cpfcnpj: Optional[TpCpfcnpj] = field(
+        CPFCNPJ: Optional[TpCpfcnpj] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJ",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        inscricao: Optional[str] = field(
+        Inscricao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Inscricao",
                 "type": "Element",
                 "namespace": "",
                 "pattern": r"[0-9]{8,8}",
             }
         )
-        dt_inicio: Optional[XmlDate] = field(
+        dtInicio: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "dtInicio",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        dt_fim: Optional[XmlDate] = field(
+        dtFim: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "dtFim",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        numero_pagina: str = field(
+        NumeroPagina: str = field(
             default="1",
             metadata={
-                "name": "NumeroPagina",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{1,12}",
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",

@@ -13,14 +13,14 @@ class CancelarNfseResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse"
 
-    ret_cancelamento: Optional[RetCancelamento] = field(
+    retCancelamento: Optional[RetCancelamento] = field(
         default=None,
         metadata={
             "name": "RetCancelamento",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",

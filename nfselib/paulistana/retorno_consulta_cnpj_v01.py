@@ -14,46 +14,42 @@ class RetornoConsultaCnpj:
     (CCM) estão vinculadas a um determinado CNPJ e se estes CCM emitem
     NFS-e ou não.
 
-    :ivar cabecalho: Cabeçalho do retorno.
-    :ivar alerta: Elemento que representa a ocorrência de eventos de
+    :ivar Cabecalho: Cabeçalho do retorno.
+    :ivar Alerta: Elemento que representa a ocorrência de eventos de
         alerta durante o processamento da mensagem XML.
-    :ivar erro: Elemento que representa a ocorrência de eventos de erro
+    :ivar Erro: Elemento que representa a ocorrência de eventos de erro
         durante o processamento da mensagem XML.
-    :ivar detalhe:
+    :ivar Detalhe:
     """
     class Meta:
         name = "RetornoConsultaCNPJ"
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["RetornoConsultaCnpj.Cabecalho"] = field(
+    Cabecalho: Optional["RetornoConsultaCnpj.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    alerta: List[TpEvento] = field(
+    Alerta: List[TpEvento] = field(
         default_factory=list,
         metadata={
-            "name": "Alerta",
             "type": "Element",
             "namespace": "",
         }
     )
-    erro: List[TpEvento] = field(
+    Erro: List[TpEvento] = field(
         default_factory=list,
         metadata={
-            "name": "Erro",
             "type": "Element",
             "namespace": "",
         }
     )
-    detalhe: List["RetornoConsultaCnpj.Detalhe"] = field(
+    Detalhe: List["RetornoConsultaCnpj.Detalhe"] = field(
         default_factory=list,
         metadata={
-            "name": "Detalhe",
             "type": "Element",
             "namespace": "",
         }
@@ -62,23 +58,21 @@ class RetornoConsultaCnpj:
     @dataclass
     class Cabecalho:
         """
-        :ivar sucesso: Campo indicativo do sucesso do pedido do serviço.
-        :ivar versao: Versão do Schema XML utilizado.
+        :ivar Sucesso: Campo indicativo do sucesso do pedido do serviço.
+        :ivar Versao: Versão do Schema XML utilizado.
         """
-        sucesso: Optional[bool] = field(
+        Sucesso: Optional[bool] = field(
             default=None,
             metadata={
-                "name": "Sucesso",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",
@@ -88,25 +82,23 @@ class RetornoConsultaCnpj:
     @dataclass
     class Detalhe:
         """
-        :ivar inscricao_municipal: Inscrição Municipal vinculada ao CNPJ
+        :ivar InscricaoMunicipal: Inscrição Municipal vinculada ao CNPJ
             consultado.
-        :ivar emite_nfe: Campo que indica se o CCM vinculado ao CNPJ
+        :ivar EmiteNFe: Campo que indica se o CCM vinculado ao CNPJ
             consultado emite NFS-e ou não.
         """
-        inscricao_municipal: Optional[str] = field(
+        InscricaoMunicipal: Optional[str] = field(
             default=None,
             metadata={
-                "name": "InscricaoMunicipal",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{8,8}",
             }
         )
-        emite_nfe: Optional[bool] = field(
+        EmiteNFe: Optional[bool] = field(
             default=None,
             metadata={
-                "name": "EmiteNFe",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

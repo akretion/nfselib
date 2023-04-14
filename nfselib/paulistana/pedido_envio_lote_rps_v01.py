@@ -17,8 +17,8 @@ class PedidoEnvioLoteRps:
     Este Schema XML é utilizado pelos prestadores de serviços para
     substituição em lote de RPS por NFS-e.
 
-    :ivar cabecalho: Cabeçalho do pedido.
-    :ivar rps: Informe os RPS a serem substituidos por NFS-e.
+    :ivar Cabecalho: Cabeçalho do pedido.
+    :ivar RPS: Informe os RPS a serem substituidos por NFS-e.
     :ivar signature: Assinatura digital do contribuinte que gerou os RPS
         contidos na mensagem XML.
     """
@@ -26,19 +26,17 @@ class PedidoEnvioLoteRps:
         name = "PedidoEnvioLoteRPS"
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["PedidoEnvioLoteRps.Cabecalho"] = field(
+    Cabecalho: Optional["PedidoEnvioLoteRps.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    rps: List[TpRps] = field(
+    RPS: List[TpRps] = field(
         default_factory=list,
         metadata={
-            "name": "RPS",
             "type": "Element",
             "namespace": "",
             "min_occurs": 1,
@@ -58,7 +56,7 @@ class PedidoEnvioLoteRps:
     @dataclass
     class Cabecalho:
         """
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
         :ivar transacao: Informe se os RPS a serem substituídos por
             NFS-e farão parte de uma mesma transação. True - Os RPS só
@@ -67,21 +65,20 @@ class PedidoEnvioLoteRps:
             válidos serão substituídos por NFS-e, mesmo que ocorram
             eventos de erro durante processamento de outros RPS deste
             lote.
-        :ivar dt_inicio: Informe a data de início do período transmitido
+        :ivar dtInicio: Informe a data de início do período transmitido
             (AAAA-MM-DD).
-        :ivar dt_fim: Informe a data final do período transmitido (AAAA-
+        :ivar dtFim: Informe a data final do período transmitido (AAAA-
             MM-DD).
-        :ivar qtd_rps: Informe o total de RPS contidos na mensagem XML.
-        :ivar valor_total_servicos: Informe o valor total dos serviços
+        :ivar QtdRPS: Informe o total de RPS contidos na mensagem XML.
+        :ivar ValorTotalServicos: Informe o valor total dos serviços
             prestados dos RPS contidos na mensagem XML.
-        :ivar valor_total_deducoes: Informe o valor total das deduções
-            dos RPS contidos na mensagem XML.
-        :ivar versao: Informe a Versão do Schema XML utilizado.
+        :ivar ValorTotalDeducoes: Informe o valor total das deduções dos
+            RPS contidos na mensagem XML.
+        :ivar Versao: Informe a Versão do Schema XML utilizado.
         """
-        cpfcnpjremetente: Optional[TpCpfcnpj] = field(
+        CPFCNPJRemetente: Optional[TpCpfcnpj] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -94,38 +91,34 @@ class PedidoEnvioLoteRps:
                 "namespace": "",
             }
         )
-        dt_inicio: Optional[XmlDate] = field(
+        dtInicio: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "dtInicio",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        dt_fim: Optional[XmlDate] = field(
+        dtFim: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "dtFim",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        qtd_rps: Optional[str] = field(
+        QtdRPS: Optional[str] = field(
             default=None,
             metadata={
-                "name": "QtdRPS",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{1,15}",
             }
         )
-        valor_total_servicos: Optional[str] = field(
+        ValorTotalServicos: Optional[str] = field(
             default=None,
             metadata={
-                "name": "ValorTotalServicos",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -135,10 +128,9 @@ class PedidoEnvioLoteRps:
                 "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
             }
         )
-        valor_total_deducoes: Optional[str] = field(
+        ValorTotalDeducoes: Optional[str] = field(
             default=None,
             metadata={
-                "name": "ValorTotalDeducoes",
                 "type": "Element",
                 "namespace": "",
                 "min_inclusive": "0",
@@ -147,11 +139,10 @@ class PedidoEnvioLoteRps:
                 "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",

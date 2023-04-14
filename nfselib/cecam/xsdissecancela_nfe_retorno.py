@@ -8,18 +8,16 @@ class IssecancelaNfeRetorno:
     class Meta:
         name = "ISSECancelaNFeRetorno"
 
-    nota_fiscal: Optional["IssecancelaNfeRetorno.NotaFiscal"] = field(
+    NotaFiscal: Optional["IssecancelaNfeRetorno.NotaFiscal"] = field(
         default=None,
         metadata={
-            "name": "NotaFiscal",
             "type": "Element",
             "namespace": "",
         }
     )
-    erro: List["IssecancelaNfeRetorno.Erro"] = field(
+    Erro: List["IssecancelaNfeRetorno.Erro"] = field(
         default_factory=list,
         metadata={
-            "name": "Erro",
             "type": "Element",
             "namespace": "",
         }
@@ -28,33 +26,30 @@ class IssecancelaNfeRetorno:
     @dataclass
     class NotaFiscal:
         """
-        :ivar numero_nf: Número da Nota Fiscal
-        :ivar chave_validacao: Chave de Validação da Nota Fiscal
-        :ivar codigo_resultado: Código identificador do Resultado (0 =
+        :ivar NumeroNF: Número da Nota Fiscal
+        :ivar ChaveValidacao: Chave de Validação da Nota Fiscal
+        :ivar CodigoResultado: Código identificador do Resultado (0 =
             Não foi possível Cancelar a NF-e / 1 = Sucesso)
         """
-        numero_nf: Optional[Decimal] = field(
+        NumeroNF: Optional[Decimal] = field(
             default=None,
             metadata={
-                "name": "NumeroNF",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        chave_validacao: Optional[str] = field(
+        ChaveValidacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "ChaveValidacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        codigo_resultado: Optional[str] = field(
+        CodigoResultado: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CodigoResultado",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -64,22 +59,20 @@ class IssecancelaNfeRetorno:
     @dataclass
     class Erro:
         """
-        :ivar id: Identificador do Registro
-        :ivar erro: Mensagem de Erro do Arquivo
+        :ivar ID: Identificador do Registro
+        :ivar Erro: Mensagem de Erro do Arquivo
         """
-        id: Optional[int] = field(
+        ID: Optional[int] = field(
             default=None,
             metadata={
-                "name": "ID",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        erro: Optional[str] = field(
+        Erro: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Erro",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

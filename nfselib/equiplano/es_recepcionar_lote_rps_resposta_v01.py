@@ -21,10 +21,9 @@ class EnviarLoteRpsResposta:
             "namespace": "",
         }
     )
-    mensagem_retorno: Optional[TcMensagemRetorno] = field(
+    mensagemRetorno: Optional[TcMensagemRetorno] = field(
         default=None,
         metadata={
-            "name": "mensagemRetorno",
             "type": "Element",
             "namespace": "",
         }

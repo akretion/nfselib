@@ -1,11 +1,171 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.d2ti.retorno_cancelamento_nfse_v1_00 import (
-    Autenticacao,
-    Erros,
-)
 
 __NAMESPACE__ = "http://www.ctaconsult.com/nfse"
+
+
+@dataclass
+class Autenticacao:
+    class Meta:
+        name = "autenticacao"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+    token: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+            "max_length": 9,
+            "white_space": "preserve",
+            "pattern": r"[0-9]{1,9}",
+        }
+    )
+
+
+@dataclass
+class ChaveSeguranca:
+    class Meta:
+        name = "chaveSeguranca"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+
+@dataclass
+class Codigo:
+    class Meta:
+        name = "codigo"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+    value: Optional[int] = field(
+        default=None,
+        metadata={
+            "required": True,
+        }
+    )
+
+
+@dataclass
+class CodigoMunicipio:
+    class Meta:
+        name = "codigoMunicipio"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+            "white_space": "preserve",
+            "pattern": r"[0-9]{1,5}",
+        }
+    )
+
+
+@dataclass
+class CodigoStatus:
+    class Meta:
+        name = "codigoStatus"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+            "max_length": 4,
+            "white_space": "preserve",
+            "pattern": r"[0-9]{1,4}",
+        }
+    )
+
+
+@dataclass
+class Descricao:
+    class Meta:
+        name = "descricao"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+        }
+    )
+
+
+@dataclass
+class Erro:
+    class Meta:
+        name = "erro"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+    codigo: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        }
+    )
+    descricao: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        }
+    )
+
+
+@dataclass
+class NumeroNota:
+    class Meta:
+        name = "numeroNota"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+
+@dataclass
+class Protocolo:
+    class Meta:
+        name = "protocolo"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+            "max_length": 9,
+            "white_space": "preserve",
+            "pattern": r"[0-9]{1,9}",
+        }
+    )
+
+
+@dataclass
+class Token:
+    class Meta:
+        name = "token"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+    value: str = field(
+        default="",
+        metadata={
+            "required": True,
+            "max_length": 9,
+            "white_space": "preserve",
+            "pattern": r"[0-9]{1,9}",
+        }
+    )
+
+
+@dataclass
+class Erros:
+    class Meta:
+        name = "erros"
+        namespace = "http://www.ctaconsult.com/nfse"
+
+    erro: Optional[Erro] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        }
+    )
 
 
 @dataclass
@@ -14,10 +174,9 @@ class RetornoNfseLote:
         name = "retornoNfseLote"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    codigo_municipio: Optional[str] = field(
+    codigoMunicipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "codigoMunicipio",
             "type": "Element",
             "required": True,
             "white_space": "preserve",
@@ -41,10 +200,9 @@ class RetornoNfseLote:
             "required": True,
         }
     )
-    codigo_status: Optional[str] = field(
+    codigoStatus: Optional[str] = field(
         default=None,
         metadata={
-            "name": "codigoStatus",
             "type": "Element",
             "required": True,
             "max_length": 4,
@@ -58,17 +216,15 @@ class RetornoNfseLote:
             "type": "Element",
         }
     )
-    numero_nota: Optional[str] = field(
+    numeroNota: Optional[NumeroNota] = field(
         default=None,
         metadata={
-            "name": "numeroNota",
             "type": "Element",
         }
     )
-    chave_seguranca: Optional[str] = field(
+    chaveSeguranca: Optional[ChaveSeguranca] = field(
         default=None,
         metadata={
-            "name": "chaveSeguranca",
             "type": "Element",
         }
     )

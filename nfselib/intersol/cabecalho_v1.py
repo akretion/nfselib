@@ -10,10 +10,9 @@ class Cabecalho:
         name = "cabecalho"
         namespace = "http://ws.speedgov.com.br/cabecalho_v1.xsd"
 
-    versao_dados: Optional[str] = field(
+    versaoDados: Optional[str] = field(
         default=None,
         metadata={
-            "name": "versaoDados",
             "type": "Element",
             "namespace": "",
             "required": True,

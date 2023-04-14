@@ -10,10 +10,9 @@ class CancelarNfseEnvio:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse"
 
-    pedido: Optional[TcPedidoCancelamento] = field(
+    Pedido: Optional[TcPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "required": True,
         }

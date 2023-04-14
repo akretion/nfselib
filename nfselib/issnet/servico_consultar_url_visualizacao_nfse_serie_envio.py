@@ -10,27 +10,24 @@ class ConsultarUrlVisualizacaoNfseSerieEnvio:
     class Meta:
         namespace = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_consultar_url_visualizacao_nfse_serie_envio.xsd"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "required": True,
             "total_digits": 15,
         }
     )
-    codigo_tributacao_municipio: Optional[str] = field(
+    CodigoTributacaoMunicipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoTributacaoMunicipio",
             "type": "Element",
             "required": True,
             "min_length": 1,
@@ -38,10 +35,9 @@ class ConsultarUrlVisualizacaoNfseSerieEnvio:
             "white_space": "collapse",
         }
     )
-    codigo_serie: Optional[int] = field(
+    CodigoSerie: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoSerie",
             "type": "Element",
             "required": True,
         }

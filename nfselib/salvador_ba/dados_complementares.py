@@ -18,10 +18,9 @@ class TcAtividadeEducacao:
     class Meta:
         name = "tcAtividadeEducacao"
 
-    fl_servico_conveniado: Optional[str] = field(
+    FlServicoConveniado: Optional[str] = field(
         default=None,
         metadata={
-            "name": "FlServicoConveniado",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
@@ -35,76 +34,67 @@ class TcAtividadePortuaria:
     class Meta:
         name = "tcAtividadePortuaria"
 
-    nome_razao_social_proprietario_representante: Optional[str] = field(
+    NomeRazaoSocialProprietarioRepresentante: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomeRazaoSocialProprietarioRepresentante",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    endereco: Optional[TcEndereco] = field(
+    Endereco: Optional[TcEndereco] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    st_proprietario: Optional[int] = field(
+    stProprietario: Optional[int] = field(
         default=None,
         metadata={
-            "name": "stProprietario",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
         }
     )
-    nome_embarcacao: Optional[str] = field(
+    NomeEmbarcacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomeEmbarcacao",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    bandeira_embarcacao: Optional[str] = field(
+    BandeiraEmbarcacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "BandeiraEmbarcacao",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    nome_porto: Optional[str] = field(
+    NomePorto: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomePorto",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    data_entrada: Optional[XmlDateTime] = field(
+    DataEntrada: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEntrada",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
         }
     )
-    data_saida: Optional[XmlDateTime] = field(
+    DataSaida: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataSaida",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
@@ -117,28 +107,25 @@ class TcConstrucaoCivil:
     class Meta:
         name = "tcConstrucaoCivil"
 
-    nome_obra: Optional[str] = field(
+    NomeObra: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomeObra",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
         }
     )
-    endereco: Optional[TcEndereco] = field(
+    Endereco: Optional[TcEndereco] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
         }
     )
-    deducao_material: Optional[Decimal] = field(
+    DeducaoMaterial: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "DeducaoMaterial",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
@@ -147,10 +134,9 @@ class TcConstrucaoCivil:
             "fraction_digits": 2,
         }
     )
-    deducao_subempreitada: Optional[Decimal] = field(
+    DeducaoSubempreitada: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "DeducaoSubempreitada",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
@@ -166,45 +152,40 @@ class TcInfNfseComplementar:
     class Meta:
         name = "tcInfNfseComplementar"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
         }
     )
-    atividade_portuaria: Optional[TcAtividadePortuaria] = field(
+    AtividadePortuaria: Optional[TcAtividadePortuaria] = field(
         default=None,
         metadata={
-            "name": "AtividadePortuaria",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    construcao_civil: Optional[TcConstrucaoCivil] = field(
+    ConstrucaoCivil: Optional[TcConstrucaoCivil] = field(
         default=None,
         metadata={
-            "name": "ConstrucaoCivil",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    atividade_educacao: Optional[TcAtividadeEducacao] = field(
+    AtividadeEducacao: Optional[TcAtividadeEducacao] = field(
         default=None,
         metadata={
-            "name": "AtividadeEducacao",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
@@ -223,35 +204,31 @@ class TcInfRpscomplementar:
     class Meta:
         name = "tcInfRPSComplementar"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "required": True,
         }
     )
-    atividade_portuaria: Optional[TcAtividadePortuaria] = field(
+    AtividadePortuaria: Optional[TcAtividadePortuaria] = field(
         default=None,
         metadata={
-            "name": "AtividadePortuaria",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    construcao_civil: Optional[TcConstrucaoCivil] = field(
+    ConstrucaoCivil: Optional[TcConstrucaoCivil] = field(
         default=None,
         metadata={
-            "name": "ConstrucaoCivil",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    atividade_educacao: Optional[TcAtividadeEducacao] = field(
+    AtividadeEducacao: Optional[TcAtividadeEducacao] = field(
         default=None,
         metadata={
-            "name": "AtividadeEducacao",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
@@ -270,10 +247,9 @@ class TcNfseComplementar:
     class Meta:
         name = "tcNfseComplementar"
 
-    inf_nfse_complementar: Optional[TcInfNfseComplementar] = field(
+    InfNfseComplementar: Optional[TcInfNfseComplementar] = field(
         default=None,
         metadata={
-            "name": "InfNfseComplementar",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
@@ -293,10 +269,9 @@ class TcRpscomplementar:
     class Meta:
         name = "tcRPSComplementar"
 
-    inf_rpscomplementar: Optional[TcInfRpscomplementar] = field(
+    InfRPSComplementar: Optional[TcInfRpscomplementar] = field(
         default=None,
         metadata={
-            "name": "InfRPSComplementar",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
@@ -316,14 +291,13 @@ class ConsultarLoteRpsComplementarResposta:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd"
 
-    lista_nfse_complementar: Optional["ConsultarLoteRpsComplementarResposta.ListaNfseComplementar"] = field(
+    ListaNfseComplementar: Optional["ConsultarLoteRpsComplementarResposta.ListaNfseComplementar"] = field(
         default=None,
         metadata={
-            "name": "ListaNfseComplementar",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -334,10 +308,9 @@ class ConsultarLoteRpsComplementarResposta:
 
     @dataclass
     class ListaNfseComplementar:
-        nfse_complementar: List[TcNfseComplementar] = field(
+        NfseComplementar: List[TcNfseComplementar] = field(
             default_factory=list,
             metadata={
-                "name": "NfseComplementar",
                 "type": "Element",
             }
         )
@@ -348,14 +321,13 @@ class ConsultarNfseComplementarResposta:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd"
 
-    lista_nfse_complementar: Optional["ConsultarNfseComplementarResposta.ListaNfseComplementar"] = field(
+    ListaNfseComplementar: Optional["ConsultarNfseComplementarResposta.ListaNfseComplementar"] = field(
         default=None,
         metadata={
-            "name": "ListaNfseComplementar",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -366,10 +338,9 @@ class ConsultarNfseComplementarResposta:
 
     @dataclass
     class ListaNfseComplementar:
-        nfse_complementar: List[TcNfseComplementar] = field(
+        NfseComplementar: List[TcNfseComplementar] = field(
             default_factory=list,
             metadata={
-                "name": "NfseComplementar",
                 "type": "Element",
             }
         )
@@ -381,14 +352,13 @@ class ConsultarNfseRpscomplementarResposta:
         name = "ConsultarNfseRPSComplementarResposta"
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd"
 
-    nfse_complementar: Optional[TcNfseComplementar] = field(
+    NfseComplementar: Optional[TcNfseComplementar] = field(
         default=None,
         metadata={
-            "name": "NfseComplementar",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -403,10 +373,9 @@ class ListaRpscomplementar:
     class Meta:
         name = "ListaRPSComplementar"
 
-    rpscomplementar: List[TcRpscomplementar] = field(
+    RPSComplementar: List[TcRpscomplementar] = field(
         default_factory=list,
         metadata={
-            "name": "RPSComplementar",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
             "nillable": True,
@@ -419,18 +388,16 @@ class TcDadosComplementares:
     class Meta:
         name = "tcDadosComplementares"
 
-    numero_lote: Optional[str] = field(
+    NumeroLote: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
     )
-    lista_rpscomplementar: Optional[ListaRpscomplementar] = field(
+    ListaRPSComplementar: Optional[ListaRpscomplementar] = field(
         default=None,
         metadata={
-            "name": "ListaRPSComplementar",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd",
         }
@@ -449,10 +416,9 @@ class EnvioDadosComplementares:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/DadosComplementares.xsd"
 
-    dados_complementares: Optional[TcDadosComplementares] = field(
+    DadosComplementares: Optional[TcDadosComplementares] = field(
         default=None,
         metadata={
-            "name": "DadosComplementares",
             "type": "Element",
         }
     )

@@ -1,3 +1,9 @@
+from nfselib.smarapd.nfse_v2_03 import (
+    TcIdentificacaoConsulente,
+    TcIdentificacaoIntermediario,
+    TcIdentificacaoPrestador,
+    TcIdentificacaoTomador,
+)
 from nfselib.smarapd.nfse_v2_04 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
@@ -84,7 +90,7 @@ from nfselib.smarapd.xmldsig_core_schema20020212 import (
     Manifest,
     ManifestType,
     MgmtData,
-    Object,
+    _Object,
     ObjectType,
     Pgpdata,
     PgpdataType,
@@ -118,6 +124,10 @@ from nfselib.smarapd.xmldsig_core_schema20020212 import (
 )
 
 __all__ = [
+    "TcIdentificacaoConsulente",
+    "TcIdentificacaoIntermediario",
+    "TcIdentificacaoPrestador",
+    "TcIdentificacaoTomador",
     "CancelarNfseEnvio",
     "CancelarNfseResposta",
     "CompNfse",
@@ -201,7 +211,7 @@ __all__ = [
     "Manifest",
     "ManifestType",
     "MgmtData",
-    "Object",
+    "_Object",
     "ObjectType",
     "Pgpdata",
     "PgpdataType",

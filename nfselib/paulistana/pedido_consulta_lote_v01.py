@@ -13,17 +13,16 @@ class PedidoConsultaLote:
     Este Schema XML é utilizado pelos prestadores de serviços
     consultarem as NFS-e geradas a partir de um lote de RPS.
 
-    :ivar cabecalho: Cabeçalho do pedido.
+    :ivar Cabecalho: Cabeçalho do pedido.
     :ivar signature: Assinatura digital do contribuinte que gerou o lote
         de RPS.
     """
     class Meta:
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["PedidoConsultaLote.Cabecalho"] = field(
+    Cabecalho: Optional["PedidoConsultaLote.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -42,36 +41,32 @@ class PedidoConsultaLote:
     @dataclass
     class Cabecalho:
         """
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
-        :ivar numero_lote: Informe o número do Lote que deseja
-            consultar.
-        :ivar versao: Informe a Versão do Schema XML utilizado.
+        :ivar NumeroLote: Informe o número do Lote que deseja consultar.
+        :ivar Versao: Informe a Versão do Schema XML utilizado.
         """
-        cpfcnpjremetente: Optional[TpCpfcnpj] = field(
+        CPFCNPJRemetente: Optional[TpCpfcnpj] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        numero_lote: Optional[str] = field(
+        NumeroLote: Optional[str] = field(
             default=None,
             metadata={
-                "name": "NumeroLote",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{1,12}",
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",

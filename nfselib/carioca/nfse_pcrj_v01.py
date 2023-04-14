@@ -14,10 +14,9 @@ class GerarNfseEnvio:
     class Meta:
         namespace = "http://notacarioca.rio.gov.br/WSNacional/XSD/1/nfse_pcrj_v01.xsd"
 
-    rps: Optional[TcRps] = field(
+    Rps: Optional[TcRps] = field(
         default=None,
         metadata={
-            "name": "Rps",
             "type": "Element",
             "required": True,
         }
@@ -29,14 +28,14 @@ class GerarNfseResposta:
     class Meta:
         namespace = "http://notacarioca.rio.gov.br/WSNacional/XSD/1/nfse_pcrj_v01.xsd"
 
-    comp_nfse: Optional[CompNfse] = field(
+    compNfse: Optional[CompNfse] = field(
         default=None,
         metadata={
             "name": "CompNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: List[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: List[ListaMensagemRetorno] = field(
         default_factory=list,
         metadata={
             "name": "ListaMensagemRetorno",

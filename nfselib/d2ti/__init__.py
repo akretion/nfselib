@@ -66,7 +66,8 @@ from nfselib.d2ti.recepcao_nfse_v1_00 import (
     ValorUnitario,
     ValotTotalNota,
 )
-from nfselib.d2ti.retorno_cancelamento_nfse_v1_00 import (
+from nfselib.d2ti.retorno_cancelamento_nfse_v1_00 import RetornoCancelamentoNfseLote
+from nfselib.d2ti.retorno_recepcao_nfse_v1_00 import (
     Autenticacao,
     ChaveSeguranca,
     Codigo,
@@ -77,22 +78,17 @@ from nfselib.d2ti.retorno_cancelamento_nfse_v1_00 import (
     Erros,
     NumeroNota,
     Protocolo,
-    RetornoCancelamentoNfseLote,
+    RetornoNfseLote,
     Token,
 )
-from nfselib.d2ti.retorno_recepcao_nfse_v1_00 import RetornoNfseLote
 from nfselib.d2ti.tipos_basicos_cta_v1_00 import (
-    Tamb,
     Tboolean,
-    TcodigoImpostoFederal,
-    Tnota,
     TtipoDeducao,
     TtipoItemDeducao,
     TtipoPessoa,
     TtipoRecolhimento,
     TtipoTributacao,
     TtipoValorDeducao,
-    TtipoValorImpostos,
     Tuf,
 )
 
@@ -163,6 +159,7 @@ __all__ = [
     "ValorTotalServico",
     "ValorUnitario",
     "ValotTotalNota",
+    "RetornoCancelamentoNfseLote",
     "Autenticacao",
     "ChaveSeguranca",
     "Codigo",
@@ -173,19 +170,14 @@ __all__ = [
     "Erros",
     "NumeroNota",
     "Protocolo",
-    "RetornoCancelamentoNfseLote",
-    "Token",
     "RetornoNfseLote",
-    "Tamb",
+    "Token",
     "Tboolean",
-    "TcodigoImpostoFederal",
-    "Tnota",
     "TtipoDeducao",
     "TtipoItemDeducao",
     "TtipoPessoa",
     "TtipoRecolhimento",
     "TtipoTributacao",
     "TtipoValorDeducao",
-    "TtipoValorImpostos",
     "Tuf",
 ]

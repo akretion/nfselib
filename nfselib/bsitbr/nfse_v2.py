@@ -13,10 +13,9 @@ class Cabecalho:
         name = "cabecalho"
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    versao_dados: Optional[str] = field(
+    versaoDados: Optional[str] = field(
         default=None,
         metadata={
-            "name": "versaoDados",
             "type": "Element",
             "required": True,
             "pattern": r"[1-9]{1}[0-9]{0,1}\.[0-9]{2}",
@@ -57,10 +56,9 @@ class Credenciais:
             "max_length": 16,
         }
     )
-    chave_privada: Optional[str] = field(
+    chavePrivada: Optional[str] = field(
         default=None,
         metadata={
-            "name": "chavePrivada",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -74,10 +72,9 @@ class TcContato:
     class Meta:
         name = "tcContato"
 
-    telefone: Optional[str] = field(
+    Telefone: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Telefone",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -85,10 +82,9 @@ class TcContato:
             "white_space": "collapse",
         }
     )
-    ddd: Optional[str] = field(
+    Ddd: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Ddd",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 3,
@@ -96,10 +92,9 @@ class TcContato:
             "white_space": "collapse",
         }
     )
-    tipo_telefone: Optional[str] = field(
+    TipoTelefone: Optional[str] = field(
         default=None,
         metadata={
-            "name": "TipoTelefone",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 2,
@@ -108,10 +103,9 @@ class TcContato:
             "pattern": r"CE|CO|RE",
         }
     )
-    email: Optional[str] = field(
+    Email: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Email",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -126,19 +120,17 @@ class TcCpfCnpj:
     class Meta:
         name = "tcCpfCnpj"
 
-    cpf: Optional[str] = field(
+    Cpf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cpf",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "length": 11,
         }
     )
-    cnpj: Optional[str] = field(
+    Cnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cnpj",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "length": 14,
@@ -152,10 +144,9 @@ class TcEndereco:
     class Meta:
         name = "tcEndereco"
 
-    tipo_logradouro: Optional[str] = field(
+    TipoLogradouro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "TipoLogradouro",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -164,10 +155,9 @@ class TcEndereco:
             "pattern": r"ALAMEDA|ÁREA|ÁREA ESPECIAL|AVENIDA|BLOCO|CHÁCARA|COLÔNIA|CONDOMÍNIO|CONDOMÍNIO RESIDENCIAL|CONJUNTO|ENTRE QUADRA|ESTAÇÃO|ESTRADA|MÓDULO|NÚCLEO|NÚCLEO RURAL|PRAÇA|QUADRA|RESIDENCIAL|RODOVIA|RUA|SETOR|TRECHO|VIA|VILA",
         }
     )
-    logradouro: Optional[str] = field(
+    Logradouro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Logradouro",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -175,10 +165,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    numero: Optional[str] = field(
+    Numero: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -186,10 +175,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    complemento: Optional[str] = field(
+    Complemento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Complemento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -197,10 +185,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    bairro: Optional[str] = field(
+    Bairro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Bairro",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -208,28 +195,25 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    codigo_municipio: Optional[int] = field(
+    CodigoMunicipio: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoMunicipio",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "total_digits": 7,
         }
     )
-    uf: Optional[str] = field(
+    Uf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Uf",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "length": 2,
         }
     )
-    cep: Optional[str] = field(
+    Cep: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cep",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "length": 8,
@@ -242,20 +226,18 @@ class TcIdentificacaoRps:
     class Meta:
         name = "tcIdentificacaoRps"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    tipo: Optional[str] = field(
+    Tipo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Tipo",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -269,10 +251,9 @@ class TcInfSubstituicaoNfse:
     class Meta:
         name = "tcInfSubstituicaoNfse"
 
-    nfse_substituidora: Optional[int] = field(
+    NfseSubstituidora: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NfseSubstituidora",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -286,10 +267,9 @@ class TcMensagemRetorno:
     class Meta:
         name = "tcMensagemRetorno"
 
-    codigo: Optional[str] = field(
+    Codigo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Codigo",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -297,10 +277,9 @@ class TcMensagemRetorno:
             "white_space": "collapse",
         }
     )
-    mensagem: Optional[str] = field(
+    Mensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Mensagem",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -309,10 +288,9 @@ class TcMensagemRetorno:
             "white_space": "collapse",
         }
     )
-    correcao: Optional[str] = field(
+    Correcao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Correcao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -327,10 +305,9 @@ class TcValoresDeclaracaoServico:
     class Meta:
         name = "tcValoresDeclaracaoServico"
 
-    valor_servicos: Optional[Decimal] = field(
+    ValorServicos: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorServicos",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -339,10 +316,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_deducoes: Optional[Decimal] = field(
+    ValorDeducoes: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorDeducoes",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -350,10 +326,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_pis: Optional[Decimal] = field(
+    ValorPis: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorPis",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -361,10 +336,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_cofins: Optional[Decimal] = field(
+    ValorCofins: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorCofins",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -372,10 +346,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_inss: Optional[Decimal] = field(
+    ValorInss: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorInss",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -383,10 +356,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_ir: Optional[Decimal] = field(
+    ValorIr: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorIr",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -394,10 +366,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_csll: Optional[Decimal] = field(
+    ValorCsll: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorCsll",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -405,10 +376,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    outras_retencoes: Optional[Decimal] = field(
+    OutrasRetencoes: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "OutrasRetencoes",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -416,10 +386,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    aliquota: Optional[Decimal] = field(
+    Aliquota: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "Aliquota",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -427,10 +396,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 4,
         }
     )
-    desconto_incondicionado: Optional[Decimal] = field(
+    DescontoIncondicionado: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "DescontoIncondicionado",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -438,10 +406,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    desconto_condicionado: Optional[Decimal] = field(
+    DescontoCondicionado: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "DescontoCondicionado",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -456,10 +423,9 @@ class TcValoresNfse:
     class Meta:
         name = "tcValoresNfse"
 
-    base_calculo: Optional[Decimal] = field(
+    BaseCalculo: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "BaseCalculo",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -467,10 +433,9 @@ class TcValoresNfse:
             "fraction_digits": 2,
         }
     )
-    aliquota: Optional[Decimal] = field(
+    Aliquota: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "Aliquota",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -478,10 +443,9 @@ class TcValoresNfse:
             "fraction_digits": 4,
         }
     )
-    valor_iss: Optional[Decimal] = field(
+    ValorIss: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorIss",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -489,10 +453,9 @@ class TcValoresNfse:
             "fraction_digits": 2,
         }
     )
-    valor_liquido_nfse: Optional[Decimal] = field(
+    ValorLiquidoNfse: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorLiquidoNfse",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -508,10 +471,9 @@ class ListaMensagemAlertaRetorno:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    mensagem_retorno: List[TcMensagemRetorno] = field(
+    MensagemRetorno: List[TcMensagemRetorno] = field(
         default_factory=list,
         metadata={
-            "name": "MensagemRetorno",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -523,10 +485,9 @@ class ListaMensagemRetorno:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    mensagem_retorno: List[TcMensagemRetorno] = field(
+    MensagemRetorno: List[TcMensagemRetorno] = field(
         default_factory=list,
         metadata={
-            "name": "MensagemRetorno",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -538,19 +499,17 @@ class TcDadosServico:
     class Meta:
         name = "tcDadosServico"
 
-    valores: Optional[TcValoresDeclaracaoServico] = field(
+    Valores: Optional[TcValoresDeclaracaoServico] = field(
         default=None,
         metadata={
-            "name": "Valores",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    item_lista_servico: Optional[str] = field(
+    ItemListaServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ItemListaServico",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -559,19 +518,17 @@ class TcDadosServico:
             "white_space": "collapse",
         }
     )
-    codigo_cnae: Optional[int] = field(
+    CodigoCnae: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoCnae",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "total_digits": 7,
         }
     )
-    codigo_tributacao_municipio: Optional[str] = field(
+    CodigoTributacaoMunicipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoTributacaoMunicipio",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -579,10 +536,9 @@ class TcDadosServico:
             "white_space": "collapse",
         }
     )
-    discriminacao: Optional[str] = field(
+    Discriminacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Discriminacao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -591,20 +547,18 @@ class TcDadosServico:
             "white_space": "collapse",
         }
     )
-    codigo_municipio: Optional[int] = field(
+    CodigoMunicipio: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoMunicipio",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
             "total_digits": 7,
         }
     )
-    exigibilidade_iss: Optional[str] = field(
+    ExigibilidadeISS: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ExigibilidadeISS",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -618,18 +572,16 @@ class TcIdentificacaoIntermediario:
     class Meta:
         name = "tcIdentificacaoIntermediario"
 
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -644,29 +596,26 @@ class TcIdentificacaoNfse:
     class Meta:
         name = "tcIdentificacaoNfse"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -674,10 +623,9 @@ class TcIdentificacaoNfse:
             "white_space": "collapse",
         }
     )
-    codigo_verificacao: Optional[str] = field(
+    CodigoVerificacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoVerificacao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -693,18 +641,16 @@ class TcIdentificacaoPrestador:
     class Meta:
         name = "tcIdentificacaoPrestador"
 
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -719,18 +665,16 @@ class TcIdentificacaoTomador:
     class Meta:
         name = "tcIdentificacaoTomador"
 
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -745,29 +689,26 @@ class TcInfPedidoCancelamentoRps:
     class Meta:
         name = "tcInfPedidoCancelamentoRps"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    codigo_cancelamento: Optional[str] = field(
+    CodigoCancelamento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
             "pattern": r"EE|ED|OU|SB",
         }
     )
-    descricao_cancelamento: Optional[str] = field(
+    DescricaoCancelamento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "DescricaoCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -776,19 +717,17 @@ class TcInfPedidoCancelamentoRps:
             "white_space": "collapse",
         }
     )
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -804,38 +743,34 @@ class TcInfRps:
     class Meta:
         name = "tcInfRps"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    status: Optional[str] = field(
+    Status: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Status",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
             "pattern": r"CO|CA",
         }
     )
-    rps_substituido: Optional[TcIdentificacaoRps] = field(
+    RpsSubstituido: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "RpsSubstituido",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
@@ -847,19 +782,17 @@ class TcMensagemRetornoLote:
     class Meta:
         name = "tcMensagemRetornoLote"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    codigo: Optional[str] = field(
+    Codigo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Codigo",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -867,10 +800,9 @@ class TcMensagemRetornoLote:
             "white_space": "collapse",
         }
     )
-    mensagem: Optional[str] = field(
+    Mensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Mensagem",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -886,10 +818,9 @@ class TcSubstituicaoNfse:
     class Meta:
         name = "tcSubstituicaoNfse"
 
-    substituicao_nfse: Optional[TcInfSubstituicaoNfse] = field(
+    SubstituicaoNfse: Optional[TcInfSubstituicaoNfse] = field(
         default=None,
         metadata={
-            "name": "SubstituicaoNfse",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -926,18 +857,16 @@ class ConsultarLoteRpsEnvio:
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "required": True,
             "max_length": 50,
@@ -957,18 +886,16 @@ class ConsultarNfseFaixaEnvio:
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    faixa: Optional["ConsultarNfseFaixaEnvio.Faixa"] = field(
+    Faixa: Optional["ConsultarNfseFaixaEnvio.Faixa"] = field(
         default=None,
         metadata={
-            "name": "Faixa",
             "type": "Element",
             "required": True,
         }
@@ -976,19 +903,17 @@ class ConsultarNfseFaixaEnvio:
 
     @dataclass
     class Faixa:
-        numero_nfse_inicial: Optional[int] = field(
+        NumeroNfseInicial: Optional[int] = field(
             default=None,
             metadata={
-                "name": "NumeroNfseInicial",
                 "type": "Element",
                 "required": True,
                 "total_digits": 15,
             }
         )
-        numero_nfse_final: Optional[int] = field(
+        NumeroNfseFinal: Optional[int] = field(
             default=None,
             metadata={
-                "name": "NumeroNfseFinal",
                 "type": "Element",
                 "total_digits": 15,
             }
@@ -1007,18 +932,16 @@ class ConsultarNfseRpsEnvio:
             "required": True,
         }
     )
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
@@ -1037,65 +960,57 @@ class ConsultarNfseServicoPrestadoEnvio:
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    numero_nfse: Optional[int] = field(
+    NumeroNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroNfse",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    periodo_emissao: Optional["ConsultarNfseServicoPrestadoEnvio.PeriodoEmissao"] = field(
+    PeriodoEmissao: Optional["ConsultarNfseServicoPrestadoEnvio.PeriodoEmissao"] = field(
         default=None,
         metadata={
-            "name": "PeriodoEmissao",
             "type": "Element",
         }
     )
-    periodo_competencia: Optional["ConsultarNfseServicoPrestadoEnvio.PeriodoCompetencia"] = field(
+    PeriodoCompetencia: Optional["ConsultarNfseServicoPrestadoEnvio.PeriodoCompetencia"] = field(
         default=None,
         metadata={
-            "name": "PeriodoCompetencia",
             "type": "Element",
         }
     )
-    tomador: Optional[TcIdentificacaoTomador] = field(
+    Tomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
         }
     )
-    intermediario: Optional[TcIdentificacaoIntermediario] = field(
+    Intermediario: Optional[TcIdentificacaoIntermediario] = field(
         default=None,
         metadata={
-            "name": "Intermediario",
             "type": "Element",
         }
     )
 
     @dataclass
     class PeriodoEmissao:
-        data_inicial: Optional[XmlDate] = field(
+        DataInicial: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataInicial",
                 "type": "Element",
                 "required": True,
             }
         )
-        data_final: Optional[XmlDate] = field(
+        DataFinal: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataFinal",
                 "type": "Element",
                 "required": True,
             }
@@ -1103,18 +1018,16 @@ class ConsultarNfseServicoPrestadoEnvio:
 
     @dataclass
     class PeriodoCompetencia:
-        data_inicial: Optional[XmlDate] = field(
+        DataInicial: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataInicial",
                 "type": "Element",
                 "required": True,
             }
         )
-        data_final: Optional[XmlDate] = field(
+        DataFinal: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataFinal",
                 "type": "Element",
                 "required": True,
             }
@@ -1133,64 +1046,56 @@ class ConsultarNfseServicoTomadoEnvio:
             "required": True,
         }
     )
-    numero_nfse: Optional[int] = field(
+    NumeroNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroNfse",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    periodo_emissao: Optional["ConsultarNfseServicoTomadoEnvio.PeriodoEmissao"] = field(
+    PeriodoEmissao: Optional["ConsultarNfseServicoTomadoEnvio.PeriodoEmissao"] = field(
         default=None,
         metadata={
-            "name": "PeriodoEmissao",
             "type": "Element",
         }
     )
-    periodo_competencia: Optional["ConsultarNfseServicoTomadoEnvio.PeriodoCompetencia"] = field(
+    PeriodoCompetencia: Optional["ConsultarNfseServicoTomadoEnvio.PeriodoCompetencia"] = field(
         default=None,
         metadata={
-            "name": "PeriodoCompetencia",
             "type": "Element",
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
         }
     )
-    tomador: Optional[TcIdentificacaoTomador] = field(
+    Tomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
         }
     )
-    intermediario: Optional[TcIdentificacaoIntermediario] = field(
+    Intermediario: Optional[TcIdentificacaoIntermediario] = field(
         default=None,
         metadata={
-            "name": "Intermediario",
             "type": "Element",
         }
     )
 
     @dataclass
     class PeriodoEmissao:
-        data_inicial: Optional[XmlDate] = field(
+        DataInicial: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataInicial",
                 "type": "Element",
                 "required": True,
             }
         )
-        data_final: Optional[XmlDate] = field(
+        DataFinal: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataFinal",
                 "type": "Element",
                 "required": True,
             }
@@ -1198,18 +1103,16 @@ class ConsultarNfseServicoTomadoEnvio:
 
     @dataclass
     class PeriodoCompetencia:
-        data_inicial: Optional[XmlDate] = field(
+        DataInicial: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataInicial",
                 "type": "Element",
                 "required": True,
             }
         )
-        data_final: Optional[XmlDate] = field(
+        DataFinal: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataFinal",
                 "type": "Element",
                 "required": True,
             }
@@ -1221,30 +1124,27 @@ class EnviarLoteRpsResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    data_recebimento: Optional[XmlDateTime] = field(
+    DataRecebimento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataRecebimento",
             "type": "Element",
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "max_length": 50,
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1258,10 +1158,9 @@ class ListaMensagemRetornoLote:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    mensagem_retorno: List[TcMensagemRetornoLote] = field(
+    MensagemRetorno: List[TcMensagemRetornoLote] = field(
         default_factory=list,
         metadata={
-            "name": "MensagemRetorno",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -1273,19 +1172,17 @@ class TcDadosPrestador:
     class Meta:
         name = "tcDadosPrestador"
 
-    identificacao_prestador: Optional[TcIdentificacaoPrestador] = field(
+    IdentificacaoPrestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoPrestador",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1294,10 +1191,9 @@ class TcDadosPrestador:
             "white_space": "collapse",
         }
     )
-    nome_fantasia: Optional[str] = field(
+    NomeFantasia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomeFantasia",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -1305,19 +1201,17 @@ class TcDadosPrestador:
             "white_space": "collapse",
         }
     )
-    endereco: Optional[TcEndereco] = field(
+    Endereco: Optional[TcEndereco] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    contato: Optional[TcContato] = field(
+    Contato: Optional[TcContato] = field(
         default=None,
         metadata={
-            "name": "Contato",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
@@ -1329,18 +1223,16 @@ class TcDadosTomador:
     class Meta:
         name = "tcDadosTomador"
 
-    identificacao_tomador: Optional[TcIdentificacaoTomador] = field(
+    IdentificacaoTomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoTomador",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
     )
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -1348,18 +1240,16 @@ class TcDadosTomador:
             "white_space": "collapse",
         }
     )
-    endereco: Optional[TcEndereco] = field(
+    Endereco: Optional[TcEndereco] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
     )
-    contato: Optional[TcContato] = field(
+    Contato: Optional[TcContato] = field(
         default=None,
         metadata={
-            "name": "Contato",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
@@ -1371,29 +1261,26 @@ class TcInfPedidoCancelamento:
     class Meta:
         name = "tcInfPedidoCancelamento"
 
-    identificacao_nfse: Optional[TcIdentificacaoNfse] = field(
+    IdentificacaoNfse: Optional[TcIdentificacaoNfse] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoNfse",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    codigo_cancelamento: Optional[str] = field(
+    CodigoCancelamento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
             "pattern": r"EE|ED|OU|SB",
         }
     )
-    descricao_cancelamento: Optional[str] = field(
+    DescricaoCancelamento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "DescricaoCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1409,10 +1296,9 @@ class TcPedidoCancelamentoRps:
     class Meta:
         name = "tcPedidoCancelamentoRps"
 
-    inf_pedido_cancelamento: Optional[TcInfPedidoCancelamentoRps] = field(
+    InfPedidoCancelamento: Optional[TcInfPedidoCancelamentoRps] = field(
         default=None,
         metadata={
-            "name": "InfPedidoCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1441,10 +1327,9 @@ class CancelarRpsEnvio:
             "required": True,
         }
     )
-    pedido: Optional[TcPedidoCancelamentoRps] = field(
+    Pedido: Optional[TcPedidoCancelamentoRps] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "required": True,
         }
@@ -1456,19 +1341,17 @@ class TcConfirmacaoCancelamentoRps:
     class Meta:
         name = "tcConfirmacaoCancelamentoRps"
 
-    pedido: Optional[TcPedidoCancelamentoRps] = field(
+    Pedido: Optional[TcPedidoCancelamentoRps] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    data_hora: Optional[XmlDateTime] = field(
+    DataHora: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataHora",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1481,36 +1364,32 @@ class TcInfDeclaracaoPrestacaoServico:
     class Meta:
         name = "tcInfDeclaracaoPrestacaoServico"
 
-    rps: Optional[TcInfRps] = field(
+    Rps: Optional[TcInfRps] = field(
         default=None,
         metadata={
-            "name": "Rps",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
     )
-    servico: Optional[TcDadosServico] = field(
+    Servico: Optional[TcDadosServico] = field(
         default=None,
         metadata={
-            "name": "Servico",
-            "type": "Element",
-            "namespace": "http://www.abrasf.org.br/nfse.xsd",
-            "required": True,
-        }
-    )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
-        default=None,
-        metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    tomador: Optional[TcDadosTomador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
+            "type": "Element",
+            "namespace": "http://www.abrasf.org.br/nfse.xsd",
+            "required": True,
+        }
+    )
+    Tomador: Optional[TcDadosTomador] = field(
+        default=None,
+        metadata={
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
@@ -1522,10 +1401,9 @@ class TcPedidoCancelamento:
     class Meta:
         name = "tcPedidoCancelamento"
 
-    inf_pedido_cancelamento: Optional[TcInfPedidoCancelamento] = field(
+    InfPedidoCancelamento: Optional[TcInfPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "InfPedidoCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1554,10 +1432,9 @@ class CancelarNfseEnvio:
             "required": True,
         }
     )
-    pedido: Optional[TcPedidoCancelamento] = field(
+    Pedido: Optional[TcPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "required": True,
         }
@@ -1569,10 +1446,9 @@ class TcCancelamentoRps:
     class Meta:
         name = "tcCancelamentoRps"
 
-    confirmacao: Optional[TcConfirmacaoCancelamentoRps] = field(
+    Confirmacao: Optional[TcConfirmacaoCancelamentoRps] = field(
         default=None,
         metadata={
-            "name": "Confirmacao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1601,19 +1477,17 @@ class TcConfirmacaoCancelamento:
     class Meta:
         name = "tcConfirmacaoCancelamento"
 
-    pedido: Optional[TcPedidoCancelamento] = field(
+    Pedido: Optional[TcPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    data_hora: Optional[XmlDateTime] = field(
+    DataHora: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataHora",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1626,10 +1500,9 @@ class TcDeclaracaoPrestacaoServico:
     class Meta:
         name = "tcDeclaracaoPrestacaoServico"
 
-    inf_declaracao_prestacao_servico: Optional[TcInfDeclaracaoPrestacaoServico] = field(
+    InfDeclaracaoPrestacaoServico: Optional[TcInfDeclaracaoPrestacaoServico] = field(
         default=None,
         metadata={
-            "name": "InfDeclaracaoPrestacaoServico",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1658,10 +1531,9 @@ class GerarNfseEnvio:
             "required": True,
         }
     )
-    rps: Optional[TcDeclaracaoPrestacaoServico] = field(
+    Rps: Optional[TcDeclaracaoPrestacaoServico] = field(
         default=None,
         metadata={
-            "name": "Rps",
             "type": "Element",
             "required": True,
         }
@@ -1673,10 +1545,9 @@ class RetCancelamentoRps:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    rps_cancelamento: List[TcCancelamentoRps] = field(
+    RpsCancelamento: List[TcCancelamentoRps] = field(
         default_factory=list,
         metadata={
-            "name": "RpsCancelamento",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -1695,10 +1566,9 @@ class SubstituirNfseEnvio:
             "required": True,
         }
     )
-    substituicao_nfse: Optional["SubstituirNfseEnvio.SubstituicaoNfse"] = field(
+    SubstituicaoNfse: Optional["SubstituirNfseEnvio.SubstituicaoNfse"] = field(
         default=None,
         metadata={
-            "name": "SubstituicaoNfse",
             "type": "Element",
             "required": True,
         }
@@ -1714,18 +1584,16 @@ class SubstituirNfseEnvio:
 
     @dataclass
     class SubstituicaoNfse:
-        pedido: Optional[TcPedidoCancelamento] = field(
+        Pedido: Optional[TcPedidoCancelamento] = field(
             default=None,
             metadata={
-                "name": "Pedido",
                 "type": "Element",
                 "required": True,
             }
         )
-        rps: Optional[TcDeclaracaoPrestacaoServico] = field(
+        Rps: Optional[TcDeclaracaoPrestacaoServico] = field(
             default=None,
             metadata={
-                "name": "Rps",
                 "type": "Element",
                 "required": True,
             }
@@ -1737,10 +1605,9 @@ class TcCancelamentoNfse:
     class Meta:
         name = "tcCancelamentoNfse"
 
-    confirmacao: Optional[TcConfirmacaoCancelamento] = field(
+    Confirmacao: Optional[TcConfirmacaoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Confirmacao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1769,20 +1636,18 @@ class TcInfNfse:
     class Meta:
         name = "tcInfNfse"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    codigo_verificacao: Optional[str] = field(
+    CodigoVerificacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoVerificacao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1791,37 +1656,33 @@ class TcInfNfse:
             "white_space": "collapse",
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    status_nfse: Optional[str] = field(
+    StatusNfse: Optional[str] = field(
         default=None,
         metadata={
-            "name": "StatusNfse",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "pattern": r"EM|CA|SC",
         }
     )
-    nfse_substituida: Optional[int] = field(
+    NfseSubstituida: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NfseSubstituida",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "total_digits": 15,
         }
     )
-    outras_informacoes: Optional[str] = field(
+    OutrasInformacoes: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OutrasInformacoes",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -1829,19 +1690,17 @@ class TcInfNfse:
             "white_space": "collapse",
         }
     )
-    valores_nfse: Optional[TcValoresNfse] = field(
+    ValoresNfse: Optional[TcValoresNfse] = field(
         default=None,
         metadata={
-            "name": "ValoresNfse",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    valor_credito: Optional[Decimal] = field(
+    ValorCredito: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorCredito",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -1849,19 +1708,17 @@ class TcInfNfse:
             "fraction_digits": 2,
         }
     )
-    endereco_prestador_servico: Optional[TcEndereco] = field(
+    EnderecoPrestadorServico: Optional[TcEndereco] = field(
         default=None,
         metadata={
-            "name": "EnderecoPrestadorServico",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    declaracao_prestacao_servico: Optional[TcDeclaracaoPrestacaoServico] = field(
+    DeclaracaoPrestacaoServico: Optional[TcDeclaracaoPrestacaoServico] = field(
         default=None,
         metadata={
-            "name": "DeclaracaoPrestacaoServico",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1874,29 +1731,26 @@ class TcLoteRps:
     class Meta:
         name = "tcLoteRps"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "min_length": 1,
@@ -1904,19 +1758,17 @@ class TcLoteRps:
             "white_space": "collapse",
         }
     )
-    quantidade_rps: Optional[int] = field(
+    QuantidadeRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "QuantidadeRps",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    lista_rps: Optional["TcLoteRps.ListaRps"] = field(
+    ListaRps: Optional["TcLoteRps.ListaRps"] = field(
         default=None,
         metadata={
-            "name": "ListaRps",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1933,10 +1785,9 @@ class TcLoteRps:
 
     @dataclass
     class ListaRps:
-        rps: List[TcDeclaracaoPrestacaoServico] = field(
+        Rps: List[TcDeclaracaoPrestacaoServico] = field(
             default_factory=list,
             metadata={
-                "name": "Rps",
                 "type": "Element",
                 "namespace": "http://www.abrasf.org.br/nfse.xsd",
                 "min_occurs": 1,
@@ -1949,14 +1800,14 @@ class CancelarRpsResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    ret_cancelamento_rps: Optional[RetCancelamentoRps] = field(
+    retCancelamentoRps: Optional[RetCancelamentoRps] = field(
         default=None,
         metadata={
             "name": "RetCancelamentoRps",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1976,10 +1827,9 @@ class EnviarLoteRpsEnvio:
             "type": "Element",
         }
     )
-    lote_rps: Optional[TcLoteRps] = field(
+    LoteRps: Optional[TcLoteRps] = field(
         default=None,
         metadata={
-            "name": "LoteRps",
             "type": "Element",
             "required": True,
         }
@@ -2006,10 +1856,9 @@ class EnviarLoteRpsSincronoEnvio:
             "type": "Element",
         }
     )
-    lote_rps: Optional[TcLoteRps] = field(
+    LoteRps: Optional[TcLoteRps] = field(
         default=None,
         metadata={
-            "name": "LoteRps",
             "type": "Element",
             "required": True,
         }
@@ -2029,10 +1878,9 @@ class RetCancelamento:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    nfse_cancelamento: List[TcCancelamentoNfse] = field(
+    NfseCancelamento: List[TcCancelamentoNfse] = field(
         default_factory=list,
         metadata={
-            "name": "NfseCancelamento",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -2044,10 +1892,9 @@ class TcNfse:
     class Meta:
         name = "tcNfse"
 
-    inf_nfse: Optional[TcInfNfse] = field(
+    InfNfse: Optional[TcInfNfse] = field(
         default=None,
         metadata={
-            "name": "InfNfse",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -2076,14 +1923,14 @@ class CancelarNfseResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    ret_cancelamento: Optional[RetCancelamento] = field(
+    retCancelamento: Optional[RetCancelamento] = field(
         default=None,
         metadata={
             "name": "RetCancelamento",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2097,27 +1944,24 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    nfse: Optional[TcNfse] = field(
+    Nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
-            "name": "Nfse",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    nfse_cancelamento: Optional[TcCancelamentoNfse] = field(
+    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
-            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
     )
-    nfse_substituicao: Optional[TcSubstituicaoNfse] = field(
+    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
         default=None,
         metadata={
-            "name": "NfseSubstituicao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
@@ -2135,30 +1979,28 @@ class ConsultarLoteRpsResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    situacao: Optional[str] = field(
+    Situacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Situacao",
             "type": "Element",
             "required": True,
             "pattern": r"1|2|3|4",
         }
     )
-    lista_nfse: Optional["ConsultarLoteRpsResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarLoteRpsResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno_lote: Optional[ListaMensagemRetornoLote] = field(
+    listaMensagemRetornoLote: Optional[ListaMensagemRetornoLote] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetornoLote",
@@ -2168,7 +2010,7 @@ class ConsultarLoteRpsResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: List[CompNfse] = field(
+        compNfse: List[CompNfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompNfse",
@@ -2177,7 +2019,7 @@ class ConsultarLoteRpsResposta:
                 "max_occurs": 50,
             }
         )
-        lista_mensagem_alerta_retorno: Optional[ListaMensagemAlertaRetorno] = field(
+        listaMensagemAlertaRetorno: Optional[ListaMensagemAlertaRetorno] = field(
             default=None,
             metadata={
                 "name": "ListaMensagemAlertaRetorno",
@@ -2191,14 +2033,13 @@ class ConsultarNfseFaixaResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    lista_nfse: Optional["ConsultarNfseFaixaResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarNfseFaixaResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2208,7 +2049,7 @@ class ConsultarNfseFaixaResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: List[CompNfse] = field(
+        compNfse: List[CompNfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompNfse",
@@ -2224,14 +2065,14 @@ class ConsultarNfseRpsResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    comp_nfse: Optional[CompNfse] = field(
+    compNfse: Optional[CompNfse] = field(
         default=None,
         metadata={
             "name": "CompNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2245,14 +2086,13 @@ class ConsultarNfseServicoPrestadoResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    lista_nfse: Optional["ConsultarNfseServicoPrestadoResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarNfseServicoPrestadoResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2262,7 +2102,7 @@ class ConsultarNfseServicoPrestadoResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: List[CompNfse] = field(
+        compNfse: List[CompNfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompNfse",
@@ -2278,14 +2118,13 @@ class ConsultarNfseServicoTomadoResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    lista_nfse: Optional["ConsultarNfseServicoTomadoResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarNfseServicoTomadoResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2295,7 +2134,7 @@ class ConsultarNfseServicoTomadoResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: List[CompNfse] = field(
+        compNfse: List[CompNfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompNfse",
@@ -2311,44 +2150,40 @@ class EnviarLoteRpsSincronoResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    data_recebimento: Optional[XmlDateTime] = field(
+    DataRecebimento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataRecebimento",
             "type": "Element",
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "max_length": 50,
         }
     )
-    lista_nfse: Optional["EnviarLoteRpsSincronoResposta.ListaNfse"] = field(
+    ListaNfse: Optional["EnviarLoteRpsSincronoResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno_lote: Optional[ListaMensagemRetornoLote] = field(
+    listaMensagemRetornoLote: Optional[ListaMensagemRetornoLote] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetornoLote",
@@ -2358,7 +2193,7 @@ class EnviarLoteRpsSincronoResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: Optional[CompNfse] = field(
+        compNfse: Optional[CompNfse] = field(
             default=None,
             metadata={
                 "name": "CompNfse",
@@ -2366,7 +2201,7 @@ class EnviarLoteRpsSincronoResposta:
                 "required": True,
             }
         )
-        lista_mensagem_alerta_retorno: Optional[ListaMensagemAlertaRetorno] = field(
+        listaMensagemAlertaRetorno: Optional[ListaMensagemAlertaRetorno] = field(
             default=None,
             metadata={
                 "name": "ListaMensagemAlertaRetorno",
@@ -2380,14 +2215,13 @@ class GerarNfseResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    lista_nfse: Optional["GerarNfseResposta.ListaNfse"] = field(
+    ListaNfse: Optional["GerarNfseResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2397,7 +2231,7 @@ class GerarNfseResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: Optional[CompNfse] = field(
+        compNfse: Optional[CompNfse] = field(
             default=None,
             metadata={
                 "name": "CompNfse",
@@ -2405,7 +2239,7 @@ class GerarNfseResposta:
                 "required": True,
             }
         )
-        lista_mensagem_alerta_retorno: Optional[ListaMensagemAlertaRetorno] = field(
+        listaMensagemAlertaRetorno: Optional[ListaMensagemAlertaRetorno] = field(
             default=None,
             metadata={
                 "name": "ListaMensagemAlertaRetorno",
@@ -2419,14 +2253,13 @@ class SubstituirNfseResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse.xsd"
 
-    ret_substituicao: Optional["SubstituirNfseResposta.RetSubstituicao"] = field(
+    RetSubstituicao: Optional["SubstituirNfseResposta.RetSubstituicao"] = field(
         default=None,
         metadata={
-            "name": "RetSubstituicao",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -2436,18 +2269,16 @@ class SubstituirNfseResposta:
 
     @dataclass
     class RetSubstituicao:
-        nfse_substituida: Optional["SubstituirNfseResposta.RetSubstituicao.NfseSubstituida"] = field(
+        NfseSubstituida: Optional["SubstituirNfseResposta.RetSubstituicao.NfseSubstituida"] = field(
             default=None,
             metadata={
-                "name": "NfseSubstituida",
                 "type": "Element",
                 "required": True,
             }
         )
-        nfse_substituidora: Optional["SubstituirNfseResposta.RetSubstituicao.NfseSubstituidora"] = field(
+        NfseSubstituidora: Optional["SubstituirNfseResposta.RetSubstituicao.NfseSubstituidora"] = field(
             default=None,
             metadata={
-                "name": "NfseSubstituidora",
                 "type": "Element",
                 "required": True,
             }
@@ -2455,7 +2286,7 @@ class SubstituirNfseResposta:
 
         @dataclass
         class NfseSubstituida:
-            comp_nfse: Optional[CompNfse] = field(
+            compNfse: Optional[CompNfse] = field(
                 default=None,
                 metadata={
                     "name": "CompNfse",
@@ -2463,7 +2294,7 @@ class SubstituirNfseResposta:
                     "required": True,
                 }
             )
-            lista_mensagem_alerta_retorno: Optional[ListaMensagemAlertaRetorno] = field(
+            listaMensagemAlertaRetorno: Optional[ListaMensagemAlertaRetorno] = field(
                 default=None,
                 metadata={
                     "name": "ListaMensagemAlertaRetorno",
@@ -2473,7 +2304,7 @@ class SubstituirNfseResposta:
 
         @dataclass
         class NfseSubstituidora:
-            comp_nfse: Optional[CompNfse] = field(
+            compNfse: Optional[CompNfse] = field(
                 default=None,
                 metadata={
                     "name": "CompNfse",

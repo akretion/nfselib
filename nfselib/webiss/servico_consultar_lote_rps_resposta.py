@@ -14,21 +14,20 @@ class ConsultarLoteRpsResposta:
     class Meta:
         namespace = "http://www.abrasf.org.br/nfse"
 
-    lista_nfse: Optional["ConsultarLoteRpsResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarLoteRpsResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno_lote: Optional[ListaMensagemRetornoLote] = field(
+    listaMensagemRetornoLote: Optional[ListaMensagemRetornoLote] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetornoLote",
@@ -38,7 +37,7 @@ class ConsultarLoteRpsResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: List[TcCompNfse] = field(
+        compNfse: List[TcCompNfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompNfse",

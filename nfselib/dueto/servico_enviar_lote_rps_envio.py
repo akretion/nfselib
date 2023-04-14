@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.dueto.core_schema import Signature
 from nfselib.dueto.tipos_complexos import TcLoteRps
+from nfselib.dueto.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://tempuri.org/servico_enviar_lote_rps_envio.xsd"
 
@@ -11,10 +11,9 @@ class EnviarLoteRpsEnvio:
     class Meta:
         namespace = "http://tempuri.org/servico_enviar_lote_rps_envio.xsd"
 
-    lote_rps: Optional[TcLoteRps] = field(
+    LoteRps: Optional[TcLoteRps] = field(
         default=None,
         metadata={
-            "name": "LoteRps",
             "type": "Element",
             "required": True,
         }

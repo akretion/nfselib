@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from nfselib.ginfes.tipos_v03 import TcPedidoCancelamento
-from nfselib.ginfes.xmldsig_core_schema20020212_v03 import Signature
+from nfselib.ginfes.xmldsig_core_schema_v02 import Signature
 
 __NAMESPACE__ = "http://www.ginfes.com.br/servico_cancelar_nfse_envio_v03.xsd"
 
@@ -11,10 +11,9 @@ class CancelarNfseEnvio:
     class Meta:
         namespace = "http://www.ginfes.com.br/servico_cancelar_nfse_envio_v03.xsd"
 
-    pedido: Optional[TcPedidoCancelamento] = field(
+    Pedido: Optional[TcPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "",
             "required": True,

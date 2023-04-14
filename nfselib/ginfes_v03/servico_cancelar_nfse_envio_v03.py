@@ -11,10 +11,9 @@ class CancelarNfseEnvio:
     class Meta:
         namespace = "http://www.ginfes.com.br/servico_cancelar_nfse_envio_v03.xsd"
 
-    pedido: Optional[TcPedidoCancelamento] = field(
+    Pedido: Optional[TcPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "",
             "required": True,

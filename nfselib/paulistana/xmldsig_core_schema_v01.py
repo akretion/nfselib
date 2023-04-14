@@ -6,10 +6,9 @@ __NAMESPACE__ = "http://www.w3.org/2000/09/xmldsig#"
 
 @dataclass
 class KeyValueType:
-    rsakey_value: Optional["KeyValueType.RsakeyValue"] = field(
+    RSAKeyValue: Optional["KeyValueType.RsakeyValue"] = field(
         default=None,
         metadata={
-            "name": "RSAKeyValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
@@ -18,20 +17,18 @@ class KeyValueType:
 
     @dataclass
     class RsakeyValue:
-        modulus: Optional[bytes] = field(
+        Modulus: Optional[bytes] = field(
             default=None,
             metadata={
-                "name": "Modulus",
                 "type": "Element",
                 "namespace": "http://www.w3.org/2000/09/xmldsig#",
                 "required": True,
                 "format": "base64",
             }
         )
-        exponent: Optional[bytes] = field(
+        Exponent: Optional[bytes] = field(
             default=None,
             metadata={
-                "name": "Exponent",
                 "type": "Element",
                 "namespace": "http://www.w3.org/2000/09/xmldsig#",
                 "required": True,
@@ -49,10 +46,9 @@ class SignatureValueType:
             "format": "base64",
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
         }
     )
@@ -60,18 +56,16 @@ class SignatureValueType:
 
 @dataclass
 class TransformType:
-    xpath: List[str] = field(
+    XPath: List[str] = field(
         default_factory=list,
         metadata={
-            "name": "XPath",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    algorithm: Optional[str] = field(
+    Algorithm: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Algorithm",
             "type": "Attribute",
             "required": True,
         }
@@ -80,10 +74,9 @@ class TransformType:
 
 @dataclass
 class X509DataType:
-    x509_certificate: Optional[bytes] = field(
+    X509Certificate: Optional[bytes] = field(
         default=None,
         metadata={
-            "name": "X509Certificate",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
@@ -94,19 +87,17 @@ class X509DataType:
 
 @dataclass
 class KeyInfoType:
-    x509_data: Optional[X509DataType] = field(
+    X509Data: Optional[X509DataType] = field(
         default=None,
         metadata={
-            "name": "X509Data",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
         }
     )
@@ -136,7 +127,7 @@ class ReferenceType:
             "required": True,
         }
     )
-    digest_method: Optional["ReferenceType.DigestMethod"] = field(
+    digestMethod: Optional["ReferenceType.DigestMethod"] = field(
         default=None,
         metadata={
             "name": "DigestMethod",
@@ -145,7 +136,7 @@ class ReferenceType:
             "required": True,
         }
     )
-    digest_value: Optional[bytes] = field(
+    digestValue: Optional[bytes] = field(
         default=None,
         metadata={
             "name": "DigestValue",
@@ -155,21 +146,19 @@ class ReferenceType:
             "format": "base64",
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
         }
     )
-    uri: Optional[str] = field(
+    URI: Optional[str] = field(
         default=None,
         metadata={
-            "name": "URI",
             "type": "Attribute",
         }
     )
-    type: Optional[str] = field(
+    Type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "Type",
@@ -179,10 +168,9 @@ class ReferenceType:
 
     @dataclass
     class DigestMethod:
-        algorithm: Optional[str] = field(
+        Algorithm: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Algorithm",
                 "type": "Attribute",
                 "required": True,
             }
@@ -191,7 +179,7 @@ class ReferenceType:
 
 @dataclass
 class SignedInfoType:
-    canonicalization_method: Optional["SignedInfoType.CanonicalizationMethod"] = field(
+    canonicalizationMethod: Optional["SignedInfoType.CanonicalizationMethod"] = field(
         default=None,
         metadata={
             "name": "CanonicalizationMethod",
@@ -200,7 +188,7 @@ class SignedInfoType:
             "required": True,
         }
     )
-    signature_method: Optional["SignedInfoType.SignatureMethod"] = field(
+    signatureMethod: Optional["SignedInfoType.SignatureMethod"] = field(
         default=None,
         metadata={
             "name": "SignatureMethod",
@@ -218,20 +206,18 @@ class SignedInfoType:
             "min_occurs": 1,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
         }
     )
 
     @dataclass
     class CanonicalizationMethod:
-        algorithm: Optional[str] = field(
+        Algorithm: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Algorithm",
                 "type": "Attribute",
                 "required": True,
             }
@@ -239,10 +225,9 @@ class SignedInfoType:
 
     @dataclass
     class SignatureMethod:
-        algorithm: Optional[str] = field(
+        Algorithm: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Algorithm",
                 "type": "Attribute",
                 "required": True,
             }
@@ -251,7 +236,7 @@ class SignedInfoType:
 
 @dataclass
 class SignatureType:
-    signed_info: Optional[SignedInfoType] = field(
+    signedInfo: Optional[SignedInfoType] = field(
         default=None,
         metadata={
             "name": "SignedInfo",
@@ -260,7 +245,7 @@ class SignatureType:
             "required": True,
         }
     )
-    signature_value: Optional[SignatureValueType] = field(
+    signatureValue: Optional[SignatureValueType] = field(
         default=None,
         metadata={
             "name": "SignatureValue",
@@ -269,7 +254,7 @@ class SignatureType:
             "required": True,
         }
     )
-    key_info: Optional[KeyInfoType] = field(
+    keyInfo: Optional[KeyInfoType] = field(
         default=None,
         metadata={
             "name": "KeyInfo",
@@ -278,10 +263,9 @@ class SignatureType:
             "required": True,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
         }
     )

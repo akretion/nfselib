@@ -11,15 +11,14 @@ class ReqConsultaLote:
     Este Schema XML é utilizado pelos Prestadores de serviços para
     consultarem Lote de RPS emitidos por eles.
 
-    :ivar cabecalho: Cabeçalho do pedido.
+    :ivar Cabecalho: Cabeçalho do pedido.
     """
     class Meta:
         namespace = "http://localhost:8080/WsNFe2/lote"
 
-    cabecalho: Optional["ReqConsultaLote.Cabecalho"] = field(
+    Cabecalho: Optional["ReqConsultaLote.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -29,47 +28,43 @@ class ReqConsultaLote:
     @dataclass
     class Cabecalho:
         """
-        :ivar cod_cidade: Informe o Codigo da Cidade.
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CodCidade: Informe o Codigo da Cidade.
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
-        :ivar versao: Informe a Versão do Schema XML utilizado.
-        :ivar numero_lote: Informe o Número do Lote a ser consultado.
+        :ivar Versao: Informe a Versão do Schema XML utilizado.
+        :ivar NumeroLote: Informe o Número do Lote a ser consultado.
         """
-        cod_cidade: Optional[int] = field(
+        CodCidade: Optional[int] = field(
             default=None,
             metadata={
-                "name": "CodCidade",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "min_inclusive": 1,
             }
         )
-        cpfcnpjremetente: Optional[str] = field(
+        CPFCNPJRemetente: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{11}|[0-9]{14}",
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",
             }
         )
-        numero_lote: Optional[str] = field(
+        NumeroLote: Optional[str] = field(
             default=None,
             metadata={
-                "name": "NumeroLote",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

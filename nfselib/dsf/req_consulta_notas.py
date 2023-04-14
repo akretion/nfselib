@@ -14,16 +14,15 @@ class ReqConsultaNotas:
     Este Schema XML é utilizado pelos prestadores de serviços para
     consultas de notas que foram enviadas por lote de RPS.
 
-    :ivar cabecalho: Cabeçalho do pedido.
+    :ivar Cabecalho: Cabeçalho do pedido.
     :ivar signature:
     """
     class Meta:
         namespace = "http://localhost:8080/WsNFe2/lote"
 
-    cabecalho: Optional["ReqConsultaNotas.Cabecalho"] = field(
+    Cabecalho: Optional["ReqConsultaNotas.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -41,76 +40,70 @@ class ReqConsultaNotas:
     @dataclass
     class Cabecalho:
         """
-        :ivar cod_cidade: Informe o Codigo da Cidade.
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CodCidade: Informe o Codigo da Cidade.
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
-        :ivar inscricao_municipal_prestador: Informe a Inscrição
-            Municipal do Prestador
-        :ivar dt_inicio: Informe a data de início do período transmitido
+        :ivar InscricaoMunicipalPrestador: Informe a Inscrição Municipal
+            do Prestador
+        :ivar dtInicio: Informe a data de início do período transmitido
             (AAAA-MM-DD).
-        :ivar dt_fim: Informe a data final do período transmitido (AAAA-
+        :ivar dtFim: Informe a data final do período transmitido (AAAA-
             MM-DD).
-        :ivar nota_inicial: Numero da nota inicial da consulta. Ou seja
-            a consulta ira retornar as notas no periodo, onde o numero
-            da nota seja maior ou igual a esse numero. O retorno não
-            pode ultrapassar 500Kb. Caso não tenha o numero da nota,
-            passar o valor Zero, será retornado as notas geradas no
-            periodo até o limite de 500kb.
-        :ivar versao: Informe a Versão.
-        :ivar id:
+        :ivar NotaInicial: Numero da nota inicial da consulta. Ou seja a
+            consulta ira retornar as notas no periodo, onde o numero da
+            nota seja maior ou igual a esse numero. O retorno não pode
+            ultrapassar 500Kb. Caso não tenha o numero da nota, passar o
+            valor Zero, será retornado as notas geradas no periodo até o
+            limite de 500kb.
+        :ivar Versao: Informe a Versão.
+        :ivar Id:
         """
-        cod_cidade: Optional[int] = field(
+        CodCidade: Optional[int] = field(
             default=None,
             metadata={
-                "name": "CodCidade",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "min_inclusive": 1,
             }
         )
-        cpfcnpjremetente: Optional[str] = field(
+        CPFCNPJRemetente: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{11}|[0-9]{14}",
             }
         )
-        inscricao_municipal_prestador: Optional[str] = field(
+        InscricaoMunicipalPrestador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "InscricaoMunicipalPrestador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{6,11}",
             }
         )
-        dt_inicio: Optional[XmlDate] = field(
+        dtInicio: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "dtInicio",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        dt_fim: Optional[XmlDate] = field(
+        dtFim: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "dtFim",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        nota_inicial: Optional[str] = field(
+        NotaInicial: Optional[str] = field(
             default=None,
             metadata={
-                "name": "NotaInicial",
                 "type": "Element",
                 "namespace": "",
                 "min_inclusive": "0",
@@ -118,20 +111,18 @@ class ReqConsultaNotas:
                 "pattern": r"[0-9]{1,12}",
             }
         )
-        versao: Optional[str] = field(
+        Versao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Versao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",
             }
         )
-        id: Optional[str] = field(
+        Id: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Id",
                 "type": "Attribute",
             }
         )

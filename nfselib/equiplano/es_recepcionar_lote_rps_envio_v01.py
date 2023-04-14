@@ -35,28 +35,25 @@ class EnviarLoteRpsEnvio:
 
     @dataclass
     class Lote:
-        nr_lote: Optional[int] = field(
+        nrLote: Optional[int] = field(
             default=None,
             metadata={
-                "name": "nrLote",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        qt_rps: Optional[int] = field(
+        qtRps: Optional[int] = field(
             default=None,
             metadata={
-                "name": "qtRps",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        nr_versao_xml: Optional[int] = field(
+        nrVersaoXml: Optional[int] = field(
             default=None,
             metadata={
-                "name": "nrVersaoXml",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -70,10 +67,9 @@ class EnviarLoteRpsEnvio:
                 "required": True,
             }
         )
-        lista_rps: Optional["EnviarLoteRpsEnvio.Lote.ListaRps"] = field(
+        listaRps: Optional["EnviarLoteRpsEnvio.Lote.ListaRps"] = field(
             default=None,
             metadata={
-                "name": "listaRps",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

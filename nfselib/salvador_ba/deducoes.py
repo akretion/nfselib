@@ -142,10 +142,9 @@ class Endereco:
 
 @dataclass
 class IssRetido:
-    iss_retido: Optional[str] = field(
+    issRetido: Optional[str] = field(
         default=None,
         metadata={
-            "name": "issRetido",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -162,10 +161,9 @@ class IssRetido:
             "fraction_digits": 4,
         }
     )
-    data_retencao: Optional[XmlDate] = field(
+    dataRetencao: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dataRetencao",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
         }
@@ -183,10 +181,9 @@ class MaterialAplicado:
             "total_digits": 14,
         }
     )
-    nome_razao_social: Optional[str] = field(
+    nomeRazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nomeRazaoSocial",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -195,10 +192,9 @@ class MaterialAplicado:
             "white_space": "collapse",
         }
     )
-    numero_nota_materiais: Optional[int] = field(
+    numeroNotaMateriais: Optional[int] = field(
         default=None,
         metadata={
-            "name": "numeroNotaMateriais",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -206,10 +202,9 @@ class MaterialAplicado:
             "total_digits": 9,
         }
     )
-    valor_nota: Optional[Decimal] = field(
+    valorNota: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "valorNota",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -218,10 +213,9 @@ class MaterialAplicado:
             "fraction_digits": 2,
         }
     )
-    valor_aplicado: Optional[Decimal] = field(
+    valorAplicado: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "valorAplicado",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -230,10 +224,9 @@ class MaterialAplicado:
             "fraction_digits": 2,
         }
     )
-    data_emissao: Optional[XmlDate] = field(
+    dataEmissao: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dataEmissao",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -261,10 +254,9 @@ class ListaMaterialAplicado:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd"
 
-    material_aplicado: List[MaterialAplicado] = field(
+    materialAplicado: List[MaterialAplicado] = field(
         default_factory=list,
         metadata={
-            "name": "materialAplicado",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -273,28 +265,25 @@ class ListaMaterialAplicado:
 
 @dataclass
 class OutrosServicosTomados:
-    data_emissao: Optional[XmlDate] = field(
+    dataEmissao: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dataEmissao",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
         }
     )
-    tipo_documento: Optional[TipoDocumentoOutrosServicosTomados] = field(
+    tipoDocumento: Optional[TipoDocumentoOutrosServicosTomados] = field(
         default=None,
         metadata={
-            "name": "tipoDocumento",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
         }
     )
-    numero_documento: Optional[int] = field(
+    numeroDocumento: Optional[int] = field(
         default=None,
         metadata={
-            "name": "numeroDocumento",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -302,10 +291,9 @@ class OutrosServicosTomados:
             "total_digits": 9,
         }
     )
-    nome_razao_social: Optional[str] = field(
+    nomeRazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nomeRazaoSocial",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -314,10 +302,9 @@ class OutrosServicosTomados:
             "white_space": "collapse",
         }
     )
-    cpf_cnpj: Optional[CpfouCnpj] = field(
+    cpfCnpj: Optional[CpfouCnpj] = field(
         default=None,
         metadata={
-            "name": "cpfCnpj",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -333,20 +320,18 @@ class OutrosServicosTomados:
             "white_space": "collapse",
         }
     )
-    optante_simples_nacional: Optional[str] = field(
+    optanteSimplesNacional: Optional[str] = field(
         default=None,
         metadata={
-            "name": "optanteSimplesNacional",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
             "pattern": r"[1|2]{1}",
         }
     )
-    item_lista_servico: Optional[str] = field(
+    itemListaServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "itemListaServico",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -355,10 +340,9 @@ class OutrosServicosTomados:
             "white_space": "collapse",
         }
     )
-    valor_servico: Optional[Decimal] = field(
+    valorServico: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "valorServico",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -367,10 +351,9 @@ class OutrosServicosTomados:
             "fraction_digits": 2,
         }
     )
-    iss_retido: Optional[IssRetido] = field(
+    issRetido: Optional[IssRetido] = field(
         default=None,
         metadata={
-            "name": "issRetido",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
         }
@@ -379,19 +362,17 @@ class OutrosServicosTomados:
 
 @dataclass
 class SubEmpreitada:
-    cpf_cnpj: Optional[CpfouCnpj] = field(
+    cpfCnpj: Optional[CpfouCnpj] = field(
         default=None,
         metadata={
-            "name": "cpfCnpj",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
         }
     )
-    nome_razao_social: Optional[str] = field(
+    nomeRazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nomeRazaoSocial",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -400,20 +381,18 @@ class SubEmpreitada:
             "white_space": "collapse",
         }
     )
-    optante_simples_nacional: Optional[str] = field(
+    optanteSimplesNacional: Optional[str] = field(
         default=None,
         metadata={
-            "name": "optanteSimplesNacional",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
             "pattern": r"[1|2]{1}",
         }
     )
-    numero_documento: Optional[int] = field(
+    numeroDocumento: Optional[int] = field(
         default=None,
         metadata={
-            "name": "numeroDocumento",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -421,28 +400,25 @@ class SubEmpreitada:
             "total_digits": 9,
         }
     )
-    tipo_documento: Optional[TipoDocumentoSubempreitada] = field(
+    tipoDocumento: Optional[TipoDocumentoSubempreitada] = field(
         default=None,
         metadata={
-            "name": "tipoDocumento",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
         }
     )
-    data_emissao: Optional[XmlDate] = field(
+    dataEmissao: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dataEmissao",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
         }
     )
-    valor_documento: Optional[Decimal] = field(
+    valorDocumento: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "valorDocumento",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -451,10 +427,9 @@ class SubEmpreitada:
             "fraction_digits": 2,
         }
     )
-    iss_retido: Optional[IssRetido] = field(
+    issRetido: Optional[IssRetido] = field(
         default=None,
         metadata={
-            "name": "issRetido",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
         }
@@ -484,10 +459,9 @@ class ListaOutrosServicosTomados:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd"
 
-    outros_servicos_tomados: List[OutrosServicosTomados] = field(
+    outrosServicosTomados: List[OutrosServicosTomados] = field(
         default_factory=list,
         metadata={
-            "name": "outrosServicosTomados",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -499,10 +473,9 @@ class ListaSubEmpreitada:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd"
 
-    sub_empreitada: List[SubEmpreitada] = field(
+    subEmpreitada: List[SubEmpreitada] = field(
         default_factory=list,
         metadata={
-            "name": "subEmpreitada",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -511,10 +484,9 @@ class ListaSubEmpreitada:
 
 @dataclass
 class Cliente:
-    nome_razao_social: Optional[str] = field(
+    nomeRazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nomeRazaoSocial",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -523,10 +495,9 @@ class Cliente:
             "white_space": "collapse",
         }
     )
-    cpf_cnpj: Optional[CpfouCnpj] = field(
+    cpfCnpj: Optional[CpfouCnpj] = field(
         default=None,
         metadata={
-            "name": "cpfCnpj",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -548,7 +519,7 @@ class Cliente:
             "required": True,
         }
     )
-    lista_outros_servicos_tomados: Optional[ListaOutrosServicosTomados] = field(
+    listaOutrosServicosTomados: Optional[ListaOutrosServicosTomados] = field(
         default=None,
         metadata={
             "name": "ListaOutrosServicosTomados",
@@ -582,7 +553,7 @@ class DmseOutrosServicosTomados:
             "required": True,
         }
     )
-    lista_outros_servicos_tomados: Optional[ListaOutrosServicosTomados] = field(
+    listaOutrosServicosTomados: Optional[ListaOutrosServicosTomados] = field(
         default=None,
         metadata={
             "name": "ListaOutrosServicosTomados",
@@ -594,10 +565,9 @@ class DmseOutrosServicosTomados:
 
 @dataclass
 class Obra:
-    nome_razao_social: Optional[str] = field(
+    nomeRazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nomeRazaoSocial",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -606,19 +576,17 @@ class Obra:
             "white_space": "collapse",
         }
     )
-    data_inicio: Optional[XmlDate] = field(
+    dataInicio: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dataInicio",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
         }
     )
-    data_termino: Optional[XmlDate] = field(
+    dataTermino: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dataTermino",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
         }
@@ -634,10 +602,9 @@ class Obra:
             "white_space": "collapse",
         }
     )
-    cpf_cnpj: Optional[CpfouCnpj] = field(
+    cpfCnpj: Optional[CpfouCnpj] = field(
         default=None,
         metadata={
-            "name": "cpfCnpj",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
             "required": True,
@@ -659,7 +626,7 @@ class Obra:
             "required": True,
         }
     )
-    lista_sub_empreitada: Optional[ListaSubEmpreitada] = field(
+    listaSubEmpreitada: Optional[ListaSubEmpreitada] = field(
         default=None,
         metadata={
             "name": "ListaSubEmpreitada",
@@ -667,7 +634,7 @@ class Obra:
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/Deducoes.xsd",
         }
     )
-    lista_material_aplicado: Optional[ListaMaterialAplicado] = field(
+    listaMaterialAplicado: Optional[ListaMaterialAplicado] = field(
         default=None,
         metadata={
             "name": "ListaMaterialAplicado",
@@ -728,7 +695,7 @@ class DmseClientes:
             "required": True,
         }
     )
-    lista_clientes: Optional[ListaClientes] = field(
+    listaClientes: Optional[ListaClientes] = field(
         default=None,
         metadata={
             "name": "ListaClientes",
@@ -761,7 +728,7 @@ class DmseObras:
             "required": True,
         }
     )
-    lista_obras: Optional[ListaObras] = field(
+    listaObras: Optional[ListaObras] = field(
         default=None,
         metadata={
             "name": "ListaObras",

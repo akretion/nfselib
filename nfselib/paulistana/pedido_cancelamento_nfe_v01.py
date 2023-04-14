@@ -16,8 +16,8 @@ class PedidoCancelamentoNfe:
     Este Schema XML é utilizado pelos Prestadores de serviços cancelarem
     NFS-e emitidas por eles.
 
-    :ivar cabecalho: Cabeçalho do pedido.
-    :ivar detalhe: Detalhe do pedido de cancelamento de NFS-e. Cada
+    :ivar Cabecalho: Cabeçalho do pedido.
+    :ivar Detalhe: Detalhe do pedido de cancelamento de NFS-e. Cada
         detalhe deverá conter a Chave de uma NFS-e e sua respectiva
         assinatura de cancelamento.
     :ivar signature: Assinatura digital do CNPJ emissor das NFS-e
@@ -26,19 +26,17 @@ class PedidoCancelamentoNfe:
         name = "PedidoCancelamentoNFe"
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["PedidoCancelamentoNfe.Cabecalho"] = field(
+    Cabecalho: Optional["PedidoCancelamentoNfe.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    detalhe: List["PedidoCancelamentoNfe.Detalhe"] = field(
+    Detalhe: List["PedidoCancelamentoNfe.Detalhe"] = field(
         default_factory=list,
         metadata={
-            "name": "Detalhe",
             "type": "Element",
             "namespace": "",
             "min_occurs": 1,
@@ -58,7 +56,7 @@ class PedidoCancelamentoNfe:
     @dataclass
     class Cabecalho:
         """
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
         :ivar transacao: Informe se as NFS-e a serem canceladas farão
             parte de uma mesma transação. True - As NFS-e só serão
@@ -67,12 +65,11 @@ class PedidoCancelamentoNfe:
             canceladas serão canceladas, mesmo que ocorram eventos de
             erro durante processamento do cancelamento de outras NFS-e
             deste lote.
-        :ivar versao: Informe a Versão do Schema XML utilizado.
+        :ivar Versao: Informe a Versão do Schema XML utilizado.
         """
-        cpfcnpjremetente: Optional[TpCpfcnpj] = field(
+        CPFCNPJRemetente: Optional[TpCpfcnpj] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -86,11 +83,10 @@ class PedidoCancelamentoNfe:
                 "required": True,
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",
@@ -100,23 +96,21 @@ class PedidoCancelamentoNfe:
     @dataclass
     class Detalhe:
         """
-        :ivar chave_nfe: Chave da NFS-e a ser cancelada.
-        :ivar assinatura_cancelamento: Assinatura da NFS-e a ser
+        :ivar ChaveNFe: Chave da NFS-e a ser cancelada.
+        :ivar AssinaturaCancelamento: Assinatura da NFS-e a ser
             cancelada.
         """
-        chave_nfe: Optional[TpChaveNfe] = field(
+        ChaveNFe: Optional[TpChaveNfe] = field(
             default=None,
             metadata={
-                "name": "ChaveNFe",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        assinatura_cancelamento: Optional[bytes] = field(
+        AssinaturaCancelamento: Optional[bytes] = field(
             default=None,
             metadata={
-                "name": "AssinaturaCancelamento",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

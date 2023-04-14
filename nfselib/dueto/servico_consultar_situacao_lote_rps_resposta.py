@@ -10,22 +10,20 @@ class ConsultarSituacaoLoteRpsResposta:
     class Meta:
         namespace = "http://tempuri.org/servico_consultar_situacao_lote_rps_resposta.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    situacao: Optional[int] = field(
+    Situacao: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Situacao",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",

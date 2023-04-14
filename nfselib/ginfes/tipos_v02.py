@@ -19,10 +19,9 @@ class TcCancelamentoNfse:
             "required": True,
         }
     )
-    motivo: Optional[str] = field(
+    Motivo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Motivo",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -38,10 +37,9 @@ class TcContato:
     """
     Representa forma de contato com a pessoa (física/jurídica)
     """
-    telefone: Optional[str] = field(
+    Telefone: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Telefone",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -49,10 +47,9 @@ class TcContato:
             "white_space": "collapse",
         }
     )
-    email: Optional[str] = field(
+    Email: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Email",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -67,13 +64,12 @@ class TcCpfCnpj:
     """
     Número de CPF ou CNPJ.
 
-    :ivar cpf: Número do Cpf
-    :ivar cnpj: Número do Cnpj
+    :ivar Cpf: Número do Cpf
+    :ivar Cnpj: Número do Cnpj
     """
-    cpf: Optional[str] = field(
+    Cpf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cpf",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -81,10 +77,9 @@ class TcCpfCnpj:
             "white_space": "collapse",
         }
     )
-    cnpj: Optional[str] = field(
+    Cnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cnpj",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -99,18 +94,17 @@ class TcEndereco:
     """
     Representação completa do endereço.
 
-    :ivar endereco: Endereço
-    :ivar numero: Número do endereço
-    :ivar complemento: Complemento do Endereço
-    :ivar bairro: Nome do bairro
-    :ivar cidade: Código da cidade
-    :ivar estado: Sigla do estado
-    :ivar cep: CEP da localidade
+    :ivar Endereco: Endereço
+    :ivar Numero: Número do endereço
+    :ivar Complemento: Complemento do Endereço
+    :ivar Bairro: Nome do bairro
+    :ivar Cidade: Código da cidade
+    :ivar Estado: Sigla do estado
+    :ivar Cep: CEP da localidade
     """
-    endereco: Optional[str] = field(
+    Endereco: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -118,10 +112,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    numero: Optional[str] = field(
+    Numero: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -129,10 +122,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    complemento: Optional[str] = field(
+    Complemento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Complemento",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -140,10 +132,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    bairro: Optional[str] = field(
+    Bairro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Bairro",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -151,19 +142,17 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    cidade: Optional[int] = field(
+    Cidade: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Cidade",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "total_digits": 7,
         }
     )
-    estado: Optional[str] = field(
+    Estado: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Estado",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -171,10 +160,9 @@ class TcEndereco:
             "white_space": "collapse",
         }
     )
-    cep: Optional[str] = field(
+    Cep: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cep",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 8,
@@ -188,10 +176,9 @@ class TcIdentificacaoIntermediarioServico:
     """
     Representa dados para identificação de intermediário do serviço.
     """
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -200,10 +187,9 @@ class TcIdentificacaoIntermediarioServico:
             "white_space": "collapse",
         }
     )
-    cnpj: Optional[str] = field(
+    Cnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cnpj",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -212,10 +198,9 @@ class TcIdentificacaoIntermediarioServico:
             "white_space": "collapse",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -230,30 +215,29 @@ class TcValores:
     """
     Representa um conjunto de valores que compõe o documento fiscal.
 
-    :ivar valor_servicos:
-    :ivar valor_deducoes:
-    :ivar valor_pis:
-    :ivar valor_cofins:
-    :ivar valor_inss:
-    :ivar valor_ir:
-    :ivar valor_csll:
-    :ivar iss_retido:
-    :ivar valor_iss:
-    :ivar outras_retencoes:
-    :ivar base_calculo: (Valor dos serviços - Valor das deduções -
+    :ivar ValorServicos:
+    :ivar ValorDeducoes:
+    :ivar ValorPis:
+    :ivar ValorCofins:
+    :ivar ValorInss:
+    :ivar ValorIr:
+    :ivar ValorCsll:
+    :ivar IssRetido:
+    :ivar ValorIss:
+    :ivar OutrasRetencoes:
+    :ivar BaseCalculo: (Valor dos serviços - Valor das deduções -
         descontos incondicionados)
-    :ivar aliquota:
-    :ivar valor_liquido_nfse: (ValorServicos - ValorPIS - ValorCOFINS -
+    :ivar Aliquota:
+    :ivar ValorLiquidoNfse: (ValorServicos - ValorPIS - ValorCOFINS -
         ValorINSS - ValorIR - ValorCSLL - OutrasRetençoes -
         ValorISSRetido - DescontoIncondicionado - DescontoCondicionado)
-    :ivar valor_iss_retido:
-    :ivar desconto_condicionado:
-    :ivar desconto_incondicionado:
+    :ivar ValorIssRetido:
+    :ivar DescontoCondicionado:
+    :ivar DescontoIncondicionado:
     """
-    valor_servicos: Optional[str] = field(
+    ValorServicos: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorServicos",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -261,70 +245,63 @@ class TcValores:
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    valor_deducoes: Optional[str] = field(
+    ValorDeducoes: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorDeducoes",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    valor_pis: Optional[str] = field(
+    ValorPis: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorPis",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    valor_cofins: Optional[str] = field(
+    ValorCofins: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorCofins",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    valor_inss: Optional[str] = field(
+    ValorInss: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorInss",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    valor_ir: Optional[str] = field(
+    ValorIr: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorIr",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    valor_csll: Optional[str] = field(
+    ValorCsll: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorCsll",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    iss_retido: Optional[int] = field(
+    IssRetido: Optional[int] = field(
         default=None,
         metadata={
-            "name": "IssRetido",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -333,30 +310,27 @@ class TcValores:
             "total_digits": 1,
         }
     )
-    valor_iss: Optional[str] = field(
+    ValorIss: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorIss",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    outras_retencoes: Optional[str] = field(
+    OutrasRetencoes: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OutrasRetencoes",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    base_calculo: Optional[str] = field(
+    BaseCalculo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "BaseCalculo",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -364,49 +338,44 @@ class TcValores:
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    aliquota: Optional[Decimal] = field(
+    Aliquota: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "Aliquota",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "fraction_digits": 4,
         }
     )
-    valor_liquido_nfse: Optional[str] = field(
+    ValorLiquidoNfse: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorLiquidoNfse",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    valor_iss_retido: Optional[str] = field(
+    ValorIssRetido: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorIssRetido",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    desconto_condicionado: Optional[str] = field(
+    DescontoCondicionado: Optional[str] = field(
         default=None,
         metadata={
-            "name": "DescontoCondicionado",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    desconto_incondicionado: Optional[str] = field(
+    DescontoIncondicionado: Optional[str] = field(
         default=None,
         metadata={
-            "name": "DescontoIncondicionado",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
@@ -423,10 +392,9 @@ class TcDadosConstrucaoCivil:
     class Meta:
         name = "tcDadosConstrucaoCivil"
 
-    codigo_obra: Optional[str] = field(
+    CodigoObra: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoObra",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -435,10 +403,9 @@ class TcDadosConstrucaoCivil:
             "white_space": "collapse",
         }
     )
-    art: Optional[str] = field(
+    Art: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Art",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -457,20 +424,18 @@ class TcIdentificacaoNfse:
     class Meta:
         name = "tcIdentificacaoNfse"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
             "total_digits": 15,
         }
     )
-    codigo_verificacao: Optional[str] = field(
+    CodigoVerificacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoVerificacao",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -489,20 +454,18 @@ class TcIdentificacaoOrgaoGerador:
     class Meta:
         name = "tcIdentificacaoOrgaoGerador"
 
-    codigo_municipio: Optional[int] = field(
+    CodigoMunicipio: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoMunicipio",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
             "total_digits": 7,
         }
     )
-    uf: Optional[str] = field(
+    Uf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Uf",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -521,10 +484,9 @@ class TcIdentificacaoPrestador:
     class Meta:
         name = "tcIdentificacaoPrestador"
 
-    cnpj: Optional[str] = field(
+    Cnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cnpj",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -533,10 +495,9 @@ class TcIdentificacaoPrestador:
             "white_space": "collapse",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -554,20 +515,18 @@ class TcIdentificacaoRps:
     class Meta:
         name = "tcIdentificacaoRps"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
             "total_digits": 15,
         }
     )
-    serie: Optional[str] = field(
+    Serie: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Serie",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -576,10 +535,9 @@ class TcIdentificacaoRps:
             "white_space": "collapse",
         }
     )
-    tipo: Optional[int] = field(
+    Tipo: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Tipo",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -598,10 +556,9 @@ class TcMensagemRetorno:
     class Meta:
         name = "tcMensagemRetorno"
 
-    codigo: Optional[str] = field(
+    Codigo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Codigo",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -610,10 +567,9 @@ class TcMensagemRetorno:
             "white_space": "collapse",
         }
     )
-    mensagem: Optional[str] = field(
+    Mensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Mensagem",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -622,10 +578,9 @@ class TcMensagemRetorno:
             "white_space": "collapse",
         }
     )
-    correcao: Optional[str] = field(
+    Correcao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Correcao",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -640,19 +595,17 @@ class TcDadosServico:
     """
     Representa dados que compõe o serviço prestado.
     """
-    valores: Optional[TcValores] = field(
+    Valores: Optional[TcValores] = field(
         default=None,
         metadata={
-            "name": "Valores",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    item_lista_servico: Optional[str] = field(
+    ItemListaServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ItemListaServico",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -661,19 +614,17 @@ class TcDadosServico:
             "white_space": "collapse",
         }
     )
-    codigo_cnae: Optional[int] = field(
+    CodigoCnae: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoCnae",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "total_digits": 7,
         }
     )
-    codigo_tributacao_municipio: Optional[str] = field(
+    CodigoTributacaoMunicipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoTributacaoMunicipio",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -681,10 +632,9 @@ class TcDadosServico:
             "white_space": "collapse",
         }
     )
-    discriminacao: Optional[str] = field(
+    Discriminacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Discriminacao",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -693,10 +643,9 @@ class TcDadosServico:
             "white_space": "collapse",
         }
     )
-    municipio_prestacao_servico: Optional[int] = field(
+    MunicipioPrestacaoServico: Optional[int] = field(
         default=None,
         metadata={
-            "name": "MunicipioPrestacaoServico",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -713,19 +662,17 @@ class TcDadosPrestador:
     class Meta:
         name = "tcDadosPrestador"
 
-    identificacao_prestador: Optional[TcIdentificacaoPrestador] = field(
+    IdentificacaoPrestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoPrestador",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -734,10 +681,9 @@ class TcDadosPrestador:
             "white_space": "collapse",
         }
     )
-    nome_fantasia: Optional[str] = field(
+    NomeFantasia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomeFantasia",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -745,19 +691,17 @@ class TcDadosPrestador:
             "white_space": "collapse",
         }
     )
-    endereco: Optional[TcEndereco] = field(
+    Endereco: Optional[TcEndereco] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    contato: Optional[TcContato] = field(
+    Contato: Optional[TcContato] = field(
         default=None,
         metadata={
-            "name": "Contato",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
@@ -772,18 +716,16 @@ class TcIdentificacaoTomador:
     class Meta:
         name = "tcIdentificacaoTomador"
 
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -801,19 +743,17 @@ class TcMensagemRetornoLote:
     class Meta:
         name = "tcMensagemRetornoLote"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    codigo: Optional[str] = field(
+    Codigo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Codigo",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -822,10 +762,9 @@ class TcMensagemRetornoLote:
             "white_space": "collapse",
         }
     )
-    mensagem: Optional[str] = field(
+    Mensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Mensagem",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -844,18 +783,16 @@ class TcDadosTomador:
     class Meta:
         name = "tcDadosTomador"
 
-    identificacao_tomador: Optional[TcIdentificacaoTomador] = field(
+    IdentificacaoTomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoTomador",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
     )
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -863,18 +800,16 @@ class TcDadosTomador:
             "white_space": "collapse",
         }
     )
-    endereco: Optional[TcEndereco] = field(
+    Endereco: Optional[TcEndereco] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
     )
-    contato: Optional[TcContato] = field(
+    Contato: Optional[TcContato] = field(
         default=None,
         metadata={
-            "name": "Contato",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
@@ -886,44 +821,39 @@ class TcNfseSemCancelamento:
     """
     Representa a estrutura da Nota Fiscal de Serviços Eletrônica.
     """
-    identificacao_nfse: Optional[TcIdentificacaoNfse] = field(
+    IdentificacaoNfse: Optional[TcIdentificacaoNfse] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoNfse",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
     )
-    data_emissao_rps: Optional[XmlDate] = field(
+    DataEmissaoRps: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "DataEmissaoRps",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
     )
-    natureza_operacao: Optional[int] = field(
+    NaturezaOperacao: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NaturezaOperacao",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -932,10 +862,9 @@ class TcNfseSemCancelamento:
             "total_digits": 2,
         }
     )
-    regime_especial_tributacao: Optional[int] = field(
+    RegimeEspecialTributacao: Optional[int] = field(
         default=None,
         metadata={
-            "name": "RegimeEspecialTributacao",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_inclusive": 1,
@@ -943,10 +872,9 @@ class TcNfseSemCancelamento:
             "total_digits": 2,
         }
     )
-    optante_simples_nacional: Optional[int] = field(
+    OptanteSimplesNacional: Optional[int] = field(
         default=None,
         metadata={
-            "name": "OptanteSimplesNacional",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -955,10 +883,9 @@ class TcNfseSemCancelamento:
             "total_digits": 1,
         }
     )
-    incetivador_cultural: Optional[int] = field(
+    IncetivadorCultural: Optional[int] = field(
         default=None,
         metadata={
-            "name": "IncetivadorCultural",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -967,28 +894,25 @@ class TcNfseSemCancelamento:
             "total_digits": 1,
         }
     )
-    competencia: Optional[int] = field(
+    Competencia: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Competencia",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
             "total_digits": 6,
         }
     )
-    nfse_substituida: Optional[TcIdentificacaoNfse] = field(
+    NfseSubstituida: Optional[TcIdentificacaoNfse] = field(
         default=None,
         metadata={
-            "name": "NfseSubstituida",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
     )
-    outras_informacoes: Optional[str] = field(
+    OutrasInformacoes: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OutrasInformacoes",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_length": 1,
@@ -996,64 +920,57 @@ class TcNfseSemCancelamento:
             "white_space": "collapse",
         }
     )
-    servico: Optional[TcDadosServico] = field(
+    Servico: Optional[TcDadosServico] = field(
         default=None,
         metadata={
-            "name": "Servico",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    valor_credito: Optional[str] = field(
+    ValorCredito: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ValorCredito",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "max_length": 15,
             "pattern": r"[0-9]{1,15}(\.[0-9]{2})?",
         }
     )
-    prestador_servico: Optional[TcDadosPrestador] = field(
+    PrestadorServico: Optional[TcDadosPrestador] = field(
         default=None,
         metadata={
-            "name": "PrestadorServico",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    tomador_servico: Optional[TcDadosTomador] = field(
+    TomadorServico: Optional[TcDadosTomador] = field(
         default=None,
         metadata={
-            "name": "TomadorServico",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    intermediario_servico: Optional[TcIdentificacaoIntermediarioServico] = field(
+    IntermediarioServico: Optional[TcIdentificacaoIntermediarioServico] = field(
         default=None,
         metadata={
-            "name": "IntermediarioServico",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
     )
-    orgao_gerador: Optional[TcIdentificacaoOrgaoGerador] = field(
+    OrgaoGerador: Optional[TcIdentificacaoOrgaoGerador] = field(
         default=None,
         metadata={
-            "name": "OrgaoGerador",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    construcao_civil: Optional[TcDadosConstrucaoCivil] = field(
+    ConstrucaoCivil: Optional[TcDadosConstrucaoCivil] = field(
         default=None,
         metadata={
-            "name": "ConstrucaoCivil",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
@@ -1065,28 +982,25 @@ class TcRps:
     """
     Representa a estrutura de Recibo Provisório de Serviço (RPS)
     """
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    natureza_operacao: Optional[int] = field(
+    NaturezaOperacao: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NaturezaOperacao",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -1095,10 +1009,9 @@ class TcRps:
             "total_digits": 2,
         }
     )
-    regime_especial_tributacao: Optional[int] = field(
+    RegimeEspecialTributacao: Optional[int] = field(
         default=None,
         metadata={
-            "name": "RegimeEspecialTributacao",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "min_inclusive": 1,
@@ -1106,10 +1019,9 @@ class TcRps:
             "total_digits": 2,
         }
     )
-    optante_simples_nacional: Optional[int] = field(
+    OptanteSimplesNacional: Optional[int] = field(
         default=None,
         metadata={
-            "name": "OptanteSimplesNacional",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -1118,10 +1030,9 @@ class TcRps:
             "total_digits": 1,
         }
     )
-    incentivador_cultural: Optional[int] = field(
+    IncentivadorCultural: Optional[int] = field(
         default=None,
         metadata={
-            "name": "IncentivadorCultural",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -1130,10 +1041,9 @@ class TcRps:
             "total_digits": 1,
         }
     )
-    status: Optional[int] = field(
+    Status: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Status",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
@@ -1142,53 +1052,47 @@ class TcRps:
             "total_digits": 1,
         }
     )
-    rps_substituido: Optional[TcIdentificacaoRps] = field(
+    RpsSubstituido: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "RpsSubstituido",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
     )
-    servico: Optional[TcDadosServico] = field(
+    Servico: Optional[TcDadosServico] = field(
         default=None,
         metadata={
-            "name": "Servico",
-            "type": "Element",
-            "namespace": "http://www.ginfes.com.br/tipos",
-            "required": True,
-        }
-    )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
-        default=None,
-        metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    tomador: Optional[TcDadosTomador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    intermediario_servico: Optional[TcIdentificacaoIntermediarioServico] = field(
+    Tomador: Optional[TcDadosTomador] = field(
         default=None,
         metadata={
-            "name": "IntermediarioServico",
+            "type": "Element",
+            "namespace": "http://www.ginfes.com.br/tipos",
+            "required": True,
+        }
+    )
+    IntermediarioServico: Optional[TcIdentificacaoIntermediarioServico] = field(
+        default=None,
+        metadata={
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
     )
-    construcao_civil: Optional[TcDadosConstrucaoCivil] = field(
+    ConstrucaoCivil: Optional[TcDadosConstrucaoCivil] = field(
         default=None,
         metadata={
-            "name": "ConstrucaoCivil",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }
@@ -1201,19 +1105,17 @@ class TcNfse:
     Representa a estrutura de NFS-e incluindo a estrutura de cancelamento da
     mesma, quando existente.
     """
-    nfse: Optional[TcNfseSemCancelamento] = field(
+    Nfse: Optional[TcNfseSemCancelamento] = field(
         default=None,
         metadata={
-            "name": "Nfse",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,
         }
     )
-    cancelamento: Optional[TcCancelamentoNfse] = field(
+    Cancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
-            "name": "Cancelamento",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
         }

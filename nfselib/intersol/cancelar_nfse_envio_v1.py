@@ -10,10 +10,9 @@ class CancelarNfseEnvio:
     class Meta:
         namespace = "http://ws.speedgov.com.br/cancelar_nfse_envio_v1.xsd"
 
-    pedido: Optional[TcPedidoCancelamento] = field(
+    Pedido: Optional[TcPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "",
             "required": True,

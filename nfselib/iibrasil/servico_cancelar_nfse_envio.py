@@ -10,10 +10,9 @@ class CancelarNfseEnvio:
     class Meta:
         namespace = "http://tempuri.org/servico_enviar_lote_rps_envio.xsd"
 
-    pedido: Optional[TcPedidoCancelamento] = field(
+    Pedido: Optional[TcPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "",
             "required": True,

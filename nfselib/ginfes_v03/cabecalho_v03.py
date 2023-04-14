@@ -10,10 +10,9 @@ class Cabecalho:
         name = "cabecalho"
         namespace = "http://www.ginfes.com.br/cabecalho_v03.xsd"
 
-    versao_dados: Optional[str] = field(
+    versaoDados: Optional[str] = field(
         default=None,
         metadata={
-            "name": "versaoDados",
             "type": "Element",
             "namespace": "",
             "required": True,

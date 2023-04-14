@@ -84,19 +84,17 @@ class Nfeeletronica:
     class Meta:
         name = "NFEEletronica"
 
-    header: Optional["Nfeeletronica.Header"] = field(
+    Header: Optional["Nfeeletronica.Header"] = field(
         default=None,
         metadata={
-            "name": "Header",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    dados_nota_fiscal: List["Nfeeletronica.DadosNotaFiscal"] = field(
+    DadosNotaFiscal: List["Nfeeletronica.DadosNotaFiscal"] = field(
         default_factory=list,
         metadata={
-            "name": "DadosNotaFiscal",
             "type": "Element",
             "namespace": "",
             "min_occurs": 1,
@@ -107,26 +105,24 @@ class Nfeeletronica:
     @dataclass
     class Header:
         """
-        :ivar versao: Identifica a versão do layout - Fixo 002
-        :ivar cnpjcpfprestador: CNPJ / CPF do emissor da Nota Fiscal
+        :ivar Versao: Identifica a versão do layout - Fixo 002
+        :ivar CNPJCPFPrestador: CNPJ / CPF do emissor da Nota Fiscal
             (sem máscara)
-        :ivar chave: Chave identificadora da empresa adquirida pelo
+        :ivar Chave: Chave identificadora da empresa adquirida pelo
             sistema de ISS ELetrônico
         """
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="002",
             metadata={
-                "name": "Versao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        cnpjcpfprestador: Optional[str] = field(
+        CNPJCPFPrestador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CNPJCPFPrestador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -134,10 +130,9 @@ class Nfeeletronica:
                 "max_length": 14,
             }
         )
-        chave: Optional[str] = field(
+        Chave: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Chave",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -148,112 +143,106 @@ class Nfeeletronica:
     @dataclass
     class DadosNotaFiscal:
         """
-        :ivar id: Identificador do Registro (RPS)
-        :ivar numero_nf:
-        :ivar situacao_nf: Situação da Nota Fiscal N - para Nota Normal
-        :ivar tipo_nf: Tipo da Nota Fiscal P - para Serviço Prestado
-        :ivar emissao: Data de Emissão da Nota Fiscal (*não informar)
-        :ivar cnpjcpftomador: CNPJ / CPF do Tomador de Serviço (sem
+        :ivar ID: Identificador do Registro (RPS)
+        :ivar NumeroNF:
+        :ivar SituacaoNF: Situação da Nota Fiscal N - para Nota Normal
+        :ivar TipoNF: Tipo da Nota Fiscal P - para Serviço Prestado
+        :ivar Emissao: Data de Emissão da Nota Fiscal (*não informar)
+        :ivar CNPJCPFTomador: CNPJ / CPF do Tomador de Serviço (sem
             máscara)
-        :ivar nome_tomador: Nome ou Razão Social do Tomador de Serviço
-        :ivar uftomador: Sigla do Estado do Tomador de Serviço
-        :ivar cidade_tomador: Código do Município na Tabela IBGE do
+        :ivar NomeTomador: Nome ou Razão Social do Tomador de Serviço
+        :ivar UFTomador: Sigla do Estado do Tomador de Serviço
+        :ivar CidadeTomador: Código do Município na Tabela IBGE do
             Tomador de Serviço
-        :ivar endereco_tomador: Endereço do Tomador de Serviço
-        :ivar numero_tomador: Número do Tomador de Serviço
-        :ivar complemento_tomador: Complemento do Tomador de Serviço
-        :ivar bairro_tomador: Bairro do Tomador de Serviço
-        :ivar ceptomador: CEP do Tomador de Serviço
-        :ivar email_tomador: E-mail do Tomador de Serviço
-        :ivar observacao: Observações da Nota Fiscal
-        :ivar nfsubstituta: Informar o número da Nota Fiscal Substituta
+        :ivar EnderecoTomador: Endereço do Tomador de Serviço
+        :ivar NumeroTomador: Número do Tomador de Serviço
+        :ivar ComplementoTomador: Complemento do Tomador de Serviço
+        :ivar BairroTomador: Bairro do Tomador de Serviço
+        :ivar CEPTomador: CEP do Tomador de Serviço
+        :ivar EmailTomador: E-mail do Tomador de Serviço
+        :ivar Observacao: Observações da Nota Fiscal
+        :ivar NFSubstituta: Informar o número da Nota Fiscal Substituta
             de uma Nota Fiscal Cancelada.
-        :ivar local_prestacao: Local da Prestação do Serviço 1 - para
+        :ivar LocalPrestacao: Local da Prestação do Serviço 1 - para
             serviço na sede do prestador 2 - para serviço para imóvel
             (Construção Civil) 3 - para serviço em via pública 4 - para
             serviço fora do município
-        :ivar descricao_local_prestacao: Dados do Local de Prestação do
+        :ivar DescricaoLocalPrestacao: Dados do Local de Prestação do
             Serviço
-        :ivar descricao_local_prestacao_complementar: Dados
-            complementares do Local de Prestação do Serviço
-        :ivar inscricao_imovel: Inscrição Cadastral do Imóvel (usar
+        :ivar DescricaoLocalPrestacaoComplementar: Dados complementares
+            do Local de Prestação do Serviço
+        :ivar InscricaoImovel: Inscrição Cadastral do Imóvel (usar
             quando o Local de Prestação for do tipo 2)
-        :ivar uflocal_prestacao: Sigla do Estado da Prestação do Serviço
+        :ivar UFLocalPrestacao: Sigla do Estado da Prestação do Serviço
             (usar quando o Local de Prestação for do tipo 4)
-        :ivar cidade_local_prestacao: Cidade da Prestação do Serviço
-            (usar quando o Local de Prestação for do tipo 4)
-        :ivar endereco_local_prestacao: Endereço da Prestação do Serviço
-            (usar quando o Local de Prestação for do tipo 3 ou 4)
-        :ivar numero_local_prestacao: Número da localização do imóvel da
-            Prestação do Serviço (usar quando o Local de Prestação for
-            do tipo 4)
-        :ivar complemento_local_prestacao: Complemento do imóvel da
-            Prestação do Serviço (usar quando o Local de Prestação for
-            do tipo 4)
-        :ivar bairro_local_prestacao: Bairro da Prestação do Serviço
-            (usar quando o Local de Prestação for do tipo 4)
-        :ivar ceplocal_prestacao: CEP da Prestação do Serviço (usar
+        :ivar CidadeLocalPrestacao: Cidade da Prestação do Serviço (usar
             quando o Local de Prestação for do tipo 4)
-        :ivar motivo_cancelamento: Descrição do Motivo de Cancelamento
-            da Nota Fiscal
-        :ivar tipo_documento: Código do Tipo de Nota Fiscal (verificar
+        :ivar EnderecoLocalPrestacao: Endereço da Prestação do Serviço
+            (usar quando o Local de Prestação for do tipo 3 ou 4)
+        :ivar NumeroLocalPrestacao: Número da localização do imóvel da
+            Prestação do Serviço (usar quando o Local de Prestação for
+            do tipo 4)
+        :ivar ComplementoLocalPrestacao: Complemento do imóvel da
+            Prestação do Serviço (usar quando o Local de Prestação for
+            do tipo 4)
+        :ivar BairroLocalPrestacao: Bairro da Prestação do Serviço (usar
+            quando o Local de Prestação for do tipo 4)
+        :ivar CEPLocalPrestacao: CEP da Prestação do Serviço (usar
+            quando o Local de Prestação for do tipo 4)
+        :ivar MotivoCancelamento: Descrição do Motivo de Cancelamento da
+            Nota Fiscal
+        :ivar TipoDocumento: Código do Tipo de Nota Fiscal (verificar
             com a Prefeitura a lista de códigos válidos)
-        :ivar dados_itens_nota_fiscal:
-        :ivar dados_impostos_nota_fiscal:
+        :ivar DadosItensNotaFiscal:
+        :ivar DadosImpostosNotaFiscal:
         """
-        id: Optional[int] = field(
+        ID: Optional[int] = field(
             default=None,
             metadata={
-                "name": "ID",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        numero_nf: str = field(
+        NumeroNF: str = field(
             init=False,
             default="0000000000",
             metadata={
-                "name": "NumeroNF",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        situacao_nf: str = field(
+        SituacaoNF: str = field(
             init=False,
             default="N",
             metadata={
-                "name": "SituacaoNF",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        tipo_nf: str = field(
+        TipoNF: str = field(
             init=False,
             default="P",
             metadata={
-                "name": "TipoNF",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        emissao: XmlDate = field(
+        Emissao: XmlDate = field(
             init=False,
             default=XmlDate(1900, 1, 1),
             metadata={
-                "name": "Emissao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        cnpjcpftomador: Optional[str] = field(
+        CNPJCPFTomador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CNPJCPFTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -261,10 +250,9 @@ class Nfeeletronica:
                 "max_length": 14,
             }
         )
-        nome_tomador: Optional[str] = field(
+        NomeTomador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "NomeTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -272,29 +260,26 @@ class Nfeeletronica:
                 "max_length": 60,
             }
         )
-        uftomador: Optional[DadosNotaFiscalUftomador] = field(
+        UFTomador: Optional[DadosNotaFiscalUftomador] = field(
             default=None,
             metadata={
-                "name": "UFTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        cidade_tomador: Optional[str] = field(
+        CidadeTomador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CidadeTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{7}",
             }
         )
-        endereco_tomador: Optional[str] = field(
+        EnderecoTomador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "EnderecoTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -302,10 +287,9 @@ class Nfeeletronica:
                 "max_length": 60,
             }
         )
-        numero_tomador: Optional[str] = field(
+        NumeroTomador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "NumeroTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -313,10 +297,9 @@ class Nfeeletronica:
                 "max_length": 10,
             }
         )
-        complemento_tomador: Optional[str] = field(
+        ComplementoTomador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "ComplementoTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -324,10 +307,9 @@ class Nfeeletronica:
                 "max_length": 60,
             }
         )
-        bairro_tomador: Optional[str] = field(
+        BairroTomador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "BairroTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -335,20 +317,18 @@ class Nfeeletronica:
                 "max_length": 40,
             }
         )
-        ceptomador: Optional[str] = field(
+        CEPTomador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CEPTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{5}-[0-9]{3}",
             }
         )
-        email_tomador: Optional[str] = field(
+        EmailTomador: Optional[str] = field(
             default=None,
             metadata={
-                "name": "EmailTomador",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -356,10 +336,9 @@ class Nfeeletronica:
                 "max_length": 50,
             }
         )
-        observacao: Optional[str] = field(
+        Observacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Observacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -367,29 +346,26 @@ class Nfeeletronica:
                 "max_length": 200,
             }
         )
-        nfsubstituta: str = field(
+        NFSubstituta: str = field(
             init=False,
             default="0000000000",
             metadata={
-                "name": "NFSubstituta",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        local_prestacao: Optional[DadosNotaFiscalLocalPrestacao] = field(
+        LocalPrestacao: Optional[DadosNotaFiscalLocalPrestacao] = field(
             default=None,
             metadata={
-                "name": "LocalPrestacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        descricao_local_prestacao: Optional[str] = field(
+        DescricaoLocalPrestacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "DescricaoLocalPrestacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -397,10 +373,9 @@ class Nfeeletronica:
                 "max_length": 60,
             }
         )
-        descricao_local_prestacao_complementar: Optional[str] = field(
+        DescricaoLocalPrestacaoComplementar: Optional[str] = field(
             default=None,
             metadata={
-                "name": "DescricaoLocalPrestacaoComplementar",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -408,38 +383,34 @@ class Nfeeletronica:
                 "max_length": 50,
             }
         )
-        inscricao_imovel: Optional[Decimal] = field(
+        InscricaoImovel: Optional[Decimal] = field(
             default=None,
             metadata={
-                "name": "InscricaoImovel",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        uflocal_prestacao: Optional[DadosNotaFiscalUflocalPrestacao] = field(
+        UFLocalPrestacao: Optional[DadosNotaFiscalUflocalPrestacao] = field(
             default=None,
             metadata={
-                "name": "UFLocalPrestacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        cidade_local_prestacao: Optional[str] = field(
+        CidadeLocalPrestacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CidadeLocalPrestacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{7}",
             }
         )
-        endereco_local_prestacao: Optional[str] = field(
+        EnderecoLocalPrestacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "EnderecoLocalPrestacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -447,10 +418,9 @@ class Nfeeletronica:
                 "max_length": 60,
             }
         )
-        numero_local_prestacao: Optional[str] = field(
+        NumeroLocalPrestacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "NumeroLocalPrestacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -458,10 +428,9 @@ class Nfeeletronica:
                 "max_length": 10,
             }
         )
-        complemento_local_prestacao: Optional[str] = field(
+        ComplementoLocalPrestacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "ComplementoLocalPrestacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -469,10 +438,9 @@ class Nfeeletronica:
                 "max_length": 30,
             }
         )
-        bairro_local_prestacao: Optional[str] = field(
+        BairroLocalPrestacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "BairroLocalPrestacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -480,49 +448,44 @@ class Nfeeletronica:
                 "max_length": 40,
             }
         )
-        ceplocal_prestacao: Optional[str] = field(
+        CEPLocalPrestacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CEPLocalPrestacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{5}-[0-9]{3}",
             }
         )
-        motivo_cancelamento: str = field(
+        MotivoCancelamento: str = field(
             init=False,
             default="",
             metadata={
-                "name": "MotivoCancelamento",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        tipo_documento: Optional[str] = field(
+        TipoDocumento: Optional[str] = field(
             default=None,
             metadata={
-                "name": "TipoDocumento",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{3}",
             }
         )
-        dados_itens_nota_fiscal: Optional["Nfeeletronica.DadosNotaFiscal.DadosItensNotaFiscal"] = field(
+        DadosItensNotaFiscal: Optional["Nfeeletronica.DadosNotaFiscal.DadosItensNotaFiscal"] = field(
             default=None,
             metadata={
-                "name": "DadosItensNotaFiscal",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        dados_impostos_nota_fiscal: List["Nfeeletronica.DadosNotaFiscal.DadosImpostosNotaFiscal"] = field(
+        DadosImpostosNotaFiscal: List["Nfeeletronica.DadosNotaFiscal.DadosImpostosNotaFiscal"] = field(
             default_factory=list,
             metadata={
-                "name": "DadosImpostosNotaFiscal",
                 "type": "Element",
                 "namespace": "",
                 "max_occurs": 5,
@@ -532,29 +495,27 @@ class Nfeeletronica:
         @dataclass
         class DadosItensNotaFiscal:
             """
-            :ivar item_atividade: Código do Item da Atividade prestado
+            :ivar ItemAtividade: Código do Item da Atividade prestado
                 (de acordo com lista informada pela Prefeitura)
-            :ivar texto_item: Texto do Item da Nota Fiscal
-            :ivar valor_item: Valor do Item da Nota Fiscal
-            :ivar valor_deducao: Valor das Deduções da Nota Fiscal
-            :ivar retido: Identifica se o imposto do serviço foi retido
+            :ivar TextoItem: Texto do Item da Nota Fiscal
+            :ivar ValorItem: Valor do Item da Nota Fiscal
+            :ivar ValorDeducao: Valor das Deduções da Nota Fiscal
+            :ivar Retido: Identifica se o imposto do serviço foi retido
                 na fonte pelo Tomador S - para Imposto Retido pelo
                 Tomador N - para Imposto Não Retido pelo Tomador
-            :ivar pais:
+            :ivar Pais:
             """
-            item_atividade: Optional[int] = field(
+            ItemAtividade: Optional[int] = field(
                 default=None,
                 metadata={
-                    "name": "ItemAtividade",
                     "type": "Element",
                     "namespace": "",
                     "required": True,
                 }
             )
-            texto_item: Optional[str] = field(
+            TextoItem: Optional[str] = field(
                 default=None,
                 metadata={
-                    "name": "TextoItem",
                     "type": "Element",
                     "namespace": "",
                     "required": True,
@@ -562,37 +523,33 @@ class Nfeeletronica:
                     "max_length": 1000,
                 }
             )
-            valor_item: Optional[Decimal] = field(
+            ValorItem: Optional[Decimal] = field(
                 default=None,
                 metadata={
-                    "name": "ValorItem",
                     "type": "Element",
                     "namespace": "",
                     "required": True,
                 }
             )
-            valor_deducao: Optional[Decimal] = field(
+            ValorDeducao: Optional[Decimal] = field(
                 default=None,
                 metadata={
-                    "name": "ValorDeducao",
                     "type": "Element",
                     "namespace": "",
                     "required": True,
                 }
             )
-            retido: Optional[DadosItensNotaFiscalRetido] = field(
+            Retido: Optional[DadosItensNotaFiscalRetido] = field(
                 default=None,
                 metadata={
-                    "name": "Retido",
                     "type": "Element",
                     "namespace": "",
                     "required": True,
                 }
             )
-            pais: Optional[str] = field(
+            Pais: Optional[str] = field(
                 default=None,
                 metadata={
-                    "name": "Pais",
                     "type": "Element",
                     "namespace": "",
                     "required": True,
@@ -604,13 +561,12 @@ class Nfeeletronica:
         @dataclass
         class DadosImpostosNotaFiscal:
             """
-            :ivar imposto: Sigla do Imposto utilizado na Dedução
-            :ivar valor_imposto: Valor do Imposto utilizado na Dedução
+            :ivar Imposto: Sigla do Imposto utilizado na Dedução
+            :ivar ValorImposto: Valor do Imposto utilizado na Dedução
             """
-            imposto: Optional[str] = field(
+            Imposto: Optional[str] = field(
                 default=None,
                 metadata={
-                    "name": "Imposto",
                     "type": "Element",
                     "namespace": "",
                     "required": True,
@@ -618,10 +574,9 @@ class Nfeeletronica:
                     "max_length": 6,
                 }
             )
-            valor_imposto: Optional[Decimal] = field(
+            ValorImposto: Optional[Decimal] = field(
                 default=None,
                 metadata={
-                    "name": "ValorImposto",
                     "type": "Element",
                     "namespace": "",
                     "required": True,

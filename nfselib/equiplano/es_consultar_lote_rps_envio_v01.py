@@ -20,18 +20,16 @@ class EsConsultarLoteRpsEnvio:
             "required": True,
         }
     )
-    nr_lote_rps: Optional[int] = field(
+    nrLoteRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrLoteRps",
             "type": "Element",
             "namespace": "",
         }
     )
-    nr_protocolo: Optional[int] = field(
+    nrProtocolo: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrProtocolo",
             "type": "Element",
             "namespace": "",
         }

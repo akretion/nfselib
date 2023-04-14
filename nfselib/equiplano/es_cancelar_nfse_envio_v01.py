@@ -20,19 +20,17 @@ class EsCancelarNfseEnvio:
             "required": True,
         }
     )
-    nr_nfse: Optional[int] = field(
+    nrNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrNfse",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    ds_motivo_cancelamento: Optional[str] = field(
+    dsMotivoCancelamento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsMotivoCancelamento",
             "type": "Element",
             "namespace": "",
             "required": True,

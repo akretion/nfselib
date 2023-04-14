@@ -12,10 +12,9 @@ class ConsultarDadosCadastro:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    chave_terminal: Optional[str] = field(
+    ChaveTerminal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ChaveTerminal",
             "type": "Element",
             "required": True,
             "min_length": 1,
@@ -31,10 +30,9 @@ class Cabecalho:
         name = "cabecalho"
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    versao_dados: Optional[str] = field(
+    versaoDados: Optional[str] = field(
         default=None,
         metadata={
-            "name": "versaoDados",
             "type": "Element",
             "required": True,
             "max_length": 4,
@@ -55,10 +53,9 @@ class TccfCnae:
     class Meta:
         name = "tccfCNAE"
 
-    codigo_cnae: Optional[str] = field(
+    CodigoCNAE: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoCNAE",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -67,10 +64,9 @@ class TccfCnae:
             "white_space": "collapse",
         }
     )
-    descricao_cnae: Optional[str] = field(
+    DescricaoCNAE: Optional[str] = field(
         default=None,
         metadata={
-            "name": "DescricaoCNAE",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -86,10 +82,9 @@ class TccfContato:
     class Meta:
         name = "tccfContato"
 
-    telefone: Optional[str] = field(
+    Telefone: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Telefone",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -97,10 +92,9 @@ class TccfContato:
             "white_space": "collapse",
         }
     )
-    email: Optional[str] = field(
+    Email: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Email",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -115,19 +109,17 @@ class TccfCpfCnpj:
     class Meta:
         name = "tccfCpfCnpj"
 
-    cpf: Optional[str] = field(
+    Cpf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cpf",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "length": 11,
         }
     )
-    cnpj: Optional[str] = field(
+    Cnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cnpj",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "length": 14,
@@ -141,10 +133,9 @@ class TccfDadosTerminal:
     class Meta:
         name = "tccfDadosTerminal"
 
-    chave_terminal: Optional[str] = field(
+    ChaveTerminal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ChaveTerminal",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -153,10 +144,9 @@ class TccfDadosTerminal:
             "white_space": "collapse",
         }
     )
-    nome_maquina: Optional[str] = field(
+    NomeMaquina: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomeMaquina",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -165,10 +155,9 @@ class TccfDadosTerminal:
             "white_space": "collapse",
         }
     )
-    serial_hd: Optional[str] = field(
+    SerialHD: Optional[str] = field(
         default=None,
         metadata={
-            "name": "SerialHD",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -177,10 +166,9 @@ class TccfDadosTerminal:
             "white_space": "collapse",
         }
     )
-    mac: Optional[str] = field(
+    MAC: Optional[str] = field(
         default=None,
         metadata={
-            "name": "MAC",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -196,10 +184,9 @@ class TccfEndereco:
     class Meta:
         name = "tccfEndereco"
 
-    endereco: Optional[str] = field(
+    Endereco: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -207,10 +194,9 @@ class TccfEndereco:
             "white_space": "collapse",
         }
     )
-    numero: Optional[str] = field(
+    Numero: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -218,10 +204,9 @@ class TccfEndereco:
             "white_space": "collapse",
         }
     )
-    complemento: Optional[str] = field(
+    Complemento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Complemento",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -229,10 +214,9 @@ class TccfEndereco:
             "white_space": "collapse",
         }
     )
-    bairro: Optional[str] = field(
+    Bairro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Bairro",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -240,48 +224,43 @@ class TccfEndereco:
             "white_space": "collapse",
         }
     )
-    codigo_municipio: Optional[int] = field(
+    CodigoMunicipio: Optional[int] = field(
         default=None,
         metadata={
-            "name": "CodigoMunicipio",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
             "total_digits": 7,
         }
     )
-    uf: Optional[str] = field(
+    Uf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Uf",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "length": 2,
         }
     )
-    codigo_pais: Optional[str] = field(
+    CodigoPais: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoPais",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "length": 4,
             "white_space": "collapse",
         }
     )
-    cep: Optional[str] = field(
+    Cep: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Cep",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "length": 8,
         }
     )
-    nome_cidade: Optional[str] = field(
+    NomeCidade: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomeCidade",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
         }
@@ -293,20 +272,18 @@ class TccfIdentificacaoCfse:
     class Meta:
         name = "tccfIdentificacaoCfse"
 
-    numero: Optional[int] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Numero",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    serie: Optional[int] = field(
+    Serie: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Serie",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -321,10 +298,9 @@ class TccfMensagemRetorno:
     class Meta:
         name = "tccfMensagemRetorno"
 
-    codigo: Optional[str] = field(
+    Codigo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Codigo",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -333,10 +309,9 @@ class TccfMensagemRetorno:
             "white_space": "collapse",
         }
     )
-    mensagem: Optional[str] = field(
+    Mensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Mensagem",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -345,10 +320,9 @@ class TccfMensagemRetorno:
             "white_space": "collapse",
         }
     )
-    correcao: Optional[str] = field(
+    Correcao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Correcao",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -363,10 +337,9 @@ class TccfValoresDeclaracaoServico:
     class Meta:
         name = "tccfValoresDeclaracaoServico"
 
-    aliquota: Optional[Decimal] = field(
+    Aliquota: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "Aliquota",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -375,10 +348,9 @@ class TccfValoresDeclaracaoServico:
             "fraction_digits": 4,
         }
     )
-    valor_servicos: Optional[Decimal] = field(
+    ValorServicos: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorServicos",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -387,10 +359,9 @@ class TccfValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_deducoes: Optional[Decimal] = field(
+    ValorDeducoes: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorDeducoes",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -399,10 +370,9 @@ class TccfValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    base_calculo: Optional[Decimal] = field(
+    BaseCalculo: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "BaseCalculo",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -411,10 +381,9 @@ class TccfValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_iss: Optional[Decimal] = field(
+    ValorIss: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorIss",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -430,10 +399,9 @@ class ListaMensagemAlertaRetorno:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    mensagem_retorno: List[TccfMensagemRetorno] = field(
+    MensagemRetorno: List[TccfMensagemRetorno] = field(
         default_factory=list,
         metadata={
-            "name": "MensagemRetorno",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -445,10 +413,9 @@ class ListaMensagemRetorno:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    mensagem_retorno: List[TccfMensagemRetorno] = field(
+    MensagemRetorno: List[TccfMensagemRetorno] = field(
         default_factory=list,
         metadata={
-            "name": "MensagemRetorno",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -460,19 +427,17 @@ class TccfAtividade:
     class Meta:
         name = "tccfAtividade"
 
-    preferencial: Optional[str] = field(
+    Preferencial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Preferencial",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "pattern": r"1|2",
         }
     )
-    codigo_servico: Optional[str] = field(
+    CodigoServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoServico",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -481,10 +446,9 @@ class TccfAtividade:
             "white_space": "collapse",
         }
     )
-    descricao_servico: Optional[str] = field(
+    DescricaoServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "DescricaoServico",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -493,19 +457,17 @@ class TccfAtividade:
             "white_space": "collapse",
         }
     )
-    lista_cnae: Optional["TccfAtividade.ListaCnae"] = field(
+    ListaCNAE: Optional["TccfAtividade.ListaCnae"] = field(
         default=None,
         metadata={
-            "name": "ListaCNAE",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    aliquota: Optional[Decimal] = field(
+    Aliquota: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "Aliquota",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -517,10 +479,9 @@ class TccfAtividade:
 
     @dataclass
     class ListaCnae:
-        cnae: List[TccfCnae] = field(
+        CNAE: List[TccfCnae] = field(
             default_factory=list,
             metadata={
-                "name": "CNAE",
                 "type": "Element",
                 "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
                 "min_occurs": 1,
@@ -534,10 +495,9 @@ class TccfDadosServico:
     class Meta:
         name = "tccfDadosServico"
 
-    item_lista_servico: Optional[str] = field(
+    ItemListaServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ItemListaServico",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -546,10 +506,9 @@ class TccfDadosServico:
             "white_space": "collapse",
         }
     )
-    codigo_cnae: Optional[str] = field(
+    CodigoCnae: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoCnae",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -557,10 +516,9 @@ class TccfDadosServico:
             "white_space": "collapse",
         }
     )
-    discriminacao: Optional[str] = field(
+    Discriminacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Discriminacao",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -569,20 +527,18 @@ class TccfDadosServico:
             "white_space": "collapse",
         }
     )
-    exigibilidade_iss: Optional[str] = field(
+    ExigibilidadeISS: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ExigibilidadeISS",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
             "pattern": r"1|2|3|4|5|6|7|8",
         }
     )
-    numero_processo: Optional[str] = field(
+    NumeroProcesso: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NumeroProcesso",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -590,10 +546,9 @@ class TccfDadosServico:
             "white_space": "collapse",
         }
     )
-    valores: Optional[TccfValoresDeclaracaoServico] = field(
+    Valores: Optional[TccfValoresDeclaracaoServico] = field(
         default=None,
         metadata={
-            "name": "Valores",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -606,19 +561,17 @@ class TccfIdentificacaoPrestador:
     class Meta:
         name = "tccfIdentificacaoPrestador"
 
-    cpf_cnpj: Optional[TccfCpfCnpj] = field(
+    CpfCnpj: Optional[TccfCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -634,10 +587,9 @@ class TccfIdentificacaoTomador:
     class Meta:
         name = "tccfIdentificacaoTomador"
 
-    cpf_cnpj: Optional[TccfCpfCnpj] = field(
+    CpfCnpj: Optional[TccfCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -650,28 +602,25 @@ class TccfInfCfse:
     class Meta:
         name = "tccfInfCfse"
 
-    identificacao_cfse: Optional[TccfIdentificacaoCfse] = field(
+    IdentificacaoCfse: Optional[TccfIdentificacaoCfse] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoCfse",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    status: Optional[str] = field(
+    Status: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Status",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -685,29 +634,26 @@ class TccfInfPedidoCancelamento:
     class Meta:
         name = "tccfInfPedidoCancelamento"
 
-    identificacao_cfs: Optional[TccfIdentificacaoCfse] = field(
+    IdentificacaoCfs: Optional[TccfIdentificacaoCfse] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoCfs",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    codigo_cancelamento: Optional[str] = field(
+    CodigoCancelamento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoCancelamento",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
             "pattern": r"1|2|3|4|5",
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
             "max_length": 255,
         }
@@ -719,19 +665,17 @@ class TccfMensagemRetornoLote:
     class Meta:
         name = "tccfMensagemRetornoLote"
 
-    identificacao_cfse: Optional[TccfIdentificacaoCfse] = field(
+    IdentificacaoCfse: Optional[TccfIdentificacaoCfse] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoCfse",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    codigo: Optional[str] = field(
+    Codigo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Codigo",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -740,10 +684,9 @@ class TccfMensagemRetornoLote:
             "white_space": "collapse",
         }
     )
-    mensagem: Optional[str] = field(
+    Mensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Mensagem",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -759,18 +702,16 @@ class ConfigurarAtivarTerminal:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    terminal: Optional[TccfDadosTerminal] = field(
+    Terminal: Optional[TccfDadosTerminal] = field(
         default=None,
         metadata={
-            "name": "Terminal",
             "type": "Element",
             "required": True,
         }
     )
-    prestador: Optional[TccfIdentificacaoPrestador] = field(
+    Prestador: Optional[TccfIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
@@ -782,10 +723,9 @@ class ConsultarCfseEnvio:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    chave_terminal: Optional[str] = field(
+    ChaveTerminal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ChaveTerminal",
             "type": "Element",
             "required": True,
             "min_length": 1,
@@ -793,18 +733,16 @@ class ConsultarCfseEnvio:
             "white_space": "collapse",
         }
     )
-    identificacao_cfse: Optional[TccfIdentificacaoCfse] = field(
+    IdentificacaoCfse: Optional[TccfIdentificacaoCfse] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoCfse",
             "type": "Element",
             "required": True,
         }
     )
-    prestador: Optional[TccfIdentificacaoPrestador] = field(
+    Prestador: Optional[TccfIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
@@ -816,10 +754,9 @@ class ConsultarLoteCupomEnvio:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    chave_terminal: Optional[str] = field(
+    ChaveTerminal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ChaveTerminal",
             "type": "Element",
             "required": True,
             "min_length": 1,
@@ -827,18 +764,16 @@ class ConsultarLoteCupomEnvio:
             "white_space": "collapse",
         }
     )
-    prestador: Optional[TccfIdentificacaoPrestador] = field(
+    Prestador: Optional[TccfIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "required": True,
             "max_length": 50,
@@ -851,30 +786,27 @@ class EnviarLoteCupomResposta:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    data_recebimento: Optional[XmlDateTime] = field(
+    DataRecebimento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataRecebimento",
             "type": "Element",
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "max_length": 50,
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -888,10 +820,9 @@ class ListaMensagemRetornoLote:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    mensagem_retorno: List[TccfMensagemRetornoLote] = field(
+    MensagemRetorno: List[TccfMensagemRetornoLote] = field(
         default_factory=list,
         metadata={
-            "name": "MensagemRetorno",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -903,10 +834,9 @@ class TccfCupomFiscal:
     class Meta:
         name = "tccfCupomFiscal"
 
-    valor_servicos: Optional[Decimal] = field(
+    ValorServicos: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorServicos",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -915,19 +845,17 @@ class TccfCupomFiscal:
             "fraction_digits": 2,
         }
     )
-    inf_cfse: Optional[TccfInfCfse] = field(
+    InfCfse: Optional[TccfInfCfse] = field(
         default=None,
         metadata={
-            "name": "InfCfse",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    codigo_verificacao: Optional[str] = field(
+    CodigoVerificacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoVerificacao",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -943,38 +871,34 @@ class TccfDadosEmissaoDiariaTerminal:
     class Meta:
         name = "tccfDadosEmissaoDiariaTerminal"
 
-    data_configuracao: Optional[XmlDateTime] = field(
+    DataConfiguracao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataConfiguracao",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    identificacao_terminal: Optional[TccfDadosTerminal] = field(
+    IdentificacaoTerminal: Optional[TccfDadosTerminal] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoTerminal",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    numero_recibos: Optional[int] = field(
+    NumeroRecibos: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroRecibos",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    numero_terminal: Optional[int] = field(
+    NumeroTerminal: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroTerminal",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -982,10 +906,9 @@ class TccfDadosEmissaoDiariaTerminal:
             "max_inclusive": 999999,
         }
     )
-    identificacao_prestador: Optional[TccfIdentificacaoPrestador] = field(
+    IdentificacaoPrestador: Optional[TccfIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoPrestador",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -998,19 +921,17 @@ class TccfDadosPrestador:
     class Meta:
         name = "tccfDadosPrestador"
 
-    identificacao_prestador: Optional[TccfIdentificacaoPrestador] = field(
+    IdentificacaoPrestador: Optional[TccfIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoPrestador",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -1019,10 +940,9 @@ class TccfDadosPrestador:
             "white_space": "collapse",
         }
     )
-    nome_fantasia: Optional[str] = field(
+    NomeFantasia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "NomeFantasia",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -1030,19 +950,17 @@ class TccfDadosPrestador:
             "white_space": "collapse",
         }
     )
-    endereco: Optional[TccfEndereco] = field(
+    Endereco: Optional[TccfEndereco] = field(
         default=None,
         metadata={
-            "name": "Endereco",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    contato: Optional[TccfContato] = field(
+    Contato: Optional[TccfContato] = field(
         default=None,
         metadata={
-            "name": "Contato",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
         }
@@ -1054,19 +972,17 @@ class TccfDadosTomador:
     class Meta:
         name = "tccfDadosTomador"
 
-    identificacao_tomador: Optional[TccfIdentificacaoTomador] = field(
+    IdentificacaoTomador: Optional[TccfIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoTomador",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    nome: Optional[str] = field(
+    Nome: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Nome",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -1082,19 +998,17 @@ class TccfPedidoCancelamento:
     class Meta:
         name = "tccfPedidoCancelamento"
 
-    inf_pedido_cancelamento: Optional[TccfInfPedidoCancelamento] = field(
+    InfPedidoCancelamento: Optional[TccfInfPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "InfPedidoCancelamento",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    prestador: Optional[TccfIdentificacaoPrestador] = field(
+    Prestador: Optional[TccfIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -1116,28 +1030,25 @@ class TccfPedidoDeclaracaoSemMovimento:
     class Meta:
         name = "tccfPedidoDeclaracaoSemMovimento"
 
-    prestador: Optional[TccfIdentificacaoPrestador] = field(
+    Prestador: Optional[TccfIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
             "max_length": 255,
         }
@@ -1149,19 +1060,17 @@ class TccfPedidoManutencao:
     class Meta:
         name = "tccfPedidoManutencao"
 
-    prestador: Optional[TccfIdentificacaoPrestador] = field(
+    Prestador: Optional[TccfIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    motivo: Optional[str] = field(
+    Motivo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Motivo",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -1170,20 +1079,18 @@ class TccfPedidoManutencao:
             "white_space": "collapse",
         }
     )
-    ultimo_cupom: Optional[int] = field(
+    UltimoCupom: Optional[int] = field(
         default=None,
         metadata={
-            "name": "UltimoCupom",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
             "max_length": 255,
         }
@@ -1195,10 +1102,9 @@ class CancelarCupomEnvio:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    chave_terminal: Optional[str] = field(
+    ChaveTerminal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ChaveTerminal",
             "type": "Element",
             "required": True,
             "min_length": 1,
@@ -1206,10 +1112,9 @@ class CancelarCupomEnvio:
             "white_space": "collapse",
         }
     )
-    pedido: Optional[TccfPedidoCancelamento] = field(
+    Pedido: Optional[TccfPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "required": True,
         }
@@ -1221,10 +1126,9 @@ class EnviarInformeManutencao:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    chave_terminal: Optional[str] = field(
+    ChaveTerminal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ChaveTerminal",
             "type": "Element",
             "required": True,
             "min_length": 1,
@@ -1232,10 +1136,9 @@ class EnviarInformeManutencao:
             "white_space": "collapse",
         }
     )
-    pedido: Optional[TccfPedidoManutencao] = field(
+    Pedido: Optional[TccfPedidoManutencao] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "required": True,
         }
@@ -1256,10 +1159,9 @@ class InformeTrasmissaoSemMovimento:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    chave_terminal: Optional[str] = field(
+    ChaveTerminal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ChaveTerminal",
             "type": "Element",
             "required": True,
             "min_length": 1,
@@ -1267,10 +1169,9 @@ class InformeTrasmissaoSemMovimento:
             "white_space": "collapse",
         }
     )
-    pedido: Optional[TccfPedidoDeclaracaoSemMovimento] = field(
+    Pedido: Optional[TccfPedidoDeclaracaoSemMovimento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "required": True,
         }
@@ -1291,28 +1192,25 @@ class TccfConfirmacaoCancelamento:
     class Meta:
         name = "tccfConfirmacaoCancelamento"
 
-    pedido: Optional[TccfPedidoCancelamento] = field(
+    Pedido: Optional[TccfPedidoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    data_hora: Optional[XmlDateTime] = field(
+    DataHora: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataHora",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
             "max_length": 255,
         }
@@ -1324,28 +1222,25 @@ class TccfConfirmacaoPedidoManutencao:
     class Meta:
         name = "tccfConfirmacaoPedidoManutencao"
 
-    pedido: Optional[TccfPedidoManutencao] = field(
+    Pedido: Optional[TccfPedidoManutencao] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    data_hora: Optional[XmlDateTime] = field(
+    DataHora: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataHora",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
             "max_length": 255,
         }
@@ -1357,28 +1252,25 @@ class TccfConfirmacaoPedidoSemMovimento:
     class Meta:
         name = "tccfConfirmacaoPedidoSemMovimento"
 
-    pedido: Optional[TccfPedidoDeclaracaoSemMovimento] = field(
+    Pedido: Optional[TccfPedidoDeclaracaoSemMovimento] = field(
         default=None,
         metadata={
-            "name": "Pedido",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    data_hora: Optional[XmlDateTime] = field(
+    DataHora: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataHora",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
             "max_length": 255,
         }
@@ -1390,47 +1282,42 @@ class TccfDadosCadastroPrestador:
     class Meta:
         name = "tccfDadosCadastroPrestador"
 
-    inf_prestador: Optional[TccfDadosPrestador] = field(
+    InfPrestador: Optional[TccfDadosPrestador] = field(
         default=None,
         metadata={
-            "name": "InfPrestador",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    data_cadastro: Optional[XmlDateTime] = field(
+    DataCadastro: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataCadastro",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    data_atualizacao: Optional[XmlDateTime] = field(
+    DataAtualizacao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataAtualizacao",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    optante_simples: Optional[str] = field(
+    OptanteSimples: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OptanteSimples",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    aliquota_simples_nacional: Optional[Decimal] = field(
+    AliquotaSimplesNacional: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "AliquotaSimplesNacional",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_inclusive": Decimal("0"),
@@ -1438,19 +1325,17 @@ class TccfDadosCadastroPrestador:
             "fraction_digits": 4,
         }
     )
-    lista_atividades_prestadas: Optional["TccfDadosCadastroPrestador.ListaAtividadesPrestadas"] = field(
+    ListaAtividadesPrestadas: Optional["TccfDadosCadastroPrestador.ListaAtividadesPrestadas"] = field(
         default=None,
         metadata={
-            "name": "ListaAtividadesPrestadas",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
             "max_length": 255,
         }
@@ -1458,10 +1343,9 @@ class TccfDadosCadastroPrestador:
 
     @dataclass
     class ListaAtividadesPrestadas:
-        atividades_prestadas: List[TccfAtividade] = field(
+        AtividadesPrestadas: List[TccfAtividade] = field(
             default_factory=list,
             metadata={
-                "name": "AtividadesPrestadas",
                 "type": "Element",
                 "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
                 "min_occurs": 1,
@@ -1474,56 +1358,50 @@ class TccfInfDeclaracaoPrestacaoServico:
     class Meta:
         name = "tccfInfDeclaracaoPrestacaoServico"
 
-    inf_cfse: Optional[TccfInfCfse] = field(
+    InfCfse: Optional[TccfInfCfse] = field(
         default=None,
         metadata={
-            "name": "InfCfse",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    lista_servicos: Optional["TccfInfDeclaracaoPrestacaoServico.ListaServicos"] = field(
+    ListaServicos: Optional["TccfInfDeclaracaoPrestacaoServico.ListaServicos"] = field(
         default=None,
         metadata={
-            "name": "ListaServicos",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    prestador: Optional[TccfDadosPrestador] = field(
+    Prestador: Optional[TccfDadosPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    tomador_servico: Optional[TccfDadosTomador] = field(
+    TomadorServico: Optional[TccfDadosTomador] = field(
         default=None,
         metadata={
-            "name": "TomadorServico",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    optante_simples_nacional: Optional[str] = field(
+    OptanteSimplesNacional: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OptanteSimplesNacional",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    codigo_verificacao: Optional[str] = field(
+    CodigoVerificacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "CodigoVerificacao",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -1532,10 +1410,9 @@ class TccfInfDeclaracaoPrestacaoServico:
             "white_space": "collapse",
         }
     )
-    outras_informacoes: Optional[str] = field(
+    OutrasInformacoes: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OutrasInformacoes",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "min_length": 1,
@@ -1543,10 +1420,9 @@ class TccfInfDeclaracaoPrestacaoServico:
             "white_space": "collapse",
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
             "max_length": 255,
         }
@@ -1554,10 +1430,9 @@ class TccfInfDeclaracaoPrestacaoServico:
 
     @dataclass
     class ListaServicos:
-        servico: List[TccfDadosServico] = field(
+        Servico: List[TccfDadosServico] = field(
             default_factory=list,
             metadata={
-                "name": "Servico",
                 "type": "Element",
                 "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
                 "min_occurs": 1,
@@ -1570,10 +1445,9 @@ class CancelarCupomResposta:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    confimacao: Optional[TccfConfirmacaoCancelamento] = field(
+    Confimacao: Optional[TccfConfirmacaoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Confimacao",
             "type": "Element",
         }
     )
@@ -1585,7 +1459,7 @@ class CancelarCupomResposta:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1599,10 +1473,9 @@ class ConfigurarAtivarTerminalResposta:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    informacoes_emissao: Optional["ConfigurarAtivarTerminalResposta.InformacoesEmissao"] = field(
+    InformacoesEmissao: Optional["ConfigurarAtivarTerminalResposta.InformacoesEmissao"] = field(
         default=None,
         metadata={
-            "name": "InformacoesEmissao",
             "type": "Element",
         }
     )
@@ -1614,7 +1487,7 @@ class ConfigurarAtivarTerminalResposta:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1624,34 +1497,30 @@ class ConfigurarAtivarTerminalResposta:
 
     @dataclass
     class InformacoesEmissao:
-        dados_cadastro_prestador: Optional[TccfDadosCadastroPrestador] = field(
+        DadosCadastroPrestador: Optional[TccfDadosCadastroPrestador] = field(
             default=None,
             metadata={
-                "name": "DadosCadastroPrestador",
                 "type": "Element",
                 "required": True,
             }
         )
-        dados_emissao_diaria: Optional[TccfDadosEmissaoDiariaTerminal] = field(
+        DadosEmissaoDiaria: Optional[TccfDadosEmissaoDiariaTerminal] = field(
             default=None,
             metadata={
-                "name": "DadosEmissaoDiaria",
                 "type": "Element",
                 "required": True,
             }
         )
-        lista_cupom_fiscal: Optional["ConfigurarAtivarTerminalResposta.InformacoesEmissao.ListaCupomFiscal"] = field(
+        ListaCupomFiscal: Optional["ConfigurarAtivarTerminalResposta.InformacoesEmissao.ListaCupomFiscal"] = field(
             default=None,
             metadata={
-                "name": "ListaCupomFiscal",
                 "type": "Element",
                 "required": True,
             }
         )
-        id: Optional[str] = field(
+        Id: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Id",
                 "type": "Attribute",
                 "max_length": 255,
             }
@@ -1659,10 +1528,9 @@ class ConfigurarAtivarTerminalResposta:
 
         @dataclass
         class ListaCupomFiscal:
-            cupom: List[TccfCupomFiscal] = field(
+            Cupom: List[TccfCupomFiscal] = field(
                 default_factory=list,
                 metadata={
-                    "name": "Cupom",
                     "type": "Element",
                     "min_occurs": 1,
                 }
@@ -1674,10 +1542,9 @@ class ConsultarDadosCadastroResposta:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    dados_cadastro_prestador: Optional[TccfDadosCadastroPrestador] = field(
+    DadosCadastroPrestador: Optional[TccfDadosCadastroPrestador] = field(
         default=None,
         metadata={
-            "name": "DadosCadastroPrestador",
             "type": "Element",
         }
     )
@@ -1689,7 +1556,7 @@ class ConsultarDadosCadastroResposta:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1703,10 +1570,9 @@ class EnviarInformeManutencaoResposta:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    confirmacao: Optional[TccfConfirmacaoPedidoManutencao] = field(
+    Confirmacao: Optional[TccfConfirmacaoPedidoManutencao] = field(
         default=None,
         metadata={
-            "name": "Confirmacao",
             "type": "Element",
         }
     )
@@ -1718,7 +1584,7 @@ class EnviarInformeManutencaoResposta:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1732,10 +1598,9 @@ class InformeTrasmissaoSemMovimentoResposta:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    confirmacao: Optional[TccfConfirmacaoPedidoSemMovimento] = field(
+    Confirmacao: Optional[TccfConfirmacaoPedidoSemMovimento] = field(
         default=None,
         metadata={
-            "name": "Confirmacao",
             "type": "Element",
         }
     )
@@ -1747,7 +1612,7 @@ class InformeTrasmissaoSemMovimentoResposta:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1761,10 +1626,9 @@ class TccfCancelamentoCfse:
     class Meta:
         name = "tccfCancelamentoCfse"
 
-    confirmacao: Optional[TccfConfirmacaoCancelamento] = field(
+    Confirmacao: Optional[TccfConfirmacaoCancelamento] = field(
         default=None,
         metadata={
-            "name": "Confirmacao",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -1785,10 +1649,9 @@ class TccfDeclaracaoPrestacaoServico:
     class Meta:
         name = "tccfDeclaracaoPrestacaoServico"
 
-    inf_declaracao_prestacao_servico: Optional[TccfInfDeclaracaoPrestacaoServico] = field(
+    InfDeclaracaoPrestacaoServico: Optional[TccfInfDeclaracaoPrestacaoServico] = field(
         default=None,
         metadata={
-            "name": "InfDeclaracaoPrestacaoServico",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
@@ -1809,19 +1672,17 @@ class TccfCompCfse:
     class Meta:
         name = "tccfCompCfse"
 
-    cfse: Optional[TccfInfDeclaracaoPrestacaoServico] = field(
+    Cfse: Optional[TccfInfDeclaracaoPrestacaoServico] = field(
         default=None,
         metadata={
-            "name": "Cfse",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    cfse_cancelamento: Optional[TccfCancelamentoCfse] = field(
+    CfseCancelamento: Optional[TccfCancelamentoCfse] = field(
         default=None,
         metadata={
-            "name": "CfseCancelamento",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
         }
@@ -1833,47 +1694,42 @@ class TccfLoteCupom:
     class Meta:
         name = "tccfLoteCupom"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    responsavel_arquivo: Optional[TccfIdentificacaoPrestador] = field(
+    ResponsavelArquivo: Optional[TccfIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "ResponsavelArquivo",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    quantidade_cfse: Optional[int] = field(
+    QuantidadeCfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "QuantidadeCfse",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    lista_cupom: Optional["TccfLoteCupom.ListaCupom"] = field(
+    ListaCupom: Optional["TccfLoteCupom.ListaCupom"] = field(
         default=None,
         metadata={
-            "name": "ListaCupom",
             "type": "Element",
             "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
             "required": True,
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
             "type": "Attribute",
             "max_length": 255,
         }
@@ -1881,10 +1737,9 @@ class TccfLoteCupom:
 
     @dataclass
     class ListaCupom:
-        cupom: List[TccfDeclaracaoPrestacaoServico] = field(
+        Cupom: List[TccfDeclaracaoPrestacaoServico] = field(
             default_factory=list,
             metadata={
-                "name": "Cupom",
                 "type": "Element",
                 "namespace": "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd",
                 "min_occurs": 1,
@@ -1904,10 +1759,9 @@ class EnviarLoteCupomEnvio:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    chave_terminal: Optional[str] = field(
+    ChaveTerminal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ChaveTerminal",
             "type": "Element",
             "required": True,
             "min_length": 1,
@@ -1915,10 +1769,9 @@ class EnviarLoteCupomEnvio:
             "white_space": "collapse",
         }
     )
-    lote_cupom: Optional[TccfLoteCupom] = field(
+    LoteCupom: Optional[TccfLoteCupom] = field(
         default=None,
         metadata={
-            "name": "LoteCupom",
             "type": "Element",
             "required": True,
         }
@@ -1939,10 +1792,9 @@ class EnviarLoteCupomSincronoEnvio:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    chave_terminal: Optional[str] = field(
+    ChaveTerminal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "ChaveTerminal",
             "type": "Element",
             "required": True,
             "min_length": 1,
@@ -1950,10 +1802,9 @@ class EnviarLoteCupomSincronoEnvio:
             "white_space": "collapse",
         }
     )
-    lote_cupom: Optional[TccfLoteCupom] = field(
+    LoteCupom: Optional[TccfLoteCupom] = field(
         default=None,
         metadata={
-            "name": "LoteCupom",
             "type": "Element",
             "required": True,
         }
@@ -1974,14 +1825,14 @@ class ConsultarCfseResposta:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    comp_cfse: Optional[CompCfse] = field(
+    compCfse: Optional[CompCfse] = field(
         default=None,
         metadata={
             "name": "CompCfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -1995,30 +1846,28 @@ class ConsultarLoteCupomResposta:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    situacao: Optional[str] = field(
+    Situacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Situacao",
             "type": "Element",
             "required": True,
             "pattern": r"1|2|3|4|5",
         }
     )
-    lista_cfse: Optional["ConsultarLoteCupomResposta.ListaCfse"] = field(
+    ListaCfse: Optional["ConsultarLoteCupomResposta.ListaCfse"] = field(
         default=None,
         metadata={
-            "name": "ListaCfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno_lote: Optional[ListaMensagemRetornoLote] = field(
+    listaMensagemRetornoLote: Optional[ListaMensagemRetornoLote] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetornoLote",
@@ -2028,7 +1877,7 @@ class ConsultarLoteCupomResposta:
 
     @dataclass
     class ListaCfse:
-        comp_cfse: List[CompCfse] = field(
+        compCfse: List[CompCfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompCfse",
@@ -2037,7 +1886,7 @@ class ConsultarLoteCupomResposta:
                 "max_occurs": 50,
             }
         )
-        lista_mensagem_alerta_retorno: Optional[ListaMensagemAlertaRetorno] = field(
+        listaMensagemAlertaRetorno: Optional[ListaMensagemAlertaRetorno] = field(
             default=None,
             metadata={
                 "name": "ListaMensagemAlertaRetorno",
@@ -2051,44 +1900,40 @@ class EnviarLoteCupomSincronoResposta:
     class Meta:
         namespace = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    data_recebimento: Optional[XmlDateTime] = field(
+    DataRecebimento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataRecebimento",
             "type": "Element",
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "max_length": 50,
         }
     )
-    lista_cfse: Optional["EnviarLoteCupomSincronoResposta.ListaCfse"] = field(
+    ListaCfse: Optional["EnviarLoteCupomSincronoResposta.ListaCfse"] = field(
         default=None,
         metadata={
-            "name": "ListaCfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno_lote: Optional[ListaMensagemRetornoLote] = field(
+    listaMensagemRetornoLote: Optional[ListaMensagemRetornoLote] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetornoLote",
@@ -2098,7 +1943,7 @@ class EnviarLoteCupomSincronoResposta:
 
     @dataclass
     class ListaCfse:
-        comp_cfse: List[CompCfse] = field(
+        compCfse: List[CompCfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompCfse",
@@ -2106,7 +1951,7 @@ class EnviarLoteCupomSincronoResposta:
                 "min_occurs": 1,
             }
         )
-        lista_mensagem_alerta_retorno: Optional[ListaMensagemAlertaRetorno] = field(
+        listaMensagemAlertaRetorno: Optional[ListaMensagemAlertaRetorno] = field(
             default=None,
             metadata={
                 "name": "ListaMensagemAlertaRetorno",

@@ -13,14 +13,13 @@ class CancelarNfseResposta:
     class Meta:
         namespace = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_cancelar_nfse_resposta.xsd"
 
-    cancelamento: Optional[TcCancelamentoNfse] = field(
+    Cancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
-            "name": "Cancelamento",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional["CancelarNfseResposta.ListaMensagemRetorno"] = field(
+    listaMensagemRetorno: Optional["CancelarNfseResposta.ListaMensagemRetorno"] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -30,10 +29,9 @@ class CancelarNfseResposta:
 
     @dataclass
     class ListaMensagemRetorno:
-        mensagem_retorno: List[TcMensagemRetorno] = field(
+        MensagemRetorno: List[TcMensagemRetorno] = field(
             default_factory=list,
             metadata={
-                "name": "MensagemRetorno",
                 "type": "Element",
                 "min_occurs": 1,
             }

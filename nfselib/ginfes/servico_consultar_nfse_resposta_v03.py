@@ -13,14 +13,13 @@ class ConsultarNfseResposta:
     class Meta:
         namespace = "http://www.ginfes.com.br/servico_consultar_nfse_resposta_v03.xsd"
 
-    lista_nfse: Optional["ConsultarNfseResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarNfseResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -31,7 +30,7 @@ class ConsultarNfseResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: List[TcCompNfse] = field(
+        compNfse: List[TcCompNfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompNfse",

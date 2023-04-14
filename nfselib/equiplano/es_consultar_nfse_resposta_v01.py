@@ -14,18 +14,16 @@ class EsConsultarNfseResposta:
         name = "esConsultarNfseResposta"
         namespace = "http://www.equiplano.com.br/esnfs"
 
-    lista_nfse: Optional["EsConsultarNfseResposta.ListaNfse"] = field(
+    listaNfse: Optional["EsConsultarNfseResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "listaNfse",
             "type": "Element",
             "namespace": "",
         }
     )
-    mensagem_retorno: Optional[TcMensagemRetorno] = field(
+    mensagemRetorno: Optional[TcMensagemRetorno] = field(
         default=None,
         metadata={
-            "name": "mensagemRetorno",
             "type": "Element",
             "namespace": "",
         }

@@ -3,33 +3,8 @@ from enum import Enum
 __NAMESPACE__ = "http://www.ctaconsult.com/nfse"
 
 
-class Tamb(Enum):
-    """
-    Tipo Ambiente.
-    """
-    VALUE_1 = "1"
-    VALUE_2 = "2"
-
-
 class Tboolean(Enum):
     """Confirmacao 1- Sim, 2 - Nao"""
-    VALUE_1 = "1"
-    VALUE_2 = "2"
-
-
-class TcodigoImpostoFederal(Enum):
-    """
-    Codigo do imposto 1-PIS, 2-COFINS, 3-INSS, 4-IR, 5-CSLL.
-    """
-    VALUE_1 = "1"
-    VALUE_2 = "2"
-    VALUE_3 = "3"
-    VALUE_4 = "4"
-    VALUE_5 = "5"
-
-
-class Tnota(Enum):
-    """Tipo Nota 1- NFSe; 2 - NFSe-a"""
     VALUE_1 = "1"
     VALUE_2 = "2"
 
@@ -81,12 +56,6 @@ class TtipoTributacao(Enum):
 
 class TtipoValorDeducao(Enum):
     """Tipo recolhimento 1 - Valor, 2 - Percentual"""
-    VALUE_1 = "1"
-    VALUE_2 = "2"
-
-
-class TtipoValorImpostos(Enum):
-    """Tipo recolhimento 1 - Valor, 2 - Aliquota"""
     VALUE_1 = "1"
     VALUE_2 = "2"
 

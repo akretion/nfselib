@@ -13,19 +13,17 @@ class TcCancelamentoNfse:
     class Meta:
         name = "tcCancelamentoNfse"
 
-    dt_cancelamento: Optional[XmlDateTime] = field(
+    dtCancelamento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtCancelamento",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    ds_cancelamento: Optional[str] = field(
+    dsCancelamento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsCancelamento",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -43,20 +41,18 @@ class TcCompetencia:
     class Meta:
         name = "tcCompetencia"
 
-    nr_ano_competencia: Optional[str] = field(
+    nrAnoCompetencia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrAnoCompetencia",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[0-9]{4}",
         }
     )
-    nr_mes_competencia: Optional[str] = field(
+    nrMesCompetencia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrMesCompetencia",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -75,10 +71,9 @@ class TcDeducao:
     class Meta:
         name = "tcDeducao"
 
-    vl_deducao: Optional[str] = field(
+    vlDeducao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlDeducao",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -87,10 +82,9 @@ class TcDeducao:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    ds_justificativa_deducao: Optional[str] = field(
+    dsJustificativaDeducao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsJustificativaDeducao",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -108,10 +102,9 @@ class TcDocumento:
     class Meta:
         name = "tcDocumento"
 
-    nr_documento: Optional[str] = field(
+    nrDocumento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrDocumento",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -119,20 +112,18 @@ class TcDocumento:
             "max_length": 20,
         }
     )
-    tp_documento: Optional[str] = field(
+    tpDocumento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpDocumento",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[1-3]{1}",
         }
     )
-    ds_documento_estrangeiro: Optional[str] = field(
+    dsDocumentoEstrangeiro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsDocumentoEstrangeiro",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
@@ -149,10 +140,9 @@ class TcErroAlerta:
     class Meta:
         name = "tcErroAlerta"
 
-    cd_mensagem: Optional[str] = field(
+    cdMensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "cdMensagem",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -160,10 +150,9 @@ class TcErroAlerta:
             "max_length": 4,
         }
     )
-    ds_mensagem: Optional[str] = field(
+    dsMensagem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsMensagem",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -171,10 +160,9 @@ class TcErroAlerta:
             "max_length": 512,
         }
     )
-    ds_correcao: Optional[str] = field(
+    dsCorrecao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsCorrecao",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
@@ -191,19 +179,17 @@ class TcIdentificacaoNfse:
     class Meta:
         name = "tcIdentificacaoNfse"
 
-    nr_nfse: Optional[int] = field(
+    nrNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrNfse",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    cd_autenticacao: Optional[str] = field(
+    cdAutenticacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "cdAutenticacao",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -211,18 +197,16 @@ class TcIdentificacaoNfse:
             "max_length": 100,
         }
     )
-    nr_rps: Optional[int] = field(
+    nrRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrRps",
             "type": "Element",
             "namespace": "",
         }
     )
-    nr_emissor_rps: Optional[int] = field(
+    nrEmissorRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrEmissorRps",
             "type": "Element",
             "namespace": "",
         }
@@ -237,10 +221,9 @@ class TcIdentificacaoPrestador:
     class Meta:
         name = "tcIdentificacaoPrestador"
 
-    nr_inscricao_municipal: Optional[str] = field(
+    nrInscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoMunicipal",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-9]{1,10}",
@@ -255,10 +238,9 @@ class TcIdentificacaoPrestador:
             "pattern": r"[0-9]{14}",
         }
     )
-    id_entidade: Optional[int] = field(
+    idEntidade: Optional[int] = field(
         default=None,
         metadata={
-            "name": "idEntidade",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -274,19 +256,17 @@ class TcIdentificacaoRps:
     class Meta:
         name = "tcIdentificacaoRps"
 
-    nr_rps: Optional[int] = field(
+    nrRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrRps",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    nr_emissor_rps: Optional[int] = field(
+    nrEmissorRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrEmissorRps",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -302,19 +282,17 @@ class TcNfseSemCancelamento:
     class Meta:
         name = "tcNfseSemCancelamento"
 
-    nr_nfs: Optional[int] = field(
+    nrNfs: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrNfs",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    cd_autenticacao: Optional[str] = field(
+    cdAutenticacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "cdAutenticacao",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -322,43 +300,38 @@ class TcNfseSemCancelamento:
             "max_length": 100,
         }
     )
-    dt_emissao_nfs: Optional[XmlDateTime] = field(
+    dtEmissaoNfs: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtEmissaoNfs",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    nr_rps: Optional[int] = field(
+    nrRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrRps",
             "type": "Element",
             "namespace": "",
         }
     )
-    nr_emissor_rps: Optional[int] = field(
+    nrEmissorRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrEmissorRps",
             "type": "Element",
             "namespace": "",
         }
     )
-    dt_emissao_rps: Optional[XmlDateTime] = field(
+    dtEmissaoRps: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtEmissaoRps",
             "type": "Element",
             "namespace": "",
         }
     )
-    ds_link: Optional[str] = field(
+    dsLink: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsLink",
             "type": "Element",
             "namespace": "",
         }
@@ -373,40 +346,36 @@ class TcPrestador:
     class Meta:
         name = "tcPrestador"
 
-    nr_cnpj: Optional[str] = field(
+    nrCnpj: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrCnpj",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[0-9]{14}",
         }
     )
-    nr_inscricao_municipal: Optional[str] = field(
+    nrInscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoMunicipal",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[0-9]{1,10}",
         }
     )
-    is_optante_simples_nacional: Optional[str] = field(
+    isOptanteSimplesNacional: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isOptanteSimplesNacional",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[0-2]{1}",
         }
     )
-    id_entidade: Optional[int] = field(
+    idEntidade: Optional[int] = field(
         default=None,
         metadata={
-            "name": "idEntidade",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -422,28 +391,25 @@ class TcProtocolo:
     class Meta:
         name = "tcProtocolo"
 
-    nr_lote: Optional[int] = field(
+    nrLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrLote",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    dt_recebimento: Optional[XmlDateTime] = field(
+    dtRecebimento: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtRecebimento",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    nr_protocolo: Optional[int] = field(
+    nrProtocolo: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrProtocolo",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -459,38 +425,34 @@ class TcProtocoloIntegracao:
     class Meta:
         name = "tcProtocoloIntegracao"
 
-    nr_protocolo: Optional[int] = field(
+    nrProtocolo: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrProtocolo",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    dt_protocolo: Optional[XmlDateTime] = field(
+    dtProtocolo: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtProtocolo",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    ds_protocolo: Optional[str] = field(
+    dsProtocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsProtocolo",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
             "max_length": 512,
         }
     )
-    is_ok: Optional[bool] = field(
+    isOk: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "isOk",
             "type": "Element",
             "namespace": "",
         }
@@ -505,10 +467,9 @@ class TcRetencoes:
     class Meta:
         name = "tcRetencoes"
 
-    vl_cofins: Optional[str] = field(
+    vlCofins: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlCofins",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -516,10 +477,9 @@ class TcRetencoes:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_csll: Optional[str] = field(
+    vlCsll: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlCsll",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -527,10 +487,9 @@ class TcRetencoes:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_inss: Optional[str] = field(
+    vlInss: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlInss",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -538,10 +497,9 @@ class TcRetencoes:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_irrf: Optional[str] = field(
+    vlIrrf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlIrrf",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -549,10 +507,9 @@ class TcRetencoes:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_pis: Optional[str] = field(
+    vlPis: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlPis",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -560,10 +517,9 @@ class TcRetencoes:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_iss: Optional[str] = field(
+    vlIss: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlIss",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -571,10 +527,9 @@ class TcRetencoes:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_aliquota_cofins: Optional[str] = field(
+    vlAliquotaCofins: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquotaCofins",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -582,10 +537,9 @@ class TcRetencoes:
             "pattern": r"0\.[0-9]{0,4}|[0-9]{1}[0-9]{0,4}(\.[0-9]{0,4})?",
         }
     )
-    vl_aliquota_csll: Optional[str] = field(
+    vlAliquotaCsll: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquotaCsll",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -593,10 +547,9 @@ class TcRetencoes:
             "pattern": r"0\.[0-9]{0,4}|[0-9]{1}[0-9]{0,4}(\.[0-9]{0,4})?",
         }
     )
-    vl_aliquota_inss: Optional[str] = field(
+    vlAliquotaInss: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquotaInss",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -604,10 +557,9 @@ class TcRetencoes:
             "pattern": r"0\.[0-9]{0,4}|[0-9]{1}[0-9]{0,4}(\.[0-9]{0,4})?",
         }
     )
-    vl_aliquota_irrf: Optional[str] = field(
+    vlAliquotaIrrf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquotaIrrf",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -615,10 +567,9 @@ class TcRetencoes:
             "pattern": r"0\.[0-9]{0,4}|[0-9]{1}[0-9]{0,4}(\.[0-9]{0,4})?",
         }
     )
-    vl_aliquota_pis: Optional[str] = field(
+    vlAliquotaPis: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquotaPis",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -636,54 +587,48 @@ class TcServicoAeSubItem:
     class Meta:
         name = "tcServicoAeSubItem"
 
-    nr_sub_item: Optional[int] = field(
+    nrSubItem: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrSubItem",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    ds_sub_item: Optional[str] = field(
+    dsSubItem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsSubItem",
             "type": "Element",
             "namespace": "",
         }
     )
-    is_informar_deducao: Optional[str] = field(
+    isInformarDeducao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isInformarDeducao",
-            "type": "Element",
-            "namespace": "",
-            "pattern": r"[0-2]{1}",
-        }
-    )
-    is_tomador_obrigatorio: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "isTomadorObrigatorio",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-2]{1}",
         }
     )
-    tp_retencao: Optional[str] = field(
+    isTomadorObrigatorio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpRetencao",
+            "type": "Element",
+            "namespace": "",
+            "pattern": r"[0-2]{1}",
+        }
+    )
+    tpRetencao: Optional[str] = field(
+        default=None,
+        metadata={
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-3]{1}",
         }
     )
-    vl_aliquota: Optional[str] = field(
+    vlAliquota: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquota",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -691,10 +636,9 @@ class TcServicoAeSubItem:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_percentual_maximo_deducao: Optional[str] = field(
+    vlPercentualMaximoDeducao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlPercentualMaximoDeducao",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -713,46 +657,41 @@ class TcServicoIntegracao:
     class Meta:
         name = "tcServicoIntegracao"
 
-    nr_item: Optional[int] = field(
+    nrItem: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrItem",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    nr_sub_item: Optional[int] = field(
+    nrSubItem: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrSubItem",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    is_informar_deducao: Optional[str] = field(
+    isInformarDeducao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isInformarDeducao",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-2]{1}",
         }
     )
-    is_tomador_obrigatorio: Optional[str] = field(
+    isTomadorObrigatorio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isTomadorObrigatorio",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-2]{1}",
         }
     )
-    vl_aliquota: Optional[str] = field(
+    vlAliquota: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquota",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -770,28 +709,25 @@ class TcServicoLivroFeo:
     class Meta:
         name = "tcServicoLivroFEO"
 
-    nr_servico_item_lc116: Optional[int] = field(
+    nrServicoItemLC116: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrServicoItemLC116",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    nr_servico_sub_item_lc116: Optional[int] = field(
+    nrServicoSubItemLC116: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrServicoSubItemLC116",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    ds_discriminacao_servico: Optional[str] = field(
+    dsDiscriminacaoServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsDiscriminacaoServico",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -799,10 +735,9 @@ class TcServicoLivroFeo:
             "max_length": 1024,
         }
     )
-    vl_servico: Optional[str] = field(
+    vlServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlServico",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -811,10 +746,9 @@ class TcServicoLivroFeo:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_aliquota: Optional[str] = field(
+    vlAliquota: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquota",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -823,10 +757,9 @@ class TcServicoLivroFeo:
             "pattern": r"0\.[0-9]{0,4}|[0-9]{1}[0-9]{0,4}(\.[0-9]{0,4})?",
         }
     )
-    vl_deducao: Optional[str] = field(
+    vlDeducao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlDeducao",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -834,22 +767,9 @@ class TcServicoLivroFeo:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_base_calculo: Optional[str] = field(
+    vlBaseCalculo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlBaseCalculo",
-            "type": "Element",
-            "namespace": "",
-            "required": True,
-            "min_inclusive": "0",
-            "total_digits": 18,
-            "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
-        }
-    )
-    vl_iss_servico: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "vlIssServico",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -858,10 +778,20 @@ class TcServicoLivroFeo:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    ds_justificativa_deducao: Optional[str] = field(
+    vlIssServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsJustificativaDeducao",
+            "type": "Element",
+            "namespace": "",
+            "required": True,
+            "min_inclusive": "0",
+            "total_digits": 18,
+            "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
+        }
+    )
+    dsJustificativaDeducao: Optional[str] = field(
+        default=None,
+        metadata={
             "type": "Element",
             "namespace": "",
             "min_length": 1,
@@ -886,19 +816,17 @@ class TcGuiaRecolhimento:
             "required": True,
         }
     )
-    nr_guia: Optional[int] = field(
+    nrGuia: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrGuia",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    st_guia: Optional[str] = field(
+    stGuia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "stGuia",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -913,10 +841,9 @@ class TcGuiaRecolhimento:
             "required": True,
         }
     )
-    ds_codigo_barra: Optional[str] = field(
+    dsCodigoBarra: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsCodigoBarra",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -924,37 +851,33 @@ class TcGuiaRecolhimento:
             "max_length": 44,
         }
     )
-    tp_codigo_barra: Optional[str] = field(
+    tpCodigoBarra: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpCodigoBarra",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[1-2]{1}",
         }
     )
-    dt_vencimento: Optional[XmlDate] = field(
+    dtVencimento: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dtVencimento",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    dt_emissao_guia: Optional[XmlDateTime] = field(
+    dtEmissaoGuia: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtEmissaoGuia",
             "type": "Element",
             "namespace": "",
         }
     )
-    vl_movimento: Optional[str] = field(
+    vlMovimento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlMovimento",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -963,10 +886,9 @@ class TcGuiaRecolhimento:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_imposto: Optional[str] = field(
+    vlImposto: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlImposto",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -975,10 +897,9 @@ class TcGuiaRecolhimento:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_imposto_retido: Optional[str] = field(
+    vlImpostoRetido: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlImpostoRetido",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -987,10 +908,9 @@ class TcGuiaRecolhimento:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_pago: Optional[str] = field(
+    vlPago: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlPago",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -998,10 +918,9 @@ class TcGuiaRecolhimento:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    ds_observacao: Optional[str] = field(
+    dsObservacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsObservacao",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
@@ -1026,10 +945,9 @@ class TcIdentificacaoTomador:
             "required": True,
         }
     )
-    nm_tomador: Optional[str] = field(
+    nmTomador: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmTomador",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
@@ -1046,19 +964,17 @@ class TcMensagemRetorno:
     class Meta:
         name = "tcMensagemRetorno"
 
-    lista_erros: Optional["TcMensagemRetorno.ListaErros"] = field(
+    listaErros: Optional["TcMensagemRetorno.ListaErros"] = field(
         default=None,
         metadata={
-            "name": "listaErros",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    lista_alertas: Optional["TcMensagemRetorno.ListaAlertas"] = field(
+    listaAlertas: Optional["TcMensagemRetorno.ListaAlertas"] = field(
         default=None,
         metadata={
-            "name": "listaAlertas",
             "type": "Element",
             "namespace": "",
         }
@@ -1122,38 +1038,34 @@ class TcNotaLivroFeo:
     class Meta:
         name = "tcNotaLivroFEO"
 
-    nr_nfs: Optional[int] = field(
+    nrNfs: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrNfs",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    dt_emissao_nfs: Optional[XmlDate] = field(
+    dtEmissaoNfs: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dtEmissaoNfs",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    tp_tributacao: Optional[str] = field(
+    tpTributacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpTributacao",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[1-4]{1}",
         }
     )
-    nr_cnpj_tomador: Optional[str] = field(
+    nrCnpjTomador: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrCnpjTomador",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1161,19 +1073,17 @@ class TcNotaLivroFeo:
             "max_length": 20,
         }
     )
-    nr_inscricao_municipal_tomador: Optional[str] = field(
+    nrInscricaoMunicipalTomador: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoMunicipalTomador",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-9]{1,10}",
         }
     )
-    nm_tomador: Optional[str] = field(
+    nmTomador: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmTomador",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1181,10 +1091,9 @@ class TcNotaLivroFeo:
             "max_length": 80,
         }
     )
-    vl_total_nfs: Optional[str] = field(
+    vlTotalNfs: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlTotalNfs",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1193,10 +1102,9 @@ class TcNotaLivroFeo:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_total_imposto: Optional[str] = field(
+    vlTotalImposto: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlTotalImposto",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1205,10 +1113,9 @@ class TcNotaLivroFeo:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_total_deducoes: Optional[str] = field(
+    vlTotalDeducoes: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlTotalDeducoes",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -1216,19 +1123,17 @@ class TcNotaLivroFeo:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    is_tomador_informado: Optional[bool] = field(
+    isTomadorInformado: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "isTomadorInformado",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    is_iss_retido: Optional[bool] = field(
+    isIssRetido: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "isIssRetido",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1263,39 +1168,35 @@ class TcPessoa:
     class Meta:
         name = "tcPessoa"
 
-    id_entidade: Optional[int] = field(
+    idEntidade: Optional[int] = field(
         default=None,
         metadata={
-            "name": "idEntidade",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    tp_pessoa: Optional[str] = field(
+    tpPessoa: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpPessoa",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[1-4]{1}",
         }
     )
-    st_pessoa: Optional[str] = field(
+    stPessoa: Optional[str] = field(
         default=None,
         metadata={
-            "name": "stPessoa",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[1-6]{1}",
         }
     )
-    nm_pessoa: Optional[str] = field(
+    nmPessoa: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmPessoa",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1303,49 +1204,44 @@ class TcPessoa:
             "max_length": 80,
         }
     )
-    nr_inscricao_municipal: Optional[str] = field(
+    nrInscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoMunicipal",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-9]{1,10}",
         }
     )
-    nr_inscricao_estadual: Optional[str] = field(
+    nrInscricaoEstadual: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoEstadual",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
             "max_length": 20,
         }
     )
-    nr_documento_contador: Optional[str] = field(
+    nrDocumentoContador: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrDocumentoContador",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 20,
         }
     )
-    nm_fantasia: Optional[str] = field(
+    nmFantasia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmFantasia",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 80,
         }
     )
-    nr_documento: Optional[str] = field(
+    nrDocumento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrDocumento",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1353,79 +1249,71 @@ class TcPessoa:
             "max_length": 20,
         }
     )
-    nr_cep: Optional[str] = field(
+    nrCep: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrCep",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-9]{8}",
         }
     )
-    ds_endereco: Optional[str] = field(
+    dsEndereco: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsEndereco",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 40,
         }
     )
-    nr_endereco: Optional[str] = field(
+    nrEndereco: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrEndereco",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 10,
         }
     )
-    ds_complemento: Optional[str] = field(
+    dsComplemento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsComplemento",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 40,
         }
     )
-    nm_bairro: Optional[str] = field(
+    nmBairro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmBairro",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 25,
         }
     )
-    nm_cidade: Optional[str] = field(
+    nmCidade: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmCidade",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
             "max_length": 30,
         }
     )
-    nm_uf: Optional[str] = field(
+    nmUf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmUf",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 2,
         }
     )
-    nm_pais: Optional[str] = field(
+    nmPais: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmPais",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1433,84 +1321,75 @@ class TcPessoa:
             "max_length": 40,
         }
     )
-    nr_telefone: Optional[str] = field(
+    nrTelefone: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrTelefone",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
             "max_length": 20,
         }
     )
-    ds_email: Optional[str] = field(
+    dsEmail: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsEmail",
             "type": "Element",
             "namespace": "",
         }
     )
-    ds_endereco_web: Optional[str] = field(
+    dsEnderecoWeb: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsEnderecoWeb",
             "type": "Element",
             "namespace": "",
             "min_length": 2,
             "max_length": 80,
         }
     )
-    dt_enquadramento_simples: Optional[XmlDate] = field(
+    dtEnquadramentoSimples: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dtEnquadramentoSimples",
             "type": "Element",
             "namespace": "",
         }
     )
-    nm_contato: Optional[str] = field(
+    nmContato: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmContato",
             "type": "Element",
             "namespace": "",
             "min_length": 2,
             "max_length": 60,
         }
     )
-    tp_opcao_simples_nfs: Optional[str] = field(
+    tpOpcaoSimplesNfs: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpOpcaoSimplesNfs",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[0-2]{1}",
         }
     )
-    tp_iss: Optional[str] = field(
+    tpIss: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpIss",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[0-5]{1}",
         }
     )
-    is_substituto_tributario: Optional[int] = field(
+    isSubstitutoTributario: Optional[int] = field(
         default=None,
         metadata={
-            "name": "isSubstitutoTributario",
             "type": "Element",
             "namespace": "",
         }
     )
-    tp_opcao_mei: Optional[str] = field(
+    tpOpcaoMEI: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpOpcaoMEI",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-2]{1}",
@@ -1544,39 +1423,35 @@ class TcPessoaHomologacao:
     class Meta:
         name = "tcPessoaHomologacao"
 
-    id_entidade: Optional[int] = field(
+    idEntidade: Optional[int] = field(
         default=None,
         metadata={
-            "name": "idEntidade",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    tp_pessoa: Optional[str] = field(
+    tpPessoa: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpPessoa",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[1-4]{1}",
         }
     )
-    st_pessoa: Optional[str] = field(
+    stPessoa: Optional[str] = field(
         default=None,
         metadata={
-            "name": "stPessoa",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[1-6]{1}",
         }
     )
-    nm_pessoa: Optional[str] = field(
+    nmPessoa: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmPessoa",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1584,49 +1459,44 @@ class TcPessoaHomologacao:
             "max_length": 80,
         }
     )
-    nr_inscricao_municipal: Optional[str] = field(
+    nrInscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoMunicipal",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-9]{1,10}",
         }
     )
-    nr_inscricao_estadual: Optional[str] = field(
+    nrInscricaoEstadual: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoEstadual",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
             "max_length": 20,
         }
     )
-    nr_documento_contador: Optional[str] = field(
+    nrDocumentoContador: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrDocumentoContador",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 20,
         }
     )
-    nm_fantasia: Optional[str] = field(
+    nmFantasia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmFantasia",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 80,
         }
     )
-    nr_documento: Optional[str] = field(
+    nrDocumento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrDocumento",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1634,19 +1504,17 @@ class TcPessoaHomologacao:
             "max_length": 20,
         }
     )
-    nr_cep: Optional[str] = field(
+    nrCep: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrCep",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-9]{8}",
         }
     )
-    ds_endereco: Optional[str] = field(
+    dsEndereco: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsEndereco",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1654,30 +1522,27 @@ class TcPessoaHomologacao:
             "max_length": 40,
         }
     )
-    nr_endereco: Optional[str] = field(
+    nrEndereco: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrEndereco",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 10,
         }
     )
-    ds_complemento: Optional[str] = field(
+    dsComplemento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsComplemento",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 40,
         }
     )
-    nm_bairro: Optional[str] = field(
+    nmBairro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmBairro",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1685,10 +1550,9 @@ class TcPessoaHomologacao:
             "max_length": 25,
         }
     )
-    nm_cidade: Optional[str] = field(
+    nmCidade: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmCidade",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1696,10 +1560,9 @@ class TcPessoaHomologacao:
             "max_length": 30,
         }
     )
-    nm_uf: Optional[str] = field(
+    nmUf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmUf",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1707,10 +1570,9 @@ class TcPessoaHomologacao:
             "max_length": 2,
         }
     )
-    nm_pais: Optional[str] = field(
+    nmPais: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmPais",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1718,20 +1580,18 @@ class TcPessoaHomologacao:
             "max_length": 40,
         }
     )
-    nr_telefone: Optional[str] = field(
+    nrTelefone: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrTelefone",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
             "max_length": 20,
         }
     )
-    ds_email: Optional[str] = field(
+    dsEmail: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsEmail",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
@@ -1739,48 +1599,43 @@ class TcPessoaHomologacao:
             "pattern": r"[\w\-_]+(\.[\w\-_]+)*@(([\w\-]{2,63}\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])",
         }
     )
-    ds_endereco_web: Optional[str] = field(
+    dsEnderecoWeb: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsEnderecoWeb",
             "type": "Element",
             "namespace": "",
             "min_length": 2,
             "max_length": 80,
         }
     )
-    dt_enquadramento_simples: Optional[XmlDate] = field(
+    dtEnquadramentoSimples: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dtEnquadramentoSimples",
             "type": "Element",
             "namespace": "",
         }
     )
-    nm_contato: Optional[str] = field(
+    nmContato: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmContato",
             "type": "Element",
             "namespace": "",
             "min_length": 2,
             "max_length": 60,
         }
     )
-    tp_opcao_simples_nfs: Optional[str] = field(
+    tpOpcaoSimplesNfs: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpOpcaoSimplesNfs",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[0-2]{1}",
         }
     )
-    ds_email_nfs: Optional[str] = field(
+    dsEmailNfs: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsEmailNfs",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
@@ -1788,88 +1643,78 @@ class TcPessoaHomologacao:
             "pattern": r"[\w\-_]+(\.[\w\-_]+)*@(([\w\-]{2,63}\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])",
         }
     )
-    is_receber_email_nfs_recebida: Optional[str] = field(
+    isReceberEMailNfsRecebida: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isReceberEMailNfsRecebida",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-2]{1}",
         }
     )
-    is_env_email_contador_nfs_emitida: Optional[str] = field(
+    isEnvEMailContadorNfsEmitida: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isEnvEMailContadorNfsEmitida",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-2]{1}",
         }
     )
-    ds_frase_seguranca: Optional[str] = field(
+    dsFraseSeguranca: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsFraseSeguranca",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
             "max_length": 255,
         }
     )
-    dt_emissao_nfs_solicitacao: Optional[XmlDateTime] = field(
+    dtEmissaoNfsSolicitacao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtEmissaoNfsSolicitacao",
             "type": "Element",
             "namespace": "",
         }
     )
-    dt_emissao_nfs_autorizacao: Optional[XmlDateTime] = field(
+    dtEmissaoNfsAutorizacao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtEmissaoNfsAutorizacao",
             "type": "Element",
             "namespace": "",
         }
     )
-    qt_media_notas_emitidas: Optional[int] = field(
+    qtMediaNotasEmitidas: Optional[int] = field(
         default=None,
         metadata={
-            "name": "qtMediaNotasEmitidas",
             "type": "Element",
             "namespace": "",
         }
     )
-    is_envio_arquivo_lote: Optional[str] = field(
+    isEnvioArquivoLote: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isEnvioArquivoLote",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-2]{1}",
         }
     )
-    qt_emissores_rps: Optional[int] = field(
+    qtEmissoresRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "qtEmissoresRps",
             "type": "Element",
             "namespace": "",
         }
     )
-    is_authorized_web_services: Optional[str] = field(
+    isAuthorizedWebServices: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isAuthorizedWebServices",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-2]{1}",
         }
     )
-    st_emissao_nfs_autorizacao: Optional[str] = field(
+    stEmissaoNfsAutorizacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "stEmissaoNfsAutorizacao",
             "type": "Element",
             "namespace": "",
             "pattern": r"[1-3]{1}",
@@ -1902,28 +1747,25 @@ class TcServico:
     class Meta:
         name = "tcServico"
 
-    nr_servico_item: Optional[int] = field(
+    nrServicoItem: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrServicoItem",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    nr_servico_sub_item: Optional[int] = field(
+    nrServicoSubItem: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrServicoSubItem",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    vl_servico: Optional[str] = field(
+    vlServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlServico",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1932,10 +1774,9 @@ class TcServico:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_aliquota: Optional[str] = field(
+    vlAliquota: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquota",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1951,10 +1792,9 @@ class TcServico:
             "namespace": "",
         }
     )
-    vl_base_calculo: Optional[str] = field(
+    vlBaseCalculo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlBaseCalculo",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1963,10 +1803,9 @@ class TcServico:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_iss_servico: Optional[str] = field(
+    vlIssServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlIssServico",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1975,10 +1814,9 @@ class TcServico:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    ds_discriminacao_servico: Optional[str] = field(
+    dsDiscriminacaoServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsDiscriminacaoServico",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -1996,54 +1834,48 @@ class TcServicoAeitem:
     class Meta:
         name = "tcServicoAeitem"
 
-    nr_item: Optional[int] = field(
+    nrItem: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrItem",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    ds_item: Optional[str] = field(
+    dsItem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsItem",
             "type": "Element",
             "namespace": "",
         }
     )
-    is_informar_deducao: Optional[str] = field(
+    isInformarDeducao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isInformarDeducao",
-            "type": "Element",
-            "namespace": "",
-            "pattern": r"[0-2]{1}",
-        }
-    )
-    is_tomador_obrigatorio: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "isTomadorObrigatorio",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-2]{1}",
         }
     )
-    tp_retencao: Optional[str] = field(
+    isTomadorObrigatorio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpRetencao",
+            "type": "Element",
+            "namespace": "",
+            "pattern": r"[0-2]{1}",
+        }
+    )
+    tpRetencao: Optional[str] = field(
+        default=None,
+        metadata={
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-3]{1}",
         }
     )
-    vl_aliquota: Optional[str] = field(
+    vlAliquota: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlAliquota",
             "type": "Element",
             "namespace": "",
             "min_inclusive": "0",
@@ -2051,10 +1883,9 @@ class TcServicoAeitem:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    sub_item_list: Optional["TcServicoAeitem.SubItemList"] = field(
+    subItemList: Optional["TcServicoAeitem.SubItemList"] = field(
         default=None,
         metadata={
-            "name": "subItemList",
             "type": "Element",
             "namespace": "",
         }
@@ -2062,10 +1893,9 @@ class TcServicoAeitem:
 
     @dataclass
     class SubItemList:
-        sub_item: List[TcServicoAeSubItem] = field(
+        subItem: List[TcServicoAeSubItem] = field(
             default_factory=list,
             metadata={
-                "name": "subItem",
                 "type": "Element",
                 "namespace": "",
                 "min_occurs": 1,
@@ -2088,10 +1918,9 @@ class TcTomador:
             "namespace": "",
         }
     )
-    nm_tomador: Optional[str] = field(
+    nmTomador: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmTomador",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -2099,10 +1928,9 @@ class TcTomador:
             "max_length": 80,
         }
     )
-    ds_email: Optional[str] = field(
+    dsEmail: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsEmail",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
@@ -2110,97 +1938,87 @@ class TcTomador:
             "pattern": r"[\w\-_]+(\.[\w\-_]+)*@(([\w\-]{2,63}\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])",
         }
     )
-    nr_inscricao_estadual: Optional[str] = field(
+    nrInscricaoEstadual: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoEstadual",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
             "max_length": 20,
         }
     )
-    nr_inscricao_municipal: Optional[str] = field(
+    nrInscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoMunicipal",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-9]{1,10}",
         }
     )
-    ds_endereco: Optional[str] = field(
+    dsEndereco: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsEndereco",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 40,
         }
     )
-    nr_endereco: Optional[str] = field(
+    nrEndereco: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrEndereco",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 10,
         }
     )
-    ds_complemento: Optional[str] = field(
+    dsComplemento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsComplemento",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 40,
         }
     )
-    nm_bairro: Optional[str] = field(
+    nmBairro: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmBairro",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 25,
         }
     )
-    nr_cidade_ibge: Optional[int] = field(
+    nrCidadeIbge: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrCidadeIbge",
             "type": "Element",
             "namespace": "",
         }
     )
-    nm_uf: Optional[str] = field(
+    nmUf: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmUf",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 2,
         }
     )
-    nm_cidade_estrangeira: Optional[str] = field(
+    nmCidadeEstrangeira: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmCidadeEstrangeira",
             "type": "Element",
             "namespace": "",
             "min_length": 0,
             "max_length": 30,
         }
     )
-    nm_pais: Optional[str] = field(
+    nmPais: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nmPais",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -2208,19 +2026,17 @@ class TcTomador:
             "max_length": 40,
         }
     )
-    nr_cep: Optional[str] = field(
+    nrCep: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrCep",
             "type": "Element",
             "namespace": "",
             "pattern": r"[0-9]{8}",
         }
     )
-    nr_telefone: Optional[str] = field(
+    nrTelefone: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrTelefone",
             "type": "Element",
             "namespace": "",
             "min_length": 1,
@@ -2237,19 +2053,17 @@ class TcLivroFiscalEletronico:
     class Meta:
         name = "tcLivroFiscalEletronico"
 
-    nr_versao_layout: Optional[str] = field(
+    nrVersaoLayout: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrVersaoLayout",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    nr_mes_competencia: Optional[str] = field(
+    nrMesCompetencia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrMesCompetencia",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -2258,20 +2072,18 @@ class TcLivroFiscalEletronico:
             "pattern": r"[0-9]{1,2}",
         }
     )
-    nr_ano_competencia: Optional[str] = field(
+    nrAnoCompetencia: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrAnoCompetencia",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[0-9]{4}",
         }
     )
-    nr_cnpj_prestador: Optional[str] = field(
+    nrCnpjPrestador: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrCnpjPrestador",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -2279,29 +2091,26 @@ class TcLivroFiscalEletronico:
             "max_length": 20,
         }
     )
-    nr_inscricao_municipal_prestador: Optional[str] = field(
+    nrInscricaoMunicipalPrestador: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nrInscricaoMunicipalPrestador",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[0-9]{1,10}",
         }
     )
-    is_optante_simples_nacional: Optional[bool] = field(
+    isOptanteSimplesNacional: Optional[bool] = field(
         default=None,
         metadata={
-            "name": "isOptanteSimplesNacional",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    dt_enquadramento_simples_nacional: Optional[XmlDate] = field(
+    dtEnquadramentoSimplesNacional: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "dtEnquadramentoSimplesNacional",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -2336,65 +2145,58 @@ class TcRps:
     class Meta:
         name = "tcRps"
 
-    nr_rps: Optional[int] = field(
+    nrRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrRps",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    nr_emissor_rps: Optional[int] = field(
+    nrEmissorRps: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrEmissorRps",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    dt_emissao_rps: Optional[XmlDateTime] = field(
+    dtEmissaoRps: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "dtEmissaoRps",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    st_rps: Optional[str] = field(
+    stRps: Optional[str] = field(
         default=None,
         metadata={
-            "name": "stRps",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[1-4]{1}",
         }
     )
-    tp_tributacao: Optional[str] = field(
+    tpTributacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "tpTributacao",
             "type": "Element",
             "namespace": "",
             "required": True,
             "pattern": r"[1-4]{1}",
         }
     )
-    nr_cidade_ibge_servico: Optional[int] = field(
+    nrCidadeIbgeServico: Optional[int] = field(
         default=None,
         metadata={
-            "name": "nrCidadeIbgeServico",
             "type": "Element",
             "namespace": "",
         }
     )
-    is_iss_retido: Optional[str] = field(
+    isIssRetido: Optional[str] = field(
         default=None,
         metadata={
-            "name": "isIssRetido",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -2408,19 +2210,17 @@ class TcRps:
             "namespace": "",
         }
     )
-    lista_servicos: Optional["TcRps.ListaServicos"] = field(
+    listaServicos: Optional["TcRps.ListaServicos"] = field(
         default=None,
         metadata={
-            "name": "listaServicos",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    vl_total_rps: Optional[str] = field(
+    vlTotalRps: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlTotalRps",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -2429,10 +2229,9 @@ class TcRps:
             "pattern": r"((\d){1,18})|((\d){1,16}\.(\d){1,2})|((\d){0,16}\.(\d){1,2})",
         }
     )
-    vl_liquido_rps: Optional[str] = field(
+    vlLiquidoRps: Optional[str] = field(
         default=None,
         metadata={
-            "name": "vlLiquidoRps",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -2448,10 +2247,9 @@ class TcRps:
             "namespace": "",
         }
     )
-    ds_impostos: Optional[str] = field(
+    dsImpostos: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dsImpostos",
             "type": "Element",
             "namespace": "",
             "min_length": 1,

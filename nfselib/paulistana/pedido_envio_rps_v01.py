@@ -16,8 +16,8 @@ class PedidoEnvioRps:
     Este Schema XML é utilizado pelos prestadores de serviços para
     substituição online e individual de RPS por NFS-e.
 
-    :ivar cabecalho: Cabeçalho do pedido.
-    :ivar rps: Informe o RPS a ser substituido por NFS-e.
+    :ivar Cabecalho: Cabeçalho do pedido.
+    :ivar RPS: Informe o RPS a ser substituido por NFS-e.
     :ivar signature: Assinatura digital do contribuinte que gerou o RPS
         contido da mensagem XML.
     """
@@ -25,19 +25,17 @@ class PedidoEnvioRps:
         name = "PedidoEnvioRPS"
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["PedidoEnvioRps.Cabecalho"] = field(
+    Cabecalho: Optional["PedidoEnvioRps.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    rps: Optional[TpRps] = field(
+    RPS: Optional[TpRps] = field(
         default=None,
         metadata={
-            "name": "RPS",
             "type": "Element",
             "namespace": "",
             "required": True,
@@ -56,24 +54,22 @@ class PedidoEnvioRps:
     @dataclass
     class Cabecalho:
         """
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
-        :ivar versao: Informe a Versão do Schema XML utilizado.
+        :ivar Versao: Informe a Versão do Schema XML utilizado.
         """
-        cpfcnpjremetente: Optional[TpCpfcnpj] = field(
+        CPFCNPJRemetente: Optional[TpCpfcnpj] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",

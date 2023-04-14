@@ -18,45 +18,41 @@ class RetornoConsulta:
     consulta de NFS-e/RPS, consultade NFS-e recebidas e consulta de
     lote.
 
-    :ivar cabecalho: Cabeçalho do retorno.
-    :ivar alerta: Elemento que representa a ocorrência de eventos de
+    :ivar Cabecalho: Cabeçalho do retorno.
+    :ivar Alerta: Elemento que representa a ocorrência de eventos de
         alerta durante o processamento da mensagem XML.
-    :ivar erro: Elemento que representa a ocorrência de eventos de erro
+    :ivar Erro: Elemento que representa a ocorrência de eventos de erro
         durante o processamento da mensagem XML.
-    :ivar nfe: Elemento NFe - Cada item será um NFS-e.
+    :ivar NFe: Elemento NFe - Cada item será um NFS-e.
     """
     class Meta:
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["RetornoConsulta.Cabecalho"] = field(
+    Cabecalho: Optional["RetornoConsulta.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    alerta: List[TpEvento] = field(
+    Alerta: List[TpEvento] = field(
         default_factory=list,
         metadata={
-            "name": "Alerta",
             "type": "Element",
             "namespace": "",
         }
     )
-    erro: List[TpEvento] = field(
+    Erro: List[TpEvento] = field(
         default_factory=list,
         metadata={
-            "name": "Erro",
             "type": "Element",
             "namespace": "",
         }
     )
-    nfe: List[TpNfe] = field(
+    NFe: List[TpNfe] = field(
         default_factory=list,
         metadata={
-            "name": "NFe",
             "type": "Element",
             "namespace": "",
             "max_occurs": 50,
@@ -66,23 +62,21 @@ class RetornoConsulta:
     @dataclass
     class Cabecalho:
         """
-        :ivar sucesso: Campo indicativo do sucesso do pedido do serviço.
-        :ivar versao: Versão do Schema XML utilizado.
+        :ivar Sucesso: Campo indicativo do sucesso do pedido do serviço.
+        :ivar Versao: Versão do Schema XML utilizado.
         """
-        sucesso: Optional[bool] = field(
+        Sucesso: Optional[bool] = field(
             default=None,
             metadata={
-                "name": "Sucesso",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",

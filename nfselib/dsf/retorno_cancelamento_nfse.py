@@ -17,47 +17,43 @@ class RetornoCancelamentoNfse:
     prestadores de serviços qual o resultado do pedido de cancelamento
     de NFSe.
 
-    :ivar cabecalho: Cabeçalho do pedido.
-    :ivar notas_canceladas: Elemento que representa a ocorrência de
+    :ivar Cabecalho: Cabeçalho do pedido.
+    :ivar NotasCanceladas: Elemento que representa a ocorrência de
         eventos de erro durante o processamento da mensagem XML.
-    :ivar alertas: Elemento que representa a ocorrência de eventos de
+    :ivar Alertas: Elemento que representa a ocorrência de eventos de
         alerta durante o processamento da mensagem XML.
-    :ivar erros: Elemento que representa a ocorrência de eventos de erro
+    :ivar Erros: Elemento que representa a ocorrência de eventos de erro
         durante o processamento da mensagem XML.
     """
     class Meta:
         name = "RetornoCancelamentoNFSe"
         namespace = "http://localhost:8080/WsNFe2/lote"
 
-    cabecalho: Optional["RetornoCancelamentoNfse.Cabecalho"] = field(
+    Cabecalho: Optional["RetornoCancelamentoNfse.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    notas_canceladas: Optional[TpRetornoNotasCancelamentoNfse] = field(
+    NotasCanceladas: Optional[TpRetornoNotasCancelamentoNfse] = field(
         default=None,
         metadata={
-            "name": "NotasCanceladas",
             "type": "Element",
             "namespace": "",
         }
     )
-    alertas: Optional[TpListaAlertas] = field(
+    Alertas: Optional[TpListaAlertas] = field(
         default=None,
         metadata={
-            "name": "Alertas",
             "type": "Element",
             "namespace": "",
         }
     )
-    erros: Optional[TpListaErros] = field(
+    Erros: Optional[TpListaErros] = field(
         default=None,
         metadata={
-            "name": "Erros",
             "type": "Element",
             "namespace": "",
         }
@@ -66,46 +62,42 @@ class RetornoCancelamentoNfse:
     @dataclass
     class Cabecalho:
         """
-        :ivar cod_cidade: Informe o Codigo da Cidade.
-        :ivar sucesso: Notas Canceladas com Sucesso.
-        :ivar cpfcnpjremetente: Informe o CPF/CNPJ do Remetente
+        :ivar CodCidade: Informe o Codigo da Cidade.
+        :ivar Sucesso: Notas Canceladas com Sucesso.
+        :ivar CPFCNPJRemetente: Informe o CPF/CNPJ do Remetente
             autorizado a transmitir a mensagem XML.
-        :ivar versao: Informe a Versão do Schema XML utilizado.
+        :ivar Versao: Informe a Versão do Schema XML utilizado.
         """
-        cod_cidade: Optional[int] = field(
+        CodCidade: Optional[int] = field(
             default=None,
             metadata={
-                "name": "CodCidade",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "min_inclusive": 1,
             }
         )
-        sucesso: bool = field(
+        Sucesso: bool = field(
             default=True,
             metadata={
-                "name": "Sucesso",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        cpfcnpjremetente: Optional[str] = field(
+        CPFCNPJRemetente: Optional[str] = field(
             default=None,
             metadata={
-                "name": "CPFCNPJRemetente",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
                 "pattern": r"[0-9]{11}|[0-9]{14}",
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

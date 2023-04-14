@@ -10,22 +10,20 @@ class ConsultarSituacaoLoteRpsResposta:
     class Meta:
         namespace = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_consultar_situacao_lote_rps_resposta.xsd"
 
-    numero_lote: Optional[int] = field(
+    NumeroLote: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroLote",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    situacao: Optional[int] = field(
+    Situacao: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Situacao",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional["ConsultarSituacaoLoteRpsResposta.ListaMensagemRetorno"] = field(
+    listaMensagemRetorno: Optional["ConsultarSituacaoLoteRpsResposta.ListaMensagemRetorno"] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -35,10 +33,9 @@ class ConsultarSituacaoLoteRpsResposta:
 
     @dataclass
     class ListaMensagemRetorno:
-        mensagem_retorno: List[TcMensagemRetorno] = field(
+        MensagemRetorno: List[TcMensagemRetorno] = field(
             default_factory=list,
             metadata={
-                "name": "MensagemRetorno",
                 "type": "Element",
                 "min_occurs": 1,
             }

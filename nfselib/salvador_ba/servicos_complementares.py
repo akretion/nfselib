@@ -18,10 +18,9 @@ class TcSituacaoAceiteNfse:
     class Meta:
         name = "tcSituacaoAceiteNfse"
 
-    status_aceite_nfse: Optional[str] = field(
+    StatusAceiteNfse: Optional[str] = field(
         default=None,
         metadata={
-            "name": "StatusAceiteNfse",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
@@ -43,33 +42,29 @@ class ConsultarNfsePendenteAceiteEnvio:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd"
 
-    tomador: Optional[TcIdentificacaoTomador] = field(
+    Tomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
         }
     )
-    numero_nfse: Optional[int] = field(
+    NumeroNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroNfse",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    competencia: Optional[XmlDate] = field(
+    Competencia: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "Competencia",
             "type": "Element",
         }
     )
@@ -80,10 +75,9 @@ class ConsultarSituacaoNfseEnvio:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd"
 
-    id_nfse: Optional[TcIdentificacaoNfse] = field(
+    idNfse: Optional[TcIdentificacaoNfse] = field(
         default=None,
         metadata={
-            "name": "idNfse",
             "type": "Element",
             "required": True,
         }
@@ -95,10 +89,9 @@ class ConsultarSituacaoNfseResposta:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd"
 
-    id_nfse: Optional[TcIdentificacaoNfse] = field(
+    idNfse: Optional[TcIdentificacaoNfse] = field(
         default=None,
         metadata={
-            "name": "idNfse",
             "type": "Element",
         }
     )
@@ -108,7 +101,7 @@ class ConsultarSituacaoNfseResposta:
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -123,14 +116,13 @@ class RegistrarAceiteTomadorResposta:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd"
 
-    lista_nfse: Optional["RegistrarAceiteTomadorResposta.ListaNfse"] = field(
+    ListaNfse: Optional["RegistrarAceiteTomadorResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -141,10 +133,9 @@ class RegistrarAceiteTomadorResposta:
 
     @dataclass
     class ListaNfse:
-        situacao_registro: List[TcSituacaoAceiteNfse] = field(
+        SituacaoRegistro: List[TcSituacaoAceiteNfse] = field(
             default_factory=list,
             metadata={
-                "name": "SituacaoRegistro",
                 "type": "Element",
                 "min_occurs": 1,
             }
@@ -156,47 +147,42 @@ class TcNfsePendenteAceite:
     class Meta:
         name = "tcNfsePendenteAceite"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
         }
     )
-    numero_nfse: Optional[int] = field(
+    NumeroNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroNfse",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    data_emissao: Optional[XmlDateTime] = field(
+    DataEmissao: Optional[XmlDateTime] = field(
         default=None,
         metadata={
-            "name": "DataEmissao",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
         }
     )
-    competencia: Optional[XmlDate] = field(
+    Competencia: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "Competencia",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
         }
     )
-    valor_servicos: Optional[Decimal] = field(
+    ValorServicos: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorServicos",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
@@ -212,39 +198,35 @@ class TcRegistroAceiteNfse:
     class Meta:
         name = "tcRegistroAceiteNFse"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
         }
     )
-    numero_nfse: Optional[int] = field(
+    NumeroNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroNfse",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
             "total_digits": 15,
         }
     )
-    registro_aceite: Optional[str] = field(
+    RegistroAceite: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RegistroAceite",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
             "pattern": r"1|2",
         }
     )
-    justificativa_indeferimento: Optional[str] = field(
+    JustificativaIndeferimento: Optional[str] = field(
         default=None,
         metadata={
-            "name": "JustificativaIndeferimento",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "pattern": r"1|2|3",
@@ -265,14 +247,13 @@ class ConsultarNfsePendenteAceiteResposta:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd"
 
-    lista_nfse: Optional["ConsultarNfsePendenteAceiteResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarNfsePendenteAceiteResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -283,10 +264,9 @@ class ConsultarNfsePendenteAceiteResposta:
 
     @dataclass
     class ListaNfse:
-        nfse_pendente_aceite: List[TcNfsePendenteAceite] = field(
+        NfsePendenteAceite: List[TcNfsePendenteAceite] = field(
             default_factory=list,
             metadata={
-                "name": "NfsePendenteAceite",
                 "type": "Element",
             }
         )
@@ -297,10 +277,9 @@ class RegistrarAceiteTomadorEnvio:
     class Meta:
         namespace = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd"
 
-    registro_aceite_nfse: Optional[TcRegistroAceiteNfse] = field(
+    RegistroAceiteNFse: Optional[TcRegistroAceiteNfse] = field(
         default=None,
         metadata={
-            "name": "RegistroAceiteNFse",
             "type": "Element",
             "required": True,
         }
@@ -321,19 +300,17 @@ class TcAceiteNfse:
     class Meta:
         name = "tcAceiteNFse"
 
-    tomador: Optional[TcIdentificacaoTomador] = field(
+    Tomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
         }
     )
-    lista_nfse: Optional["TcAceiteNfse.ListaNfse"] = field(
+    ListaNfse: Optional["TcAceiteNfse.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
             "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
             "required": True,
@@ -350,10 +327,9 @@ class TcAceiteNfse:
 
     @dataclass
     class ListaNfse:
-        registro_aceite_nfse: List[TcRegistroAceiteNfse] = field(
+        RegistroAceiteNfse: List[TcRegistroAceiteNfse] = field(
             default_factory=list,
             metadata={
-                "name": "RegistroAceiteNfse",
                 "type": "Element",
                 "namespace": "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd",
                 "min_occurs": 1,

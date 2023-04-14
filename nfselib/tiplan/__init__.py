@@ -108,7 +108,7 @@ from nfselib.tiplan.tipos_nfse_v01 import (
     TcSubstituicaoNfse as TiposV01TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.tiplan.xmldsig_core_schema_v01 import (
+from nfselib.tiplan.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,
@@ -124,7 +124,7 @@ from nfselib.tiplan.xmldsig_core_schema_v01 import (
     Manifest,
     ManifestType,
     MgmtData,
-    Object,
+    _Object,
     ObjectType,
     Pgpdata,
     PgpdataType,
@@ -277,7 +277,7 @@ __all__ = [
     "Manifest",
     "ManifestType",
     "MgmtData",
-    "Object",
+    "_Object",
     "ObjectType",
     "Pgpdata",
     "PgpdataType",

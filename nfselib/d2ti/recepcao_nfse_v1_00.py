@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.d2ti.retorno_cancelamento_nfse_v1_00 import Autenticacao
+from nfselib.d2ti.retorno_recepcao_nfse_v1_00 import (
+    Autenticacao,
+    NumeroNota,
+)
 from nfselib.d2ti.tipos_basicos_cta_v1_00 import (
     Tboolean,
     TtipoDeducao,
@@ -319,10 +322,9 @@ class Imposto:
         name = "imposto"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    codigo_imposto: Optional[str] = field(
+    codigoImposto: Optional[str] = field(
         default=None,
         metadata={
-            "name": "codigoImposto",
             "type": "Element",
             "required": True,
             "max_length": 4,
@@ -330,10 +332,9 @@ class Imposto:
             "pattern": r"[0-9]{1,4}",
         }
     )
-    descricao_imposto: Optional[str] = field(
+    descricaoImposto: Optional[str] = field(
         default=None,
         metadata={
-            "name": "descricaoImposto",
             "type": "Element",
             "required": True,
         }
@@ -347,10 +348,9 @@ class Imposto:
             "pattern": r"0|0\.[0-9]{1,4}|[0-9]{1}[0-9]{0,1}(\.[0-9]{1,4})?",
         }
     )
-    valor_imposto: Optional[str] = field(
+    valorImposto: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valorImposto",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -359,10 +359,9 @@ class Imposto:
             "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
         }
     )
-    n_item: Optional[str] = field(
+    nItem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nItem",
             "type": "Attribute",
             "required": True,
             "max_length": 2,
@@ -490,10 +489,9 @@ class Totais:
         name = "totais"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    valot_total_nota: Optional[str] = field(
+    valotTotalNota: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valotTotalNota",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -502,10 +500,9 @@ class Totais:
             "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
         }
     )
-    valor_total_servico: Optional[str] = field(
+    valorTotalServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valorTotalServico",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -514,10 +511,9 @@ class Totais:
             "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
         }
     )
-    valor_total_deducao: Optional[str] = field(
+    valorTotalDeducao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valorTotalDeducao",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -526,10 +522,9 @@ class Totais:
             "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
         }
     )
-    valor_total_iss: Optional[str] = field(
+    valorTotalISS: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valorTotalISS",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -538,10 +533,9 @@ class Totais:
             "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
         }
     )
-    valor_reducao_bc: Optional[str] = field(
+    valorReducaoBC: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valorReducaoBC",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -813,36 +807,32 @@ class Endereco:
             "pattern": r"[0-9]{8,8}",
         }
     )
-    codigo_munipio: Optional[str] = field(
+    codigoMunipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "codigoMunipio",
             "type": "Element",
             "required": True,
             "white_space": "preserve",
             "pattern": r"[0-9]{1,5}",
         }
     )
-    descricao_municipio: Optional[str] = field(
+    descricaoMunicipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "descricaoMunicipio",
             "type": "Element",
             "required": True,
         }
     )
-    codigo_estado: Optional[Tuf] = field(
+    codigoEstado: Optional[Tuf] = field(
         default=None,
         metadata={
-            "name": "codigoEstado",
             "type": "Element",
             "required": True,
         }
     )
-    descricao_estado: Optional[str] = field(
+    descricaoEstado: Optional[str] = field(
         default=None,
         metadata={
-            "name": "descricaoEstado",
             "type": "Element",
             "required": True,
         }
@@ -908,10 +898,9 @@ class Item:
             "pattern": r"[0-9]{1,4}",
         }
     )
-    valor_unitario: Optional[str] = field(
+    valorUnitario: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valorUnitario",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -920,10 +909,9 @@ class Item:
             "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
         }
     )
-    valor_total: Optional[str] = field(
+    valorTotal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valorTotal",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -932,10 +920,9 @@ class Item:
             "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
         }
     )
-    n_item: Optional[str] = field(
+    nItem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nItem",
             "type": "Attribute",
             "required": True,
             "max_length": 2,
@@ -951,10 +938,9 @@ class ItemMapa:
         name = "itemMapa"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    tipo_pessoa: Optional[TtipoPessoa] = field(
+    tipoPessoa: Optional[TtipoPessoa] = field(
         default=None,
         metadata={
-            "name": "tipoPessoa",
             "type": "Element",
             "required": True,
         }
@@ -979,42 +965,37 @@ class ItemMapa:
             "pattern": r"[0-9]{14}",
         }
     )
-    numero_nota: Optional[str] = field(
+    numeroNota: Optional[NumeroNota] = field(
         default=None,
         metadata={
-            "name": "numeroNota",
             "type": "Element",
             "required": True,
         }
     )
-    codigo_tipo: Optional[TtipoItemDeducao] = field(
+    codigoTipo: Optional[TtipoItemDeducao] = field(
         default=None,
         metadata={
-            "name": "codigoTipo",
             "type": "Element",
             "required": True,
         }
     )
-    descricao_tipo: Optional[str] = field(
+    descricaoTipo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "descricaoTipo",
             "type": "Element",
             "required": True,
         }
     )
-    tipo_valor: Optional[TtipoValorDeducao] = field(
+    tipoValor: Optional[TtipoValorDeducao] = field(
         default=None,
         metadata={
-            "name": "tipoValor",
             "type": "Element",
             "required": True,
         }
     )
-    valor_nota: Optional[str] = field(
+    valorNota: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valorNota",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -1023,10 +1004,9 @@ class ItemMapa:
             "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
         }
     )
-    valor_decucao: Optional[str] = field(
+    valorDecucao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "valorDecucao",
             "type": "Element",
             "required": True,
             "min_inclusive": "0",
@@ -1035,10 +1015,9 @@ class ItemMapa:
             "pattern": r"0|0\.[0-9]{2}|[1-9]{1}[0-9]{0,12}(\.[0-9]{0,2})?",
         }
     )
-    n_item: Optional[str] = field(
+    nItem: Optional[str] = field(
         default=None,
         metadata={
-            "name": "nItem",
             "type": "Attribute",
             "required": True,
             "max_length": 2,
@@ -1054,36 +1033,32 @@ class LocalPrestacao:
         name = "localPrestacao"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    codigo_estado: Optional[Tuf] = field(
+    codigoEstado: Optional[Tuf] = field(
         default=None,
         metadata={
-            "name": "codigoEstado",
             "type": "Element",
             "required": True,
         }
     )
-    descricao_estado: Optional[str] = field(
+    descricaoEstado: Optional[str] = field(
         default=None,
         metadata={
-            "name": "descricaoEstado",
             "type": "Element",
             "required": True,
         }
     )
-    codigo_munipio: Optional[str] = field(
+    codigoMunipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "codigoMunipio",
             "type": "Element",
             "required": True,
             "white_space": "preserve",
             "pattern": r"[0-9]{1,5}",
         }
     )
-    descricao_municipio: Optional[str] = field(
+    descricaoMunicipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "descricaoMunicipio",
             "type": "Element",
             "required": True,
         }
@@ -1208,60 +1183,53 @@ class AtividadeExecutada:
         name = "atividadeExecutada"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    codigo_servico: Optional[str] = field(
+    codigoServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "codigoServico",
             "type": "Element",
             "required": True,
             "pattern": r"[0-9]{4,5}",
         }
     )
-    descricao_servico: Optional[str] = field(
+    descricaoServico: Optional[str] = field(
         default=None,
         metadata={
-            "name": "descricaoServico",
             "type": "Element",
             "required": True,
         }
     )
-    codigo_atividade: Optional[str] = field(
+    codigoAtividade: Optional[str] = field(
         default=None,
         metadata={
-            "name": "codigoAtividade",
             "type": "Element",
             "required": True,
             "pattern": r"[0-9]{9}",
         }
     )
-    descricao_atividade: Optional[str] = field(
+    descricaoAtividade: Optional[str] = field(
         default=None,
         metadata={
-            "name": "descricaoAtividade",
             "type": "Element",
             "required": True,
         }
     )
-    local_prestacao: Optional[LocalPrestacao] = field(
+    localPrestacao: Optional[LocalPrestacao] = field(
         default=None,
         metadata={
-            "name": "localPrestacao",
             "type": "Element",
             "required": True,
         }
     )
-    tipo_tributacao: Optional[TtipoTributacao] = field(
+    tipoTributacao: Optional[TtipoTributacao] = field(
         default=None,
         metadata={
-            "name": "tipoTributacao",
             "type": "Element",
             "required": True,
         }
     )
-    tipo_recolhimento: Optional[TtipoRecolhimento] = field(
+    tipoRecolhimento: Optional[TtipoRecolhimento] = field(
         default=None,
         metadata={
-            "name": "tipoRecolhimento",
             "type": "Element",
             "required": True,
         }
@@ -1283,10 +1251,9 @@ class Intermediador:
         name = "intermediador"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    tipo_pessoa: Optional[TtipoPessoa] = field(
+    tipoPessoa: Optional[TtipoPessoa] = field(
         default=None,
         metadata={
-            "name": "tipoPessoa",
             "type": "Element",
             "required": True,
         }
@@ -1311,10 +1278,9 @@ class Intermediador:
             "pattern": r"[0-9]{14}",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    inscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "inscricaoMunicipal",
             "type": "Element",
             "required": True,
             "max_length": 11,
@@ -1322,10 +1288,9 @@ class Intermediador:
             "pattern": r"[0-9]{2,11}",
         }
     )
-    razao_social: Optional[str] = field(
+    razaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "razaoSocial",
             "type": "Element",
             "required": True,
         }
@@ -1344,10 +1309,9 @@ class Intermediador:
             "required": True,
         }
     )
-    telefone_ddd: Optional[str] = field(
+    telefoneDdd: Optional[str] = field(
         default=None,
         metadata={
-            "name": "telefoneDdd",
             "type": "Element",
             "required": True,
             "max_length": 2,
@@ -1355,10 +1319,9 @@ class Intermediador:
             "pattern": r"[0-9]{1,2}",
         }
     )
-    telefone_numero: Optional[str] = field(
+    telefoneNumero: Optional[str] = field(
         default=None,
         metadata={
-            "name": "telefoneNumero",
             "type": "Element",
             "required": True,
             "max_length": 9,
@@ -1389,10 +1352,9 @@ class Mapa:
         name = "mapa"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    item_mapa: List[ItemMapa] = field(
+    itemMapa: List[ItemMapa] = field(
         default_factory=list,
         metadata={
-            "name": "itemMapa",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -1405,10 +1367,9 @@ class Prestador:
         name = "prestador"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    tipo_pessoa: Optional[TtipoPessoa] = field(
+    tipoPessoa: Optional[TtipoPessoa] = field(
         default=None,
         metadata={
-            "name": "tipoPessoa",
             "type": "Element",
             "required": True,
         }
@@ -1431,20 +1392,18 @@ class Prestador:
             "pattern": r"[0-9]{14}",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    inscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "inscricaoMunicipal",
             "type": "Element",
             "max_length": 11,
             "white_space": "preserve",
             "pattern": r"[0-9]{2,11}",
         }
     )
-    razao_social: Optional[str] = field(
+    razaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "razaoSocial",
             "type": "Element",
             "required": True,
         }
@@ -1463,10 +1422,9 @@ class Prestador:
             "required": True,
         }
     )
-    telefone_ddd: Optional[str] = field(
+    telefoneDdd: Optional[str] = field(
         default=None,
         metadata={
-            "name": "telefoneDdd",
             "type": "Element",
             "required": True,
             "max_length": 2,
@@ -1474,10 +1432,9 @@ class Prestador:
             "pattern": r"[0-9]{1,2}",
         }
     )
-    telefone_numero: Optional[str] = field(
+    telefoneNumero: Optional[str] = field(
         default=None,
         metadata={
-            "name": "telefoneNumero",
             "type": "Element",
             "required": True,
             "max_length": 9,
@@ -1493,18 +1450,16 @@ class Tomador:
         name = "tomador"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    tomador_identificado: Optional[Tboolean] = field(
+    tomadorIdentificado: Optional[Tboolean] = field(
         default=None,
         metadata={
-            "name": "tomadorIdentificado",
             "type": "Element",
             "required": True,
         }
     )
-    tipo_pessoa: Optional[TtipoPessoa] = field(
+    tipoPessoa: Optional[TtipoPessoa] = field(
         default=None,
         metadata={
-            "name": "tipoPessoa",
             "type": "Element",
         }
     )
@@ -1526,20 +1481,18 @@ class Tomador:
             "pattern": r"[0-9]{14}",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    inscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "inscricaoMunicipal",
             "type": "Element",
             "max_length": 11,
             "white_space": "preserve",
             "pattern": r"[0-9]{2,11}",
         }
     )
-    razao_social: Optional[str] = field(
+    razaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "razaoSocial",
             "type": "Element",
         }
     )
@@ -1561,20 +1514,18 @@ class Tomador:
             "type": "Element",
         }
     )
-    telefone_ddd: Optional[str] = field(
+    telefoneDdd: Optional[str] = field(
         default=None,
         metadata={
-            "name": "telefoneDdd",
             "type": "Element",
             "max_length": 2,
             "white_space": "preserve",
             "pattern": r"[0-9]{1,2}",
         }
     )
-    telefone_numero: Optional[str] = field(
+    telefoneNumero: Optional[str] = field(
         default=None,
         metadata={
-            "name": "telefoneNumero",
             "type": "Element",
             "max_length": 9,
             "white_space": "preserve",
@@ -1634,18 +1585,16 @@ class DetalhamentoNota:
         name = "detalhamentoNota"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    descricao_nota: Optional[str] = field(
+    descricaoNota: Optional[str] = field(
         default=None,
         metadata={
-            "name": "descricaoNota",
             "type": "Element",
             "required": True,
         }
     )
-    itens_servico: Optional[ItensServico] = field(
+    itensServico: Optional[ItensServico] = field(
         default=None,
         metadata={
-            "name": "itensServico",
             "type": "Element",
             "required": True,
         }
@@ -1657,10 +1606,9 @@ class DetalhamentoNota:
             "required": True,
         }
     )
-    impostos_federais: Optional[ImpostosFederais] = field(
+    impostosFederais: Optional[ImpostosFederais] = field(
         default=None,
         metadata={
-            "name": "impostosFederais",
             "type": "Element",
         }
     )
@@ -1672,30 +1620,27 @@ class NfseLote:
         name = "nfseLote"
         namespace = "http://www.ctaconsult.com/nfse"
 
-    codigo_municipio: Optional[str] = field(
+    codigoMunicipio: Optional[str] = field(
         default=None,
         metadata={
-            "name": "codigoMunicipio",
             "type": "Element",
             "required": True,
             "white_space": "preserve",
             "pattern": r"[0-9]{1,5}",
         }
     )
-    dt_emissao: Optional[str] = field(
+    dtEmissao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "dtEmissao",
             "type": "Element",
             "required": True,
             "white_space": "preserve",
             "pattern": r"(((20(([02468][048])|([13579][26]))-02-29))|(20[0-9][0-9])-((((0[1-9])|(1[0-2]))-((0[1-9])|(1\d)|(2[0-8])))|((((0[13578])|(1[02]))-31)|(((0[1,3-9])|(1[0-2]))-(29|30)))))T(([0-1][0-9])|([2][0-3])):([0-5][0-9]):([0-5][0-9])",
         }
     )
-    nota_intermediada: Optional[Tboolean] = field(
+    notaIntermediada: Optional[Tboolean] = field(
         default=None,
         metadata={
-            "name": "notaIntermediada",
             "type": "Element",
             "required": True,
         }
@@ -1727,10 +1672,9 @@ class NfseLote:
             "type": "Element",
         }
     )
-    atividade_executada: Optional[AtividadeExecutada] = field(
+    atividadeExecutada: Optional[AtividadeExecutada] = field(
         default=None,
         metadata={
-            "name": "atividadeExecutada",
             "type": "Element",
             "required": True,
         }
@@ -1742,10 +1686,9 @@ class NfseLote:
             "required": True,
         }
     )
-    detalhamento_nota: Optional[DetalhamentoNota] = field(
+    detalhamentoNota: Optional[DetalhamentoNota] = field(
         default=None,
         metadata={
-            "name": "detalhamentoNota",
             "type": "Element",
             "required": True,
         }

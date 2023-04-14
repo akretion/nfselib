@@ -5,18 +5,16 @@ from typing import List, Optional
 
 @dataclass
 class Retorno:
-    nota_fiscal: List["Retorno.NotaFiscal"] = field(
+    NotaFiscal: List["Retorno.NotaFiscal"] = field(
         default_factory=list,
         metadata={
-            "name": "NotaFiscal",
             "type": "Element",
             "namespace": "",
         }
     )
-    erro: List["Retorno.Erro"] = field(
+    Erro: List["Retorno.Erro"] = field(
         default_factory=list,
         metadata={
-            "name": "Erro",
             "type": "Element",
             "namespace": "",
         }
@@ -25,42 +23,38 @@ class Retorno:
     @dataclass
     class NotaFiscal:
         """
-        :ivar id: Identificador do Registro
-        :ivar numero_nf: Número da Nota Fiscal
-        :ivar chave_validacao: Chave de Validação da Nota Fiscal
-        :ivar lote: Número do Lote de Envio da Nota Fiscal
+        :ivar ID: Identificador do Registro
+        :ivar NumeroNF: Número da Nota Fiscal
+        :ivar ChaveValidacao: Chave de Validação da Nota Fiscal
+        :ivar Lote: Número do Lote de Envio da Nota Fiscal
         """
-        id: Optional[int] = field(
+        ID: Optional[int] = field(
             default=None,
             metadata={
-                "name": "ID",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        numero_nf: Optional[Decimal] = field(
+        NumeroNF: Optional[Decimal] = field(
             default=None,
             metadata={
-                "name": "NumeroNF",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        chave_validacao: Optional[str] = field(
+        ChaveValidacao: Optional[str] = field(
             default=None,
             metadata={
-                "name": "ChaveValidacao",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        lote: Optional[Decimal] = field(
+        Lote: Optional[Decimal] = field(
             default=None,
             metadata={
-                "name": "Lote",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
@@ -70,22 +64,20 @@ class Retorno:
     @dataclass
     class Erro:
         """
-        :ivar id: Identificador do Registro (RPS)
-        :ivar erro: Mensagem de Erro do Arquivo
+        :ivar ID: Identificador do Registro (RPS)
+        :ivar Erro: Mensagem de Erro do Arquivo
         """
-        id: Optional[int] = field(
+        ID: Optional[int] = field(
             default=None,
             metadata={
-                "name": "ID",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        erro: Optional[str] = field(
+        Erro: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Erro",
                 "type": "Element",
                 "namespace": "",
                 "required": True,

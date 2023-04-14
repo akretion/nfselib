@@ -10,17 +10,15 @@ class ConsultarLoteRpsEnvio:
     class Meta:
         namespace = "http://tempuri.org/servico_consultar_lote_rps_envio.xsd"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
         }
     )
-    protocolo: Optional[str] = field(
+    Protocolo: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Protocolo",
             "type": "Element",
             "max_length": 50,
         }

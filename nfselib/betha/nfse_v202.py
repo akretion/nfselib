@@ -2,23 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from nfselib.betha.nfse_v01 import (
-    ListaMensagemRetorno,
-    TcCancelamentoNfse,
-    TcCompNfse,
-    TcCpfCnpj,
-    TcDadosConstrucaoCivil,
-    TcDadosServico,
-    TcDadosTomador,
-    TcIdentificacaoPrestador,
-    TcIdentificacaoTomador,
-    TcInfRps,
-    TcLoteRps,
-    TcMensagemRetorno,
-    TcMensagemRetornoLote,
-    TcPedidoCancelamento,
-)
-from nfselib.betha.xmldsig_core_schema import Signature
+from nfselib.betha.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
@@ -29,10 +13,9 @@ class Cabecalho:
         name = "cabecalho"
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    versao_dados: Optional[str] = field(
+    versaoDados: Optional[str] = field(
         default=None,
         metadata={
-            "name": "versaoDados",
             "type": "Element",
             "required": True,
             "pattern": r"[1-9]{1}[0-9]{0,1}\.[0-9]{2}",
@@ -49,14 +32,295 @@ class Cabecalho:
 
 
 @dataclass
+class TcContato:
+    class Meta:
+        name = "tcContato"
+
+    Telefone: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 20,
+            "white_space": "collapse",
+        }
+    )
+    Email: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 80,
+            "white_space": "collapse",
+        }
+    )
+
+
+@dataclass
+class TcCpfCnpj:
+    class Meta:
+        name = "tcCpfCnpj"
+
+    Cpf: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "length": 11,
+        }
+    )
+    Cnpj: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "length": 14,
+            "white_space": "collapse",
+        }
+    )
+
+
+@dataclass
+class TcDadosConstrucaoCivil:
+    class Meta:
+        name = "tcDadosConstrucaoCivil"
+
+    CodigoObra: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 15,
+            "white_space": "collapse",
+        }
+    )
+    Art: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 15,
+            "white_space": "collapse",
+        }
+    )
+
+
+@dataclass
+class TcEndereco:
+    class Meta:
+        name = "tcEndereco"
+
+    Endereco: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 125,
+            "white_space": "collapse",
+        }
+    )
+    Numero: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 10,
+            "white_space": "collapse",
+        }
+    )
+    Complemento: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 60,
+            "white_space": "collapse",
+        }
+    )
+    Bairro: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 60,
+            "white_space": "collapse",
+        }
+    )
+    CodigoMunicipio: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "total_digits": 7,
+        }
+    )
+    Uf: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "length": 2,
+        }
+    )
+    CodigoPais: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "length": 4,
+            "white_space": "collapse",
+        }
+    )
+    Cep: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "length": 8,
+        }
+    )
+
+
+@dataclass
+class TcIdentificacaoOrgaoGerador:
+    class Meta:
+        name = "tcIdentificacaoOrgaoGerador"
+
+    CodigoMunicipio: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "total_digits": 7,
+        }
+    )
+    Uf: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "length": 2,
+        }
+    )
+
+
+@dataclass
+class TcIdentificacaoRps:
+    class Meta:
+        name = "tcIdentificacaoRps"
+
+    Numero: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "total_digits": 15,
+        }
+    )
+    Serie: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 5,
+            "white_space": "collapse",
+        }
+    )
+    Tipo: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "pattern": r"1|2|3",
+        }
+    )
+
+
+@dataclass
+class TcInfSubstituicaoNfse:
+    class Meta:
+        name = "tcInfSubstituicaoNfse"
+
+    NfseSubstituidora: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "total_digits": 15,
+        }
+    )
+    Id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "max_length": 255,
+        }
+    )
+
+
+@dataclass
+class TcMensagemRetorno:
+    class Meta:
+        name = "tcMensagemRetorno"
+
+    Codigo: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 4,
+            "white_space": "collapse",
+        }
+    )
+    Mensagem: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 200,
+            "white_space": "collapse",
+        }
+    )
+    Correcao: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 200,
+            "white_space": "collapse",
+        }
+    )
+
+
+@dataclass
 class TcValoresDeclaracaoServico:
     class Meta:
         name = "tcValoresDeclaracaoServico"
 
-    valor_servicos: Optional[Decimal] = field(
+    ValorServicos: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorServicos",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
@@ -65,10 +329,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_deducoes: Optional[Decimal] = field(
+    ValorDeducoes: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorDeducoes",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -76,10 +339,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_pis: Optional[Decimal] = field(
+    ValorPis: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorPis",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -87,10 +349,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_cofins: Optional[Decimal] = field(
+    ValorCofins: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorCofins",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -98,10 +359,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_inss: Optional[Decimal] = field(
+    ValorInss: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorInss",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -109,10 +369,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_ir: Optional[Decimal] = field(
+    ValorIr: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorIr",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -120,10 +379,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_csll: Optional[Decimal] = field(
+    ValorCsll: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorCsll",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -131,10 +389,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    outras_retencoes: Optional[Decimal] = field(
+    OutrasRetencoes: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "OutrasRetencoes",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -142,10 +399,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    valor_iss: Optional[Decimal] = field(
+    ValorIss: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorIss",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -153,21 +409,19 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    aliquota: Optional[Decimal] = field(
+    Aliquota: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "Aliquota",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
-            "total_digits": 5,
+            "total_digits": 6,
             "fraction_digits": 4,
         }
     )
-    desconto_incondicionado: Optional[Decimal] = field(
+    DescontoIncondicionado: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "DescontoIncondicionado",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -175,10 +429,9 @@ class TcValoresDeclaracaoServico:
             "fraction_digits": 2,
         }
     )
-    desconto_condicionado: Optional[Decimal] = field(
+    DescontoCondicionado: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "DescontoCondicionado",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -193,10 +446,9 @@ class TcValoresNfse:
     class Meta:
         name = "tcValoresNfse"
 
-    base_calculo: Optional[Decimal] = field(
+    BaseCalculo: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "BaseCalculo",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -204,21 +456,19 @@ class TcValoresNfse:
             "fraction_digits": 2,
         }
     )
-    aliquota: Optional[Decimal] = field(
+    Aliquota: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "Aliquota",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
-            "total_digits": 5,
+            "total_digits": 6,
             "fraction_digits": 4,
         }
     )
-    valor_iss: Optional[Decimal] = field(
+    ValorIss: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorIss",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_inclusive": Decimal("0"),
@@ -226,98 +476,15 @@ class TcValoresNfse:
             "fraction_digits": 2,
         }
     )
-    valor_liquido_nfse: Optional[Decimal] = field(
+    ValorLiquidoNfse: Optional[Decimal] = field(
         default=None,
         metadata={
-            "name": "ValorLiquidoNfse",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
             "min_inclusive": Decimal("0"),
             "total_digits": 15,
             "fraction_digits": 2,
-        }
-    )
-
-
-@dataclass
-class CompNfse(TcCompNfse):
-    class Meta:
-        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
-
-
-@dataclass
-class ConsultarNfseFaixaEnvio:
-    class Meta:
-        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
-
-    prestador: Optional[TcIdentificacaoPrestador] = field(
-        default=None,
-        metadata={
-            "name": "Prestador",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    faixa: Optional["ConsultarNfseFaixaEnvio.Faixa"] = field(
-        default=None,
-        metadata={
-            "name": "Faixa",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    pagina: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "Pagina",
-            "type": "Element",
-            "required": True,
-            "min_inclusive": 1,
-            "max_inclusive": 999999,
-        }
-    )
-
-    @dataclass
-    class Faixa:
-        numero_nfse_inicial: Optional[int] = field(
-            default=None,
-            metadata={
-                "name": "NumeroNfseInicial",
-                "type": "Element",
-                "required": True,
-                "total_digits": 15,
-            }
-        )
-        numero_nfse_final: Optional[int] = field(
-            default=None,
-            metadata={
-                "name": "NumeroNfseFinal",
-                "type": "Element",
-                "total_digits": 15,
-            }
-        )
-
-
-@dataclass
-class EnviarLoteRpsSincronoEnvio:
-    class Meta:
-        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
-
-    lote_rps: Optional[TcLoteRps] = field(
-        default=None,
-        metadata={
-            "name": "LoteRps",
-            "type": "Element",
-            "required": True,
-        }
-    )
-    signature: Optional[Signature] = field(
-        default=None,
-        metadata={
-            "name": "Signature",
-            "type": "Element",
-            "namespace": "http://www.w3.org/2000/09/xmldsig#",
         }
     )
 
@@ -327,10 +494,9 @@ class ListaMensagemAlertaRetorno:
     class Meta:
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    mensagem_retorno: List[TcMensagemRetorno] = field(
+    MensagemRetorno: List[TcMensagemRetorno] = field(
         default_factory=list,
         metadata={
-            "name": "MensagemRetorno",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -338,16 +504,132 @@ class ListaMensagemAlertaRetorno:
 
 
 @dataclass
-class ListaMensagemRetornoLote:
+class ListaMensagemRetorno:
     class Meta:
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    mensagem_retorno: List[TcMensagemRetornoLote] = field(
+    MensagemRetorno: List[TcMensagemRetorno] = field(
         default_factory=list,
         metadata={
-            "name": "MensagemRetorno",
             "type": "Element",
             "min_occurs": 1,
+        }
+    )
+
+
+@dataclass
+class TcDadosServico:
+    class Meta:
+        name = "tcDadosServico"
+
+    Valores: Optional[TcValoresDeclaracaoServico] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    IssRetido: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "pattern": r"1|2",
+        }
+    )
+    ResponsavelRetencao: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "pattern": r"1|2",
+        }
+    )
+    ItemListaServico: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 5,
+            "white_space": "collapse",
+        }
+    )
+    CodigoCnae: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "total_digits": 7,
+        }
+    )
+    CodigoTributacaoMunicipio: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 20,
+            "white_space": "collapse",
+        }
+    )
+    Discriminacao: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 2000,
+            "white_space": "collapse",
+        }
+    )
+    CodigoMunicipio: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "total_digits": 7,
+        }
+    )
+    CodigoPais: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "length": 4,
+            "white_space": "collapse",
+        }
+    )
+    ExigibilidadeISS: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "pattern": r"1|2|3|4|5|6|7",
+        }
+    )
+    MunicipioIncidencia: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "total_digits": 7,
+        }
+    )
+    NumeroProcesso: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 30,
+            "white_space": "collapse",
         }
     )
 
@@ -357,19 +639,17 @@ class TcIdentificacaoConsulente:
     class Meta:
         name = "tcIdentificacaoConsulente"
 
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_length": 1,
@@ -384,18 +664,16 @@ class TcIdentificacaoIntermediario:
     class Meta:
         name = "tcIdentificacaoIntermediario"
 
-    cpf_cnpj: Optional[TcCpfCnpj] = field(
+    CpfCnpj: Optional[TcCpfCnpj] = field(
         default=None,
         metadata={
-            "name": "CpfCnpj",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
         }
     )
-    inscricao_municipal: Optional[str] = field(
+    InscricaoMunicipal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "InscricaoMunicipal",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "min_length": 1,
@@ -406,61 +684,278 @@ class TcIdentificacaoIntermediario:
 
 
 @dataclass
-class TcRetCancelamento:
+class TcIdentificacaoNfse:
     class Meta:
-        name = "tcRetCancelamento"
+        name = "tcIdentificacaoNfse"
 
-    nfse_cancelamento: Optional[TcCancelamentoNfse] = field(
+    Numero: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NfseCancelamento",
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "total_digits": 15,
+        }
+    )
+    CpfCnpj: Optional[TcCpfCnpj] = field(
+        default=None,
+        metadata={
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
         }
     )
+    InscricaoMunicipal: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 15,
+            "white_space": "collapse",
+        }
+    )
+    CodigoMunicipio: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "total_digits": 7,
+        }
+    )
 
 
 @dataclass
-class ConsultarNfseFaixaResposta:
+class TcIdentificacaoPrestador:
+    class Meta:
+        name = "tcIdentificacaoPrestador"
+
+    CpfCnpj: Optional[TcCpfCnpj] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+        }
+    )
+    InscricaoMunicipal: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 15,
+            "white_space": "collapse",
+        }
+    )
+
+
+@dataclass
+class TcIdentificacaoTomador:
+    class Meta:
+        name = "tcIdentificacaoTomador"
+
+    CpfCnpj: Optional[TcCpfCnpj] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+        }
+    )
+    InscricaoMunicipal: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 15,
+            "white_space": "collapse",
+        }
+    )
+
+
+@dataclass
+class TcInfRps:
+    class Meta:
+        name = "tcInfRps"
+
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    DataEmissao: Optional[XmlDate] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    Status: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "pattern": r"1|2",
+        }
+    )
+    RpsSubstituido: Optional[TcIdentificacaoRps] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+        }
+    )
+    Id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "max_length": 255,
+        }
+    )
+
+
+@dataclass
+class TcMensagemRetornoLote:
+    class Meta:
+        name = "tcMensagemRetornoLote"
+
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    Codigo: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 4,
+            "white_space": "collapse",
+        }
+    )
+    Mensagem: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 200,
+            "white_space": "collapse",
+        }
+    )
+
+
+@dataclass
+class TcSubstituicaoNfse:
+    class Meta:
+        name = "tcSubstituicaoNfse"
+
+    SubstituicaoNfse: Optional[TcInfSubstituicaoNfse] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    signature: List[Signature] = field(
+        default_factory=list,
+        metadata={
+            "name": "Signature",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2000/09/xmldsig#",
+            "max_occurs": 2,
+        }
+    )
+    versao: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[1-9]{1}[0-9]{0,1}\.[0-9]{2}",
+        }
+    )
+
+
+@dataclass
+class ConsultarNfseFaixaEnvio:
     class Meta:
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    lista_nfse: Optional["ConsultarNfseFaixaResposta.ListaNfse"] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
+            "required": True,
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
+    Faixa: Optional["ConsultarNfseFaixaEnvio.Faixa"] = field(
         default=None,
         metadata={
-            "name": "ListaMensagemRetorno",
             "type": "Element",
+            "required": True,
+        }
+    )
+    Pagina: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+            "min_inclusive": 1,
+            "max_inclusive": 999999,
         }
     )
 
     @dataclass
-    class ListaNfse:
-        comp_nfse: List[CompNfse] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompNfse",
-                "type": "Element",
-                "min_occurs": 1,
-                "max_occurs": 50,
-            }
-        )
-        proxima_pagina: Optional[int] = field(
+    class Faixa:
+        NumeroNfseInicial: Optional[int] = field(
             default=None,
             metadata={
-                "name": "ProximaPagina",
                 "type": "Element",
-                "min_inclusive": 1,
-                "max_inclusive": 999999,
+                "required": True,
+                "total_digits": 15,
             }
         )
+        NumeroNfseFinal: Optional[int] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "total_digits": 15,
+            }
+        )
+
+
+@dataclass
+class ConsultarNfseRpsEnvio:
+    class Meta:
+        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        }
+    )
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        }
+    )
 
 
 @dataclass
@@ -468,54 +963,47 @@ class ConsultarNfseServicoPrestadoEnvio:
     class Meta:
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "required": True,
         }
     )
-    numero_nfse: Optional[int] = field(
+    NumeroNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroNfse",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    periodo_emissao: Optional["ConsultarNfseServicoPrestadoEnvio.PeriodoEmissao"] = field(
+    PeriodoEmissao: Optional["ConsultarNfseServicoPrestadoEnvio.PeriodoEmissao"] = field(
         default=None,
         metadata={
-            "name": "PeriodoEmissao",
             "type": "Element",
         }
     )
-    periodo_competencia: Optional["ConsultarNfseServicoPrestadoEnvio.PeriodoCompetencia"] = field(
+    PeriodoCompetencia: Optional["ConsultarNfseServicoPrestadoEnvio.PeriodoCompetencia"] = field(
         default=None,
         metadata={
-            "name": "PeriodoCompetencia",
             "type": "Element",
         }
     )
-    tomador: Optional[TcIdentificacaoTomador] = field(
+    Tomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
         }
     )
-    intermediario: Optional[TcIdentificacaoIntermediario] = field(
+    Intermediario: Optional[TcIdentificacaoIntermediario] = field(
         default=None,
         metadata={
-            "name": "Intermediario",
             "type": "Element",
         }
     )
-    pagina: Optional[int] = field(
+    Pagina: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Pagina",
             "type": "Element",
             "required": True,
             "min_inclusive": 1,
@@ -525,18 +1013,16 @@ class ConsultarNfseServicoPrestadoEnvio:
 
     @dataclass
     class PeriodoEmissao:
-        data_inicial: Optional[XmlDate] = field(
+        DataInicial: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataInicial",
                 "type": "Element",
                 "required": True,
             }
         )
-        data_final: Optional[XmlDate] = field(
+        DataFinal: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataFinal",
                 "type": "Element",
                 "required": True,
             }
@@ -544,62 +1030,18 @@ class ConsultarNfseServicoPrestadoEnvio:
 
     @dataclass
     class PeriodoCompetencia:
-        data_inicial: Optional[XmlDate] = field(
+        DataInicial: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataInicial",
                 "type": "Element",
                 "required": True,
             }
         )
-        data_final: Optional[XmlDate] = field(
+        DataFinal: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataFinal",
                 "type": "Element",
                 "required": True,
-            }
-        )
-
-
-@dataclass
-class ConsultarNfseServicoPrestadoResposta:
-    class Meta:
-        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
-
-    lista_nfse: Optional["ConsultarNfseServicoPrestadoResposta.ListaNfse"] = field(
-        default=None,
-        metadata={
-            "name": "ListaNfse",
-            "type": "Element",
-        }
-    )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
-        default=None,
-        metadata={
-            "name": "ListaMensagemRetorno",
-            "type": "Element",
-        }
-    )
-
-    @dataclass
-    class ListaNfse:
-        comp_nfse: List[CompNfse] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompNfse",
-                "type": "Element",
-                "min_occurs": 1,
-                "max_occurs": 50,
-            }
-        )
-        proxima_pagina: Optional[int] = field(
-            default=None,
-            metadata={
-                "name": "ProximaPagina",
-                "type": "Element",
-                "min_inclusive": 1,
-                "max_inclusive": 999999,
             }
         )
 
@@ -609,61 +1051,53 @@ class ConsultarNfseServicoTomadoEnvio:
     class Meta:
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    consulente: Optional[TcIdentificacaoConsulente] = field(
+    Consulente: Optional[TcIdentificacaoConsulente] = field(
         default=None,
         metadata={
-            "name": "Consulente",
             "type": "Element",
             "required": True,
         }
     )
-    numero_nfse: Optional[int] = field(
+    NumeroNfse: Optional[int] = field(
         default=None,
         metadata={
-            "name": "NumeroNfse",
             "type": "Element",
             "total_digits": 15,
         }
     )
-    periodo_emissao: Optional["ConsultarNfseServicoTomadoEnvio.PeriodoEmissao"] = field(
+    PeriodoEmissao: Optional["ConsultarNfseServicoTomadoEnvio.PeriodoEmissao"] = field(
         default=None,
         metadata={
-            "name": "PeriodoEmissao",
             "type": "Element",
         }
     )
-    periodo_competencia: Optional["ConsultarNfseServicoTomadoEnvio.PeriodoCompetencia"] = field(
+    PeriodoCompetencia: Optional["ConsultarNfseServicoTomadoEnvio.PeriodoCompetencia"] = field(
         default=None,
         metadata={
-            "name": "PeriodoCompetencia",
             "type": "Element",
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
         }
     )
-    tomador: Optional[TcIdentificacaoTomador] = field(
+    Tomador: Optional[TcIdentificacaoTomador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
             "type": "Element",
         }
     )
-    intermediario: Optional[TcIdentificacaoIntermediario] = field(
+    Intermediario: Optional[TcIdentificacaoIntermediario] = field(
         default=None,
         metadata={
-            "name": "Intermediario",
             "type": "Element",
         }
     )
-    pagina: Optional[int] = field(
+    Pagina: Optional[int] = field(
         default=None,
         metadata={
-            "name": "Pagina",
             "type": "Element",
             "required": True,
             "min_inclusive": 1,
@@ -673,18 +1107,16 @@ class ConsultarNfseServicoTomadoEnvio:
 
     @dataclass
     class PeriodoEmissao:
-        data_inicial: Optional[XmlDate] = field(
+        DataInicial: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataInicial",
                 "type": "Element",
                 "required": True,
             }
         )
-        data_final: Optional[XmlDate] = field(
+        DataFinal: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataFinal",
                 "type": "Element",
                 "required": True,
             }
@@ -692,18 +1124,16 @@ class ConsultarNfseServicoTomadoEnvio:
 
     @dataclass
     class PeriodoCompetencia:
-        data_inicial: Optional[XmlDate] = field(
+        DataInicial: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataInicial",
                 "type": "Element",
                 "required": True,
             }
         )
-        data_final: Optional[XmlDate] = field(
+        DataFinal: Optional[XmlDate] = field(
             default=None,
             metadata={
-                "name": "DataFinal",
                 "type": "Element",
                 "required": True,
             }
@@ -711,222 +1141,17 @@ class ConsultarNfseServicoTomadoEnvio:
 
 
 @dataclass
-class ConsultarNfseServicoTomadoResposta:
+class ListaMensagemRetornoLote:
     class Meta:
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    lista_nfse: Optional["ConsultarNfseServicoTomadoResposta.ListaNfse"] = field(
-        default=None,
+    MensagemRetorno: List[TcMensagemRetornoLote] = field(
+        default_factory=list,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
+            "min_occurs": 1,
         }
     )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
-        default=None,
-        metadata={
-            "name": "ListaMensagemRetorno",
-            "type": "Element",
-        }
-    )
-
-    @dataclass
-    class ListaNfse:
-        comp_nfse: List[CompNfse] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompNfse",
-                "type": "Element",
-                "min_occurs": 1,
-                "max_occurs": 50,
-            }
-        )
-        proxima_pagina: Optional[int] = field(
-            default=None,
-            metadata={
-                "name": "ProximaPagina",
-                "type": "Element",
-                "min_inclusive": 1,
-                "max_inclusive": 999999,
-            }
-        )
-
-
-@dataclass
-class EnviarLoteRpsSincronoResposta:
-    class Meta:
-        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
-
-    numero_lote: Optional[int] = field(
-        default=None,
-        metadata={
-            "name": "NumeroLote",
-            "type": "Element",
-            "total_digits": 15,
-        }
-    )
-    data_recebimento: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "name": "DataRecebimento",
-            "type": "Element",
-        }
-    )
-    protocolo: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "Protocolo",
-            "type": "Element",
-            "max_length": 50,
-        }
-    )
-    lista_nfse: Optional["EnviarLoteRpsSincronoResposta.ListaNfse"] = field(
-        default=None,
-        metadata={
-            "name": "ListaNfse",
-            "type": "Element",
-        }
-    )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
-        default=None,
-        metadata={
-            "name": "ListaMensagemRetorno",
-            "type": "Element",
-        }
-    )
-    lista_mensagem_retorno_lote: Optional[ListaMensagemRetornoLote] = field(
-        default=None,
-        metadata={
-            "name": "ListaMensagemRetornoLote",
-            "type": "Element",
-        }
-    )
-
-    @dataclass
-    class ListaNfse:
-        comp_nfse: List[CompNfse] = field(
-            default_factory=list,
-            metadata={
-                "name": "CompNfse",
-                "type": "Element",
-                "min_occurs": 1,
-            }
-        )
-        lista_mensagem_alerta_retorno: Optional[ListaMensagemAlertaRetorno] = field(
-            default=None,
-            metadata={
-                "name": "ListaMensagemAlertaRetorno",
-                "type": "Element",
-            }
-        )
-
-
-@dataclass
-class GerarNfseResposta:
-    class Meta:
-        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
-
-    lista_nfse: Optional["GerarNfseResposta.ListaNfse"] = field(
-        default=None,
-        metadata={
-            "name": "ListaNfse",
-            "type": "Element",
-        }
-    )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
-        default=None,
-        metadata={
-            "name": "ListaMensagemRetorno",
-            "type": "Element",
-        }
-    )
-
-    @dataclass
-    class ListaNfse:
-        comp_nfse: Optional[CompNfse] = field(
-            default=None,
-            metadata={
-                "name": "CompNfse",
-                "type": "Element",
-                "required": True,
-            }
-        )
-        lista_mensagem_alerta_retorno: Optional[ListaMensagemAlertaRetorno] = field(
-            default=None,
-            metadata={
-                "name": "ListaMensagemAlertaRetorno",
-                "type": "Element",
-            }
-        )
-
-
-@dataclass
-class SubstituirNfseResposta:
-    class Meta:
-        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
-
-    ret_substituicao: Optional["SubstituirNfseResposta.RetSubstituicao"] = field(
-        default=None,
-        metadata={
-            "name": "RetSubstituicao",
-            "type": "Element",
-        }
-    )
-    lista_mensagem_retorno: Optional[ListaMensagemRetorno] = field(
-        default=None,
-        metadata={
-            "name": "ListaMensagemRetorno",
-            "type": "Element",
-        }
-    )
-
-    @dataclass
-    class RetSubstituicao:
-        nfse_substituida: Optional["SubstituirNfseResposta.RetSubstituicao.NfseSubstituida"] = field(
-            default=None,
-            metadata={
-                "name": "NfseSubstituida",
-                "type": "Element",
-                "required": True,
-            }
-        )
-        nfse_substituidora: Optional["SubstituirNfseResposta.RetSubstituicao.NfseSubstituidora"] = field(
-            default=None,
-            metadata={
-                "name": "NfseSubstituidora",
-                "type": "Element",
-                "required": True,
-            }
-        )
-
-        @dataclass
-        class NfseSubstituida:
-            comp_nfse: Optional[CompNfse] = field(
-                default=None,
-                metadata={
-                    "name": "CompNfse",
-                    "type": "Element",
-                    "required": True,
-                }
-            )
-            lista_mensagem_alerta_retorno: Optional[ListaMensagemAlertaRetorno] = field(
-                default=None,
-                metadata={
-                    "name": "ListaMensagemAlertaRetorno",
-                    "type": "Element",
-                }
-            )
-
-        @dataclass
-        class NfseSubstituidora:
-            comp_nfse: Optional[CompNfse] = field(
-                default=None,
-                metadata={
-                    "name": "CompNfse",
-                    "type": "Element",
-                    "required": True,
-                }
-            )
 
 
 @dataclass
@@ -934,25 +1159,142 @@ class TcDadosIntermediario:
     class Meta:
         name = "tcDadosIntermediario"
 
-    identificacao_intermediario: Optional[TcIdentificacaoIntermediario] = field(
+    IdentificacaoIntermediario: Optional[TcIdentificacaoIntermediario] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoIntermediario",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
         }
     )
-    razao_social: Optional[str] = field(
+    RazaoSocial: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RazaoSocial",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
             "min_length": 1,
-            "max_length": 115,
+            "max_length": 150,
             "white_space": "collapse",
+        }
+    )
+
+
+@dataclass
+class TcDadosPrestador:
+    class Meta:
+        name = "tcDadosPrestador"
+
+    IdentificacaoPrestador: Optional[TcIdentificacaoPrestador] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    RazaoSocial: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 150,
+            "white_space": "collapse",
+        }
+    )
+    NomeFantasia: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 60,
+            "white_space": "collapse",
+        }
+    )
+    Endereco: Optional[TcEndereco] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    Contato: Optional[TcContato] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+        }
+    )
+
+
+@dataclass
+class TcDadosTomador:
+    class Meta:
+        name = "tcDadosTomador"
+
+    IdentificacaoTomador: Optional[TcIdentificacaoTomador] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+        }
+    )
+    RazaoSocial: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 150,
+            "white_space": "collapse",
+        }
+    )
+    Endereco: Optional[TcEndereco] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+        }
+    )
+    Contato: Optional[TcContato] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+        }
+    )
+
+
+@dataclass
+class TcInfPedidoCancelamento:
+    class Meta:
+        name = "tcInfPedidoCancelamento"
+
+    IdentificacaoNfse: Optional[TcIdentificacaoNfse] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    CodigoCancelamento: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "pattern": r"1|2|3|4|5",
+        }
+    )
+    Id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "max_length": 255,
         }
     )
 
@@ -962,98 +1304,140 @@ class TcInfDeclaracaoPrestacaoServico:
     class Meta:
         name = "tcInfDeclaracaoPrestacaoServico"
 
-    rps: Optional[TcInfRps] = field(
+    Rps: Optional[TcInfRps] = field(
         default=None,
         metadata={
-            "name": "Rps",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
         }
     )
-    competencia: Optional[XmlDate] = field(
+    Competencia: Optional[XmlDate] = field(
         default=None,
         metadata={
-            "name": "Competencia",
-            "type": "Element",
-            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
-            "required": True,
-        }
-    )
-    servico: Optional[TcDadosServico] = field(
-        default=None,
-        metadata={
-            "name": "Servico",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Servico: Optional[TcDadosServico] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
         }
     )
-    tomador: Optional[TcDadosTomador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Tomador",
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    Tomador: Optional[TcDadosTomador] = field(
+        default=None,
+        metadata={
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
         }
     )
-    intermediario: Optional[TcDadosIntermediario] = field(
+    Intermediario: Optional[TcDadosIntermediario] = field(
         default=None,
         metadata={
-            "name": "Intermediario",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
         }
     )
-    construcao_civil: Optional[TcDadosConstrucaoCivil] = field(
+    ConstrucaoCivil: Optional[TcDadosConstrucaoCivil] = field(
         default=None,
         metadata={
-            "name": "ConstrucaoCivil",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
         }
     )
-    regime_especial_tributacao: Optional[str] = field(
+    RegimeEspecialTributacao: Optional[str] = field(
         default=None,
         metadata={
-            "name": "RegimeEspecialTributacao",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "pattern": r"1|2|3|4|5|6",
         }
     )
-    optante_simples_nacional: Optional[str] = field(
+    OptanteSimplesNacional: Optional[str] = field(
         default=None,
         metadata={
-            "name": "OptanteSimplesNacional",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
-            "pattern": r"1|2|3",
+            "pattern": r"1|2",
         }
     )
-    incentivo_fiscal: Optional[str] = field(
+    IncentivoFiscal: Optional[str] = field(
         default=None,
         metadata={
-            "name": "IncentivoFiscal",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
-            "pattern": r"1|2|3",
+            "pattern": r"1|2",
         }
     )
-    id: Optional[str] = field(
+    Id: Optional[str] = field(
         default=None,
         metadata={
-            "name": "Id",
+            "type": "Attribute",
+            "max_length": 255,
+        }
+    )
+
+
+@dataclass
+class TcPedidoCancelamento:
+    class Meta:
+        name = "tcPedidoCancelamento"
+
+    InfPedidoCancelamento: Optional[TcInfPedidoCancelamento] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    signature: Optional[Signature] = field(
+        default=None,
+        metadata={
+            "name": "Signature",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2000/09/xmldsig#",
+        }
+    )
+
+
+@dataclass
+class TcConfirmacaoCancelamento:
+    class Meta:
+        name = "tcConfirmacaoCancelamento"
+
+    Pedido: Optional[TcPedidoCancelamento] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    DataHora: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    Id: Optional[str] = field(
+        default=None,
+        metadata={
             "type": "Attribute",
             "max_length": 255,
         }
@@ -1065,10 +1449,9 @@ class TcDeclaracaoPrestacaoServico:
     class Meta:
         name = "tcDeclaracaoPrestacaoServico"
 
-    inf_declaracao_prestacao_servico: Optional[TcInfDeclaracaoPrestacaoServico] = field(
+    InfDeclaracaoPrestacaoServico: Optional[TcInfDeclaracaoPrestacaoServico] = field(
         default=None,
         metadata={
-            "name": "InfDeclaracaoPrestacaoServico",
             "type": "Element",
             "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
             "required": True,
@@ -1089,10 +1472,9 @@ class GerarNfseEnvio:
     class Meta:
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    rps: Optional[TcDeclaracaoPrestacaoServico] = field(
+    Rps: Optional[TcDeclaracaoPrestacaoServico] = field(
         default=None,
         metadata={
-            "name": "Rps",
             "type": "Element",
             "required": True,
         }
@@ -1104,10 +1486,9 @@ class SubstituirNfseEnvio:
     class Meta:
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    substituicao_nfse: Optional["SubstituirNfseEnvio.SubstituicaoNfse"] = field(
+    SubstituicaoNfse: Optional["SubstituirNfseEnvio.SubstituicaoNfse"] = field(
         default=None,
         metadata={
-            "name": "SubstituicaoNfse",
             "type": "Element",
             "required": True,
         }
@@ -1123,27 +1504,625 @@ class SubstituirNfseEnvio:
 
     @dataclass
     class SubstituicaoNfse:
-        pedido: Optional[TcPedidoCancelamento] = field(
+        Pedido: Optional[TcPedidoCancelamento] = field(
             default=None,
             metadata={
-                "name": "Pedido",
                 "type": "Element",
                 "required": True,
             }
         )
-        rps: Optional[TcDeclaracaoPrestacaoServico] = field(
+        Rps: Optional[TcDeclaracaoPrestacaoServico] = field(
             default=None,
             metadata={
-                "name": "Rps",
                 "type": "Element",
                 "required": True,
             }
         )
-        id: Optional[str] = field(
+        Id: Optional[str] = field(
             default=None,
             metadata={
-                "name": "Id",
                 "type": "Attribute",
                 "max_length": 255,
             }
         )
+
+
+@dataclass
+class TcCancelamentoNfse:
+    class Meta:
+        name = "tcCancelamentoNfse"
+
+    Confirmacao: Optional[TcConfirmacaoCancelamento] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    signature: Optional[Signature] = field(
+        default=None,
+        metadata={
+            "name": "Signature",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2000/09/xmldsig#",
+        }
+    )
+    versao: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[1-9]{1}[0-9]{0,1}\.[0-9]{2}",
+        }
+    )
+
+
+@dataclass
+class TcInfNfse:
+    class Meta:
+        name = "tcInfNfse"
+
+    Numero: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "total_digits": 15,
+        }
+    )
+    CodigoVerificacao: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "min_length": 1,
+            "max_length": 9,
+            "white_space": "collapse",
+        }
+    )
+    DataEmissao: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    NfseSubstituida: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "total_digits": 15,
+        }
+    )
+    OutrasInformacoes: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 255,
+            "white_space": "collapse",
+        }
+    )
+    ValoresNfse: Optional[TcValoresNfse] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    ValorCredito: Optional[Decimal] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_inclusive": Decimal("0"),
+            "total_digits": 15,
+            "fraction_digits": 2,
+        }
+    )
+    PrestadorServico: Optional[TcDadosPrestador] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    OrgaoGerador: Optional[TcIdentificacaoOrgaoGerador] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    DeclaracaoPrestacaoServico: Optional[TcDeclaracaoPrestacaoServico] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    Id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "max_length": 255,
+        }
+    )
+
+
+@dataclass
+class TcLoteRps:
+    class Meta:
+        name = "tcLoteRps"
+
+    NumeroLote: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+            "total_digits": 15,
+        }
+    )
+    CpfCnpj: Optional[TcCpfCnpj] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    InscricaoMunicipal: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "min_length": 1,
+            "max_length": 15,
+            "white_space": "collapse",
+        }
+    )
+    QuantidadeRps: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    ListaRps: Optional["TcLoteRps.ListaRps"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    Id: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "max_length": 255,
+        }
+    )
+    versao: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[1-9]{1}[0-9]{0,1}\.[0-9]{2}",
+        }
+    )
+
+    @dataclass
+    class ListaRps:
+        Rps: List[TcDeclaracaoPrestacaoServico] = field(
+            default_factory=list,
+            metadata={
+                "type": "Element",
+                "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+                "min_occurs": 1,
+            }
+        )
+
+
+@dataclass
+class EnviarLoteRpsSincronoEnvio:
+    class Meta:
+        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+
+    LoteRps: Optional[TcLoteRps] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        }
+    )
+    signature: Optional[Signature] = field(
+        default=None,
+        metadata={
+            "name": "Signature",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2000/09/xmldsig#",
+        }
+    )
+
+
+@dataclass
+class TcNfse:
+    class Meta:
+        name = "tcNfse"
+
+    InfNfse: Optional[TcInfNfse] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    signature: Optional[Signature] = field(
+        default=None,
+        metadata={
+            "name": "Signature",
+            "type": "Element",
+            "namespace": "http://www.w3.org/2000/09/xmldsig#",
+        }
+    )
+    versao: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[1-9]{1}[0-9]{0,1}\.[0-9]{2}",
+        }
+    )
+
+
+@dataclass
+class TcRetCancelamento:
+    class Meta:
+        name = "tcRetCancelamento"
+
+    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+
+
+@dataclass
+class TcCompNfse:
+    class Meta:
+        name = "tcCompNfse"
+
+    Nfse: Optional[TcNfse] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+            "required": True,
+        }
+    )
+    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+        }
+    )
+    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.betha.com.br/e-nota-contribuinte-ws",
+        }
+    )
+
+
+@dataclass
+class CompNfse(TcCompNfse):
+    class Meta:
+        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+
+
+@dataclass
+class ConsultarNfseFaixaResposta:
+    class Meta:
+        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+
+    ListaNfse: Optional["ConsultarNfseFaixaResposta.ListaNfse"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
+        default=None,
+        metadata={
+            "name": "ListaMensagemRetorno",
+            "type": "Element",
+        }
+    )
+
+    @dataclass
+    class ListaNfse:
+        compNfse: List[CompNfse] = field(
+            default_factory=list,
+            metadata={
+                "name": "CompNfse",
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 50,
+            }
+        )
+        ProximaPagina: Optional[int] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "min_inclusive": 1,
+                "max_inclusive": 999999,
+            }
+        )
+
+
+@dataclass
+class ConsultarNfseServicoPrestadoResposta:
+    class Meta:
+        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+
+    ListaNfse: Optional["ConsultarNfseServicoPrestadoResposta.ListaNfse"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
+        default=None,
+        metadata={
+            "name": "ListaMensagemRetorno",
+            "type": "Element",
+        }
+    )
+
+    @dataclass
+    class ListaNfse:
+        compNfse: List[CompNfse] = field(
+            default_factory=list,
+            metadata={
+                "name": "CompNfse",
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 50,
+            }
+        )
+        ProximaPagina: Optional[int] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "min_inclusive": 1,
+                "max_inclusive": 999999,
+            }
+        )
+
+
+@dataclass
+class ConsultarNfseServicoTomadoResposta:
+    class Meta:
+        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+
+    ListaNfse: Optional["ConsultarNfseServicoTomadoResposta.ListaNfse"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
+        default=None,
+        metadata={
+            "name": "ListaMensagemRetorno",
+            "type": "Element",
+        }
+    )
+
+    @dataclass
+    class ListaNfse:
+        compNfse: List[CompNfse] = field(
+            default_factory=list,
+            metadata={
+                "name": "CompNfse",
+                "type": "Element",
+                "min_occurs": 1,
+                "max_occurs": 50,
+            }
+        )
+        ProximaPagina: Optional[int] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "min_inclusive": 1,
+                "max_inclusive": 999999,
+            }
+        )
+
+
+@dataclass
+class EnviarLoteRpsSincronoResposta:
+    class Meta:
+        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+
+    NumeroLote: Optional[int] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "total_digits": 15,
+        }
+    )
+    DataRecebimento: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    Protocolo: Optional[str] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "max_length": 50,
+        }
+    )
+    ListaNfse: Optional["EnviarLoteRpsSincronoResposta.ListaNfse"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
+        default=None,
+        metadata={
+            "name": "ListaMensagemRetorno",
+            "type": "Element",
+        }
+    )
+    listaMensagemRetornoLote: Optional[ListaMensagemRetornoLote] = field(
+        default=None,
+        metadata={
+            "name": "ListaMensagemRetornoLote",
+            "type": "Element",
+        }
+    )
+
+    @dataclass
+    class ListaNfse:
+        compNfse: List[CompNfse] = field(
+            default_factory=list,
+            metadata={
+                "name": "CompNfse",
+                "type": "Element",
+                "min_occurs": 1,
+            }
+        )
+        listaMensagemAlertaRetorno: Optional[ListaMensagemAlertaRetorno] = field(
+            default=None,
+            metadata={
+                "name": "ListaMensagemAlertaRetorno",
+                "type": "Element",
+            }
+        )
+
+
+@dataclass
+class GerarNfseResposta:
+    class Meta:
+        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+
+    ListaNfse: Optional["GerarNfseResposta.ListaNfse"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
+        default=None,
+        metadata={
+            "name": "ListaMensagemRetorno",
+            "type": "Element",
+        }
+    )
+
+    @dataclass
+    class ListaNfse:
+        compNfse: Optional[CompNfse] = field(
+            default=None,
+            metadata={
+                "name": "CompNfse",
+                "type": "Element",
+                "required": True,
+            }
+        )
+        listaMensagemAlertaRetorno: Optional[ListaMensagemAlertaRetorno] = field(
+            default=None,
+            metadata={
+                "name": "ListaMensagemAlertaRetorno",
+                "type": "Element",
+            }
+        )
+
+
+@dataclass
+class SubstituirNfseResposta:
+    class Meta:
+        namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+
+    RetSubstituicao: Optional["SubstituirNfseResposta.RetSubstituicao"] = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        }
+    )
+    listaMensagemRetorno: Optional[ListaMensagemRetorno] = field(
+        default=None,
+        metadata={
+            "name": "ListaMensagemRetorno",
+            "type": "Element",
+        }
+    )
+
+    @dataclass
+    class RetSubstituicao:
+        NfseSubstituida: Optional["SubstituirNfseResposta.RetSubstituicao.NfseSubstituida"] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "required": True,
+            }
+        )
+        NfseSubstituidora: Optional["SubstituirNfseResposta.RetSubstituicao.NfseSubstituidora"] = field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "required": True,
+            }
+        )
+
+        @dataclass
+        class NfseSubstituida:
+            compNfse: Optional[CompNfse] = field(
+                default=None,
+                metadata={
+                    "name": "CompNfse",
+                    "type": "Element",
+                    "required": True,
+                }
+            )
+            listaMensagemAlertaRetorno: Optional[ListaMensagemAlertaRetorno] = field(
+                default=None,
+                metadata={
+                    "name": "ListaMensagemAlertaRetorno",
+                    "type": "Element",
+                }
+            )
+
+        @dataclass
+        class NfseSubstituidora:
+            compNfse: Optional[CompNfse] = field(
+                default=None,
+                metadata={
+                    "name": "CompNfse",
+                    "type": "Element",
+                    "required": True,
+                }
+            )

@@ -13,19 +13,17 @@ class ConsultarNfsePorRpsEnvio:
     class Meta:
         namespace = "http://www.betha.com.br/e-nota-contribuinte-ws"
 
-    identificacao_rps: Optional[TcIdentificacaoRps] = field(
+    IdentificacaoRps: Optional[TcIdentificacaoRps] = field(
         default=None,
         metadata={
-            "name": "IdentificacaoRps",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    prestador: Optional[TcIdentificacaoPrestador] = field(
+    Prestador: Optional[TcIdentificacaoPrestador] = field(
         default=None,
         metadata={
-            "name": "Prestador",
             "type": "Element",
             "namespace": "",
             "required": True,

@@ -13,14 +13,13 @@ class ConsultarNfseResposta:
     class Meta:
         namespace = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_consultar_nfse_resposta.xsd"
 
-    lista_nfse: Optional["ConsultarNfseResposta.ListaNfse"] = field(
+    ListaNfse: Optional["ConsultarNfseResposta.ListaNfse"] = field(
         default=None,
         metadata={
-            "name": "ListaNfse",
             "type": "Element",
         }
     )
-    lista_mensagem_retorno: Optional["ConsultarNfseResposta.ListaMensagemRetorno"] = field(
+    listaMensagemRetorno: Optional["ConsultarNfseResposta.ListaMensagemRetorno"] = field(
         default=None,
         metadata={
             "name": "ListaMensagemRetorno",
@@ -30,7 +29,7 @@ class ConsultarNfseResposta:
 
     @dataclass
     class ListaNfse:
-        comp_nfse: List[TcCompNfse] = field(
+        compNfse: List[TcCompNfse] = field(
             default_factory=list,
             metadata={
                 "name": "CompNfse",
@@ -40,10 +39,9 @@ class ConsultarNfseResposta:
 
     @dataclass
     class ListaMensagemRetorno:
-        mensagem_retorno: List[TcMensagemRetorno] = field(
+        MensagemRetorno: List[TcMensagemRetorno] = field(
             default_factory=list,
             metadata={
-                "name": "MensagemRetorno",
                 "type": "Element",
                 "min_occurs": 1,
             }

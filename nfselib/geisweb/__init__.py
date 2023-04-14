@@ -1,6 +1,7 @@
 from nfselib.geisweb.cancela_nfse import CancelaNfse
 from nfselib.geisweb.consulta_lote_rps import ConsultaLoteRps
 from nfselib.geisweb.consulta_nfse import ConsultaNfse
+from nfselib.geisweb.consulta_rps import ConsultaRps
 from nfselib.geisweb.envio_lote_rps import EnviaLoteRps
 from nfselib.geisweb.xmldsig_core_schema import (
     CanonicalizationMethod,
@@ -18,7 +19,7 @@ from nfselib.geisweb.xmldsig_core_schema import (
     Manifest,
     ManifestType,
     MgmtData,
-    Object,
+    _Object,
     ObjectType,
     Pgpdata,
     PgpdataType,
@@ -55,6 +56,7 @@ __all__ = [
     "CancelaNfse",
     "ConsultaLoteRps",
     "ConsultaNfse",
+    "ConsultaRps",
     "EnviaLoteRps",
     "CanonicalizationMethod",
     "CanonicalizationMethodType",
@@ -71,7 +73,7 @@ __all__ = [
     "Manifest",
     "ManifestType",
     "MgmtData",
-    "Object",
+    "_Object",
     "ObjectType",
     "Pgpdata",
     "PgpdataType",

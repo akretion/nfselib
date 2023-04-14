@@ -13,37 +13,34 @@ class RetornoCancelamentoNfe:
     prestadores de serviços qual o resultado do pedido de cancelamento
     de NFS-e.
 
-    :ivar cabecalho: Cabeçalho do retorno.
-    :ivar alerta: Elemento que representa a ocorrência de eventos de
+    :ivar Cabecalho: Cabeçalho do retorno.
+    :ivar Alerta: Elemento que representa a ocorrência de eventos de
         alerta durante o processamento da mensagem XML.
-    :ivar erro: Elemento que representa a ocorrência de eventos de erro
+    :ivar Erro: Elemento que representa a ocorrência de eventos de erro
         durante o processamento da mensagem XML.
     """
     class Meta:
         name = "RetornoCancelamentoNFe"
         namespace = "http://www.prefeitura.sp.gov.br/nfe"
 
-    cabecalho: Optional["RetornoCancelamentoNfe.Cabecalho"] = field(
+    Cabecalho: Optional["RetornoCancelamentoNfe.Cabecalho"] = field(
         default=None,
         metadata={
-            "name": "Cabecalho",
             "type": "Element",
             "namespace": "",
             "required": True,
         }
     )
-    alerta: List[TpEvento] = field(
+    Alerta: List[TpEvento] = field(
         default_factory=list,
         metadata={
-            "name": "Alerta",
             "type": "Element",
             "namespace": "",
         }
     )
-    erro: List[TpEvento] = field(
+    Erro: List[TpEvento] = field(
         default_factory=list,
         metadata={
-            "name": "Erro",
             "type": "Element",
             "namespace": "",
         }
@@ -52,23 +49,21 @@ class RetornoCancelamentoNfe:
     @dataclass
     class Cabecalho:
         """
-        :ivar sucesso: Campo indicativo do sucesso do pedido do serviço.
-        :ivar versao: Versão do Schema XML utilizado.
+        :ivar Sucesso: Campo indicativo do sucesso do pedido do serviço.
+        :ivar Versao: Versão do Schema XML utilizado.
         """
-        sucesso: Optional[bool] = field(
+        Sucesso: Optional[bool] = field(
             default=None,
             metadata={
-                "name": "Sucesso",
                 "type": "Element",
                 "namespace": "",
                 "required": True,
             }
         )
-        versao: str = field(
+        Versao: str = field(
             init=False,
             default="1",
             metadata={
-                "name": "Versao",
                 "type": "Attribute",
                 "required": True,
                 "pattern": r"[0-9]{1,3}",
