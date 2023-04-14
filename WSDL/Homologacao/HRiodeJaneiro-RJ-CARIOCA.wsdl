@@ -242,7 +242,7 @@
   </wsdl:binding>
   <wsdl:service name="Nfse">
     <wsdl:port name="NfseSoap" binding="tns:NfseSoap">
-      <soap:address location="https://homologacao.notacarioca.rio.gov.br/WSNacional/nfse.asmx" />
+      <soap:address location="https://notacariocahom.rio.gov.br/WSNacional/nfse.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

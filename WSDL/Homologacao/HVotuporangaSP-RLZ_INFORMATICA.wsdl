@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:server.issqn" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:server.issqn">
+<types>
+<xsd:schema targetNamespace="urn:server.issqn"
+>
+ <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+ <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+ <xsd:complexType name="NotasArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:Nota[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="Nota">
+  <xsd:all>
+   <xsd:element name="guia" type="xsd:string"/>
+   <xsd:element name="numero" type="xsd:integer"/>
+   <xsd:element name="mes" type="xsd:integer"/>
+   <xsd:element name="cidade" type="xsd:string"/>
+   <xsd:element name="uf" type="xsd:string"/>
+   <xsd:element name="exercicio" type="xsd:integer"/>
+   <xsd:element name="data" type="xsd:date"/>
+   <xsd:element name="modelo" type="xsd:string"/>
+   <xsd:element name="serie" type="xsd:string"/>
+   <xsd:element name="apuracao" type="xsd:string"/>
+   <xsd:element name="valor" type="xsd:double"/>
+   <xsd:element name="valorimposto" type="xsd:double"/>
+   <xsd:element name="situacao" type="xsd:string"/>
+   <xsd:element name="deducao" type="xsd:double"/>
+   <xsd:element name="basecalculo" type="xsd:double"/>
+   <xsd:element name="servicos" type="tns:ServicosArray"/>
+   <xsd:element name="tomador" type="tns:Contribuinte"/>
+   <xsd:element name="prestador" type="tns:Contribuinte"/>
+   <xsd:element name="url" type="xsd:string"/>
+   <xsd:element name="codigo" type="xsd:integer"/>
+   <xsd:element name="mensagem" type="xsd:string"/>
+   <xsd:element name="fatura" type="xsd:string"/>
+   <xsd:element name="valorissretidonafonte" type="xsd:double"/>
+   <xsd:element name="retido" type="tns:tipoRetido" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="incidencia" type="tns:tipoIncidencia" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="codigoverificacao" type="xsd:string"/>
+   <xsd:element name="valorpis" type="xsd:double"/>
+   <xsd:element name="valorirrf" type="xsd:double"/>
+   <xsd:element name="valorcsll" type="xsd:double"/>
+   <xsd:element name="valorcofins" type="xsd:double"/>
+   <xsd:element name="valorinss" type="xsd:double"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="ServicosArray">
+  <xsd:complexContent>
+   <xsd:restriction base="SOAP-ENC:Array">
+    <xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:Servico[]"/>
+   </xsd:restriction>
+  </xsd:complexContent>
+ </xsd:complexType>
+ <xsd:complexType name="Servico">
+  <xsd:all>
+   <xsd:element name="quantidade" type="xsd:double"/>
+   <xsd:element name="atividade" type="xsd:string"/>
+   <xsd:element name="valor" type="xsd:double"/>
+   <xsd:element name="deducao" type="xsd:double"/>
+   <xsd:element name="codigoservico" type="xsd:string"/>
+   <xsd:element name="codigotributacaomunicipio" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="aliquota" type="xsd:double"/>
+   <xsd:element name="inss" type="xsd:double"/>
+   <xsd:element name="total" type="xsd:double"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="Contribuinte">
+  <xsd:all>
+   <xsd:element name="endereco" type="xsd:string"/>
+   <xsd:element name="numero" type="xsd:integer"/>
+   <xsd:element name="complemento" type="xsd:string"/>
+   <xsd:element name="bairro" type="xsd:string"/>
+   <xsd:element name="cep" type="xsd:string"/>
+   <xsd:element name="cidade" type="xsd:string"/>
+   <xsd:element name="uf" type="xsd:string"/>
+   <xsd:element name="pais" type="xsd:string"/>
+   <xsd:element name="nome" type="xsd:string"/>
+   <xsd:element name="nomefantasia" type="xsd:string"/>
+   <xsd:element name="inscricao" type="xsd:string"/>
+   <xsd:element name="cpfcnpj" type="xsd:string"/>
+   <xsd:element name="documento" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="rgie" type="xsd:string"/>
+   <xsd:element name="passaporte" type="xsd:string"/>
+   <xsd:element name="nascionalidade" type="xsd:string"/>
+   <xsd:element name="email" type="xsd:string"/>
+   <xsd:element name="ddd" type="xsd:integer"/>
+   <xsd:element name="fone" type="xsd:integer"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="paramsListarNotas">
+  <xsd:all>
+   <xsd:element name="ano" type="xsd:integer"/>
+   <xsd:element name="mes" type="xsd:integer"/>
+   <xsd:element name="cpfcnpj" type="xsd:string"/>
+   <xsd:element name="inscricao" type="xsd:string"/>
+   <xsd:element name="chave" type="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="paramsGravaNota">
+  <xsd:all>
+   <xsd:element name="cpfcnpj" type="xsd:string"/>
+   <xsd:element name="inscricao" type="xsd:string"/>
+   <xsd:element name="chave" type="xsd:string"/>
+   <xsd:element name="cep" type="xsd:string"/>
+   <xsd:element name="data" type="xsd:date"/>
+   <xsd:element name="modelo" type="xsd:string"/>
+   <xsd:element name="serie" type="xsd:string"/>
+   <xsd:element name="fatura" type="xsd:string"/>
+   <xsd:element name="orcamento" type="xsd:string"/>
+   <xsd:element name="vencimento" type="xsd:date"/>
+   <xsd:element name="tipo" type="tns:tipoDeducao"/>
+   <xsd:element name="pis" type="xsd:double"/>
+   <xsd:element name="csll" type="xsd:double"/>
+   <xsd:element name="cofins" type="xsd:double"/>
+   <xsd:element name="irrf" type="xsd:double"/>
+   <xsd:element name="situacao" type="xsd:string"/>
+   <xsd:element name="optante" type="tns:tipoOptante"/>
+   <xsd:element name="aliquota" type="xsd:double"/>
+   <xsd:element name="texto" type="xsd:string"/>
+   <xsd:element name="servicos" type="tns:ServicosArray"/>
+   <xsd:element name="tomador" type="tns:Contribuinte"/>
+   <xsd:element name="retido" type="tns:tipoRetido" minOccurs="0" maxOccurs="1"/>
+   <xsd:element name="incidencia" type="tns:tipoIncidencia" minOccurs="0" maxOccurs="1"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:complexType name="paramsListarTomador">
+  <xsd:all>
+   <xsd:element name="cpfcnpj" type="xsd:string"/>
+   <xsd:element name="inscricao" type="xsd:string"/>
+   <xsd:element name="cpfcnpjtomador" type="xsd:string"/>
+   <xsd:element name="chave" type="xsd:string"/>
+  </xsd:all>
+ </xsd:complexType>
+ <xsd:simpleType name="tipoRetido">
+  <xsd:restriction base="xsd:string">
+  <xsd:enumeration value="Sim"/>
+  <xsd:enumeration value="Não"/>
+  </xsd:restriction>
+ </xsd:simpleType> <xsd:simpleType name="tipoDeducao">
+  <xsd:restriction base="xsd:string">
+  <xsd:enumeration value="Percentual"/>
+  <xsd:enumeration value="Valor"/>
+  </xsd:restriction>
+ </xsd:simpleType> <xsd:simpleType name="tipoIncidencia">
+  <xsd:restriction base="xsd:string">
+  <xsd:enumeration value="Local"/>
+  <xsd:enumeration value="Fora"/>
+  </xsd:restriction>
+ </xsd:simpleType> <xsd:simpleType name="tipoOptante">
+  <xsd:restriction base="xsd:string">
+  <xsd:enumeration value="Sim"/>
+  <xsd:enumeration value="Não"/>
+  </xsd:restriction>
+ </xsd:simpleType></xsd:schema>
+</types>
+<message name="gravaNotaRequest">
+  <part name="params" type="tns:paramsGravaNota" /></message>
+<message name="gravaNotaResponse">
+  <part name="return" type="tns:Nota" /></message>
+<message name="gravaNotaXMLRequest">
+  <part name="params" type="xsd:string" /></message>
+<message name="gravaNotaXMLResponse">
+  <part name="return" type="xsd:string" /></message>
+<message name="listarNotasRequest">
+  <part name="params" type="tns:paramsListarNotas" /></message>
+<message name="listarNotasResponse">
+  <part name="return" type="tns:NotasArray" /></message>
+<message name="listarNotasXMLRequest">
+  <part name="params" type="xsd:string" /></message>
+<message name="listarNotasXMLResponse">
+  <part name="return" type="xsd:string" /></message>
+<portType name="Webservice PrefeituraPortType">
+  <operation name="gravaNota">
+    <input message="tns:gravaNotaRequest"/>
+    <output message="tns:gravaNotaResponse"/>
+  </operation>
+  <operation name="gravaNotaXML">
+    <documentation>Enviar em XML</documentation>
+    <input message="tns:gravaNotaXMLRequest"/>
+    <output message="tns:gravaNotaXMLResponse"/>
+  </operation>
+  <operation name="listarNotas">
+    <input message="tns:listarNotasRequest"/>
+    <output message="tns:listarNotasResponse"/>
+  </operation>
+  <operation name="listarNotasXML">
+    <documentation>Enviar em XML</documentation>
+    <input message="tns:listarNotasXMLRequest"/>
+    <output message="tns:listarNotasXMLResponse"/>
+  </operation>
+</portType>
+<binding name="Webservice PrefeituraBinding" type="tns:Webservice PrefeituraPortType">
+  <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="gravaNota">
+    <soap:operation soapAction="urn:server.issqn#gravaNota" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.issqn" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.issqn" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="gravaNotaXML">
+    <soap:operation soapAction="urn:server.issqn#gravaNotaXML" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.issqn" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.issqn" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="listarNotas">
+    <soap:operation soapAction="urn:server.issqn#listarNotas" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.issqn" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.issqn" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+  <operation name="listarNotasXML">
+    <soap:operation soapAction="urn:server.issqn#listarNotasXML" style="rpc"/>
+    <input><soap:body use="encoded" namespace="urn:server.issqn" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></input>
+    <output><soap:body use="encoded" namespace="urn:server.issqn" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/></output>
+  </operation>
+</binding>
+<service name="Webservice Prefeitura">
+  <port name="Webservice PrefeituraPort" binding="tns:Webservice PrefeituraBinding">
+    <soap:address location="http://votuporanga.prefeitura.rlz.com.br/webservices/nfse/server.php"/>
+  </port>
+</service>
+</definitions>

@@ -45,7 +45,7 @@
 	</binding>
 	<service name="A24_RecepcionarLoteRpsSincrono">
 		<port name="A24_RecepcionarLoteRpsSincronoSoapPort" binding="wsdlns:A24_RecepcionarLoteRpsSincronoSoapBinding">
-			<soap:address location="https://enfs-hom.abaco.com.br/novalima/servlet/aa24_recepcionarloterpssincrono"/>
+			<soap:address location="https://www.e-nfs.com.br/e-nfs_novalima/servlet/aa24_recepcionarloterpssincrono"/>
 		</port>
 	</service>
 </definitions>

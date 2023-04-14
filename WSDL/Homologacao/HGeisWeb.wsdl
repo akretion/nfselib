@@ -1,99 +1,366 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php">
-  <types>
-    <xsd:schema targetNamespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php">
-      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
-      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
-    </xsd:schema>
-  </types>
-  <message name="ConsultaLoteRpsRequest">
-    <part name="ConsultaLoteRps" type="xsd:string" />
-  </message>
-  <message name="ConsultaLoteRpsResponse">
-    <part name="ConsultaLoteRpsResposta" type="xsd:string" />
-  </message>
-  <message name="ConsultaNfseRequest">
-    <part name="ConsultaNfse" type="xsd:string" />
-  </message>
-  <message name="ConsultaNfseResponse">
-    <part name="ConsultaNfseResposta" type="xsd:string" />
-  </message>
-  <message name="EnviaLoteRpsRequest">
-    <part name="EnviaLoteRps" type="xsd:string" />
-  </message>
-  <message name="EnviaLoteRpsResponse">
-    <part name="EnviaLoteRpsResposta" type="xsd:string" />
-  </message>
-  <message name="CancelaNfseRequest">
-    <part name="CancelaNfse" type="xsd:string" />
-  </message>
-  <message name="CancelaNfseResponse">
-    <part name="CancelaNfseResposta" type="xsd:string" />
-  </message>
-  <portType name="GeisWebServicePortType">
-    <operation name="ConsultaLoteRps">
-      <documentation></documentation>
-      <input message="tns:ConsultaLoteRpsRequest" />
-      <output message="tns:ConsultaLoteRpsResponse" />
-    </operation>
-    <operation name="ConsultaNfse">
-      <documentation></documentation>
-      <input message="tns:ConsultaNfseRequest" />
-      <output message="tns:ConsultaNfseResponse" />
-    </operation>
-    <operation name="EnviaLoteRps">
-      <documentation>Envia Lote de RPS para ser convertido em NFSe</documentation>
-      <input message="tns:EnviaLoteRpsRequest" />
-      <output message="tns:EnviaLoteRpsResponse" />
-    </operation>
-    <operation name="CancelaNfse">
-      <documentation></documentation>
-      <input message="tns:CancelaNfseRequest" />
-      <output message="tns:CancelaNfseResponse" />
-    </operation>
-  </portType>
-  <binding name="GeisWebServiceBinding" type="tns:GeisWebServicePortType">
-    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="ConsultaLoteRps">
-      <soap:operation soapAction="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php#ConsultaLoteRps" style="rpc" />
-      <input>
-        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </input>
-      <output>
-        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </output>
-    </operation>
-    <operation name="ConsultaNfse">
-      <soap:operation soapAction="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php#ConsultaNfse" style="rpc" />
-      <input>
-        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </input>
-      <output>
-        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </output>
-    </operation>
-    <operation name="EnviaLoteRps">
-      <soap:operation soapAction="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php#EnviaLoteRps" style="rpc" />
-      <input>
-        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </input>
-      <output>
-        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </output>
-    </operation>
-    <operation name="CancelaNfse">
-      <soap:operation soapAction="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php#CancelaNfse" style="rpc" />
-      <input>
-        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </input>
-      <output>
-        <soap:body use="encoded" namespace="urn:https://www.geisweb.net.br/homologacao/modelo/webservice/GeisWebServiceImpl.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </output>
-    </operation>
-  </binding>
-  <service name="GeisWebService">
-    <port name="GeisWebServicePort" binding="tns:GeisWebServiceBinding">
-      <soap:address location="https://www.geisweb.net.br:443/homologacao/modelo/webservice/GeisWebServiceImpl.php" />
-    </port>
-  </service>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:http://www.geisweb.net.br/modelo/webservice" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:http://www.geisweb.net.br/modelo/webservice">
+	<types>
+		<xsd:schema targetNamespace="urn:http://www.geisweb.net.br/modelo/webservice"
+>
+			<xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+			<xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+			<xsd:complexType name="ItensConsulta">
+				<xsd:sequence>
+					<xsd:element name="Numero" type="xsd:string"/>
+					<xsd:element name="DtInicial" type="xsd:string"/>
+					<xsd:element name="DtFinal" type="xsd:string"/>
+					<xsd:element name="NumeroInicial" type="xsd:string"/>
+					<xsd:element name="NumeroFinal" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ConsultaNota">
+				<xsd:sequence>
+					<xsd:element name="Usuario" type="xsd:string"/>
+					<xsd:element name="Senha" type="xsd:string"/>
+					<xsd:element name="Consulta" type="tns:ItensConsulta"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensIdentificacaoNfse">
+				<xsd:sequence>
+					<xsd:element name="Numero" type="xsd:string"/>
+					<xsd:element name="CodigoVerificacao" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensValores">
+				<xsd:sequence>
+					<xsd:element name="ValorServicos" type="xsd:string"/>
+					<xsd:element name="IssRetido" type="xsd:string"/>
+					<xsd:element name="ValorIss" type="xsd:string"/>
+					<xsd:element name="BaseCalculo" type="xsd:string"/>
+					<xsd:element name="Aliquota" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensServico">
+				<xsd:sequence>
+					<xsd:element name="Valores" type="tns:ItensValores"/>
+					<xsd:element name="ItemListaServico" type="xsd:string"/>
+					<xsd:element name="CodigoTributacaoMunicipio" type="xsd:string"/>
+					<xsd:element name="Discriminacao" type="xsd:string"/>
+					<xsd:element name="MunicipioPrestacaoServico" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensIdentificacaoPrestador">
+				<xsd:sequence>
+					<xsd:element name="Cnpj" type="xsd:string"/>
+					<xsd:element name="InscricaoMunicipal" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensEndereco">
+				<xsd:sequence>
+					<xsd:element name="Rua" type="xsd:string"/>
+					<xsd:element name="Numero" type="xsd:string"/>
+					<xsd:element name="Bairro" type="xsd:string"/>
+					<xsd:element name="Cidade" type="xsd:string"/>
+					<xsd:element name="Estado" type="xsd:string"/>
+					<xsd:element name="Cep" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensContato">
+				<xsd:sequence>
+					<xsd:element name="Telefone" type="xsd:string"/>
+					<xsd:element name="Email" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensPrestadorServico">
+				<xsd:sequence>
+					<xsd:element name="IdentificacaoPrestador" type="tns:ItensIdentificacaoPrestador"/>
+					<xsd:element name="RazaoSocial" type="xsd:string"/>
+					<xsd:element name="Endereco" type="tns:ItensEndereco"/>
+					<xsd:element name="Contato" type="tns:ItensContato"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensIdentificacaoTomador">
+				<xsd:sequence>
+					<xsd:element name="Cnpj" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensEnderecoTomador">
+				<xsd:sequence>
+					<xsd:element name="Rua" type="xsd:string"/>
+					<xsd:element name="Numero" type="xsd:string"/>
+					<xsd:element name="Bairro" type="xsd:string"/>
+					<xsd:element name="Cidade" type="xsd:string"/>
+					<xsd:element name="Estado" type="xsd:string"/>
+					<xsd:element name="Cep" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensTomadorServico">
+				<xsd:sequence>
+					<xsd:element name="IdentificacaoTomador" type="tns:ItensIdentificacaoTomador"/>
+					<xsd:element name="RazaoSocial" type="xsd:string"/>
+					<xsd:element name="Endereco" type="tns:ItensEnderecoTomador"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensOrgaoGerador">
+				<xsd:sequence>
+					<xsd:element name="CodigoMunicipio" type="xsd:string"/>
+					<xsd:element name="Uf" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensOutrosImpostos">
+				<xsd:sequence>
+					<xsd:element name="Pis" type="xsd:string"/>
+					<xsd:element name="Cofins" type="xsd:string"/>
+					<xsd:element name="Csll" type="xsd:string"/>
+					<xsd:element name="Irff" type="xsd:string"/>
+					<xsd:element name="Inss" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensNfse">
+				<xsd:sequence>
+					<xsd:element name="IdentificacaoNfse" type="tns:ItensIdentificacaoNfse"/>
+					<xsd:element name="DataEmissao" type="xsd:string"/>
+					<xsd:element name="Regime" type="xsd:string"/>
+					<xsd:element name="Competencia" type="xsd:string"/>
+					<xsd:element name="Servico" type="tns:ItensServico"/>
+					<xsd:element name="PrestadorServico" type="tns:ItensPrestadorServico"/>
+					<xsd:element name="TomadorServico" type="tns:ItensTomadorServico"/>
+					<xsd:element name="OrgaoGerador" type="tns:ItensOrgaoGerador"/>
+					<xsd:element name="OutrosImpostos" type="tns:ItensOutrosImpostos"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="Nfse">
+				<xsd:complexContent>
+					<xsd:restriction base="SOAP-ENC:Array">
+						<xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:ItensNfse[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="MsgConsultaNota">
+				<xsd:sequence>
+					<xsd:element name="Erro" type="xsd:int"/>
+					<xsd:element name="Status" type="xsd:string"/>
+					<xsd:element name="Notas" type="tns:ConjuntoMsgConsultaNota"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensTomador">
+				<xsd:sequence>
+					<xsd:element name="CnpjCpfTomador" type="xsd:string"/>
+					<xsd:element name="TipoTomador" type="xsd:string"/>
+					<xsd:element name="RazaoTomador" type="xsd:string"/>
+					<xsd:element name="EnderecoTomador" type="xsd:string"/>
+					<xsd:element name="BairroTomador" type="xsd:string"/>
+					<xsd:element name="CidadeTomador" type="xsd:string"/>
+					<xsd:element name="EstadoTomador" type="xsd:string"/>
+					<xsd:element name="CEPTomador" type="xsd:string"/>
+					<xsd:element name="TelefoneTomador" type="xsd:string"/>
+					<xsd:element name="EmailTomador" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensLote">
+				<xsd:sequence>
+					<xsd:element name="NumeroRps" type="xsd:int"/>
+					<xsd:element name="Serie" type="xsd:string"/>
+					<xsd:element name="Tipo" type="xsd:string"/>
+					<xsd:element name="TipoLcmto" type="xsd:string"/>
+					<xsd:element name="CodServ" type="xsd:int"/>
+					<xsd:element name="DtEmissao" type="xsd:string"/>
+					<xsd:element name="Valor" type="xsd:string"/>
+					<xsd:element name="BaseCalc" type="xsd:string"/>
+					<xsd:element name="Tomador" type="tns:ItensTomador"/>
+					<xsd:element name="Municipio" type="xsd:string"/>
+					<xsd:element name="DtLanc" type="xsd:string"/>
+					<xsd:element name="Descricao" type="xsd:string"/>
+					<xsd:element name="OutrosImp" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ConjuntoLotes">
+				<xsd:complexContent>
+					<xsd:restriction base="SOAP-ENC:Array">
+						<xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:ItensLote[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="EnviaLoteRPS">
+				<xsd:sequence>
+					<xsd:element name="Usuario" type="xsd:string"/>
+					<xsd:element name="Senha" type="xsd:string"/>
+					<xsd:element name="NumeroLote" type="xsd:string"/>
+					<xsd:element name="Rps" type="tns:ConjuntoLotes"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="Msg">
+				<xsd:sequence>
+					<xsd:element name="Erro" type="xsd:int"/>
+					<xsd:element name="Status" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ItensMsgConsultaNota">
+				<xsd:sequence>
+					<xsd:element name="NumeroNfse" type="xsd:int"/>
+					<xsd:element name="CnpjPrestador" type="xsd:string"/>
+					<xsd:element name="RazaoPrest" type="xsd:string"/>
+					<xsd:element name="TipoPrest" type="xsd:string"/>
+					<xsd:element name="EmailPrest" type="xsd:string"/>
+					<xsd:element name="Tomador" type="xsd:string"/>
+					<xsd:element name="RazaoTomador" type="xsd:string"/>
+					<xsd:element name="ValorNfse" type="xsd:string"/>
+					<xsd:element name="BaseCalc" type="xsd:string"/>
+					<xsd:element name="Aliquota" type="xsd:string"/>
+					<xsd:element name="ISSDevido" type="xsd:string"/>
+					<xsd:element name="ISSRetido" type="xsd:string"/>
+					<xsd:element name="Impostos" type="xsd:string"/>
+					<xsd:element name="Tipo" type="xsd:string"/>
+					<xsd:element name="TipoLcmto" type="xsd:string"/>
+					<xsd:element name="FgEmit" type="xsd:int"/>
+					<xsd:element name="FgEmail" type="xsd:int"/>
+					<xsd:element name="CodVerificacao" type="xsd:string"/>
+					<xsd:element name="DtEmissao" type="xsd:string"/>
+					<xsd:element name="Competencia" type="xsd:string"/>
+					<xsd:element name="CodServ" type="xsd:string"/>
+					<xsd:element name="DescServ" type="xsd:string"/>
+					<xsd:element name="Descricao" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ConjuntoMsgConsultaNota">
+				<xsd:complexContent>
+					<xsd:restriction base="SOAP-ENC:Array">
+						<xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="tns:ItensMsgConsultaNota[]"/>
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:complexType name="CancelaNota">
+				<xsd:sequence>
+					<xsd:element name="Usuario" type="xsd:string"/>
+					<xsd:element name="Senha" type="xsd:string"/>
+					<xsd:element name="Numero" type="xsd:int"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="MsgCancelaNota">
+				<xsd:sequence>
+					<xsd:element name="Erro" type="xsd:int"/>
+					<xsd:element name="Status" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ConsultaUltNFSe">
+				<xsd:sequence>
+					<xsd:element name="Usuario" type="xsd:string"/>
+					<xsd:element name="Senha" type="xsd:string"/>
+					<xsd:element name="CnpjCpf" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="MsgConsultaUltNFSe">
+				<xsd:sequence>
+					<xsd:element name="Erro" type="xsd:int"/>
+					<xsd:element name="Status" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</types>
+	<message name="ConsultaNotaGeisRequest">
+		<part name="ConsultaNota" type="xsd:string" />
+	</message>
+	<message name="ConsultaNotaGeisResponse">
+		<part name="MsgConsultaNota" type="xsd:string" />
+	</message>
+	<message name="EnviaLoteRPSRequest">
+		<part name="EnviaLoteRPS" type="xsd:string" />
+	</message>
+	<message name="EnviaLoteRPSResponse">
+		<part name="Msg" type="xsd:string" />
+	</message>
+	<message name="ConsultaNotaRequest">
+		<part name="ConsultaNota" type="xsd:string" />
+	</message>
+	<message name="ConsultaNotaResponse">
+		<part name="MsgConsultaNota" type="xsd:string" />
+	</message>
+	<message name="CancelaNotaRequest">
+		<part name="CancelaNota" type="xsd:string" />
+	</message>
+	<message name="CancelaNotaResponse">
+		<part name="MsgCancelaNota" type="xsd:string" />
+	</message>
+	<message name="ConsultaUltNFSeRequest">
+		<part name="ConsultaUltNFSe" type="xsd:string" />
+	</message>
+	<message name="ConsultaUltNFSeResponse">
+		<part name="MsgConsultaUltNFSe" type="xsd:string" />
+	</message>
+	<portType name="GeisWebServicePortType">
+		<operation name="ConsultaNotaGeis">
+			<documentation></documentation>
+			<input message="tns:ConsultaNotaGeisRequest"/>
+			<output message="tns:ConsultaNotaGeisResponse"/>
+		</operation>
+		<operation name="EnviaLoteRPS">
+			<documentation>Envia Lote de RPS para ser convertido em NFSe</documentation>
+			<input message="tns:EnviaLoteRPSRequest"/>
+			<output message="tns:EnviaLoteRPSResponse"/>
+		</operation>
+		<operation name="ConsultaNota">
+			<documentation></documentation>
+			<input message="tns:ConsultaNotaRequest"/>
+			<output message="tns:ConsultaNotaResponse"/>
+		</operation>
+		<operation name="CancelaNota">
+			<documentation></documentation>
+			<input message="tns:CancelaNotaRequest"/>
+			<output message="tns:CancelaNotaResponse"/>
+		</operation>
+		<operation name="ConsultaUltNFSe">
+			<documentation></documentation>
+			<input message="tns:ConsultaUltNFSeRequest"/>
+			<output message="tns:ConsultaUltNFSeResponse"/>
+		</operation>
+	</portType>
+	<binding name="GeisWebServiceBinding" type="tns:GeisWebServicePortType">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="ConsultaNotaGeis">
+			<soap:operation soapAction="urn:http://www.geisweb.net.br/modelo/webservice#ConsultaNotaGeis" style="rpc"/>
+			<input>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+		<operation name="EnviaLoteRPS">
+			<soap:operation soapAction="urn:http://www.geisweb.net.br/modelo/webservice#EnviaLoteRPS" style="rpc"/>
+			<input>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+		<operation name="ConsultaNota">
+			<soap:operation soapAction="urn:http://www.geisweb.net.br/modelo/webservice#ConsultaNota" style="rpc"/>
+			<input>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+		<operation name="CancelaNota">
+			<soap:operation soapAction="urn:http://www.geisweb.net.br/modelo/webservice#CancelaNota" style="rpc"/>
+			<input>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+		<operation name="ConsultaUltNFSe">
+			<soap:operation soapAction="urn:http://www.geisweb.net.br/modelo/webservice#ConsultaUltNFSe" style="rpc"/>
+			<input>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="urn:http://www.geisweb.net.br/modelo/webservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="GeisWebService">
+		<port name="GeisWebServicePort" binding="tns:GeisWebServiceBinding">
+			<soap:address location="http://geisweb.net.br/modelo/webservice/GeisWebServiceImpl.php"/>
+		</port>
+	</service>
 </definitions>

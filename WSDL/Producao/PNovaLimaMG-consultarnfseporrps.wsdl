@@ -45,7 +45,7 @@
 	</binding>
 	<service name="A24_ConsultarNfsePorRps">
 		<port name="A24_ConsultarNfsePorRpsSoapPort" binding="wsdlns:A24_ConsultarNfsePorRpsSoapBinding">
-			<soap:address location="http://enfs-hom.abaco.com.br/novalima/servlet/aa24_consultarnfseporrps"/>
+			<soap:address location="https://www.e-nfs.com.br/e-nfs_novalima/servlet/aa24_consultarnfseporrps"/>
 		</port>
 	</service>
 </definitions>

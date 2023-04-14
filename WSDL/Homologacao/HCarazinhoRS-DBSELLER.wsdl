@@ -7,8 +7,8 @@
                   xmlns:http="http://schemas.xmlsoap.org/soap/http"
                   xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"
-                  xmlns:ii="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao"
-                  targetNamespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao">
+                  xmlns:ii="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao"
+                  targetNamespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao">
   <wsdl:types>
   </wsdl:types>
   <wsdl:message name="RecepcionarLoteRpsRequest">
@@ -41,6 +41,12 @@
     <wsdl:message name="CancelarNfseResponse">
       <wsdl:part name="return" type="xsd:string"/>
     </wsdl:message>
+    <wsdl:message name="SubstituirNfseRequest">
+      <wsdl:part name="xml" type="xsd:string"/>
+    </wsdl:message>
+    <wsdl:message name="SubstituirNfseResponse">
+      <wsdl:part name="return" type="xsd:string"/>
+    </wsdl:message>
     <wsdl:message name="ConsultarNfseRequest">
       <wsdl:part name="xml" type="xsd:string"/>
     </wsdl:message>
@@ -64,6 +70,10 @@
       <wsdl:input message="ii:ConsultarLoteRpsResquest"/>
       <wsdl:output message="ii:ConsultarLoteRpsResponse"/>
     </wsdl:operation>
+    <wsdl:operation name="SubstituirNfse" parameterOrder="xml">
+      <wsdl:input message="ii:SubstituirNfseRequest"/>
+      <wsdl:output message="ii:SubstituirNfseResponse"/>
+    </wsdl:operation>
     <wsdl:operation name="CancelarNfse" parameterOrder="xml">
       <wsdl:input message="ii:CancelarNfseRequest"/>
       <wsdl:output message="ii:CancelarNfseResponse"/>
@@ -78,61 +88,70 @@
     <wsdl:operation name="RecepcionarLoteRps">
       <soap:operation soapAction=""/>
       <wsdl:input>
-        <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+        <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
       </wsdl:input>
       <wsdl:output>
-        <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+        <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ConsultarSituacaoLoteRps">
       <soap:operation soapAction=""/>
         <wsdl:input>
-          <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+          <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
         </wsdl:input>
         <wsdl:output>
-          <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+          <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
         </wsdl:output>
       </wsdl:operation>
       <wsdl:operation name="ConsultarNfsePorRps">
         <soap:operation soapAction=""/>
           <wsdl:input>
-            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:input>
           <wsdl:output>
-            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:output>
       </wsdl:operation>
       <wsdl:operation name="ConsultarLoteRps">
       <soap:operation soapAction=""/>
        <wsdl:input>
-        <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+        <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:input>
           <wsdl:output>
-            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:output>
       </wsdl:operation>
       <wsdl:operation name="CancelarNfse">
         <soap:operation soapAction=""/>
           <wsdl:input>
-            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+            <soap:body namespace="https://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:input>
           <wsdl:output>
-            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+            <soap:body namespace="https://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
+          </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="SubstituirNfse">
+        <soap:operation soapAction=""/>
+          <wsdl:input>
+            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
+          </wsdl:input>
+          <wsdl:output>
+            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:output>
       </wsdl:operation>
       <wsdl:operation name="ConsultarNfse">
         <soap:operation soapAction=""/>
           <wsdl:input>
-            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:input>
           <wsdl:output>
-            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao" use="literal"/>
+            <soap:body namespace="http://hom.nfse.carazinho.rs.gov.br/webservice/index/producao" use="literal"/>
           </wsdl:output>
       </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="DBSellerService">
     <wsdl:port name="DBSellerPort" binding="ii:DBSellerBinding">
-      <soap:address location="http://hom.nfse.carazinho.rs.gov.br/webservice/index/homologacao"/>
+      <soap:address location="https://hom.nfse.carazinho.rs.gov.br/webservice/index/producao"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
