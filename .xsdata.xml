@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns="http://pypi.org/project/xsdata" version="22.7">
+  <Output maxLineLength="79">
+    <Package>generated</Package>
+    <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
+    <Structure>filenames</Structure>
+    <DocstringStyle>reStructuredText</DocstringStyle>
+    <RelativeImports>false</RelativeImports>
+    <CompoundFields defaultName="choice" forceDefaultName="false">false</CompoundFields>
+    <PostponedAnnotations>false</PostponedAnnotations>
+    <UnnestClasses>false</UnnestClasses>
+  </Output>
+  <Conventions>
+    <ClassName case="pascalCase" safePrefix="type"/>
+    <FieldName case="originalCase" safePrefix="value"/>
+    <ConstantName case="screamingSnakeCase" safePrefix="value"/>
+    <ModuleName case="snakeCase" safePrefix="mod"/>
+    <PackageName case="snakeCase" safePrefix="pkg"/>
+  </Conventions>
+  <Substitutions>
+    <!-- defaults : -->
+    <Substitution type="package" search="http://www.w3.org/2001/XMLSchema" replace="xs"/>
+    <Substitution type="package" search="http://www.w3.org/XML/1998/namespace" replace="xml"/>
+    <Substitution type="package" search="http://www.w3.org/2001/XMLSchema-instance" replace="xsi"/>
+    <Substitution type="package" search="http://www.w3.org/1999/xlink" replace="xlink"/>
+    <Substitution type="package" search="http://www.w3.org/1999/xhtml" replace="xhtml"/>
+    <Substitution type="package" search="http://schemas.xmlsoap.org/wsdl/soap/" replace="soap"/>
+    <Substitution type="package" search="http://schemas.xmlsoap.org/wsdl/soap12/" replace="soap12"/>
+    <Substitution type="package" search="http://schemas.xmlsoap.org/soap/envelope/" replace="soapenv"/>
+ 
+    <!-- xmldsig : -->
+    <Substitution type="field" search="^@any_element$" replace="any_element"/>
+    <Substitution type="field" search="^@other_element$" replace="other_element"/>
+    <Substitution type="field" search="^@any_attributes$" replace="any_attributes"/> 
+    <Substitution type="field" search="^Signature$" replace="signature"/>
+    <Substitution type="field" search="^SignatureMethod$" replace="signatureMethod"/>
+    <Substitution type="field" search="^SignatureValue$" replace="signatureValue"/>
+    <Substitution type="field" search="^CanonicalizationMethod$" replace="canonicalizationMethod"/>
+    <Substitution type="field" search="^DigestValue$" replace="digestValue"/>
+    <Substitution type="field" search="^DigestMethod$" replace="digestMethod"/>
+    <Substitution type="field" search="^SignatureProperty$" replace="signatureProperty"/>
+    <Substitution type="field" search="^SignaturePropertiesType$" replace="signaturePropertiesType"/>
+    <Substitution type="field" search="^Transform$" replace="transform"/>
+    <Substitution type="field" search="^Transforms$" replace="transforms"/>
+    <Substitution type="field" search="^TransformType$" replace="transformType"/>
+    <Substitution type="field" search="^TransformsType$" replace="transformsType"/>
+    <Substitution type="field" search="^Reference$" replace="reference"/>
+    <Substitution type="field" search="^SignedInfo$" replace="signedInfo"/>
+    <Substitution type="field" search="^KeyInfo$" replace="keyInfo"/>
+
+    <!-- generics (NFe and others): -->
+    <Substitution type="class" search="^Class$" replace="Type"/>
+    <Substitution type="class" search="^Object$" replace="_Object"/>
+    <Substitution type="class" search="^Id$" replace="id"/>
+
+    <!-- generics (NFS-e): -->
+    <Substitution type="field" search="^ListaMensagemRetorno$" replace="listaMensagemRetorno"/>
+    <Substitution type="field" search="^ConsultarSituacaoLoteRpsResposta$" replace="consultarSituacaoLoteRpsResposta"/>
+    <Substitution type="field" search="^ListaMensagemRetornoLote$" replace="listaMensagemRetornoLote"/>
+    <Substitution type="field" search="^ListaMensagemAlertaRetorno$" replace="listaMensagemAlertaRetorno"/>
+    <Substitution type="field" search="^CompNfse$" replace="compNfse"/>
+    <Substitution type="field" search="^TcCondicoesPagamentos$" replace="tcCondicoesPagamentos"/>
+    <Substitution type="field" search="^Condicao$" replace="condicao"/>
+    <Substitution type="field" search="^CancelarNfseResposta$" replace="cancelarNfseResposta"/>
+    <Substitution type="field" search="^RetCancelamento$" replace="retCancelamento"/>
+    <Substitution type="field" search="^RetCancelamentoRps$" replace="retCancelamentoRps"/>
+    <Substitution type="field" search="^Nfse$" replace="nfse"/>
+    <Substitution type="field" search="^NfseCancelamento$" replace="nfseCancelamento"/>
+    <Substitution type="field" search="^NfseSubstituicao$" replace="nfseSubstituicao"/>
+    <Substitution type="field" search="^CompCfse$" replace="compCfse"/>
+    <Substitution type="field" search="^chvAcessoNFS-e$" replace="chvAcessoNFS_e"/>
+    <Substitution type="field" search="^cNFS-e$" replace="cNFS_e"/>
+    <Substitution type="field" search="^nNFS-e$" replace="nNFS_e"/>
+    <Substitution type="field" search="^NFS-e$" replace="NFS_e"/>
+    <Substitution type="field" search="^Ret$" replace="ret"/>
+    <Substitution type="field" search="^TomS$" replace="tomS"/>
+    <Substitution type="field" search="^ListaOutrosServicosTomados$" replace="listaOutrosServicosTomados"/>
+    <Substitution type="field" search="^ListaSubEmpreitada$" replace="listaSubEmpreitada"/>
+    <Substitution type="field" search="^ListaMaterialAplicado$" replace="listaMaterialAplicado"/>
+    <Substitution type="field" search="^ListaClientes$" replace="listaClientes"/>
+    <Substitution type="field" search="^ListaObras$" replace="listaObras"/>
+  </Substitutions>
+</Config>
