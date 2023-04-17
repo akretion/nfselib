@@ -7,9 +7,9 @@
 
 # nfselib: a lib Python limpa que suporta a NFS-e de mais de 450 cidades do Brasil
 
-A nfelib usa os famosos schemas do projeto open source [UNINFE](https://unimake.com.br/uninfe/) junto com o poder do [xsdata](https://xsdata.readthedocs.io/en/latest/) para tornar facil a importação e geração em Python dos arquivos XML das NFS-e de mais de 450 cidades do Brasil.
+A nfelib usa os famosos schemas do projeto open source [UNINFE](https://unimake.com.br/uninfe/) junto com o poder do [xsdata](https://xsdata.readthedocs.io/en/latest/) para tornar facil a importação e geração dos arquivos XML das NFS-e de mais de 450 cidades do Brasil no ambiente Python.
 
-Existe tambem agora a NFS-e com o padrão da Receita Federal, esse esta pela [nfelib](https://github.com/akretion/nfelib), uma lib mais générica sem ligação com o UNINFE e que suporta todos padrões de notas fiscais nacionais.
+Existe tambem agora a NFS-e com o padrão da Receita Federal, esse esta suportado pela [nfelib](https://github.com/akretion/nfelib), uma lib mais générica sem ligação com o UNINFE e que suporta todos padrões de notas fiscais nacionais.
 
 
 ## Como atualizar os schemas a partir do repo svn do UNINFE:
@@ -25,7 +25,4 @@ git rebase master
 git push ak nfselib-xsdata:nfselib-xsdata-tmp
 ```
 
-And finally create a merge request in Github against the nfeslib-xsdata branch.
-
-Note: we could also use `git cherry-pick` to add the missing WSDL or Webservice.xml commits
-]()
+Por fim criar um PR no Github para integrar essas atualizações.
