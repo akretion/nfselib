@@ -1,0 +1,4 @@
+graft nfselib
+graft schemas
+graft WSDL
+global-exclude *.py[cod]
