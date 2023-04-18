@@ -1,4 +1,4 @@
-from nfselib.manaus_am.nfse_v2010 import (
+from nfselib.bindings.manaus_am.nfse_v2010 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -43,7 +43,7 @@ from nfselib.manaus_am.nfse_v2010 import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.manaus_am.xmldsig_core_schema20020212 import (
+from nfselib.bindings.manaus_am.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

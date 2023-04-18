@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.intersol.tipos_v1 import ListaMensagemRetorno
+from nfselib.bindings.intersol.tipos_v1 import ListaMensagemRetorno
 
 __NAMESPACE__ = "http://ws.speedgov.com.br/consultar_situacao_lote_rps_resposta_v1.xsd"
 

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from nfselib.salvador_ba.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.salvador_ba.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd"
 

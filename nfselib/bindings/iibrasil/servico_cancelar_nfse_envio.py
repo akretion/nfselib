@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.iibrasil.tipos_complexos import TcPedidoCancelamento
+from nfselib.bindings.iibrasil.tipos_complexos import TcPedidoCancelamento
 
 __NAMESPACE__ = "http://tempuri.org/servico_enviar_lote_rps_envio.xsd"
 

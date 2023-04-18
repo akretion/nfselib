@@ -3,7 +3,7 @@ from decimal import Decimal
 from enum import Enum
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate
-from nfselib.cecam.xsdisseletronico_arquivo import (
+from nfselib.bindings.cecam.xsdisseletronico_arquivo import (
     DadosItensNotaFiscalRetido,
     DadosNotaFiscalSituacaoNf,
 )

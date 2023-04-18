@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from nfselib.centi.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.centi.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://www.centi.com.br/files/nfse.xsd"
 
@@ -1880,9 +1880,10 @@ class RetCancelamento:
     class Meta:
         namespace = "http://www.centi.com.br/files/nfse.xsd"
 
-    NfseCancelamento: List[TcCancelamentoNfse] = field(
+    nfseCancelamento: List[TcCancelamentoNfse] = field(
         default_factory=list,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "min_occurs": 1,
         }
@@ -1946,24 +1947,27 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    Nfse: Optional[TcNfse] = field(
+    nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "namespace": "http://www.centi.com.br/files/nfse.xsd",
             "required": True,
         }
     )
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "http://www.centi.com.br/files/nfse.xsd",
         }
     )
-    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
+    nfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseSubstituicao",
             "type": "Element",
             "namespace": "http://www.centi.com.br/files/nfse.xsd",
         }

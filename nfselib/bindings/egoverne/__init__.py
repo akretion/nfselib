@@ -1,4 +1,4 @@
-from nfselib.egoverne.nfse import (
+from nfselib.bindings.egoverne.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -42,7 +42,7 @@ from nfselib.egoverne.nfse import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.egoverne.xmldsig_core_schema20020212 import (
+from nfselib.bindings.egoverne.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.smarapd.nfse_v2_04 import TcCpfCnpj
+from nfselib.bindings.smarapd.nfse_v2_04 import TcCpfCnpj
 
 __NAMESPACE__ = "http://www.abrasf.org.br/nfse.xsd"
 

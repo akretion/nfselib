@@ -1,4 +1,4 @@
-from nfselib.lexsom.nfse import (
+from nfselib.bindings.lexsom.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -42,7 +42,7 @@ from nfselib.lexsom.nfse import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.lexsom.xmldsig_core_schema20020212 import (
+from nfselib.bindings.lexsom.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

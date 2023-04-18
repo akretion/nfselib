@@ -1,4 +1,4 @@
-from nfselib.actcon.nfse_v201 import (
+from nfselib.bindings.actcon.nfse_v201 import (
     CancelarNfseEnvio as V201CancelarNfseEnvio,
     CancelarNfseResposta as V201CancelarNfseResposta,
     CompNfse as V201CompNfse,
@@ -58,7 +58,7 @@ from nfselib.actcon.nfse_v201 import (
     TcValoresDeclaracaoServico as V201TcValoresDeclaracaoServico,
     TcValoresNfse as V201TcValoresNfse,
 )
-from nfselib.actcon.nfse_v202 import (
+from nfselib.bindings.actcon.nfse_v202 import (
     CancelarNfseEnvio as V202CancelarNfseEnvio,
     CancelarNfseResposta as V202CancelarNfseResposta,
     CompNfse as V202CompNfse,
@@ -118,7 +118,7 @@ from nfselib.actcon.nfse_v202 import (
     TcValoresDeclaracaoServico as V202TcValoresDeclaracaoServico,
     TcValoresNfse as V202TcValoresNfse,
 )
-from nfselib.actcon.nfse_v204 import (
+from nfselib.bindings.actcon.nfse_v204 import (
     CancelarNfseEnvio as V204CancelarNfseEnvio,
     CancelarNfseResposta as V204CancelarNfseResposta,
     CompNfse as V204CompNfse,
@@ -187,7 +187,7 @@ from nfselib.actcon.nfse_v204 import (
     TsItemListaServico,
     TsUf,
 )
-from nfselib.actcon.xmldsig_core_schema20020212 import (
+from nfselib.bindings.actcon.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

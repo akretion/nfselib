@@ -1,4 +1,4 @@
-from nfselib.natalense.nfse import (
+from nfselib.bindings.natalense.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -42,7 +42,7 @@ from nfselib.natalense.nfse import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.natalense.xmldsig_core_schema20020212 import (
+from nfselib.bindings.natalense.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

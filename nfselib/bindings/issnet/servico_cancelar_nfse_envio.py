@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.issnet.tipos_complexos import TcPedidoCancelamento
+from nfselib.bindings.issnet.tipos_complexos import TcPedidoCancelamento
 
 __NAMESPACE__ = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_cancelar_nfse_envio.xsd"
 

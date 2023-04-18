@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
-from nfselib.gif.nfse_parobe_v1_1 import End
-from nfselib.gif.xmldsig_core_schema_v1_01 import Signature
+from nfselib.bindings.gif.nfse_parobe_v1_1 import End
+from nfselib.bindings.gif.xmldsig_core_schema_v1_01 import Signature
 
 
 @dataclass

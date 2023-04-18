@@ -1,4 +1,4 @@
-from nfselib.desenvolvecidade.nfsev203 import (
+from nfselib.bindings.desenvolvecidade.nfsev203 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -60,7 +60,7 @@ from nfselib.desenvolvecidade.nfsev203 import (
     TsItemListaServico,
     TsUf,
 )
-from nfselib.desenvolvecidade.xmldsig_core_schema20020212 import (
+from nfselib.bindings.desenvolvecidade.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

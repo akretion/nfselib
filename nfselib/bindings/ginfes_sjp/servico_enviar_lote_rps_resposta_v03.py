@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from nfselib.ginfes_sjp.tipos_v03 import ListaMensagemRetorno
+from nfselib.bindings.ginfes_sjp.tipos_v03 import ListaMensagemRetorno
 
 __NAMESPACE__ = "http://nfe.sjp.pr.gov.br/servico_enviar_lote_rps_resposta_v03.xsd"
 

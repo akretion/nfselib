@@ -1,4 +1,4 @@
-from nfselib.issonline4r.nfsev20 import (
+from nfselib.bindings.issonline4r.nfsev20 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.issonline4r.nfsev20 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.issonline4r.xmldsig_core_schema20020212 import (
+from nfselib.bindings.issonline4r.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

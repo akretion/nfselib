@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.webiss.tipos_complexos import TcPedidoCancelamento
+from nfselib.bindings.webiss.tipos_complexos import TcPedidoCancelamento
 
 __NAMESPACE__ = "http://www.abrasf.org.br/nfse"
 

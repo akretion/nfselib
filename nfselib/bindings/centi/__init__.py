@@ -1,4 +1,4 @@
-from nfselib.centi.nfse import (
+from nfselib.bindings.centi.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.centi.nfse import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.centi.xmldsig_core_schema20020212 import (
+from nfselib.bindings.centi.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

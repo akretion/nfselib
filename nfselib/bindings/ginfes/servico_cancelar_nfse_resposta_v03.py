@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.ginfes.tipos_v03 import (
+from nfselib.bindings.ginfes.tipos_v03 import (
     ListaMensagemRetorno,
     TcCancelamentoNfse,
 )

@@ -1,10 +1,10 @@
-from nfselib.betha.nfse_v01 import (
+from nfselib.bindings.betha.nfse_v01 import (
     TcCondicaoPagamento,
     TcParcelas as NfseTcParcelas,
     TcRps as NfseTcRps,
     TcValores as NfseTcValores,
 )
-from nfselib.betha.nfse_v202 import (
+from nfselib.bindings.betha.nfse_v202 import (
     CompNfse,
     ConsultarNfseFaixaEnvio,
     ConsultarNfseFaixaResposta,
@@ -57,19 +57,19 @@ from nfselib.betha.nfse_v202 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.betha.servico_cancelar_nfse_envio_v01 import CancelarNfseEnvio
-from nfselib.betha.servico_cancelar_nfse_resposta_v01 import CancelarNfseResposta
-from nfselib.betha.servico_consultar_lote_rps_envio_v01 import ConsultarLoteRpsEnvio
-from nfselib.betha.servico_consultar_lote_rps_resposta_v01 import ConsultarLoteRpsResposta
-from nfselib.betha.servico_consultar_nfse_envio_v01 import ConsultarNfseEnvio
-from nfselib.betha.servico_consultar_nfse_resposta_v01 import ConsultarNfseResposta
-from nfselib.betha.servico_consultar_nfse_rps_envio_v01 import ConsultarNfsePorRpsEnvio
-from nfselib.betha.servico_consultar_nfse_rps_resposta_v01 import ConsultarNfseRpsResposta
-from nfselib.betha.servico_consultar_situacao_lote_rps_envio_v01 import ConsultarSituacaoLoteRpsEnvio
-from nfselib.betha.servico_consultar_situacao_lote_rps_resposta_v01 import ConsultarSituacaoLoteRpsResposta
-from nfselib.betha.servico_enviar_lote_rps_envio_v01 import EnviarLoteRpsEnvio
-from nfselib.betha.servico_enviar_lote_rps_resposta_v01 import EnviarLoteRpsResposta
-from nfselib.betha.tipos_nfe_v01 import (
+from nfselib.bindings.betha.servico_cancelar_nfse_envio_v01 import CancelarNfseEnvio
+from nfselib.bindings.betha.servico_cancelar_nfse_resposta_v01 import CancelarNfseResposta
+from nfselib.bindings.betha.servico_consultar_lote_rps_envio_v01 import ConsultarLoteRpsEnvio
+from nfselib.bindings.betha.servico_consultar_lote_rps_resposta_v01 import ConsultarLoteRpsResposta
+from nfselib.bindings.betha.servico_consultar_nfse_envio_v01 import ConsultarNfseEnvio
+from nfselib.bindings.betha.servico_consultar_nfse_resposta_v01 import ConsultarNfseResposta
+from nfselib.bindings.betha.servico_consultar_nfse_rps_envio_v01 import ConsultarNfsePorRpsEnvio
+from nfselib.bindings.betha.servico_consultar_nfse_rps_resposta_v01 import ConsultarNfseRpsResposta
+from nfselib.bindings.betha.servico_consultar_situacao_lote_rps_envio_v01 import ConsultarSituacaoLoteRpsEnvio
+from nfselib.bindings.betha.servico_consultar_situacao_lote_rps_resposta_v01 import ConsultarSituacaoLoteRpsResposta
+from nfselib.bindings.betha.servico_enviar_lote_rps_envio_v01 import EnviarLoteRpsEnvio
+from nfselib.bindings.betha.servico_enviar_lote_rps_resposta_v01 import EnviarLoteRpsResposta
+from nfselib.bindings.betha.tipos_nfe_v01 import (
     Condicao,
     TcContato as TiposNfeV01TcContato,
     TcCpfCnpj as TiposNfeV01TcCpfCnpj,
@@ -91,7 +91,7 @@ from nfselib.betha.tipos_nfe_v01 import (
     TcPedidoCancelamento as TiposNfeV01TcPedidoCancelamento,
     TcRps as TiposNfeTcRps,
 )
-from nfselib.betha.xmldsig_core_schema20020212 import (
+from nfselib.bindings.betha.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

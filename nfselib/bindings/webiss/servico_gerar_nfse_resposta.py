@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from nfselib.webiss.tipos_complexos import (
+from nfselib.bindings.webiss.tipos_complexos import (
     ListaMensagemRetorno,
     ListaMensagemRetornoLote,
     TcCompNfse,

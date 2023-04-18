@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.iibrasil.tipos_complexos import (
+from nfselib.bindings.iibrasil.tipos_complexos import (
     TcIdentificacaoPrestador,
     TcIdentificacaoRps,
 )

@@ -1,17 +1,17 @@
-from nfselib.intersol.cabecalho_v1 import Cabecalho
-from nfselib.intersol.cancelar_nfse_envio_v1 import CancelarNfseEnvio
-from nfselib.intersol.cancelar_nfse_resposta_v1 import CancelarNfseResposta
-from nfselib.intersol.consultar_lote_rps_envio_v1 import ConsultarLoteRpsEnvio
-from nfselib.intersol.consultar_lote_rps_resposta_v1 import ConsultarLoteRpsResposta
-from nfselib.intersol.consultar_nfse_envio_v1 import ConsultarNfseEnvio
-from nfselib.intersol.consultar_nfse_resposta_v1 import ConsultarNfseResposta
-from nfselib.intersol.consultar_nfse_rps_envio_v1 import ConsultarNfseRpsEnvio
-from nfselib.intersol.consultar_nfse_rps_resposta_v1 import ConsultarNfseRpsResposta
-from nfselib.intersol.consultar_situacao_lote_rps_envio_v1 import ConsultarSituacaoLoteRpsEnvio
-from nfselib.intersol.consultar_situacao_lote_rps_resposta_v1 import ConsultarSituacaoLoteRpsResposta
-from nfselib.intersol.enviar_lote_rps_envio_v1 import EnviarLoteRpsEnvio
-from nfselib.intersol.enviar_lote_rps_resposta_v1 import EnviarLoteRpsResposta
-from nfselib.intersol.tipos_v1 import (
+from nfselib.bindings.intersol.cabecalho_v1 import Cabecalho
+from nfselib.bindings.intersol.cancelar_nfse_envio_v1 import CancelarNfseEnvio
+from nfselib.bindings.intersol.cancelar_nfse_resposta_v1 import CancelarNfseResposta
+from nfselib.bindings.intersol.consultar_lote_rps_envio_v1 import ConsultarLoteRpsEnvio
+from nfselib.bindings.intersol.consultar_lote_rps_resposta_v1 import ConsultarLoteRpsResposta
+from nfselib.bindings.intersol.consultar_nfse_envio_v1 import ConsultarNfseEnvio
+from nfselib.bindings.intersol.consultar_nfse_resposta_v1 import ConsultarNfseResposta
+from nfselib.bindings.intersol.consultar_nfse_rps_envio_v1 import ConsultarNfseRpsEnvio
+from nfselib.bindings.intersol.consultar_nfse_rps_resposta_v1 import ConsultarNfseRpsResposta
+from nfselib.bindings.intersol.consultar_situacao_lote_rps_envio_v1 import ConsultarSituacaoLoteRpsEnvio
+from nfselib.bindings.intersol.consultar_situacao_lote_rps_resposta_v1 import ConsultarSituacaoLoteRpsResposta
+from nfselib.bindings.intersol.enviar_lote_rps_envio_v1 import EnviarLoteRpsEnvio
+from nfselib.bindings.intersol.enviar_lote_rps_resposta_v1 import EnviarLoteRpsResposta
+from nfselib.bindings.intersol.tipos_v1 import (
     ListaMensagemRetorno,
     TcCancelamentoNfse,
     TcCompNfse,
@@ -43,7 +43,7 @@ from nfselib.intersol.tipos_v1 import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.intersol.xmldsig_core_schema20020212_v1 import (
+from nfselib.bindings.intersol.xmldsig_core_schema20020212_v1 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

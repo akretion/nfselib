@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.equiplano.tipos_esnfs_v01 import (
+from nfselib.bindings.equiplano.tipos_esnfs_v01 import (
     TcMensagemRetorno,
     TcNfse,
 )

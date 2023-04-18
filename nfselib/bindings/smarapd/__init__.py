@@ -1,10 +1,10 @@
-from nfselib.smarapd.nfse_v2_03 import (
+from nfselib.bindings.smarapd.nfse_v2_03 import (
     TcIdentificacaoConsulente,
     TcIdentificacaoIntermediario,
     TcIdentificacaoPrestador,
     TcIdentificacaoTomador,
 )
-from nfselib.smarapd.nfse_v2_04 import (
+from nfselib.bindings.smarapd.nfse_v2_04 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -73,8 +73,8 @@ from nfselib.smarapd.nfse_v2_04 import (
     TsItemListaServico,
     TsUf,
 )
-from nfselib.smarapd.wsentrada_nfd import Tbnfd
-from nfselib.smarapd.xmldsig_core_schema20020212 import (
+from nfselib.bindings.smarapd.wsentrada_nfd import Tbnfd
+from nfselib.bindings.smarapd.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

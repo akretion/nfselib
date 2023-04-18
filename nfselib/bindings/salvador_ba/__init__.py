@@ -1,4 +1,4 @@
-from nfselib.salvador_ba.dados_complementares import (
+from nfselib.bindings.salvador_ba.dados_complementares import (
     ConsultarLoteRpsComplementarResposta,
     ConsultarNfseComplementarResposta,
     ConsultarNfseRpscomplementarResposta,
@@ -13,7 +13,7 @@ from nfselib.salvador_ba.dados_complementares import (
     TcNfseComplementar,
     TcRpscomplementar,
 )
-from nfselib.salvador_ba.deducoes import (
+from nfselib.bindings.salvador_ba.deducoes import (
     Cliente,
     Contato,
     CpfouCnpj,
@@ -34,7 +34,7 @@ from nfselib.salvador_ba.deducoes import (
     TipoDocumentoOutrosServicosTomados,
     TipoDocumentoSubempreitada,
 )
-from nfselib.salvador_ba.nfse_salvador import (
+from nfselib.bindings.salvador_ba.nfse_salvador import (
     CompNfse,
     ConsultarLoteRpsEnvio,
     ConsultarLoteRpsResposta,
@@ -72,7 +72,7 @@ from nfselib.salvador_ba.nfse_salvador import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.salvador_ba.servicos_complementares import (
+from nfselib.bindings.salvador_ba.servicos_complementares import (
     ConsultarNfsePendenteAceiteEnvio,
     ConsultarNfsePendenteAceiteResposta,
     ConsultarSituacaoNfseEnvio,
@@ -84,7 +84,7 @@ from nfselib.salvador_ba.servicos_complementares import (
     TcRegistroAceiteNfse,
     TcSituacaoAceiteNfse,
 )
-from nfselib.salvador_ba.xmldsig_core_schema20020212 import (
+from nfselib.bindings.salvador_ba.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

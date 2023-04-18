@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.ginfes_sjp.tipos_v03 import TcLoteRps
-from nfselib.ginfes_sjp.xmldsig_core_schema20020212_v03 import Signature
+from nfselib.bindings.ginfes_sjp.tipos_v03 import TcLoteRps
+from nfselib.bindings.ginfes_sjp.xmldsig_core_schema20020212_v03 import Signature
 
 __NAMESPACE__ = "http://nfe.sjp.pr.gov.br/servico_enviar_lote_rps_envio_v03.xsd"
 

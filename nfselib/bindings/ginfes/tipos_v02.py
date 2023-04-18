@@ -1105,9 +1105,10 @@ class TcNfse:
     Representa a estrutura de NFS-e incluindo a estrutura de cancelamento da
     mesma, quando existente.
     """
-    Nfse: Optional[TcNfseSemCancelamento] = field(
+    nfse: Optional[TcNfseSemCancelamento] = field(
         default=None,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "namespace": "http://www.ginfes.com.br/tipos",
             "required": True,

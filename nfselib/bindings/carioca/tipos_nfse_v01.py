@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from nfselib.carioca.xmldsig_core_schema_v01 import Signature
+from nfselib.bindings.carioca.xmldsig_core_schema_v01 import Signature
 
 __NAMESPACE__ = "http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd"
 
@@ -1476,24 +1476,27 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    Nfse: Optional[TcNfse] = field(
+    nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd",
             "required": True,
         }
     )
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd",
         }
     )
-    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
+    nfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseSubstituicao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/ABRASF/arquivos/nfse.xsd",
         }

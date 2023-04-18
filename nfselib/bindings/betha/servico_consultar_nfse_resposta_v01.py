@@ -26,9 +26,10 @@ class ConsultarNfseResposta:
 
     @dataclass
     class ListaNfse:
-        Nfse: List[str] = field(
+        nfse: List[str] = field(
             default_factory=list,
             metadata={
+                "name": "Nfse",
                 "type": "Element",
                 "namespace": "",
             }

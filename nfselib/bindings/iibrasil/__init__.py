@@ -1,10 +1,10 @@
-from nfselib.iibrasil.servico_cancelar_nfse_envio import CancelarNfseEnvio
-from nfselib.iibrasil.servico_consultar_lote_rps_envio import ConsultarLoteRpsEnvio
-from nfselib.iibrasil.servico_consultar_nfse_envio import ConsultarNfseEnvio
-from nfselib.iibrasil.servico_consultar_nfse_rps_envio import ConsultarNfseRpsEnvio
-from nfselib.iibrasil.servico_consultar_situacao_lote_rps_envio import ConsultarSituacaoLoteRpsEnvio
-from nfselib.iibrasil.servico_enviar_lote_rps_envio import EnviarLoteRpsEnvio
-from nfselib.iibrasil.tipos_complexos import (
+from nfselib.bindings.iibrasil.servico_cancelar_nfse_envio import CancelarNfseEnvio
+from nfselib.bindings.iibrasil.servico_consultar_lote_rps_envio import ConsultarLoteRpsEnvio
+from nfselib.bindings.iibrasil.servico_consultar_nfse_envio import ConsultarNfseEnvio
+from nfselib.bindings.iibrasil.servico_consultar_nfse_rps_envio import ConsultarNfseRpsEnvio
+from nfselib.bindings.iibrasil.servico_consultar_situacao_lote_rps_envio import ConsultarSituacaoLoteRpsEnvio
+from nfselib.bindings.iibrasil.servico_enviar_lote_rps_envio import EnviarLoteRpsEnvio
+from nfselib.bindings.iibrasil.tipos_complexos import (
     CompNfse,
     ListaMensagemRetorno,
     TcCancelamentoNfse,
@@ -37,7 +37,7 @@ from nfselib.iibrasil.tipos_complexos import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.iibrasil.xmldsig_core_schema20020212 import (
+from nfselib.bindings.iibrasil.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

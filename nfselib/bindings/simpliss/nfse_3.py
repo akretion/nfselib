@@ -1807,24 +1807,27 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    Nfse: Optional[TcNfse] = field(
+    nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
             "required": True,
         }
     )
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }
     )
-    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
+    nfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseSubstituicao",
             "type": "Element",
             "namespace": "http://www.sistema.com.br/Nfse/arquivos/nfse_3.xsd",
         }

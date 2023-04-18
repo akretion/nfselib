@@ -3,7 +3,7 @@ from decimal import Decimal
 from enum import Enum
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from nfselib.propriojoinvillesc.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.propriojoinvillesc.xmldsig_core_schema20020212 import Signature
 
 
 @dataclass
@@ -2212,9 +2212,10 @@ class TcRetCancelamento:
     class Meta:
         name = "tcRetCancelamento"
 
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "required": True,
         }
@@ -2312,22 +2313,25 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    Nfse: Optional[TcNfse] = field(
+    nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "required": True,
         }
     )
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
         }
     )
-    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
+    nfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseSubstituicao",
             "type": "Element",
         }
     )

@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.ginfes_v03.tipos_v03 import (
+from nfselib.bindings.ginfes_v03.tipos_v03 import (
     TcIdentificacaoPrestador,
     TcIdentificacaoRps,
 )
-from nfselib.ginfes_v03.xmldsig_core_schema20020212_v03 import Signature
+from nfselib.bindings.ginfes_v03.xmldsig_core_schema20020212_v03 import Signature
 
 __NAMESPACE__ = "http://www.ginfes.com.br/servico_consultar_nfse_rps_envio_v03.xsd"
 

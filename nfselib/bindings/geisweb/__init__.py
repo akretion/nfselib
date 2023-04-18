@@ -1,9 +1,9 @@
-from nfselib.geisweb.cancela_nfse import CancelaNfse
-from nfselib.geisweb.consulta_lote_rps import ConsultaLoteRps
-from nfselib.geisweb.consulta_nfse import ConsultaNfse
-from nfselib.geisweb.consulta_rps import ConsultaRps
-from nfselib.geisweb.envio_lote_rps import EnviaLoteRps
-from nfselib.geisweb.xmldsig_core_schema import (
+from nfselib.bindings.geisweb.cancela_nfse import CancelaNfse
+from nfselib.bindings.geisweb.consulta_lote_rps import ConsultaLoteRps
+from nfselib.bindings.geisweb.consulta_nfse import ConsultaNfse
+from nfselib.bindings.geisweb.consulta_rps import ConsultaRps
+from nfselib.bindings.geisweb.envio_lote_rps import EnviaLoteRps
+from nfselib.bindings.geisweb.xmldsig_core_schema import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

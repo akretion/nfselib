@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.webiss.tipos_complexos import TcLoteRps3
-from nfselib.webiss.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.webiss.tipos_complexos import TcLoteRps3
+from nfselib.bindings.webiss.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://www.abrasf.org.br/nfse"
 

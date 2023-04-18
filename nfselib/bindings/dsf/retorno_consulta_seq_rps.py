@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.dsf.tipos import (
+from nfselib.bindings.dsf.tipos import (
     TpListaAlertas,
     TpListaErros,
 )

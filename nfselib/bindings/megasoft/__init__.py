@@ -1,4 +1,4 @@
-from nfselib.megasoft.nfse_v01 import (
+from nfselib.bindings.megasoft.nfse_v01 import (
     CompNfse,
     ConsultarNfseRpsEnvio,
     ConsultarNfseRpsResposta,
@@ -46,7 +46,7 @@ from nfselib.megasoft.nfse_v01 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.megasoft.xmldsig_core_schema20020212 import (
+from nfselib.bindings.megasoft.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

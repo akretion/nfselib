@@ -3,7 +3,7 @@ from decimal import Decimal
 from enum import Enum
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from nfselib.actcon.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.actcon.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "https://nfeipatinga.portalfacil.com.br/webservices/2.04/nfse_v204.xsd"
 
@@ -2392,9 +2392,10 @@ class TcRetCancelamento:
     class Meta:
         name = "tcRetCancelamento"
 
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "https://nfeipatinga.portalfacil.com.br/webservices/2.04/nfse_v204.xsd",
             "required": True,
@@ -2503,24 +2504,27 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    Nfse: Optional[TcNfse] = field(
+    nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "namespace": "https://nfeipatinga.portalfacil.com.br/webservices/2.04/nfse_v204.xsd",
             "required": True,
         }
     )
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "https://nfeipatinga.portalfacil.com.br/webservices/2.04/nfse_v204.xsd",
         }
     )
-    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
+    nfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseSubstituicao",
             "type": "Element",
             "namespace": "https://nfeipatinga.portalfacil.com.br/webservices/2.04/nfse_v204.xsd",
         }

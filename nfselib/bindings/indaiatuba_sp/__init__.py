@@ -1,4 +1,4 @@
-from nfselib.indaiatuba_sp.nfse_v2_03_202016 import (
+from nfselib.bindings.indaiatuba_sp.nfse_v2_03_202016 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -60,7 +60,7 @@ from nfselib.indaiatuba_sp.nfse_v2_03_202016 import (
     TsItemListaServico,
     TsUf,
 )
-from nfselib.indaiatuba_sp.xmldsig_core_schema20020212 import (
+from nfselib.bindings.indaiatuba_sp.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

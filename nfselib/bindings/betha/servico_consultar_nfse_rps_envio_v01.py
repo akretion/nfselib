@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.betha.tipos_nfe_v01 import (
+from nfselib.bindings.betha.tipos_nfe_v01 import (
     TcIdentificacaoPrestador,
     TcIdentificacaoRps,
 )

@@ -1,4 +1,4 @@
-from nfselib.tinus.nfsetempuri import (
+from nfselib.bindings.tinus.nfsetempuri import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -42,7 +42,7 @@ from nfselib.tinus.nfsetempuri import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.tinus.xmldsig_core_schema20020212 import (
+from nfselib.bindings.tinus.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

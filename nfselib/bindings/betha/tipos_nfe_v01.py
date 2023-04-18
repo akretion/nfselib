@@ -3,7 +3,7 @@ from decimal import Decimal
 from enum import Enum
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from nfselib.betha.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.betha.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://www.betha.com.br/e-nota-contribuinte-ws/tipos"
 

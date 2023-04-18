@@ -1,4 +1,4 @@
-from nfselib.fintel.cfse import (
+from nfselib.bindings.fintel.cfse import (
     CancelarCupomEnvio,
     CancelarCupomResposta,
     CompCfse,
@@ -54,7 +54,7 @@ from nfselib.fintel.cfse import (
     TccfPedidoManutencao,
     TccfValoresDeclaracaoServico,
 )
-from nfselib.fintel.nfse import (
+from nfselib.bindings.fintel.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -114,7 +114,7 @@ from nfselib.fintel.nfse import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.fintel.xmldsig_core_schema20020212 import (
+from nfselib.bindings.fintel.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

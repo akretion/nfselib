@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.equiplano.tipos_esnfs_v01 import (
+from nfselib.bindings.equiplano.tipos_esnfs_v01 import (
     TcPrestador,
     TcRps,
 )
-from nfselib.equiplano.xmldsig_core_schema_v01 import Signature
+from nfselib.bindings.equiplano.xmldsig_core_schema_v01 import Signature
 
 __NAMESPACE__ = "http://www.equiplano.com.br/esnfs"
 

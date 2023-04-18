@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.issnet.tipos_complexos import TcMensagemRetorno
+from nfselib.bindings.issnet.tipos_complexos import TcMensagemRetorno
 
 __NAMESPACE__ = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_consultar_situacao_lote_rps_resposta.xsd"
 

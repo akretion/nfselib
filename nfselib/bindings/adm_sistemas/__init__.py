@@ -1,4 +1,4 @@
-from nfselib.adm_sistemas.nfse_20v2_2001 import (
+from nfselib.bindings.adm_sistemas.nfse_20v2_2001 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.adm_sistemas.nfse_20v2_2001 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.adm_sistemas.xmldsig_core_schema20020212 import (
+from nfselib.bindings.adm_sistemas.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

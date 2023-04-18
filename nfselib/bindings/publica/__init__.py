@@ -1,4 +1,4 @@
-from nfselib.publica.schema_nfse_v03 import (
+from nfselib.bindings.publica.schema_nfse_v03 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CartaCorrecaoNfseEnvio,

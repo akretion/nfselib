@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from nfselib.webiss.tipos_complexos import ListaMensagemRetorno
+from nfselib.bindings.webiss.tipos_complexos import ListaMensagemRetorno
 
 __NAMESPACE__ = "http://www.abrasf.org.br/nfse"
 

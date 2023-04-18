@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.carioca.tipos_nfse_v01 import (
+from nfselib.bindings.carioca.tipos_nfse_v01 import (
     CompNfse,
     ListaMensagemRetorno,
     TcRps,

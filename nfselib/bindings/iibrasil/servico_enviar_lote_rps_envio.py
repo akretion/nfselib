@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.iibrasil.tipos_complexos import TcLoteRps
-from nfselib.iibrasil.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.iibrasil.tipos_complexos import TcLoteRps
+from nfselib.bindings.iibrasil.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://tempuri.org/servico_enviar_lote_rps_envio.xsd"
 

@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from nfselib.fintel.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.fintel.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://iss.irati.pr.gov.br/Arquivos/cfse.xsd"
 

@@ -1,19 +1,19 @@
-from nfselib.paulistana.pedido_cancelamento_lote_v01 import PedidoCancelamentoLote
-from nfselib.paulistana.pedido_cancelamento_nfe_v01 import PedidoCancelamentoNfe
-from nfselib.paulistana.pedido_consulta_cnpj_v01 import PedidoConsultaCnpj
-from nfselib.paulistana.pedido_consulta_lote_v01 import PedidoConsultaLote
-from nfselib.paulistana.pedido_consulta_nfe_periodo_v01 import PedidoConsultaNfePeriodo
-from nfselib.paulistana.pedido_consulta_nfe_v01 import PedidoConsultaNfe
-from nfselib.paulistana.pedido_envio_lote_rps_v01 import PedidoEnvioLoteRps
-from nfselib.paulistana.pedido_envio_rps_v01 import PedidoEnvioRps
-from nfselib.paulistana.pedido_informacoes_lote_v01 import PedidoInformacoesLote
-from nfselib.paulistana.retorno_cancelamento_nfe_v01 import RetornoCancelamentoNfe
-from nfselib.paulistana.retorno_consulta_cnpj_v01 import RetornoConsultaCnpj
-from nfselib.paulistana.retorno_consulta_v01 import RetornoConsulta
-from nfselib.paulistana.retorno_envio_lote_rps_v01 import RetornoEnvioLoteRps
-from nfselib.paulistana.retorno_envio_rps_v01 import RetornoEnvioRps
-from nfselib.paulistana.retorno_informacoes_lote_v01 import RetornoInformacoesLote
-from nfselib.paulistana.tipos_nfe_v01 import (
+from nfselib.bindings.paulistana.pedido_cancelamento_lote_v01 import PedidoCancelamentoLote
+from nfselib.bindings.paulistana.pedido_cancelamento_nfe_v01 import PedidoCancelamentoNfe
+from nfselib.bindings.paulistana.pedido_consulta_cnpj_v01 import PedidoConsultaCnpj
+from nfselib.bindings.paulistana.pedido_consulta_lote_v01 import PedidoConsultaLote
+from nfselib.bindings.paulistana.pedido_consulta_nfe_periodo_v01 import PedidoConsultaNfePeriodo
+from nfselib.bindings.paulistana.pedido_consulta_nfe_v01 import PedidoConsultaNfe
+from nfselib.bindings.paulistana.pedido_envio_lote_rps_v01 import PedidoEnvioLoteRps
+from nfselib.bindings.paulistana.pedido_envio_rps_v01 import PedidoEnvioRps
+from nfselib.bindings.paulistana.pedido_informacoes_lote_v01 import PedidoInformacoesLote
+from nfselib.bindings.paulistana.retorno_cancelamento_nfe_v01 import RetornoCancelamentoNfe
+from nfselib.bindings.paulistana.retorno_consulta_cnpj_v01 import RetornoConsultaCnpj
+from nfselib.bindings.paulistana.retorno_consulta_v01 import RetornoConsulta
+from nfselib.bindings.paulistana.retorno_envio_lote_rps_v01 import RetornoEnvioLoteRps
+from nfselib.bindings.paulistana.retorno_envio_rps_v01 import RetornoEnvioRps
+from nfselib.bindings.paulistana.retorno_informacoes_lote_v01 import RetornoInformacoesLote
+from nfselib.bindings.paulistana.tipos_nfe_v01 import (
     TpCpfcnpj,
     TpChaveNfe,
     TpChaveNfeRps,
@@ -27,7 +27,7 @@ from nfselib.paulistana.tipos_nfe_v01 import (
     TpStatusNfe,
     TpTipoRps,
 )
-from nfselib.paulistana.xmldsig_core_schema_v01 import (
+from nfselib.bindings.paulistana.xmldsig_core_schema_v01 import (
     KeyInfoType,
     KeyValueType,
     ReferenceType,

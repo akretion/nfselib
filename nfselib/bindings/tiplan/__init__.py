@@ -1,8 +1,8 @@
-from nfselib.tiplan.nfse_municipal_v01 import (
+from nfselib.bindings.tiplan.nfse_municipal_v01 import (
     GerarNfseEnvio as MunicipalV01GerarNfseEnvio,
     GerarNfseResposta as MunicipalV01GerarNfseResposta,
 )
-from nfselib.tiplan.nfse_v2_03 import (
+from nfselib.bindings.tiplan.nfse_v2_03 import (
     CancelarNfseEnvio as V203CancelarNfseEnvio,
     CancelarNfseResposta as V203CancelarNfseResposta,
     CompNfse as V203CompNfse,
@@ -64,7 +64,7 @@ from nfselib.tiplan.nfse_v2_03 import (
     TsItemListaServico,
     TsUf,
 )
-from nfselib.tiplan.tipos_nfse_v01 import (
+from nfselib.bindings.tiplan.tipos_nfse_v01 import (
     CancelarNfseEnvio as TiposV01CancelarNfseEnvio,
     CancelarNfseResposta as TiposV01CancelarNfseResposta,
     CompNfse as TiposV01CompNfse,
@@ -108,7 +108,7 @@ from nfselib.tiplan.tipos_nfse_v01 import (
     TcSubstituicaoNfse as TiposV01TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.tiplan.xmldsig_core_schema20020212 import (
+from nfselib.bindings.tiplan.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

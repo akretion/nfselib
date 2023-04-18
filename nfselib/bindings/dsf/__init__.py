@@ -1,16 +1,16 @@
-from nfselib.dsf.consulta_seq_rps import ConsultaSeqRps
-from nfselib.dsf.req_cancelamento_nfse import ReqCancelamentoNfse
-from nfselib.dsf.req_consulta_lote import ReqConsultaLote
-from nfselib.dsf.req_consulta_nfse_rps import ReqConsultaNfseRps
-from nfselib.dsf.req_consulta_notas import ReqConsultaNotas
-from nfselib.dsf.req_envio_lote_rps import ReqEnvioLoteRps
-from nfselib.dsf.retorno_cancelamento_nfse import RetornoCancelamentoNfse
-from nfselib.dsf.retorno_consulta_lote import RetornoConsultaLote
-from nfselib.dsf.retorno_consulta_nfse_rps import RetornoConsultaNfseRps
-from nfselib.dsf.retorno_consulta_notas import RetornoConsultaNotas
-from nfselib.dsf.retorno_consulta_seq_rps import RetornoConsultaSeqRps
-from nfselib.dsf.retorno_envio_lote_rps import RetornoEnvioLoteRps
-from nfselib.dsf.tipos import (
+from nfselib.bindings.dsf.consulta_seq_rps import ConsultaSeqRps
+from nfselib.bindings.dsf.req_cancelamento_nfse import ReqCancelamentoNfse
+from nfselib.bindings.dsf.req_consulta_lote import ReqConsultaLote
+from nfselib.bindings.dsf.req_consulta_nfse_rps import ReqConsultaNfseRps
+from nfselib.bindings.dsf.req_consulta_notas import ReqConsultaNotas
+from nfselib.bindings.dsf.req_envio_lote_rps import ReqEnvioLoteRps
+from nfselib.bindings.dsf.retorno_cancelamento_nfse import RetornoCancelamentoNfse
+from nfselib.bindings.dsf.retorno_consulta_lote import RetornoConsultaLote
+from nfselib.bindings.dsf.retorno_consulta_nfse_rps import RetornoConsultaNfseRps
+from nfselib.bindings.dsf.retorno_consulta_notas import RetornoConsultaNotas
+from nfselib.bindings.dsf.retorno_consulta_seq_rps import RetornoConsultaSeqRps
+from nfselib.bindings.dsf.retorno_envio_lote_rps import RetornoEnvioLoteRps
+from nfselib.bindings.dsf.tipos import (
     Nulo,
     TpAssincrono,
     TpBairroCompleto,
@@ -59,7 +59,7 @@ from nfselib.dsf.tipos import (
     TpTipoRecolhimento,
     TpTributacao,
 )
-from nfselib.dsf.xmldsig_core_schema_v1_01 import (
+from nfselib.bindings.dsf.xmldsig_core_schema_v1_01 import (
     KeyInfoType,
     ReferenceType,
     Signature,

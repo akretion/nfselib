@@ -1,4 +1,4 @@
-from nfselib.el.el_nfse import (
+from nfselib.bindings.el.el_nfse import (
     LoteRps,
     TcContato,
     TcDadosPrestador,

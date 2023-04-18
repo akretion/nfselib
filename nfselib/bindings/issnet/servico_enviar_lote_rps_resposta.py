@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from nfselib.issnet.tipos_complexos import TcMensagemRetorno
+from nfselib.bindings.issnet.tipos_complexos import TcMensagemRetorno
 
 __NAMESPACE__ = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_enviar_lote_rps_resposta.xsd"
 

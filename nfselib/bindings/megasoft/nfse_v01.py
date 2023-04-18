@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from nfselib.megasoft.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.megasoft.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://megasoftarrecadanet.com.br/xsd/nfse_v01.xsd"
 
@@ -1127,9 +1127,10 @@ class TcListaNfseMega:
     class Meta:
         name = "tcListaNfseMega"
 
-    Nfse: List[TcNfseMega] = field(
+    nfse: List[TcNfseMega] = field(
         default_factory=list,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "namespace": "http://megasoftarrecadanet.com.br/xsd/nfse_v01.xsd",
             "min_occurs": 1,
@@ -1399,9 +1400,10 @@ class TcRetCancelamento:
     class Meta:
         name = "tcRetCancelamento"
 
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "http://megasoftarrecadanet.com.br/xsd/nfse_v01.xsd",
             "required": True,
@@ -1414,9 +1416,10 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    Nfse: Optional[TcNfse] = field(
+    nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "namespace": "http://megasoftarrecadanet.com.br/xsd/nfse_v01.xsd",
             "required": True,

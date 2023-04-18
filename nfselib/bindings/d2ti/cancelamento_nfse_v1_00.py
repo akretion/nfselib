@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.d2ti.retorno_recepcao_nfse_v1_00 import (
+from nfselib.bindings.d2ti.retorno_recepcao_nfse_v1_00 import (
     Autenticacao,
     ChaveSeguranca,
     NumeroNota,

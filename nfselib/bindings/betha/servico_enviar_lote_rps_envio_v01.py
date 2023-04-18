@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.betha.tipos_nfe_v01 import TcLoteRps
-from nfselib.betha.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.betha.tipos_nfe_v01 import TcLoteRps
+from nfselib.bindings.betha.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://www.betha.com.br/e-nota-contribuinte-ws"
 

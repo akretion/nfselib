@@ -1,4 +1,4 @@
-from nfselib.govdigital.nfse import (
+from nfselib.bindings.govdigital.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.govdigital.nfse import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.govdigital.xmldsig_core_schema20020212 import (
+from nfselib.bindings.govdigital.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

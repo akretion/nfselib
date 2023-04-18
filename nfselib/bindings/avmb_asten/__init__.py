@@ -1,4 +1,4 @@
-from nfselib.avmb_asten.nfse import (
+from nfselib.bindings.avmb_asten.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.avmb_asten.nfse import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.avmb_asten.xmldsig_core_schema20020212 import (
+from nfselib.bindings.avmb_asten.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

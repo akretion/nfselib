@@ -1,8 +1,8 @@
-from nfselib.carioca.nfse_pcrj_v01 import (
+from nfselib.bindings.carioca.nfse_pcrj_v01 import (
     GerarNfseEnvio,
     GerarNfseResposta,
 )
-from nfselib.carioca.tipos_nfse_v01 import (
+from nfselib.bindings.carioca.tipos_nfse_v01 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -46,7 +46,7 @@ from nfselib.carioca.tipos_nfse_v01 import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.carioca.xmldsig_core_schema_v01 import (
+from nfselib.bindings.carioca.xmldsig_core_schema_v01 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

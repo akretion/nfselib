@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.ginfes.tipos_v03 import ListaMensagemRetorno
+from nfselib.bindings.ginfes.tipos_v03 import ListaMensagemRetorno
 
 __NAMESPACE__ = "http://www.ginfes.com.br/servico_consultar_situacao_lote_rps_resposta_v03.xsd"
 

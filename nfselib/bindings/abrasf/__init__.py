@@ -1,4 +1,4 @@
-from nfselib.abrasf.nfse import (
+from nfselib.bindings.abrasf.nfse import (
     CancelarNfseEnvio as CancelarNfseEnvio,
     CancelarNfseResposta as CancelarNfseResposta,
     CompNfse as CompNfse,
@@ -42,7 +42,7 @@ from nfselib.abrasf.nfse import (
     TcSubstituicaoNfse as TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.abrasf.nfse_v2_02 import (
+from nfselib.bindings.abrasf.nfse_v2_02 import (
     CancelarNfseEnvio as V202CancelarNfseEnvio,
     CancelarNfseResposta as V202CancelarNfseResposta,
     CompNfse as V202CompNfse,
@@ -102,7 +102,7 @@ from nfselib.abrasf.nfse_v2_02 import (
     TcValoresDeclaracaoServico as Type02TcValoresDeclaracaoServico,
     TcValoresNfse as Type02TcValoresNfse,
 )
-from nfselib.abrasf.nfse_v2_04 import (
+from nfselib.bindings.abrasf.nfse_v2_04 import (
     CancelarNfseEnvio as Type04CancelarNfseEnvio,
     CancelarNfseResposta as Type04CancelarNfseResposta,
     CompNfse as Type04CompNfse,
@@ -171,7 +171,7 @@ from nfselib.abrasf.nfse_v2_04 import (
     TsItemListaServico,
     TsUf,
 )
-from nfselib.abrasf.xmldsig_core_schema20020212 import (
+from nfselib.bindings.abrasf.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

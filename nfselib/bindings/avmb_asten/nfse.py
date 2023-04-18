@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from nfselib.avmb_asten.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.avmb_asten.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://www.abrasf.org.br/nfse.xsd"
 
@@ -1896,9 +1896,10 @@ class TcRetCancelamento:
     class Meta:
         name = "tcRetCancelamento"
 
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
@@ -1932,24 +1933,27 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    Nfse: Optional[TcNfse] = field(
+    nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
             "required": True,
         }
     )
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }
     )
-    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
+    nfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseSubstituicao",
             "type": "Element",
             "namespace": "http://www.abrasf.org.br/nfse.xsd",
         }

@@ -1,4 +1,4 @@
-from nfselib.bsitbr.nfse_v2 import (
+from nfselib.bindings.bsitbr.nfse_v2 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CancelarRpsEnvio,
@@ -62,7 +62,7 @@ from nfselib.bsitbr.nfse_v2 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.bsitbr.xmldsig_core_schema20020212 import (
+from nfselib.bindings.bsitbr.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

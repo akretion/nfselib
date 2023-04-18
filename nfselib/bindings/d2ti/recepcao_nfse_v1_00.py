@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.d2ti.retorno_recepcao_nfse_v1_00 import (
+from nfselib.bindings.d2ti.retorno_recepcao_nfse_v1_00 import (
     Autenticacao,
     NumeroNota,
 )
-from nfselib.d2ti.tipos_basicos_cta_v1_00 import (
+from nfselib.bindings.d2ti.tipos_basicos_cta_v1_00 import (
     Tboolean,
     TtipoDeducao,
     TtipoItemDeducao,

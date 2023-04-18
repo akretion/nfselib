@@ -1,4 +1,4 @@
-from nfselib.modernizacao_publica.nfse_20v2_2002 import (
+from nfselib.bindings.modernizacao_publica.nfse_20v2_2002 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.modernizacao_publica.nfse_20v2_2002 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.modernizacao_publica.xmldsig_core_schema20020212 import (
+from nfselib.bindings.modernizacao_publica.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

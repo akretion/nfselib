@@ -1,4 +1,4 @@
-from nfselib.maringa_pr.nfse_v2_01 import (
+from nfselib.bindings.maringa_pr.nfse_v2_01 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.maringa_pr.nfse_v2_01 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.maringa_pr.xmldsig_core_schema20020212 import (
+from nfselib.bindings.maringa_pr.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

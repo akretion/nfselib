@@ -1,4 +1,4 @@
-from nfselib.sh3.nfse_v202 import (
+from nfselib.bindings.sh3.nfse_v202 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,

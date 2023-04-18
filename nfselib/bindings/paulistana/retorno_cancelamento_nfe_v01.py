@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.paulistana.tipos_nfe_v01 import TpEvento
+from nfselib.bindings.paulistana.tipos_nfe_v01 import TpEvento
 
 __NAMESPACE__ = "http://www.prefeitura.sp.gov.br/nfe"
 

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDate
-from nfselib.dueto.tipos_complexos import (
+from nfselib.bindings.dueto.tipos_complexos import (
     TcIdentificacaoIntermediarioServico,
     TcIdentificacaoPrestador,
     TcIdentificacaoTomador,

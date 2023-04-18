@@ -1,4 +1,4 @@
-from nfselib.e_receita.nfse_20v2_2002 import (
+from nfselib.bindings.e_receita.nfse_20v2_2002 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.e_receita.nfse_20v2_2002 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.e_receita.xmldsig_core_schema20020212 import (
+from nfselib.bindings.e_receita.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

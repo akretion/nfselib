@@ -1,4 +1,4 @@
-from nfselib.metropolis.nfse import (
+from nfselib.bindings.metropolis.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -42,7 +42,7 @@ from nfselib.metropolis.nfse import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.metropolis.xmldsig_core_schema20020212 import (
+from nfselib.bindings.metropolis.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

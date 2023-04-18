@@ -1,13 +1,13 @@
-from nfselib.cecam.xsdcadastro_contas_contabeis import CadastroContasContabeis
-from nfselib.cecam.xsdconsulta_contas_pendentes_retorno import ConsultaContasPendentes
-from nfselib.cecam.xsdconsulta_itens_atividade import ConsultaItensAtividade
-from nfselib.cecam.xsdinstituicao_financeira_consulta_retorno import ConsultaLancamentoInstituicaoFinanceira
-from nfselib.cecam.xsdinstituicao_financeira_lancamento_retorno import LancamentosInstituicaoFinanceira
-from nfselib.cecam.xsdissecancela_nfe import IssecancelaNfe
-from nfselib.cecam.xsdissecancela_nfe_retorno import IssecancelaNfeRetorno
-from nfselib.cecam.xsdisseconsulta_nota import IsseconsultaNota
-from nfselib.cecam.xsdisseconsulta_nota_retorno import IsseconsultaNotaRetorno
-from nfselib.cecam.xsdisseletronico_arquivo import (
+from nfselib.bindings.cecam.xsdcadastro_contas_contabeis import CadastroContasContabeis
+from nfselib.bindings.cecam.xsdconsulta_contas_pendentes_retorno import ConsultaContasPendentes
+from nfselib.bindings.cecam.xsdconsulta_itens_atividade import ConsultaItensAtividade
+from nfselib.bindings.cecam.xsdinstituicao_financeira_consulta_retorno import ConsultaLancamentoInstituicaoFinanceira
+from nfselib.bindings.cecam.xsdinstituicao_financeira_lancamento_retorno import LancamentosInstituicaoFinanceira
+from nfselib.bindings.cecam.xsdissecancela_nfe import IssecancelaNfe
+from nfselib.bindings.cecam.xsdissecancela_nfe_retorno import IssecancelaNfeRetorno
+from nfselib.bindings.cecam.xsdisseconsulta_nota import IsseconsultaNota
+from nfselib.bindings.cecam.xsdisseconsulta_nota_retorno import IsseconsultaNotaRetorno
+from nfselib.bindings.cecam.xsdisseletronico_arquivo import (
     DadosItensNotaFiscalRetido,
     DadosNotaFiscalLocalPrestacao,
     DadosNotaFiscalSituacaoNf,
@@ -16,15 +16,15 @@ from nfselib.cecam.xsdisseletronico_arquivo import (
     DadosNotaFiscalUftomador,
     Isseletronico,
 )
-from nfselib.cecam.xsdnfeletronica_arquivo import (
+from nfselib.bindings.cecam.xsdnfeletronica_arquivo import (
     DadosNotaFiscalValorAliquotaSimplesNacional,
     Nfeeletronica,
 )
-from nfselib.cecam.xsdnota_tomador import (
+from nfselib.bindings.cecam.xsdnota_tomador import (
     DadosNotaFiscalUfprestador,
     NotaTomador,
 )
-from nfselib.cecam.xsdretorno import Retorno
+from nfselib.bindings.cecam.xsdretorno import Retorno
 
 __all__ = [
     "CadastroContasContabeis",

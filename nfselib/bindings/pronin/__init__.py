@@ -1,4 +1,4 @@
-from nfselib.pronin.nfse import (
+from nfselib.bindings.pronin.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -42,7 +42,7 @@ from nfselib.pronin.nfse import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.pronin.xmldsig_core_schema20020212 import (
+from nfselib.bindings.pronin.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

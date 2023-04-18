@@ -2,13 +2,13 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from nfselib.salvador_ba.nfse_salvador import (
+from nfselib.bindings.salvador_ba.nfse_salvador import (
     ListaMensagemRetorno,
     TcIdentificacaoNfse,
     TcIdentificacaoPrestador,
     TcIdentificacaoTomador,
 )
-from nfselib.salvador_ba.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.salvador_ba.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "https://nfse.sefaz.salvador.ba.gov.br/OnLine/XSD/ServicosComplementares.xsd"
 

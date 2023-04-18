@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.gif.xmldsig_core_schema_v1_01 import Signature
+from nfselib.bindings.gif.xmldsig_core_schema_v1_01 import Signature
 
 
 @dataclass

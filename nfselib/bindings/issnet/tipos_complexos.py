@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from nfselib.issnet.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.issnet.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd"
 
@@ -1299,24 +1299,27 @@ class TcCompNfse:
     class Meta:
         name = "tcCompNfse"
 
-    Nfse: Optional[TcNfse] = field(
+    nfse: Optional[TcNfse] = field(
         default=None,
         metadata={
+            "name": "Nfse",
             "type": "Element",
             "namespace": "http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd",
             "required": True,
         }
     )
-    NfseCancelamento: Optional[TcCancelamentoNfse] = field(
+    nfseCancelamento: Optional[TcCancelamentoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseCancelamento",
             "type": "Element",
             "namespace": "http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd",
         }
     )
-    NfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
+    nfseSubstituicao: Optional[TcSubstituicaoNfse] = field(
         default=None,
         metadata={
+            "name": "NfseSubstituicao",
             "type": "Element",
             "namespace": "http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd",
         }

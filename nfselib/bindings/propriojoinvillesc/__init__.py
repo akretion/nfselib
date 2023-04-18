@@ -1,4 +1,4 @@
-from nfselib.propriojoinvillesc.nfse_v2_04 import (
+from nfselib.bindings.propriojoinvillesc.nfse_v2_04 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -67,7 +67,7 @@ from nfselib.propriojoinvillesc.nfse_v2_04 import (
     TsItemListaServico,
     TsUf,
 )
-from nfselib.propriojoinvillesc.xmldsig_core_schema20020212 import (
+from nfselib.bindings.propriojoinvillesc.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

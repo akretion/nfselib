@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDate
-from nfselib.dsf.tipos import (
+from nfselib.bindings.dsf.tipos import (
     TpLote,
     TpMetodoEnvio,
 )
-from nfselib.dsf.xmldsig_core_schema_v1_01 import Signature
+from nfselib.bindings.dsf.xmldsig_core_schema_v1_01 import Signature
 
 __NAMESPACE__ = "http://localhost:8080/WsNFe2/lote"
 

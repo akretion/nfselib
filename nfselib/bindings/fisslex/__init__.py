@@ -1,4 +1,4 @@
-from nfselib.fisslex.nfse import (
+from nfselib.bindings.fisslex.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -42,7 +42,7 @@ from nfselib.fisslex.nfse import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.fisslex.xmldsig_core_schema20020212 import (
+from nfselib.bindings.fisslex.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from nfselib.intersol.tipos_v1 import ListaMensagemRetorno
+from nfselib.bindings.intersol.tipos_v1 import ListaMensagemRetorno
 
 __NAMESPACE__ = "http://ws.speedgov.com.br/enviar_lote_rps_resposta_v1.xsd"
 

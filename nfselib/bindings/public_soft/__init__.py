@@ -1,4 +1,4 @@
-from nfselib.public_soft.nfse import (
+from nfselib.bindings.public_soft.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.public_soft.nfse import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.public_soft.xmldsig_core_schema20020212 import (
+from nfselib.bindings.public_soft.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

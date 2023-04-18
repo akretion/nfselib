@@ -1,18 +1,18 @@
-from nfselib.ginfes.cabecalho_v03 import Cabecalho
-from nfselib.ginfes.servico_cancelar_nfse_envio_v02 import CancelarNfseEnvio as V02CancelarNfseEnvio
-from nfselib.ginfes.servico_cancelar_nfse_envio_v03 import CancelarNfseEnvio as V03CancelarNfseEnvio
-from nfselib.ginfes.servico_cancelar_nfse_resposta_v03 import CancelarNfseResposta
-from nfselib.ginfes.servico_consultar_lote_rps_envio_v03 import ConsultarLoteRpsEnvio
-from nfselib.ginfes.servico_consultar_lote_rps_resposta_v03 import ConsultarLoteRpsResposta
-from nfselib.ginfes.servico_consultar_nfse_envio_v03 import ConsultarNfseEnvio
-from nfselib.ginfes.servico_consultar_nfse_resposta_v03 import ConsultarNfseResposta
-from nfselib.ginfes.servico_consultar_nfse_rps_envio_v03 import ConsultarNfseRpsEnvio
-from nfselib.ginfes.servico_consultar_nfse_rps_resposta_v03 import ConsultarNfseRpsResposta
-from nfselib.ginfes.servico_consultar_situacao_lote_rps_envio_v03 import ConsultarSituacaoLoteRpsEnvio
-from nfselib.ginfes.servico_consultar_situacao_lote_rps_resposta_v03 import ConsultarSituacaoLoteRpsResposta
-from nfselib.ginfes.servico_enviar_lote_rps_envio_v03 import EnviarLoteRpsEnvio
-from nfselib.ginfes.servico_enviar_lote_rps_resposta_v03 import EnviarLoteRpsResposta
-from nfselib.ginfes.tipos_v02 import (
+from nfselib.bindings.ginfes.cabecalho_v03 import Cabecalho
+from nfselib.bindings.ginfes.servico_cancelar_nfse_envio_v02 import CancelarNfseEnvio as V02CancelarNfseEnvio
+from nfselib.bindings.ginfes.servico_cancelar_nfse_envio_v03 import CancelarNfseEnvio as V03CancelarNfseEnvio
+from nfselib.bindings.ginfes.servico_cancelar_nfse_resposta_v03 import CancelarNfseResposta
+from nfselib.bindings.ginfes.servico_consultar_lote_rps_envio_v03 import ConsultarLoteRpsEnvio
+from nfselib.bindings.ginfes.servico_consultar_lote_rps_resposta_v03 import ConsultarLoteRpsResposta
+from nfselib.bindings.ginfes.servico_consultar_nfse_envio_v03 import ConsultarNfseEnvio
+from nfselib.bindings.ginfes.servico_consultar_nfse_resposta_v03 import ConsultarNfseResposta
+from nfselib.bindings.ginfes.servico_consultar_nfse_rps_envio_v03 import ConsultarNfseRpsEnvio
+from nfselib.bindings.ginfes.servico_consultar_nfse_rps_resposta_v03 import ConsultarNfseRpsResposta
+from nfselib.bindings.ginfes.servico_consultar_situacao_lote_rps_envio_v03 import ConsultarSituacaoLoteRpsEnvio
+from nfselib.bindings.ginfes.servico_consultar_situacao_lote_rps_resposta_v03 import ConsultarSituacaoLoteRpsResposta
+from nfselib.bindings.ginfes.servico_enviar_lote_rps_envio_v03 import EnviarLoteRpsEnvio
+from nfselib.bindings.ginfes.servico_enviar_lote_rps_resposta_v03 import EnviarLoteRpsResposta
+from nfselib.bindings.ginfes.tipos_v02 import (
     TcCancelamentoNfse as V02TcCancelamentoNfse,
     TcContato as V02TcContato,
     TcCpfCnpj as V02TcCpfCnpj,
@@ -34,7 +34,7 @@ from nfselib.ginfes.tipos_v02 import (
     TcMensagemRetorno as V02TcMensagemRetorno,
     TcMensagemRetornoLote as V02TcMensagemRetornoLote,
 )
-from nfselib.ginfes.tipos_v03 import (
+from nfselib.bindings.ginfes.tipos_v03 import (
     ListaMensagemRetorno,
     TcCancelamentoNfse as V03TcCancelamentoNfse,
     TcCompNfse,
@@ -66,7 +66,7 @@ from nfselib.ginfes.tipos_v03 import (
     TcSubstituicaoNfse,
     TcValores as V03TcValores,
 )
-from nfselib.ginfes.xmldsig_core_schema_v02 import (
+from nfselib.bindings.ginfes.xmldsig_core_schema_v02 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

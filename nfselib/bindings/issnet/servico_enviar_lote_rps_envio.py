@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.issnet.tipos_complexos import TcLoteRps
-from nfselib.issnet.xmldsig_core_schema20020212 import Signature
+from nfselib.bindings.issnet.tipos_complexos import TcLoteRps
+from nfselib.bindings.issnet.xmldsig_core_schema20020212 import Signature
 
 __NAMESPACE__ = "http://www.issnetonline.com.br/webserviceabrasf/vsd/servico_enviar_lote_rps_envio.xsd"
 

@@ -1,4 +1,4 @@
-from nfselib.rlz_informatica_02.xmldsig_core_schema20020212 import (
+from nfselib.bindings.rlz_informatica_02.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,
@@ -46,7 +46,7 @@ from nfselib.rlz_informatica_02.xmldsig_core_schema20020212 import (
     X509DataType,
     X509IssuerSerialType,
 )
-from nfselib.rlz_informatica_02.xsdrlz_informatica_02 import (
+from nfselib.bindings.rlz_informatica_02.xsdrlz_informatica_02 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,

@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.geisweb.xmldsig_core_schema import Signature
+from nfselib.bindings.geisweb.xmldsig_core_schema import Signature
 
 __NAMESPACE__ = "http://www.geisweb.com.br/xsd/envio_lote_rps.xsd"
 

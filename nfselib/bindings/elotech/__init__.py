@@ -1,4 +1,4 @@
-from nfselib.elotech.nfse_v2_03 import (
+from nfselib.bindings.elotech.nfse_v2_03 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,

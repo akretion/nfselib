@@ -1,4 +1,4 @@
-from nfselib.simpliss.nfse_3 import (
+from nfselib.bindings.simpliss.nfse_3 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,

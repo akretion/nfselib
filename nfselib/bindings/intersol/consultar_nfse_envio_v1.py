@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDate
-from nfselib.intersol.tipos_v1 import (
+from nfselib.bindings.intersol.tipos_v1 import (
     TcIdentificacaoIntermediarioServico,
     TcIdentificacaoPrestador,
     TcIdentificacaoTomador,

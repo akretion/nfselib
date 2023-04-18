@@ -1,4 +1,4 @@
-from nfselib.fiorilli.nfse_v201 import (
+from nfselib.bindings.fiorilli.nfse_v201 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.fiorilli.nfse_v201 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.fiorilli.xmldsig_core_schema20020212 import (
+from nfselib.bindings.fiorilli.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

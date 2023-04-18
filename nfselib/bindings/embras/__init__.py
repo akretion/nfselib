@@ -1,4 +1,4 @@
-from nfselib.embras.nfsev202 import (
+from nfselib.bindings.embras.nfsev202 import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.embras.nfsev202 import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.embras.xmldsig_core_schema20020212 import (
+from nfselib.bindings.embras.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

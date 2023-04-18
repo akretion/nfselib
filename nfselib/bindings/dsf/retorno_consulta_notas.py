@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDate
-from nfselib.dsf.tipos import (
+from nfselib.bindings.dsf.tipos import (
     TpListaErros,
     TpListaNfseConsultaNota,
 )

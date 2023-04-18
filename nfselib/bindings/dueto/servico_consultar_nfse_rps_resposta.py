@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.dueto.tipos_complexos import (
+from nfselib.bindings.dueto.tipos_complexos import (
     ListaMensagemRetorno,
     TcCompNfse,
 )

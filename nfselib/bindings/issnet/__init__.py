@@ -1,19 +1,19 @@
-from nfselib.issnet.servico_cancelar_nfse_envio import CancelarNfseEnvio
-from nfselib.issnet.servico_cancelar_nfse_resposta import CancelarNfseResposta
-from nfselib.issnet.servico_consultar_lote_rps_envio import ConsultarLoteRpsEnvio
-from nfselib.issnet.servico_consultar_lote_rps_resposta import ConsultarLoteRpsResposta
-from nfselib.issnet.servico_consultar_nfse_envio import ConsultarNfseEnvio
-from nfselib.issnet.servico_consultar_nfse_resposta import ConsultarNfseResposta
-from nfselib.issnet.servico_consultar_nfse_rps_envio import ConsultarNfseRpsEnvio
-from nfselib.issnet.servico_consultar_nfse_rps_resposta import ConsultarNfseRpsResposta
-from nfselib.issnet.servico_consultar_situacao_lote_rps_envio import ConsultarSituacaoLoteRpsEnvio
-from nfselib.issnet.servico_consultar_situacao_lote_rps_resposta import ConsultarSituacaoLoteRpsResposta
-from nfselib.issnet.servico_consultar_url_visualizacao_nfse_envio import ConsultarUrlVisualizacaoNfseEnvio
-from nfselib.issnet.servico_consultar_url_visualizacao_nfse_resposta import ConsultarUrlVisualizacaoNfseResposta
-from nfselib.issnet.servico_consultar_url_visualizacao_nfse_serie_envio import ConsultarUrlVisualizacaoNfseSerieEnvio
-from nfselib.issnet.servico_enviar_lote_rps_envio import EnviarLoteRpsEnvio
-from nfselib.issnet.servico_enviar_lote_rps_resposta import EnviarLoteRpsResposta
-from nfselib.issnet.tipos_complexos import (
+from nfselib.bindings.issnet.servico_cancelar_nfse_envio import CancelarNfseEnvio
+from nfselib.bindings.issnet.servico_cancelar_nfse_resposta import CancelarNfseResposta
+from nfselib.bindings.issnet.servico_consultar_lote_rps_envio import ConsultarLoteRpsEnvio
+from nfselib.bindings.issnet.servico_consultar_lote_rps_resposta import ConsultarLoteRpsResposta
+from nfselib.bindings.issnet.servico_consultar_nfse_envio import ConsultarNfseEnvio
+from nfselib.bindings.issnet.servico_consultar_nfse_resposta import ConsultarNfseResposta
+from nfselib.bindings.issnet.servico_consultar_nfse_rps_envio import ConsultarNfseRpsEnvio
+from nfselib.bindings.issnet.servico_consultar_nfse_rps_resposta import ConsultarNfseRpsResposta
+from nfselib.bindings.issnet.servico_consultar_situacao_lote_rps_envio import ConsultarSituacaoLoteRpsEnvio
+from nfselib.bindings.issnet.servico_consultar_situacao_lote_rps_resposta import ConsultarSituacaoLoteRpsResposta
+from nfselib.bindings.issnet.servico_consultar_url_visualizacao_nfse_envio import ConsultarUrlVisualizacaoNfseEnvio
+from nfselib.bindings.issnet.servico_consultar_url_visualizacao_nfse_resposta import ConsultarUrlVisualizacaoNfseResposta
+from nfselib.bindings.issnet.servico_consultar_url_visualizacao_nfse_serie_envio import ConsultarUrlVisualizacaoNfseSerieEnvio
+from nfselib.bindings.issnet.servico_enviar_lote_rps_envio import EnviarLoteRpsEnvio
+from nfselib.bindings.issnet.servico_enviar_lote_rps_resposta import EnviarLoteRpsResposta
+from nfselib.bindings.issnet.tipos_complexos import (
     TcCancelamentoNfse,
     TcCompNfse,
     TcConfirmacaoCancelamento,
@@ -44,7 +44,7 @@ from nfselib.issnet.tipos_complexos import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.issnet.xmldsig_core_schema20020212 import (
+from nfselib.bindings.issnet.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

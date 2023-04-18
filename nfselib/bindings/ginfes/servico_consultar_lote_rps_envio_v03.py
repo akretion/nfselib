@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.ginfes.tipos_v03 import TcIdentificacaoPrestador
-from nfselib.ginfes.xmldsig_core_schema_v02 import Signature
+from nfselib.bindings.ginfes.tipos_v03 import TcIdentificacaoPrestador
+from nfselib.bindings.ginfes.xmldsig_core_schema_v02 import Signature
 
 __NAMESPACE__ = "http://www.ginfes.com.br/servico_consultar_lote_rps_envio_v03.xsd"
 

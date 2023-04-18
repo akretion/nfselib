@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.intersol.tipos_v1 import (
+from nfselib.bindings.intersol.tipos_v1 import (
     ListaMensagemRetorno,
     TcCompNfse,
 )

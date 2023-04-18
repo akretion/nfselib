@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.paulistana.tipos_nfe_v01 import TpCpfcnpj
-from nfselib.paulistana.xmldsig_core_schema_v01 import Signature
+from nfselib.bindings.paulistana.tipos_nfe_v01 import TpCpfcnpj
+from nfselib.bindings.paulistana.xmldsig_core_schema_v01 import Signature
 
 __NAMESPACE__ = "http://www.prefeitura.sp.gov.br/nfe"
 

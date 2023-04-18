@@ -1,18 +1,18 @@
-from nfselib.webiss.servico_cancelar_nfse_envio import CancelarNfseEnvio
-from nfselib.webiss.servico_cancelar_nfse_resposta import CancelarNfseResposta
-from nfselib.webiss.servico_consultar_lote_rps_envio import ConsultarLoteRpsEnvio
-from nfselib.webiss.servico_consultar_lote_rps_resposta import ConsultarLoteRpsResposta
-from nfselib.webiss.servico_consultar_nfse_envio import ConsultarNfseEnvio
-from nfselib.webiss.servico_consultar_nfse_resposta import ConsultarNfseResposta
-from nfselib.webiss.servico_consultar_nfse_rps_envio import ConsultarNfseRpsEnvio
-from nfselib.webiss.servico_consultar_nfse_rps_resposta import ConsultarNfseRpsResposta
-from nfselib.webiss.servico_consultar_situacao_lote_rps_envio import ConsultarSituacaoLoteRpsEnvio
-from nfselib.webiss.servico_consultar_situacao_lote_rps_resposta import ConsultarSituacaoLoteRpsResposta
-from nfselib.webiss.servico_enviar_lote_rps_envio import EnviarLoteRpsEnvio
-from nfselib.webiss.servico_enviar_lote_rps_resposta import EnviarLoteRpsResposta
-from nfselib.webiss.servico_gerar_nfse_envio import GerarNfseEnvio
-from nfselib.webiss.servico_gerar_nfse_resposta import GerarNfseResposta
-from nfselib.webiss.tipos_complexos import (
+from nfselib.bindings.webiss.servico_cancelar_nfse_envio import CancelarNfseEnvio
+from nfselib.bindings.webiss.servico_cancelar_nfse_resposta import CancelarNfseResposta
+from nfselib.bindings.webiss.servico_consultar_lote_rps_envio import ConsultarLoteRpsEnvio
+from nfselib.bindings.webiss.servico_consultar_lote_rps_resposta import ConsultarLoteRpsResposta
+from nfselib.bindings.webiss.servico_consultar_nfse_envio import ConsultarNfseEnvio
+from nfselib.bindings.webiss.servico_consultar_nfse_resposta import ConsultarNfseResposta
+from nfselib.bindings.webiss.servico_consultar_nfse_rps_envio import ConsultarNfseRpsEnvio
+from nfselib.bindings.webiss.servico_consultar_nfse_rps_resposta import ConsultarNfseRpsResposta
+from nfselib.bindings.webiss.servico_consultar_situacao_lote_rps_envio import ConsultarSituacaoLoteRpsEnvio
+from nfselib.bindings.webiss.servico_consultar_situacao_lote_rps_resposta import ConsultarSituacaoLoteRpsResposta
+from nfselib.bindings.webiss.servico_enviar_lote_rps_envio import EnviarLoteRpsEnvio
+from nfselib.bindings.webiss.servico_enviar_lote_rps_resposta import EnviarLoteRpsResposta
+from nfselib.bindings.webiss.servico_gerar_nfse_envio import GerarNfseEnvio
+from nfselib.bindings.webiss.servico_gerar_nfse_resposta import GerarNfseResposta
+from nfselib.bindings.webiss.tipos_complexos import (
     CompNfse,
     ListaMensagemRetorno,
     ListaMensagemRetornoLote,
@@ -47,7 +47,7 @@ from nfselib.webiss.tipos_complexos import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.webiss.xmldsig_core_schema20020212 import (
+from nfselib.bindings.webiss.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

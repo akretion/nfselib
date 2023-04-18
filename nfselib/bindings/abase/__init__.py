@@ -1,4 +1,4 @@
-from nfselib.abase.nfse import (
+from nfselib.bindings.abase.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -58,7 +58,7 @@ from nfselib.abase.nfse import (
     TcValoresDeclaracaoServico,
     TcValoresNfse,
 )
-from nfselib.abase.xmldsig_core_schema20020212 import (
+from nfselib.bindings.abase.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

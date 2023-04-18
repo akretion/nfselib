@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.intersol.tipos_v1 import TcIdentificacaoPrestador
-from nfselib.intersol.xmldsig_core_schema20020212_v1 import Signature
+from nfselib.bindings.intersol.tipos_v1 import TcIdentificacaoPrestador
+from nfselib.bindings.intersol.xmldsig_core_schema20020212_v1 import Signature
 
 __NAMESPACE__ = "http://ws.speedgov.com.br/consultar_situacao_lote_rps_envio_v1.xsd"
 

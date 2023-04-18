@@ -1,4 +1,4 @@
-from nfselib.gif.nfse_infisc_v1 import (
+from nfselib.bindings.gif.nfse_infisc_v1 import (
     Observacoes,
     Tuf,
     Cobr,
@@ -9,7 +9,7 @@ from nfselib.gif.nfse_infisc_v1 import (
     PedidoLoteNfsePng,
     Reemb,
 )
-from nfselib.gif.nfse_parobe_v1_1 import (
+from nfselib.bindings.gif.nfse_parobe_v1_1 import (
     Iss,
     Issst,
     id,
@@ -37,7 +37,7 @@ from nfselib.gif.nfse_parobe_v1_1 import (
     Total,
     Transportadora,
 )
-from nfselib.gif.xmldsig_core_schema_v1_01 import (
+from nfselib.bindings.gif.xmldsig_core_schema_v1_01 import (
     KeyInfoType,
     ReferenceType,
     Signature,

@@ -1,12 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDate
-from nfselib.ginfes.tipos_v03 import (
+from nfselib.bindings.ginfes.tipos_v03 import (
     TcIdentificacaoIntermediarioServico,
     TcIdentificacaoPrestador,
     TcIdentificacaoTomador,
 )
-from nfselib.ginfes.xmldsig_core_schema_v02 import Signature
+from nfselib.bindings.ginfes.xmldsig_core_schema_v02 import Signature
 
 __NAMESPACE__ = "http://www.ginfes.com.br/servico_consultar_nfse_envio_v03.xsd"
 

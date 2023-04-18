@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.dsf.tipos import TpLoteCancelamentoNfse
-from nfselib.dsf.xmldsig_core_schema_v1_01 import Signature
+from nfselib.bindings.dsf.tipos import TpLoteCancelamentoNfse
+from nfselib.bindings.dsf.xmldsig_core_schema_v1_01 import Signature
 
 __NAMESPACE__ = "http://localhost:8080/WsNFe2/lote"
 

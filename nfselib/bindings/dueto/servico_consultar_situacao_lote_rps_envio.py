@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from nfselib.dueto.tipos_complexos import TcIdentificacaoPrestador
+from nfselib.bindings.dueto.tipos_complexos import TcIdentificacaoPrestador
 
 __NAMESPACE__ = "http://tempuri.org/servico_consultar_situacao_lote_rps_envio.xsd"
 

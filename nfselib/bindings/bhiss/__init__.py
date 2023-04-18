@@ -1,4 +1,4 @@
-from nfselib.bhiss.nfse import (
+from nfselib.bindings.bhiss.nfse import (
     CancelarNfseEnvio,
     CancelarNfseResposta,
     CompNfse,
@@ -51,7 +51,7 @@ from nfselib.bhiss.nfse import (
     TcSubstituicaoNfse,
     TcValores,
 )
-from nfselib.bhiss.xmldsig_core_schema20020212 import (
+from nfselib.bindings.bhiss.xmldsig_core_schema20020212 import (
     CanonicalizationMethod,
     CanonicalizationMethodType,
     DsakeyValue,

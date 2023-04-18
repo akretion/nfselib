@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from nfselib.ginfes.tipos_v03 import (
+from nfselib.bindings.ginfes.tipos_v03 import (
     ListaMensagemRetorno,
     TcCompNfse,
 )
