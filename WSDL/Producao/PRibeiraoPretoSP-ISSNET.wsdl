@@ -476,10 +476,10 @@
   </wsdl:binding>
   <wsdl:service name="Servicos">
     <wsdl:port name="ServicosSoap" binding="tns:ServicosSoap">
-      <soap:address location="https://www.issnetonline.com.br/webserviceabrasf/ribeiraopreto/servicos.asmx" />
+      <soap:address location="https://abrasf.issnetonline.com.br/webserviceabrasf/ribeiraopreto/servicos.asmx" />
     </wsdl:port>
     <wsdl:port name="ServicosSoap12" binding="tns:ServicosSoap12">
-      <soap12:address location="https://www.issnetonline.com.br/webserviceabrasf/ribeiraopreto/servicos.asmx" />
+      <soap12:address location="https://abrasf.issnetonline.com.br/webserviceabrasf/ribeiraopreto/servicos.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -350,7 +350,7 @@
 	</wsdl:binding>
 	<wsdl:service name="NfseWSService">
 		<wsdl:port name="NfseWSServiceSoap" binding="tns:NfseWSServiceSoap">
-			<soap:address location="https://nfse.americana.sp.gov.br/nfse/WSNacional2/nfse.asmx"/>
+			<soap:address location="https://americanahomologacao.nfe.com.br/nfse/wsnacional2/nfse.asmx"/>
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
