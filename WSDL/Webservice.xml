@@ -353,26 +353,6 @@
 			<SubstituirNfse>wsdl\producao\PTresCoroasRS-PRONIM.wsdl</SubstituirNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="4322400" Nome="Uruguaiana - RS" UF="RS" Padrao="PRONIN">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HUruguaianaRS-PRONIN.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HUruguaianaRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HUruguaianaRS-PRONIN.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HUruguaianaRS-PRONIN.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HUruguaianaRS-PRONIN.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\homologacao\HUruguaianaRS-PRONIN.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PUruguaianaRS-PRONIN.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PUruguaianaRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PUruguaianaRS-PRONIN.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PUruguaianaRS-PRONIN.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PUruguaianaRS-PRONIN.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\producao\PUruguaianaRS-PRONIN.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="4313375" Nome="Nova Santa Rita - RS" UF="RS" Padrao="DUETO">
 		<LocalHomologacao>
 			<RecepcionarLoteRps>wsdl\homologacao\HNovaSantaRitaRS-Dueto.wsdl</RecepcionarLoteRps>
@@ -442,26 +422,6 @@
 			<ConsultarLoteRps>wsdl\producao\PJuquiaSP-CECAM.wsdl</ConsultarLoteRps>
 			<ConsultarURLNfse></ConsultarURLNfse>
 			<CancelarNfse>wsdl\producao\PJuquiaSP-CECAM.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
-	<Estado ID="3170206" Nome="Uberlândia - MG" UF="MG" Padrao="DSF">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HUberlandiaMGDFSLoteRps.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HUberlandiaMGDFSLoteRps.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HUberlandiaMGDFSLoteRps.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HUberlandiaMGDFSLoteRps.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HUberlandiaMGDFSLoteRps.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\homologacao\HUberlandiaMGDFSLoteRps.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PUberlandiaMGDFSLoteRps.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PUberlandiaMGDFSLoteRps.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PUberlandiaMGDFSLoteRps.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PUberlandiaMGDFSLoteRps.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PUberlandiaMGDFSLoteRps.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\producao\PUberlandiaMGDFSLoteRps.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
 	<Estado ID="3303500" Nome="Nova Iguaçu - RJ" UF="RJ" Padrao="DSF">
@@ -995,23 +955,14 @@
 		</LocalProducao>
 	</Estado>
 	<Estado ID="3515004" Nome="Embu das Artes - SP" UF="SP" Padrao="SIMPLISS">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</CancelarNfse>
-		</LocalHomologacao>
 		<LocalProducao>
-			<RecepcionarLoteRps>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</ConsultarLoteRps>
+			<RecepcionarLoteRps>WSDL\Producao\PEmbuDasArtes-SIMPLISS.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>WSDL\Producao\PEmbuDasArtes-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>WSDL\Producao\PEmbuDasArtes-SIMPLISS.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>WSDL\Producao\PEmbuDasArtes-SIMPLISS.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>WSDL\Producao\PEmbuDasArtes-SIMPLISS.wsdl</ConsultarLoteRps>
 			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</CancelarNfse>
+			<CancelarNfse>WSDL\Producao\PEmbuDasArtes-SIMPLISS.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
 	<Estado ID="3138203" Nome="Lavras - MG" UF="MG" Padrao="GOVDIGITAL">
@@ -1501,26 +1452,6 @@
 	<Estado ID="4211207" Nome="Morro da Fumaça - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="4211603" Nome="Nova Veneza - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="3505500" Nome="Barretos - SP" UF="SP" Padrao="SIGCORP_SIGISS"></Estado>
-	<Estado ID="3130309" Nome="Iguatama - MG" UF="MG" Padrao="SIMPLISS">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>WSDL\Homologacao\HPiracicabaSP-SIMPLISS.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>WSDL\Producao\PPiracicabaSP-SIMPLISS.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="2900702" Nome="Alagoinhas - BA" UF="BA" Padrao="WEBISS_202">
 		<LocalHomologacao>
 			<RecepcionarLoteRps>wsdl\homologacao\HAlagoinhasBA-WebISS.wsdl</RecepcionarLoteRps>
@@ -1871,26 +1802,6 @@
 		</LocalProducao>
 	</Estado>
 	<Estado ID="3518404" Nome="Guaratinguetá - SP" UF="SP" Padrao="EMBRAS"></Estado>
-	<Estado ID="4115200" Nome="Maringá - PR" UF="PR" Padrao="MARINGA_PR">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HMaringaPR-MARINGA_PR.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HMaringaPR-MARINGA_PR.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HMaringaPR-MARINGA_PR.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HMaringaPR-MARINGA_PR.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HMaringaPR-MARINGA_PR.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\homologacao\HMaringaPR-MARINGA_PR.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PMaringaPR-MARINGA_PR.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PMaringaPR-MARINGA_PR.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PMaringaPR-MARINGA_PR.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PMaringaPR-MARINGA_PR.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PMaringaPR-MARINGA_PR.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\producao\PMaringaPR-MARINGA_PR.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="3304003" Nome="Piraí - RJ" UF="RJ" Padrao="TIPLAN">
 		<LocalHomologacao>
 			<RecepcionarLoteRps></RecepcionarLoteRps>
@@ -2033,26 +1944,6 @@
 		</LocalProducao>
 	</Estado>
 	<Estado ID="2607901" Nome="Jaboatão dos Guararapes - PE" UF="PE" Padrao="TINUS"></Estado>
-	<Estado ID="4303004" Nome="Cachoeira do Sul - RS" UF="RS" Padrao="PRONIN">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\homologacao\HCachoeiraSulRS-PRONIN.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</ConsultarNfse>
-			<ConsultarLoteRps>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\producao\PCachoeiraSulRS-PRONIN.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="4114104" Nome="Mandaguaçú - PR" UF="PR" Padrao="BETHA"></Estado>
 	<Estado ID="3172004" Nome="Visconde do Rio Branco - MG" UF="MG" Padrao="SH3">
 		<LocalHomologacao>
@@ -3240,16 +3131,6 @@
 			<CancelarNfse>wsdl\producao\PEntreIjuisRS-PRONIN.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
-	<Estado ID="3520004" Nome="Igaraçu do Tietê - SP" UF="SP" Padrao="WEBFISCO_TECNOLOGIA">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HWebFiscoTecnologia.wsdl</RecepcionarLoteRps>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PWebFiscoTecnologia-Enviar.wsdl</RecepcionarLoteRps>
-			<ConsultarNfse>wsdl\producao\PWebFiscoTecnologia-ConsultarNfe.wsdl</ConsultarNfse>
-			<CancelarNfse>wsdl\producao\PWebFiscoTecnologia-Cancelar.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="4307559" Nome="Estação - RS" UF="RS" Padrao="SYSTEMPRO">
 		<LocalHomologacao>
 			<RecepcionarLoteRps>wsdl\homologacao\HEstacaoRS-SYSTEMPRO.wsdl</RecepcionarLoteRps>
@@ -3962,26 +3843,6 @@
 	<Estado ID="3168705" Nome="Timóteo - MG" UF="MG" Padrao="BETHA"></Estado>
 	<Estado ID="3513504" Nome="Cubatão - SP" UF="SP" Padrao="PRODATA"></Estado>
 	<Estado ID="4207304" Nome="Imbituba - SC" UF="SC" Padrao="BETHA"></Estado>
-	<Estado ID="4314134" Nome="Paulo Bento - RS" UF="RS" Padrao="SYSTEMPRO">
-		<LocalHomologacao>
-			<RecepcionarLoteRps>wsdl\homologacao\HPauloBentoRS-SystemPro.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps></ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\homologacao\HPauloBentoRS-SystemPro.wsdl</ConsultarNfse>
-			<ConsultarLoteRps></ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\homologacao\HPauloBentoRS-SystemPro.wsdl</CancelarNfse>
-		</LocalHomologacao>
-		<LocalProducao>
-			<RecepcionarLoteRps>wsdl\producao\PPauloBentoRS-SystemPro.wsdl</RecepcionarLoteRps>
-			<ConsultarSituacaoLoteRps></ConsultarSituacaoLoteRps>
-			<ConsultarNfsePorRps></ConsultarNfsePorRps>
-			<ConsultarNfse>wsdl\producao\PPauloBentoRS-SystemPro.wsdl</ConsultarNfse>
-			<ConsultarLoteRps></ConsultarLoteRps>
-			<ConsultarURLNfse></ConsultarURLNfse>
-			<CancelarNfse>wsdl\producao\PPauloBentoRS-SystemPro.wsdl</CancelarNfse>
-		</LocalProducao>
-	</Estado>
 	<Estado ID="4218202" Nome="Timbó - SC" UF="SC" Padrao="IPM">
 		<LocalHomologacao>
 			<RecepcionarLoteRps>wsdl\homologacao\hipm.wsdl</RecepcionarLoteRps>
@@ -4554,7 +4415,7 @@
 	<Estado ID="3201209" Nome="Cachoeiro de Itapemirim - ES" UF="ES" Padrao="EL"></Estado>
 	<Estado ID="4218905" Nome="Urubici - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="3506003" Nome="Bauru - SP" UF="SP" Padrao="SMARAPD"></Estado>
-	<Estado ID="2925303" Nome="Porto Seguro - BA" UF="BA" Padrao="NOBESISTEMAS"></Estado>
+	<Estado ID="2925303" Nome="Porto Seguro - BA" UF="BA" Padrao="WEBISS"></Estado>
 	<Estado ID="4202305" Nome="Biguaçu  - SC" UF="SC" Padrao="BETHA"></Estado>
 	<Estado ID="3303955" Nome="Pinheiral - RJ" UF="RJ" Padrao="BETHA"></Estado>
 	<Estado ID="3530805" Nome="Mogi Mirim - SP" UF="SP" Padrao="SIGCORP_SIGISS"></Estado>
@@ -4667,7 +4528,15 @@
 	<Estado ID="4318903" Nome="São Luiz Gonzaga - RS" UF="RS" Padrao="ABASE"></Estado>
 	<Estado ID="4321808" Nome="Três de Maio - RS" UF="RS" Padrao="ABASE"></Estado>
 	<Estado ID="4317905" Nome="Santo Cristo - RS" UF="RS" Padrao="ABASE"></Estado>
+	<!--///////////////////////////////////////////////////////////// PADRÕES COM APENAS UM XML DE CONFIGURAÇÃO ///////////////////////////////////////////////////////////////-->
 	<Estado ID="1001058" Nome="NACIONAL" UF="AN" Padrao="NACIONAL"></Estado>
+	<Estado ID="9999900" Nome="GINFES" UF="AN" Padrao="GINFES"></Estado>
+	<Estado ID="9999901" Nome="MEMORY" UF="AN" Padrao="MEMORY"></Estado>
+	<Estado ID="9999902" Nome="ABASE" UF="AN" Padrao="ABASE"></Estado>
+	<Estado ID="9999903" Nome="BETHA" UF="AN" Padrao="BETHA"></Estado>
+	<Estado ID="9999904" Nome="WEBFISCO" UF="AN" Padrao="WEBFISCO"></Estado>
+	<Estado ID="9999905" Nome="EQUIPLANO" UF="AN" Padrao="EQUIPLANO"></Estado>
+	<!--///////////////////////////////////////////////////////////// PADRÕES COM APENAS UM XML DE CONFIGURAÇÃO ///////////////////////////////////////////////////////////////-->
 	<Estado ID="3201308" Nome="Cariacica - ES" UF="ES" Padrao="SMARAPD"></Estado>
 	<Estado ID="3503901" Nome="Arujá - SP" UF="SP" Padrao="SMARAPD"></Estado>
 	<Estado ID="5007109" Nome="Ribas do Rio Pardo - MS" UF="MS" Padrao="FIORILLI"></Estado>
@@ -4903,6 +4772,17 @@
 			<CancelarNfse>wsdl\producao\pipm.wsdl</CancelarNfse>
 		</LocalProducao>
 	</Estado>
+	<Estado ID="4115002" Nome="Marilena - PR" UF="PR" Padrao="ELOTECH">
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PMarilenaPR-Elotech.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PMarilenaPR-Elotech.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PMarilenaPR-Elotech.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PMarilenaPR-Elotech.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PMarilenaPR-Elotech.wsdl</ConsultarLoteRps>
+			<ConsultarURLNfse></ConsultarURLNfse>
+			<CancelarNfse>wsdl\producao\PMarilenaPR-Elotech.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
 	<Estado ID="4309555" Nome="Harmonia - RS" UF="RS" Padrao="TECNOSISTEMAS"></Estado>
 	<Estado ID="4316501" Nome="Salvador do Sul - RS" UF="RS" Padrao="TECNOSISTEMAS"></Estado>
 	<Estado ID="4313300" Nome="Nova Prata - RS" UF="RS" Padrao="TECNOSISTEMAS"></Estado>
@@ -4974,4 +4854,25 @@
 	<Estado ID="1400100" Nome="Boa Vista - RR" UF="RR" Padrao="ADM_SISTEMAS"></Estado>
 	<Estado ID="4318002" Nome="São Borja - RS" UF="RS" Padrao="GIF"></Estado>
 	<Estado ID="4300406" Nome="Alegrete - RS" UF="RS" Padrao="PRONIN"></Estado>
+	<Estado ID="3102001" Nome="Alterosa - MG" UF="MG" Padrao="BETHA"></Estado>
+	<Estado ID="4314134" Nome="Paulo Bento - RS" UF="RS" Padrao="SYSTEMPRO"></Estado>
+	<Estado ID="3170206" Nome="Uberlândia - MG" UF="MG" Padrao="DSF"></Estado>
+	<Estado ID="4321006" Nome="Tapera - RS" UF="RS" Padrao="PRONIN"></Estado>
+	<Estado ID="4115200" Nome="Maringá - PR" UF="PR" Padrao="FINTEL"></Estado>
+	<Estado ID="4322400" Nome="Uruguaiana - RS" UF="RS" Padrao="PRONIN"></Estado>
+	<Estado ID="3507506" Nome="Botucatu - SP" UF="SP" Padrao="FIORILLI"></Estado>
+	<Estado ID="3205101" Nome="Manhuaçu - MG" UF="MG" Padrao="EL">
+		<LocalProducao>
+			<RecepcionarLoteRps>wsdl\producao\PManhuacuMG-EL.wsdl</RecepcionarLoteRps>
+			<ConsultarSituacaoLoteRps>wsdl\producao\PManhuacuMG-EL.wsdl</ConsultarSituacaoLoteRps>
+			<ConsultarNfsePorRps>wsdl\producao\PManhuacuMG-EL.wsdl</ConsultarNfsePorRps>
+			<ConsultarNfse>wsdl\producao\PManhuacuMG-EL.wsdl</ConsultarNfse>
+			<ConsultarLoteRps>wsdl\producao\PManhuacuMG-EL.wsdl</ConsultarLoteRps>
+			<CancelarNfse>wsdl\producao\PManhuacuMG-EL.wsdl</CancelarNfse>
+		</LocalProducao>
+	</Estado>
+	<Estado ID="4105805" Nome="Colombo - PR" UF="PR" Padrao="IPM"></Estado>
+	<Estado ID="4303004" Nome="Cachoeira do Sul - RS" UF="RS" Padrao="PRONIN"></Estado>
+	<Estado ID="5000609" Nome="Amambai - MS" UF="MS" Padrao="FIORILLI"></Estado>
+	<Estado ID="2930105" Nome="Senhor do Bonfim - BA" UF="BA" Padrao="WEBISS"></Estado>
 </Webservice>

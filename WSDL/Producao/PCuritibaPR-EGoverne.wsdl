@@ -998,10 +998,10 @@
 	</wsdl:binding>
 	<wsdl:service name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1">
 		<wsdl:port name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap" binding="tns:WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap">
-			<soap:address location="https://isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/NfseWs.asmx"/>
+			<soap:address location="https://srv2-isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx"/>
 		</wsdl:port>
 		<wsdl:port name="WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap12" binding="tns:WS_x0020_-_x0020_NFS-e_x0020_V1.0.0.1Soap12">
-			<soap12:address location="https://isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/NfseWs.asmx"/>
+			<soap12:address location="https://srv2-isscuritiba.curitiba.pr.gov.br/Iss.NfseWebService/nfsews.asmx"/>
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
