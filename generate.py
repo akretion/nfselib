@@ -34,9 +34,7 @@ def order_cities_by_population(cities, population_data):
     return sorted_cities
 
 
-def parse_wsdl_production(
-    xml_file, city_data, population_data, padrao_population
-):
+def parse_wsdl_production(xml_file, city_data, population_data, padrao_population):
     # Load and parse the XML file
     tree = ET.parse(xml_file)
     root = tree.getroot()
