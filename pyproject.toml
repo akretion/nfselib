@@ -4,8 +4,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "nfselib"
-version = "0.2.0"
+name = "nfselib-legacy"
+dynamic = ["version"]
 description = "nfselib: NFS-e electronic invoicing library for Brazil"
 readme = "README.md"
 authors = [
@@ -49,6 +49,9 @@ test = [
 ]
 
 # --- Tool Configurations ---
+
+[tool.setuptools.dynamic]
+version = {attr = "nfselib.__version__"}
 
 [tool.pytest.ini_options]
 addopts = "--color=yes"
