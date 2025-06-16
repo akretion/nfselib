@@ -1,4 +1,5 @@
 [![Build Status](https://github.com/akretion/nfselib/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/akretion/nfselib/actions/workflows/tests.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/akretion/nfselib/graph/badge.svg?token=Xg2OpCNM5N)](https://codecov.io/gh/akretion/nfselib)
 [![PyPI](https://img.shields.io/pypi/v/nfselib-legacy)](https://pypi.org/project/nfselib-legacy)
 
 # nfselib: a lib Python limpa que suporta a NFS-e de mais de 450 cidades do Brasil
