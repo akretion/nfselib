@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: release
-      url: https://pypi.org/p/nfselib
+      url: https://pypi.org/p/nfselib-legacy
     permissions:
       id-token: write
     steps:
