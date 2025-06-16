@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/akretion/nfselib/graph/badge.svg?token=Xg2OpCNM5N)](https://codecov.io/gh/akretion/nfselib)
 [![PyPI](https://img.shields.io/pypi/v/nfselib-legacy)](https://pypi.org/project/nfselib-legacy)
 
-# nfselib: a lib Python limpa que suporta a NFS-e de mais de 450 cidades do Brasil
+# nfselib: a lib Python que suporta a NFS-e de mais de 450 cidades do Brasil
 
 A nfselib usa os schemas do famoso projeto open source
 [UNINFE](https://unimake.com.br/uninfe/) junto com o poder do
