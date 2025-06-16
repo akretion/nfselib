@@ -1,11 +1,10 @@
-# FILEPATH: pyproject.toml
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0"] # Specify a modern setuptools version
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "nfselib"
-version = "0.2.0"
+name = "nfselib-legacy"
+dynamic = ["version"]
 description = "nfselib: NFS-e electronic invoicing library for Brazil"
 readme = "README.md"
 authors = [
@@ -16,7 +15,7 @@ requires-python = ">=3.8"
 keywords = ["e-invoicing", "NFS-e", "ERP", "Odoo"]
 classifiers = [
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License", # Note: Changed from LGPLv2 for SPDX compliance, adjust if needed
+    "License :: OSI Approved :: LGPL-2.1",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -50,8 +49,19 @@ test = [
 
 # --- Tool Configurations ---
 
+[tool.setuptools]
+packages = ["nfselib", "schemas", "WSDL"]
+
+[tool.setuptools.dynamic]
+version = {attr = "nfselib.__version__"}
+
 [tool.pytest.ini_options]
+testpaths = ["tests"]
 addopts = "--color=yes"
+
+[tool.coverage.run]
+source = ["nfselib", "schemas", "WSDL"]
+branch = true
 
 [tool.flake8]
 exclude = ["tests/*"]

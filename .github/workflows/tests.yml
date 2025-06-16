@@ -2,9 +2,9 @@ name: tests
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   tests:
@@ -66,4 +66,4 @@ jobs:
 
       - name: Check wheel contents (ignore W002)
         run: |
-          check-wheel-contents dist/*.whl --ignore W002
+          check-wheel-contents dist/*.whl --ignore W002,W009,W010
