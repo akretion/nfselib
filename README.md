@@ -1,20 +1,24 @@
-<p align="center">
-<a href="https://codecov.io/gh/akretion/nfselib" >
- <img src="https://codecov.io/gh/akretion/nfselib/branch/main/graph/badge.svg?token=Xg2OpCNM5N"/>
-</a>
-<a href="https://pypi.org/project/nfelib/"><img alt="PyPI" src="https://img.shields.io/pypi/v/nfselib"></a>
-</p>
+[![Build Status](https://github.com/akretion/nfselib/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/akretion/nfselib/actions/workflows/tests.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/akretion/nfselib/graph/badge.svg?token=Xg2OpCNM5N)](https://codecov.io/gh/akretion/nfselib)
+[![PyPI](https://img.shields.io/pypi/v/nfselib-legacy)](https://pypi.org/project/nfselib-legacy)
 
 # nfselib: a lib Python limpa que suporta a NFS-e de mais de 450 cidades do Brasil
 
-A nfelib usa os famosos schemas do projeto open source
+A nfselib usa os schemas do famoso projeto open source
 [UNINFE](https://unimake.com.br/uninfe/) junto com o poder do
 [xsdata](https://xsdata.readthedocs.io/en/latest/) para tornar facil a importação e
 geração dos arquivos XML das NFS-e de mais de 450 cidades do Brasil no ambiente Python.
 
-Existe tambem agora a NFS-e com o padrão da Receita Federal, esse esta suportado pela
+Existe também agora a NFS-e com o padrão da Receita Federal, esse esta suportado pela
 [nfelib](https://github.com/akretion/nfelib), uma lib mais générica sem ligação com o
 UNINFE e que suporta todos padrões de notas fiscais nacionais.
+
+## Installation
+
+Devido a 'name squatting', o pacote foi renomeado nfselib-legacy no PyPI. O sufixo
+'legacy' indica que esse pacote lida com os padrões anteriores à NFS-e nacional.
+
+`pip install nfselib-legacy`
 
 # NFSe Web Services
 
